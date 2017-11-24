@@ -11,6 +11,7 @@
                 <hr/>
             </div>
             <div class="store-section" v-for="store in stores">
+                <img src="{{store.store_front_url_abs}}" alt="{{store.name}}" />
                 <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>
                 <hr/>
             </div>
