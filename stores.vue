@@ -79,8 +79,7 @@
                     this.listMode = mode;
                 },
                 getStoreByCategory() {
-                    var dine_cats = ["Food", "Fast Food", "Coffee and Cafe","Coffee and Cafes","Coffee and Café","Food Court Eatery", "Food Exchange","Food Services",
-                    "Restaurant","Restaurants", "Specialtu Food & Drink", "Specialty Food & Drink", "Specialty Food", "Specialy Food","Healthy Choices","Take-out Restaurant"];
+                    var dine_cats = ["All Restaurants / Food and Beverage", "NorthPark Cafés", "Restaurant (Order at Counter)", "Restaurants / Beverages", "Specialty Foods", "Specialty Foods / Beverages"];
                     dine_cats = this.getCategoryIdArray (dine_cats);  
                     
                     this.dine_stores = _.orderBy(_.filter(this.allStores, function(o) { return _.includes(dine_cats, _.toString(o.categories[0])); }), 'name');
