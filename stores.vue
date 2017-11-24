@@ -70,12 +70,21 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    listMode: "alphabetical"
+                    listMode: "alphabetical",
+                    dine_stores: [],
                 }
             },
             methods: {
                 changeMode (mode) {
                     this.listMode = mode;
+                },
+                getStoreByCategory() {
+                    var dine_cats = ["Food", "Fast Food", "Coffee and Cafe","Coffee and Cafes","Coffee and Café","Food Court Eatery", "Food Exchange","Food Services",
+                    "Restaurant","Restaurants", "Specialtu Food & Drink", "Specialty Food & Drink", "Specialty Food", "Specialy Food","Healthy Choices","Take-out Restaurant"];
+                    dine_cats = this.getCategoryIdArray (dine_cats);  
+                    
+                    this.dine_stores = _.orderBy(_.filter(this.allStores, function(o) { return _.includes(dine_cats, _.toString(o.categories[0])); }), 'name');
+                    this.dine_stores = _.groupBy(this.dine_stores, 'name');
                 }
             },
             computed: {
