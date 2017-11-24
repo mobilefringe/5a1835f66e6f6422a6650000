@@ -11,8 +11,17 @@
                 <hr/>
             </div>
             <div class="store-section" v-for="store in stores">
-                <img :src="store.image_url" alt="{{store.name}}" />
-                <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>
+                <div class="row">
+                    <div class="col-md-8">
+                        <img :src="store.image_url" alt="{{store.name}}" />
+                    </div>
+                    <div class="col-md-4">
+                        <p>{{store.name}}</p>
+                        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">Visit Store Page</router-link>
+                    </div>
+                </div>
+                
+                
                 <hr/>
             </div>
             <!-- <div class="card">-->
