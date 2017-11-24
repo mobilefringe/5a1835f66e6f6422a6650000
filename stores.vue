@@ -5,7 +5,7 @@
             <li><a v-on:click="changeMode('category')">Category</a></li>
         </ul>
         <hr/>
-        <div class="columns large-12" v-for="(stores, index) in storesByAlphaIndex" v-if="listMode === 'alphabetical'">
+        <div class="columns large-12" v-for="(stores, index) in dine_stores" v-if="listMode === 'alphabetical'">
             <!--<div class="list_header">-->
             <!--    <b>{{index}}</b>-->
             <!--    <hr/>-->
