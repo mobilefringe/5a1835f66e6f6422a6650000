@@ -10,32 +10,34 @@
     <body>
         <div id="app">
             <div id="main-container" v-cloak v-if="dataLoaded">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h1>NORTHPARK</h1>
-                    </div>
-                    <div class="col-md-8">
-                        <div id="menu-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                <div class="page-container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h1>NORTHPARK</h1>
                         </div>
-                        <ul class="menu">
-                            <li class="menu-text">MM with Vue.js!</li>
-                            <router-link tag="li" to="/" active-class="active" exact>
-                              <a>Home</a>
-                            </router-link>
-                            <router-link tag="li" to="/stores" active-class="active" exact>
-                              <a>Stores</a>
-                            </router-link>
-                            <router-link tag="li" to="/promotions" active-class="active" exact>
-                              <a>Promotions</a>
-                            </router-link>
-                            <router-link tag="li" to="/badlink" active-class="active" exact>
-                              <a>404 Example</a>
-                            </router-link>
-                        </ul>
+                        <div class="col-md-8">
+                            <div id="menu-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <ul class="menu">
+                                <li class="menu-text">MM with Vue.js!</li>
+                                <router-link tag="li" to="/" active-class="active" exact>
+                                  <a>Home</a>
+                                </router-link>
+                                <router-link tag="li" to="/stores" active-class="active" exact>
+                                  <a>Stores</a>
+                                </router-link>
+                                <router-link tag="li" to="/promotions" active-class="active" exact>
+                                  <a>Promotions</a>
+                                </router-link>
+                                <router-link tag="li" to="/badlink" active-class="active" exact>
+                                  <a>404 Example</a>
+                                </router-link>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
