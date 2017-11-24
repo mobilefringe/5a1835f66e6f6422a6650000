@@ -5,7 +5,7 @@
             <li><a v-on:click="changeMode('category')">Category</a></li>
         </ul>
         <hr/>
-        <div class="columns large-12" v-for="(stores, index) in dine_stores" v-if="listMode === 'alphabetical'">
+        <div class="columns large-12" v-for="(stores, index) in storesByAlphaIndex" v-if="listMode === 'alphabetical'">
             <!--<div class="list_header">-->
             <!--    <b>{{index}}</b>-->
             <!--    <hr/>-->
@@ -69,6 +69,7 @@
                     
                     this.dine_stores = _.orderBy(_.filter(this.allStores, function(o) { return _.includes(dine_cats, _.toString(o.categories[0])); }), 'name');
                     this.dine_stores = _.groupBy(this.dine_stores, 'name');
+                    console.log(dine_stores)
                 }
             },
             computed: {
