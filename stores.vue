@@ -10,23 +10,23 @@
                 <b>{{index}}</b>
                 <hr/>
             </div>
-            <!--<div class="store-section" v-for="store in stores">-->
-            <!--    <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>-->
-            <!--    <hr/>-->
-            <!--</div>-->
-             <div class="card">
-                <div class="card-divider">
-                    {{ store.name }}
-                </div>
-                <div class="card-section center">
-                    <a :href="store.image_url" target="_blank"><img :src="store.image_url"></a>
-                </div>
-                <div class="card-section">
-                    <div class="center">
-                        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">View Details</router-link>
-                    </div>
-                </div>
-            </div> 
+            <div class="store-section" v-for="store in stores">
+                <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>
+                <hr/>
+            </div>
+            <!-- <div class="card">-->
+            <!--    <div class="card-divider">-->
+            <!--        {{ store.name }}-->
+            <!--    </div>-->
+            <!--    <div class="card-section center">-->
+            <!--        <a :href="store.image_url" target="_blank"><img :src="store.image_url"></a>-->
+            <!--    </div>-->
+            <!--    <div class="card-section">-->
+            <!--        <div class="center">-->
+            <!--            <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">View Details</router-link>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div> -->
         </div>
         <div class="columns large-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">
             <div class="list_header">
