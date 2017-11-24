@@ -18,6 +18,10 @@
                     <div class="col-md-4">
                         <p>{{store.name}}</p>
                         <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">Visit Store Page</router-link>
+                        <p>Contact</p>
+                        <p>{{store.phone}}</p>
+                        <p>Hours</p>
+                        
                     </div>
                 </div>
                 
