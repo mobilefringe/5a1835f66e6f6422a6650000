@@ -1,6 +1,6 @@
 <template>
     <div class="row" v-if="currentStore">
-        <div class="large-6 columns">
+        <div class="col-md-6">
             <div>
                 <h1>{{currentStore.name}}</h1>
                 <p>{{currentStore.description}}</p>
