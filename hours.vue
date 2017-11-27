@@ -16,9 +16,10 @@
                 </ul>
                 <hr>
                 <h2>Management Office Hours</h2>
+                <p>Closed Easter, Thanksgiving, and Christmas Day</p>
                 <hr>
                 <h2>AMC Northpark 15</h2>
-                <p>Closed Easter, Thanksgiving, and Christmas Day</p>
+                
                 <router-link to="" active-class="active" exact>
                     <a>View Showtimes <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </router-link>
