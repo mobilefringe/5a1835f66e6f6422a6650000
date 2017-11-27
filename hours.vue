@@ -23,6 +23,17 @@
                 <router-link to="" active-class="active" exact>
                     <a>View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </router-link>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Restaurant Hours</h2>
+                        <p>Restaurant Name</p>
+                        <!-- Hours -->
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Add Restaurant Drop Down -->
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <p>Find Us</p>
