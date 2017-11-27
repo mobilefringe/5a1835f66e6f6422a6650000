@@ -24,74 +24,78 @@ require.config({
 });
 
 require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', "vue-meta"], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta) {
-  Vue.use(Meta);
-  Vue.use(VueRouter);
-  Vue.use(Vue2Filters);
-  Vue.use(VueI18n);
+    Vue.use(Meta);
+    Vue.use(VueRouter);
+    Vue.use(Vue2Filters);
+    Vue.use(VueI18n);
 
-  /* initialize router */
-  const router = new VueRouter({
-    mode: 'history',
-    routes: appRoutes
-  });
+    /* initialize router */
+    const router = new VueRouter({
+        mode: 'history',
+        routes: appRoutes
+    });
 
-  /* initialize i18n */
-  const i18n = new VueI18n({
-    locale: 'en-ca',
-    fallbackLocale: 'en-ca',
-    messages,
-  });
+    /* initialize i18n */
+    const i18n = new VueI18n({
+        locale: 'en-ca',
+        fallbackLocale: 'en-ca',
+        messages,
+    });
 
-  /* bootstrap app */
-  const vm = new Vue({
-    el: '#app',
-    data: function () {
-      return {
-        dataLoaded: false,
-        test: ''
-      }
-    },
-    created() {
-      // make an async call to the data store to initialize the locale (i.e. it will check if there is a locale value saved in cookie, otherwise it will default to EN)
-      this.$store.dispatch('INITIALIZE_LOCALE');
-      
-      this.$store.dispatch('LOAD_META_DATA');
-
-      // make an async call to load mall data
-      this.$store.dispatch('LOAD_MALL_DATA', {url:"https://www.mallmaverick.com/api/v4/northpark/all.json"}).then(response => {
-        this.dataLoaded = true;
-      }, error => {
-        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-      });
-    },
-    watch: {
-      // watcher to update vue-i18n when the locale has been changed by the user
-      locale: function (val, oldVal) {
-        this.$i18n.locale = val;
-        moment.locale(val);
-        // console.log(moment().format('LLLL'));
-        // console.log(this.$store.getters.getTodayHours);
-      }
-    },
-    computed: {
-      // computed property for locale which returns locale value from data store and also updates the data store with new locale information
-      locale: {
-        get () {
-          return this.$store.state.locale
+    /* bootstrap app */
+    const vm = new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                dataLoaded: false,
+                test: ''
+            }
         },
-        set (value) {
-          this.$store.commit('SET_LOCALE', { lang: value })
-        }
-      }
-    },
-    methods: {
-      // utility method to allow user to change locale value
-      changeLocale: function(val) {
-        this.locale = val; // this will update the data store, which in turn will trigger the watcher to update the locale in the system
-      }
-    },
-    router: router,
-    store,
-    i18n
-  });
+        created() {
+            // make an async call to the data store to initialize the locale (i.e. it will check if there is a locale value saved in cookie, otherwise it will default to EN)
+            this.$store.dispatch('INITIALIZE_LOCALE');
+          
+            this.$store.dispatch('LOAD_META_DATA');
+    
+            // make an async call to load mall data
+            this.$store.dispatch('LOAD_MALL_DATA', {url:"https://www.mallmaverick.com/api/v4/northpark/all.json"}).then(response => {
+                this.dataLoaded = true;
+            }, error => {
+                console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            });
+        },
+        watch: {
+            // watcher to update vue-i18n when the locale has been changed by the user
+            locale: function (val, oldVal) {
+                this.$i18n.locale = val;
+                moment.locale(val);
+                // console.log(moment().format('LLLL'));
+                // console.log(this.$store.getters.getTodayHours);
+            }
+        },
+        computed: {
+            // computed property for locale which returns locale value from data store and also updates the data store with new locale information
+            locale: {
+                get () {
+                    return this.$store.state.locale
+                },
+                set (value) {
+                    this.$store.commit('SET_LOCALE', { lang: value })
+                }
+            }
+        },
+        methods: {
+            // utility method to allow user to change locale value
+            changeLocale: function(val) {
+                this.locale = val; // this will update the data store, which in turn will trigger the watcher to update the locale in the system
+            }
+            //this function helps home Page show and hide menu using the prop showMenu
+            toggleMenu () {
+                this.show_menu = !this.show_menu;
+            }
+        },
+        router: router,
+        store,
+        i18n
+    });
 });
