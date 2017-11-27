@@ -53,6 +53,39 @@ define([], function () {
             ]
         },
         {
+            path: '/hours',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('hours'),
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
+            path: '/art',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('art'),
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
+            path: '/news',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('news'),
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
             path: '/pages',
             component: view('default'),
             redirect: '/404',
