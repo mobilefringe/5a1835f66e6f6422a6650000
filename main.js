@@ -72,13 +72,6 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                         class_list: "all_caps menu_btn_label",
                         href: "/promotions",
                         is_inHome: true
-                    },
-                    {
-                        name: "Path Map",
-                        id: "map",
-                        class_list: "all_caps menu_btn_label",
-                        href: "/map",
-                        is_inHome: true
                     }
                 ]
             }
