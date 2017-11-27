@@ -10,35 +10,37 @@
     <body>
         <div id="app">
             <div id="main-container" v-cloak v-if="dataLoaded">
-                <div class="page-container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h1>NORTHPARK</h1>
-                        </div>
-                        <div class="col-md-8">
-                            <div @click="show_menu = !show_menu" id="menu-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                <header>
+                    <div class="page-container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1>NORTHPARK</h1>
                             </div>
-                            <ul v-if="show_menu" class="menu">
-                                <router-link tag="li" to="/" active-class="active" exact>
-                                  <a>Home</a>
-                                </router-link>
-                                <router-link tag="li" to="/stores" active-class="active" exact>
-                                  <a>Stores</a>
-                                </router-link>
-                                <router-link tag="li" to="/promotions" active-class="active" exact>
-                                  <a>Promotions</a>
-                                </router-link>
-                                <router-link tag="li" to="/badlink" active-class="active" exact>
-                                  <a>404 Example</a>
-                                </router-link>
-                            </ul>
+                            <div class="col-md-8">
+                                <div @click="show_menu = !show_menu" id="menu-icon">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <ul v-if="show_menu" class="menu">
+                                    <router-link tag="li" to="/" active-class="active" exact>
+                                      <a>Home</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/stores" active-class="active" exact>
+                                      <a>Stores</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/promotions" active-class="active" exact>
+                                      <a>Promotions</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/badlink" active-class="active" exact>
+                                      <a>404 Example</a>
+                                    </router-link>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </header>
             </div>
             <br/>
             <router-view></router-view>
