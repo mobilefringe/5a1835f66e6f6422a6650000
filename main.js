@@ -106,7 +106,10 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 set (value) {
                     this.$store.commit('SET_LOCALE', { lang: value })
                 }
-            }
+            },
+            copyright_year() {
+                return moment().year();
+            },
         },
         methods: {
             // utility method to allow user to change locale value
