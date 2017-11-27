@@ -12,6 +12,9 @@
                     {{property.city}}, {{property.province_state}}<br/>
                     {{property.contact_phone}}</p>
                 </p>
+                <router-link to="" active-class="active" exact>
+                    <a>Get Directions</a>
+                </router-link>
             </div>
         </div>
     </div>
