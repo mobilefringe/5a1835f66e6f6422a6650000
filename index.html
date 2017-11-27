@@ -25,32 +25,34 @@
                                     <span></span>
                                     <span></span>
                                 </div>
-                                <ul v-if="show_menu" class="menu">
-                                    <router-link tag="li" to="/stores" active-class="active" exact>
-                                        <a>Shops & Dining</a>
-                                    </router-link>
-                                    <router-link tag="li" to="/events" active-class="active" exact>
-                                        <a>Events</a>
-                                    </router-link>
-                                    <router-link tag="li" to="/art" active-class="active" exact>
-                                        <a>Art</a>
-                                    </router-link>
-                                    <router-link tag="li" to="/news" active-class="active" exact>
-                                        <a>News</a>
-                                    </router-link>
-                                    <router-link tag="li" to="/visit" active-class="active" exact>
-                                        <a>Visit</a>
-                                    </router-link>
-                                    <router-link tag="li" to="/our-story" active-class="active" exact>
-                                        <a>Our Story</a>
-                                    </router-link>
-                                    <router-link tag="li" to="/magazine" active-class="active" exact>
-                                        <a>The Magazine</a>
-                                    </router-link>
-                                    <router-link tag="li" to="/hours" active-class="active" exact>
-                                        <a>Art</a>
-                                    </router-link>
-                                </ul>
+                                <div v-if="show_menu" class="menu-container">
+                                    <ul class="menu">
+                                        <router-link tag="li" to="/stores" active-class="active" exact>
+                                            <a>Shops & Dining</a>
+                                        </router-link>
+                                        <router-link tag="li" to="/events" active-class="active" exact>
+                                            <a>Events</a>
+                                        </router-link>
+                                        <router-link tag="li" to="/art" active-class="active" exact>
+                                            <a>Art</a>
+                                        </router-link>
+                                        <router-link tag="li" to="/news" active-class="active" exact>
+                                            <a>News</a>
+                                        </router-link>
+                                        <router-link tag="li" to="/visit" active-class="active" exact>
+                                            <a>Visit</a>
+                                        </router-link>
+                                        <router-link tag="li" to="/our-story" active-class="active" exact>
+                                            <a>Our Story</a>
+                                        </router-link>
+                                        <router-link tag="li" to="/magazine" active-class="active" exact>
+                                            <a>The Magazine</a>
+                                        </router-link>
+                                        <router-link tag="li" to="/hours" active-class="active" exact>
+                                            <a>Art</a>
+                                        </router-link>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
