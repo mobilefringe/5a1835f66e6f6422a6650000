@@ -7,9 +7,9 @@
             <div class="col-md-4">
                 <p>Find Us</p>
                 <p>
-                    {{property.name}}
-                    {{property.address1}} 
-                    {{property.city}}, {{property.province_state}}
+                    {{property.name}}<br/>
+                    {{property.address1}}<br/>
+                    {{property.city}}, {{property.province_state}}<br/>
                     {{property.contact_phone}}</p>
                 </p>
             </div>
