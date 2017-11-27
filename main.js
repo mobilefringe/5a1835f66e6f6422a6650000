@@ -119,7 +119,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             changeLocale: function(val) {
                 this.locale = val; // this will update the data store, which in turn will trigger the watcher to update the locale in the system
             },
-            toggleIcon() {
+            menuIcon: function() {
                 this.isOpen = !this.isOpen;
             },
             //this function helps home Page show and hide menu using the prop showMenu
