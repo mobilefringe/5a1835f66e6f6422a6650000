@@ -48,8 +48,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
         data: function () {
             return {
                 dataLoaded: false,
-                closed_icon: false,
-                open_icon: true,
+                isActive: false,
                 show_menu: false,
                 menu_items: [
                     {
