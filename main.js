@@ -109,7 +109,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             },
             property(){
                 return this.$store.getters.getProperty;
-                console.log(this.$store.getters.getProperty;)
+                console.log(this.$store.getters.getProperty)
             },
             copyright_year() {
                 return moment().year();
