@@ -86,6 +86,17 @@ define([], function () {
             ]
         },
         {
+            path: '/holiday',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('holiday'),
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
             path: '/pages',
             component: view('default'),
             redirect: '/404',
