@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-container">
          <div class="page_container padding_30" v-if="currentPage">
             <div class="page_title" v-html="currentPage.title">  </div>
             <div class="row">
