@@ -23,13 +23,15 @@
         return Vue.component("promos-component", {
             template: template, // the variable template will be injected
             computed: {
-                promotions() {
-                    return this.$store.getters.processedPromos;
-        },
-        timezone () {
-          return this.$store.getters.getTimezone;
-        }
-      }
+                property (){
+                    return this.$store.getters.getProperty;
+                },
+                
+                timezone () {
+                    return this.$store.getters.getTimezone;
+                }
+                
+            }
+        });
     });
-  });
 </script>
