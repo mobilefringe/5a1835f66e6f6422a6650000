@@ -39,8 +39,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p>{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i></p>
-                        
+                        <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> Hours</p>
                     </div>
                 </div>
             </div>
