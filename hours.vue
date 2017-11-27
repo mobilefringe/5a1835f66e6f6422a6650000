@@ -2,6 +2,7 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="row">
             <div class="col-md-8">
+                <h2>Shopping Centre Hours</h2>
                 <ul class="menu_content text_center">
                     <li v-for="hour in hours">
                         <span class="pull-left col-md-6"> 
@@ -12,6 +13,16 @@
                         </span>
                     </li>
                 </ul>
+                <hr>
+                <h2>Management Office Hours</h2>
+                <hr>
+                <h2>AMC Northpark 15</h2>
+                <router-link to="" active-class="active" exact>
+                    <a>View Showtimes <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                </router-link>
+                <router-link to="" active-class="active" exact>
+                    <a>View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                </router-link>
             </div>
             <div class="col-md-4">
                 <p>Find Us</p>
@@ -22,7 +33,7 @@
                     {{property.contact_phone}}</p>
                 </p>
                 <router-link to="" active-class="active" exact>
-                    <a>Get Directions</a>
+                    <a>Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </router-link>
             </div>
         </div>
