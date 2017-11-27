@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-md-8">
                 <h2>Shopping Centre Hours</h2>
+                <p>Department store, restaurant, theatre, spa, and holiday hours may vary.</p>
                 <ul class="menu_content text_center">
                     <li v-for="hour in hours">
                         <span class="pull-left col-md-6"> 
@@ -17,6 +18,7 @@
                 <h2>Management Office Hours</h2>
                 <hr>
                 <h2>AMC Northpark 15</h2>
+                <p>Closed Easter, Thanksgiving, and Christmas Day</p>
                 <router-link to="" active-class="active" exact>
                     <a>View Showtimes <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </router-link>
