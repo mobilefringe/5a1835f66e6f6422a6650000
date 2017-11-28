@@ -73,14 +73,12 @@
                     return this.$store.getters.getTimezone;
                 },
                 hours(){
-                    var hours = 
-                        _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                        console.log(hours);
-                        return hours;
+                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
+                    return hours;
                 },
-                restaurants(){
-                    var stores = this.$store
-                    console.log(stores)
+                storesByCategoryName() {
+                    return this.$store.getters.storesByCategoryName;
+                    console.log(this)
                 }
             },
             methods: {
