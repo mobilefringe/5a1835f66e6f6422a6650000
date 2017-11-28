@@ -5,12 +5,12 @@
         <!--    <li><a v-on:click="changeMode('category')">Category</a></li>-->
         <!--</ul>-->
         <hr/>
-        <div class="columns large-12" v-for="restaurant in restaurants">
+        <div class="columns large-12">
             <!--<div class="list_header">-->
             <!--    <b>{{index}}</b>-->
             <!--    <hr/>-->
             <!--</div>-->
-            <div class="store-section" v-for="store in stores">
+            <div class="store-section" v-for="restaurant in restaurants">
                 <div class="row">
                     <div class="col-md-8">
                         <img :src="store.image_url" alt="{{store.name}}" />
