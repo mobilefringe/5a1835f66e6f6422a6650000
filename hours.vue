@@ -87,7 +87,7 @@
                     
                     var cafes = stores_by_category["NorthPark Cafés"]
                     console.log(cafes)
-                    var restaurants = stores_by_category["NorthPark Cafés"]
+                    var restaurants = stores_by_category["Restaurants / Beverages"]
                     console.log(restaurants)
                     
                 }
