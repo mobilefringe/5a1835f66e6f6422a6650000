@@ -62,7 +62,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
-        return Vue.component("hours-component", {
+        return Vue.component("promos-component", {
             template: template, // the variable template will be injected
             computed: {
                 property (){
@@ -73,20 +73,12 @@
                     return this.$store.getters.getTimezone;
                 },
                 hours(){
-                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    return hours;
-                    console.log(hours)
+                    var hours = 
+                        _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
+                        console.log(hours);
+                        return hours;
                 },
-                storesByCategoryName() {
-                    return this.$store.getters.storesByCategoryName;
-                    
-                }
-                restaurants() {
-                    // var dining = _.filter(this.$store.getters.storesByCategoryName, function(o) { return o.id == 2280 });
-              
-                    // return dining
-                    // console.log(dining)
-                }
+                
             },
             methods: {
                 day_of_the_week(val_day){
