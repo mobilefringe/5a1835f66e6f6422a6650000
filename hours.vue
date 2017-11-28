@@ -66,7 +66,6 @@
             template: template, // the variable template will be injected
             mounted () {
                 this.restaurant
-                // this.processedStores = this.allStores;
             },
             computed: {
                 property(){
@@ -82,20 +81,12 @@
                 },
                 restaurant(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
-                    console.log(stores_by_category)
-                    
-                    
                     var cafes = stores_by_category["NorthPark Cafés"]
-                    console.log(cafes)
                     var restaurants = stores_by_category["Restaurants / Beverages"]
-                    console.log(restaurants)
                     var specialty = stores_by_category["Specialty Foods"]
-                    console.log(specialty)
+                    var all_restaurants = _.concat(cafes, restaurants, specialty)
                     
                 }
-                // allStores() {
-                //     return this.$store.getters.processedStores;
-                // },
             },
             methods: {
                 day_of_the_week(val_day){
