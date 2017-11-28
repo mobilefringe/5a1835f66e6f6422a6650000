@@ -82,12 +82,12 @@
                 },
                 restaurant(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
-                    console.log(stores_by_category["NorthPark Cafés"])
+                    console.log(stores_by_category)
                     
-                    var allStores = this.$store.getters.processedStores;
-                    var cafes = _.filter(this.$store.getters.processedStores, function(o) {return o.categories == "NorthPark Cafés"})
-                    console.log(allStores)
-                    var restaurants = _.filter(this.$store.getters.processedStores, function(o) {return o.category_name == "Restaurants / Beverages"})
+                    
+                    var cafes = stores_by_category["NorthPark Cafés"]
+                    console.log(cafes)
+                    var restaurants = stores_by_category["NorthPark Cafés"]
                     console.log(restaurants)
                     
                 }
