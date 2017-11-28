@@ -12,7 +12,7 @@
                     <p>{{restaurant.phone}}</p>
                     <p>Hours</p>
                     <ul class="">
-                        <li v-for="hour in store.hours">
+                        <li v-for="hour in restaurant.hours">
                             <span class="pull-left col-md-6"> 
                                {{day_of_the_week(hour.day_of_week)}}
                             </span>
