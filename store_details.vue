@@ -1,10 +1,12 @@
 <template>
-    <div class="row" v-if="currentStore">
-        <div class="col-md-6">
-            <div>
-                <h1>{{currentStore.name}}</h1>
-                <p>{{currentStore.description}}</p>
-                <a v-bind:href="currentStore.website">{{currentStore.website}}</a>
+    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <div class="row" v-if="currentStore">
+            <div class="col-md-6">
+                <div>
+                    <h1>{{currentStore.name}}</h1>
+                    <p>{{currentStore.description}}</p>
+                    <a v-bind:href="currentStore.website">{{currentStore.website}}</a>
+                </div>
             </div>
         </div>
     </div>
