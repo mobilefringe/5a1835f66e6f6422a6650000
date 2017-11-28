@@ -94,6 +94,7 @@
                     var specialty = stores_by_category["Specialty Foods"]
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
                     console.log(all_restaurants)
+                    var filtered_restaurants = _.uniqBy(all_restaurants, name
                     return all_restaurants
                 }
             },
@@ -103,7 +104,8 @@
                     return weekday[val_day];
                 },
                 changeItem($event) {
-                    this.selected = $event.target.value
+                    // this.selected = $event.target.value
+                    var selected = this.$event.target.value
                     console.log("It was changed")
                 }
             }
