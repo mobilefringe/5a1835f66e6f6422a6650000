@@ -64,6 +64,9 @@
         Vue.use(Meta);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
+            mounted () {
+                this.restaurant
+            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
