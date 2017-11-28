@@ -27,15 +27,6 @@
     </div>
 </template>
 
-<style>
-  .center{
-    text-align: center
-  }
-  .store-section a{
-    color: #708090;
-  }
-</style>
-
 <script>
     define(["Vue"], function(Vue) {
         return Vue.component("stores-component", {
@@ -56,13 +47,6 @@
                 }
             },
             computed: {
-                storesByAlphaIndex() {
-                    return this.$store.getters.storesByAlphaIndex;
-                },
-                storesByCategoryName() {
-                    return this.$store.getters.storesByCategoryName;
-                },
-                
                 restaurants(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var cafes = stores_by_category["NorthPark Cafés"]
