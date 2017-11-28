@@ -1,5 +1,3 @@
-Vue.config.devtools = true;
-
 require.config({
   paths: {
     'Vue': 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.1/vue.min',
@@ -30,7 +28,8 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
-
+    Vue.config.devtools = true;
+    
     /* initialize router */
     const router = new VueRouter({
         mode: 'history',
