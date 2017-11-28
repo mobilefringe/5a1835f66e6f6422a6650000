@@ -1,7 +1,7 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="row" v-if="currentStore">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div>
                     <h2>{{currentStore.name}}</h2>
                     <p>{{currentStore.description}}</p>
@@ -11,6 +11,10 @@
                         <a>View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </router-link>
                 </div>
+            </div>
+            <div class="col-md-4">
+                <h5 class="dine-contact-header">Contact</h5>
+                <p>{{currentStore.phone}}</p>
             </div>
         </div>
     </div>
