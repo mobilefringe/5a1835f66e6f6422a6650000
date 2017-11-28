@@ -30,7 +30,7 @@
                     <!--    </li>-->
                     <!--</ul>-->
                 </div>
-                <div class="details-manager-container">
+                <div class="details-manager-container" v-if="currentStore && currentStore.description">
                     <h5>Manager</h5>
                     <p>manager name</p>
                 </div>
