@@ -64,6 +64,11 @@
         Vue.use(Meta);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
+            data: function() {
+                return {
+                    processedStores : [],
+                }
+            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
