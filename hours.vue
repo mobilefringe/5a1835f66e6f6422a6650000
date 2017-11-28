@@ -77,7 +77,7 @@
                         return hours;
                 },
                 restaurants() {
-                    var stores = (this.$store.getters.storesByCategoryName;)
+                    var stores = (this.$store.getters.storesByCategoryName)
                     console.log(stores)
                 }
             },
