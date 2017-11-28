@@ -87,8 +87,8 @@
                     var allStores = this.$store.getters.processedStores;
                     var cafes = _.filter(this.$store.getters.processedStores, function(o) {return o.category_name == "NorthPark Cafés"})
                     console.log(allStores)
-                    // var restaurants = _.filter(stores_by_category, function(o) { return o[i] = "NorthPark Cafés"})
-                    // console.log(restaurants)
+                    var restaurants = _.filter(this.$store.getters.processedStores, function(o) {return o.category_name == "Restaurants / Beverages"})
+                    console.log(restaurants)
                     
                 }
                 // allStores() {
