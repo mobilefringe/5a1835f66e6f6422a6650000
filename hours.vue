@@ -73,13 +73,13 @@
                 },
                 hours(){
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    console.log(hours);
+                    // console.log(hours);
                     return hours;
                 },
                 restaurant(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     console.log(stores_by_category)
-                    var restaurants = _.filter(stores_by_category)
+                    // var restaurants = _.filter(stores_by_category)
                 }
             },
             methods: {
