@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-md-4">
                     <h2 class="dine-name">{{restaurant.name}}</h2>
-                    <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}">Visit Store Page</router-link>
+                    <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}">Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></router-link>
                     <p>Contact</p>
                     <p>{{restaurant.phone}}</p>
                     <p>Hours</p>
