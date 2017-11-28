@@ -81,8 +81,9 @@
                 },
                 restaurant(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
+                    console.log(stores_by_category)
+                    var cafes = stores_by_category.["NorthPark Cafés"]
                     
-                    console.log(stores_by_category.["NorthPark Cafés"])
                     
                 }
             },
