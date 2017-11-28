@@ -37,7 +37,7 @@
                         <!-- Add Restaurant Drop Down -->
                         <select >
                             <option disabled value="">Select A Restaurant</option>
-                            <option v-for="restaurant in restaurants" v-bind:value="restaurant.id, restaurant.name">{{ restaurant.name }}</option>
+                            <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
                         </select>
                         
                     </div>
