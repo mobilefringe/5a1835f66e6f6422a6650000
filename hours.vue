@@ -81,10 +81,9 @@
                 },
                 restaurant(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
-                    // var categories = this.$store.state.results.categories;
-                    console.log(stores_by_category)
-                    // console.log(categories)
-                    // var restaurants = _.filter(stores_by_category)
+                    
+                    console.log(stores_by_category.["NorthPark Cafés"])
+                    
                 }
             },
             methods: {
