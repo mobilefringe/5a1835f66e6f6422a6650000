@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2>Restaurant Hours</h2>
-                        <p>{{selected}}</p>
+                        
                         <!-- Hours -->
                     </div>
                     <div class="col-md-6">
@@ -39,6 +39,7 @@
                             <option selected>Select A Restaurant</option>
                             <option v-for="restaurant in restaurants" value="({{ restaurant.name }})">{{ restaurant.name }}</option>
                         </select>
+                        <p>{{selected}}</p>
                     </div>
                 </div>
                 <div class="row">
