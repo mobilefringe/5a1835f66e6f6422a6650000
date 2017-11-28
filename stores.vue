@@ -5,7 +5,7 @@
             <li><a v-on:click="changeMode('category')">Category</a></li>
         </ul>
         <hr/>
-        <div class="columns large-12" v-for="(stores, index) in storesByAlphaIndex" v-if="listMode === 'alphabetical'">
+        <div class="columns large-12" v-for="restaurant in restaurants">
             <!--<div class="list_header">-->
             <!--    <b>{{index}}</b>-->
             <!--    <hr/>-->
@@ -78,6 +78,16 @@
                 },
                 storesByCategoryName() {
                     return this.$store.getters.storesByCategoryName;
+                },
+                
+                restaurants(){
+                    var stores_by_category = this.$store.getters.storesByCategoryName;
+                    var cafes = stores_by_category["NorthPark Cafés"]
+                    var restaurants = stores_by_category["Restaurants / Beverages"]
+                    var specialty = stores_by_category["Specialty Foods"]
+                    var all_restaurants = _.concat(cafes, restaurants, specialty)
+                    var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
+                    return filtered_restaurants
                 }
             }
         });
