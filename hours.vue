@@ -96,7 +96,7 @@
                     console.log(all_restaurants)
                     var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
                     console.log(filtered_restaurants)
-                    return all_restaurants
+                    return filtered_restaurants
                 }
             },
             methods: {
