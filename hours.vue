@@ -62,7 +62,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
-        return Vue.component("promos-component", {
+        return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             computed: {
                 property (){
