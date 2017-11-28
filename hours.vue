@@ -78,7 +78,7 @@
                 },
                 storesByCategoryName() {
                     return this.$store.getters.storesByCategoryName;
-                    console.log(this)
+                    console.log(this.$store.getters.storesByCategoryName;)
                 }
             },
             methods: {
