@@ -103,12 +103,12 @@
                     return weekday[val_day];
                 },
                 changeItem(event) {
-                    this.selected = `${event.target.value}`
+                    this.selected = `${event.target.name}`
                     console.log("I've changed")
                     console.log(this.selected)
                     
-                    var store_id = this.${event.target.value}
-                    console.log(store_id)
+                    // var store_id = this.${event.target.value}
+                    // console.log(store_id)
                 }
             }
         });
