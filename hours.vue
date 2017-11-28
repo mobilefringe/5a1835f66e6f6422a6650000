@@ -107,7 +107,7 @@
                     console.log("I've changed")
                     console.log(this.selected)
                     
-                    var store_id = this.$event.target.value
+                    var store_id = this.${event.target.value}
                     console.log(store_id)
                 }
             }
