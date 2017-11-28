@@ -13,19 +13,23 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <h5 class="dine-contact-header">Contact</h5>
-                <p>{{currentStore.phone}}</p>
-                <h5>Hours</h5>
-                <ul class="">
-                    <li v-for="hour in restaurant.hours">
-                        <span class="pull-left col-md-6"> 
-                           {{day_of_the_week(hour.day_of_week)}}
-                        </span>
-                        <span class="pull-right col-md-6 text-left">
-                            {{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}
-                        </span>
-                    </li>
-                </ul>
+                <div class="details-contact-container">
+                    <h5 class="dine-contact-header">Contact</h5>
+                    <p>{{currentStore.phone}}</p>
+                </div>
+                <div class="details-hours-container">
+                    <h5>Hours</h5>
+                    <ul class="">
+                        <li v-for="hour in restaurant.hours">
+                            <span class="pull-left col-md-6"> 
+                               {{day_of_the_week(hour.day_of_week)}}
+                            </span>
+                            <span class="pull-right col-md-6 text-left">
+                                {{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <h5>Manager</h5>
         </div>
