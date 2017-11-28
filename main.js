@@ -95,7 +95,17 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 moment.locale(val);
                 // console.log(moment().format('LLLL'));
                 // console.log(this.$store.getters.getTodayHours);
-            }
+            },
+            $route : function () {
+                console.log("Changed to route:",this.$route.path);
+                // this.show_menu = false;
+                // if(this.$route.path == "/") {
+                //     this.show_hero_banner = true;
+                // }
+                // else {
+                //     this.show_hero_banner = false;
+                // }
+            },
         },
         computed: {
             // computed property for locale which returns locale value from data store and also updates the data store with new locale information
