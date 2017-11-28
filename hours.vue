@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2>Restaurant Hours</h2>
-                        <p>{{selected}}</p>
+                        <!--<p>{{selected}}</p>-->
                         <!-- Hours -->
                     </div>
                     <div class="col-md-6">
