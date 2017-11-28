@@ -78,7 +78,6 @@
                 },
                 storesByCategoryName() {
                     return this.$store.getters.storesByCategoryName;
-                    console.log(this.$store.getters.storesByCategoryName;)
                 }
             },
             methods: {
