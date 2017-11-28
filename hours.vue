@@ -35,6 +35,9 @@
                     </div>
                     <div class="col-md-6">
                         <!-- Add Restaurant Drop Down -->
+                        <select>
+                            <option v-for="restaurant in all_restaurants">{{ restaurant.name }}</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">
