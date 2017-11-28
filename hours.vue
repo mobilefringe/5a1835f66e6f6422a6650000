@@ -67,6 +67,9 @@
         Vue.use(Meta);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
+            data: {
+                selected: "selected",
+            },
             mounted () {
                 this.restaurant
             },
