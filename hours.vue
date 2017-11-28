@@ -82,14 +82,14 @@
                     // console.log(hours);
                     return hours;
                 },
-                restaurant(){
+                restaurants(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var cafes = stores_by_category["NorthPark Cafés"]
                     var restaurants = stores_by_category["Restaurants / Beverages"]
                     var specialty = stores_by_category["Specialty Foods"]
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
                     console.log(all_restaurants)
-                    
+                    return all_restaurants
                 }
             },
             methods: {
