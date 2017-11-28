@@ -4,7 +4,7 @@
             <div class="col-md-8">
                 <div>
                     <h2 class="details-store-name">{{currentStore.name}}</h2>
-                    <p>{{currentStore.description}}</p>
+                    <p class="details-description">{{currentStore.description}}</p>
                     <a v-bind:href="currentStore.website">{{currentStore.website}}</a>
                     
                     <router-link to="/stores" active-class="active" exact>
