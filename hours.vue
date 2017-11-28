@@ -82,7 +82,7 @@
                 }
                 restaurants() {
                     // var dining = _.filter(this.$store.getters.storesByCategoryName, function(o) { return o.id == 2280 });
-                 var dining = this.$store.state.results
+              
                     // return dining
                     console.log(dining)
                 }
