@@ -105,9 +105,9 @@
                 },
                 changeItem($event) {
                     // this.selected = $event.target.value
-                    // var selected = this.$event.target.value
+                    var selected = this.$event.target.value
                     console.log("It was changed")
-                    // console.log(selected)
+                    console.log(selected)
                 }
             }
         });
