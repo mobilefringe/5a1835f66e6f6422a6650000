@@ -78,6 +78,10 @@
                         console.log(hours);
                         return hours;
                 },
+                restaurants(){
+                    var stores = this.stores
+                    console.log(stores)
+                }
             },
             methods: {
                 day_of_the_week(val_day){
