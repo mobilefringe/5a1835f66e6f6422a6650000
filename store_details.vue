@@ -45,12 +45,12 @@
                     }
                 })
             },
-      beforeRouteUpdate (to, from, next) {
-        this.currentStore = this.findStoreBySlug(to.params.id);
-        if (this.currentStore === null || this.currentStore === undefined){
-          this.$router.replace({ name: '404'});
-        }
-      },
+            beforeRouteUpdate (to, from, next) {
+                this.currentStore = this.findStoreBySlug(to.params.id);
+                if (this.currentStore === null || this.currentStore === undefined){
+                    this.$router.replace({ name: '404'});
+                }
+            },
             computed: {
                 findStoreBySlug () {
                     return this.$store.getters.findStoreBySlug;
