@@ -76,7 +76,7 @@
                 },
                 hours(){
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    // console.log(hours);
+                    console.log(hours);
                     return hours;
                 },
                 restaurant(){
@@ -84,7 +84,7 @@
                     console.log(stores_by_category)
                     // var cafes = stores_by_category.["NorthPark Cafés"]
                     // console.log(cafes)
-                    var restaurants = _.filter(stores_by_category, function(o) { return o.name = "NorthPark Cafés"})
+                    var restaurants = _.filter(stores_by_category, function(o) { return o = "NorthPark Cafés"})
                     console.log(restaurants)
                     
                 }
