@@ -76,6 +76,11 @@
                     console.log(hours);
                     return hours;
                 },
+                restaurant(){
+                    var stores_by_category = this.$store.getters.storesByCategoryName;
+                    console.log(stores_by_category)
+                    var restaurants = _.filter(stores_by_category)
+                }
             },
             methods: {
                 day_of_the_week(val_day){
