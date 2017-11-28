@@ -65,19 +65,19 @@
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             computed: {
-                property (){
+                property(){
                     return this.$store.getters.getProperty;
                 },
-                timezone () {
+                timezone() {
                     return this.$store.getters.getTimezone;
                 },
                 hours(){
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                        console.log(hours);
-                        return hours;
+                    console.log(hours);
+                    return hours;
                 },
                 restaurants() {
-                    var stores = (this.$store.getters.storesByCategoryName)
+                    var stores = (this.$store.state.results.hours)
                     console.log(stores)
                 }
             },
