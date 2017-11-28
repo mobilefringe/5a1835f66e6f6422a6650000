@@ -36,7 +36,7 @@
                     <div class="col-md-6">
                         <!-- Add Restaurant Drop Down -->
                         <select @change="changeItem($event)">
-                            <option v-for="restaurant in restaurants" value={{ restaurant.name }}>{{ restaurant.name }}</option>
+                            <option v-for="restaurant in restaurants" value="({{ restaurant.name }})">{{ restaurant.name }}</option>
                         </select>
                     </div>
                 </div>
