@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="details-contact-container">
+                <div class="details-contact-container" v-if="currentStore && currentStore.phone">
                     <h5 class="dine-contact-header">Contact</h5>
                     <p>{{currentStore.phone}}</p>
                 </div>
