@@ -46,7 +46,9 @@
                     <h2>{{promo.name}}</h2> 
                     <p class="sub_title ">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
                     <p class="description_text ">{{promo.description}}</p> 
-                        <router-link class="newsletter_btn animated_btn all_caps text_center" :to="{ name: 'promotionDetails', params: { id: promo.slug }}">Read More</router-link>    
+                    <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
+                        <a>Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </router-link>    
                 </div>
                 <div class="col-md-6">
                     <img :src="promo.promo_image_url_abs" class="store_logo" alt="">
