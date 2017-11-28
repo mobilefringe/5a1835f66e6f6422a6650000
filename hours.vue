@@ -89,6 +89,8 @@
                     console.log(cafes)
                     var restaurants = stores_by_category["Restaurants / Beverages"]
                     console.log(restaurants)
+                    var specialty = stores_by_category["Specialty Foods"]
+                    console.log(specialty)
                     
                 }
                 // allStores() {
