@@ -82,6 +82,19 @@
                     this.$router.replace({ name: '404'});
                 }
             },
+            watch : {
+                currentStore : function (){
+                    console.log("currentStore promo",this.currentStore );
+                    var vm = this;
+                    var temp = [];
+                    _.forEach(this.currentStore.promotions, function(value, key) {
+                        console.log(vm.findPromoById(value));
+                        temp.push(vm.findPromoById(value));
+                    });
+                    this.promotions = temp;
+                    console.log("promos",this.promotions);
+                }
+            },
             computed: {
                 findStoreBySlug () {
                     return this.$store.getters.findStoreBySlug;
@@ -91,7 +104,10 @@
                 },
                 timezone() {
                     return this.$store.getters.getTimezone;
-                }
+                },
+                findPromoById () {
+                    return this.$store.getters.findPromoById;
+                },
             }
         });
     });
