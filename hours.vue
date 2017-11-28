@@ -64,14 +64,6 @@
         Vue.use(Meta);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
-            data: function() {
-                return {
-                    processedStores : [],
-                }
-            },
-            mounted () {
-                this.processedStores = this.allStores;
-            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
@@ -84,19 +76,6 @@
                     console.log(hours);
                     return hours;
                 },
-                allStores() {
-                    return this.$store.getters.processedStores;
-                },
-                // restaurants() {
-                //     var stores_by_category = this.$store.getters.storesByCategoryName;
-                
-                //     console.log(stores_by_category)
-                // }
-                storesByCategory(){
-                    // var dining = _.filter(this.allStores, function(o) { return })
-                    var dining = allStores
-                    console.log(dining)
-                }
             },
             methods: {
                 day_of_the_week(val_day){
