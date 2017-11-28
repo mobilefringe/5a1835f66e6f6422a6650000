@@ -27,16 +27,16 @@
                 <hr/>
             </div>
         </div>
-        <div class="columns large-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">
-            <div class="list_header">
-                <b>{{index}}</b>
-                <hr/>
-            </div>
-            <div class="store-section" v-for="store in stores">
-                <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>
-                <hr/>
-            </div>
-        </div>
+        <!--<div class="columns large-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">-->
+        <!--    <div class="list_header">-->
+        <!--        <b>{{index}}</b>-->
+        <!--        <hr/>-->
+        <!--    </div>-->
+        <!--    <div class="store-section" v-for="store in stores">-->
+        <!--        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>-->
+        <!--        <hr/>-->
+        <!--    </div>-->
+        <!--</div>-->
     </div>
 </template>
 
