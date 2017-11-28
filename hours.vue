@@ -73,12 +73,14 @@
                     return this.$store.getters.getTimezone;
                 },
                 hours(){
-                    var hours = 
-                        _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
+                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                         console.log(hours);
                         return hours;
                 },
-                
+                restaurants() {
+                    var stores = (this.$store.state.results)
+                    console.log(stores)
+                }
             },
             methods: {
                 day_of_the_week(val_day){
