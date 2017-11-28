@@ -100,7 +100,7 @@
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
                 },
-                changeItem(event) {
+                changeItem($event) {
                     this.selected = $event.target.value
                     console.log(this.selected)
                 }
