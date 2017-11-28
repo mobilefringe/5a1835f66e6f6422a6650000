@@ -105,7 +105,7 @@
                 },
                 changeItem($event) {
                     // this.selected = $event.target.value
-                    var selected = this.$event.value
+                    var selected = this.selected
                     console.log("It was changed")
                     console.log(selected)
                 }
