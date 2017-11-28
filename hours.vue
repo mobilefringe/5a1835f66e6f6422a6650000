@@ -82,10 +82,10 @@
                 restaurant(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     console.log(stores_by_category)
-                    var cafes = stores_by_category.[9]
-                    console.log(cafes)
-                    var restaurants = _.filter(stores_by_category, function(o) { return o[i] = "NorthPark Cafés"})
-                    console.log(restaurants)
+                    
+                    
+                    // var restaurants = _.filter(stores_by_category, function(o) { return o[i] = "NorthPark Cafés"})
+                    // console.log(restaurants)
                     
                 }
             },
