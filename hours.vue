@@ -104,6 +104,7 @@
                 },
                 changeItem(event) {
                     this.selected = `${event.target.value}`
+                    console.log("I've changed")
                 }
             }
         });
