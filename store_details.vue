@@ -20,7 +20,7 @@
                 <div class="details-hours-container">
                     <h5>Hours</h5>
                     <ul class="">
-                        <li v-for="hour in restaurant.hours">
+                        <li v-for="hour in hours">
                             <span class="pull-left col-md-6"> 
                                {{day_of_the_week(hour.day_of_week)}}
                             </span>
@@ -30,8 +30,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="details-manager-container">
+                    <h5>Manager</h5>
+                    <p>manager name</p>
+                </div>
             </div>
-            <h5>Manager</h5>
         </div>
         <div class="row">
             <div class="col-md-12">
