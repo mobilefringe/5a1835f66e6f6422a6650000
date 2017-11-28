@@ -69,6 +69,9 @@
                     processedStores : [],
                 }
             },
+            mounted () {
+                this.processedStores = this.allStores;
+            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
