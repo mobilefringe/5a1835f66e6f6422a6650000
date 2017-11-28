@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-md-6">
                         <!-- Add Restaurant Drop Down -->
-                        <select @change="changeItem($event)">
+                        <select v-model="selected">
                             <option selected value="">Select A Restaurant</option>
                             <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
                         </select>
