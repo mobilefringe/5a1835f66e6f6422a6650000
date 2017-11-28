@@ -5,8 +5,6 @@
                 <div>
                     <h2 class="details-store-name">{{currentStore.name}}</h2>
                     <p class="details-description">{{currentStore.description}}</p>
-                    <a v-bind:href="currentStore.website">{{currentStore.website}}</a>
-                    
                     <router-link to="/stores" active-class="active" exact>
                         <a class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </router-link>
