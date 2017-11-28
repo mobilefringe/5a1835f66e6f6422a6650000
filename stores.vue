@@ -1,12 +1,12 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="store-section" v-for="restaurant in restaurants">
+        <div class="dine-container" v-for="restaurant in restaurants">
             <div class="row">
                 <div class="col-md-8">
                     <img :src="restaurant.image_url" alt="{{restaurant.name}}" />
                 </div>
                 <div class="col-md-4">
-                    <p>{{restaurant.name}}</p>
+                    <h2 class="dine-name">{{restaurant.name}}</h2>
                     <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}">Visit Store Page</router-link>
                     <p>Contact</p>
                     <p>{{restaurant.phone}}</p>
