@@ -13,13 +13,13 @@
             <div class="store-section" v-for="restaurant in restaurants">
                 <div class="row">
                     <div class="col-md-8">
-                        <img :src="store.image_url" alt="{{store.name}}" />
+                        <img :src="restaurant.image_url" alt="{{restaurant.name}}" />
                     </div>
                     <div class="col-md-4">
-                        <p>{{store.name}}</p>
-                        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">Visit Store Page</router-link>
+                        <p>{{restaurant.name}}</p>
+                        <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}">Visit Store Page</router-link>
                         <p>Contact</p>
-                        <p>{{store.phone}}</p>
+                        <p>{{restaurant.phone}}</p>
                         <p>Hours</p>
                         
                     </div>
