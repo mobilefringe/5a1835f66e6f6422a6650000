@@ -38,7 +38,7 @@
                 }
             },
             methods: {
-                changeMode (mode) {
+                changeMode(mode) {
                     this.listMode = mode;
                 },
                 day_of_the_week(val_day){
