@@ -37,7 +37,7 @@
                         <!-- Add Restaurant Drop Down -->
                         <select v-model="selected">
                             <option selected>Select A Restaurant</option>
-                            <option v-for="restaurant in restaurants" value="({{ restaurant.name }})">{{ restaurant.name }}</option>
+                            <option v-for="restaurant in restaurants">{{ restaurant.name }}</option>
                         </select>
                         <p>{{selected}}</p>
                     </div>
