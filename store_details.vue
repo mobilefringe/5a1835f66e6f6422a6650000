@@ -3,7 +3,7 @@
         <div class="row" v-if="currentStore">
             <div class="col-md-8">
                 <div>
-                    <h2>{{currentStore.name}}</h2>
+                    <h2 class="details-store-name">{{currentStore.name}}</h2>
                     <p>{{currentStore.description}}</p>
                     <a v-bind:href="currentStore.website">{{currentStore.website}}</a>
                     
