@@ -65,7 +65,7 @@
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             mounted () {
-                this.restaurant
+                // this.restaurant
                 this.processedStores = this.allStores;
             },
             computed: {
