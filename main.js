@@ -90,21 +90,11 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
         },
         watch: {
             // watcher to update vue-i18n when the locale has been changed by the user
-            locale: function (val, oldVal) {
+            locale: function(val, oldVal) {
                 this.$i18n.locale = val;
                 moment.locale(val);
                 // console.log(moment().format('LLLL'));
                 // console.log(this.$store.getters.getTodayHours);
-            },
-            $route : function () {
-                console.log("Changed to route:",this.$route.path);
-                // this.show_menu = false;
-                // if(this.$route.path == "/") {
-                //     this.show_hero_banner = true;
-                // }
-                // else {
-                //     this.show_hero_banner = false;
-                // }
             },
         },
         computed: {
