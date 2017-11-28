@@ -83,7 +83,8 @@
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     console.log(stores_by_category)
                     
-                    
+                    var allStores = this.$store.getters.storesByAlphaIndex;
+                    console.log(allStores)
                     // var restaurants = _.filter(stores_by_category, function(o) { return o[i] = "NorthPark Cafés"})
                     // console.log(restaurants)
                     
