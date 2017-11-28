@@ -39,7 +39,7 @@
                             <option disabled value="">Select A Restaurant</option>
                             <option v-for="restaurant in restaurants">{{ restaurant.name }}</option>
                         </select>
-                        <!--<p>{{selected}}</p>-->
+                        <p>{{selected}}</p>
                     </div>
                 </div>
                 <div class="row">
