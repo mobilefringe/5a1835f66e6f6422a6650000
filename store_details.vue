@@ -47,7 +47,7 @@
                     <p class="sub_title ">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
                     <p class="description_text ">{{promo.description}}</p> 
                     <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
-                        <a>Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        <a class="details-link">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </router-link>    
                 </div>
                 <div class="col-md-6">
