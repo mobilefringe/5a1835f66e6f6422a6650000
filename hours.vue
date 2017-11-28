@@ -66,6 +66,7 @@
             template: template, // the variable template will be injected
             mounted () {
                 this.restaurant
+                this.processedStores = this.allStores;
             },
             computed: {
                 property(){
@@ -89,6 +90,9 @@
                     // console.log(restaurants)
                     
                 }
+                allStores() {
+                    return this.$store.getters.processedStores;
+                },
             },
             methods: {
                 day_of_the_week(val_day){
