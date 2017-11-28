@@ -1,3 +1,5 @@
+Vue.config.devtools = true;
+
 require.config({
   paths: {
     'Vue': 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.1/vue.min',
