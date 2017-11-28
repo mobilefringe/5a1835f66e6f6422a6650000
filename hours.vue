@@ -92,17 +92,18 @@
                 
                 //     console.log(stores_by_category)
                 // }
+                storesByCategory(){
+                    // var dining = _.filter(this.allStores, function(o) { return })
+                    var dining = allStores
+                    console.log(dining)
+                }
             },
             methods: {
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
                 },
-                storesByCategory(){
-                    // var dining = _.filter(this.allStores, function(o) { return })
-                    var dining = allStores
-                    console.log(dining)
-                }
+                
             }
         });
     });
