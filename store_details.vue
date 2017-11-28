@@ -27,6 +27,7 @@
                     </li>
                 </ul>
             </div>
+            <h5>Manager</h5>
         </div>
         <div class="row">
             <div class="col-md-12">
