@@ -30,12 +30,12 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2>Restaurant Hours</h2>
-                        <!--<p>{{selected}}</p>-->
+                        <p>{{selected}}</p>
                         <!-- Hours -->
                     </div>
                     <div class="col-md-6">
                         <!-- Add Restaurant Drop Down -->
-                        <select @change="changeItem($event)">
+                        <select v-model="selected">
                             <option selected>Select A Restaurant</option>
                             <option v-for="restaurant in restaurants" value="({{ restaurant.name }})">{{ restaurant.name }}</option>
                         </select>
@@ -68,9 +68,9 @@
         Vue.use(Meta);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
-            // data: {
-            //     selected: "selected",
-            // },
+            data: {
+                selected: "",
+            },
             mounted () {
                 this.restaurant
             },
