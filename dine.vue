@@ -29,7 +29,7 @@
 
 <script>
     define(["Vue"], function(Vue) {
-        return Vue.component("stores-component", {
+        return Vue.component("dine-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
