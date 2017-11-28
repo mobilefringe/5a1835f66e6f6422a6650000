@@ -68,7 +68,6 @@
                 property (){
                     return this.$store.getters.getProperty;
                 },
-                
                 timezone () {
                     return this.$store.getters.getTimezone;
                 },
@@ -78,7 +77,7 @@
                         return hours;
                 },
                 restaurants() {
-                    var stores = (this.$store.state.results.hours)
+                    var stores = (this.$store.getters.storesByCategoryName;)
                     console.log(stores)
                 }
             },
