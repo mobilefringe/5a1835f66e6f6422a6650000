@@ -7,7 +7,7 @@
                     <p>{{currentStore.description}}</p>
                     <a v-bind:href="currentStore.website">{{currentStore.website}}</a>
                     
-                    <router-link tag="li" to="/stores" active-class="active" exact>
+                    <router-link to="/stores" active-class="active" exact>
                         <a>View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </router-link>
                 </div>
