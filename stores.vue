@@ -1,42 +1,20 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <!--<ul class="menu">-->
-        <!--    <li><a v-on:click="changeMode('alphabetical')">Alphabetical</a></li>-->
-        <!--    <li><a v-on:click="changeMode('category')">Category</a></li>-->
-        <!--</ul>-->
-        <hr/>
-        <div class="columns large-12">
-            <!--<div class="list_header">-->
-            <!--    <b>{{index}}</b>-->
-            <!--    <hr/>-->
-            <!--</div>-->
-            <div class="store-section" v-for="restaurant in restaurants">
-                <div class="row">
-                    <div class="col-md-8">
-                        <img :src="restaurant.image_url" alt="{{restaurant.name}}" />
-                    </div>
-                    <div class="col-md-4">
-                        <p>{{restaurant.name}}</p>
-                        <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}">Visit Store Page</router-link>
-                        <p>Contact</p>
-                        <p>{{restaurant.phone}}</p>
-                        <p>Hours</p>
-                        
-                    </div>
+        <div class="store-section" v-for="restaurant in restaurants">
+            <div class="row">
+                <div class="col-md-8">
+                    <img :src="restaurant.image_url" alt="{{restaurant.name}}" />
                 </div>
-                <hr/>
+                <div class="col-md-4">
+                    <p>{{restaurant.name}}</p>
+                    <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}">Visit Store Page</router-link>
+                    <p>Contact</p>
+                    <p>{{restaurant.phone}}</p>
+                    <p>Hours</p>
+                    
+                </div>
             </div>
         </div>
-        <!--<div class="columns large-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">-->
-        <!--    <div class="list_header">-->
-        <!--        <b>{{index}}</b>-->
-        <!--        <hr/>-->
-        <!--    </div>-->
-        <!--    <div class="store-section" v-for="store in stores">-->
-        <!--        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>-->
-        <!--        <hr/>-->
-        <!--    </div>-->
-        <!--</div>-->
     </div>
 </template>
 
