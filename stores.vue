@@ -11,7 +11,16 @@
                     <p>Contact</p>
                     <p>{{restaurant.phone}}</p>
                     <p>Hours</p>
-                    
+                    <ul class="">
+                        <li v-for="hour in store.hours">
+                            <span class="pull-left col-md-6"> 
+                               {{day_of_the_week(hour.day_of_week)}}
+                            </span>
+                            <span class="pull-right col-md-6 text-left">
+                                {{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -41,13 +50,9 @@
                 changeMode (mode) {
                     this.listMode = mode;
                 },
-                getStoreByCategory() {
-                    var dine_cats = ["All Restaurants / Food and Beverage", "NorthPark Cafés", "Restaurant (Order at Counter)", "Restaurants / Beverages", "Specialty Foods", "Specialty Foods / Beverages"];
-                    dine_cats = this.getCategoryIdArray (dine_cats);  
-                    
-                    this.dine_stores = _.orderBy(_.filter(this.allStores, function(o) { return _.includes(dine_cats, _.toString(o.categories[0])); }), 'name');
-                    this.dine_stores = _.groupBy(this.dine_stores, 'name');
-                    console.log(dine_stores)
+                day_of_the_week(val_day){
+                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                    return weekday[val_day];
                 }
             },
             computed: {
