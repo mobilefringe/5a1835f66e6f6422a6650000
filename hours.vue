@@ -30,12 +30,12 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2>Restaurant Hours</h2>
-                        <p>Restaurant Name</p>
+                        <p>{{selected}}</p>
                         <!-- Hours -->
                     </div>
                     <div class="col-md-6">
                         <!-- Add Restaurant Drop Down -->
-                        <select>
+                        <select @change="changeItem($event)">
                             <option v-for="restaurant in restaurants">{{ restaurant.name }}</option>
                         </select>
                     </div>
@@ -97,7 +97,9 @@
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
                 },
-                
+                changeItem(event) {
+                    this.selected = `${event.target.value}`
+                }
             }
         });
     });
