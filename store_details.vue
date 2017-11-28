@@ -34,22 +34,26 @@
                 </div>
             </div>
         </div>
-        <div class="row is-table-row padding_tb_50" v-if="currentStore && currentStore.total_published_promos > 0">
-            <h5>Current Promotions</h5>
-            <hr>
-            <div class="col-md-6" style="vertical-align:top;" v-for="promo in promotions" v-if="promotions">
-                <div class="col-md-6"> <img :src="promo.promo_image_url_abs" class="store_logo" alt=""> </div>
-                <div class="col-md-6">
-                <p class="title ">{{promo.name}}</p> 
-                <p class="sub_title ">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-                <p class="description_text ">{{promo.description}}</p> 
-                    <router-link class="newsletter_btn animated_btn all_caps text_center" :to="{ name: 'promotionDetails', params: { id: promo.slug }}">Read More</router-link>
+        <div class="row " v-if="currentStore && currentStore.total_published_promos > 0">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Current Promotions</h5>
+                    <hr>
                 </div>
-                
-                
             </div>
-            
+            <div class="row" v-for="promo in promotions" v-if="promotions">
+                <div class="col-md-6">
+                    <p class="title ">{{promo.name}}</p> 
+                    <p class="sub_title ">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+                    <p class="description_text ">{{promo.description}}</p> 
+                        <router-link class="newsletter_btn animated_btn all_caps text_center" :to="{ name: 'promotionDetails', params: { id: promo.slug }}">Read More</router-link>    
+                </div>
+                <div class="col-md-6">
+                    <img :src="promo.promo_image_url_abs" class="store_logo" alt="">
+                </div>
+            </div>
         </div>
+
         <div class="row">
             <div class="col-md-12">
                 <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i></p>
