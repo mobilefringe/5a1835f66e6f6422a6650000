@@ -98,7 +98,7 @@
                     return weekday[val_day];
                 },
                 changeItem(event) {
-                    this.selected = `${event.target.value}`
+                    this.selected = "${event.target.value}"
                 }
             }
         });
