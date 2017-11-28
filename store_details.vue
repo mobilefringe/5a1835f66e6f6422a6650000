@@ -17,6 +17,11 @@
                 <p>{{currentStore.phone}}</p>
             </div>
         </div>
+        <div class="row">
+                    <div class="col-md-12">
+                        <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> Hours</p>
+                    </div>
+                </div>
     </div>
 </template>
 
