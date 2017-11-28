@@ -76,6 +76,10 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
+                storesByCategoryName() {
+                    return this.$store.getters.storesByCategoryName;
+                    
+                }
                 restaurants() {
                     // var dining = _.filter(this.$store.getters.storesByCategoryName, function(o) { return o.id == 2280 });
                     var dining = this.allStores
