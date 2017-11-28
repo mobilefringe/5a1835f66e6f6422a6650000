@@ -28,37 +28,28 @@
     </div>
 </template>
 
-<style>
-  .center{
-    text-align: center
-  }
-  .store-section a{
-    color: #708090;
-  }
-</style>
-
 <script>
-  define(["Vue"], function(Vue) {
-    return Vue.component("stores-component", {
-      template: template, // the variable template will be injected
-      data: function() {
-        return {
-          listMode: "alphabetical"
-        }
-      },
-      methods: {
-        changeMode (mode) {
-          this.listMode = mode;
-        }
-      },
-      computed: {
-        storesByAlphaIndex() {
-          return this.$store.getters.storesByAlphaIndex;
-        },
-        storesByCategoryName() {
-          return this.$store.getters.storesByCategoryName;
-        }
-      }
+    define(["Vue"], function(Vue) {
+        return Vue.component("stores-component", {
+            template: template, // the variable template will be injected
+            data: function() {
+                return {
+                    listMode: "alphabetical"
+                }
+            },
+            methods: {
+                changeMode (mode) {
+                    this.listMode = mode;
+                }
+            },
+            computed: {
+                storesByAlphaIndex() {
+                    return this.$store.getters.storesByAlphaIndex;
+                },
+                storesByCategoryName() {
+                    return this.$store.getters.storesByCategoryName;
+                }
+            }
+        });
     });
-  });
 </script>
