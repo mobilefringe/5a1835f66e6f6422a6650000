@@ -85,6 +85,7 @@
                     var restaurants = stores_by_category["Restaurants / Beverages"]
                     var specialty = stores_by_category["Specialty Foods"]
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
+                    console.log(all_restaurants)
                     
                 }
             },
