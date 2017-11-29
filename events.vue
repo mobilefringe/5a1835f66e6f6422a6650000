@@ -64,7 +64,7 @@
                     } else if (this.selected == "promotions") {
                         this.currentSelection = this.storeEvents;
                     }
-                },
+                }
             },
             methods: {
                 changeItem(event) {
