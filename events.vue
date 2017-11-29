@@ -50,10 +50,21 @@
                 }
             },
             methods: {
-                changeItem($event) {
-                    this.selected = $event.target.value
-                    console.log(this.selected)
+                changeItem(event) {
+                    var event = this.selected 
+                    console.log(events)
+                    // this.selected = $event.target.value
+                    // console.log(this.selected)
                 }
+                // filterStores (letter) {
+                //     if(letter == "#"){
+                //         this.processedStores = _.filter(this.allStores, function(o) { return _.inRange(_.toNumber(o.name[0]), -1, 10); });
+                //     }
+                //     else {
+                //         this.processedStores = _.filter(this.allStores, function(o) { return _.lowerCase(o.name[0]) == _.lowerCase(letter); });
+                //     }
+                //     // console.log(this.processedStores);
+                // }
             },
             computed: {
                 events() {
@@ -61,9 +72,7 @@
                     // return this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
                     var merge = _.concat(events, promotions);
-                    console.log(merge)
                     var sorted = _.orderBy(merge, function(o) { return o.start_date })
-                    console.log(sorted)
                     return sorted
                 },
                 property(){
