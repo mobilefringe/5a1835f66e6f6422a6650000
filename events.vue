@@ -54,10 +54,10 @@
             },
             methods: {
                 changeItem(event) {
-                    // var event_type = event
-                    // console.log(event)
-                    this.selected = ${event.target.value}
-                    console.log(this.selected)
+                    var event_type = event.target.value
+                    console.log(event)
+                    // this.selected = ${event.target.value}
+                    // console.log(this.selected)
                 }
                 // filterStores (letter) {
                 //     if(letter == "#"){
