@@ -32,6 +32,7 @@
                         <ul class="hours-list">
                             <li v-for="hour in hours">
                                {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -81,7 +82,7 @@
                 }
             },
             mounted () {
-                this.restaurant,
+                this.restaurant
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
@@ -111,11 +112,8 @@
                     return this.$store.getters.getTimezone;
                 },
                 hours(){
-                    // var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    var hours = (this.$store.state.results.hours)
+                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
-                    
-                    console.log(hours)
                 },
                 restaurants(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
