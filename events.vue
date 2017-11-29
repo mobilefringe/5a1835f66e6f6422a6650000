@@ -9,7 +9,9 @@
             <div class="col-md-6">
                 <div class="row" v-for="event in events">
                     <div class="col-md-4">
-                        
+                        <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
+                        <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
+                        <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-8">
                         <p>{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
