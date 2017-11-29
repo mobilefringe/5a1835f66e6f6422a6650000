@@ -21,7 +21,7 @@ require.config({
         //append a dummy query string so requireJS doesn't auto-append .js to the end of the url
         'today_hours': 'https://mmvue.codecloudapp.com/today_hours.vue?noext', 
         'search-component': 'https://mmvue.codecloudapp.com/search-component.vue?noext',
-        'vue-breadcrumb': 'https://cdn.jsdelivr.net/npm/vue-breadcrumbs@1.1.2/dist/vue-breadcrumbs.common.min',
+        // 'vue-breadcrumb': 'https://cdn.jsdelivr.net/npm/vue-breadcrumbs@1.1.2/dist/vue-breadcrumbs.common.min',
     }
 });
 
@@ -30,7 +30,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
-    Vue.use(VueBreadcrumbs);
+    // Vue.use(VueBreadcrumbs);
     
     /* initialize router */
     const router = new VueRouter({
