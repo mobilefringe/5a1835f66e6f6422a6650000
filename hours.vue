@@ -17,10 +17,10 @@
                 <hr>
                 <h2>AMC Northpark 15</h2>
                 <div class="hours-amc">
-                    <router-link to="" active-class="active" exact>
+                    <router-link tag="p" to="" active-class="active" exact>
                         <a>View Showtimes <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </router-link>
-                    <router-link to="" active-class="active" exact>
+                    <router-link tag="p" to="" active-class="active" exact>
                         <a>View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </router-link>
                 </div>
