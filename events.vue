@@ -44,6 +44,11 @@
         Vue.use(Meta);
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
+            data: function() {
+                return {
+                    selected: ""
+                }
+            },
             methods: {
                 changeMode(mode) {
                     this.listMode = mode;
