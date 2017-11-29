@@ -70,10 +70,9 @@
         Vue.use(Meta);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
-            data: {
+            data: function() {
                 return {
-                    currentPage: null,
-            //     selected: "",
+                    currentPage: null
                 }
             },
             mounted () {
