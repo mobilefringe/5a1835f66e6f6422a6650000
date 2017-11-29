@@ -14,8 +14,8 @@
                         <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-8">
-                        <p>{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
-                        {{ event.name }}
+                        <h5>{{event.start_date | moment("MMMM D", timezone)}} - {{event.end_date | moment("MMMM D", timezone)}}</h5>
+                        <h2>{{ event.name }}</h2>
                         <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
@@ -52,7 +52,10 @@
             template: template, // the variable template will be injected
             computed: {
                 events() {
-                    return this.$store.getters.processedEvents;
+                    var events = this.$store.getters.processedEvents;
+                    // return this.$store.getters.processedEvents;
+                    var promotions = this.$store.getters.processedPromos;
+                    var merge = _.concat(events, promotions);
                 },
                 timezone () {
                     return this.$store.getters.getTimezone;
