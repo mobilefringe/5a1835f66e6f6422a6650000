@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="col-md-7">
-                <div class="row" v-for="event in events">
+                <div class="row" v-for="event in currentSelection">
                     <div class="col-md-2">
                         <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
                         <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
@@ -47,14 +47,23 @@
             data: function() {
                 return {
                     selected: "",
+                    currentSelection: null,
                     // event: null,
                     // promotions: null,
                     // holiday: null, 
                 }
             },
+            mounted(): {
+                this.currentSelection = this.events;
+            },
             watch: {
                 selected: function() {
                     console.log(this.selected)
+                    if(this.selected == "event"){
+                        this.currentSelection = this.propertyEvents;
+                    } else if (this.selected == "promotions") {
+                        this.currentSelection = this.storeEvents;
+                    }
                 },
             },
             methods: {
@@ -64,15 +73,6 @@
                     // this.selected = ${event.target.value}
                     // console.log(this.selected)
                 }
-                // filterStores (letter) {
-                //     if(letter == "#"){
-                //         this.processedStores = _.filter(this.allStores, function(o) { return _.inRange(_.toNumber(o.name[0]), -1, 10); });
-                //     }
-                //     else {
-                //         this.processedStores = _.filter(this.allStores, function(o) { return _.lowerCase(o.name[0]) == _.lowerCase(letter); });
-                //     }
-                //     // console.log(this.processedStores);
-                // }
             },
             computed: {
                 events() {
