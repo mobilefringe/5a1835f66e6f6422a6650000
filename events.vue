@@ -8,12 +8,12 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="row" v-for="event in events">
-                    <div class="col-md-4">
+                    <div class="col-md-2">
                         <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
                         <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
                         <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <h5>{{event.start_date | moment("MMMM D", timezone)}} - {{event.end_date | moment("MMMM D", timezone)}}</h5>
                         <h2>{{ event.name }}</h2>
                         <p class="sub_title" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</p>
