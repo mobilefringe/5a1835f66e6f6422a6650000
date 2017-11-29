@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment"], function(Vue, moment, tz, VueMoment) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         return Vue.component("page-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
