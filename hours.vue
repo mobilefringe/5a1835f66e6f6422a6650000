@@ -71,8 +71,10 @@
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             data: {
-                currentPage: null,
+                return {
+                    currentPage: null,
             //     selected: "",
+                }
             },
             mounted () {
                 this.restaurant
