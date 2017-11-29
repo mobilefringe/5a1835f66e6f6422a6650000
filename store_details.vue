@@ -109,15 +109,16 @@
                 findStoreBySlug () {
                     return this.$store.getters.findStoreBySlug;
                 },
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                },
                 findPromoById () {
                     return this.$store.getters.findPromoById;
                 },
+                property(){
+                    return this.$store.getters.getProperty;
+                },
+                timezone () {
+                    return this.$store.getters.getTimezone;
+                },
+                
             }
         });
     });
