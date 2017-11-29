@@ -28,7 +28,7 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
-                <select class="hours-dine-select" v-model="selected">
+                <select class="" @change="changeItem($event)">
                     <option selected value="">All Events</option>
                     <option v-bind:value="">NorthPark Events</option>
                     <option v-bind:value="">In-Store Events</option>
