@@ -13,16 +13,17 @@
                 <hr>
                 <h2>Management Office Hours</h2>
                 <p>Closed Easter, Thanksgiving, and Christmas Day.</p>
-                <div class="management-hours" v-html="currentPage.body"></div>
+                <div class="hours-management" v-html="currentPage.body"></div>
                 <hr>
                 <h2>AMC Northpark 15</h2>
-                
-                <router-link to="" active-class="active" exact>
-                    <a>View Showtimes <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                </router-link>
-                <router-link to="" active-class="active" exact>
-                    <a>View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                </router-link>
+                <div class="hours-amc">
+                    <router-link to="" active-class="active" exact>
+                        <a>View Showtimes <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </router-link>
+                    <router-link to="" active-class="active" exact>
+                        <a>View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </router-link>
+                </div>
                 <hr>
                 <div class="row">
                     <div class="col-md-6">
