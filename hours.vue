@@ -12,7 +12,6 @@
                 </ul>
                 <hr>
                 <h2>Management Office Hours</h2>
-                <p>Closed Easter, Thanksgiving, and Christmas Day.</p>
                 <div class="hours-management" v-html="currentPage.body"></div>
                 <hr>
                 <h2>AMC Northpark 15</h2>
