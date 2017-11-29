@@ -3,15 +3,15 @@
         <div class="columns large-3 medium 6" v-for="promo in promotions">
             <div class="card">
                 <div class="card-divider">
-                  {{ promo.name }}
+                  {{ event.name }}
                 </div>
             <div class="card-section center">
-              <a :href="promo.image_url" target="_blank"><img :src="promo.image_url"></a>
+              <a :href="event.image_url" target="_blank"><img :src="promo.image_url"></a>
             </div>
             <div class="card-section">
               <div class="center">
-                <p>{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-                <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">Read More</router-link>
+                <p>{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
+                <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">Read More</router-link>
               </div>
             </div>
             </div>
