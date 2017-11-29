@@ -47,8 +47,8 @@
                 </div>
                 <div class="col-md-5">
                     <h2 class="details-promo-name">{{promo.name}}</h2> 
-                    <h5>{{promo.store.name}}</h5>
-                    <p class="description_text ">{{promo.description}}</p> 
+                    <h5 class="details-promo-store">{{promo.store.name}}</h5>
+                    <p class="details-promo-desc">{{promo.description}}</p> 
                     <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
                         <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </router-link>    
