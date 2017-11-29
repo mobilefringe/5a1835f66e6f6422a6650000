@@ -53,13 +53,11 @@
             computed: {
                 events() {
                     var events = this.$store.getters.processedEvents;
-                    console.log(events)
                     // return this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
-                    console.log(promotions)
                     var merge = _.concat(events, promotions);
                     console.log(merge)
-                    // var sorted = _.orderBy(merge, )
+                    var sorted = _.orderBy(merge, function(o) { return o.start_date })
                 },
                 timezone () {
                     return this.$store.getters.getTimezone;
