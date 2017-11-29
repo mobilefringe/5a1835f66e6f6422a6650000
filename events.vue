@@ -60,8 +60,8 @@
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected == "promotions") {
                         this.currentSelection = this.storeEvents;
-                    } else if (this.selected == "holiday"){
-                        this.currentSelection = this.holidayEvents;
+                    // } else if (this.selected == "holiday"){
+                    //     this.currentSelection = this.holidayEvents;
                     }
                 }
             },
@@ -84,6 +84,9 @@
                     var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.start_date });
                     return promotions
                 },
+                holidayEvents(){
+                    
+                }
                 property(){
                     return this.$store.getters.getProperty;
                 },
