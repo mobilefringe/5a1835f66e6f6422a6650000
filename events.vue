@@ -50,7 +50,7 @@
                 }
             },
             methods: {
-                changeItem(event) {
+                changeItem($event) {
                     this.selected = $event.target.value
                     console.log(this.selected)
                 }
