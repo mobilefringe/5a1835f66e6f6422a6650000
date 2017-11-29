@@ -20,6 +20,7 @@
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                     </div>
+                    <hr>
                 </div>
             </div>
             <div class="col-md-6">
