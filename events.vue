@@ -30,7 +30,7 @@
                 <!-- CALENDAR -->
                 <select class="" @change="changeItem($event)">
                     <option selected value="">All Events</option>
-                    <option v-bind:value="events">NorthPark Events</option>
+                    <option v-bind:value="event">NorthPark Events</option>
                     <option v-bind:value="promotions">In-Store Events</option>
                     <option v-bind:value="holiday">Holiday Events</option>
                 </select>
@@ -47,7 +47,7 @@
             data: function() {
                 return {
                     selected: "",
-                    events: null,
+                    event: null,
                     promotions: null,
                     holiday: null, 
                 }
