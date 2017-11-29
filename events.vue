@@ -56,6 +56,8 @@
                     // return this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
                     var merge = _.concat(events, promotions);
+                    console.log(merge)
+                    // var sorted = _.orderBy(merge, )
                 },
                 timezone () {
                     return this.$store.getters.getTimezone;
