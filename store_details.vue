@@ -96,7 +96,7 @@
             },
             watch: {
                 currentStore: function() {
-                    console.log("currentStore promo",this.currentStore );
+                    console.log("currentStore promo", this.currentStore );
                     var vm = this;
                     var temp = [];
                     _.forEach(this.currentStore.promotions, function(value, key) {
@@ -104,7 +104,7 @@
                         temp.push(vm.findPromoById(value));
                     });
                     this.promotions = temp;
-                    console.log("promos",this.promotions);
+                    console.log("promos", this.promotions);
                 }
             },
             computed: {
