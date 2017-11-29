@@ -35,15 +35,17 @@
             </div>
         </div>
         <div class="row " v-if="currentStore && currentStore.total_published_promos > 0">
-            <div class="row">
-                <div class="col-md-12">
-                    <h5>Current Promotions</h5>
-                    <hr>
-                </div>
+   
+            <div class="col-md-12">
+                <h5>Current Promotions</h5>
+                <hr>
             </div>
-            <div class="row" v-for="promo in promotions" v-if="promotions">
+         
+            <div v-for="promo in promotions" v-if="promotions">
                 <div class="col-md-2">
                     <p class="sub_title ">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+                    
+                    moment("h A", timezone)}}
                 </div>
                 <div class="col-md-4">
                     <h2>{{promo.name}}</h2> 
