@@ -1,17 +1,17 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="row">
-            <div class="col-md-6" v-for="promo in events">
+            <div class="col-md-6" v-for="event in events">
                 <div class="card">
                     <div class="card-divider">
-                      {{ promo.name }}
+                      {{ event.name }}
                     </div>
                     <div class="card-section center">
                         <!--<a :href="event.image_url" target="_blank"><img :src="event.image_url"></a>-->
                     </div>
                     <div class="card-section">
                         <div class="center">
-                            <p>{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+                            <p>{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
                             <!--<router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">Read More</router-link>-->
                         </div>
                     </div>
