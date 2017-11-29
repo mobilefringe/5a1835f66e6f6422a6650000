@@ -52,7 +52,7 @@
             methods: {
                 changeItem(event) {
                     var event = this.selected 
-                    console.log(events)
+                    console.log(event)
                     // this.selected = $event.target.value
                     // console.log(this.selected)
                 }
