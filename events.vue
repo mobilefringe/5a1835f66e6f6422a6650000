@@ -7,7 +7,7 @@
                       {{ event.name }}
                     </div>
                     <div class="card-section center">
-                        <a :href="event.image_url" target="_blank"><img :src="event.image_url"></a>
+                        <!--<a :href="event.image_url" target="_blank"><img :src="event.image_url"></a>-->
                     </div>
                     <div class="card-section">
                         <div class="center">
