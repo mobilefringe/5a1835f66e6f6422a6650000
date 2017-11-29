@@ -37,7 +37,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <select v-model="selected"> <!-- @change="changeItem($event)"  -->
+                        <select class="hours-dine-select" v-model="selected"> <!-- @change="changeItem($event)"  -->
                             <option selected value="">Select A Restaurant</option>
                             <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
                         </select>
@@ -56,6 +56,7 @@
                     {{property.city}}, {{property.province_state}}<br/>
                     {{property.contact_phone}}</p>
                 </p>
+                <p>Northpark Center Concierge</p>
                 <router-link to="" active-class="active" exact>
                     <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </router-link>
