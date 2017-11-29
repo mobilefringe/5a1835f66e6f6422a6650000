@@ -17,6 +17,7 @@
                 <hr>
                 <h2>Management Office Hours</h2>
                 <p>Closed Easter, Thanksgiving, and Christmas Day.</p>
+                <div class="" v-html="currentPage.body"></div>
                 <hr>
                 <h2>AMC Northpark 15</h2>
                 
@@ -75,6 +76,18 @@
             },
             mounted () {
                 this.restaurant
+            },
+            beforeRouteEnter (to, from, next) {
+                next(vm => {
+                    // access to component instance via `vm`
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-management-hours" + ".json"}).then(response => {
+                        vm.currentPage = response.data;
+                        console.log(vm.currentPage);
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ name: '404'});
+                    });
+                })
             },
             computed: {
                 property(){
