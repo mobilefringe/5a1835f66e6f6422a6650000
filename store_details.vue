@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="row " v-if="currentStore && currentStore.total_published_promos > 0">
+        <div class="row details-promos" v-if="currentStore && currentStore.total_published_promos > 0">
             <div class="col-md-12">
                 <h5>Current Promotions</h5>
             </div>
