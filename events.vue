@@ -28,6 +28,12 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
+                <select class="hours-dine-select" v-model="selected">
+                    <option selected value="">All Events</option>
+                    <option v-bind:value="restaurant.id">NorthPark Events</option>
+                    <option v-bind:value="restaurant.id">In-Store Events</option>
+                    <option v-bind:value="restaurant.id">Holiday Events</option>
+                </select>
             </div>
                 <!--<div class="card">-->
                 <!--    <div class="card-divider">-->
