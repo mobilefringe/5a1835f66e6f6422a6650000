@@ -81,6 +81,7 @@
                 next(vm => {
                     // access to component instance via `vm`
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-management-hours" + ".json"}).then(response => {
+                        console.log(response.data)
                         vm.currentPage = response.data;
                         console.log(vm.currentPage);
                     }, error => {
