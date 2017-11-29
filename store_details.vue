@@ -68,7 +68,6 @@
 </template>
 
 <script>
-    // define(["Vue"], function(Vue) {
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
@@ -80,7 +79,7 @@
                     promotions : []
                 }
             },
-            beforeRouteEnter (to, from, next) {
+            beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
                     vm.currentStore = vm.findStoreBySlug(to.params.id);
@@ -89,14 +88,14 @@
                     }
                 })
             },
-            beforeRouteUpdate (to, from, next) {
+            beforeRouteUpdate(to, from, next) {
                 this.currentStore = this.findStoreBySlug(to.params.id);
                 if (this.currentStore === null || this.currentStore === undefined){
                     this.$router.replace({ name: '404'});
                 }
             },
-            watch : {
-                currentStore : function (){
+            watch: {
+                currentStore: function() {
                     console.log("currentStore promo",this.currentStore );
                     var vm = this;
                     var temp = [];
