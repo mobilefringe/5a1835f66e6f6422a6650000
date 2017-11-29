@@ -30,7 +30,7 @@
                 <!-- CALENDAR -->
                 <select class="" v-model="selected">
                     <option selected value="">All Events</option>
-                    <option value="event">NorthPark Events</option>
+                    <option value="events">NorthPark Events</option>
                     <option value="promotions">In-Store Events</option>
                     <option value="holiday">Holiday Events</option>
                 </select>
@@ -48,9 +48,6 @@
                 return {
                     selected: "",
                     currentSelection: null,
-                    // event: null,
-                    // promotions: null,
-                    // holiday: null, 
                 }
             },
             mounted () {
@@ -59,10 +56,12 @@
             watch: {
                 selected: function() {
                     console.log(this.selected)
-                    if(this.selected == "event"){
+                    if(this.selected == "events"){
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected == "promotions") {
                         this.currentSelection = this.storeEvents;
+                    } else if (this.selected == "holiday"){
+                        this.currentSelection = this.holidayEvents;
                     }
                 }
             },
@@ -72,7 +71,6 @@
             computed: {
                 events() {
                     var events = this.$store.getters.processedEvents;
-                    // return this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
                     var merge = _.concat(events, promotions);
                     var sorted = _.orderBy(merge, function(o) { return o.start_date })
