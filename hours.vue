@@ -113,7 +113,7 @@
                 hours(){
                     // var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     var hours = (this.$store.state.results.hours)
-                    // return hours;
+                    return hours;
                     
                     console.log(hours)
                 },
