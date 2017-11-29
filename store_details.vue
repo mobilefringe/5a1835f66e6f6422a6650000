@@ -123,7 +123,7 @@
             },
             methods: {
                 truncate(val_description){
-                    var truncate = _.truncate(val_description, { 'length': 24, 'separator': ' ' });
+                    var truncate = _.truncate(val_description, { 'length': 155, 'separator': ' ' });
                     return truncate;
                 },
             }
