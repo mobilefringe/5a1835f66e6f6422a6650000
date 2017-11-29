@@ -30,9 +30,9 @@
                 <!-- CALENDAR -->
                 <select class="" v-model="selected">
                     <option selected value="">All Events</option>
-                    <option v-bind:value="event">NorthPark Events</option>
-                    <option v-bind:value="promotions">In-Store Events</option>
-                    <option v-bind:value="holiday">Holiday Events</option>
+                    <option value="event">NorthPark Events</option>
+                    <option value="promotions">In-Store Events</option>
+                    <option value="holiday">Holiday Events</option>
                 </select>
             </div>
         </div>
@@ -47,9 +47,9 @@
             data: function() {
                 return {
                     selected: "",
-                    event: null,
-                    promotions: null,
-                    holiday: null, 
+                    // event: null,
+                    // promotions: null,
+                    // holiday: null, 
                 }
             },
             watch: {
