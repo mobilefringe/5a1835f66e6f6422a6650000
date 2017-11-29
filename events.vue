@@ -75,6 +75,14 @@
                     var sorted = _.orderBy(merge, function(o) { return o.start_date })
                     return sorted
                 },
+                propertyEvents() {
+                    var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.start_date }); 
+                    return events
+                },
+                storeEvents() {
+                    var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.start_date });
+                    return promotions
+                },
                 property(){
                     return this.$store.getters.getProperty;
                 },
