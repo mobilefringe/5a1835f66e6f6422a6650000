@@ -86,6 +86,9 @@ define([], function () {
         {
             path: '/art',
             component: view('default'),
+            meta: {
+                breadcrumb: 'Art',
+            },
             children: [
                 {
                     path: '',
@@ -97,6 +100,9 @@ define([], function () {
         {
             path: '/news',
             component: view('default'),
+            meta: {
+                breadcrumb: 'News',
+            },
             children: [
                 {
                     path: '',
@@ -108,6 +114,9 @@ define([], function () {
         {
             path: '/holiday',
             component: view('default'),
+            meta: {
+                breadcrumb: 'Holiday',
+            },
             children: [
                 {
                     path: '',
