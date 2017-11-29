@@ -59,6 +59,7 @@
                     console.log(merge)
                     var sorted = _.orderBy(merge, function(o) { return o.start_date })
                     console.log(sorted)
+                    return sorted
                 },
                 timezone () {
                     return this.$store.getters.getTimezone;
