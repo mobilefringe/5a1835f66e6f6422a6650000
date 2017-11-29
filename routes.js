@@ -53,6 +53,9 @@ define([], function () {
         {
             path: '/events',
             component: view('default'),
+            meta: {
+                breadcrumb: 'Events',
+            },
             children: [
                 {
                     path: '',
@@ -69,6 +72,9 @@ define([], function () {
         {
             path: '/hours',
             component: view('default'),
+            meta: {
+                breadcrumb: 'Hours',
+            },
             children: [
                 {
                     path: '',
