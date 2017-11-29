@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-md-6">
                         <select class="hours-dine-select" v-model="selected"> <!-- @change="changeItem($event)"  -->
-                            <option selected value="">Select A Restaurant</option>
+                            <option selected value="">Select a Restaurant</option>
                             <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
                         </select>
                     </div>
@@ -78,7 +78,7 @@
             data: function() {
                 return {
                     currentPage: null,
-                    selected: "Select A Restauranat",
+                    selected: "Select a Restauranat",
                 }
             },
             mounted () {
