@@ -82,7 +82,9 @@
                 }
             },
             mounted () {
-                this.restaurant
+                this.restaurant,
+                this.hour_list
+                
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
