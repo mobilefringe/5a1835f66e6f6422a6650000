@@ -42,9 +42,12 @@
                 </div>
             </div>
             <div class="row" v-for="promo in promotions" v-if="promotions">
-                <div class="col-md-6">
-                    <h2>{{promo.name}}</h2> 
+                <div class="col-md-2">
                     <p class="sub_title ">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>{{promo.name}}</h2> 
+                    
                     <p class="description_text ">{{promo.description}}</p> 
                     <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
                         <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
