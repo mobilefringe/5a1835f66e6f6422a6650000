@@ -28,7 +28,7 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
-                <select class="" @change="changeItem()">
+                <select class="" v-model="selected">
                     <option selected value="">All Events</option>
                     <option v-bind:value="event">NorthPark Events</option>
                     <option v-bind:value="promotions">In-Store Events</option>
@@ -51,6 +51,12 @@
                     promotions: null,
                     holiday: null, 
                 }
+            },
+            watch: {
+                // watcher to update vue-i18n when the locale has been changed by the user
+                selected: function() {
+                    console.log(this.selected)
+                },
             },
             methods: {
                 changeItem(event) {
