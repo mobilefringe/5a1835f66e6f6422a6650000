@@ -36,7 +36,7 @@
                             <option selected value="">Select A Restaurant</option>
                             <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
                         </select>
-                        <!--<span>Selected: {{ selected }}</span>-->
+                        <span>Selected: {{ selected }}</span>
                     </div>
                 </div>
                 <div class="row">
@@ -72,7 +72,8 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    currentPage: null
+                    currentPage: null,
+                    selected: "",
                 }
             },
             mounted () {
