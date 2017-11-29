@@ -42,8 +42,6 @@
                 <hr>
                 <div class="col-md-1">
                     <p class=""> {{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}} </p>
-                    
-                    moment("h A", timezone)}}
                 </div>
                 <div class="col-md-5">
                     <h2>{{promo.name}}</h2> 
