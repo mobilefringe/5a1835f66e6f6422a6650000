@@ -19,7 +19,8 @@ require.config({
     'store': 'https://mmvue.codecloudapp.com/store',
     'vue-moment': 'https://mmvue.codecloudapp.com/vue-moment',
     'today_hours': 'https://mmvue.codecloudapp.com/today_hours.vue?noext', //append a dummy query string so requireJS doesn't auto-append .js to the end of the url
-    'search-component': 'https://mmvue.codecloudapp.com/search-component.vue?noext'
+    'search-component': 'https://mmvue.codecloudapp.com/search-component.vue?noext',
+    'vue-breadcrumb': 'https://cdn.jsdelivr.net/npm/vue-breadcrumbs@1.1.2/dist/vue-breadcrumbs.common.min'
   }
 });
 
