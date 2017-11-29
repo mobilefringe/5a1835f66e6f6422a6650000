@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="row" v-for="event in events">
                     <div class="col-md-2">
                         <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
@@ -24,7 +24,7 @@
                     <hr>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <!-- CALENDAR -->
             </div>
                 <!--<div class="card">-->
