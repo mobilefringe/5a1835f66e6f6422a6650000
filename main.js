@@ -54,29 +54,6 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 isOpen: false,
                 show_menu: false,
                 breadcrumb: this.$breadcrumbs,
-                menu_items: [
-                    {
-                        name: "Home",
-                        id: "home",
-                        class_list: "all_caps menu_btn_label",
-                        href: "/",
-                        is_inHome: false
-                    },
-                    {
-                        name: "Stores",
-                        id: "stores",
-                        class_list: "all_caps menu_btn_label",
-                        href: "/stores",
-                        is_inHome: true
-                    },
-                    {
-                        name: "Promotions",
-                        id: "promotions",
-                        class_list: "all_caps menu_btn_label",
-                        href: "/promotions",
-                        is_inHome: true
-                    }
-                ]
             }
         },
         created() {
