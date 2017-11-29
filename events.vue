@@ -30,9 +30,9 @@
                 <!-- CALENDAR -->
                 <select class="" @change="changeItem($event)">
                     <option selected value="">All Events</option>
-                    <option v-bind:value="">NorthPark Events</option>
-                    <option v-bind:value="">In-Store Events</option>
-                    <option v-bind:value="">Holiday Events</option>
+                    <option v-bind:value="property">NorthPark Events</option>
+                    <option v-bind:value="store">In-Store Events</option>
+                    <option v-bind:value="holiday">Holiday Events</option>
                 </select>
             </div>
         </div>
