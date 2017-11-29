@@ -30,26 +30,11 @@
                 <!-- CALENDAR -->
                 <select class="hours-dine-select" v-model="selected">
                     <option selected value="">All Events</option>
-                    <option v-bind:value="restaurant.id">NorthPark Events</option>
-                    <option v-bind:value="restaurant.id">In-Store Events</option>
-                    <option v-bind:value="restaurant.id">Holiday Events</option>
+                    <option v-bind:value="">NorthPark Events</option>
+                    <option v-bind:value="">In-Store Events</option>
+                    <option v-bind:value="">Holiday Events</option>
                 </select>
             </div>
-                <!--<div class="card">-->
-                <!--    <div class="card-divider">-->
-                <!--      {{ event.name }}-->
-                <!--    </div>-->
-                <!--    <div class="card-section center">-->
-                <!--        <a :href="event.image_url" target="_blank"><img :src="event.image_url"></a>-->
-                <!--    </div>-->
-                <!--    <div class="card-section">-->
-                <!--        <div class="center">-->
-                <!--            <p>{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>-->
-                <!--            <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">Read More</router-link>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-            <!--</div>-->
         </div>
     </div>
 </template>
@@ -59,6 +44,11 @@
         Vue.use(Meta);
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
+            methods: {
+                changeMode(mode) {
+                    this.listMode = mode;
+                }
+            },
             computed: {
                 events() {
                     var events = this.$store.getters.processedEvents;
