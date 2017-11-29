@@ -27,21 +27,20 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2>Restaurant Hours</h2>
-                        
+                        <p>{{ selected }}</p>
                         <!-- Hours -->
+                        <ul class="hours-list">
+                            <li v-for="hour in hours">
+                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-md-6">
-                        <!-- Add Restaurant Drop Down -->
                         <select v-model="selected"> <!-- @change="changeItem($event)"  -->
                             <option selected value="">Select A Restaurant</option>
                             <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
                         </select>
-                        <span>{{ selected }}</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> Hours</p>
                     </div>
                 </div>
             </div>
@@ -62,6 +61,11 @@
                 </router-link>
             </div>
         </div>
+        <div class="row">
+                    <div class="col-md-12">
+                        <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> Hours</p>
+                    </div>
+                </div>
     </div>
 </template>
 
@@ -83,7 +87,6 @@
                 next(vm => {
                     // access to component instance via `vm`
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-management-hours" + ".json"}).then(response => {
-                        
                         vm.currentPage = response.data;
                         console.log(vm.currentPage);
                     }, error => {
