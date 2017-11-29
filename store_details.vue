@@ -42,9 +42,9 @@
                 <hr>
                 <div class="col-md-1">
                     <!--<p class=""> {{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}} </p>-->
-                    <p>{{promo.start_date | moment("ddd", timezone)}}</p>
+                    <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
                     <p>{{promo.start_date | moment("D", timezone)}}</p>
-                    <p>{{promo.start_date | moment("MMM", timezone)}}</p>
+                    <p class="details-promo-date">{{promo.start_date | moment("MMM", timezone)}}</p>
                 </div>
                 <div class="col-md-5">
                     <h2>{{promo.name}}</h2> 
