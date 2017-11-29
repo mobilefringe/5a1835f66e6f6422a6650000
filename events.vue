@@ -16,6 +16,7 @@
                     <div class="col-md-8">
                         <h5>{{event.start_date | moment("MMMM D", timezone)}} - {{event.end_date | moment("MMMM D", timezone)}}</h5>
                         <h2>{{ event.name }}</h2>
+                        <p class="sub_title" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</p>
                         <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
@@ -60,6 +61,9 @@
                     var sorted = _.orderBy(merge, function(o) { return o.start_date })
                     console.log(sorted)
                     return sorted
+                },
+                property(){
+                    return this.$store.getters.getProperty;
                 },
                 timezone () {
                     return this.$store.getters.getTimezone;
