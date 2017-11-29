@@ -53,7 +53,7 @@
                     // holiday: null, 
                 }
             },
-            mounted(): {
+            mounted () {
                 this.currentSelection = this.events;
             },
             watch: {
@@ -67,12 +67,7 @@
                 }
             },
             methods: {
-                changeItem(event) {
-                    var event_type = event.target.value
-                    console.log(event_type)
-                    // this.selected = ${event.target.value}
-                    // console.log(this.selected)
-                }
+                
             },
             computed: {
                 events() {
