@@ -5,7 +5,7 @@
                 <div class="col-md-12">
                     <h2 class="page_title" v-html="currentPage.title"></h2>
                     <hr/>
-                    <div class="description_text text_left" v-html="currentPage.body"></div>
+                    <div class="" v-html="currentPage.body"></div>
                 </div>
             </div>
         </div>
@@ -18,7 +18,6 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    success_subscribe : false,
                     currentPage: null
                 }
             },
@@ -45,9 +44,6 @@
                 });
             },
             computed: {
-                findEventBySlug () {
-                  return this.$store.getters.findEventBySlug;
-                },
                 timezone() {
                   return this.$store.getters.getTimezone;
                 },
