@@ -48,8 +48,8 @@
             <div class="col-md-4">
                 <h5>Holiday Hours</h5>
                 <router-link tag="p" to="" active-class="active" exact>
-                        <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                    </router-link>
+                    <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                </router-link>
                 <h5>Find Us</h5>
                 <p>
                     {{property.name}}<br/>
