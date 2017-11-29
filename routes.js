@@ -26,6 +26,7 @@ define([], function () {
         {
             path: '/dine',
             component: view('default'),
+            
             children: [
                 {
                     path: '',
