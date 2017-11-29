@@ -7,7 +7,7 @@ define([], function () {
         {
             path: '/stores',
             component: view('default'),
-            breadcrumb: 'Shops & Dining',
+            meta.breadcrumb: 'Shops & Dining',
             children: [
                 {
                     path: '',
