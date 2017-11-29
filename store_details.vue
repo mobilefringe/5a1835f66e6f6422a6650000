@@ -41,14 +41,13 @@
             <div v-for="promo in promotions" v-if="promotions">
                 <hr>
                 <div class="col-md-1">
-                    <!--<p class=""> {{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}} </p>-->
                     <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
                     <p class="details-promo-day">{{promo.start_date | moment("D", timezone)}}</p>
                     <p class="details-promo-date">{{promo.start_date | moment("MMM", timezone)}}</p>
                 </div>
                 <div class="col-md-5">
                     <h2>{{promo.name}}</h2> 
-                    
+                    <h5>{{promo.store_name}}</h5>
                     <p class="description_text ">{{promo.description}}</p> 
                     <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
                         <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
