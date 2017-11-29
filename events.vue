@@ -53,7 +53,6 @@
                 }
             },
             watch: {
-                // watcher to update vue-i18n when the locale has been changed by the user
                 selected: function() {
                     console.log(this.selected)
                 },
