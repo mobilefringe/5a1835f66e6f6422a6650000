@@ -12,27 +12,32 @@
                         
                     </div>
                     <div class="col-md-8">
+                        <p>{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
+                        {{ event.name }}
                         <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                     </div>
                 </div>
-            
-                <div class="card">
-                    <div class="card-divider">
-                      {{ event.name }}
-                    </div>
-                    <div class="card-section center">
-                        <a :href="event.image_url" target="_blank"><img :src="event.image_url"></a>
-                    </div>
-                    <div class="card-section">
-                        <div class="center">
-                            <p>{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
-                            <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">Read More</router-link>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <div class="col-md-6">
+                <!-- CALENDAR -->
+            </div>
+                <!--<div class="card">-->
+                <!--    <div class="card-divider">-->
+                <!--      {{ event.name }}-->
+                <!--    </div>-->
+                <!--    <div class="card-section center">-->
+                <!--        <a :href="event.image_url" target="_blank"><img :src="event.image_url"></a>-->
+                <!--    </div>-->
+                <!--    <div class="card-section">-->
+                <!--        <div class="center">-->
+                <!--            <p>{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>-->
+                <!--            <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">Read More</router-link>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </template>
