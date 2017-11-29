@@ -78,7 +78,7 @@
             data: function() {
                 return {
                     currentPage: null,
-                    selected: "Select a Restauranat",
+                    selected: "Select a Restaurant",
                 }
             },
             mounted () {
