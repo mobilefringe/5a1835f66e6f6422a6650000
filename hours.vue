@@ -6,11 +6,8 @@
                 <p>Department store, restaurant, theatre, spa, and holiday hours may vary.</p>
                 <ul class="menu_content text_center">
                     <li v-for="hour in hours">
-                        <span class="pull-left col-md-6"> 
-                           {{day_of_the_week(hour.day_of_week)}}
-                        </span>
-                        <span class="pull-right col-md-6 text-left">
-                            {{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}
+                        
+                       {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}
                         </span>
                     </li>
                 </ul>
@@ -93,7 +90,6 @@
             },
             beforeRouteUpdate (to, from, next) {
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-management-hours.json"}).then(response => {
-                    // this.dataLoaded = true;
                     this.currentPage = response.data;
                     console.log(this.currentPage);
                 }, error => {
