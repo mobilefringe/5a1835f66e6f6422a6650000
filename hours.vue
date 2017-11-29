@@ -58,7 +58,7 @@
                     {{property.contact_phone}}</p>
                 </p>
                 <router-link to="" active-class="active" exact>
-                    <a>Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </router-link>
             </div>
         </div>
