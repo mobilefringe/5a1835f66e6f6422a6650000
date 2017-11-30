@@ -35,22 +35,22 @@ define([], function () {
                 },
             ]
         },
-        {
-            path: '/promotions',
-            component: view('default'),
-            children: [
-                {
-                    path: '',
-                    component: view('promotions'),
-                    name: 'promotionList'
-                },
-                {
-                    path: ':id',
-                    component: view('promotion_details'),
-                    name: 'promotionDetails'
-                }
-            ]
-        },
+        // {
+        //     path: '/promotions',
+        //     component: view('default'),
+        //     children: [
+        //         {
+        //             path: '',
+        //             component: view('promotions'),
+        //             name: 'promotionList'
+        //         },
+        //         {
+        //             path: ':id',
+        //             component: view('promotion_details'),
+        //             name: 'promotionDetails'
+        //         }
+        //     ]
+        // },
         {
             path: '/events',
             component: view('default'),
@@ -71,6 +71,74 @@ define([], function () {
             ]
         },
         {
+            path: '/art',
+            component: view('art'),
+            meta: {
+                breadcrumb: 'Art',
+            },
+            children: [
+                {
+                    path: '/art/collection',
+                    component: view('collection'),
+                    meta: {
+                        breadcrumb: 'Collection Overview',
+                    },
+                    name: 'storeList'
+                },
+                {
+                    path: '/art/special-exhibitions',
+                    component: view('special-exhibitions'),
+                    meta: {
+                        breadcrumb: 'Special Exhibition',
+                    },
+                    name: 'storeList'
+                },
+                {
+                    path: '/art/photo-gallery',
+                    component: view('photo-gallery'),
+                    meta: {
+                        breadcrumb: 'Photo Gallery',
+                    },
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
+            path: '/news',
+            component: view('default'),
+            meta: {
+                breadcrumb: 'News',
+            }
+        },
+        {
+            path: '/visit',
+            component: view('default'),
+            meta: {
+                breadcrumb: 'Visit',
+            },
+            children: [
+                {
+                    path: '',
+                    component: view('visit'),
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
+            path: '/our-story',
+            component: view('our-story'),
+            meta: {
+                breadcrumb: 'Our Story',
+            },
+            children: [
+                {
+                    path: '',
+                    component: view(),
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
             path: '/hours',
             component: view('default'),
             meta: {
@@ -84,34 +152,8 @@ define([], function () {
                 },
             ]
         },
-        {
-            path: '/art',
-            component: view('default'),
-            meta: {
-                breadcrumb: 'Art',
-            },
-            children: [
-                {
-                    path: '',
-                    component: view('art'),
-                    name: 'storeList'
-                },
-            ]
-        },
-        {
-            path: '/news',
-            component: view('default'),
-            meta: {
-                breadcrumb: 'News',
-            },
-            children: [
-                {
-                    path: '',
-                    component: view('news'),
-                    name: 'storeList'
-                },
-            ]
-        },
+        
+        
         {
             path: '/holiday',
             component: view('default'),
