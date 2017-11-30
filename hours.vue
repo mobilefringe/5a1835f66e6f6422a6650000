@@ -53,7 +53,7 @@
                     {{property.name}}<br/>
                     {{property.address1}}<br/>
                     {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
-                    {{property.contact_phone}}</p>
+                    {{property.contact_phone}}
                 </p>
                 <p>Northpark Center Concierge</p>
                 <router-link to="" active-class="active" exact>
