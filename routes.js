@@ -138,7 +138,7 @@ define([], function () {
         },
         {
             path: '/our-story',
-            component: view('our-story'),
+            component: view('our_story'),
             meta: {
                 breadcrumb: 'Our Story',
             },
