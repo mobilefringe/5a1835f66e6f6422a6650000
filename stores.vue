@@ -56,6 +56,12 @@
                 }
             },
             computed: {
+                property(){
+                    return this.$store.getters.getProperty;
+                },
+                timezone() {
+                    return this.$store.getters.getTimezone;
+                },
                 storesByAlphaIndex() {
                     return this.$store.getters.storesByAlphaIndex;
                 },
