@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-md-8">
                 <h2>ART</h2>
+                <div class="hours-management" v-html="currentPage.body"></div>
             </div>
             <div class="col-md-4">
                 
@@ -23,18 +24,13 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    // breadcrumb: this.$breadcrumbs,
                     currentPage: null,
-                    selected: "Select a Restaurant"
                 }
-            },
-            mounted () {
-                this.restaurant
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-management-hours" + ".json"}).then(response => {
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-about-the-collection" + ".json"}).then(response => {
                         vm.currentPage = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
