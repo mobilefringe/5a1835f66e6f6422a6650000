@@ -52,7 +52,7 @@
                 <p>
                     {{property.name}}<br/>
                     {{property.address1}}<br/>
-                    {{property.city}}, {{property.province_state}}<br/>
+                    {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
                     {{property.contact_phone}}</p>
                 </p>
                 <p>Northpark Center Concierge</p>
