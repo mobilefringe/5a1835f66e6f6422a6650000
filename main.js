@@ -105,6 +105,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             toggleMenu () {
                 this.show_menu = !this.show_menu;
             }
+            toggleSearch () {
+                this.show_search = !this.show_search;
+            }
         },
         router: router,
         store,
