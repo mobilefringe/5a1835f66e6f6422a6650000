@@ -92,7 +92,7 @@ define([], function () {
                 },
                 {
                     path: '/art/special-exhibitions',
-                    component: view('special-exhibitions'),
+                    component: view('special_exhibitions'),
                     meta: {
                         breadcrumb: 'Special Exhibition',
                     },
@@ -100,7 +100,7 @@ define([], function () {
                 },
                 {
                     path: '/art/photo-gallery',
-                    component: view('photo-gallery'),
+                    component: view('photo_gallery'),
                     meta: {
                         breadcrumb: 'Photo Gallery',
                     },
@@ -145,7 +145,7 @@ define([], function () {
             children: [
                 {
                     path: '',
-                    component: view('our-story'),
+                    component: view('our_story'),
                     name: 'storeList'
                 },
             ]
