@@ -66,13 +66,21 @@
                                             </form>
                                         </div>
                                         <div class="menu-social-container">
-                                            <router-link tag="a" to="/" active-class="active" exact>
+                                            <router-link tag="a" to="https://www.facebook.com/northparkcenter" active-class="active" exact>
                                                 <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                             </router-link>
-                                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                                            <i class="fa fa-pinterest-square" aria-hidden="true"></i>
-                                            <i class="fa fa-youtube-square" aria-hidden="true"></i>
-                                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            <router-link tag="a" to="https://twitter.com/NorthParkCenter" active-class="active" exact>
+                                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                                            </router-link>  
+                                            <router-link tag="a" to="https://www.pinterest.ca/northparkcenter/" active-class="active" exact>    
+                                                <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+                                            </router-link>    
+                                            <router-link tag="a" to="https://www.youtube.com/user/NorthParkCenter" active-class="active" exact>    
+                                                <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                                            </router-link>    
+                                            <router-link tag="a" to="https://www.instagram.com/northparkcenter/" active-class="active" exact>    
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </router-link>
                                         </div>
                                         <div class="menu-address-container">
                                             <p v-if="property">{{property.address1}}<br>
