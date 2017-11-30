@@ -98,6 +98,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             copyright_year() {
                 return moment().year();
             },
+            processedStores() {
+                return this.$store.getters.processedStores;
+            }
         },
         methods: {
             // utility method to allow user to change locale value
