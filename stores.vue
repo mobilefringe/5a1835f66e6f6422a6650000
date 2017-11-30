@@ -47,7 +47,6 @@
             data: function() {
                 return {
                     listMode: "alphabetical",
-                    // breadcrumb: this.$breadcrumbs
                 }
             },
             methods: {
