@@ -21,7 +21,6 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="menu-icons">
-                                    
                                     <div @click="show_search = !show_search" :class="{ open: show_search }" id="search-icon">
                                         <span class="circle"></span>
                                         <span class="handle"></span>
@@ -102,7 +101,6 @@
                                 </div>
                                 <div v-if="show_search" class="search-container">
                                     <div class="search-content">
-                                        <h1>SEARCH</h1>
                                         <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
                                             <template slot="item" scope="option">
                                                 <article class="media">
@@ -110,6 +108,32 @@
                                                 </article>
                                             </template>
                                         </search-component>
+                                        <div class="menu-social-container">
+                                            <router-link tag="a" to="https://www.facebook.com/northparkcenter" active-class="active" exact>
+                                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                            </router-link>
+                                            <router-link tag="a" to="https://twitter.com/NorthParkCenter" active-class="active" exact>
+                                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                                            </router-link>  
+                                            <router-link tag="a" to="https://www.pinterest.ca/northparkcenter/" active-class="active" exact>    
+                                                <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+                                            </router-link>    
+                                            <router-link tag="a" to="https://www.youtube.com/user/NorthParkCenter" active-class="active" exact>    
+                                                <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                                            </router-link>    
+                                            <router-link tag="a" to="https://www.instagram.com/northparkcenter/" active-class="active" exact>    
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </router-link>
+                                            <router-link tag="a" to="" active-class="active" exact>  
+                                                <i class="fa fa-snapchat-square" aria-hidden="true"></i>
+                                            </router-link>
+                                        </div>
+                                        <div class="menu-address-container">
+                                            <p v-if="property">{{property.address1}}<br>
+                                                {{property.city}}, {{property.province_state}} {{property.postal_code}} <br>
+                                                {{property.contact_phone}}
+                                            </p>    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
