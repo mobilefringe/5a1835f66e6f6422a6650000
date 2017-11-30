@@ -104,7 +104,7 @@
                                         <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
                                             <template slot="item" scope="option">
                                                 <article class="media">
-                                                    <p>{{ option.data.name }}</p>
+                                                    <p @click="show_search = !show_search">{{ option.data.name }}</p>
                                                 </article>
                                             </template>
                                         </search-component>
