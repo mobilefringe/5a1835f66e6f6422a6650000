@@ -76,10 +76,9 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    // breadcrumb: this.$breadcrumbs,
                     currentPage: null,
                     selected: "Select a Restaurant",
-                    breadcrumb: this.$breadcrumbs
+                    // breadcrumb: this.$breadcrumbs
                 }
             },
             mounted () {
