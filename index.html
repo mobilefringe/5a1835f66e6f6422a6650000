@@ -20,16 +20,18 @@
                                 </router-link>
                             </div>
                             <div class="col-md-8">
-                                <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
-                                <div @click="show_menu = !show_menu" :class="{ open: show_menu }" id="menu-icon">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <div @click="show_search = !show_search" :class="{ open: show_search }" id="search-icon">
-                                    <span class="circle"></span>
-                                    <span class="handle"></span>
+                                <div class="menu-icons">
+                                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
+                                    <div @click="show_search = !show_search" :class="{ open: show_search }" id="search-icon">
+                                        <span class="circle"></span>
+                                        <span class="handle"></span>
+                                    </div>
+                                    <div @click="show_menu = !show_menu" :class="{ open: show_menu }" id="menu-icon">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
                                 </div>
                                 <div v-if="show_menu" class="menu-container">
                                     <div class="menu-content">
