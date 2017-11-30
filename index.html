@@ -21,7 +21,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="menu-icons">
-                                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
+                                    
                                     <div @click="show_search = !show_search" :class="{ open: show_search }" id="search-icon">
                                         <span class="circle"></span>
                                         <span class="handle"></span>
@@ -32,6 +32,7 @@
                                         <span></span>
                                         <span></span>
                                     </div>
+                                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
                                 </div>
                                 <div v-if="show_menu" class="menu-container">
                                     <div class="menu-content">
