@@ -77,8 +77,7 @@
             data: function() {
                 return {
                     currentPage: null,
-                    selected: "Select a Restaurant",
-                    // breadcrumb: this.$breadcrumbs
+                    selected: "Select a Restaurant"
                 }
             },
             mounted () {
