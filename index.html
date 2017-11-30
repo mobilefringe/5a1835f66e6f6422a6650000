@@ -27,7 +27,7 @@
                                     <span></span>
                                     <span></span>
                                 </div>
-                                <div class="search-icon">
+                                <div @click="show_menu = !show_menu" :class="{ open: show_menu }" id="search-icon">
                                     <span class="circle"></span>
                                     <span class="handle"></span>
                                 </div>
