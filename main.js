@@ -113,6 +113,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             },
             toggleSearch() {
                 this.show_search = !this.show_search;
+            },
+            onOptionSelect(option) {
+                console.log('Selected option:', option)
             }
         },
         router: router,
