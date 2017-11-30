@@ -56,7 +56,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 show_search: false,
                 suggestionAttribute: 'name',
                 search: '',
-                breadcrumb: this.$breadcrumbs,
+                breadcrumb: this.$breadcrumbs
             }
         },
         created() {
