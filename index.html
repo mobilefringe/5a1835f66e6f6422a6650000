@@ -74,6 +74,12 @@
                                             <i class="fa fa-youtube-square" aria-hidden="true"></i>
                                             <i class="fa fa-instagram" aria-hidden="true"></i>
                                         </div>
+                                        <div class="menu-address-container">
+                                            <p v-if="property">{{property.address1}}<br>
+                                                {{property.city}}, {{property.province_state}} {{property.postal_code}} <br>
+                                                {{property.contact_phone}}
+                                            </p>    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
