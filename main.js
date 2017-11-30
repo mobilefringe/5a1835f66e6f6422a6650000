@@ -116,6 +116,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             },
             onOptionSelect(option) {
                 console.log('Selected option:', option)
+                this.$router.push("/stores/"+option.slug);
             }
         },
         router: router,
