@@ -86,7 +86,7 @@
                 },
                 holidayEvents(){
                     
-                }
+                },
                 property(){
                     return this.$store.getters.getProperty;
                 },
