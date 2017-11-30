@@ -101,6 +101,15 @@
                                 <div v-if="show_search" class="search-container">
                                     <div class="search-content">
                                         <h1>SEARCH</h1>
+                                        <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
+                                            <template slot="item" scope="option">
+                                                <article class="media">
+                                                    <p>
+                                                        <strong>{{ option.data.name }}</strong>
+                                                    </p>
+                                                </article>
+                                            </template>
+                                        </search-component>
                                     </div>
                                 </div>
                             </div>
