@@ -78,6 +78,11 @@ define([], function () {
             },
             children: [
                 {
+                    path: '',
+                    component: view('art'),
+                    name: 'storeList'
+                },
+                {
                     path: '/art/collection',
                     component: view('collection'),
                     meta: {
@@ -108,7 +113,14 @@ define([], function () {
             component: view('default'),
             meta: {
                 breadcrumb: 'News',
-            }
+            },
+            children: [
+                {
+                    path: '',
+                    component: view('news'),
+                    name: 'storeList'
+                },
+            ]
         },
         {
             path: '/visit',
@@ -139,6 +151,20 @@ define([], function () {
             ]
         },
         {
+            path: '/magazine',
+            component: view('magazine'),
+            meta: {
+                breadcrumb: 'The Magazine',
+            },
+            children: [
+                {
+                    path: '',
+                    component: view('magazine'),
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
             path: '/hours',
             component: view('default'),
             meta: {
@@ -152,8 +178,6 @@ define([], function () {
                 },
             ]
         },
-        
-        
         {
             path: '/holiday',
             component: view('default'),
