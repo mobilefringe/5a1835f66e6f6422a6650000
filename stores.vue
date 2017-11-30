@@ -46,7 +46,8 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    listMode: "alphabetical"
+                    listMode: "alphabetical",
+                    breadcrumb: this.$breadcrumbs
                 }
             },
             methods: {
