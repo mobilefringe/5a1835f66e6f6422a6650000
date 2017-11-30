@@ -2,7 +2,7 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="row">
             <div class="col-md-8">
-                <h2>ART</h2>
+                <h2>VISIT</h2>
             </div>
             <div class="col-md-4">
                 
