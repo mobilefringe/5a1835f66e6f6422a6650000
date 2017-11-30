@@ -28,7 +28,7 @@
                                     <span></span>
                                 </div>
                                 <div @click="show_search = !show_search" :class="{ open: show_search }" id="search-icon">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <i class="fa fa-search" aria-hidden="true" style="color: #FFF"></i>
                                     <!--<span class="circle"></span>-->
                                     <!--<span class="handle"></span>-->
                                 </div>
@@ -99,8 +99,9 @@
                                     </div>
                                 </div>
                                 <div v-if="show_search" class="search-container">
-                                    <h1>SEARCH</h1>
-                                    
+                                    <div class="menu-content">
+                                        <h1>SEARCH</h1>
+                                    </div>
                                 </div>
                             </div>
                         </div>
