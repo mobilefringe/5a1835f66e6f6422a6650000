@@ -65,8 +65,8 @@
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected == "promotions") {
                         this.currentSelection = this.storeEvents;
-                    // } else if (this.selected == "holiday"){
-                    //     this.currentSelection = this.holidayEvents;
+                    } else if (this.selected == "holiday"){
+                        this.currentSelection = this.holidayEvents;
                     } else {
                         this.currentSelection = this.events
                     }
