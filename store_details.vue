@@ -38,12 +38,14 @@
                 </div>
             </div>
         </div>
-        <div class="row details-promos" v-if="currentStore && currentStore.total_published_promos > 0">
-            <div class="col-md-12 details-promo-container">
-                <h5>Current Promotions</h5>
+        <div v-if="currentStore && currentStore.total_published_promos > 0">
+            <div class="row">
+                <div class="col-md-12 details-promo-container">
+                    <h5>Current Promotions</h5>
+                </div>
             </div>
             <div v-for="promo in promotions" v-if="promotions">
-                <div class="details-promo-container">
+                <div class="row details-promos">
                     <div class="col-md-1">
                         <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
                         <p class="details-promo-day">{{promo.start_date | moment("D", timezone)}}</p>
