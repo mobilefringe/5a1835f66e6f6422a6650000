@@ -11,13 +11,13 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                
+                    <img src="http://via.placeholder.com/308x410" alt="" />
                 </div>
                 <div class="col-md-4">
-                
+                    <img src="http://via.placeholder.com/308x410" alt="" />
                 </div>
                 <div class="col-md-4">
-                
+                    <img src="http://via.placeholder.com/308x410" alt="" />
                 </div>
             </div>
         </div>
