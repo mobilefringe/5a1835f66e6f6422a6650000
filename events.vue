@@ -97,7 +97,7 @@
                     holiday_events= [];
                     _.forEach(events, function(val) {
                         var tag_string = _.join(val.tags);
-                        con
+                        conole.log(tag_string)
                         if(tag_string.indexOf("holiday")) {
                             holiday_events.push(val);
                         }
