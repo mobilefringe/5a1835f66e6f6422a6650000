@@ -59,6 +59,7 @@
                 <div class="col-md-6">
                     <img :src="promo.promo_image_url_abs" class="store_logo" alt="">
                 </div>
+                <hr>
             </div>
         </div>
 
