@@ -96,9 +96,9 @@
                     var events = this.$store.getters.processedEvents;
                     holiday_events= [];
                     _.forEach(events, function(val) {
-                        // var tag_string = _.join(val.tags);
-                        // console.log(tag_string)
-                        if(_.indexOf(val.tags), "holiday") {
+                        var tag_string = _.join(val.tags);
+                        console.log(tag_string)
+                        if(_.isMatch(tag_string, "holiday")) {
                             console.log("YES!")
                             holiday_events.push(val);
                             console.log(holiday_events)
