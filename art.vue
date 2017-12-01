@@ -40,7 +40,7 @@
             </div>
             <div class="row image-row">
                 <div class="col-md-12">
-                    <img src="http://via.placeholder.com/960x640" alt="" />
+                    <img src="http://via.placeholder.com/960x530" alt="" />
                 </div>
             </div>
             <div class="row">
