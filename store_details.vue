@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div v-for="promo in promotions" v-if="promotions">
-                <div class="row details-promos">
+                <div class="row details-promo-container">
                     <div class="col-md-1">
                         <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
                         <p class="details-promo-day">{{promo.start_date | moment("D", timezone)}}</p>
