@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="row details-promos" v-if="currentStore && currentStore.total_published_promos > 0">
-            <div class="col-md-12">
+            <div class="col-md-12 details-promo-container">
                 <h5>Current Promotions</h5>
             </div>
             <div v-for="promo in promotions" v-if="promotions">
