@@ -1,7 +1,7 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="row" v-if="currentStore">
-            <img :src="currentStore.image_url"
+            <img :src="currentStore.image_url" class="" alt="" />
             <div class="col-md-9">
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentStore.name}}</h2>
