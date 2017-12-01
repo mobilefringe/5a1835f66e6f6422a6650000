@@ -93,21 +93,9 @@
                     return promotions
                 },
                 holidayEvents(){
-                    var events = this.$store.getters.processedEvents;
-                    holiday_events= [];
-                    _.forEach(events, function(key, val) {
-                        console.log(events)
-                        // var tag_string = _.join(val.tags);
-                        // console.log(tag_string)
-                        // if(tag_string.indexOf("holiday") !== -1) {
-                        //     console.log("YES!")
-                        //     holiday_events.push(val);
-                        //     console.log(holiday_events)
-                        // }
-                    })
-                    
-                    // var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags == "holiday" });
-                    // return holiday_events
+                    var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags.length > 0 });
+                    return holiday_events
+                    console.log(holiday_events)
                    
                 },
                 property(){
