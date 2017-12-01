@@ -1,5 +1,6 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <div class="margin_90"></div>
         <div class="dine-container" v-for="restaurant in restaurants">
             <div class="row">
                 <div class="col-md-9">
