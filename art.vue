@@ -32,10 +32,20 @@
             </div>
             <div class="row image-row">
                 <div class="col-md-6">
-                    <img src="http://via.placeholder.com/468x410" alt="" />
+                    <div class="hover-container">
+                        <img class="hover-image" src="http://via.placeholder.com/468x410" alt="" />
+                    	<div class="hover-text-container hover-scale">
+                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
+                    	</div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="http://via.placeholder.com/468x410" alt="" />
+                    <div class="hover-container">
+                        <img class="hover-image" src="http://via.placeholder.com/468x410" alt="" />
+                    	<div class="hover-text-container hover-scale">
+                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
+                    	</div>
+                    </div>
                 </div>
             </div>
             <div class="row image-row">
