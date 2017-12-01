@@ -92,8 +92,8 @@
                     return promotions
                 },
                 holidayEvents(){
-                    var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.start_date }); 
-                    var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags.indexOf("holiday") });
+                    // var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.start_date }); 
+                    var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags == "holiday" });
                     return holiday_events
                     console.log(holiday_events)
                 },
