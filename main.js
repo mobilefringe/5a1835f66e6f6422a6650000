@@ -72,7 +72,6 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
             });
-            console.log(this.$store.state)
         },
         watch: {
             // watcher to update vue-i18n when the locale has been changed by the user
