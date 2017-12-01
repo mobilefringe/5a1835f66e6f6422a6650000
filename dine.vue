@@ -4,7 +4,7 @@
         <div class="dine-container" v-for="restaurant in restaurants">
             <div class="row">
                 <div class="col-md-9">
-                    <img :src="restaurant.image_url" alt="{{restaurant.name}}" />
+                    <img :src="restaurant.image_url" :alt="restaurant.name" />
                 </div>
                 <div class="col-md-3">
                     <h2 class="dine-name">{{restaurant.name}}</h2>
