@@ -98,7 +98,7 @@
                     _.forEach(events, function(val) {
                         var tag_string = _.join(val.tags);
                         console.log(tag_string)
-                        if(_.isMatch(tag_string, "holiday")) {
+                        if(tag_string == "holiday") {
                             console.log("YES!")
                             holiday_events.push(val);
                             console.log(holiday_events)
