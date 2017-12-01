@@ -7,25 +7,30 @@
                     <h2>NEWS</h2>
                 </div>
             </div>
+            <!--<div class="row">-->
+            <!--    <div>-->
+            <!--        <hr>-->
+            <!--        <div class="col-md-1">-->
+            <!--            <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>-->
+            <!--            <p class="details-promo-day">{{promo.start_date | moment("D", timezone)}}</p>-->
+            <!--            <p class="details-promo-date">{{promo.start_date | moment("MMM", timezone)}}</p>-->
+            <!--        </div>-->
+            <!--        <div class="col-md-5">-->
+            <!--            <h2 class="details-promo-name">{{promo.name}}</h2> -->
+            <!--            <h5 class="details-promo-store">{{promo.store.name}}</h5>-->
+            <!--            <p class="details-promo-desc">{{ truncate(promo.description) }}</p> -->
+            <!--            <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">-->
+            <!--                <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
+            <!--            </router-link>    -->
+            <!--        </div>-->
+            <!--        <div class="col-md-6">-->
+            <!--            <img :src="promo.promo_image_url_abs" class="store_logo" alt="">-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="row">
-                <div>
-                    <hr>
-                    <div class="col-md-1">
-                        <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{promo.start_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{promo.start_date | moment("MMM", timezone)}}</p>
-                    </div>
-                    <div class="col-md-5">
-                        <h2 class="details-promo-name">{{promo.name}}</h2> 
-                        <h5 class="details-promo-store">{{promo.store.name}}</h5>
-                        <p class="details-promo-desc">{{ truncate(promo.description) }}</p> 
-                        <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
-                            <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>    
-                    </div>
-                    <div class="col-md-6">
-                        <img :src="promo.promo_image_url_abs" class="store_logo" alt="">
-                    </div>
+                <div class="col-md-12">
+                    <!-- ADD PAGINATION -->
                 </div>
             </div>
             <div class="row">
