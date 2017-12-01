@@ -92,7 +92,7 @@
                     return promotions
                 },
                 holidayEvents(){
-                    var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.start_date }); 
+                    // var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.start_date }); 
                     var holiday_events = _.filter(events, function(o) { return o.tags.indexOf("holiday") });
                     return holiday_events
                     console.log(holiday_events)
