@@ -29,7 +29,7 @@
             <div class="col-md-5">
                 <!-- CALENDAR -->
                 <select class="" v-model="selected">
-                    <option selected value="">All Events</option>
+                    <option selected value="all_events">All Events</option>
                     <option value="events">NorthPark Events</option>
                     <option value="promotions">In-Store Events</option>
                     <option value="holiday">Holiday Events</option>
@@ -67,6 +67,8 @@
                         this.currentSelection = this.storeEvents;
                     // } else if (this.selected == "holiday"){
                     //     this.currentSelection = this.holidayEvents;
+                    } else {
+                        this.currentSelection = this.events
                     }
                 }
             },
