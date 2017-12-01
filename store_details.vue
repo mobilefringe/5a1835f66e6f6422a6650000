@@ -80,7 +80,8 @@
                     title: "MM with Vue.js!",
                     description: "An example of integration of Mall Maverick with Vue.js",
                     currentStore: null,
-                    promotions : []
+                    promotions : [],
+                    breadcrumb: this.currentStore.name
                 }
             },
             beforeRouteEnter(to, from, next) {
