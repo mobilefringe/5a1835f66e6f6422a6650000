@@ -6,7 +6,7 @@
                 <div class="col-md-12">
                     <!-- QUOTE -->
                     <h1 class="art-quote">NORTHPARK CENTER HAS A LONG AND GREAT TRADITION OF EXHIBITING SIGNIFICANT CONTEMPORARY ARTWORK, AND I THINK IT IS WONDERFUL THAT THE TRADITION CONTINUES INTO THE PRESENT.</h1>
-                    <p>JOEL SHAPIRO</p>
+                    <p class="art-quote-subtext">JOEL SHAPIRO</p>
                 </div>
             </div>
             <div class="row">
