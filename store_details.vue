@@ -3,7 +3,7 @@
         <div class="margin_90"></div>
         <div class="row" v-if="currentStore">
             <div class="col-md-12">
-                <img :src="currentStore.store_front_url_abs" class="" alt="" />
+                <img :src="currentStore.store_front_url_abs" class="margin_60" alt="" />
             </div>
             <div class="col-md-9">
                 <div class="details-store-info">
