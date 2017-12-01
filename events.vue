@@ -93,7 +93,7 @@
                     return promotions
                 },
                 holidayEvents(){
-                    var events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags.length > 0 });
+                    var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags.length > 0 });
                     return holiday_events
                     console.log(holiday_events)
                    
