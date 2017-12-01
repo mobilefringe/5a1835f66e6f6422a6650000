@@ -93,11 +93,11 @@
                     return promotions
                 },
                 holidayEvents(){
-                    var events = this.$store.getters.processedEvents
+                    var events = this.$store.getters.processedEvents;
                     holiday_events= [];
                     _.forEach(events, function(val) {
                         var tag_string = _.join(val.tags);
-                        if(tag_string.indexOf("holiday") {
+                        if(tag_string.indexOf("holiday")) {
                             holiday_events.push(val);
                         })
                     })
