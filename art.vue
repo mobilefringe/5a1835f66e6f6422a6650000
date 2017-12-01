@@ -1,12 +1,43 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="row">
-            <div class="col-md-8">
-                <h2>ART</h2>
-                <div class="hours-management" v-html="currentPage.body"></div>
+    <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <img src="http://via.placeholder.com/1280x640" alt="" />
+        <div class="page-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- QUOTE -->
+                </div>
             </div>
-            <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-4">
                 
+                </div>
+                <div class="col-md-4">
+                
+                </div>
+                <div class="col-md-4">
+                
+                </div>
+            </div>
+        </div>
+        <img src="http://via.placeholder.com/1280x640" alt="" />
+        <div class="page-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hours-management" v-html="currentPage.body"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                
+                    
+                </div>
+                <div class="col-md-6">
+                
+                    
+                </div>
+                <div class="col-md-12"
+                    <img src="http://via.placeholder.com/960x640" alt="" />
+                </div>
             </div>
         </div>
         <div class="row">
