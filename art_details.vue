@@ -15,27 +15,8 @@
                     <h5 class="dine-contact-header">Contact</h5>
                     <p>{{currentStore.phone}}</p>
                 </div>
-                <div class="details-hours-container" v-if="currentStore && currentStore.store_hours">
-                    <h5>Hours</h5>
-                    <!--<ul class="">-->
-                    <!--    <li v-for="hour in hours">-->
-                    <!--        <span class="pull-left col-md-6"> -->
-                    <!--           {{day_of_the_week(hour.day_of_week)}}-->
-                    <!--        </span>-->
-                    <!--        <span class="pull-right col-md-6 text-left">-->
-                    <!--            {{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}-->
-                    <!--        </span>-->
-                    <!--    </li>-->
-                    <!--</ul>-->
-                </div>
-                <div class="details-manager-container" v-if="currentStore && currentStore.description"> <!--How are we going to add Store Manager? -->
-                    <h5>Manager</h5>
-                    <p>manager name</p>
-                </div>
             </div>
         </div>
-        
-
         <div class="row">
             <div class="col-md-12">
                 <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i></p>
