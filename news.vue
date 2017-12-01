@@ -50,7 +50,11 @@
             data: function() {
                 return {
                     currentPage: null,
+                    currentBlog: ""
                 }
+            },
+            mounted () {
+                this.currentBlog = this.blog("main");    
             },
             computed: {
                 property(){
@@ -63,21 +67,14 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
+                blog() {
+                    return this.$store.getters.findBlogByName;
+                }
                 
             },
             methods: {
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
-                },
-                changeItem(event) {
-                    this.selected = `${event.target.value}`
-                    console.log("I've changed")
-                    console.log(this.selected)
-                    
-                    // var store_id = this.${event.target.value}
-                    console.log(store_id)
-                }
+                
+            
             }
         });
     });
