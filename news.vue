@@ -50,11 +50,12 @@
             data: function() {
                 return {
                     currentPage: null,
-                    currentBlog: ""
+                    currentBlog: null
                 }
             },
             mounted () {
-                this.currentBlog = this.blog("main");    
+                this.currentBlog = this.blog("main");  
+                console.log(this.currentBlog)
             },
             computed: {
                 property(){
