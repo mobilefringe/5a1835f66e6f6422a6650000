@@ -93,9 +93,13 @@
                     return promotions
                 },
                 holidayEvents(){
-                    var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.start_date }); 
-                    var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags == "holiday" });
-                    return holiday_events
+                    var events = this.$store.getters.processedEvents
+                    _.forEach(events, function(val) {
+                        var tag_string = _.join(events.tags);
+                        console.log(tag_string)
+                    })
+                    // var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags == "holiday" });
+                    // return holiday_events
                     console.log(events)
                 },
                 property(){
