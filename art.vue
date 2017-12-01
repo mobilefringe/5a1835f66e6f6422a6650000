@@ -9,7 +9,7 @@
                     <p class="art-quote-subtext">JOEL SHAPIRO</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row image-row">
                 <div class="col-md-4">
                     <img src="http://via.placeholder.com/308x410" alt="" />
                 </div>
@@ -21,6 +21,7 @@
                 </div>
             </div>
         </div>
+        
         <img src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
             <div class="row">
@@ -28,7 +29,7 @@
                     <div class="hours-management" v-html="currentPage.body"></div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row image-row">
                 <div class="col-md-6">
                     <img src="http://via.placeholder.com/468x410" alt="" />
                 </div>
