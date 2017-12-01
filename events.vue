@@ -78,7 +78,6 @@
             computed: {
                 events() {
                     var events = this.$store.getters.processedEvents;
-                    console.log(events)
                     var promotions = this.$store.getters.processedPromos;
                     var merge = _.concat(events, promotions);
                     var sorted = _.orderBy(merge, function(o) { return o.start_date })
@@ -94,7 +93,7 @@
                 },
                 holidayEvents(){
                     var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags.length > 0 });
-                    return holiday_events
+                    // return holiday_events
                     console.log(holiday_events)
                    
                 },
