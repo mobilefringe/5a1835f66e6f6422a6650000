@@ -32,7 +32,7 @@
                     <!--    </li>-->
                     <!--</ul>-->
                 </div>
-                <div class="details-manager-container" v-if="currentStore && currentStore.description"> <!--How are we going to add Store Manager? -->
+                <div class="details-manager-container" v-if="currentStore && currentStore.description">
                     <h5>Manager</h5>
                     <p>{{currentStore.manager_name}}</p>
                 </div>
