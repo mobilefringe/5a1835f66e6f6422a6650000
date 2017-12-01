@@ -100,9 +100,10 @@
                         console.log(tag_string)
                         if(tag_string.indexOf("holiday")) {
                             holiday_events.push(val);
+                            console.log(holiday_events)
                         }
                     })
-                    console.log(holiday_events)
+                    
                     // var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags == "holiday" });
                     // return holiday_events
                    
