@@ -34,7 +34,10 @@
             <!--    </div>-->
             <!--</div>-->
             <div class="col-md-3">
+                <h5>Related Blogs</h5>
                 
+                <h5>Get Connected</h5>
+                <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
             </div>
         </div>
     
