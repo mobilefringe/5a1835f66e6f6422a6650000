@@ -68,7 +68,7 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
-                blog() {
+                blogs() {
                     return this.$store.getters.findBlogByName;
                 }
                 
