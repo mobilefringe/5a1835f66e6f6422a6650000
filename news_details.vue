@@ -3,17 +3,17 @@
         <div class="margin_90"></div>
         <div class="row" v-if="currentPost">
             <div class="col-md-12">
-                <img :src="currentStore.image_url" class="margin_60" alt="" />
+                <img :src="currentPost.image_url" class="margin_60" alt="" />
             </div>
-            <div class="col-md-9">
-                <div class="details-store-info">
-                    <h2 class="details-store-name">{{currentStore.name}}</h2>
-                    <p class="details-description">{{currentStore.description}}</p>
-                    <router-link to="/stores" active-class="active" exact>
-                        <a class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                    </router-link>
-                </div>
-            </div>
+            <!--<div class="col-md-9">-->
+            <!--    <div class="details-store-info">-->
+            <!--        <h2 class="details-store-name">{{currentStore.name}}</h2>-->
+            <!--        <p class="details-description">{{currentStore.description}}</p>-->
+            <!--        <router-link to="/stores" active-class="active" exact>-->
+            <!--            <a class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
+            <!--        </router-link>-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="col-md-3">
                 
             </div>
