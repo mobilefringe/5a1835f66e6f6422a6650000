@@ -53,9 +53,6 @@
                     currentPost: null
                 }
             },
-            // mounted () {
-            //     this.currentBlog = this.blogs("main");
-            // },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -75,19 +72,6 @@
                     this.$router.replace({ name: '404'});
                 }
             },
-            // watch: {
-            //     currentStore: function() {
-            //         console.log("currentStore promo", this.currentStore );
-            //         var vm = this;
-            //         var temp = [];
-            //         _.forEach(this.currentStore.promotions, function(value, key) {
-            //             console.log(vm.findPromoById(value));
-            //             temp.push(vm.findPromoById(value));
-            //         });
-            //         this.promotions = temp;
-            //         console.log("promos", this.promotions);
-            //     }
-            // },
             computed: {
                 findBlogPostBySlug () {
                     return this.$store.getters.findBlogPostBySlug;
