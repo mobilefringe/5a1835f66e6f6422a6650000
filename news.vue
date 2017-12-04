@@ -18,13 +18,13 @@
                     <div class="col-md-5">
                         <h2 class="details-promo-name">{{blog.title}}</h2> 
                         
-                        <p class="details-promo-desc">{{ truncate(blog.posts.body) }}</p> 
-                        <router-link :to="{ name: 'newsDetails', params: { id: blog.posts.slug }}">
+                        <p class="details-promo-desc">{{ truncate(blog.body) }}</p> 
+                        <router-link :to="{ name: 'newsDetails', params: { id: blog.slug }}">
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>    
                     </div>
                     <div class="col-md-6">
-                        <img :src="blog.posts.image_url" class="store_logo" alt="">
+                        <img :src="blog.image_url" class="store_logo" alt="">
                     </div>
                 </div>
             </div>
