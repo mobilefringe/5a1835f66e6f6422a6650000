@@ -16,7 +16,7 @@
                         <img :src="currentBlog.image_url" class="margin_60" alt="" />
                         <div>{{currentBlog.body}}</div>
                         
-                        <social-sharing :url="shareURL()" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="NorthParkCenter" inline-template>
+                        <social-sharing :url="shareURL(currentBlog.slug)" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="NorthParkCenter" inline-template>
                             <div>
                                 <network network="facebook">
                                     <i class="fa fa-facebook-square"></i> Facebook
@@ -102,7 +102,7 @@
                     var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
                     return truncate;
                 },
-                shareURL(){
+                shareURL(slug){
                     
                 }
             }
