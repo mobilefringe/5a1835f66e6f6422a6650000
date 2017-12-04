@@ -26,7 +26,9 @@
                             </router-link>    
                         </div>
                         <div class="col-md-6">
-                            <img :src="blog.image_url" class="store_logo" alt="">
+                            <div>
+                                <img :src="blog.image_url" class="store_logo" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
