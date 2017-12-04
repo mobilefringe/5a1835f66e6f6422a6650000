@@ -42,6 +42,7 @@
                 next(vm => {
                     // access to component instance via `vm`
                     vm.currentBlog = vm.findBlogPostBySlug(to.params.id);
+                    console.log(vm.currentBlog)
                     if (vm.currentBlog === null || vm.currentBlog === undefined){
                         vm.$router.replace({ name: '404'});
                     }
