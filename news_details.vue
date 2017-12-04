@@ -2,7 +2,7 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin_90"></div>
         <div class="row" v-if="currentBlog">
-            <div class="col-md-9">
+            <div class="col-md-9 margin_60">
                 <div class="row">
                     <div class="col-md-2">
                         <p class="details-promo-date">{{currentBlog.publish_date | moment("ddd", timezone)}}</p>
