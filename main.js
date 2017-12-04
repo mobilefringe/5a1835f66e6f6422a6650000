@@ -61,7 +61,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             }
         },
         mounted () {
-            this.$store.state
+            this.$store.state.results
             console.log(this.$store.state.results.blogs)
         },
         created() {
