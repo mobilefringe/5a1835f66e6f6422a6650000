@@ -50,6 +50,7 @@
             },
             beforeRouteUpdate(to, from, next) {
                 this.currentBlog = this.findBlogPostBySlug(to.params.id);
+                console.log(this.currentBlog)
                 if (this.currentBlog === null || this.currentBlog === undefined){
                     this.$router.replace({ name: '404'});
                 }
