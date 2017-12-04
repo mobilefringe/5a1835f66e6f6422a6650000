@@ -3,8 +3,8 @@
         <img class="margin_90" src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
             <paginate name="currentBlog" :list="currentBlog" class="paginate-list margin_60">
-                <div class="row" v-for="blog in paginated('currentBlog')" v-if="currentBlog">
-                    <div class="details-promo-container">
+                <div class="row details-promo-container" v-for="blog in paginated('currentBlog')" v-if="currentBlog">
+                    <div>
                         <div class="col-md-1">
                             <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
                             <p class="details-promo-day">{{blog.publish_date | moment("D", timezone)}}</p>
