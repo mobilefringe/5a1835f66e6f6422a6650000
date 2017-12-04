@@ -52,7 +52,7 @@
             data: function() {
                 return {
                     currentPage: null,
-                    currentBlog: null,
+                    currentBlog: this.currentBlog,
                     paginate: ['currentBlog']
                 }
             },
