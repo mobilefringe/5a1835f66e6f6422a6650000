@@ -19,13 +19,13 @@
                         <social-sharing url="https://vuejs.org/" :title="currentBlog.title" :description="currentBlog.body" quote="Vue is a progressive framework for building user interfaces." hashtags="vuejs,javascript,framework" twitter-user="vuejs" inline-template>
                             <div>
                                 <network network="facebook">
-                                    <i class="fa fa-facebook"></i> Facebook
+                                    <i class="fa fa-facebook-square"></i> Facebook
                                 </network>
                                 <network network="twitter">
-                                    <i class="fa fa-twitter"></i> Twitter
+                                    <i class="fa fa-twitter-square"></i> Twitter
                                 </network>
                                 <network network="pinterest">
-                                    <i class="fa fa-pinterest"></i> Pinterest
+                                    <i class="fa fa-pinterest-square"></i> Pinterest
                                 </network>
                             </div>
                         </social-sharing>
