@@ -62,7 +62,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
         },
         mounted () {
             this.$store.state
-            console.log(this.$store.state.blog)
+            console.log(this.$store.state)
         },
         created() {
             // make an async call to the data store to initialize the locale 
