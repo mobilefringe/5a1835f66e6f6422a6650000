@@ -2,9 +2,9 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin_90"></div>
         <div class="row" v-if="currentBlog">
-            <!--<div class="col-md-12">-->
-            <!--    <img :src="currentStore.store_front_url_abs" class="margin_60" alt="" />-->
-            <!--</div>-->
+            <div class="col-md-12">
+                <img :src="currentBlog.image_url" class="margin_60" alt="" />
+            </div>
             <!--<div class="col-md-9">-->
             <!--    <div class="details-store-info">-->
             <!--        <h2 class="details-store-name">{{currentStore.name}}</h2>-->
