@@ -51,9 +51,8 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-breadcrumbs", "vue-paginate"], function(Vue, moment, tz, VueMoment, Meta, VueBreadcrumbs, VuePaginate) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate"], function(Vue, moment, tz, VueMoment, Meta, VuePaginate) {
         Vue.use(Meta);
-        Vue.use(VueBreadcrumbs);
         Vue.use(VuePaginate);
         
         return Vue.component("news-component", {
