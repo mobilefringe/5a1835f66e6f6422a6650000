@@ -7,31 +7,39 @@
                     <h2>NEWS</h2>
                 </div>
             </div>
-            <div class="row" v-for="blog in currentBlog">
-                <div >  <!-- v-if="blogs" -->
-                    <hr>
-                    <div class="col-md-1">
-                        <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{blog.publish_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{blog.publish_date | moment("MMM", timezone)}}</p>
-                    </div>
-                    <div class="col-md-5">
-                        <p>Blog Category</p>
-                        <h2 class="details-promo-name">{{blog.title}}</h2> 
-                        <p class="">By {{blog.author}} | {{blog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
-                        <p class="details-promo-desc">{{ truncate(blog.body) }}</p> 
-                        <router-link :to="{ name: 'newsDetails', params: { id: blog.slug }}">
-                            <a class="details-link">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>    
-                    </div>
-                    <div class="col-md-6">
-                        <img :src="blog.image_url" class="store_logo" alt="">
+            <paginate name="currentBlog" :list="currentBlog" class="paginate-list">
+                <div class="row" v-for="blog in paginated('currentBlog')">
+                    <div >  <!-- v-if="blogs" -->
+                        <hr>
+                        <div class="col-md-1">
+                            <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
+                            <p class="details-promo-day">{{blog.publish_date | moment("D", timezone)}}</p>
+                            <p class="details-promo-date">{{blog.publish_date | moment("MMM", timezone)}}</p>
+                        </div>
+                        <div class="col-md-5">
+                            <p>Blog Category</p>
+                            <h2 class="details-promo-name">{{blog.title}}</h2> 
+                            <p class="">By {{blog.author}} | {{blog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
+                            <p class="details-promo-desc">{{ truncate(blog.body) }}</p> 
+                            <router-link :to="{ name: 'newsDetails', params: { id: blog.slug }}">
+                                <a class="details-link">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            </router-link>    
+                        </div>
+                        <div class="col-md-6">
+                            <img :src="blog.image_url" class="store_logo" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
+            </paginate>
             <div class="row">
                 <div class="col-md-12">
                     <!-- ADD PAGINATION -->
+                    <paginate-links for="items" :show-step-links="true"></paginate-links>
+                    <paginate-links for="items" :limit="2" :show-step-links="true"></paginate-links>
+                    <paginate-links for="items" :simple="{
+                        next: 'Next »',
+                        prev: '« Back'
+                      }"></paginate-links>
                 </div>
             </div>
             <div class="row">
@@ -51,7 +59,8 @@
             data: function() {
                 return {
                     currentPage: null,
-                    currentBlog: null
+                    currentBlog: null,
+                    paginate: ['currentBlog']
                 }
             },
             mounted () {
