@@ -34,9 +34,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- ADD PAGINATION -->
-                    <paginate-links for="items" :show-step-links="true"></paginate-links>
-                    <paginate-links for="items" :limit="3" :show-step-links="true"></paginate-links>
-                    <paginate-links for="items" :simple="{
+                    <paginate-links for="currentBlog" :show-step-links="true"></paginate-links>
+                    <paginate-links for="currentBlog" :limit="3" :show-step-links="true"></paginate-links>
+                    <paginate-links for="currentBlog" :simple="{
                         next: 'Next »',
                         prev: '« Back'
                       }"></paginate-links>
