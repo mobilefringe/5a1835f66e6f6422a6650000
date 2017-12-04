@@ -7,7 +7,7 @@
                     <h2>NEWS</h2>
                 </div>
             </div>
-            <paginate name="currentBlog" :list="currentBlog" class="paginate-list">
+            <paginate name="currentBlog" :list="currentBlog" class="paginate-list margin_60">
                 <div class="row" v-for="blog in paginated('currentBlog')">
                     <div >  <!-- v-if="blogs" -->
                         <hr>
