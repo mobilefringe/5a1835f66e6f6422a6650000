@@ -14,7 +14,7 @@
                         <h2 class="">{{currentBlog.title}}</h2> 
                         <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
                         <img :src="currentBlog.image_url" class="margin_60" alt="" />
-                        <div>{{currentBlog.html_body}}</div>
+                        <div>{{{currentBlog.html_body}}}</div>
                     </div>
                     <div class="col-md-4">
                         
