@@ -38,6 +38,13 @@
                 
                 <h5>Get Connected</h5>
                 <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
+                <div class="menu-newsletter-container">
+                    <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
+
+                        <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Sign Up for Email Newsletter"/>
+                        <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </form>
+                </div>
             </div>
         </div>
     
