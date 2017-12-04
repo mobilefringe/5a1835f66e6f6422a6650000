@@ -7,27 +7,27 @@
                     <h2>NEWS</h2>
                 </div>
             </div>
-            <div class="row" v-for="blog.posts in currentBlog">
+            <!--<div class="row" v-for="blog.posts in currentBlog">-->
                 <div >  <!-- v-if="blogs" -->
-                    <hr>
-                    <div class="col-md-1">
+            <!--        <hr>-->
+            <!--        <div class="col-md-1">-->
                         <!--<p class="details-promo-date">{{blog.posts.start_date | moment("ddd", timezone)}}</p>-->
                         <!--<p class="details-promo-day">{{blog.posts.start_date | moment("D", timezone)}}</p>-->
                         <!--<p class="details-promo-date">{{blog.posts.start_date | moment("MMM", timezone)}}</p>-->
-                    </div>
-                    <div class="col-md-5">
-                        <h2 class="details-promo-name">{{blog.posts.title}}</h2> 
+            <!--        </div>-->
+            <!--        <div class="col-md-5">-->
+            <!--            <h2 class="details-promo-name">{{blog.posts.title}}</h2> -->
                         
-                        <p class="details-promo-desc">{{ truncate(blog.posts.body) }}</p> 
-                        <router-link :to="{ name: 'newsDetails', params: { id: blog.posts.slug }}">
-                            <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>    
-                    </div>
-                    <div class="col-md-6">
-                        <img :src="blog.posts.image_url" class="store_logo" alt="">
-                    </div>
-                </div>
-            </div>
+            <!--            <p class="details-promo-desc">{{ truncate(blog.posts.body) }}</p> -->
+            <!--            <router-link :to="{ name: 'newsDetails', params: { id: blog.posts.slug }}">-->
+            <!--                <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
+            <!--            </router-link>    -->
+            <!--        </div>-->
+            <!--        <div class="col-md-6">-->
+            <!--            <img :src="blog.posts.image_url" class="store_logo" alt="">-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="row">
                 <div class="col-md-12">
                     <!-- ADD PAGINATION -->
