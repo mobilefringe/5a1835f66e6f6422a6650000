@@ -15,6 +15,20 @@
                         <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
                         <img :src="currentBlog.image_url" class="margin_60" alt="" />
                         <div>{{currentBlog.body}}</div>
+                        
+                        <social-sharing url="https://vuejs.org/" title="The Progressive JavaScript Framework" description="Intuitive, Fast and Composable MVVM for building interactive interfaces." quote="Vue is a progressive framework for building user interfaces." hashtags="vuejs,javascript,framework" twitter-user="vuejs" inline-template>
+                            <div>
+                                <network network="facebook">
+                                    <i class="fa fa-facebook"></i> Facebook
+                                </network>
+                                <network network="twitter">
+                                    <i class="fa fa-twitter"></i> Twitter
+                                </network>
+                                <network network="pinterest">
+                                    <i class="fa fa-pinterest"></i> Pinterest
+                                </network>
+                            </div>
+                        </social-sharing>
                     </div>
                 </div>
             </div>
