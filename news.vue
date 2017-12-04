@@ -71,7 +71,7 @@
                     return hours;
                 },
                 blogs() {
-                    blog = _.orderBy(this.$store.getters.findBlogByName;
+                    blog = _.orderBy(this.$store.getters.findBlogByName, function(o) { return o.publish_date })
                     return blog
                 }
             },
