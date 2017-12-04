@@ -60,6 +60,10 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 breadcrumb: this.$breadcrumbs
             }
         },
+        mounted () {
+            this.$store.state
+            console.log(this.$store.state)
+        },
         created() {
             // make an async call to the data store to initialize the locale 
             //(i.e. it will check if there is a locale value saved in cookie, otherwise it will default to EN)
@@ -96,7 +100,6 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             },
             property(){
                 return this.$store.getters.getProperty;
-                console.log(this.$store.state)
             },
             copyright_year() {
                 return moment().year();
