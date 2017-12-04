@@ -7,7 +7,7 @@
                     <h2>NEWS</h2>
                 </div>
             </div>
-            <div class="row" v-for="blog in currentBlog">
+            <div class="row" v-for="blog.posts in currentBlog">
                 <div >  <!-- v-if="blogs" -->
                     <hr>
                     <div class="col-md-1">
