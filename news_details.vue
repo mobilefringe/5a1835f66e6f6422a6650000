@@ -36,20 +36,19 @@
                     title: "MM with Vue.js!",
                     description: "An example of integration of Mall Maverick with Vue.js",
                     currentBlog: null,
-                    
                 }
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    vm.currentBlog = vm.findBlogBySlug(to.params.id);
+                    vm.currentBlog = vm.findBlogPostBySlug(to.params.id);
                     if (vm.currentBlog === null || vm.currentBlog === undefined){
                         vm.$router.replace({ name: '404'});
                     }
                 })
             },
             beforeRouteUpdate(to, from, next) {
-                this.currentBlog = this.findBlogBySlug(to.params.id);
+                this.currentBlog = this.findBlogPostBySlug(to.params.id);
                 if (this.currentBlog === null || this.currentBlog === undefined){
                     this.$router.replace({ name: '404'});
                 }
