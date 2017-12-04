@@ -49,7 +49,7 @@
                     var blogName = "main";
                     vm.currentPost = vm.findBlogPostBySlug(blogName, to.params.id);
                     console.log(vm.currentPost)
-                    if (vm.currentBlog === null || vm.currentBlog === undefined){
+                    if (vm.currentPost === null || vm.currentPost === undefined){
                         vm.$router.replace({ name: '404'});
                     }
                 })
@@ -58,7 +58,7 @@
                 var blogName = "main";
                 this.currentPost = this.findBlogPostBySlug(blogName, to.params.id);
                 console.log(this.currentPost)
-                if (this.currentBlog === null || this.currentBlog === undefined){
+                if (this.currentPost === null || this.currentPost === undefined){
                     this.$router.replace({ name: '404'});
                 }
             },
