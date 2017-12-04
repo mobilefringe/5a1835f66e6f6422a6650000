@@ -88,7 +88,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             locale: {
                 get () {
                     return this.$store.state.locale
-                    console.log(this.$store.state)
+                    
                 },
                 set (value) {
                     this.$store.commit('SET_LOCALE', { lang: value })
@@ -96,6 +96,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             },
             property(){
                 return this.$store.getters.getProperty;
+                console.log(this.$store.state)
             },
             copyright_year() {
                 return moment().year();
