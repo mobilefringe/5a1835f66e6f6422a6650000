@@ -24,7 +24,7 @@
                         </router-link>    
                     </div>
                     <div class="col-md-6">
-                        <img :src="promo.promo_image_url_abs" class="store_logo" alt="">
+                        <img :src="blog.posts.image_url" class="store_logo" alt="">
                     </div>
                 </div>
             </div>
