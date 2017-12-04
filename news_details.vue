@@ -39,7 +39,7 @@
                     currentBlog: null,
                 }
             },
-            beforeRouteEnter(blogName, to, from, next) {
+            beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
                     vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
@@ -49,7 +49,7 @@
                     }
                 })
             },
-            beforeRouteUpdate(blogName, to, from, next) {
+            beforeRouteUpdate(to, from, next) {
                 this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
                 console.log(this.currentBlog)
                 if (this.currentBlog === null || this.currentBlog === undefined){
