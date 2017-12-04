@@ -28,31 +28,29 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-breadcrumbs", "vue-paginate"], function(Vue, moment, tz, VueMoment, Meta, VueBreadcrumbs, VuePaginate) {
-        Vue.use(Meta);
-        Vue.use(VueBreadcrumbs);
-        Vue.use(VuePaginate);
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         return Vue.component("news-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
                     title: "MM with Vue.js!",
                     description: "An example of integration of Mall Maverick with Vue.js",
+                    blogName: "main",
                     currentBlog: null,
                 }
             },
-            beforeRouteEnter(to, from, next) {
+            beforeRouteEnter(blogName, to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    vm.currentBlog = vm.findBlogPostBySlug(to.params.id);
+                    vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
                     console.log(vm.currentBlog)
                     if (vm.currentBlog === null || vm.currentBlog === undefined){
                         vm.$router.replace({ name: '404'});
                     }
                 })
             },
-            beforeRouteUpdate(to, from, next) {
-                this.currentBlog = this.findBlogPostBySlug(to.params.id);
+            beforeRouteUpdate(blogName, to, from, next) {
+                this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
                 console.log(this.currentBlog)
                 if (this.currentBlog === null || this.currentBlog === undefined){
                     this.$router.replace({ name: '404'});
