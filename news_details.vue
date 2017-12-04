@@ -103,7 +103,7 @@
                     return truncate;
                 },
                 shareURL(slug){
-                    
+                    console.log(slug)
                 }
             }
         });
