@@ -118,20 +118,6 @@ define([], function () {
                 {
                     path: '',
                     component: view('news'),
-                    name: 'storeList'
-                },
-            ]
-        },
-        {
-            path: '/news',
-            component: view('default'),
-            meta: {
-                breadcrumb: 'News',
-            },
-            children: [
-                {
-                    path: '',
-                    component: view('news'),
                     name: ''
                 },
                 {
