@@ -104,7 +104,7 @@
                 },
                 shareURL(slug){
                     console.log(slug)
-                    var share_url = "http://www.northparkcenter.com/news/" + slug
+                    var share_url = "http://www.northparkcenter.com//news/" + slug
                     console.log(share_url)
                 }
             }
