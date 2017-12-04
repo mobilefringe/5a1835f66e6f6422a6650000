@@ -29,8 +29,6 @@
             </paginate>
             <div class="row margin_60">
                 <div class="col-md-12">
-                    <!-- ADD PAGINATION -->
-                    <!--<paginate-links for="currentBlog" :show-step-links="true"></paginate-links>-->
                     <paginate-links for="currentBlog" :limit="9" :show-step-links="true"></paginate-links>
                     <paginate-links for="currentBlog" :simple="{ next: 'Next »', prev: '« Back' }"></paginate-links>
                 </div>
