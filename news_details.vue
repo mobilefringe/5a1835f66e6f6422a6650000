@@ -10,12 +10,6 @@
                         <p class="details-promo-date">{{currentBlog.publish_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-10">
-                        <p class="blog-category">Blog Category</p>
-                        <h2 class="">{{currentBlog.title}}</h2> 
-                        <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
-                        <img :src="currentBlog.image_url" class="margin_60" alt="" />
-                        <div>{{currentBlog.body}}</div>
-                        
                         <social-sharing :url="shareURL(currentBlog.slug)" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="NorthParkCenter" :media="currentBlog.image_url" inline-template>
                             <div class="blog-social-share">
                                 <h5>Share</h5>
@@ -30,6 +24,13 @@
                                 </network>
                             </div>
                         </social-sharing>
+                        <p class="blog-category">Blog Category</p>
+                        <h2 class="">{{currentBlog.title}}</h2> 
+                        <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
+                        <img :src="currentBlog.image_url" class="margin_60" alt="" />
+                        <div>{{currentBlog.body}}</div>
+                        
+                        
                     </div>
                 </div>
             </div>
