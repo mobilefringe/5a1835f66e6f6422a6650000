@@ -11,9 +11,9 @@
                 <div >  <!-- v-if="blogs" -->
                     <hr>
                     <div class="col-md-1">
-                        <!--<p class="details-promo-date">{{blog.start_date | moment("ddd", timezone)}}</p>-->
-                        <!--<p class="details-promo-day">{{blog.posts.start_date | moment("D", timezone)}}</p>-->
-                        <!--<p class="details-promo-date">{{blog.posts.start_date | moment("MMM", timezone)}}</p>-->
+                        <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
+                        <p class="details-promo-day">{{blog.publish_date | moment("D", timezone)}}</p>
+                        <p class="details-promo-date">{{blog.publish_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-5">
                         <h2 class="details-promo-name">{{blog.title}}</h2> 
