@@ -3,9 +3,9 @@
         <img class="margin_90" src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
             <paginate name="currentBlog" :list="currentBlog" class="paginate-list margin_60">
-                <div class="row" v-for="blog in paginated('currentBlog')">
-                    <div >  <!-- v-if="blogs" -->
-                        <hr>
+                <div class="row" v-for="blog in paginated('currentBlog')" v-if="currentBlog">
+                    <div>
+                        
                         <div class="col-md-1">
                             <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
                             <p class="details-promo-day">{{blog.publish_date | moment("D", timezone)}}</p>
@@ -25,6 +25,7 @@
                                 <img :src="blog.image_url" class="store_logo" alt="">
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </div>
             </paginate>
