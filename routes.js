@@ -123,6 +123,25 @@ define([], function () {
             ]
         },
         {
+            path: '/news',
+            component: view('default'),
+            meta: {
+                breadcrumb: 'News',
+            },
+            children: [
+                {
+                    path: '',
+                    component: view('news'),
+                    name: ''
+                },
+                {
+                    path: ':id',
+                    component: view('news_details'),
+                    name: 'newsDetails'
+                }
+            ]
+        },
+        {
             path: '/visit',
             component: view('default'),
             meta: {
