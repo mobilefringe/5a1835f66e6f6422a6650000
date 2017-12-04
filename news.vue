@@ -66,7 +66,6 @@
             },
             mounted () {
                 this.currentBlog = this.blogs("main").posts.reverse();  
-                console.log(this.currentBlog)
             },
             computed: {
                 property(){
