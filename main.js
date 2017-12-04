@@ -33,6 +33,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
     Vue.use(VueBreadcrumbs);
+    Vue.use(SocialSharing);
     
     /* initialize router */
     const router = new VueRouter({
