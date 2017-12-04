@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- ADD PAGINATION -->
-                    <paginate-links for="currentBlog" :show-step-links="true"></paginate-links>
+                    <!--<paginate-links for="currentBlog" :show-step-links="true"></paginate-links>-->
                     <paginate-links for="currentBlog" :limit="3" :show-step-links="true"></paginate-links>
                     <paginate-links for="currentBlog" :simple="{
                         next: 'Next »',
@@ -54,6 +54,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate"], function(Vue, moment, tz, VueMoment, Meta, VuePaginate) {
         Vue.use(Meta);
+        Vue.use(VueBreadcrumbs);
         Vue.use(VuePaginate);
         
         return Vue.component("news-component", {
