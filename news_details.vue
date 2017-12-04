@@ -16,7 +16,7 @@
                         <img :src="currentBlog.image_url" class="margin_60" alt="" />
                         <div>{{currentBlog.body}}</div>
                         
-                        <social-sharing url="https://vuejs.org/" title="The Progressive JavaScript Framework" description="Intuitive, Fast and Composable MVVM for building interactive interfaces." quote="Vue is a progressive framework for building user interfaces." hashtags="vuejs,javascript,framework" twitter-user="vuejs" inline-template>
+                        <social-sharing url="https://vuejs.org/" :title="currentBlog.title" :description="currentBlog.body" quote="Vue is a progressive framework for building user interfaces." hashtags="vuejs,javascript,framework" twitter-user="vuejs" inline-template>
                             <div>
                                 <network network="facebook">
                                     <i class="fa fa-facebook"></i> Facebook
