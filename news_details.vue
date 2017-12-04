@@ -2,18 +2,18 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin_90"></div>
         <div class="row" v-if="currentBlog">
-            <!--<div class="col-md-12">-->
-            <!--    <img :src="currentStore.store_front_url_abs" class="margin_60" alt="" />-->
-            <!--</div>-->
-            <!--<div class="col-md-9">-->
-            <!--    <div class="details-store-info">-->
-            <!--        <h2 class="details-store-name">{{currentStore.name}}</h2>-->
-            <!--        <p class="details-description">{{currentStore.description}}</p>-->
-            <!--        <router-link to="/stores" active-class="active" exact>-->
-            <!--            <a class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
-            <!--        </router-link>-->
-            <!--    </div>-->
-            <!--</div>-->
+            <div class="col-md-12">
+                <img :src="currentStore.store_front_url_abs" class="margin_60" alt="" />
+            </div>
+            <div class="col-md-9">
+                <div class="details-store-info">
+                    <h2 class="details-store-name">{{currentStore.name}}</h2>
+                    <p class="details-description">{{currentStore.description}}</p>
+                    <router-link to="/stores" active-class="active" exact>
+                        <a class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </router-link>
+                </div>
+            </div>
             <div class="col-md-3">
                 
             </div>
@@ -21,7 +21,7 @@
     
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> News <i class="fa fa-angle-right" aria-hidden="true"></i> {{currentBlog}}</p>
+                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> News <i class="fa fa-angle-right" aria-hidden="true"></i> {{currentBlog.title}}</p>
             </div>
         </div>
     </div>
@@ -37,7 +37,11 @@
                     description: "An example of integration of Mall Maverick with Vue.js",
                     blogName: "main",
                     currentBlog: null,
+                    currentPost: null
                 }
+            },
+            mounted () {
+                this.currentBlog = this.blogs("main");
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
