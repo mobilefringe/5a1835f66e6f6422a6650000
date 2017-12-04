@@ -68,8 +68,8 @@
             //     }
             // },
             computed: {
-                findBlogBySlug () {
-                    return this.$store.getters.findBlogBySlug;
+                findBlogPostBySlug () {
+                    return this.$store.getters.findBlogPostBySlug;
                 },
                 property(){
                     return this.$store.getters.getProperty;
