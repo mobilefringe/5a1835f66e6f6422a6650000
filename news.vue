@@ -56,9 +56,9 @@
                     paginate: ['currentBlog']
                 }
             },
-            // mounted () {
-            //     this.currentBlog = this.blogs("main").posts.reverse();  
-            // },
+            mounted () {
+                this.currentBlog = this.blogs("main").posts.reverse();  
+            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
@@ -71,8 +71,10 @@
                     return hours;
                 },
                 blogs() {
-                    blog = _.orderBy(this.$store.getters.findBlogByName, function(o) { return o.publish_date })
-                    return blog
+                    return this.$store.getters.findBlogByName;
+                    console.log(this.$store.getters.findBlogByName;)
+                    // blog = _.orderBy(this.$store.getters.findBlogByName, function(o) { return o.publish_date })
+                    // return blog
                 }
             },
             methods: {
