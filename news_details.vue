@@ -5,14 +5,14 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-1">
-                        <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{blog.publish_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{blog.publish_date | moment("MMM", timezone)}}</p>
+                        <p class="details-promo-date">{{currentBlog.publish_date | moment("ddd", timezone)}}</p>
+                        <p class="details-promo-day">{{currentBlog.publish_date | moment("D", timezone)}}</p>
+                        <p class="details-promo-date">{{currentBlog.publish_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-7">
                         <p class="blog-category">Blog Category</p>
-                        <h2 class="">{{blog.title}}</h2> 
-                        <p class="blog-author">By {{blog.author}} | {{blog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
+                        <h2 class="">{{currentBlog.title}}</h2> 
+                        <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
                     </div>
                     <div class="col-md-4">
                         
