@@ -57,7 +57,7 @@
                 }
             },
             mounted () {
-                this.currentBlog = this.blogs("main").posts.reverse();  
+                this.currentBlog = this.blogs("main").posts;  
             },
             computed: {
                 property(){
