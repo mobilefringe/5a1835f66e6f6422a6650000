@@ -83,11 +83,10 @@
                 blogs() {
                     return this.$store.getters.findBlogByName;
                 }
-                
             },
             methods: {
                 truncate(val_description){
-                    var truncate = _.truncate(val_description, { 'length': 249, 'separator': ' ' });
+                    var truncate = _.truncate(val_description, { 'length': 149, 'separator': ' ' });
                     return truncate;
                 },
             }
