@@ -56,9 +56,9 @@
                     paginate: ['currentBlog']
                 }
             },
-            mounted () {
-                this.currentBlog = this.blogs("main").posts.reverse();  
-            },
+            // mounted () {
+            //     this.currentBlog = this.blogs("main").posts.reverse();  
+            // },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
