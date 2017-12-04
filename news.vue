@@ -1,12 +1,7 @@
 <template>
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <img src="http://via.placeholder.com/1920x640" alt="" />
+        <img class="margin_90" src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>NEWS</h2>
-                </div>
-            </div>
             <paginate name="currentBlog" :list="currentBlog" class="paginate-list margin_60">
                 <div class="row" v-for="blog in paginated('currentBlog')">
                     <div >  <!-- v-if="blogs" -->
