@@ -18,7 +18,7 @@
                     <div class="col-md-5">
                         <h2 class="details-promo-name">{{blog.posts.title}}</h2> 
                         
-                        <p class="details-promo-desc">{{ truncate(blog.posts.description) }}</p> 
+                        <p class="details-promo-desc">{{ truncate(blog.posts.body) }}</p> 
                         <router-link :to="{ name: 'newsDetails', params: { id: blog.posts.slug }}">
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>    
