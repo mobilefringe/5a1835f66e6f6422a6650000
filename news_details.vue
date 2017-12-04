@@ -3,7 +3,7 @@
         <div class="margin_90"></div>
         <div class="row" v-if="currentBlog">
             <div class="col-md-12">
-                <img :src="currentStore.store_front_url_abs" class="margin_60" alt="" />
+                <img :src="currentStore.image_url" class="margin_60" alt="" />
             </div>
             <div class="col-md-9">
                 <div class="details-store-info">
@@ -47,8 +47,8 @@
                 next(vm => {
                     // access to component instance via `vm`
                     var blogName = "main";
-                    vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
-                    console.log(vm.currentBlog)
+                    vm.currentPost = vm.findBlogPostBySlug(blogName, to.params.id);
+                    console.log(vm.currentPost)
                     if (vm.currentBlog === null || vm.currentBlog === undefined){
                         vm.$router.replace({ name: '404'});
                     }
@@ -56,8 +56,8 @@
             },
             beforeRouteUpdate(to, from, next) {
                 var blogName = "main";
-                this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
-                console.log(this.currentBlog)
+                this.currentPost = this.findBlogPostBySlug(blogName, to.params.id);
+                console.log(this.currentPost)
                 if (this.currentBlog === null || this.currentBlog === undefined){
                     this.$router.replace({ name: '404'});
                 }
