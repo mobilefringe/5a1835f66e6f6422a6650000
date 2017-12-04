@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </paginate>
-            <div class="row">
+            <div class="row margin_60">
                 <div class="col-md-12">
                     <!-- ADD PAGINATION -->
                     <!--<paginate-links for="currentBlog" :show-step-links="true"></paginate-links>-->
