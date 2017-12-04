@@ -71,7 +71,8 @@
                     return hours;
                 },
                 blogs() {
-                    return this.$store.getters.findBlogByName;
+                    blog = _.orderBy(this.$store.getters.findBlogByName;
+                    return blog
                 }
             },
             methods: {
