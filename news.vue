@@ -18,7 +18,7 @@
                         </div>
                         <div class="col-md-5">
                             <p class="blog-category">Blog Category</p>
-                            <h2 class="details-promo-name">{{blog.title}}</h2> 
+                            <h2 class="">{{blog.title}}</h2> 
                             <p class="blog-author">By {{blog.author}} | {{blog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
                             <p class="details-promo-desc">{{ truncate(blog.body) }}</p> 
                             <router-link :to="{ name: 'newsDetails', params: { id: blog.slug }}">
