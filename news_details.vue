@@ -17,7 +17,7 @@
                         <div>{{currentBlog.body}}</div>
                         
                         <social-sharing :url="shareURL(currentBlog.slug)" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="NorthParkCenter" :media="currentBlog.image_url" inline-template>
-                            <div>
+                            <div class="blog-social-share">
                                 <h5>Share</h5>
                                 <network network="facebook">
                                     <i class="fa fa-facebook-square"></i>
