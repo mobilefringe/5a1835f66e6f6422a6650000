@@ -16,7 +16,7 @@
                         <img :src="currentBlog.image_url" class="margin_60" alt="" />
                         <div>{{currentBlog.body}}</div>
                         
-                        <social-sharing url="https://vuejs.org/" :title="currentBlog.title" :description="currentBlog.body" quote="Vue is a progressive framework for building user interfaces."  twitter-user="vuejs" inline-template>
+                        <social-sharing url="https://vuejs.org/" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="vuejs" inline-template>
                             <div>
                                 <network network="facebook">
                                     <i class="fa fa-facebook-square"></i> Facebook
