@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-md-6">
                             <!--<img :src="blog.image_url" class="store_logo" alt="">-->
-                            <div style="background-image: url({{blog.image_url}})"></div>
+                            <div style="background-image: url( src='blog.image_url' )"></div>
                         </div>
                     </div>
                 </div>
