@@ -40,9 +40,9 @@
                     currentPost: null
                 }
             },
-            // mounted () {
-            //     this.currentPost = this.blogs("main");
-            // },
+            mounted () {
+                this.currentPost = this.blogs("main");
+            },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
