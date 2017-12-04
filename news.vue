@@ -54,7 +54,7 @@
                 }
             },
             mounted () {
-                this.currentBlog = this.blog("main");  
+                this.currentBlog = this.blogs("main");  
                 console.log(this.currentBlog)
             },
             computed: {
