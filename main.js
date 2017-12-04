@@ -16,7 +16,7 @@ require.config({
         'js-cookie': 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min',
         'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
         'Fuse': 'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min',
-        'store': 'https://preview-mmvue.codecloudapp.com/store',
+        'store': 'https://mmvue.codecloudapp.com/store',
         'vue-moment': 'https://mmvue.codecloudapp.com/vue-moment',
         //append a dummy query string so requireJS doesn't auto-append .js to the end of the url
         'today_hours': 'https://mmvue.codecloudapp.com/today_hours.vue?noext', 
@@ -62,9 +62,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 breadcrumb: this.$breadcrumbs
             }
         },
-        mounted () {
-            console.log(this.$store.state);
-        },
+        // mounted () {
+        //     this.$store.state
+        // },
         created() {
             // make an async call to the data store to initialize the locale 
             //(i.e. it will check if there is a locale value saved in cookie, otherwise it will default to EN)
@@ -73,7 +73,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             this.$store.dispatch('LOAD_META_DATA');
     
             // make an async call to load mall data
-            this.$store.dispatch('LOAD_MALL_DATA', {url:"northpark"}).then(response => {
+            this.$store.dispatch('LOAD_MALL_DATA', {url:"https://www.mallmaverick.com/api/v4/northpark/all.json"}).then(response => {
                 this.dataLoaded = true;
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
