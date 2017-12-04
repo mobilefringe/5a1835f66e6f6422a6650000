@@ -7,8 +7,8 @@
                     <h2>NEWS</h2>
                 </div>
             </div>
-            <div class="row">
-                <div v-for="blog in blogs">  <!-- v-if="blogs" -->
+            <div class="row" v-for="blog in blogs">
+                <div >  <!-- v-if="blogs" -->
                     <hr>
                     <div class="col-md-1">
                         <p class="details-promo-date">{{blog.posts.start_date | moment("ddd", timezone)}}</p>
