@@ -104,14 +104,34 @@
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
                     });
-                    
+                    //Concierge
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
                         vm.concierge = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
                     });
-                    
+                    //Gift Cards
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json"}).then(response => {
+                        vm.giftCards = response.data;
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ name: '404'});
+                    });     
+                    //Tourism
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
+                        vm.concierge = response.data;
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ name: '404'});
+                    }); 
+                    //Contact
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
+                        vm.concierge = response.data;
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ name: '404'});
+                    }); 
                 })
             },
             beforeRouteUpdate (to, from, next) {
