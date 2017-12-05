@@ -24,6 +24,7 @@
                     </div>
                     <hr>
                 </div>
+                <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
