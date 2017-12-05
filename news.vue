@@ -128,8 +128,9 @@
                         var tag_string = _.join(value.tag, ',');
                         if(_.includes(tag_string, "beauty") == true){
                             console.log(beauty_string);
+                            beauty_blog.push(value);
                         }
-                        beauty_blog.push(value);
+                        
                     });
                     console.log(beauty_blog);
                     // console.log("promos", this.promotions);
