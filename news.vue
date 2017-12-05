@@ -176,6 +176,7 @@
             methods: {
                 tagString(val_tag){
                     var string = _.join(val_tag, ' , ')  
+                    return string
                 },
                 truncate(val_description){
                     var truncate = _.truncate(val_description, { 'length': 199, 'separator': ' ' });
