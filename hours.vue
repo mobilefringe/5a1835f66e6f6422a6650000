@@ -12,7 +12,7 @@
                 </ul>
                 <hr>
                 <h2>Management Office Hours</h2>
-                <div class="hours-management" v-html="currentPage.body"></div>
+                <div class="hours-management" v-if="currentPage" v-html="currentPage.body"></div>
                 <hr>
                 <h2>AMC Northpark 15</h2>
                 <div class="hours-amc">
