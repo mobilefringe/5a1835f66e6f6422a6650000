@@ -120,14 +120,14 @@
                     });     
                     //Tourism
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
-                        vm.concierge = response.data;
+                        vm.tourism = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
                     }); 
                     //Contact
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
-                        vm.concierge = response.data;
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-contact-us.json"}).then(response => {
+                        vm.contact = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
