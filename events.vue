@@ -19,7 +19,7 @@
                         <h2>{{ event.name }}</h2>
                         <p class="sub_title" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</p>
                         <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
-                            <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                     </div>
                     <hr>
