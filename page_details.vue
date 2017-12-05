@@ -87,6 +87,12 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 }
+            },
+            methods: {
+                day_of_the_week(val_day){
+                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                    return weekday[val_day];
+                },
             }
         });
     });
