@@ -132,7 +132,7 @@
                     _.forEach(this.currentBlog, function(value, key) {
                         var tag_string = val.tag.join();
                         console.log("Tag String" + tag_string);
-                        temp.push(vm.findPromoById(value));
+                        // temp.push(vm.findPromoById(value));
                     });
                     // this.promotions = temp;
                     // console.log("promos", this.promotions);
