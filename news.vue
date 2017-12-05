@@ -70,11 +70,10 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    currentPage: null,
                     currentBlog: this.currentBlog,
                     paginate: ['currentBlog'],
                     selected: "Select A Category",
-                    currentSelection: null,
+                    // currentSelection: null,
                 }
             },
             mounted () {
@@ -85,6 +84,7 @@
                     console.log(this.selected)
                     if(this.selected == "blogBeauty"){
                         this.currentBlog = this.blogBeauty;
+                        
                     } else if (this.selected == "blogCharity") {
                         this.currentBlog = this.blogCharity;
                     } else if (this.selected == "blogChildren"){
