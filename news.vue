@@ -129,8 +129,8 @@
                     
                     var vm = this;
                     var temp = [];
-                    _.forEach(this.currentBlog, function(key, val) {
-                        var tag_string = _.join(val.tag, ',');
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = _.join(vm.tag, ',');
                         console.log(tag_string);
                         // temp.push(vm.findPromoById(value));
                     });
