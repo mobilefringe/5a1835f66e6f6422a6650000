@@ -1,16 +1,19 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="row">
-            <div class="col-md-8">
-                <h2>VISIT</h2>
+    <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <img class="margin_90" src="http://via.placeholder.com/1920x640" alt="" />
+        <div class="page-container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>VISIT</h2>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
             </div>
-            <div class="col-md-4">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>
+                </div>
             </div>
         </div>
     </div>
