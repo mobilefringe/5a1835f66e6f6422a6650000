@@ -71,7 +71,7 @@
             data: function() {
                 return {
                     currentBlog: this.currentBlog,
-                    paginate: ['currentBlog'],
+                    paginate: ['currentSelection'],
                     selected: "Select A Category",
                     currentSelection: null,
                 }
