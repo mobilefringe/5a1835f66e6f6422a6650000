@@ -78,13 +78,13 @@
             },
             mounted () {
                 this.currentBlog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
+                this.currentSelection = this.currentBlog;
             },
             watch: {
                 selected: function() {
                     console.log(this.selected)
                     if(this.selected == "blogBeauty"){
                         this.currentSelection = this.blogBeauty;
-                        
                     } else if (this.selected == "blogCharity") {
                         this.currentSelection = this.blogCharity;
                     } else if (this.selected == "blogChildren"){
