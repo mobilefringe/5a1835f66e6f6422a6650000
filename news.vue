@@ -30,7 +30,7 @@
                             <p class="details-promo-date">{{blog.publish_date | moment("MMM", timezone)}}</p>
                         </div>
                         <div class="col-md-5">
-                            <p class="blog-category">{{ tagString(blog.tag) }}</p>
+                            <p class="blog-category">{{ blog.tag }}</p>
                             <h2 class="">{{blog.title}}</h2> 
                             <p class="blog-author">By {{blog.author}} | {{blog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
                             <p class="details-promo-desc">{{ truncate(blog.body) }}</p> 
