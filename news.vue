@@ -2,6 +2,26 @@
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <img class="margin_90" src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                </div>
+                <div class="col-md-6">
+                    <select class="" v-model="selected">
+                        <option selected value="all_categories">All Events</option>
+                        <option value="blogBeauty">Beauty</option>
+                        <option value="blogCharity">Charitable Partners</option>
+                        <option value="blogChildren">Children</option>
+                        <option value="blogFahion">Fashion</option>
+                        <option value="blogHoliday">Holiday</option>
+                        <option value="blogLifestyle">Lifestyle</option>
+                        <option value="blogLuxury">Luxury</option>
+                        <option value="blogMen">Men</option>
+                        <option value="blogNorthPark50">NorthPark50</option>
+                    </select>    
+                </div>
+                
+            </div>
             <paginate name="currentBlog" v-if="currentBlog" :list="currentBlog" class="paginate-list margin_60">
                 <div class="row details-promo-container" v-for="blog in paginated('currentBlog')" v-if="currentBlog">
                     <div>
