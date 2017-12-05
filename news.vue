@@ -129,9 +129,10 @@
                         var beauty_string = _.includes(tag_string, "beauty");
                         if(beauty_string === true){
                             console.log("Beauty")
+                            beauty_blog.push(vm.value);
                         }
                         //     console.log(beauty_string);
-                        //     // beauty_blog.push(vm.value);
+                        //     
                         
                         
                     });
