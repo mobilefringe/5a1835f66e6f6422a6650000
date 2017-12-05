@@ -174,8 +174,8 @@
                 },
             },
             methods: {
-                tagString(val_tags){
-                    var string = _.join(val_tags, ' , ')  
+                tagString(val_tag){
+                    var string = _.join(val_tag, ' , ')  
                 },
                 truncate(val_description){
                     var truncate = _.truncate(val_description, { 'length': 199, 'separator': ' ' });
