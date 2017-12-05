@@ -28,7 +28,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'v-select'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, VueBreadcrumbs, VuePaginate, SocialSharing, VueSelect.VueSelect) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'v-select'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, VueBreadcrumbs, VuePaginate, SocialSharing, VueSelect) {
     Vue.use(Meta);
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
