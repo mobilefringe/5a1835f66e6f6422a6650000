@@ -12,8 +12,8 @@
                         </router-link>
                     </div>
                     <div class="">
-                        <h2>Valet & Parking</h2>
-                        <div v-if="valet" v-html="truncate(valet.body)"></div>
+                        <h2>Concierge</h2>
+                        <div v-if="concierge" v-html="truncate(concierge.body)"></div>
                         <router-link to="/" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
@@ -62,6 +62,7 @@
                 return {
                     // breadcrumb: this.$breadcrumbs,
                     valet: null,
+                    concierge: null, 
                     selected: "Select a Restaurant"
                 }
             },
@@ -77,12 +78,28 @@
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
                     });
+                    
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
+                        vm.concierge = response.data;
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ name: '404'});
+                    });
+                    
                 })
             },
             beforeRouteUpdate (to, from, next) {
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-parking-valet-page.json"}).then(response => {
                     this.valet = response.data;
                     console.log(this.valet);
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
+                
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
+                    this.concierge = response.data;
+                    console.log(this.concierge);
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
