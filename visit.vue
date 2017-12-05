@@ -4,6 +4,13 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-md-8">
+                    <div class="" v-if="valet">
+                        <h2>Valet & Parking</h2>
+                        <div v-if="valet" v-html="truncate(valet.body)"></div>
+                        <router-link to="/" active-class="active" exact>
+                            <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
                     <div class="">
                         <h2>Valet & Parking</h2>
                         <div v-if="valet" v-html="truncate(valet.body)"></div>
