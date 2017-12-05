@@ -134,8 +134,8 @@
                         console.log("Tag String" + tag_string);
                         temp.push(vm.findPromoById(value));
                     });
-                    this.promotions = temp;
-                    console.log("promos", this.promotions);
+                    // this.promotions = temp;
+                    // console.log("promos", this.promotions);
                 },
                 blogCharity() {
                     
