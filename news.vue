@@ -102,7 +102,7 @@
                     } else if (this.selected == "blogNorthPark50"){
                         this.currentSelection = this.blogNorthPark50;
                     } else {
-                        this.currentSelection = this.events
+                        this.currentSelection = this.blogs
                     }
                 }
             },
@@ -120,9 +120,34 @@
                 blogs() {
                     return this.$store.getters.findBlogByName;
                     console.log(this.$store.getters.findBlogByName)
-                    // var blog_order = _.orderBy(this.$store.getters.findBlogByName, function(o) { return o.publish_date })
-                    // return blog
-                }
+                },
+                blogBeauty() {
+                    
+                },
+                blogCharity() {
+                    
+                },
+                blogChildren() {
+                    
+                },
+                blogFashion() {
+                    
+                },
+                blogHoliday() {
+                    
+                },
+                blogLifestyle() {
+                    
+                },
+                blogLuxury() {
+                    
+                },
+                blogMen() {
+                    
+                },
+                blogNorthPark50() {
+                    
+                },
             },
             methods: {
                 truncate(val_description){
