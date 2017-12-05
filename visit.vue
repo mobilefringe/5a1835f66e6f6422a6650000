@@ -23,7 +23,7 @@
                     <div class="" v-if="giftCards">
                         <h2>Northpark Gold & Gift Cards</h2>
                         <div v-if="giftCards" v-html="truncate(giftCards.body)"></div>
-                        <router-link to="/" active-class="active" exact>
+                        <router-link to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                         <hr>
@@ -31,7 +31,7 @@
                     <div class="" v-if="tourism">
                         <h2>Tourism</h2>
                         <div v-if="tourism" v-html="truncate(tourism.body)"></div>
-                        <router-link to="/" active-class="active" exact>
+                        <router-link to="/pages/northpark-international-visitors" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                         <hr>
@@ -39,7 +39,7 @@
                     <div class="" v-if="contact">
                         <h2>Contact</h2>
                         <div v-if="contact" v-html="truncate(contact.body)"></div>
-                        <router-link to="/" active-class="active" exact>
+                        <router-link to="/pages/northpark-contact-us" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                     </div>
