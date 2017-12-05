@@ -159,6 +159,22 @@
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
                 });
+                //Tourism
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + ".json"}).then(response => {
+                    this.giftCards = response.data;
+                    console.log(this.concierge);
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
+                //Contact
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-contact-us.json"}).then(response => {
+                    this.giftCards = response.data;
+                    console.log(this.concierge);
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
             },
             computed: {
                 property(){
