@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="" v-if="valet">
-                        <h2>Valet & Parking</h2>
+                        <h2 class="visit-title">Valet & Parking</h2>
                         <div v-if="valet" v-html="truncate(valet.body)"></div>
                         <router-link to="/pages/northpark-parking-valet-page" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
