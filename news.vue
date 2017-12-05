@@ -53,11 +53,27 @@
                 return {
                     currentPage: null,
                     currentBlog: this.currentBlog,
-                    paginate: ['currentBlog']
+                    paginate: ['currentBlog'],
+                    selected: "Select A Category",
+                    currentSelection: null,
                 }
             },
             mounted () {
                 this.currentBlog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
+            },
+            watch: {
+                selected: function() {
+                    console.log(this.selected)
+                    if(this.selected == "events"){
+                        this.currentSelection = this.propertyEvents;
+                    } else if (this.selected == "promotions") {
+                        this.currentSelection = this.storeEvents;
+                    } else if (this.selected == "holiday"){
+                        this.currentSelection = this.holidayEvents;
+                    } else {
+                        this.currentSelection = this.events
+                    }
+                }
             },
             computed: {
                 property(){
