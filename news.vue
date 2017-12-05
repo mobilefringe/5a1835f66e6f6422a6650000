@@ -70,7 +70,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    currentBlog: this.currentBlog,
+                    currentBlog: null,
                     paginate: ['currentSelection'],
                     selected: "Select A Category",
                     currentSelection: null,
