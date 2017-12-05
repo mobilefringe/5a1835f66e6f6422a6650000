@@ -64,10 +64,10 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate"], function(Vue, moment, tz, VueMoment, Meta, VuePaginate) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-paginate"], function(Vue, moment, tz, VueMoment, Meta, VueSelect, VuePaginate) {
         Vue.use(Meta);
         Vue.use(VuePaginate);
-        Vue.component('v-select', VueSelect.VueSelect);
+        // Vue.component('v-select', VueSelect.VueSelect);
         return Vue.component("news-component", {
             template: template, // the variable template will be injected
             data: function() {
