@@ -122,9 +122,9 @@
                     console.log(this.$store.getters.findBlogByName)
                 },
                 blogBeauty() {
-                    console.log(this.currentBlog)
+                    // console.log(this.currentBlog)
                     var beauty_blog = _.filter(this.currentBlog.posts, function(o) { return o.tags.join() });
-                    return beauty_blog
+                    // return beauty_blog
                     console.log(beauty_blog)
                 },
                 blogCharity() {
