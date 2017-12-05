@@ -122,10 +122,20 @@
                     console.log(this.$store.getters.findBlogByName)
                 },
                 blogBeauty() {
-                    // console.log(this.currentBlog)
-                    var beauty_blog = _.filter(this.currentBlog.posts, function(o) { return o.tags.join() });
-                    // return beauty_blog
-                    console.log(beauty_blog)
+                    console.log(this.currentBlog)
+                    // var beauty_blog = _.filter(this.currentBlog.posts, function(o) { return o.tags.join() });
+                    // // return beauty_blog
+                    // console.log(beauty_blog)
+                    
+                    var vm = this;
+                    var temp = [];
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = vm.tags.join();
+                        console.log("Tag String" + tag_string);
+                        temp.push(vm.findPromoById(value));
+                    });
+                    this.promotions = temp;
+                    console.log("promos", this.promotions);
                 },
                 blogCharity() {
                     
