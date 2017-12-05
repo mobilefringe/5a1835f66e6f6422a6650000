@@ -130,7 +130,7 @@
                     var vm = this;
                     var temp = [];
                     _.forEach(this.currentBlog, function(key, val) {
-                        var tag_string = val.tag.join();
+                        var tag_string = _.join(val.tag, ',');
                         console.log("Tag String" + tag_string);
                         // temp.push(vm.findPromoById(value));
                     });
