@@ -4,6 +4,13 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-md-8">
+                    <div class="">
+                        <h2>Valet & Parking</h2>
+                        <div></div>
+                        <router-link to="/" active-class="active" exact>
+                            <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
                     <h2>VISIT</h2>
                 </div>
                 <div class="col-md-4">
