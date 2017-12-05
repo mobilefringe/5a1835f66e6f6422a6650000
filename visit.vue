@@ -135,6 +135,7 @@
                 })
             },
             beforeRouteUpdate (to, from, next) {
+                //Valet
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-parking-valet-page.json"}).then(response => {
                     this.valet = response.data;
                     console.log(this.valet);
@@ -142,9 +143,17 @@
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
                 });
-                
+                //Concierge
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
                     this.concierge = response.data;
+                    console.log(this.concierge);
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
+                //Gift Cards
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json"}).then(response => {
+                    this.giftCards = response.data;
                     console.log(this.concierge);
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
