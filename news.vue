@@ -177,7 +177,15 @@
                     return holiday_blog; 
                 },
                 blogLifestyle() {
-                    
+                    var lifestyle_blog = [];
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var lifestyle_string = _.includes(tag_string, "lifestyle");
+                        if(lifestyle_string === true){
+                            lifestyle_blog.push(value);
+                        }
+                    });
+                    return lifestyle_blog; 
                 },
                 blogLuxury() {
                     
