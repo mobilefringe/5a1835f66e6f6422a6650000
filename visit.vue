@@ -98,6 +98,7 @@
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
+                    //Valet
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-parking-valet-page.json"}).then(response => {
                         vm.valet = response.data;
                     }, error => {
@@ -119,7 +120,7 @@
                         vm.$router.replace({ name: '404'});
                     });     
                     //Tourism
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + ".json"}).then(response => {
                         vm.tourism = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
