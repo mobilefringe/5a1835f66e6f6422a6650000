@@ -158,7 +158,7 @@
                     var fashion_blog = [];
                     _.forEach(this.currentBlog, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ''));
-                        var fashion_string = _.includes(tag_string, "children");
+                        var fashion_string = _.includes(tag_string, "fashion");
                         if(fashion_string === true){
                             fashion_blog.push(value);
                         }
@@ -166,7 +166,15 @@
                     return fashion_blog; 
                 },
                 blogHoliday() {
-                    
+                    var holiday_blog = [];
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var holiday_string = _.includes(tag_string, "holiday");
+                        if(holiday_string === true){
+                            holiday_blog.push(value);
+                        }
+                    });
+                    return holiday_blog; 
                 },
                 blogLifestyle() {
                     
