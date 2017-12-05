@@ -20,7 +20,6 @@
                         <option value="blogNorthPark50">NorthPark50</option>
                     </select>    
                 </div>
-                
             </div>
             <paginate name="currentBlog" v-if="currentBlog" :list="currentBlog" class="paginate-list margin_60">
                 <div class="row details-promo-container" v-for="blog in paginated('currentBlog')" v-if="currentBlog">
@@ -84,12 +83,24 @@
             watch: {
                 selected: function() {
                     console.log(this.selected)
-                    if(this.selected == "events"){
-                        this.currentSelection = this.propertyEvents;
-                    } else if (this.selected == "promotions") {
-                        this.currentSelection = this.storeEvents;
-                    } else if (this.selected == "holiday"){
-                        this.currentSelection = this.holidayEvents;
+                    if(this.selected == "blogBeauty"){
+                        this.currentSelection = this.blogBeauty;
+                    } else if (this.selected == "blogCharity") {
+                        this.currentSelection = this.blogCharity;
+                    } else if (this.selected == "blogChildren"){
+                        this.currentSelection = this.blogChildren;
+                    } else if (this.selected == "blogFashion"){
+                        this.currentSelection = this.blogFashion;
+                    } else if (this.selected == "blogHoliday"){
+                        this.currentSelection = this.blogHoliday;
+                    } else if (this.selected == "blogLifestyle"){
+                        this.currentSelection = this.blogLifestyle;
+                    } else if (this.selected == "blogLuxury"){
+                        this.currentSelection = this.blogLuxury;
+                    } else if (this.selected == "blogMen"){
+                        this.currentSelection = this.blogMen;
+                    } else if (this.selected == "blogNorthPark50"){
+                        this.currentSelection = this.blogNorthPark50;
                     } else {
                         this.currentSelection = this.events
                     }
