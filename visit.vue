@@ -14,6 +14,9 @@
                             </span>
                         </li>
                     </ul> 
+                    <router-link to="/hours" active-class="active" exact>
+                        <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </router-link>
                 </div>
             </div>
             <div class="row">
