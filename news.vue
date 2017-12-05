@@ -123,7 +123,7 @@
                 },
                 blogBeauty() {
                     console.log(this.currentBlog)
-                    var beauty_blog = _.filter(this.currentBlog, function(o) { return o.tags.length > 0 });
+                    var beauty_blog = _.filter(this.currentBlog.posts, function(o) { return o.tags.join() });
                     return beauty_blog
                     console.log(beauty_blog)
                 },
