@@ -21,8 +21,8 @@
                     </select>    
                 </div>
             </div>
-            <paginate name="currentSelection" v-if="currentSelection" :list="currentSelection" class="paginate-list margin_60">
-                <div class="row details-promo-container" v-for="blog in paginated('currentSelection')" v-if="currentSelection">
+            <paginate name="currentBlog" v-if="currentBlog" :list="currentBlog" class="paginate-list margin_60">
+                <div class="row details-promo-container" v-for="blog in paginated('currentBlog')" v-if="currentBlog">
                     <div>
                         <div class="col-md-1">
                             <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
@@ -84,25 +84,25 @@
                 selected: function() {
                     console.log(this.selected)
                     if(this.selected == "blogBeauty"){
-                        this.currentSelection = this.blogBeauty;
+                        this.currentBlog = this.blogBeauty;
                     } else if (this.selected == "blogCharity") {
-                        this.currentSelection = this.blogCharity;
+                        this.currentBlog = this.blogCharity;
                     } else if (this.selected == "blogChildren"){
-                        this.currentSelection = this.blogChildren;
+                        this.currentBlog = this.blogChildren;
                     } else if (this.selected == "blogFashion"){
-                        this.currentSelection = this.blogFashion;
+                        this.currentBlog = this.blogFashion;
                     } else if (this.selected == "blogHoliday"){
-                        this.currentSelection = this.blogHoliday;
+                        this.currentBlog = this.blogHoliday;
                     } else if (this.selected == "blogLifestyle"){
-                        this.currentSelection = this.blogLifestyle;
+                        this.currentBlog = this.blogLifestyle;
                     } else if (this.selected == "blogLuxury"){
-                        this.currentSelection = this.blogLuxury;
+                        this.currentBlog = this.blogLuxury;
                     } else if (this.selected == "blogMen"){
-                        this.currentSelection = this.blogMen;
+                        this.currentBlog = this.blogMen;
                     } else if (this.selected == "blogNorthPark50"){
-                        this.currentSelection = this.blogNorthPark50;
+                        this.currentBlog = this.blogNorthPark50;
                     } else {
-                        this.currentSelection = this.currentBlog
+                        this.currentBlog = this.blogs
                     }
                 }
             },
