@@ -131,6 +131,7 @@
                     var temp = [];
                     _.forEach(this.currentBlog, function(value, key) {
                         var tag_string = _.join(value.tag, ',');
+                        console.log(tag_string)
                         if(_.includes(tag_string, "beauty")){
                             console.log(tag_string);
                         }
