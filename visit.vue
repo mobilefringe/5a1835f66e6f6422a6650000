@@ -94,6 +94,10 @@
                 },
             },
             methods: {
+                truncate(val_description){
+                    var truncate = _.truncate(val_description, { 'length': 249, 'separator': ' ' });
+                    return truncate;
+                },
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
