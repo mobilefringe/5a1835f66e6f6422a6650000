@@ -21,8 +21,8 @@
                     </select>    
                 </div>
             </div>
-            <paginate name="currentBlog" v-if="currentBlog" :list="currentBlog" class="paginate-list margin_60">
-                <div class="row details-promo-container" v-for="blog in paginated('currentBlog')" v-if="currentBlog">
+            <paginate name="currentSelection" v-if="currentSelection" :list="currentSelection" class="paginate-list margin_60">
+                <div class="row details-promo-container" v-for="blog in paginated('currentSelection')" v-if="currentSelection">
                     <div>
                         <div class="col-md-1">
                             <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
