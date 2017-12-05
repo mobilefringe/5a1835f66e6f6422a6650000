@@ -34,7 +34,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>
+                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{currentPage.title}}</breadcrumbs></p>
                 </div>
             </div>
         </div>
@@ -47,7 +47,8 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    currentPage: null
+                    currentPage: null,
+                    breadcrumbs: 
                 }
             },
             beforeRouteEnter (to, from, next) {
