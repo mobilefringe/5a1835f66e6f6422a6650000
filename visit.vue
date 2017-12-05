@@ -20,7 +20,30 @@
                         </router-link>
                         <hr>
                     </div>
-                    
+                    <div class="" v-if="giftCards">
+                        <h2>Northpark Gold & Gift Cards</h2>
+                        <div v-if="giftCards" v-html="truncate(giftCards.body)"></div>
+                        <router-link to="/" active-class="active" exact>
+                            <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                        <hr>
+                    </div>
+                    <div class="" v-if="tourism">
+                        <h2>Tourism</h2>
+                        <div v-if="tourism" v-html="truncate(tourism.body)"></div>
+                        <router-link to="/" active-class="active" exact>
+                            <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                        <hr>
+                    </div>
+                    <div class="" v-if="contact">
+                        <h2>Contact</h2>
+                        <div v-if="contact" v-html="truncate(contact.body)"></div>
+                        <router-link to="/" active-class="active" exact>
+                            <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                        <hr>
+                    </div>
                 </div>
                 <div class="col-md-4">
                    <h5>Hours</h5>
@@ -62,10 +85,11 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    // breadcrumb: this.$breadcrumbs,
                     valet: null,
                     concierge: null, 
-                    selected: "Select a Restaurant"
+                    giftCards: null,
+                    tourism: null,
+                    contact: null
                 }
             },
             mounted () {
