@@ -48,7 +48,6 @@
             data: function() {
                 return {
                     currentPage: null,
-                    breadcrumbs: 
                 }
             },
             beforeRouteEnter (to, from, next) {
