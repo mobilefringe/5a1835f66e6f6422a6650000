@@ -125,7 +125,7 @@
                     var vm = this;
                     var beauty_blog = [];
                     _.forEach(this.currentBlog, function(value, key) {
-                        var tag_string = _.join(value.tag, ',');
+                        var tag_string = _.join(value.tag, '');
                         var beauty_string = _.includes(tag_string, "beauty");
                         if(beauty_string === true){
                             console.log("Beauty")
