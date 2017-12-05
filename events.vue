@@ -90,18 +90,9 @@
                 },
                 storeEvents() {
                     var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.start_date });
-                    if(promotions.length > 0){
-                        return promotions
-                    } else {
-                        console.log("No promotions")
-                    }
+                    return promotions
                 },
                 holidayEvents(){
-                    // var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags.length > 0 });
-                    // return holiday_events
-                    // console.log(holiday_events)
-                   
-                   
                    var holiday_events = [];
                     _.forEach(this.$store.getters.processedEvents, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ''));
@@ -110,11 +101,7 @@
                             holiday_events.push(value);
                         }
                     });
-                    if(holiday_events.length > 0){
-                        return holiday_events;
-                    } else {
-                        console.log("No Holiday Events")
-                    }
+                    return holiday_events;
                 },
                 property(){
                     return this.$store.getters.getProperty;
