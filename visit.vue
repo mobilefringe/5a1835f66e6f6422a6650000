@@ -6,12 +6,12 @@
                 <div class="col-md-8">
                     <div class="">
                         <h2>Valet & Parking</h2>
-                        <div></div>
+                        <div v-if="valet" v-html="valet.body"></div>
                         <router-link to="/" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                     </div>
-                    <h2>VISIT</h2>
+                    
                 </div>
                 <div class="col-md-4">
                    <h5>Hours</h5>
@@ -54,7 +54,7 @@
             data: function() {
                 return {
                     // breadcrumb: this.$breadcrumbs,
-                    currentPage: null,
+                    valet: null,
                     selected: "Select a Restaurant"
                 }
             },
@@ -64,8 +64,8 @@
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-management-hours" + ".json"}).then(response => {
-                        vm.currentPage = response.data;
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-parking-valet-page.json"}).then(response => {
+                        vm.valet = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
@@ -73,9 +73,9 @@
                 })
             },
             beforeRouteUpdate (to, from, next) {
-                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-management-hours.json"}).then(response => {
-                    this.currentPage = response.data;
-                    console.log(this.currentPage);
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-parking-valet-page.json"}).then(response => {
+                    this.valet = response.data;
+                    console.log(this.valet);
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
