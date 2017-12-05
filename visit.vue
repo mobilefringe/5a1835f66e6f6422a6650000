@@ -13,7 +13,7 @@
                         <hr>
                     </div>
                     <div class="" v-if="concierge">
-                        <h2>Concierge</h2>
+                        <h2 class="visit-title">Concierge</h2>
                         <div v-if="concierge" v-html="truncate(concierge.body)"></div>
                         <router-link to="/pages/northpark-concierge-services" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
@@ -21,7 +21,7 @@
                         <hr>
                     </div>
                     <div class="" v-if="giftCards">
-                        <h2>Northpark Gold & Gift Cards</h2>
+                        <h2 class="visit-title">Northpark Gold & Gift Cards</h2>
                         <div v-if="giftCards" v-html="truncate(giftCards.body)"></div>
                         <router-link to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
@@ -29,7 +29,7 @@
                         <hr>
                     </div>
                     <div class="" v-if="tourism">
-                        <h2>Tourism</h2>
+                        <h2 class="visit-title">Tourism</h2>
                         <div v-if="tourism" v-html="truncate(tourism.body)"></div>
                         <router-link to="/pages/northpark-international-visitors" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
@@ -37,7 +37,7 @@
                         <hr>
                     </div>
                     <div class="" v-if="contact">
-                        <h2>Contact</h2>
+                        <h2 class="visit-title">Contact</h2>
                         <div v-if="contact" v-html="truncate(contact.body)"></div>
                         <router-link to="/pages/northpark-contact-us" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
