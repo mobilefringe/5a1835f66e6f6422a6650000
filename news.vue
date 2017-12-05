@@ -57,7 +57,7 @@
                 }
             },
             mounted () {
-                this.currentBlog = this.blogs("main").posts;  
+                this.currentBlog = _.orderBy(this.blogs("main").posts, function(o) { return o.publish_date });
             },
             computed: {
                 property(){
@@ -73,7 +73,7 @@
                 blogs() {
                     return this.$store.getters.findBlogByName;
                     console.log(this.$store.getters.findBlogByName)
-                    // blog = _.orderBy(this.$store.getters.findBlogByName, function(o) { return o.publish_date })
+                    // var blog_order = _.orderBy(this.$store.getters.findBlogByName, function(o) { return o.publish_date })
                     // return blog
                 }
             },
