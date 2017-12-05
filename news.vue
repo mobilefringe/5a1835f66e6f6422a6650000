@@ -132,9 +132,9 @@
                     _.forEach(this.currentBlog, function(value, key) {
                         var tag_string = _.join(value.tag, ',');
                         console.log(tag_string)
-                        if(_.includes(tag_string, "beauty")){
-                            console.log(tag_string);
-                        }
+                        var beauty_string = _.includes(tag_string, "beauty");
+                            console.log(beauty_string);
+                    
                         // temp.push(vm.findPromoById(value));
                     });
                     // this.promotions = temp;
