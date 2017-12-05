@@ -102,7 +102,7 @@
                     } else if (this.selected == "blogNorthPark50"){
                         this.currentSelection = this.blogNorthPark50;
                     } else {
-                        this.currentSelection = this.blogs
+                        this.currentSelection = this.currentBlog
                     }
                 }
             },
