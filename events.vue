@@ -97,6 +97,16 @@
                     return holiday_events
                     console.log(holiday_events)
                    
+                   
+                   var holiday_events = [];
+                    _.forEach(this.$store.getters.processedEvents, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var holiday_string = _.includes(tag_string, "holiday");
+                        if(holiday_string === true){
+                            holiday_events.push(value);
+                        }
+                    });
+                    return holiday_events;
                 },
                 property(){
                     return this.$store.getters.getProperty;
