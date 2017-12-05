@@ -155,7 +155,15 @@
                     return children_blog;    
                 },
                 blogFashion() {
-                    
+                    var fashion_blog = [];
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var fashion_string = _.includes(tag_string, "children");
+                        if(fashion_string === true){
+                            fashion_blog.push(value);
+                        }
+                    });
+                    return fashion_blog; 
                 },
                 blogHoliday() {
                     
