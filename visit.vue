@@ -42,7 +42,6 @@
                         <router-link to="/" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
-                        <hr>
                     </div>
                 </div>
                 <div class="col-md-4">
