@@ -3,33 +3,37 @@
         <div class="margin_90"></div>
         <div v-if="currentPage">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <h2 class="page_title" v-html="currentPage.title"></h2>
                     <hr/>
                     <div class="" v-html="currentPage.body"></div>
                 </div>
-                <div class="col-md-4">
-                   <h5>Hours</h5>
-                    <ul class="hours-list">
-                        <li v-for="hour in hours">
-                           {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                            </span>
-                        </li>
-                    </ul> 
-                    <router-link to="/hours" active-class="active" exact>
-                        <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                    </router-link>
-                    <h5>Find Us</h5>
-                    <p>
-                        {{property.name}}<br/>
-                        {{property.address1}}<br/>
-                        {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
-                        {{property.contact_phone}}
-                    </p>
-                    <p>Northpark Center Concierge</p>
-                    <router-link to="" active-class="active" exact>
-                        <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                    </router-link>
+                <div class="col-md-3">
+                    <div class="sidebar-container">
+                        <h5>Hours</h5>
+                        <ul class="sidebar-hours-list">
+                            <li v-for="hour in hours">
+                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </span>
+                            </li>
+                        </ul> 
+                        <router-link to="/hours" active-class="active" exact>
+                            <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
+                    <div class="sidebar-container">
+                        <h5 class="">Find Us</h5>
+                        <p>
+                            {{property.name}}<br/>
+                            {{property.address1}}<br/>
+                            {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
+                            {{property.contact_phone}}
+                        </p>
+                        <p>Northpark Center Concierge</p>
+                        <router-link to="" active-class="active" exact>
+                            <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
                 </div>
             </div>
             <div class="row">
