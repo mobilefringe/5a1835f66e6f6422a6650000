@@ -122,13 +122,13 @@
                     console.log(this.$store.getters.findBlogByName)
                 },
                 blogBeauty() {
-                    // var vm = this;
+                    var vm = this;
                     var beauty_blog = [];
                     _.forEach(this.currentBlog, function(value, key) {
                         var tag_string = _.join(value.tag, ',');
                         if(_.includes(tag_string, "beauty") == true){
                             console.log(beauty_string);
-                            beauty_blog.push(value);
+                            beauty_blog.push(vm.value);
                         }
                         
                     });
