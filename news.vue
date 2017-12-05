@@ -136,7 +136,7 @@
                     var charity_blog = [];
                     _.forEach(this.currentBlog, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ''));
-                        var charity_string = _.includes(tag_string, "charity");
+                        var charity_string = _.includes(tag_string, "charitable_partners");
                         if(charity_string === true){
                             charity_blog.push(value);
                         }
