@@ -55,7 +55,7 @@
                     <router-link to="/hours" active-class="active" exact>
                         <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </router-link>
-                    <h5>Find Us</h5>
+                    <h5 class="sidebar-find-us">Find Us</h5>
                     <p>
                         {{property.name}}<br/>
                         {{property.address1}}<br/>
