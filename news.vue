@@ -57,7 +57,7 @@
                 }
             },
             mounted () {
-                this.currentBlog = _.orderBy(this.blogs("main").posts, function(o) { return o.publish_date });
+                this.currentBlog = _.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }).reverse();
             },
             computed: {
                 property(){
