@@ -174,10 +174,13 @@
                 },
             },
             methods: {
+                tagString(val_tags){
+                    var string = _.join(val_tags, ' , ')  
+                },
                 truncate(val_description){
                     var truncate = _.truncate(val_description, { 'length': 199, 'separator': ' ' });
                     return truncate;
-                },
+                }
             }
         });
     });
