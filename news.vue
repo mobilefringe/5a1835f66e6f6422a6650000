@@ -122,22 +122,16 @@
                     console.log(this.$store.getters.findBlogByName)
                 },
                 blogBeauty() {
-                    console.log(this.currentBlog)
-                    // var beauty_blog = _.filter(this.currentBlog.posts, function(o) { return o.tags.join() });
-                    // // return beauty_blog
-                    // console.log(beauty_blog)
-                    
-                    var vm = this;
-                    var temp = [];
+                    // var vm = this;
+                    var beauty_blog = [];
                     _.forEach(this.currentBlog, function(value, key) {
                         var tag_string = _.join(value.tag, ',');
-                        console.log(tag_string)
-                        var beauty_string = _.includes(tag_string, "beauty");
+                        if(_.includes(tag_string, "beauty") == true){
                             console.log(beauty_string);
-                    
-                        // temp.push(vm.findPromoById(value));
+                        }
+                        beauty_blog.push(value);
                     });
-                    // this.promotions = temp;
+                    console.log(beauty_blog);
                     // console.log("promos", this.promotions);
                 },
                 blogCharity() {
