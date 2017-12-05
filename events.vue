@@ -24,7 +24,6 @@
                     </div>
                     <hr>
                 </div>
-              
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
@@ -90,7 +89,11 @@
                 },
                 storeEvents() {
                     var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.start_date });
-                    return promotions
+                    if(promotions.length > 0){
+                        return promotions
+                    } else {
+                        console.log("No promotions")
+                    }
                 },
                 holidayEvents(){
                     var holiday_events = _.filter(this.$store.getters.processedEvents, function(o) { return o.tags.length > 0 });
@@ -106,7 +109,11 @@
                             holiday_events.push(value);
                         }
                     });
-                    return holiday_events;
+                    if(holiday_events.length > 0){
+                        return holiday_events;
+                    } else {
+                        console.log("No Holiday Events")
+                    }
                 },
                 property(){
                     return this.$store.getters.getProperty;
