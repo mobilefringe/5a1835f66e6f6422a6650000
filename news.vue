@@ -122,6 +122,7 @@
                     console.log(this.$store.getters.findBlogByName)
                 },
                 blogBeauty() {
+                    console.log(this.currentBlog)
                     var beauty_blog = _.filter(this.currentBlog, function(o) { return o.tags.length > 0 });
                     return beauty_blog
                     console.log(beauty_blog)
