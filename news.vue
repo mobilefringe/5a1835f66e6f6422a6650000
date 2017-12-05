@@ -73,7 +73,7 @@
                     currentBlog: this.currentBlog,
                     paginate: ['currentBlog'],
                     selected: "Select A Category",
-                    // currentSelection: null,
+                    currentSelection: null,
                 }
             },
             mounted () {
@@ -83,26 +83,26 @@
                 selected: function() {
                     console.log(this.selected)
                     if(this.selected == "blogBeauty"){
-                        this.currentBlog = this.blogBeauty;
+                        this.currentSelection = this.blogBeauty;
                         
                     } else if (this.selected == "blogCharity") {
-                        this.currentBlog = this.blogCharity;
+                        this.currentSelection = this.blogCharity;
                     } else if (this.selected == "blogChildren"){
-                        this.currentBlog = this.blogChildren;
+                        this.currentSelection = this.blogChildren;
                     } else if (this.selected == "blogFashion"){
-                        this.currentBlog = this.blogFashion;
+                        this.currentSelection = this.blogFashion;
                     } else if (this.selected == "blogHoliday"){
-                        this.currentBlog = this.blogHoliday;
+                        this.currentSelection = this.blogHoliday;
                     } else if (this.selected == "blogLifestyle"){
-                        this.currentBlog = this.blogLifestyle;
+                        this.currentSelection = this.blogLifestyle;
                     } else if (this.selected == "blogLuxury"){
-                        this.currentBlog = this.blogLuxury;
+                        this.currentSelection = this.blogLuxury;
                     } else if (this.selected == "blogMen"){
-                        this.currentBlog = this.blogMen;
+                        this.currentSelection = this.blogMen;
                     } else if (this.selected == "blogNorthPark50"){
-                        this.currentBlog = this.blogNorthPark50;
+                        this.currentSelection = this.blogNorthPark50;
                     } else {
-                        this.currentBlog = this.blogs
+                        this.currentSelection = this.currentBlog;
                     }
                 }
             },
