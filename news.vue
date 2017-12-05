@@ -2,7 +2,7 @@
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <img class="margin_90" src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
-            <paginate name="currentBlog" :list="currentBlog" class="paginate-list margin_60">
+            <paginate name="currentBlog" v-if="currentBlog" :list="currentBlog" class="paginate-list margin_60">
                 <div class="row details-promo-container" v-for="blog in paginated('currentBlog')" v-if="currentBlog">
                     <div>
                         <div class="col-md-1">
