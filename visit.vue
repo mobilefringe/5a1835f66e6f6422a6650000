@@ -10,13 +10,15 @@
                         <router-link to="/" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
+                        <hr>
                     </div>
-                    <div class="">
+                    <div class="" v-if="concierge">
                         <h2>Concierge</h2>
                         <div v-if="concierge" v-html="truncate(concierge.body)"></div>
                         <router-link to="/" active-class="active" exact>
                             <a class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
+                        <hr>
                     </div>
                     
                 </div>
