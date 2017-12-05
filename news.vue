@@ -144,7 +144,15 @@
                     return charity_blog;
                 },
                 blogChildren() {
-                    
+                    var children_blog = [];
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var children_string = _.includes(tag_string, "children");
+                        if(children_string === true){
+                            children_blog.push(value);
+                        }
+                    });
+                    return children_blog;    
                 },
                 blogFashion() {
                     
