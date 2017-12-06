@@ -79,6 +79,7 @@
                     currentPage: null,
                     selected: "Select a Restaurant",
                     // breadcrumb: this.$breadcrumbs
+                    storeInfo: [],
                 }
             },
             mounted () {
@@ -88,8 +89,8 @@
                 selected: function() {
                     console.log(this.selected)
                     
-                    var store_id = this.selected
-                    var store_info = findStoreById(store_id);
+                    var store_info = findStoreById(this.selected);
+                    return store_info
                     console.log(store_info);
                     // var storeHours = [];
                     // _.forEach(this.currentStore.store_hours, function(value, key) {
