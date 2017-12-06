@@ -92,7 +92,7 @@
                     
                     var vm = this;
                     var store_info = vm.findStoreById(this.selected);
-                    return store_info
+                    // return store_info
                     console.log(store_info);
                     // var storeHours = [];
                     // _.forEach(this.currentStore.store_hours, function(value, key) {
