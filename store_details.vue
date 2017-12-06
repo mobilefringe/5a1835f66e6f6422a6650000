@@ -85,6 +85,7 @@
                     description: "An example of integration of Mall Maverick with Vue.js",
                     currentStore: null,
                     promotions : [],
+                    hours: [],
                     
                 }
             },
@@ -114,20 +115,35 @@
                     });
                     this.promotions = temp;
                     console.log("promos", this.promotions);
+                    
+                    var storeHours = [];
+                    _.forEach(this.currentStore.store_hours, function(value, key) {
+                        console.log(vm.findHourById(value));
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    this.hours = storeHours;
+                    console.log("hours", this.hours);
                 }
             },
             computed: {
-                findStoreBySlug () {
+                findStoreBySlug() {
                     return this.$store.getters.findStoreBySlug;
                 },
-                findPromoById () {
+                storeHours(){
+                    findHourById
+                },
+                findPromoById() {
                     return this.$store.getters.findPromoById;
                 },
                 property(){
                     return this.$store.getters.getProperty;
                 },
-                timezone () {
+                timezone() {
                     return this.$store.getters.getTimezone;
+                },
+                hours(){
+                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
+                    return hours;
                 },
             },
             methods: {
