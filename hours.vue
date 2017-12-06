@@ -37,7 +37,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="open" :on-change="selected" label="name"></v-select>
+                        <!--<v-select v-model="selected" :options="categoryOptions" :searchable="false" class="open" :on-change="selected" label="name"></v-select>-->
                         
                         <select class="hours-dine-select" v-model="selected">
                             <option selected="selected" value="">Select a Restaurant</option>
