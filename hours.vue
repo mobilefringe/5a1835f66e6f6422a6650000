@@ -72,14 +72,14 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-breadcrumbs'], function(Vue, moment, tz, VueMoment, Meta, VueBreadcrumbs) {
         Vue.use(Meta);
+        Vue.use(VueBreadcrumbs);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
                     currentPage: null,
                     selected: "Select a Restaurant",
-                    // breadcrumb: this.$breadcrumbs
-                    storeInfo: [],
+
                 }
             },
             mounted () {
