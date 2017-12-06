@@ -28,13 +28,14 @@ require.config({
     }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-select'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, VueBreadcrumbs, VuePaginate, SocialSharing, vSelect) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram', 'vue-select'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, vSelect) {
     Vue.use(Meta);
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
+    Vue.use(VueInstagram.default)
     Vue.component('v-select', vSelect)
     
     /* initialize router */
