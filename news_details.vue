@@ -2,7 +2,7 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin_90"></div>
         <div class="row" v-if="currentBlog">
-            <div class="col-md-9 margin_60">
+            <div class="col-md-9 margin-60">
                 <div class="row">
                     <div class="col-md-2">
                         <p class="details-promo-date">{{currentBlog.publish_date | moment("ddd", timezone)}}</p>
@@ -27,7 +27,6 @@
                         <p class="blog-category">{{ tagString(currentBlog.tag) }}</p>
                         <h2 class="">{{currentBlog.title}}</h2> 
                         <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
-                        <!--<img :src="currentBlog.image_url" class="margin_60" alt="" />-->
                         <div v-html="currentBlog.html_body"></div>
                     </div>
                 </div>
