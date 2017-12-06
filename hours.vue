@@ -87,7 +87,11 @@
             watch: {
                 selected: function() {
                     console.log(this.selected)
-                    
+                    var storeHours = [];
+                    _.forEach(this.currentStore.store_hours, function(value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    this.hours = storeHours;
                 }
             },
             beforeRouteEnter (to, from, next) {
@@ -128,6 +132,9 @@
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
                     var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
                     return filtered_restaurants
+                },
+                findHourById() {
+                    return this.$store.getters.findHourById;
                 }
             },
             methods: {
