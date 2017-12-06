@@ -94,28 +94,28 @@
             },
             watch: {
                 selected: function() {
-                    console.log(this.selected)
-                    if(this.selected == "blogBeauty"){
-                        this.currentSelection = this.blogBeauty;
-                    } else if (this.selected == "blogCharity") {
-                        this.currentSelection = this.blogCharity;
-                    } else if (this.selected == "blogChildren"){
-                        this.currentSelection = this.blogChildren;
-                    } else if (this.selected == "blogFashion"){
-                        this.currentSelection = this.blogFashion;
-                    } else if (this.selected == "blogHoliday"){
-                        this.currentSelection = this.blogHoliday;
-                    } else if (this.selected == "blogLifestyle"){
-                        this.currentSelection = this.blogLifestyle;
-                    } else if (this.selected == "blogLuxury"){
-                        this.currentSelection = this.blogLuxury;
-                    } else if (this.selected == "blogMen"){
-                        this.currentSelection = this.blogMen;
-                    } else if (this.selected == "blogNorthPark50"){
-                        this.currentSelection = this.blogNorthPark50;
-                    } else {
-                        this.currentSelection = this.currentBlog;
-                    }
+                    // console.log(this.selected)
+                    // if(this.selected == "blogBeauty"){
+                    //     this.currentSelection = this.blogBeauty;
+                    // } else if (this.selected == "blogCharity") {
+                    //     this.currentSelection = this.blogCharity;
+                    // } else if (this.selected == "blogChildren"){
+                    //     this.currentSelection = this.blogChildren;
+                    // } else if (this.selected == "blogFashion"){
+                    //     this.currentSelection = this.blogFashion;
+                    // } else if (this.selected == "blogHoliday"){
+                    //     this.currentSelection = this.blogHoliday;
+                    // } else if (this.selected == "blogLifestyle"){
+                    //     this.currentSelection = this.blogLifestyle;
+                    // } else if (this.selected == "blogLuxury"){
+                    //     this.currentSelection = this.blogLuxury;
+                    // } else if (this.selected == "blogMen"){
+                    //     this.currentSelection = this.blogMen;
+                    // } else if (this.selected == "blogNorthPark50"){
+                    //     this.currentSelection = this.blogNorthPark50;
+                    // } else {
+                    //     this.currentSelection = this.currentBlog;
+                    // }
                 }
             },
             computed: {
@@ -211,7 +211,28 @@
             },
             methods: {
                 selectCategory(){
-                    
+                    console.log(this.selected)
+                    if(this.selected == "blogBeauty"){
+                        this.currentSelection = this.blogBeauty;
+                    } else if (this.selected == "blogCharity") {
+                        this.currentSelection = this.blogCharity;
+                    } else if (this.selected == "blogChildren"){
+                        this.currentSelection = this.blogChildren;
+                    } else if (this.selected == "blogFashion"){
+                        this.currentSelection = this.blogFashion;
+                    } else if (this.selected == "blogHoliday"){
+                        this.currentSelection = this.blogHoliday;
+                    } else if (this.selected == "blogLifestyle"){
+                        this.currentSelection = this.blogLifestyle;
+                    } else if (this.selected == "blogLuxury"){
+                        this.currentSelection = this.blogLuxury;
+                    } else if (this.selected == "blogMen"){
+                        this.currentSelection = this.blogMen;
+                    } else if (this.selected == "blogNorthPark50"){
+                        this.currentSelection = this.blogNorthPark50;
+                    } else {
+                        this.currentSelection = this.currentBlog;
+                    }
                 },
                 tagString(val_tag){
                     var string = _.join(val_tag, ' , ')  
