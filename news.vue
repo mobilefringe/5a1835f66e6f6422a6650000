@@ -76,7 +76,6 @@
                     paginate: ['currentSelection'],
                     selected: "Select A Category",
                     currentSelection: null,
-                    [{label: 'foo', value: 'Foo'}]
                     categoryOptions: [
                         {label: 'Beauty', value: 'blogBeauty'},
                         {label:'Charitable Partners', value: 'blogCharity'},
