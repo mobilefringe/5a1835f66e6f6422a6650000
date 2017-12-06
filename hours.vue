@@ -79,7 +79,7 @@
                 return {
                     currentPage: null,
                     selected: "Select a Restaurant",
-
+                    storeHoursById: [],    
                 }
             },
             mounted () {
@@ -94,11 +94,11 @@
                     var store_info = vm.findStoreById(this.selected);
                     // return store_info
                     console.log(store_info);
-                    // var storeHours = [];
-                    // _.forEach(this.currentStore.store_hours, function(value, key) {
-                    //     storeHours.push(vm.findHourById(value));
-                    // });
-                    // this.hours = storeHours;
+                    var storeHours = [];
+                    _.forEach(this.store_info.store_hours, function(value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    this.storeHoursById = storeHours;
                 }
             },
             beforeRouteEnter (to, from, next) {
