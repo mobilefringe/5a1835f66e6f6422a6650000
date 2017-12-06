@@ -88,11 +88,13 @@
                 selected: function() {
                     console.log(this.selected)
                     
-                    var storeHours = [];
-                    _.forEach(this.currentStore.store_hours, function(value, key) {
-                        storeHours.push(vm.findHourById(value));
-                    });
-                    this.hours = storeHours;
+                    var store_info = findStoreById(this.selected);
+                    console.log(store_info);
+                    // var storeHours = [];
+                    // _.forEach(this.currentStore.store_hours, function(value, key) {
+                    //     storeHours.push(vm.findHourById(value));
+                    // });
+                    // this.hours = storeHours;
                 }
             },
             beforeRouteEnter (to, from, next) {
