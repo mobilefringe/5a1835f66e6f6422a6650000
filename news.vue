@@ -66,7 +66,7 @@
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate"], function(Vue, moment, tz, VueMoment, Meta, VuePaginate) {
         Vue.use(Meta);
         Vue.use(VuePaginate);
-        // Vue.use(vSelect);
+        Vue.component('v-select', vSelect)
         
         return Vue.component("news-component", {
             template: template, // the variable template will be injected
