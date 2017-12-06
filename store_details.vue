@@ -101,23 +101,18 @@
             },
             watch: {
                 currentStore: function() {
-                    console.log("currentStore promo", this.currentStore );
                     var vm = this;
                     var temp = [];
                     _.forEach(this.currentStore.promotions, function(value, key) {
-                        console.log(vm.findPromoById(value));
                         temp.push(vm.findPromoById(value));
                     });
                     this.promotions = temp;
-                    console.log("promos", this.promotions);
                     
                     var storeHours = [];
                     _.forEach(this.currentStore.store_hours, function(value, key) {
-                        console.log(vm.findHourById(value));
                         storeHours.push(vm.findHourById(value));
                     });
                     this.hours = storeHours;
-                    console.log("hours", this.hours);
                 }
             },
             computed: {
