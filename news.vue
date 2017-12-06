@@ -76,17 +76,17 @@
                     paginate: ['currentSelection'],
                     selected: "Select A Category",
                     currentSelection: null,
-                    categoryOptions: [
-                        {label: 'Beauty', value: 'blogBeauty'},
-                        {label:'Charitable Partners', value: 'blogCharity'},
-                        {label:'Children', value: 'blogChildren'}, 
-                        {label:'Fashion', value: 'blogFashion'},
-                        {label:'Holiday', value: 'blogHoliday'},
-                        {label:'Lifestyle', value: 'blogLifestyle'},
-                        {label:'Luxury', value: 'blogLuxury'},
-                        {label:'Men', value: 'blogMen'},
-                        {label:'NorthPark50', value:'blogNorthPark50'}
-                    ],
+                    // categoryOptions: [
+                    //     {label: 'Beauty', value: 'blogBeauty'},
+                    //     {label:'Charitable Partners', value: 'blogCharity'},
+                    //     {label:'Children', value: 'blogChildren'}, 
+                    //     {label:'Fashion', value: 'blogFashion'},
+                    //     {label:'Holiday', value: 'blogHoliday'},
+                    //     {label:'Lifestyle', value: 'blogLifestyle'},
+                    //     {label:'Luxury', value: 'blogLuxury'},
+                    //     {label:'Men', value: 'blogMen'},
+                    //     {label:'NorthPark50', value:'blogNorthPark50'}
+                    // ],
                 }
             },
             mounted () {
