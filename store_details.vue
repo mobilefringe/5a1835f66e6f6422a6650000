@@ -129,7 +129,7 @@
                 findStoreBySlug() {
                     return this.$store.getters.findStoreBySlug;
                 },
-                storeHours(){
+                findHourById(){
                     return this.$store.getters.findHourById;
                 },
                 findPromoById() {
