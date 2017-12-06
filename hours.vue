@@ -38,7 +38,7 @@
                     <div class="col-md-6">
                         <select class="hours-dine-select" v-model="selected">
                             <option selected value="">Select a Restaurant</option>
-                            <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
+                            <option v-for="restaurant in restaurants" v-bind:value="restaurant.slug">{{ restaurant.name }}</option>
                         </select>
                     </div>
                 </div>
