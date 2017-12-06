@@ -91,7 +91,7 @@
                     console.log(this.selected)
                     
                     var vm = this;
-                    var store_info = vm.findStoreBySlug(this.selected);
+                    var store_info = vm.findStoreById(this.selected);
                     return store_info
                     console.log(store_info);
                     // var storeHours = [];
@@ -142,9 +142,6 @@
                 },
                 findStoreById() {
                     return this.$store.getters.findStoreById;
-                },
-                findStoreBySlug() {
-                    return this.$store.getters.findStoreBySlug;
                 },
                 findHourById() {
                     return this.$store.getters.findHourById;
