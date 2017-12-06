@@ -28,7 +28,7 @@
                     <div class="col-md-6">
                         <h2>Restaurant Hours</h2>
                         <p v-if="!storeHoursById">Please select a Store</p>
-                        <p>{{ storeName }}</p>
+                        <p v-if="storeName">{{ storeName }}</p>
                         <!-- Hours -->
                         <ul class="hours-list">
                             <li v-for="hour in storeHoursById">
