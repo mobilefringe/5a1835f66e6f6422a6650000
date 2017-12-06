@@ -99,6 +99,7 @@
                         storeHours.push(vm.findHourById(value));
                     });
                     this.storeHoursById = storeHours;
+                    console.log(this.storeHoursById)
                 }
             },
             beforeRouteEnter (to, from, next) {
