@@ -7,7 +7,7 @@
                     
                 </div>
                 <div class="col-md-6">
-                    <v-select v-model="selected" :options="allCatergories" :searchable="false" class="open" :on-change="consoleCallback" label="name"></v-select>
+                    <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="open" :on-change="selected" label="name"></v-select>
                     <select class="" v-model="selected">
                         <option selected value="all_categories">All Events</option>
                         <option value="blogBeauty">Beauty</option>
@@ -75,7 +75,7 @@
                     paginate: ['currentSelection'],
                     selected: "Select A Category",
                     currentSelection: null,
-                    options: [
+                    categoryOptions: [
                         'Beauty', 
                         'Charitable Partners', 
                         'Children', 
