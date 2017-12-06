@@ -22,7 +22,7 @@
                     <!--</select>    -->
                 </div>
             </div>
-            <paginate name="currentSelection" v-if="currentSelection" :list="currentSelection" class="paginate-list margin_60">
+            <paginate name="currentSelection" v-if="currentSelection" :list="currentSelection" class="paginate-list margin-60">
                 <div class="row details-promo-container" v-for="blog in paginated('currentSelection')" v-if="currentSelection">
                     <div>
                         <div class="col-md-1">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </paginate>
-            <div class="row margin_60">
+            <div class="row margin-60">
                 <div class="col-md-12">
                     <paginate-links for="currentSelection" :limit="9" :show-step-links="true"></paginate-links>
                     <paginate-links for="currentSelection" :simple="{ next: 'Next »', prev: '« Back' }"></paginate-links>
