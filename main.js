@@ -37,7 +37,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
     // Vue.use(VueInstagram);
-    
+    import VueInstagram from 'vue-instagram'
     /* initialize router */
     const router = new VueRouter({
         mode: 'history',
