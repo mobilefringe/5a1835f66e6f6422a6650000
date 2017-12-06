@@ -63,7 +63,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate", 'v-select'], function(Vue, moment, tz, VueMoment, Meta, VuePaginate, vSelect) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate", "v-select"], function(Vue, moment, tz, VueMoment, Meta, VuePaginate, vSelect) {
         Vue.use(Meta);
         Vue.use(VuePaginate);
         // Vue.component('v-select', vSelect)
