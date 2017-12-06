@@ -203,7 +203,7 @@
                     var luxury_blog = [];
                     _.forEach(this.currentBlog, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ''));
-                        var luxury_string = _.includes(tag_string, "lifestyle");
+                        var luxury_string = _.includes(tag_string, "luxury");
                         if(luxury_string === true){
                             luxury_blog.push(value);
                         }
