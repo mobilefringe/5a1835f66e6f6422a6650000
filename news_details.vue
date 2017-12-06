@@ -24,7 +24,7 @@
                                 </network>
                             </div>
                         </social-sharing>
-                        <p class="blog-category">Blog Category</p>
+                        <p class="blog-category">{{ tagString(blog.tag) }}</p>
                         <h2 class="">{{currentBlog.title}}</h2> 
                         <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
                         <!--<img :src="currentBlog.image_url" class="margin_60" alt="" />-->
@@ -109,6 +109,10 @@
                 }
             },
             methods: {
+                tagString(val_tag){
+                    var string = _.join(val_tag, ' , ')  
+                    return string
+                },
                 truncate(val_body){
                     var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
                     return truncate;
