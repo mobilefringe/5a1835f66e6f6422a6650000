@@ -27,6 +27,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2>Restaurant Hours</h2>
+                        <p v-if="!storeHoursById">Please select a Store</p>
                         <p>{{ selected }}</p>
                         <!-- Hours -->
                         <ul class="hours-list">
