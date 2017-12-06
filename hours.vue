@@ -28,7 +28,7 @@
                     <div class="col-md-6">
                         <h2>Restaurant Hours</h2>
                         <p v-if="!storeHoursById">Please select a Store</p>
-                        <p>{{ selected }}</p>
+                        <p>{{ storeName }}</p>
                         <!-- Hours -->
                         <ul class="hours-list">
                             <li v-for="hour in storeHoursById">
@@ -80,23 +80,21 @@
                 return {
                     currentPage: null,
                     selected: "Select a Restaurant",
+                    storeName: "",
                     storeHoursById: [],    
                 }
             },
-            mounted () {
-                this.restaurant,
-                this.findStoreById
-            },
+            // mounted () {
+            //     this.restaurant,
+            //     this.findStoreById
+            // },
             watch: {
                 selected: function() {
-                    console.log(this)
-                    
                     var vm = this;
                     var store_info = vm.findStoreById(this.selected);
-                    // return store_info
-                    console.log(store_info);
+                    var store_name = store_info.name;
+                    this.storeName = store_name
                     var storeHours = [];
-                    
                     _.forEach(store_info.store_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
                     });
