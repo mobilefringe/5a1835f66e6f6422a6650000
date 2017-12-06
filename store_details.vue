@@ -130,7 +130,7 @@
                     return this.$store.getters.findStoreBySlug;
                 },
                 storeHours(){
-                    findHourById
+                    return this.$store.getters.findHourById;
                 },
                 findPromoById() {
                     return this.$store.getters.findPromoById;
@@ -140,10 +140,6 @@
                 },
                 timezone() {
                     return this.$store.getters.getTimezone;
-                },
-                hours(){
-                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    return hours;
                 },
             },
             methods: {
