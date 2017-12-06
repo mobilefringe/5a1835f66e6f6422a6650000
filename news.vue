@@ -76,8 +76,8 @@
                     selected: "Select A Category",
                     currentSelection: null,
                     categoryOptions: [
-                        {label: 'Beauty', value: 'blogBeauty'},
-                        {label:'Charitable Partners', value: 'blogCharity'},
+                        [label: 'Beauty', value: 'blogBeauty'],
+                        [label:'Charitable Partners', value: 'blogCharity'],
                         {label:'Children', value: 'blogChildren'}, 
                         {label:'Fashion', value: 'blogFashion'},
                         {label:'Holiday', value: 'blogHoliday'},
