@@ -64,7 +64,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing", "vue-instagram"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing, VueInstagram) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing) {
         // Vue.use(VueInstagram);
         
         return Vue.component("news-details-component", {
