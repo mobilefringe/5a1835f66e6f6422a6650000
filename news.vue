@@ -75,7 +75,7 @@
                     paginate: ['currentSelection'],
                     selected: "Select A Category",
                     currentSelection: null,
-                    categoryOptions: [
+                    categoryOptions: {
                         {label: 'Beauty', value: 'blogBeauty'},
                         {label:'Charitable Partners', value: 'blogCharity'},
                         {label:'Children', value: 'blogChildren'}, 
@@ -85,7 +85,7 @@
                         {label:'Luxury', value: 'blogLuxury'},
                         {label:'Men', value: 'blogMen'},
                         {label:'NorthPark50', value:'blogNorthPark50'}
-                    ],
+                    },
                 }
             },
             mounted () {
