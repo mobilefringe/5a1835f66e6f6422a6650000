@@ -90,7 +90,8 @@
                 selected: function() {
                     console.log(this.selected)
                     
-                    var store_info = this.findStoreById(this.selected);
+                    var vm = this;
+                    var store_info = vm.findStoreById(this.selected);
                     return store_info
                     console.log(store_info);
                     // var storeHours = [];
