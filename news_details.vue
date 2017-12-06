@@ -57,7 +57,7 @@
     
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> News <i class="fa fa-angle-right" aria-hidden="true"></i> {{currentBlog.title}}</p>
+                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> News <i class="fa fa-angle-right" aria-hidden="true"></i><span v-if="currentBlog">{{currentBlog.title}}</span></p>
             </div>
         </div>
     </div>
