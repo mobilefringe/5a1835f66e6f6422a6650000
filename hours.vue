@@ -83,7 +83,8 @@
                 }
             },
             mounted () {
-                this.restaurant
+                this.restaurant,
+                this.findStoreById
             },
             watch: {
                 selected: function() {
