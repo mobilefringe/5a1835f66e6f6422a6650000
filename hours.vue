@@ -95,7 +95,7 @@
                     // return store_info
                     console.log(store_info);
                     var storeHours = [];
-                 
+                    
                     _.forEach(store_info.store_hours, function(value, key) {
                         
                         storeHours.push(vm.findHourById(value));
