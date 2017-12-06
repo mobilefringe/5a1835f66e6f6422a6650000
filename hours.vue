@@ -143,6 +143,9 @@
                 findStoreById() {
                     return this.$store.getters.findStoreById;
                 },
+                findStoreBySlug() {
+                    return this.$store.getters.findStoreBySlug;
+                },
                 findHourById() {
                     return this.$store.getters.findHourById;
                 }
