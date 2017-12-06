@@ -211,10 +211,26 @@
                     return luxury_blog;     
                 },
                 blogMen() {
-                    
+                    var men_blog = [];
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var men_string = _.includes(tag_string, "men");
+                        if(men_string === true){
+                            men_blog.push(value);
+                        }
+                    });
+                    return men_blog;
                 },
                 blogNorthPark50() {
-                    
+                    var northpark_blog = [];
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var northpark_string = _.includes(tag_string, "northpark");
+                        if(northpark_string === true){
+                            northpark_blog.push(value);
+                        }
+                    });
+                    return northpark_blog;
                 },
             },
             methods: {
