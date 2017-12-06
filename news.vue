@@ -211,7 +211,7 @@
             },
             methods: {
                 selectCategory(){
-                    console.log(this.selected)
+                    console.log(this.selected.value)
                     if(this.selected == "blogBeauty"){
                         this.currentSelection = this.blogBeauty;
                     } else if (this.selected == "blogCharity") {
