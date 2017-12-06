@@ -137,9 +137,8 @@
                     var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
                     return filtered_restaurants
                 },
-                findStoreById: (state, getters) => (id) => {
-                    let stores = state.results.stores;
-                    return stores.find(store => _.toNumber(store.id) === _.toNumber(id))
+                findStoreById(){
+                    return this.$store.getters.findStoreById;
                 },
                 findHourById() {
                     return this.$store.getters.findHourById;
