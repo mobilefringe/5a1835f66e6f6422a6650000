@@ -1,6 +1,6 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="margin_90"></div>
+        <div class="margin-90"></div>
         <div class="row" v-if="currentBlog">
             <div class="col-md-9 margin-60">
                 <div class="row">
