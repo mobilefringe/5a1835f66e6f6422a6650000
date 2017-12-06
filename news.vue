@@ -131,7 +131,6 @@
                 },
                 blogs() {
                     return this.$store.getters.findBlogByName;
-                    console.log(this.$store.getters.findBlogByName)
                 },
                 blogBeauty() {
                     var beauty_blog = [];
