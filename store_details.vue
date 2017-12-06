@@ -21,16 +21,12 @@
                 </div>
                 <div class="details-hours-container" v-if="currentStore && currentStore.store_hours">
                     <h5>Hours</h5>
-                    <!--<ul class="">-->
-                    <!--    <li v-for="hour in hours">-->
-                    <!--        <span class="pull-left col-md-6"> -->
-                    <!--           {{day_of_the_week(hour.day_of_week)}}-->
-                    <!--        </span>-->
-                    <!--        <span class="pull-right col-md-6 text-left">-->
-                    <!--            {{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}-->
-                    <!--        </span>-->
-                    <!--    </li>-->
-                    <!--</ul>-->
+                    <ul class="hours-list">
+                        <li v-for="hour in hours">
+                           {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                            </span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="details-manager-container" v-if="currentStore && currentStore.description">
                     <h5>Manager</h5>
