@@ -37,6 +37,8 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
+                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="open" :on-change="selected" label="name"></v-select>
+                        
                         <select class="hours-dine-select" v-model="selected">
                             <option selected="selected" value="">Select a Restaurant</option>
                             <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
@@ -71,9 +73,10 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-breadcrumbs'], function(Vue, moment, tz, VueMoment, Meta, VueBreadcrumbs) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-breadcrumbs', "v-select"], function(Vue, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect) {
         Vue.use(Meta);
         Vue.use(VueBreadcrumbs);
+        
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             data: function() {
