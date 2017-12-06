@@ -119,17 +119,17 @@
                 });
             },
             computed: {
-                property(){
+                property() {
                     return this.$store.getters.getProperty;
                 },
                 timezone() {
                     return this.$store.getters.getTimezone;
                 },
-                hours(){
+                hours() {
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
-                restaurants(){
+                restaurants() {
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var cafes = stores_by_category["NorthPark Cafés"]
                     var restaurants = stores_by_category["Restaurants / Beverages"]
@@ -138,7 +138,7 @@
                     var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
                     return filtered_restaurants
                 },
-                findStoreById(){
+                findStoreById() {
                     return this.$store.getters.findStoreById;
                 },
                 findHourById() {
