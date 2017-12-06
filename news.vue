@@ -8,18 +8,18 @@
                 </div>
                 <div class="col-md-6">
                     <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="open" :on-change="selected" label="name"></v-select>
-                    <select class="" v-model="selected">
-                        <option selected value="all_categories">All Events</option>
-                        <option value="blogBeauty">Beauty</option>
-                        <option value="blogCharity">Charitable Partners</option>
-                        <option value="blogChildren">Children</option>
-                        <option value="blogFahion">Fashion</option>
-                        <option value="blogHoliday">Holiday</option>
-                        <option value="blogLifestyle">Lifestyle</option>
-                        <option value="blogLuxury">Luxury</option>
-                        <option value="blogMen">Men</option>
-                        <option value="blogNorthPark50">NorthPark50</option>
-                    </select>    
+                    <!--<select class="" v-model="selected">-->
+                    <!--    <option selected value="all_categories">All Events</option>-->
+                    <!--    <option value="blogBeauty">Beauty</option>-->
+                    <!--    <option value="blogCharity">Charitable Partners</option>-->
+                    <!--    <option value="blogChildren">Children</option>-->
+                    <!--    <option value="blogFahion">Fashion</option>-->
+                    <!--    <option value="blogHoliday">Holiday</option>-->
+                    <!--    <option value="blogLifestyle">Lifestyle</option>-->
+                    <!--    <option value="blogLuxury">Luxury</option>-->
+                    <!--    <option value="blogMen">Men</option>-->
+                    <!--    <option value="blogNorthPark50">NorthPark50</option>-->
+                    <!--</select>    -->
                 </div>
             </div>
             <paginate name="currentSelection" v-if="currentSelection" :list="currentSelection" class="paginate-list margin_60">
