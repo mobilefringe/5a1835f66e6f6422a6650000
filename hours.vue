@@ -88,7 +88,7 @@
             },
             watch: {
                 selected: function() {
-                    console.log(this.selected)
+                    console.log(this)
                     
                     var vm = this;
                     var store_info = vm.findStoreById(this.selected);
