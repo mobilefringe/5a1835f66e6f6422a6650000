@@ -30,7 +30,7 @@
                         <p>{{ selected }}</p>
                         <!-- Hours -->
                         <ul class="hours-list">
-                            <li v-for="hour in hours">
+                            <li v-for="hour in storeHoursById">
                                {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                             </li>
                         </ul>
@@ -97,7 +97,6 @@
                     var storeHours = [];
                     
                     _.forEach(store_info.store_hours, function(value, key) {
-                        
                         storeHours.push(vm.findHourById(value));
                     });
                     this.storeHoursById = storeHours;
