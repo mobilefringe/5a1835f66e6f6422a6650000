@@ -35,7 +35,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueI18n);
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
-    Vue.use(vSelect);
+    Vue.component('v-select', vSelect);
     
     /* initialize router */
     const router = new VueRouter({
