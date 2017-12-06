@@ -30,7 +30,7 @@
                         <p v-if="!storeName">Please select a Store</p>
                         <h4 v-if="storeName" class="hours-store-name">{{ storeName }}</h4>
                         <!-- Hours -->
-                        <ul class="hours-list">
+                        <ul class="restaurant-hours-list">
                             <li v-for="hour in storeHoursById">
                                {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                             </li>
