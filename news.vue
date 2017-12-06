@@ -7,7 +7,7 @@
                     
                 </div>
                 <div class="col-md-6">
-                    <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="open" :on-change="selectCategory()" label="name"></v-select>
+                    <v-select :options="categoryOptions"></v-select>
                     <!--<select class="" v-model="selected">-->
                     <!--    <option selected value="all_categories">All Events</option>-->
                     <!--    <option value="blogBeauty">Beauty</option>-->
