@@ -84,6 +84,12 @@
             mounted () {
                 this.restaurant
             },
+            watch: {
+                selected: function() {
+                    console.log(this.selected)
+                    
+                }
+            },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
