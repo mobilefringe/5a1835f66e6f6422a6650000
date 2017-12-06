@@ -36,7 +36,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueI18n);
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
-    Vue.use(VueInstagram.default)
+    // Vue.use(VueInstagram.default)
     
     /* initialize router */
     const router = new VueRouter({
@@ -51,6 +51,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
         messages,
     });
     
+    Vue.component('vue-instagram', VueInstagram.default)
     Vue.component('v-select', VueSelect.VueSelect);
     /* bootstrap app */
     const vm = new Vue({
