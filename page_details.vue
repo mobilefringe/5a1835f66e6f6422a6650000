@@ -1,6 +1,6 @@
 <template>
     <div class="page-container">
-        <div class="margin_90"></div>
+        <div class="margin-90"></div>
         <div v-if="currentPage">
             <div class="row">
                 <div class="col-md-9">
