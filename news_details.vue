@@ -10,7 +10,7 @@
                         <p class="details-promo-date">{{currentBlog.publish_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-10">
-                        <social-sharing v-if="currentBlog" :url="shareURL(currentBlog.slug)" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="NorthParkCenter" :media="currentBlog.image_url" inline-template>
+                        <social-sharing :url="shareURL(currentBlog.slug)" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="NorthParkCenter" :media="currentBlog.image_url" inline-template>
                             <div class="blog-social-share">
                                 <h5>Share</h5>
                                 <network network="facebook">
