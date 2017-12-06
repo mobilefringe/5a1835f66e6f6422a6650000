@@ -1,6 +1,6 @@
 <template>
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <img class="margin_30" src="http://via.placeholder.com/1920x640" alt="" />
+        <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
             <div class="row">
                 <div class="col-md-6">
