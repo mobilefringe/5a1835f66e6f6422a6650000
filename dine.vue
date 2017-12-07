@@ -41,13 +41,13 @@
             data: function() {
                 return {
                     dine_stores: [],
-                    selected: "All Events",
+                    selected: "Select A Category",
                     currentSelection: null,
                     categoryOptions: [
-                        {'label':'All Events', 'value': 'all_events'},
-                        {'label':'NorthPark Events', 'value': 'events'},
-                        {'label':'In-Store Events', 'value': 'promotions'},
-                        {'label':'Holiday Events', 'value': 'holiday'}, 
+                        {'label':'select A Category', 'value': 'all_dine'},
+                        {'label':'Restaurants', 'value': 'restaurants'},
+                        {'label':'NorthPark Cafes', 'value': 'cafes'},
+                        {'label':'Coffee & Specialty Foods', 'value': 'specialty'}, 
                     ],
                 }
             },
@@ -74,11 +74,11 @@
             methods: {
                 selectCategory(){
                     console.log(this.selected)
-                    if(this.selected.value == "events"){
+                    if(this.selected.value == "restaurants"){
                         this.currentSelection = this.propertyEvents;
-                    } else if (this.selected.value == "promotions") {
+                    } else if (this.selected.value == "cafes") {
                         this.currentSelection = this.storeEvents;
-                    } else if (this.selected.value == "holiday"){
+                    } else if (this.selected.value == "specialty"){
                         this.currentSelection = this.holidayEvents;
                     } else {
                         this.currentSelection = this.events
