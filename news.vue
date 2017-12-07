@@ -7,7 +7,7 @@
                     
                 </div>
                 <div class="col-md-6">
-                    <div class="category-select-container">
+                    <div class="category-select-container right">
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                     </div>
                 </div>
