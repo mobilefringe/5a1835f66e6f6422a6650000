@@ -28,6 +28,8 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
+                <full-calendar :events="events"></full-calendar>
+                
                 <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="blog-select" :on-change="selectCategory()"></v-select>
                 <!--<select class="" v-model="selected">-->
                 <!--    <option selected value="all_events">All Events</option>-->
