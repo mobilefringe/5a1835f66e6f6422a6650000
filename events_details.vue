@@ -1,5 +1,6 @@
 <template>
     <div class="page-container">
+        <div class="margin-90"></div>
         <div class="row" v-if="currentEvent">
             <div class="col-md-9">
                 <div>
