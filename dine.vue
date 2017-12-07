@@ -120,6 +120,7 @@
                     }
                 },
                 storeHours(restaurant.store_hours){
+                    var vm = this;
                     var storeHours = [];
                     _.forEach(restaurant.store_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
