@@ -47,7 +47,6 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    dine_stores: [],
                     selected: "Select A Category",
                     currentSelection: null,
                     categoryOptions: [
@@ -56,6 +55,8 @@
                         {'label':'NorthPark Cafes', 'value': 'cafes'},
                         {'label':'Coffee & Specialty Foods', 'value': 'specialty'}, 
                     ],
+                    dine_stores: [],
+                    hours: []
                 }
             },
             methods: {
