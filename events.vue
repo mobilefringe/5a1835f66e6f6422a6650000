@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <!-- SLIDER -->
                 <div class="margin-90"></div>
-                <img src="http://via.placeholder.com/960x460"/>
+                <img class="margin-60" src="http://via.placeholder.com/960x460"/>
             </div>
         </div>
         <div class="row">
