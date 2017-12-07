@@ -40,8 +40,9 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    listMode: "alphabetical",
                     dine_stores: [],
+                    selected: "All Events",
+                    currentSelection: null,
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
