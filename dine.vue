@@ -86,11 +86,11 @@
                 selectCategory(){
                     console.log(this.selected)
                     if(this.selected.value == "restaurants"){
-                        this.currentSelection = this.propertyEvents;
+                        this.currentSelection = this.restaurants;
                     } else if (this.selected.value == "cafes") {
-                        this.currentSelection = this.storeEvents;
+                        this.currentSelection = this.cafes;
                     } else if (this.selected.value == "specialty"){
-                        this.currentSelection = this.holidayEvents;
+                        this.currentSelection = this.specialty;
                     } else {
                         this.currentSelection = this.all_dine
                     }
