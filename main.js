@@ -108,6 +108,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                     this.showArtMenu = false;
                 }
                 if(this.$route.path == "/visit" || this.$route.path == "/tourism" || this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
+                    this.breadcrumbs = "Visit"
                     this.showVisitMenu = true;
                 } else {
                     this.showVisitMenu = false;
