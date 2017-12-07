@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
-                <full-calendar></full-calendar>
+                <vue-datepicker-local v-model="time" type="inline"></vue-datepicker-local>
                 
                 <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="blog-select" :on-change="selectCategory()"></v-select>
                 <!--<select class="" v-model="selected">-->
@@ -60,6 +60,7 @@
                 return {
                     selected: "All Events",
                     currentSelection: null,
+                    time: new Date(),
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
