@@ -31,9 +31,9 @@
                                         <span></span>
                                         <span></span>
                                     </div>
-                                    <div class="header-menu">
+                                    <div class="header-breadcrumb-container">
                                         <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
-                                        <ul>
+                                        <ul v-show="show_subscrption" class="breadcrumb-menu">
                                             <router-link tag="li" to="/stores" active-class="active" exact>
                                                 <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Store Directory</h5></a>
                                             </router-link>
@@ -48,7 +48,6 @@
                                             </router-link>
                                         </ul>
                                     </div>
-                                    
                                 </div>
                                 <div v-if="show_menu" class="menu-container">
                                     <div class="menu-content">
