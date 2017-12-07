@@ -59,14 +59,8 @@
                     hours: []
                 }
             },
-            methods: {
-                changeMode(mode) {
-                    this.listMode = mode;
-                },
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
-                }
+            mounted: {
+                this.hours
             },
             computed: {
                 property(){
@@ -126,6 +120,11 @@
                         storeHours.push(vm.findHourById(value));
                     });
                     this.hours = storeHours;
+                    console.log(this.hours)
+                },
+                day_of_the_week(val_day){
+                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                    return weekday[val_day];
                 }
             },
         });
