@@ -66,6 +66,12 @@
                 }
             },
             computed: {
+                property(){
+                    return this.$store.getters.getProperty;
+                },
+                timezone () {
+                    return this.$store.getters.getTimezone;
+                },
                 all_dine(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var cafes = stores_by_category["NorthPark Cafés"]
