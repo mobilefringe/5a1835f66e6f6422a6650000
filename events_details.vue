@@ -1,12 +1,31 @@
 <template>
     <div class="page-container">
         <div class="row" v-if="currentEvent">
-            <div class="large-6 columns">
+            <div class="col-md-9">
                 <div>
                     <h1>{{currentEvent.name}}</h1>
                     <p><router-link :to="{ name: 'storeDetails', params: { id: currentEvent.store.slug }}">{{currentEvent.store.name}}</router-link> | {{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
                     <p>{{currentEvent.description}}</p>
                     <img :src="currentEvent.image_url">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="details-contact-container" v-if="currentStore && currentStore.phone">
+                    <h5 class="dine-contact-header">Contact</h5>
+                    <p>{{currentStore.phone}}</p>
+                </div>
+                <div class="details-hours-container" v-if="currentStore && currentStore.store_hours">
+                    <h5>Hours</h5>
+                    <ul class="details-hours-list">
+                        <li v-for="hour in hours">
+                           {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="details-manager-container" v-if="currentStore && currentStore.manager_name">
+                    <h5>Manager</h5>
+                    <p>{{currentStore.manager_name}}</p>
                 </div>
             </div>
         </div>
