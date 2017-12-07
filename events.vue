@@ -31,7 +31,7 @@
             <div class="col-md-5">
                 <!-- CALENDAR -->
                 <vue-datepicker-local v-model="time" type="inline"></vue-datepicker-local>
-                <div class="category-select-container">
+                <div class="category-select-container right">
                     <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                 </div>
             </div>
