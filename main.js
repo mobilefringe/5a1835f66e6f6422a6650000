@@ -69,7 +69,8 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 search: '',
                 breadcrumb: this.$breadcrumbs,
                 showStoresMenu: false,
-                showArtMenu: false
+                showArtMenu: false,
+                showVisitMenu: false,
             }
         },
         // mounted () {
@@ -94,8 +95,6 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             locale: function(val, oldVal) {
                 this.$i18n.locale = val;
                 moment.locale(val);
-                // console.log(moment().format('LLLL'));
-                // console.log(this.$store.getters.getTodayHours);
             },
             $route : function () {
                 if(this.$route.path == "/stores" || this.$route.path == "/dine") {
@@ -107,6 +106,11 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                     this.showArtMenu = true;
                 } else {
                     this.showArtMenu = false;
+                }
+                if(this.$route.path == "/visit" || this.$route.path == "/tourism" || this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
+                    this.showVisitMenu = true;
+                } else {
+                    this.showVisitMenu = false;
                 }
             }
         },
