@@ -55,6 +55,7 @@
                     selected: "All Events",
                     currentSelection: null,
                     categoryOptions: [
+                        {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
                         {'label':'In-Store Events', 'value': 'promotions'},
                         {'label':'Holiday Events', 'value': 'holiday'}, 
