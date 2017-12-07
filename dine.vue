@@ -92,7 +92,7 @@
                     } else if (this.selected.value == "specialty"){
                         this.currentSelection = this.holidayEvents;
                     } else {
-                        this.currentSelection = this.events
+                        this.currentSelection = this.all_dine
                     }
                 },
             },
