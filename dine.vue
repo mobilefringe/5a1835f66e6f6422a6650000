@@ -120,8 +120,10 @@
                     _.forEach(restaurant_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
                     });
-                    this.hours = storeHours;
+                    
                     console.log(storeHours)
+                    
+                    return storeHours
                 },
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
