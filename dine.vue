@@ -38,7 +38,7 @@
 </template>
 
 <script>
-    define(["Vue", "v-select"], function(Vue, vSelect) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function(Vue, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect) {
         return Vue.component("dine-component", {
             template: template, // the variable template will be injected
             data: function() {
