@@ -1,11 +1,11 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="margin-90"></div>
+        <div class="margin-60"></div>
         <div class="row">
-            <div class="col-md-6"></div>
             <div class="col-md-6">
                 <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="blog-select" :on-change="selectCategory()"></v-select>
             </div>
+            <div class="col-md-6"></div>
         </div>
         <div class="dine-container" v-for="restaurant in currentSelection">
             <div class="row">
