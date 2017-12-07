@@ -67,7 +67,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 show_search: false,
                 suggestionAttribute: 'name',
                 search: '',
-                breadcrumb: this.$breadcrumbs
+                breadcrumb: this.$breadcrumbs,
+                showStoresMenu: false,
+                
             }
         },
         // mounted () {
@@ -95,6 +97,18 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 // console.log(moment().format('LLLL'));
                 // console.log(this.$store.getters.getTodayHours);
             },
+            $route : function () {
+                if(this.$route.path == "/stores" || this.$route.path == "/dine") {
+                    this.showStoresMenu = true;
+                } else {
+                    this.showStoresMenu = false;
+                }
+                if(this.$route.path == "/art") {
+                    this.showArtMenu = true;
+                } else {
+                    this.showArtMenu = false;
+                }
+            }
         },
         computed: {
             // computed property for locale which returns locale value from data store and also updates the data store with new locale information
