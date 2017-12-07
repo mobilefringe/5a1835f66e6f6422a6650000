@@ -119,9 +119,9 @@
                         this.currentSelection = this.all_dine
                     }
                 },
-                storeHours(){
+                storeHours(restaurant.store_hours){
                     var storeHours = [];
-                    _.forEach(this.restaurant.store_hours, function(value, key) {
+                    _.forEach(restaurant.store_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
                     });
                     this.hours = storeHours;
