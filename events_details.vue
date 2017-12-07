@@ -64,6 +64,10 @@
                 timezone() {
                     return this.$store.getters.getTimezone;
                 },
+                hours() {
+                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
+                    return hours;
+                },
                 findEventBySlug () {
                     return this.$store.getters.findEventBySlug;
                 },
