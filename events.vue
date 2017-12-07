@@ -55,8 +55,6 @@
         Vue.use(Meta);
         Vue.use(FullCalendar);
         
-        window.jQuery = window.$ = require('jquery')
-        
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
             data: function() {
