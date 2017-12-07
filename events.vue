@@ -28,13 +28,13 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
-                v-select v-model="selected" :options="categoryOptions" :searchable="false" class="blog-select" :on-change="selectCategory()"></v-select>
-                <select class="" v-model="selected">
-                    <option selected value="all_events">All Events</option>
-                    <option value="events">NorthPark Events</option>
-                    <option value="promotions">In-Store Events</option>
-                    <option value="holiday">Holiday Events</option>
-                </select>
+                <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="blog-select" :on-change="selectCategory()"></v-select>
+                <!--<select class="" v-model="selected">-->
+                <!--    <option selected value="all_events">All Events</option>-->
+                <!--    <option value="events">NorthPark Events</option>-->
+                <!--    <option value="promotions">In-Store Events</option>-->
+                <!--    <option value="holiday">Holiday Events</option>-->
+                <!--</select>-->
             </div>
         </div>
         <div class="row">
@@ -78,9 +78,6 @@
                     }
                 }
             },
-            methods: {
-                
-            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
@@ -114,7 +111,21 @@
                     });
                     return holiday_events;
                 }
-            }
+            },
+            methods: {
+                selectCategory(){
+                    console.log(this.selected)
+                    if(this.selected.value == "events"){
+                        this.currentSelection = this.propertyEvents;
+                    } else if (this.selected.value == "promotions") {
+                        this.currentSelection = this.storeEvents;
+                    } else if (this.selected.value == "holiday"){
+                        this.currentSelection = this.holidayEvents;
+                    } else {
+                        this.currentSelection = this.events
+                    }
+                },
+            },
         });
     });
 </script>
