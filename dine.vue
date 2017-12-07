@@ -61,7 +61,7 @@
                 }
             },
             computed: {
-                restaurants(){
+                all_dine(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var cafes = stores_by_category["NorthPark Cafés"]
                     var restaurants = stores_by_category["Restaurants / Beverages"]
@@ -69,6 +69,17 @@
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
                     var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
                     return filtered_restaurants
+                },
+                holidayEvents(){
+                   var holiday_events = [];
+                    _.forEach(this.$store.getters.processedEvents, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var holiday_string = _.includes(tag_string, "holiday");
+                        if(holiday_string === true){
+                            holiday_events.push(value);
+                        }
+                    });
+                    return holiday_events;
                 }
             },
             methods: {
