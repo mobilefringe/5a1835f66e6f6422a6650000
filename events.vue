@@ -48,8 +48,10 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function(Vue, moment, tz, VueMoment, Meta, vSelect) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", 'vue-full-calendar'], function(Vue, moment, tz, VueMoment, Meta, vSelect, FullCalendar) {
         Vue.use(Meta);
+        Vue.use(FullCalendar);
+        
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
             data: function() {
