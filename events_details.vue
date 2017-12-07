@@ -15,7 +15,7 @@
                     <h5 class="dine-contact-header">Contact</h5>
                     <p>{{currentStore.phone}}</p>
                 </div>
-                <div class="details-hours-container" v-if="currentEvent && currentEvent.store_hours">
+                <div class="details-hours-container" v-if="currentEvent">
                     <h5>Hours</h5>
                     <ul class="details-hours-list">
                         <li v-for="hour in hours">
