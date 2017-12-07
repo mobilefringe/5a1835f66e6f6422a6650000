@@ -100,7 +100,10 @@
                     var specialty = stores_by_category["Specialty Foods"]
                     var filtered_restaurants = _.uniqBy(specialty, function(o){ return o.name; })
                     return filtered_restaurants
-                }
+                },
+                findHourById() {
+                    return this.$store.getters.findHourById;
+                },
             },
             methods: {
                 selectCategory(){
