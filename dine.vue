@@ -3,7 +3,9 @@
         <div class="margin-60"></div>
         <div class="row margin-30">
             <div class="col-md-6">
-                <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>
+                <div class="category-select-container">
+                    <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
+                </div>
             </div>
             <div class="col-md-6"></div>
         </div>
