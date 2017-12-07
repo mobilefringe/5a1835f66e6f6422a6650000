@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- SLIDER -->
+                <div class="margin-90"></div>
                 <img src="http://via.placeholder.com/960x460"/>
             </div>
         </div>
