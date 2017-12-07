@@ -67,7 +67,7 @@
                     var restaurants = stores_by_category["Restaurants / Beverages"]
                     var specialty = stores_by_category["Specialty Foods"]
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
-                    var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
+                    var filtered_restaurants = _.orderBy(_.uniqBy(all_restaurants, function(o){ return o.name; }), function(o){ return o.name; })
                     return filtered_restaurants
                 },
                 restaurants(){
