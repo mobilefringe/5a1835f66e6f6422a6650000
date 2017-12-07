@@ -44,7 +44,7 @@
                     selected: "Select A Category",
                     currentSelection: null,
                     categoryOptions: [
-                        {'label':'select A Category', 'value': 'all_dine'},
+                        {'label':'Select A Category', 'value': 'all_dine'},
                         {'label':'Restaurants', 'value': 'restaurants'},
                         {'label':'NorthPark Cafes', 'value': 'cafes'},
                         {'label':'Coffee & Specialty Foods', 'value': 'specialty'}, 
