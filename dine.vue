@@ -73,17 +73,20 @@
                 restaurants(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var restaurants = stores_by_category["Restaurants / Beverages"];
-                    return restaurants
+                    var filtered_restaurants = _.uniqBy(restaurants, function(o){ return o.name; })
+                    return filtered_restaurants
                 },
                 cafes(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var cafes = stores_by_category["NorthPark Cafés"]
-                    return cafes
+                    var filtered_restaurants = _.uniqBy(cafes, function(o){ return o.name; })
+                    return filtered_restaurants
                 },
                 specialty(){
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var specialty = stores_by_category["Specialty Foods"]
-                    return specialty
+                    var filtered_restaurants = _.uniqBy(specialty, function(o){ return o.name; })
+                    return filtered_restaurants
                 }
             },
             methods: {
