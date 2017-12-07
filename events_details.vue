@@ -72,6 +72,12 @@
                     return this.$store.getters.findEventBySlug;
                 },
                 
+            },
+            methods: {
+                day_of_the_week(val_day){
+                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                    return weekday[val_day];
+                }
             }
         });
     });
