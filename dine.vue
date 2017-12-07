@@ -7,7 +7,7 @@
                 <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="blog-select" :on-change="selectCategory()"></v-select>
             </div>
         </div>
-        <div class="dine-container" v-for="restaurant in restaurants">
+        <div class="dine-container" v-for="restaurant in currentSelection">
             <div class="row">
                 <div class="col-md-9">
                     <img :src="restaurant.image_url" :alt="restaurant.name" />
