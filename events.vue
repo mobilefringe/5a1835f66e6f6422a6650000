@@ -9,6 +9,7 @@
         </div>
         <div class="row">
             <div class="col-md-7">
+                <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="row" v-if="currentSelection" v-for="event in currentSelection">
                     <div class="col-md-2">
                         <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
@@ -25,7 +26,7 @@
                     </div>
                     <hr>
                 </div>
-                <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
+                
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
