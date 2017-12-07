@@ -24,9 +24,6 @@ define([], function () {
                 {
                     path: ':id',
                     component: view('store_details'),
-                    meta: {
-                        breadcrumb: 'Shops & Dining',
-                    },
                     name: 'storeDetails'
                 }
             ]
