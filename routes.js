@@ -19,9 +19,6 @@ define([], function () {
                 {
                     path: '/dine',
                     component: view('dine'),
-                    meta: {
-                        breadcrumb: 'Shops & Dining',
-                    },
                     name: 'dineList'
                 },
                 {
