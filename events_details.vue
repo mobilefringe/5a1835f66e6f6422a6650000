@@ -10,11 +10,11 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="details-contact-container" v-if="currentStore && currentStore.phone">
+                <div class="details-contact-container" v-if="currentEvent && currentEvent.phone">
                     <h5 class="dine-contact-header">Contact</h5>
                     <p>{{currentStore.phone}}</p>
                 </div>
-                <div class="details-hours-container" v-if="currentStore && currentStore.store_hours">
+                <div class="details-hours-container" v-if="currentEvent && currentEvent.store_hours">
                     <h5>Hours</h5>
                     <ul class="details-hours-list">
                         <li v-for="hour in hours">
@@ -23,7 +23,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="details-manager-container" v-if="currentStore && currentStore.manager_name">
+                <div class="details-manager-container" v-if="currentEvent && currentEvent.manager_name">
                     <h5>Manager</h5>
                     <p>{{currentStore.manager_name}}</p>
                 </div>
