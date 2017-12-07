@@ -31,14 +31,9 @@
             <div class="col-md-5">
                 <!-- CALENDAR -->
                 <vue-datepicker-local v-model="time" type="inline"></vue-datepicker-local>
-                
-                <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="blog-select" :on-change="selectCategory()"></v-select>
-                <!--<select class="" v-model="selected">-->
-                <!--    <option selected value="all_events">All Events</option>-->
-                <!--    <option value="events">NorthPark Events</option>-->
-                <!--    <option value="promotions">In-Store Events</option>-->
-                <!--    <option value="holiday">Holiday Events</option>-->
-                <!--</select>-->
+                <div class="category-select-container">
+                    <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
+                </div>
             </div>
         </div>
         <div class="row">
