@@ -31,7 +31,24 @@
                                         <span></span>
                                         <span></span>
                                     </div>
-                                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
+                                    <div class="header-menu">
+                                        <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
+                                        <ul>
+                                            <router-link tag="li" to="/stores" active-class="active" exact>
+                                                <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Store Directory</h1></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/dine" active-class="active" exact>
+                                                <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Restaurants & Eateries</h1></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/" active-class="active" exact>
+                                                <a class="main-menu-link"><h1 @click="show_menu = !show_menu">AMC</h1></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/" active-class="active" exact>
+                                                <a class="main-menu-link"><h1 @click="show_menu = !show_menu">New Doors</h1></a>
+                                            </router-link>
+                                        </ul>
+                                    </div>
+                                    
                                 </div>
                                 <div v-if="show_menu" class="menu-container">
                                     <div class="menu-content">
