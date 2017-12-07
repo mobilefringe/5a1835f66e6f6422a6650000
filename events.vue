@@ -50,10 +50,9 @@
 </template>
 
 <script>
-    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-full-calendar"], function(Vue, jQuery, moment, tz, VueMoment, Meta, vSelect, FullCalendar) {
-        // Vue.use(jQuery);
+    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-datepicker-local"], function(Vue, jQuery, moment, tz, VueMoment, Meta, vSelect, VueDatePickerLocal) {
         Vue.use(Meta);
-        Vue.use(FullCalendar);
+        Vue.use(VueDatePickerLocal);
         
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
