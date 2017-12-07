@@ -119,10 +119,10 @@
                         this.currentSelection = this.all_dine
                     }
                 },
-                storeHours(restaurant.store_hours){
+                storeHours(restaurant_hours){
                     var vm = this;
                     var storeHours = [];
-                    _.forEach(restaurant.store_hours, function(value, key) {
+                    _.forEach(restaurant_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
                     });
                     this.hours = storeHours;
