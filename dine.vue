@@ -35,13 +35,19 @@
 </template>
 
 <script>
-    define(["Vue"], function(Vue) {
+    define(["Vue", "v-select"], function(Vue, vSelect) {
         return Vue.component("dine-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
                     listMode: "alphabetical",
                     dine_stores: [],
+                    categoryOptions: [
+                        {'label':'All Events', 'value': 'all_events'},
+                        {'label':'NorthPark Events', 'value': 'events'},
+                        {'label':'In-Store Events', 'value': 'promotions'},
+                        {'label':'Holiday Events', 'value': 'holiday'}, 
+                    ],
                 }
             },
             methods: {
