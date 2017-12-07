@@ -59,9 +59,9 @@
                     hours: []
                 }
             },
-            mounted: {
-                this.hours
-            },
+            // mounted: {
+            //     this.hours
+            // },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
