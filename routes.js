@@ -17,24 +17,29 @@ define([], function () {
                     name: 'storeList'
                 },
                 {
+                    path: '/dine',
+                    component: view('dine'),
+                    name: 'dineList'
+                },
+                {
                     path: ':id',
                     component: view('store_details'),
                     name: 'storeDetails'
                 }
             ]
         },
-        {
-            path: '/dine',
-            component: view('default'),
+        // {
+        //     path: '/dine',
+        //     component: view('default'),
             
-            children: [
-                {
-                    path: '',
-                    component: view('dine'),
-                    name: 'dineList'
-                },
-            ]
-        },
+        //     children: [
+        //         {
+        //             path: '',
+        //             component: view('dine'),
+        //             name: 'dineList'
+        //         },
+        //     ]
+        // },
         // {
         //     path: '/promotions',
         //     component: view('default'),
