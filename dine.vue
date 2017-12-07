@@ -21,7 +21,7 @@
                     <p>{{restaurant.phone}}</p>
                     <h5>Hours</h5>
                     <ul class="">
-                        <li v-for="hour in restaurant.hours">
+                        <li v-for="hour in storeHours(restaurant.store_hours)">
                             <span class="pull-left col-md-6"> 
                                {{day_of_the_week(hour.day_of_week)}}
                             </span>
@@ -118,6 +118,13 @@
                         this.currentSelection = this.all_dine
                     }
                 },
+                storeHours(){
+                    var storeHours = [];
+                    _.forEach(this.restaurant.store_hours, function(value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    this.hours = storeHours;
+                }
             },
         });
     });
