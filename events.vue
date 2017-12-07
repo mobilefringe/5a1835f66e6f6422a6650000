@@ -48,7 +48,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", 'vue-full-calendar'], function(Vue, moment, tz, VueMoment, Meta, vSelect, FullCalendar) {
+    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-full-calendar"], function(Vue, jQuery, moment, tz, VueMoment, Meta, vSelect, FullCalendar) {
         Vue.use(Meta);
         Vue.use(FullCalendar);
         
