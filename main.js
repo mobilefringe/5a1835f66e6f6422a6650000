@@ -25,11 +25,12 @@ require.config({
         'vue-paginate': 'https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.5.1/vue-paginate',
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
         'vue-instagram': 'https://unpkg.com/vue-instagram@1.3.1/dist/vue-instagram.min',
-        'vue-select' : 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min'
+        'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
+        'vue-full-calendar': 'https://cdn.jsdelivr.net/npm/vue-full-calendar@2.5.1/index.min.js'
     }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram','vue-select'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, VueSelect) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram','vue-select', 'vue-full-calendar'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, VueSelect, FullCalendar) {
     Vue.use(Meta);
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
@@ -37,6 +38,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
     // Vue.use(VueInstagram.default)
+    Vue.use(FullCalendar)
     
     /* initialize router */
     const router = new VueRouter({
@@ -51,8 +53,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
         messages,
     });
     
-    Vue.component('vue-instagram', VueInstagram)
+    Vue.component('vue-instagram', VueInstagram);
     Vue.component('v-select', VueSelect.VueSelect);
+    
     /* bootstrap app */
     const vm = new Vue({
         el: '#app',
