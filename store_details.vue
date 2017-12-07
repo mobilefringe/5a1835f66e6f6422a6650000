@@ -63,7 +63,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> Shops & Dining <i class="fa fa-angle-right" aria-hidden="true"></i> {{currentStore.name }}</p>
+                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> {{ breadcrumb }} <i class="fa fa-angle-right" aria-hidden="true"></i> {{currentStore.name }}</p>
             </div>
         </div>
     </div>
