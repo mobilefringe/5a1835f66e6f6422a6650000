@@ -58,6 +58,23 @@
                                                 <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Photo Gallery</h5></a>
                                             </router-link>
                                         </ul>
+                                        <ul v-show="showVisitMenu" class="breadcrumb-menu">
+                                            <router-link tag="li" to="/art" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Valet & Parking</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Concierge</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">NorthPark Gold & Gift Cards</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/tourism" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Tourism</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Contact</h5></a>
+                                            </router-link>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div v-if="show_menu" class="menu-container">
