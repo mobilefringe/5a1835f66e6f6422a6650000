@@ -69,7 +69,21 @@
                     var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
                     return filtered_restaurants
                 }
-            }
+            },
+            methods: {
+                selectCategory(){
+                    console.log(this.selected)
+                    if(this.selected.value == "events"){
+                        this.currentSelection = this.propertyEvents;
+                    } else if (this.selected.value == "promotions") {
+                        this.currentSelection = this.storeEvents;
+                    } else if (this.selected.value == "holiday"){
+                        this.currentSelection = this.holidayEvents;
+                    } else {
+                        this.currentSelection = this.events
+                    }
+                },
+            },
         });
     });
 </script>
