@@ -26,7 +26,7 @@ require.config({
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
         'vue-instagram': 'https://unpkg.com/vue-instagram@1.3.1/dist/vue-instagram.min',
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
-        'vue-full-calendar': 'https://cdn.jsdelivr.net/npm/vue-full-calendar@2.5.1/index.min.js'
+        'vue-full-calendar': 'https://cdn.jsdelivr.net/npm/vue-full-calendar@2.5.1/index.min'
     }
 });
 
