@@ -10,7 +10,6 @@
                     <div class="category-select-container">
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                     </div>
-                    
                 </div>
             </div>
             <paginate name="currentSelection" v-if="currentSelection" :list="currentSelection" class="paginate-list margin-60">
