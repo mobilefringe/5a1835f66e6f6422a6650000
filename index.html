@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="header-breadcrumb-container">
                                         <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
-                                        <ul v-show="show_subscrption" class="breadcrumb-menu">
+                                        <ul v-show="showStoresMenu" class="breadcrumb-menu">
                                             <router-link tag="li" to="/stores" active-class="active" exact>
                                                 <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Store Directory</h5></a>
                                             </router-link>
@@ -45,6 +45,17 @@
                                             </router-link>
                                             <router-link tag="li" to="/" active-class="active" exact>
                                                 <a class="main-menu-link"><h5 @click="show_menu = !show_menu">New Doors</h5></a>
+                                            </router-link>
+                                        </ul>
+                                        <ul v-show="showArtMenu" class="breadcrumb-menu">
+                                            <router-link tag="li" to="/art" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Collection Overview</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Special Exhibitions</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Photo Gallery</h5></a>
                                             </router-link>
                                         </ul>
                                     </div>
