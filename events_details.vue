@@ -1,11 +1,13 @@
 <template>
-    <div class="row" v-if="currentEvent">
-        <div class="large-6 columns">
-            <div>
-                <h1>{{currentEvent.name}}</h1>
-                <p><router-link :to="{ name: 'storeDetails', params: { id: currentEvent.store.slug }}">{{currentEvent.store.name}}</router-link> | {{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
-                <p>{{currentEvent.description}}</p>
-                <img :src="currentEvent.image_url">
+    <div class="page-container">
+        <div class="row" v-if="currentEvent">
+            <div class="large-6 columns">
+                <div>
+                    <h1>{{currentEvent.name}}</h1>
+                    <p><router-link :to="{ name: 'storeDetails', params: { id: currentEvent.store.slug }}">{{currentEvent.store.name}}</router-link> | {{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+                    <p>{{currentEvent.description}}</p>
+                    <img :src="currentEvent.image_url">
+                </div>
             </div>
         </div>
     </div>
