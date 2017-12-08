@@ -190,7 +190,7 @@
             },
             methods: {
                 truncate(val_body){
-                    var truncate = _.truncate(val_body, { 'length': 299, 'separator': ' ' });
+                    var truncate = _.truncate(val_body, { 'length': 350, 'separator': ' ' });
                     return truncate;
                 },
                 day_of_the_week(val_day){
