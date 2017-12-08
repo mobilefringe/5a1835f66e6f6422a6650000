@@ -4,7 +4,7 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="" v-if="valet">
+                    <div class="" v-if="tourism">
                         <h2 class="visit-title">Tourism</h2>
                         <div class="visit-desc" v-if="valet" v-html="truncate(valet.body)"></div>
                         <router-link to="/pages/northpark-parking-valet-page" active-class="active" exact>
@@ -12,7 +12,7 @@
                         </router-link>
                         <hr>
                     </div>
-                    <div class="" v-if="concierge">
+                    <div class="" v-if="guestRewards">
                         <h2 class="visit-title">Guest Rewards</h2>
                         <div class="visit-desc" v-if="concierge" v-html="truncate(concierge.body)"></div>
                         <router-link to="/pages/northpark-concierge-services" active-class="active" exact>
@@ -20,7 +20,7 @@
                         </router-link>
                         <hr>
                     </div>
-                    <div class="" v-if="giftCards">
+                    <div class="" v-if="groupVisits">
                         <h2 class="visit-title">Group Visits</h2>
                         <div class="visit-desc" v-if="giftCards" v-html="truncate(giftCards.body)"></div>
                         <router-link to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
@@ -28,7 +28,7 @@
                         </router-link>
                         <hr>
                     </div>
-                    <div class="" v-if="tourism">
+                    <div class="" v-if="taxFreeShopping">
                         <h2 class="visit-title">Tax-Free Shopping</h2>
                         <div class="visit-desc" v-if="tourism" v-html="truncate(tourism.body)"></div>
                         <router-link to="/pages/northpark-international-visitors" active-class="active" exact>
@@ -36,7 +36,7 @@
                         </router-link>
                         <hr>
                     </div>
-                    <div class="" v-if="contact">
+                    <div class="" v-if="unionPay">
                         <h2 class="visit-title">Union Pay</h2>
                         <div class="visit-desc" v-if="contact" v-html="truncate(contact.body)"></div>
                         <router-link to="/pages/northpark-contact-us" active-class="active" exact>
@@ -88,19 +88,24 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    mainPage: null,
                     tourism: null,
+                    guestRewards: null,
+                    groupVisits: null,
+                    taxFreeShopping: null,
+                    unionPay: null,
                 }
             },
             mounted () {
-                this.tourism.subpages
-                console.log(this.tourism.subpages)
+                this.mainPage
+                console.log(this.tourism)
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    //Tourism
+                    //Tourism Main Page
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
-                        vm.tourism = response.data;
+                        vm.mainPage = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
@@ -109,8 +114,8 @@
             },
             beforeRouteUpdate (to, from, next) {
                 //Tourism
-                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-international-visitors.json"}).then(response => {
-                    this.giftCards = response.data;
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
+                    this.mainPage = response.data;
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
