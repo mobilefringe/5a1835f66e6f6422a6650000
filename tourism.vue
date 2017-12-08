@@ -106,6 +106,7 @@
                     //Tourism Main Page
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
                         vm.mainPage = response.data;
+                        console.log(response.data)
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
@@ -116,7 +117,7 @@
                 //Tourism Main Page
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
                     this.mainPage = response.data;
-                    console.log(this.mainPage)
+                    console.log(response.data)
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
