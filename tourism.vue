@@ -12,6 +12,10 @@
                     <div class="" v-if="guestRewards">
                         <h2 class="visit-title">Guest Rewards</h2>
                         <div class="visit-desc" v-html="guestRewards.body"></div>
+                        <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
+                            <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Sign Up for Email Newsletter"/>
+                            <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </form>
                         <hr>
                     </div>
                     <div class="" v-if="groupVisits">
