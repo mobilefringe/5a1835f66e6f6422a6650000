@@ -98,7 +98,7 @@
             },
             mounted () {
                 this.mainPage
-                console.log(this.tourism)
+                
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
@@ -116,6 +116,7 @@
                 //Tourism Main Page
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
                     this.mainPage = response.data;
+                    console.log(this.mainPage)
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
