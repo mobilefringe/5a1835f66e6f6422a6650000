@@ -144,14 +144,12 @@ define([], function () {
                     component: view('visit'),
                     name: 'storeList'
                 },
-            ],
-            children: [
                 {
-                    path: '',
+                    path: '/tourism',
                     component: view('tourism'),
-                    name: 'storeList'
+                    name: 'tourism'
                 },
-            ]
+            ],
         },
         // {
         //     path: '/tourism',
