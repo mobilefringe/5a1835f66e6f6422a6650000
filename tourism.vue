@@ -24,6 +24,23 @@
                 <div class="" v-if="groupVisits">
                     <h2 class="tourism-title">Group Visits</h2>
                     <div class="margin-60" v-html="groupVisits.body"></div>
+                    <div class="tourism-newsletter-container margin-30">
+                        <form action="" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="">First Name</label>
+                                    <input class="" id="" name="" type="text" required/>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="">Last Name</label>
+                                    <input class="" id="" name="" type="text" required/>
+                                </div>
+                            </div>
+                            <label for="fieldEmail">Email</label>
+                            <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required/>
+                            <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </form>
+                    </div>
                     <hr>
                 </div>
                 <div class="" v-if="taxFreeShopping">
