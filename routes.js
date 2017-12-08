@@ -144,14 +144,7 @@ define([], function () {
                     component: view('visit'),
                     name: 'storeList'
                 },
-            ]
-        },
-        {
-            path: '/tourism',
-            component: view('default'),
-            meta: {
-                breadcrumb: 'Visit',
-            },
+            ],
             children: [
                 {
                     path: '',
@@ -160,6 +153,20 @@ define([], function () {
                 },
             ]
         },
+        // {
+        //     path: '/tourism',
+        //     component: view('default'),
+        //     meta: {
+        //         breadcrumb: 'Visit',
+        //     },
+        //     children: [
+        //         {
+        //             path: '',
+        //             component: view('tourism'),
+        //             name: 'storeList'
+        //         },
+        //     ]
+        // },
         {
             path: '/our-story',
             component: view('our_story'),
