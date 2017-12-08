@@ -80,10 +80,6 @@
                     unionPay: null,
                 }
             },
-            mounted () {
-                this.mainPage
-                
-            },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -131,12 +127,6 @@
                 }
             },
             methods: {
-                // getTourismPage(mainPage){
-                //     console.log("Main Page" + this.mainPage)
-                // }
-                // subpages() {
-                //     console.log("Main Page" + this.mainPage)
-                // },
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
