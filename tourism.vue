@@ -124,7 +124,7 @@
             },
             watch: {
                 mainPage: function() {
-                    console.log("Hello!")
+                    console.log(this.mainPage)
                 }
             },
             computed: {
