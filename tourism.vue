@@ -1,72 +1,71 @@
 <template>
-    <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <img class="margin-90" src="http://via.placeholder.com/1920x640" alt="" />
-        <div class="page-container">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="" v-if="tourism">
-                        <h2 class="visit-title">Tourism</h2>
-                        <div class="visit-desc" v-html="tourism.body"></div>
-                        <hr>
-                    </div>
-                    <div class="" v-if="guestRewards">
-                        <h2 class="visit-title">Guest Rewards</h2>
-                        <div class="visit-desc" v-html="guestRewards.body"></div>
-                        <div class="tourism-newsletter-container margin-60">
-                            <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
-                                <label for="fieldEmail">Email</label>
-                                <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required/>
-                                <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="" v-if="groupVisits">
-                        <h2 class="visit-title">Group Visits</h2>
-                        <div class="visit-desc" v-html="groupVisits.body"></div>
-                        <hr>
-                    </div>
-                    <div class="" v-if="taxFreeShopping">
-                        <h2 class="visit-title">Tax-Free Shopping</h2>
-                        <div class="visit-desc" v-html="taxFreeShopping.body"></div>
-                        <hr>
-                    </div>
-                    <div class="margin-90" v-if="unionPay">
-                        <h2 class="visit-title">Union Pay</h2>
-                        <div class="visit-desc" v-html="unionPay.body"></div>
-                    </div>
+    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <div class="margin-90"></div>
+        <div class="row">
+            <div class="col-md-9">
+                <img  class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
+                <div class="" v-if="tourism">
+                    <h2 class="visit-title">Tourism</h2>
+                    <div class="visit-desc" v-html="tourism.body"></div>
+                    <hr>
                 </div>
-                <div class="col-md-3">
-                    <div class="sidebar-container">
-                        <h5>Hours</h5>
-                        <ul class="sidebar-hours-list">
-                            <li v-for="hour in hours">
-                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                            </li>
-                        </ul> 
-                        <router-link to="/hours" active-class="active" exact>
-                            <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>
+                <div class="" v-if="guestRewards">
+                    <h2 class="visit-title">Guest Rewards</h2>
+                    <div class="visit-desc" v-html="guestRewards.body"></div>
+                    <div class="tourism-newsletter-container margin-60">
+                        <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
+                            <label for="fieldEmail">Email</label>
+                            <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required/>
+                            <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </form>
                     </div>
-                    <div class="sidebar-container">
-                        <h5 class="">Find Us</h5>
-                        <p>
-                            {{property.name}}<br/>
-                            {{property.address1}}<br/>
-                            {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
-                            {{property.contact_phone}}
-                        </p>
-                        <p>Northpark Center Concierge</p>
-                        <router-link to="" active-class="active" exact>
-                            <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>
-                    </div>
+                    <hr>
+                </div>
+                <div class="" v-if="groupVisits">
+                    <h2 class="visit-title">Group Visits</h2>
+                    <div class="visit-desc" v-html="groupVisits.body"></div>
+                    <hr>
+                </div>
+                <div class="" v-if="taxFreeShopping">
+                    <h2 class="visit-title">Tax-Free Shopping</h2>
+                    <div class="visit-desc" v-html="taxFreeShopping.body"></div>
+                    <hr>
+                </div>
+                <div class="margin-90" v-if="unionPay">
+                    <h2 class="visit-title">Union Pay</h2>
+                    <div class="visit-desc" v-html="unionPay.body"></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp; Tourism</p>
+            <div class="col-md-3">
+                <div class="sidebar-container">
+                    <h5>Hours</h5>
+                    <ul class="sidebar-hours-list">
+                        <li v-for="hour in hours">
+                           {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                        </li>
+                    </ul> 
+                    <router-link to="/hours" active-class="active" exact>
+                        <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </router-link>
                 </div>
+                <div class="sidebar-container">
+                    <h5 class="">Find Us</h5>
+                    <p>
+                        {{property.name}}<br/>
+                        {{property.address1}}<br/>
+                        {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
+                        {{property.contact_phone}}
+                    </p>
+                    <p>Northpark Center Concierge</p>
+                    <router-link to="" active-class="active" exact>
+                        <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </router-link>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp; Tourism</p>
             </div>
         </div>
     </div>
