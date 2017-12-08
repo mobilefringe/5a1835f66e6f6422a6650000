@@ -133,8 +133,7 @@
                 hours(){
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
-                },
-                
+                }
             },
             methods: {
                 subpages() {
