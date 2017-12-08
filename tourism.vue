@@ -97,7 +97,7 @@
                 }
             },
             mounted () {
-                this.subpages
+                this.mainPage
                 
             },
             beforeRouteEnter (to, from, next) {
