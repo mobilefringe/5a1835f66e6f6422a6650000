@@ -3,10 +3,10 @@
         <img class="margin-90" src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-9" v-if="mainPage">
                     <div class="" v-if="tourism">
                         <h2 class="visit-title">Tourism</h2>
-                        <div class="visit-desc" v-html="tourism.body"></div>
+                        <div class="visit-desc" v-html="getTourismPage(mainPage)"></div>
                         <router-link to="/pages/northpark-parking-valet-page" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
