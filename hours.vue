@@ -48,21 +48,27 @@
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
-                    <h5>Holiday Hours</h5>
-                    <router-link tag="p" to="" active-class="active" exact>
-                        <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                    </router-link>
-                    <h5>Find Us</h5>
-                    <p>
-                        {{property.name}}<br/>
-                        {{property.address1}}<br/>
-                        {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
-                        {{property.contact_phone}}
-                    </p>
-                    <p>Northpark Center Concierge</p>
-                    <router-link to="" active-class="active" exact>
-                        <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                    </router-link>
+                    <div class="sidebar-container">
+                        <h5>Holiday Hours</h5>
+                        <router-link tag="p" to="" active-class="active" exact>
+                            <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
+                    <div class="sidebar-container">
+                        <h5>Find Us</h5>
+                        <p>
+                            {{property.name}}<br/>
+                            {{property.address1}}<br/>
+                            {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
+                            {{property.contact_phone}}
+                        </p>
+                        <p>Northpark Center Concierge</p>
+                    </div>
+                    <div class="sidebar-container">
+                        <router-link to="" active-class="active" exact>
+                            <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
                 </div>
             </div>
         </div>
