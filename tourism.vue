@@ -22,7 +22,7 @@
                     </div>
                     <div class="" v-if="groupVisits">
                         <h2 class="visit-title">Group Visits</h2>
-                        <div class="visit-desc" v-if="giftCards" v-html="truncate(giftCards.body)"></div>
+                        <div class="visit-desc" v-html="groupVisits.body"></div>
                         <router-link to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="" v-if="taxFreeShopping">
                         <h2 class="visit-title">Tax-Free Shopping</h2>
-                        <div class="visit-desc" v-if="tourism" v-html="truncate(tourism.body)"></div>
+                        <div class="visit-desc" v-html="taxFreeShopping.body"></div>
                         <router-link to="/pages/northpark-international-visitors" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="" v-if="unionPay">
                         <h2 class="visit-title">Union Pay</h2>
-                        <div class="visit-desc" v-if="contact" v-html="truncate(contact.body)"></div>
+                        <div class="visit-desc" v-html="unionPay.body"></div>
                         <router-link to="/pages/northpark-contact-us" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
