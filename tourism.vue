@@ -6,7 +6,7 @@
                 <img  class="margin-30" src="http://via.placeholder.com/630x344" alt="" />
                 <div class="" v-if="tourism">
                     <h2 class="visit-title">Tourism</h2>
-                    <div class="margin-60" v-html="tourism.body"></div>
+                    <div class="margin-30" v-html="tourism.body"></div>
                     <hr>
                 </div>
                 <div class="margin-60" v-if="guestRewards">
