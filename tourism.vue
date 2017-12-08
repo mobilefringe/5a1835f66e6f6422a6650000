@@ -3,7 +3,7 @@
         <div class="margin-90"></div>
         <div class="row">
             <div class="col-md-9">
-                <img  class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
+                <img  class="margin-30" src="http://via.placeholder.com/630x344" alt="" />
                 <div class="" v-if="tourism">
                     <h2 class="visit-title">Tourism</h2>
                     <div class="visit-desc" v-html="tourism.body"></div>
