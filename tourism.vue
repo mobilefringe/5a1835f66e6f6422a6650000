@@ -134,19 +134,16 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
-                subpages() {
-                    console.log("Main Page" + this.mainPage)
-                }
+                
             },
             methods: {
-                truncate(val_body){
-                    var truncate = _.truncate(val_body, { 'length': 299, 'separator': ' ' });
-                    return truncate;
+                subpages() {
+                    console.log("Main Page" + this.mainPage)
                 },
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
-                },
+                }
             }
         });
     });
