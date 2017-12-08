@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="fieldEmail">Email</label>
                                     <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required/>
                                     <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
