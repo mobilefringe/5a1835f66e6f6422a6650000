@@ -113,7 +113,7 @@
                 })
             },
             beforeRouteUpdate (to, from, next) {
-                //Tourism
+                //Tourism Main Page
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
                     this.mainPage = response.data;
                 }, error => {
