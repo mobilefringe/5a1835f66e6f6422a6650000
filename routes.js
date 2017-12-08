@@ -147,6 +147,20 @@ define([], function () {
             ]
         },
         {
+            path: '/tourism',
+            component: view('default'),
+            meta: {
+                breadcrumb: 'Tourism',
+            },
+            children: [
+                {
+                    path: '',
+                    component: view('tourism'),
+                    name: 'storeList'
+                },
+            ]
+        },
+        {
             path: '/our-story',
             component: view('our_story'),
             meta: {
