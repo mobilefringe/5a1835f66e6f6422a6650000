@@ -12,7 +12,7 @@
                     <div class="" v-if="guestRewards">
                         <h2 class="visit-title">Guest Rewards</h2>
                         <div class="visit-desc" v-html="guestRewards.body"></div>
-                        <div class="tourism-newsletter-container margin-30">
+                        <div class="tourism-newsletter-container margin-60">
                             <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
                                 <label for="fieldEmail">Email</label>
                                 <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required/>
