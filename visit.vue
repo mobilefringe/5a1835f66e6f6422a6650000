@@ -31,7 +31,7 @@
                     <div class="" v-if="tourism">
                         <h2 class="visit-title">Tourism</h2>
                         <div class="visit-desc" v-if="tourism" v-html="truncate(tourism.body)"></div>
-                        <router-link to="/pages/northpark-international-visitors" active-class="active" exact>
+                        <router-link to="/tourism" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                         <hr>
