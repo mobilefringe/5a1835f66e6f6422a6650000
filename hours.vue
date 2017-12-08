@@ -63,7 +63,7 @@
                             {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
                             {{property.contact_phone}}
                         </p>
-                        <p>Northpark Center Concierge<br>
+                        <p>Northpark Center Concierge<br/>
                             {{property.contact_fax}}
                         </p>
                     </div>
