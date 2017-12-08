@@ -14,7 +14,7 @@
                     </div>
                     <div class="" v-if="guestRewards">
                         <h2 class="visit-title">Guest Rewards</h2>
-                        <div class="visit-desc" v-if="concierge" v-html="truncate(concierge.body)"></div>
+                        <div class="visit-desc" v-html="guestRewards.body"></div>
                         <router-link to="/pages/northpark-concierge-services" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
