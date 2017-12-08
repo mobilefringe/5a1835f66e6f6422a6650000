@@ -9,7 +9,7 @@
                     <div class="visit-desc" v-html="tourism.body"></div>
                     <hr>
                 </div>
-                <div class="" v-if="guestRewards">
+                <div class="margin-60" v-if="guestRewards">
                     <h2 class="visit-title">Guest Rewards</h2>
                     <div class="visit-desc" v-html="guestRewards.body"></div>
                     <div class="tourism-newsletter-container margin-60">
@@ -21,12 +21,12 @@
                     </div>
                     <hr>
                 </div>
-                <div class="" v-if="groupVisits">
+                <div class="margin-60" v-if="groupVisits">
                     <h2 class="visit-title">Group Visits</h2>
                     <div class="visit-desc" v-html="groupVisits.body"></div>
                     <hr>
                 </div>
-                <div class="" v-if="taxFreeShopping">
+                <div class="margin-60" v-if="taxFreeShopping">
                     <h2 class="visit-title">Tax-Free Shopping</h2>
                     <div class="visit-desc" v-html="taxFreeShopping.body"></div>
                     <hr>
