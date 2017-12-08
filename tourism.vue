@@ -122,6 +122,11 @@
                     this.$router.replace({ name: '404'});
                 });
             },
+            watch: {
+                mainPage: function() {
+                    console.log("Hello!")
+                }
+            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
