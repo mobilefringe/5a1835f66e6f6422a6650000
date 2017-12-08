@@ -5,12 +5,12 @@
             <div class="col-md-9">
                 <img  class="margin-30" src="http://via.placeholder.com/630x344" alt="" />
                 <div class="" v-if="tourism">
-                    <h2 class="visit-title">Tourism</h2>
+                    <h2 class="tourism-title">Tourism</h2>
                     <div class="margin-30" v-html="tourism.body"></div>
                     <hr>
                 </div>
                 <div class="margin-60" v-if="guestRewards">
-                    <h2 class="visit-title">Guest Rewards</h2>
+                    <h2 class="tourism-title">Guest Rewards</h2>
                     <div class="visit-desc" v-html="guestRewards.body"></div>
                     <div class="tourism-newsletter-container margin-60">
                         <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
@@ -22,17 +22,17 @@
                     <hr>
                 </div>
                 <div class="" v-if="groupVisits">
-                    <h2 class="visit-title">Group Visits</h2>
+                    <h2 class="tourism-title">Group Visits</h2>
                     <div class="margin-60" v-html="groupVisits.body"></div>
                     <hr>
                 </div>
                 <div class="" v-if="taxFreeShopping">
-                    <h2 class="visit-title">Tax-Free Shopping</h2>
+                    <h2 class="tourism-title">Tax-Free Shopping</h2>
                     <div class="margin-60" v-html="taxFreeShopping.body"></div>
                     <hr>
                 </div>
                 <div class="margin-90" v-if="unionPay">
-                    <h2 class="visit-title">Union Pay</h2>
+                    <h2 class="tourism-title">Union Pay</h2>
                     <div class="" v-html="unionPay.body"></div>
                 </div>
             </div>
