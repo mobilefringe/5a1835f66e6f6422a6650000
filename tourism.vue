@@ -2,7 +2,7 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-8">
                 <img  class="margin-30" src="http://via.placeholder.com/630x344" alt="" />
                 <div class="" v-if="tourism">
                     <h2 class="tourism-title">Tourism</h2>
@@ -57,7 +57,7 @@
                     <div class="" v-html="unionPay.body"></div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-container">
                         <h5>Hours</h5>
