@@ -125,6 +125,7 @@
             watch: {
                 mainPage: function() {
                     console.log(this.mainPage)
+                    this.tourism = this.mainPage.subpages[0]
                 }
             },
             computed: {
