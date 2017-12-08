@@ -136,6 +136,9 @@
                 }
             },
             methods: {
+                getTourismPage(mainPage){
+                    console.log("Main Page" + this.mainPage)
+                }
                 subpages() {
                     console.log("Main Page" + this.mainPage)
                 },
