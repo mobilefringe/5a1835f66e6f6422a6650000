@@ -3,7 +3,7 @@
         <img class="margin-90" src="http://via.placeholder.com/1920x640" alt="" />
         <div class="page-container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-8">
                     <div class="" v-if="valet">
                         <h2 class="visit-title">Valet & Parking</h2>
                         <div class="visit-desc" v-if="valet" v-html="truncate(valet.body)"></div>
