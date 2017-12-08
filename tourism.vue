@@ -31,7 +31,7 @@
                         <div class="visit-desc" v-html="taxFreeShopping.body"></div>
                         <hr>
                     </div>
-                    <div class="" v-if="unionPay">
+                    <div class="margin-90" v-if="unionPay">
                         <h2 class="visit-title">Union Pay</h2>
                         <div class="visit-desc" v-html="unionPay.body"></div>
                     </div>
