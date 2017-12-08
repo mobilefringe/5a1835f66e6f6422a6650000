@@ -9,7 +9,7 @@
                     <div class="margin-30" v-html="tourism.body"></div>
                     <hr>
                 </div>
-                <div class="margin-60" v-if="guestRewards">
+                <div class="" v-if="guestRewards">
                     <h2 class="tourism-title">Guest Rewards</h2>
                     <div class="visit-desc" v-html="guestRewards.body"></div>
                     <div class="tourism-newsletter-container margin-60">
