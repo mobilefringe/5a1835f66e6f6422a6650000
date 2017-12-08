@@ -4,9 +4,9 @@
         <div class="row">
             <div class="col-md-9">
                 <img  class="margin-30" src="http://via.placeholder.com/630x344" alt="" />
-                <div class="margin-60" v-if="tourism">
+                <div class="" v-if="tourism">
                     <h2 class="visit-title">Tourism</h2>
-                    <div class="visit-desc" v-html="tourism.body"></div>
+                    <div class="margin-60 visit-desc" v-html="tourism.body"></div>
                     <hr>
                 </div>
                 <div class="margin-60" v-if="guestRewards">
@@ -21,14 +21,14 @@
                     </div>
                     <hr>
                 </div>
-                <div class="margin-60" v-if="groupVisits">
+                <div class="" v-if="groupVisits">
                     <h2 class="visit-title">Group Visits</h2>
-                    <div class="visit-desc" v-html="groupVisits.body"></div>
+                    <div class="margin-60 visit-desc" v-html="groupVisits.body"></div>
                     <hr>
                 </div>
-                <div class="margin-60" v-if="taxFreeShopping">
+                <div class="" v-if="taxFreeShopping">
                     <h2 class="visit-title">Tax-Free Shopping</h2>
-                    <div class="visit-desc" v-html="taxFreeShopping.body"></div>
+                    <div class="margin-60 visit-desc" v-html="taxFreeShopping.body"></div>
                     <hr>
                 </div>
                 <div class="margin-90" v-if="unionPay">
