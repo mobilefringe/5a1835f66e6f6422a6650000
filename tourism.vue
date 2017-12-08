@@ -36,9 +36,13 @@
                                     <input class="" id="" name="" type="text" required/>
                                 </div>
                             </div>
-                            <label for="fieldEmail">Email</label>
-                            <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required/>
-                            <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="fieldEmail">Email</label>
+                                    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required/>
+                                    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <hr>
