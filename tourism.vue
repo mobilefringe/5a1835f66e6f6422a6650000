@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="" v-if="valet">
-                        <h2 class="visit-title">Valet & Parking</h2>
+                        <h2 class="visit-title">Tourism</h2>
                         <div class="visit-desc" v-if="valet" v-html="truncate(valet.body)"></div>
                         <router-link to="/pages/northpark-parking-valet-page" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
@@ -13,7 +13,7 @@
                         <hr>
                     </div>
                     <div class="" v-if="concierge">
-                        <h2 class="visit-title">Concierge</h2>
+                        <h2 class="visit-title">Guest Rewards</h2>
                         <div class="visit-desc" v-if="concierge" v-html="truncate(concierge.body)"></div>
                         <router-link to="/pages/northpark-concierge-services" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
@@ -21,7 +21,7 @@
                         <hr>
                     </div>
                     <div class="" v-if="giftCards">
-                        <h2 class="visit-title">Northpark Gold & Gift Cards</h2>
+                        <h2 class="visit-title">Group Visits</h2>
                         <div class="visit-desc" v-if="giftCards" v-html="truncate(giftCards.body)"></div>
                         <router-link to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
@@ -29,7 +29,7 @@
                         <hr>
                     </div>
                     <div class="" v-if="tourism">
-                        <h2 class="visit-title">Tourism</h2>
+                        <h2 class="visit-title">Tax-Free Shopping</h2>
                         <div class="visit-desc" v-if="tourism" v-html="truncate(tourism.body)"></div>
                         <router-link to="/pages/northpark-international-visitors" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
@@ -37,7 +37,7 @@
                         <hr>
                     </div>
                     <div class="" v-if="contact">
-                        <h2 class="visit-title">Contact</h2>
+                        <h2 class="visit-title">Union Pay</h2>
                         <div class="visit-desc" v-if="contact" v-html="truncate(contact.body)"></div>
                         <router-link to="/pages/northpark-contact-us" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
