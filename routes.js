@@ -150,7 +150,7 @@ define([], function () {
             path: '/tourism',
             component: view('default'),
             meta: {
-                breadcrumb: 'Tourism',
+                breadcrumb: 'Visit',
             },
             children: [
                 {
