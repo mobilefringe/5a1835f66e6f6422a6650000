@@ -7,41 +7,26 @@
                     <div class="" v-if="tourism">
                         <h2 class="visit-title">Tourism</h2>
                         <div class="visit-desc" v-html="tourism.body"></div>
-                        <router-link to="/pages/northpark-parking-valet-page" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                        </router-link>
                         <hr>
                     </div>
                     <div class="" v-if="guestRewards">
                         <h2 class="visit-title">Guest Rewards</h2>
                         <div class="visit-desc" v-html="guestRewards.body"></div>
-                        <router-link to="/pages/northpark-concierge-services" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                        </router-link>
                         <hr>
                     </div>
                     <div class="" v-if="groupVisits">
                         <h2 class="visit-title">Group Visits</h2>
                         <div class="visit-desc" v-html="groupVisits.body"></div>
-                        <router-link to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                        </router-link>
                         <hr>
                     </div>
                     <div class="" v-if="taxFreeShopping">
                         <h2 class="visit-title">Tax-Free Shopping</h2>
                         <div class="visit-desc" v-html="taxFreeShopping.body"></div>
-                        <router-link to="/pages/northpark-international-visitors" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                        </router-link>
                         <hr>
                     </div>
                     <div class="" v-if="unionPay">
                         <h2 class="visit-title">Union Pay</h2>
                         <div class="visit-desc" v-html="unionPay.body"></div>
-                        <router-link to="/pages/northpark-contact-us" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                        </router-link>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -124,9 +109,13 @@
             },
             watch: {
                 mainPage: function() {
-                    console.log(this.mainPage)
-                    this.tourism = this.mainPage.subpages[0]
-                    console.log(this.tourism)
+                    if(this.mainPage != null){
+                        this.tourism = this.mainPage.subpages[0]
+                        this.guestRewards = this.mainPage.subpages[1]
+                        this.groupVisits = this.mainPage.subpages[2]
+                        this.taxFreeShopping = this.mainPage.subpages[3]
+                        this.unionPay = this.mainPage.subpages[4]
+                    }
                 }
             },
             computed: {
