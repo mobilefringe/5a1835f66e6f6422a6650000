@@ -13,7 +13,7 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-container">
-                        <h5>Get Connected</h5>
+                        <h5>Subscribe</h5>
                         <p>Sign up to recieve a physical copy of NorthPark The Magazine.</p>
                         <div class="blog-newsletter-container">
                             <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
