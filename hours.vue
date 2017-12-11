@@ -106,6 +106,7 @@
                 this.restaurant,
                 this.restaurantData
                 this.findStoreById
+                this.categoryOptions = this.restaurantData
             },
             // watch: {
             //     selected: function() {
