@@ -27,11 +27,10 @@ require.config({
         'vue-instagram': 'https://unpkg.com/vue-instagram@1.3.1/dist/vue-instagram.min',
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'vue-datepicker-local': 'https://cdn.jsdelivr.net/npm/vue-datepicker-local@1.0.9/dist/vue-datepicker-local.min',
-        'vue-pdf': 'https://preview-mmvue.codecloudapp.com/pdf.vue', 
     }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram','vue-select', 'vue-datepicker-local','vue-pdf'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, VueSelect, VueDatePickerLocal, VuePDF) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram','vue-select', 'vue-datepicker-local'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, VueSelect, VueDatePickerLocal) {
     Vue.use(Meta);
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
