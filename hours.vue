@@ -167,8 +167,8 @@
                         if(name != null && id != null){
                             // var option = "{'label':'" + name + "','value':'" + value + "'}";
                             var object = {
-                                label: [name],
-                                value: [id]
+                                label: name,
+                                value: id
                             }
                             console.log(object)
                             restaurantData.push(option)
