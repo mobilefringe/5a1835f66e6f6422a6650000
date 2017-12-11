@@ -35,6 +35,7 @@
     :firstDayOfWeek="parseInt(firstDayOfWeek)"
     :disableDaysBeforeToday="disableDaysBeforeToday"
     :defaultDate="defaultDate"
+    :showLunar="showLunar"
     :showLunarButton="showLunarButton"
   ></lunar-calendar>
                 <div class="category-select-container right">
@@ -64,6 +65,7 @@
                     firstDayOfWeek: 0,
                     disableDaysBeforeToday: false,
                     defaultDate: moment(),
+                    showLunar: false,
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
