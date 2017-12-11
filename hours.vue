@@ -165,7 +165,6 @@
                         var name = value.name;
                         var id = value.id;
                         if(name != null && id != null){
-                            // var option = "{'label':'" + name + "','value':'" + value + "'}";
                             var object = {
                                 label: name,
                                 value: id
@@ -174,8 +173,7 @@
                             restaurantData.push(object)
                         }
                     });
-                    // return restaurantData 
-                    console.log(restaurantData)
+                    return restaurantData 
                 },
                 findStoreById() {
                     return this.$store.getters.findStoreById;
