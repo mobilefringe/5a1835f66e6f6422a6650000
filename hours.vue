@@ -170,17 +170,29 @@
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
                 },
+                restaurantData(){
+                    var restaurantData = [];
+                    _.forEach(this.currentBlog, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var holiday_string = _.includes(tag_string, "holiday");
+                        if(holiday_string === true){
+                            restaurantData.push(value);
+                        }
+                    });
+                    return restaurantData 
+                }
                 selectCategory(){
                     console.log(this.selected)
-                    // if(this.selected.value == "events"){
-                    //     this.currentSelection = this.propertyEvents;
-                    // } else if (this.selected.value == "promotions") {
-                    //     this.currentSelection = this.storeEvents;
-                    // } else if (this.selected.value == "holiday"){
-                    //     this.currentSelection = this.holidayEvents;
-                    // } else {
-                    //     this.currentSelection = this.events
-                    // }
+                    var vm = this;
+                    var store_info = vm.findStoreById(this.selected);
+                    var store_name = store_info.name;
+                    this.storeName = store_name
+                    var storeHours = [];
+                    _.forEach(store_info.store_hours, function(value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    this.storeHoursById = storeHours;
+                    console.log(this.storeHoursById)
                 },
             }
         });
