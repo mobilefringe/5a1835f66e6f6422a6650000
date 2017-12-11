@@ -97,7 +97,7 @@
                     currentPage: null,
                     selected: "Select a Restaurant",
                     restaurantData: this.restaurantData,
-                    categoryOptions: restaurantData,
+                    // categoryOptions: restaurantData,
                     storeName: "",
                     storeHoursById: [],    
                 }
