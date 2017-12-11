@@ -205,17 +205,18 @@
                 // },
                 selectCategory(){
                     console.log(this.selected)
-                    
-                    var vm = this;
-                    var store_info = vm.findStoreById(this.selected);
-                    var store_name = store_info.name;
-                    this.storeName = store_name;
-                    var storeHours = [];
-                    _.forEach(store_info.store_hours, function(value, key) {
-                        storeHours.push(vm.findHourById(value));
-                    });
-                    this.storeHoursById = storeHours;
-                    console.log(this.storeHoursById)
+                    if(this.selected != "Select a Restaurant"){
+                        var vm = this;
+                        var store_info = vm.findStoreById(this.selected);
+                        var store_name = store_info.name;
+                        this.storeName = store_name;
+                        var storeHours = [];
+                        _.forEach(store_info.store_hours, function(value, key) {
+                            storeHours.push(vm.findHourById(value));
+                        });
+                        this.storeHoursById = storeHours;
+                        console.log(this.storeHoursById)
+                    }
                 }
             }
         });
