@@ -104,7 +104,7 @@
             mounted () {
                 this.restaurant,
                 this.restaurantData
-                // this.findStoreById
+                this.findStoreById
                 this.categoryOptions = this.restaurantData
             },
             beforeRouteEnter (to, from, next) {
