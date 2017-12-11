@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="category-select-container right">
-                            <v-select v-model="selected" v-bind:value="restaurant.id" :searchable="false" class="category-select" :on-change="selectCategory()"> {{ restaurant.name }} </v-select>    
+                            <v-select v-model="selected" :searchable="false" class="category-select" :on-change="selectCategory()"> {{ restaurant.name }} </v-select>    
                         </div>
                         
                         <!--<select class="hours-dine-select" v-model="selected">-->
