@@ -38,12 +38,14 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <!--<v-select v-model="selected" :options="categoryOptions" :searchable="false" class="open" :on-change="selected" label="name"></v-select>-->
+                        <div class="category-select-container right">
+                            <v-select v-model="selected" v-for="restaurant in restaurants" v-bind:value="restaurant.id" :searchable="false" class="category-select" :on-change="selectCategory()"> {{ restaurant.name }} </v-select>    
+                        </div>
                         
-                        <select class="hours-dine-select" v-model="selected">
-                            <option selected="selected" value="">{{selected}}</option>
-                            <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>
-                        </select>
+                        <!--<select class="hours-dine-select" v-model="selected">-->
+                        <!--    <option selected="selected" value="">{{selected}}</option>-->
+                        <!--    <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>-->
+                        <!--</select>-->
                     </div>
                 </div>
             </div>
