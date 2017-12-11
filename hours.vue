@@ -169,10 +169,10 @@
                                 label: name,
                                 value: id
                             }
-                            console.log(object)
                             restaurantData.push(object)
                         }
                     });
+                    console.log(restaurantData);
                     return restaurantData 
                 },
                 findStoreById() {
