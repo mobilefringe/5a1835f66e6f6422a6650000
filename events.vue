@@ -30,14 +30,8 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
-                <lunar-calendar
-    @change="onChange"
-    :firstDayOfWeek="parseInt(firstDayOfWeek)"
-    :disableDaysBeforeToday="disableDaysBeforeToday"
-    :defaultDate="defaultDate"
-    :showLunar="showLunar"
-    :showLunarButton="showLunarButton"
-  ></lunar-calendar>
+                <!--@change="onChange"-->
+                <lunar-calendar :firstDayOfWeek="parseInt(firstDayOfWeek)" :disableDaysBeforeToday="disableDaysBeforeToday" :defaultDate="defaultDate" :showLunar="showLunar" :showLunarButton="showLunarButton"></lunar-calendar>
                 <div class="category-select-container right">
                     <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                 </div>
