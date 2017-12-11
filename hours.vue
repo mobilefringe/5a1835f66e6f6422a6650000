@@ -102,7 +102,7 @@
                 }
             },
             mounted () {
-                // this.restaurant,
+                this.restaurant,
                 // this.restaurantData
                 // this.findStoreById
                 this.categoryOptions = this.restaurantData
