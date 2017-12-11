@@ -21,6 +21,7 @@ require.config({
         //append a dummy query string so requireJS doesn't auto-append .js to the end of the url
         'today_hours': 'https://mmvue.codecloudapp.com/today_hours.vue?noext', 
         'search-component': 'https://mmvue.codecloudapp.com/search-component.vue?noext',
+        'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min'
         'vue-breadcrumbs': 'https://cdn.jsdelivr.net/npm/vue-breadcrumbs@1.1.2/dist/vue-breadcrumbs.min',
         'vue-paginate': 'https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.5.1/vue-paginate',
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
