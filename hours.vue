@@ -158,6 +158,18 @@
                     var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
                     return filtered_restaurants
                 },
+                findStoreById() {
+                    return this.$store.getters.findStoreById;
+                },
+                findHourById() {
+                    return this.$store.getters.findHourById;
+                }
+            },
+            methods: {
+                day_of_the_week(val_day){
+                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                    return weekday[val_day];
+                },
                 restaurantData(){
                     var restaurantData = [];
                     _.forEach(this.restaurants, function(value, key) {
@@ -171,19 +183,6 @@
                     });
                     return restaurantData 
                 },
-                findStoreById() {
-                    return this.$store.getters.findStoreById;
-                },
-                findHourById() {
-                    return this.$store.getters.findHourById;
-                }
-            },
-            methods: {
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
-                },
-                
                 selectCategory(){
                     console.log(this.selected)
                     
