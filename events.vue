@@ -45,7 +45,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-datepicker-local"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VueDatePickerLocal) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-datepicker-local"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VueDatepickerLocal) {
         Vue.use(Meta);
         Vue.use(VueDatepickerLocal);
         
