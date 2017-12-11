@@ -170,6 +170,7 @@
                     return weekday[val_day];
                 },
                 restaurantData(){
+                    console.log(this.restaurants)
                     // var restaurantData = [];
                     // _.forEach(this.currentBlog, function(value, key) {
                     //     var tag_string = _.toLower(_.join(value.tag, ''));
@@ -182,7 +183,7 @@
                 },
                 selectCategory(){
                     console.log(this.selected)
-                    console.log(this.restaurants)
+                    
                     var vm = this;
                     var store_info = vm.findStoreById(this.selected);
                     var store_name = store_info.name;
