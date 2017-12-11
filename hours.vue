@@ -179,7 +179,7 @@
                     //     }
                     // });
                     // return restaurantData 
-                }
+                },
                 selectCategory(){
                     console.log(this.selected)
                     console.log(this.restaurants)
