@@ -193,7 +193,7 @@
                     });
                     this.storeHoursById = storeHours;
                     console.log(this.storeHoursById)
-                },
+                }
             }
         });
     });
