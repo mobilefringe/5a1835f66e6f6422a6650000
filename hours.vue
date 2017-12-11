@@ -174,7 +174,7 @@
                         }
                     });
                     console.log(restaurantData);
-                    return restaurantData 
+                    // return restaurantData 
                 },
                 findStoreById() {
                     return this.$store.getters.findStoreById;
