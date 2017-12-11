@@ -46,7 +46,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    images: ['https://www.mallmaverick.com/system/site_images/photos/000/034/471/original/NORTHPARK_HOLIDAY_PERFORMANCES_2017.pdf?1512428735']
+                    images: ['http://via.placeholder.com/960x460']
                 }
             },
             mounted () {
