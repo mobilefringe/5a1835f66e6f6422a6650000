@@ -207,7 +207,7 @@
                     console.log(this.selected)
                     if(this.selected != "Select a Restaurant"){
                         var vm = this;
-                        var store_info = vm.findStoreById(this.selected);
+                        var store_info = vm.findStoreById(this.selected.value);
                         var store_name = store_info.name;
                         this.storeName = store_name;
                         var storeHours = [];
