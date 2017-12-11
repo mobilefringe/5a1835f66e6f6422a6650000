@@ -96,7 +96,7 @@
                 return {
                     currentPage: null,
                     selected: "Select a Restaurant",
-                    restaurantData: this.restaurantData
+                    restaurantData: this.restaurantData,
                     categoryOptions: restaurantData,
                     storeName: "",
                     storeHoursById: [],    
