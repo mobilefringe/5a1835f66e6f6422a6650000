@@ -62,7 +62,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.component('vue-instagram', VueInstagram);
     Vue.component('v-select', VueSelect.VueSelect);
     Vue.component('vue-datepicker-local', VueDatepickerLocal);
-    Vue.component('v-viewer', Viewer)
+    // Vue.component('v-viewer', Viewer)
     
     /* bootstrap app */
     const vm = new Vue({
