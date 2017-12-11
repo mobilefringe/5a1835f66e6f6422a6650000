@@ -58,11 +58,6 @@
                         </vue-instagram>
                     </div>
                 </div>
-                
-                
-                
-                
-                
             </div>
         </div>
     
