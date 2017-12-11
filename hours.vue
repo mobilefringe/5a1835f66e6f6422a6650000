@@ -170,15 +170,14 @@
                     return weekday[val_day];
                 },
                 restaurantData(){
-                    console.log(this.restaurants)
                     var restaurantData = [];
                     _.forEach(this.restaurants, function(value, key) {
                         var label = value.name;
-                        var value = value.id
-                        console.log("name" + label, "id" + value);
-                        // if(holiday_string === true){
-                        //     restaurantData.push(value);
-                        // }
+                        var value = value.id;
+                        if(label != null && value != null){
+                            var option = "'label':'" + label + "', 'value':'" + value + "'"
+                            console.log(option)
+                        }
                     });
                     return restaurantData 
                 },
