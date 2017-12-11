@@ -177,6 +177,7 @@
                         if(label != null && value != null){
                             var option = "'label':'" + label + "', 'value':'" + value + "'"
                             console.log(option)
+                            restaurantData.push(option)
                         }
                     });
                     return restaurantData 
