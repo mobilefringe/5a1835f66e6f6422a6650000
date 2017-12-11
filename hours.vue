@@ -181,7 +181,8 @@
                             restaurantData.push(option)
                         }
                     });
-                    return restaurantData 
+                    // return restaurantData 
+                    console.log(restaurantData)
                 },
                 selectCategory(){
                     console.log(this.selected)
