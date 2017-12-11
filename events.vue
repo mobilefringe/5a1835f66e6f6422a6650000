@@ -30,7 +30,13 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
-                <vue-datepicker-local v-model="time" type="inline"></vue-datepicker-local>
+                <lunar-calendar
+                    @change="onChange"
+                    :firstDayOfWeek="parseInt(firstDayOfWeek)"
+                    :disableDaysBeforeToday="disableDaysBeforeToday"
+                    :defaultDate="defaultDate"
+                    :showLunarButton="showLunarButton"
+                  ></lunar-calendar>
                 <div class="category-select-container right">
                     <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                 </div>
