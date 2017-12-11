@@ -66,6 +66,7 @@
                     disableDaysBeforeToday: false,
                     defaultDate: moment(),
                     showLunar: false,
+                    showLunarButton: false,
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
