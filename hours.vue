@@ -95,9 +95,8 @@
             data: function() {
                 return {
                     currentPage: null,
-                    selected: "Select a Restaurant",
-                    restaurantData: this.restaurantData,
-                    // categoryOptions: restaurantData,
+                    selected: "Select a Restaurant"
+                    categoryOptions: null,
                     storeName: "",
                     storeHoursById: [],    
                 }
