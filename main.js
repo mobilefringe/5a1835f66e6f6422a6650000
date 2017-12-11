@@ -40,7 +40,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
     // Vue.use(VueInstagram.default)
-    // Vue.use(lunarCalendar);
+    Vue.use(lunarCalendar);
     Vue.use(Viewer);
     
     
@@ -61,7 +61,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     // Vue.component('vue-breadcrumbs', VueBreadcrumbs);
     Vue.component('vue-instagram', VueInstagram);
     Vue.component('v-select', VueSelect.VueSelect);
-    Vue.component('lunar-calendar', lunarCalendar);
+
     // Vue.component('v-viewer', Viewer)
     
     /* bootstrap app */
