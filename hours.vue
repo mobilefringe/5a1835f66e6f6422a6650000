@@ -160,7 +160,6 @@
                     return filtered_restaurants
                 },
                 restaurantData(){
-                    console.log(this.restaurants)
                     var restaurantData = [];
                     _.forEach(this.restaurants, function(value, key) {
                         var name = value.name;
@@ -186,21 +185,21 @@
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
                 },
-                restaurantData(){
-                    console.log(this.restaurants)
-                    var restaurantData = [];
-                    _.forEach(this.restaurants, function(value, key) {
-                        var label = value.name;
-                        var value = value.id;
-                        if(label != null && value != null){
-                            var option = "'label':'" + label + "', 'value':'" + value + "'"
-                            console.log(option)
-                            restaurantData.push(option)
-                        }
-                    });
-                    // return restaurantData 
-                    console.log(restaurantData)
-                },
+                // restaurantData(){
+                //     console.log(this.restaurants)
+                //     var restaurantData = [];
+                //     _.forEach(this.restaurants, function(value, key) {
+                //         var label = value.name;
+                //         var value = value.id;
+                //         if(label != null && value != null){
+                //             var option = "'label':'" + label + "', 'value':'" + value + "'"
+                //             console.log(option)
+                //             restaurantData.push(option)
+                //         }
+                //     });
+                //     // return restaurantData 
+                //     console.log(restaurantData)
+                // },
                 selectCategory(){
                     console.log(this.selected)
                     
