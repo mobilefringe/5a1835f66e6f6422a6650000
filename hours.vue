@@ -95,7 +95,7 @@
             data: function() {
                 return {
                     currentPage: null,
-                    selected: "Select a Restaurant"
+                    selected: "Select a Restaurant",
                     categoryOptions: null,
                     storeName: "",
                     storeHoursById: [],    
