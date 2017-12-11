@@ -14,7 +14,7 @@
                 <div class="sidebar">
                     <div class="sidebar-container">
                         <h5>Get Connected</h5>
-                        <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
+                        <p>Sign up to recieve a physical copy of NorthPark The Magazine.</p>
                         <div class="blog-newsletter-container">
                             <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
                                 <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email"/>
