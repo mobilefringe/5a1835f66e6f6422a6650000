@@ -37,7 +37,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
-    Vue.use(Spinner);
+    // Vue.use(Spinner);
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
     // Vue.use(VueInstagram.default)
@@ -57,6 +57,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
         messages,
     });
     
+    Vue.component('vue-simple-spinner', Spinner);
     Vue.component('vue-instagram', VueInstagram);
     Vue.component('v-select', VueSelect.VueSelect);
     
