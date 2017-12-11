@@ -103,7 +103,7 @@
             },
             mounted () {
                 this.restaurant,
-                // this.restaurantData
+                this.restaurantData
                 // this.findStoreById
                 this.categoryOptions = this.restaurantData
             },
