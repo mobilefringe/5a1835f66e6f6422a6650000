@@ -171,6 +171,7 @@
                     return weekday[val_day];
                 },
                 restaurantData(){
+                    console.log(this.restaurants)
                     var restaurantData = [];
                     _.forEach(this.restaurants, function(value, key) {
                         var label = value.name;
