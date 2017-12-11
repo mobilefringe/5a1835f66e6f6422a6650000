@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="category-select-container right">
-                            <v-select v-model="selected" :options="restaurantData();" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
+                            <v-select v-model="selected" :options="restaurantData()" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                         </div>
                         
                         <!--<select class="hours-dine-select" v-model="selected">-->
@@ -187,7 +187,7 @@
                     var vm = this;
                     var store_info = vm.findStoreById(this.selected);
                     var store_name = store_info.name;
-                    this.storeName = store_name
+                    this.storeName = store_name;
                     var storeHours = [];
                     _.forEach(store_info.store_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
