@@ -4,6 +4,10 @@
         <div class="row">
             <div class="col-md-12">
                 <img class="margin-60" src="http://via.placeholder.com/960x460"/>
+                
+                <viewer :images="images">
+                    <img v-for="src in images" :src="src" :key="src">
+                </viewer>
             </div>
         </div>
         <div class="row">
@@ -42,9 +46,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    // breadcrumb: this.$breadcrumbs,
-                    currentPage: null,
-                    selected: "Select a Restaurant"
+                    images: ['https://www.mallmaverick.com/system/site_images/photos/000/034/471/original/NORTHPARK_HOLIDAY_PERFORMANCES_2017.pdf?1512428735']
                 }
             },
             mounted () {
