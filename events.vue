@@ -30,8 +30,9 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
+                <!--@change="onChange"-->
                 <lunar-calendar
-                    @change="onChange"
+                    
                     :firstDayOfWeek="parseInt(firstDayOfWeek)"
                     
                     :defaultDate="defaultDate"
@@ -61,6 +62,7 @@
                     selected: "All Events",
                     currentSelection: null,
                     time: moment(),
+                    firstDayOfWeek: 0,
                     defaultDate: moment(),
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
