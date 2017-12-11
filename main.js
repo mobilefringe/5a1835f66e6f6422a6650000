@@ -37,8 +37,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
-
-    // Vue.use(VueBreadcrumbs);
+    Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
     // Vue.use(VueInstagram.default)
     Vue.use(VueDatePickerLocal);
@@ -58,7 +57,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     });
     
     Vue.component('vue-simple-spinner', Spinner);
-    Vue.component('vue-breadcrumbs', VueBreadcrumbs);
+    // Vue.component('vue-breadcrumbs', VueBreadcrumbs);
     Vue.component('vue-instagram', VueInstagram);
     Vue.component('v-select', VueSelect.VueSelect);
     Vue.component('vue-datepicker-local', VueDatePickerLocal);
