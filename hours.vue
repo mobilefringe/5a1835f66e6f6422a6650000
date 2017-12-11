@@ -102,25 +102,11 @@
                 }
             },
             mounted () {
-                this.restaurant,
-                this.restaurantData
-                this.findStoreById
+                // this.restaurant,
+                // this.restaurantData
+                // this.findStoreById
                 this.categoryOptions = this.restaurantData
             },
-            // watch: {
-            //     selected: function() {
-            //         var vm = this;
-            //         var store_info = vm.findStoreById(this.selected);
-            //         var store_name = store_info.name;
-            //         this.storeName = store_name
-            //         var storeHours = [];
-            //         _.forEach(store_info.store_hours, function(value, key) {
-            //             storeHours.push(vm.findHourById(value));
-            //         });
-            //         this.storeHoursById = storeHours;
-            //         console.log(this.storeHoursById)
-            //     }
-            // },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -173,7 +159,6 @@
                             restaurantData.push(object)
                         }
                     });
-                    // console.log(restaurantData);
                     return restaurantData 
                 },
                 findStoreById() {
@@ -188,23 +173,7 @@
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
                 },
-                // restaurantData(){
-                //     console.log(this.restaurants)
-                //     var restaurantData = [];
-                //     _.forEach(this.restaurants, function(value, key) {
-                //         var label = value.name;
-                //         var value = value.id;
-                //         if(label != null && value != null){
-                //             var option = "'label':'" + label + "', 'value':'" + value + "'"
-                //             console.log(option)
-                //             restaurantData.push(option)
-                //         }
-                //     });
-                //     // return restaurantData 
-                //     console.log(restaurantData)
-                // },
                 selectCategory(){
-                    console.log(this.selected)
                     if(this.selected != "Select a Restaurant"){
                         var vm = this;
                         var store_info = vm.findStoreById(this.selected.value);
@@ -215,7 +184,6 @@
                             storeHours.push(vm.findHourById(value));
                         });
                         this.storeHoursById = storeHours;
-                        console.log(this.storeHoursById)
                     }
                 }
             }
