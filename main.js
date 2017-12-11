@@ -27,12 +27,12 @@ require.config({
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
         'vue-instagram': 'https://unpkg.com/vue-instagram@1.3.1/dist/vue-instagram.min',
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
-        'vue-datepicker-local': 'https://cdn.jsdelivr.net/npm/vue-datepicker-local@1.0.9/dist/vue-datepicker-local.min',
+        'vue-lunar-calendar': 'https://cdn.jsdelivr.net/npm/vue-lunar-calendar@1.5.0/dist/vue-lunar-calendar.min',
         'v-viewer': 'https://cdn.jsdelivr.net/npm/v-viewer@0.2.2/dist/v-viewer.min'
     }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram','vue-select', 'vue-datepicker-local','v-viewer'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, VueSelect, VueDatepickerLocal, Viewer) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram','vue-select', 'vue-lunar-calendar','v-viewer'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, VueSelect, lunarCalendar, Viewer) {
     Vue.use(Meta);
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
@@ -40,7 +40,6 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
     // Vue.use(VueInstagram.default)
-    Vue.use(VueDatepickerLocal);
     Vue.use(Viewer);
     
     
@@ -61,7 +60,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     // Vue.component('vue-breadcrumbs', VueBreadcrumbs);
     Vue.component('vue-instagram', VueInstagram);
     Vue.component('v-select', VueSelect.VueSelect);
-    Vue.component('vue-datepicker-local', VueDatepickerLocal);
+    Vue.component('lunar-calendar', lunarCalendar);
     // Vue.component('v-viewer', Viewer)
     
     /* bootstrap app */
