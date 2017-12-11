@@ -32,7 +32,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram','vue-select', 'vue-datepicker-local','v-viewer'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, VueSelect, VueDatePickerLocal, Vuer) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-instagram','vue-select', 'vue-datepicker-local','v-viewer'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueInstagram, VueSelect, VueDatePickerLocal, Viewer) {
     Vue.use(Meta);
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
@@ -42,7 +42,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(SocialSharing);
     // Vue.use(VueInstagram.default)
     Vue.use(VueDatePickerLocal);
-    // Vue.use(Vuer, {name: 'vuer'})
+    
     
     /* initialize router */
     const router = new VueRouter({
@@ -60,6 +60,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('vue-instagram', VueInstagram);
     Vue.component('v-select', VueSelect.VueSelect);
+    Vue.component('v-viewer', Viewer)
     
     /* bootstrap app */
     const vm = new Vue({
