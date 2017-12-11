@@ -36,7 +36,6 @@
                     :firstDayOfWeek="parseInt(firstDayOfWeek)"
                     
                     :defaultDate="defaultDate"
-                    :showLunarButton="showLunarButton"
                   ></lunar-calendar>
                 <div class="category-select-container right">
                     <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
