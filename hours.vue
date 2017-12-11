@@ -105,7 +105,6 @@
             mounted () {
                 this.restaurant,
                 this.restaurantData
-                this.findStoreById
             },
             // watch: {
             //     selected: function() {
