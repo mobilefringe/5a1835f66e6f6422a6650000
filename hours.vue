@@ -163,10 +163,10 @@
                     console.log(this.restaurants)
                     var restaurantData = [];
                     _.forEach(this.restaurants, function(value, key) {
-                        var name = value.name;
+                        var label = value.name;
                         var value = value.id;
-                        if(name != null && value != null){
-                            var option = "{'label':'" + name + "','value':'" + value + "'}";
+                        if(label != null && value != null){
+                            var option = "{'label':'" + value.name + "','value':'" + value + "'}";
                             console.log(option)
                             restaurantData.push(option)
                         }
