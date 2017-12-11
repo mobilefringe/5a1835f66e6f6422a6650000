@@ -55,7 +55,7 @@
                 return {
                     selected: "All Events",
                     currentSelection: null,
-                    time: new Date(),
+                    time: moment(),
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
