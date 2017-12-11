@@ -101,10 +101,10 @@
                     storeHoursById: [],    
                 }
             },
-            // mounted () {
-            //     this.restaurant,
-            //     this.findStoreById
-            // },
+            mounted () {
+                this.restaurant,
+                // this.findStoreById
+            },
             // watch: {
             //     selected: function() {
             //         var vm = this;
