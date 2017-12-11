@@ -30,13 +30,13 @@
             </div>
             <div class="col-md-5">
                 <!-- CALENDAR -->
-                <!--@change="onChange"-->
                 <lunar-calendar
-                    
-                    :firstDayOfWeek="parseInt(firstDayOfWeek)"
-                    
-                    :defaultDate="defaultDate"
-                  ></lunar-calendar>
+    @change="onChange"
+    :firstDayOfWeek="parseInt(firstDayOfWeek)"
+    :disableDaysBeforeToday="disableDaysBeforeToday"
+    :defaultDate="defaultDate"
+    :showLunarButton="showLunarButton"
+  ></lunar-calendar>
                 <div class="category-select-container right">
                     <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                 </div>
@@ -62,6 +62,7 @@
                     currentSelection: null,
                     time: moment(),
                     firstDayOfWeek: 0,
+                    disableDaysBeforeToday: false,
                     defaultDate: moment(),
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
