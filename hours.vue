@@ -168,7 +168,19 @@
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
-                }
+                },
+                selectCategory(){
+                    console.log(this.selected)
+                    // if(this.selected.value == "events"){
+                    //     this.currentSelection = this.propertyEvents;
+                    // } else if (this.selected.value == "promotions") {
+                    //     this.currentSelection = this.storeEvents;
+                    // } else if (this.selected.value == "holiday"){
+                    //     this.currentSelection = this.holidayEvents;
+                    // } else {
+                    //     this.currentSelection = this.events
+                    // }
+                },
             }
         });
     });
