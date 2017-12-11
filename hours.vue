@@ -171,15 +171,16 @@
                 },
                 restaurantData(){
                     console.log(this.restaurants)
-                    // var restaurantData = [];
-                    // _.forEach(this.currentBlog, function(value, key) {
-                    //     var tag_string = _.toLower(_.join(value.tag, ''));
-                    //     var holiday_string = _.includes(tag_string, "holiday");
-                    //     if(holiday_string === true){
-                    //         restaurantData.push(value);
-                    //     }
-                    // });
-                    // return restaurantData 
+                    var restaurantData = [];
+                    _.forEach(this.restaurants, function(value, key) {
+                        var label = restaurant.name;
+                        var value = restaurant.id
+                        console.log("name" + label, "id" + value);
+                        // if(holiday_string === true){
+                        //     restaurantData.push(value);
+                        // }
+                    });
+                    return restaurantData 
                 },
                 selectCategory(){
                     console.log(this.selected)
