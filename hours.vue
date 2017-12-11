@@ -166,8 +166,8 @@
                         var id = value.id;
                         if(name != null && id != null){
                             var object = {
-                                label: name,
-                                value: id
+                                'label': name,
+                                'value'': id
                             }
                             restaurantData.push(object)
                         }
