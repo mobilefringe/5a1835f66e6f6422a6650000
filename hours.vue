@@ -96,15 +96,15 @@
                 return {
                     currentPage: null,
                     selected: "Select a Restaurant",
-                    categoryOptions: this.restaurantData(),
+                    // categoryOptions: this.restaurantData(),
                     storeName: "",
                     storeHoursById: [],    
                 }
             },
-            mounted () {
-                this.restaurant,
-                // this.findStoreById
-            },
+            // mounted () {
+            //     this.restaurant,
+            //     this.findStoreById
+            // },
             // watch: {
             //     selected: function() {
             //         var vm = this;
@@ -171,7 +171,6 @@
                     return weekday[val_day];
                 },
                 restaurantData(){
-                    console.log(this.restaurants)
                     var restaurantData = [];
                     _.forEach(this.restaurants, function(value, key) {
                         var label = value.name;
