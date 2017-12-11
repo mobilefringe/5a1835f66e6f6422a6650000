@@ -61,7 +61,7 @@
                     selected: "All Events",
                     currentSelection: null,
                     time: moment(),
-                    defaultDate: moment();
+                    defaultDate: moment()
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
