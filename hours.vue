@@ -158,6 +158,21 @@
                     var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
                     return filtered_restaurants
                 },
+                restaurantData(){
+                    console.log(this.restaurants)
+                    var restaurantData = [];
+                    _.forEach(this.restaurants, function(value, key) {
+                        var label = value.name;
+                        var value = value.id;
+                        if(label != null && value != null){
+                            var option = "'label':'" + label + "', 'value':'" + value + "'"
+                            console.log(option)
+                            restaurantData.push(option)
+                        }
+                    });
+                    // return restaurantData 
+                    console.log(restaurantData)
+                },
                 findStoreById() {
                     return this.$store.getters.findStoreById;
                 },
