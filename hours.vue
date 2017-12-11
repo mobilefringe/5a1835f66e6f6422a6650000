@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="category-select-container right">
-                            <v-select v-model="selected" :options="restaurantData()" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
+                            <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                         </div>
                         
                         <!--<select class="hours-dine-select" v-model="selected">-->
@@ -96,6 +96,7 @@
                 return {
                     currentPage: null,
                     selected: "Select a Restaurant",
+                    categoryOptions: restaurantData(),
                     storeName: "",
                     storeHoursById: [],    
                 }
