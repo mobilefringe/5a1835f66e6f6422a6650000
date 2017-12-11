@@ -170,15 +170,15 @@
                     return weekday[val_day];
                 },
                 restaurantData(){
-                    var restaurantData = [];
-                    _.forEach(this.currentBlog, function(value, key) {
-                        var tag_string = _.toLower(_.join(value.tag, ''));
-                        var holiday_string = _.includes(tag_string, "holiday");
-                        if(holiday_string === true){
-                            restaurantData.push(value);
-                        }
-                    });
-                    return restaurantData 
+                    // var restaurantData = [];
+                    // _.forEach(this.currentBlog, function(value, key) {
+                    //     var tag_string = _.toLower(_.join(value.tag, ''));
+                    //     var holiday_string = _.includes(tag_string, "holiday");
+                    //     if(holiday_string === true){
+                    //         restaurantData.push(value);
+                    //     }
+                    // });
+                    // return restaurantData 
                 }
                 selectCategory(){
                     console.log(this.selected)
