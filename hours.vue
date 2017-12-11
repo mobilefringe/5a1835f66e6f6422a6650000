@@ -182,6 +182,7 @@
                 }
                 selectCategory(){
                     console.log(this.selected)
+                    console.log(this.restaurants)
                     var vm = this;
                     var store_info = vm.findStoreById(this.selected);
                     var store_name = store_info.name;
