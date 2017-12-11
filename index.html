@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
+        <vue-simple-spinner v-if="!dataLoaded" ></vue-simple-spinner>
         <div id="app" v-cloak v-if="dataLoaded">
-            <vue-simple-spinner ></vue-simple-spinner>
             <div id="main-container">
                 <header>
                     <div class="page-container">
