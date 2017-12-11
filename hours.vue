@@ -171,7 +171,7 @@
                                 value: id
                             }
                             console.log(object)
-                            restaurantData.push(option)
+                            restaurantData.push(object)
                         }
                     });
                     // return restaurantData 
