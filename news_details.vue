@@ -31,26 +31,38 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <h5>Related Blogs</h5>
-                
-                <h5>Get Connected</h5>
-                <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
-                <div class="blog-newsletter-container">
-                    <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
-                        <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email"/>
-                        <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                    </form>
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <div class="sidebar-container">
+                        <h5>Related Blogs</h5>
+                        
+                    </div>
+                    <div class="sidebar-container">
+                        <h5>Get Connected</h5>
+                        <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
+                        <div class="blog-newsletter-container">
+                            <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
+                                <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email"/>
+                                <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="sidebar-container">
+                        <vue-instagram token="accessTokenHere" username="kevinongko" :count="5" :tags="['hashtag1', 'hashtag2']">
+                            <template slot="feeds" slot-scope="props">
+                                <!--<li class="fancy-list"> {{ props.feed.link }} </li>-->
+                            </template>
+                            <template slot="error" slot-scope="props">
+                                <!--<div class="fancy-alert"> {{ props.error.error_message }} </div>-->
+                            </template>
+                        </vue-instagram>
+                    </div>
                 </div>
                 
-                <vue-instagram token="accessTokenHere" username="kevinongko" :count="5" :tags="['hashtag1', 'hashtag2']">
-                    <template slot="feeds" slot-scope="props">
-                        <!--<li class="fancy-list"> {{ props.feed.link }} </li>-->
-                    </template>
-                    <template slot="error" slot-scope="props">
-                        <!--<div class="fancy-alert"> {{ props.error.error_message }} </div>-->
-                    </template>
-                </vue-instagram>
+                
+                
+                
+                
             </div>
         </div>
     
