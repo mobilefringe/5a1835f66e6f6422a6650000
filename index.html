@@ -10,7 +10,7 @@
     </head>
     <body>
         <vue-simple-spinner></vue-simple-spinner>
-        <div id="app" v-cloak v-if="dataLoaded">
+        <div id="app" v-cloak >
             <div id="main-container">
                 <header>
                     <div class="page-container">
@@ -186,7 +186,7 @@
                     </div>
                 </header>
             </div>
-            <router-view>
+            <router-view v-if="dataLoaded">
                 
             </router-view>
             <footer>
