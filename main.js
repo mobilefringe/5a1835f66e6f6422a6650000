@@ -40,7 +40,6 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(SocialSharing);
     // Vue.use(VueInstagram.default)
     Vue.use(VueDatePickerLocal);
-    Vue.use(Viewer);
     
     /* initialize router */
     const router = new VueRouter({
