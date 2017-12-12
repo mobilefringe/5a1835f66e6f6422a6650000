@@ -177,6 +177,21 @@ define([], function () {
                     component: view('our_story'),
                     name: 'storeList'
                 },
+                {
+                    path: '/our-story/history',
+                    component: view('history'),
+                    name: 'history'
+                },
+                {
+                    path: '/our-story/landscaping',
+                    component: view('landscaping'),
+                    name: 'landscaping'
+                },
+                {
+                    path: '/our-story/architecture',
+                    component: view('architecture'),
+                    name: 'architecture'
+                },
             ]
         },
         {
