@@ -1,33 +1,19 @@
 <template>
-    <div class="page-container">
+    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
-        <div class="row" v-if="currentEvent">
-            <div class="col-md-9">
-                <div>
-                    <h1>{{currentEvent.name}}</h1>
-                    <p><router-link :to="{ name: 'storeDetails', params: { id: currentEvent.store.slug }}">{{currentEvent.store.name}}</router-link> | {{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
-                    <p>{{currentEvent.description}}</p>
-                    <img :src="currentEvent.image_url">
+        <div class="row" v-if="currentStore">
+            <div class="col-md-12">
+                <img :src="currentStore.store_front_url_abs" class="margin-60" alt="" />
+            </div>
+            <div class="col-md-8">
+                <div class="details-store-info">
+                    <h2 class="details-store-name">{{currentEvent.name}}</h2>
+                    <p class="details-description">{{currentEvent.description}}</p>
+                    
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="details-contact-container" v-if="currentEvent && currentEvent.phone">
-                    <h5 class="dine-contact-header">Contact</h5>
-                    <p>{{currentStore.phone}}</p>
-                </div>
-                <div class="details-hours-container" v-if="currentEvent">
-                    <h5>Hours</h5>
-                    <ul class="details-hours-list">
-                        <li v-for="hour in hours">
-                           {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="details-manager-container" v-if="currentEvent && currentEvent.manager_name">
-                    <h5>Manager</h5>
-                    <p>{{currentStore.manager_name}}</p>
-                </div>
+            <div class="col-md-4">
+                
             </div>
         </div>
         <div class="row">
