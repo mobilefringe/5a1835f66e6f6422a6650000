@@ -151,7 +151,7 @@ define([], function () {
         // },
         {
             path: '/our-story',
-            component: view('our_story'),
+            component: view('default'),
             meta: {
                 breadcrumb: 'Our Story',
             },
