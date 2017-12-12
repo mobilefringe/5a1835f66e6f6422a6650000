@@ -126,20 +126,20 @@
                     return weekday[val_day];
                 },
                 checkEventDates(currentEvent){
-                    var start_date = moment(this.currentEvent.start_date | "MMMM D, YYYY")
-                    var end_date = moment(this.currentEvent.end_date | "MMMM D, YYYY")
+                    var start_date = moment(this.currentEvent.start_date | "MM-DD-YYYY")
+                    var end_date = moment(this.currentEvent.end_date | "MM-DD-YYYY")
                     console.log(start_date, end_date)
-                    // if(this.currentEvent.start_date | moment("dddd, MMMM D, YYYY") === this.currentEvent.end_date |  moment("dddd, MMMM D, YYYY")){
-                    //     console.log("Yes!")
-                    //     var one_day_event = this.currentEvent.start_date | moment("dddd, MMMM D, YYYY")
-                    //     console.log(one_day_event)
-                    //     // return 
-                    // } else {
-                    //     console.log("No!")
+                    if(start_date === end_date){
+                        console.log("Yes!")
+                        var one_day_event = this.currentEvent.start_date | moment("dddd, MMMM D, YYYY")
+                        console.log(one_day_event)
+                        // return 
+                    } else {
+                        console.log("No!")
 
-                    //     var multi_day = this.currentEvent.start_date + " to " + this.currentEvent.end_date
-                    //     return multi_day
-                    // }
+                        var multi_day = this.currentEvent.start_date + " to " + this.currentEvent.end_date
+                        return multi_day
+                    }
                 }
             }
         });
