@@ -129,13 +129,13 @@
                     console.log(this.currentEvent)
                     if(this.currentEvent.start_date === this.currentEvent.end_date){
                         console.log("Yes!")
-                        var one_day_event = this.currentEvent.start_date | moment("h A", timezone)
+                        var one_day_event = this.currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)
                         console.log(one_day_event)
                         // return 
                     } else {
                         console.log("No!")
-                        var start_date = this.currentEvent.start_date | moment("h A", timezone)
-                        var end_date = this.currentEvent.end_date | moment("h A", timezone)
+                        var start_date = this.currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)
+                        var end_date = this.currentEvent.end_date | moment("dddd, MMMM D, YYYY", timezone)
                         var multi_day = start_date + " to " + end_date
                         return multi_day
                     }
