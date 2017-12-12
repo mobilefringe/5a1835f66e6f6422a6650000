@@ -19,7 +19,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
-        return Vue.component("our-story-component", {
+        return Vue.component("history-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
