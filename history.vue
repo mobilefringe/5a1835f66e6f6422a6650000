@@ -126,6 +126,7 @@
                 },
                 historyBanners() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
+                    console.log(repo)
                     var repo_images = repo.images
                     console.log(repo_images)
                     // return repo_images
