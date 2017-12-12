@@ -5,7 +5,12 @@
                 <h2>History</h2>
             </div>
             <div class="col-md-4">
-                
+                <div class="sidebar">
+                    <p>EVERY COMPANY HAS A SPECIAL RESPONSIBILITY TO ENRICH THE LIVES OF ITS CUSTOMERS AND THE COMMUNITY. IT SHOULD SERVE AS A CATALYST TO LINK ART AND BUSINESS FOR THE BENEFIT OF ALL.</p>
+                    <p>
+                        -RAYMOND D. NASHER
+                    </p>
+                </div>    
             </div>
         </div>
         <div class="row">
