@@ -8,8 +8,6 @@
                         <img :src="banner.image_url" class="" alt="">
                     </div>
                 </slick>
-        
-                <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
             </div>
             <div class="col-md-8">
                 <h2>The History of NorthPark</h2>
