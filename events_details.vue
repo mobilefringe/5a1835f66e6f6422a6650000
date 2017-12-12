@@ -135,10 +135,8 @@
                         var one_day_event = moment(start_date).format("dddd, MMMM D, YYYY")
                         return one_day_event
                     } else {
-                        console.log("No!")
-
-                        var multi_day = moment(start_date).format("dddd, MMMM D, YYYY") + " to " + moment(end_date).format("dddd, MMMM D, YYYY")
-                        return multi_day
+                        var multi_day_event = moment(start_date).format("dddd, MMMM D, YYYY") + " to " + moment(end_date).format("dddd, MMMM D, YYYY")
+                        return multi_day_event
                     }
                 }
             }
