@@ -126,7 +126,7 @@
                     return weekday[val_day];
                 },
                 checkEventDates(currentEvent){
-                    if(this.currentEvent.start_date === this.currentEvent.end_date){
+                    if(this.currentEvent.start_date | moment("dddd, MMMM D, YYYY") === this.currentEvent.end_date |  moment("dddd, MMMM D, YYYY")){
                         console.log("Yes!")
                         var one_day_event = this.currentEvent.start_date | moment("dddd, MMMM D, YYYY")
                         console.log(one_day_event)
