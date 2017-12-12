@@ -134,7 +134,7 @@
                         // return 
                     } else {
                         console.log("No!")
-                        var start_date = this.currentEvent.start_date | moment("dddd, MMMM D, YYYY")
+                        var start_date = moment(this.currentEvent.start_date)  //"dddd, MMMM D, YYYY"
                         var end_date = this.currentEvent.end_date | moment("dddd, MMMM D, YYYY")
                         var multi_day = start_date + " to " + end_date
                         return multi_day
