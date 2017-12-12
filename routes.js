@@ -174,7 +174,7 @@ define([], function () {
             children: [
                 {
                     path: '',
-                    component: view('our_story'),
+                    component: view('default'),
                     name: 'default'
                 },
                 {
