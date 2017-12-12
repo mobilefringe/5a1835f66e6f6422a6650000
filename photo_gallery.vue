@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
                 <div>
-                    <img :src="{{item.image_url}}" />
+                    <img :src="item.image_url" />
                     <h5>{{item.name}}</h5>
                 </div>    
             </div>
