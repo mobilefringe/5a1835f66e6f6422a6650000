@@ -72,10 +72,6 @@
                     }
                 }
             },
-            mounted () {
-                this.historyBanners = this.getHistoryBanners
-                console.log(historyBanners)
-            },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
