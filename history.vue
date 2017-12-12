@@ -23,7 +23,7 @@
                 <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
             </div>
             <div class="col-md-4">
-                <div class="sidebar">
+                <div class="sidebar-left">
                     <p>THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
                     <p>-NANCY A. NASHER</p>
                 </div>    
