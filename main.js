@@ -122,7 +122,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 } else {
                     this.showVisitMenu = false;
                 }
-                if(this.$route.path == "/our-story" || this.$route.path == "/our-story/history" || this.$route.path == "/our-story/landscaping" || this.$route.path == "/our-story/architecture" || this.$route.path == "/our-story/photo-gallery") {
+                if(this.$route.path == "/our-story" || this.$route.path == "/history" || this.$route.path == "/landscaping" || this.$route.path == "/architecture" || this.$route.path == "/photo-gallery") {
                     this.breadcrumb = "Our Story"
                     this.showStoryMenu = true;
                 } else {
