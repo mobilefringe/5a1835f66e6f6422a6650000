@@ -105,6 +105,10 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
+                findRepoByName(){
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
+                    return repo
+                }
             },
             methods: {
                 day_of_the_week(val_day){
