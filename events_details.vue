@@ -80,12 +80,14 @@
             },
             watch: {
                 currentEvent: function() {
-                    var vm = this;
-                    var storeHours = [];
-                    _.forEach(this.currentEvent.store.store_hours, function(value, key) {
-                        storeHours.push(vm.findHourById(value));
-                    });
-                    this.store_hours = storeHours;
+                    if(this.currentEvent.eventable_type == "Store"){
+                        var vm = this;
+                        var storeHours = [];
+                        _.forEach(this.currentEvent.store.store_hours, function(value, key) {
+                            storeHours.push(vm.findHourById(value));
+                        });
+                        this.store_hours = storeHours;
+                    }
                 }
             },
             computed: {
