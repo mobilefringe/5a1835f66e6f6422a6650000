@@ -66,6 +66,7 @@
                         autoplay: true,
                         centerMode: true,
                         dots: true,
+                        fade: true,
                         infinite: true,
                         slidesToShow: 1,
                         speed: 300,
