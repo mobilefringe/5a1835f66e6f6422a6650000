@@ -121,6 +121,12 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 } else {
                     this.showVisitMenu = false;
                 }
+                if(this.$route.path == "/our_story") {
+                    this.breadcrumb = "Our Story"
+                    this.showVisitMenu = true;
+                } else {
+                    this.showVisitMenu = false;
+                }
             }
         },
         computed: {
