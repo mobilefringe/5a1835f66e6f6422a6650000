@@ -13,10 +13,10 @@
         </div>
         <div class="row">
             <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
-                <div>
+                <div class="gallery-image-container">
                     <img :src="item.image_url" />
-                    <h5>{{item.name}}</h5>
-                </div>    
+                </div>
+                <h5>{{item.name}}</h5>
             </div>
         </div>
         <div class="row">
