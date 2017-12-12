@@ -34,14 +34,29 @@
                         </ul>
                     </div>
                     <div class="sidebar-container" v-if="currentEvent && !currentEvent.store">
-                        <h5>Store Hours</h5>
-                        <ul class="details-hours-list">
-                            <li v-for="hour in store_hours">
+                        <h5>Hours</h5>
+                        <ul class="sidebar-hours-list">
+                            <li v-for="hour in hours">
                                {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                                </span>
                             </li>
-                        </ul>
+                        </ul> 
+                        <router-link to="/hours" active-class="active" exact>
+                            <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
                     </div>
+                    <!--<div class="sidebar-container">-->
+                    <!--    <h5 class="">Find Us</h5>-->
+                    <!--    <p>-->
+                    <!--        {{property.name}}<br/>-->
+                    <!--        {{property.address1}}<br/>-->
+                    <!--        {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>-->
+                    <!--        {{property.contact_phone}}-->
+                    <!--    </p>-->
+                    <!--    <p>Northpark Center Concierge</p>-->
+                    <!--    <router-link to="" active-class="active" exact>-->
+                    <!--        <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
+                    <!--    </router-link>-->
+                    <!--</div>-->
                 </div>    
             </div>
         </div>
@@ -61,6 +76,7 @@
                 return {
                     currentEvent: null,
                     store_hours: [],
+                    hours: []
                 }
             },
             mounted () {
