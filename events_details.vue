@@ -127,7 +127,7 @@
                 },
                 checkEventDates(currentEvent){
                     var timezone = this.timezone
-                    var start_date = moment(this.currentEvent.start_date | timezone)
+                    var start_date = moment(this.currentEvent.start_date | "MM-DD-YYYY", timezone)
                     var end_date = moment(this.currentEvent.end_dat | "MM-DD-YYYY", timezone)
                     console.log(start_date, end_date)
                     if(start_date === end_date){
