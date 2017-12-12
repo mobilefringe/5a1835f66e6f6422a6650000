@@ -20,6 +20,23 @@
         </div>
         <div class="row">
             <div class="col-md-12">
+                <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
+            </div>
+            <div class="col-md-8">
+                <h2>The History of NorthPark</h2>
+                <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <p>EVERY COMPANY HAS A SPECIAL RESPONSIBILITY TO ENRICH THE LIVES OF ITS CUSTOMERS AND THE COMMUNITY. IT SHOULD SERVE AS A CATALYST TO LINK ART AND BUSINESS FOR THE BENEFIT OF ALL.</p>
+                    <p>
+                        -RAYMOND D. NASHER
+                    </p>
+                </div>    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> History</p>
             </div>
         </div>
