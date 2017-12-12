@@ -70,6 +70,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
         data: function () {
             return {
                 dataLoaded: false,
+                isHomePage: false,
                 isOpen: false,
                 show_menu: false,
                 show_search: false,
@@ -106,6 +107,11 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 moment.locale(val);
             },
             $route : function () {
+                if(this.$route.path == "/") {
+                    this.isHomePage = true;
+                } else {
+                    this.isHomePage = false;
+                }
                 if(this.$route.path == "/stores" || this.$route.path == "/dine") {
                     this.showStoresMenu = true;
                 } else {
