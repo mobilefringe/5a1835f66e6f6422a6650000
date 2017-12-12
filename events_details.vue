@@ -8,22 +8,12 @@
             <div class="col-md-8">
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentEvent.name}}</h2>
+                    <h5>{{currentEvent.start_date | moment("ddd D MMM", timezone)}} to {{currentEvent.start_end | moment("ddd D MMM", timezone)}}</h5>
                     <p class="details-description">{{currentEvent.description}}</p>
-                    <div v-if="checkEventType(currentEvent.eventable_type)">
-                        <router-link to="/stores/currentEvent.store.slug" active-class="active" exact>
-                            <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>
-                    </div>
-                    
                 </div>    
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
-                    <div class="sidebar-container">
-                        <h5>Event Dates</h5>
-                        <p>{{currentEvent.start_date | moment("ddd D MMM", timezone)}}<br>
-                        to {{currentEvent.start_end | moment("ddd D MMM", timezone)}}</p>
-                    </div>
                     <div class="sidebar-container" v-if="currentEvent && currentEvent.store">
                         <h5>Store Hours</h5>
                         <ul class="details-hours-list">
@@ -32,6 +22,9 @@
                                 </span>
                             </li>
                         </ul>
+                        <router-link to="getStoreSlug()" active-class="active" exact>
+                            <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
                     </div>
                     <div class="sidebar-container" v-if="currentEvent && !currentEvent.store">
                         <h5>Hours</h5>
@@ -44,19 +37,6 @@
                             <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                     </div>
-                    <!--<div class="sidebar-container">-->
-                    <!--    <h5 class="">Find Us</h5>-->
-                    <!--    <p>-->
-                    <!--        {{property.name}}<br/>-->
-                    <!--        {{property.address1}}<br/>-->
-                    <!--        {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>-->
-                    <!--        {{property.contact_phone}}-->
-                    <!--    </p>-->
-                    <!--    <p>Northpark Center Concierge</p>-->
-                    <!--    <router-link to="" active-class="active" exact>-->
-                    <!--        <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
-                    <!--    </router-link>-->
-                    <!--</div>-->
                 </div>    
             </div>
         </div>
