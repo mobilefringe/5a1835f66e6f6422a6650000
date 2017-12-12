@@ -132,7 +132,7 @@
                     console.log(start_date, end_date)
                     if(start_date === end_date){
                         console.log("Yes!")
-                        var one_day_event = start_date
+                        var one_day_event = start_date.format("dddd, MMMM D, YYYY")
                         console.log(one_day_event)
                         // return 
                     } else {
