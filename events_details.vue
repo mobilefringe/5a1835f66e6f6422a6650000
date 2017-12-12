@@ -133,8 +133,9 @@
                         // return 
                     } else {
                         console.log("No!")
-                        var multi_day = moment(this.currentEvent.start_date, "dddd, MMMM D YYYY")
-                        //  to {{currentEvent.end_date | moment("dddd, MMMM D YYYY", timezone)}
+                        var start_date = this.currentEvent.start_date | moment("h A", timezone)
+                        var end_date = this.currentEvent.end_date | moment("h A", timezone)
+                        var multi_day = start_date + " to " + end_date
                         return multi_day
                     }
                 }
