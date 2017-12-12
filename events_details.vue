@@ -129,7 +129,6 @@
                     var timezone = this.timezone
                     var start_date = moment(this.currentEvent.start_date).tz(timezone).format("MM-DD-YYYY")
                     var end_date = moment(this.currentEvent.end_date).tz(timezone).format("MM-DD-YYYY")
-                    console.log(start_date, end_date)
                     if(start_date === end_date){
                         var one_day_event = moment(start_date).format("dddd, MMMM D, YYYY")
                         return one_day_event
