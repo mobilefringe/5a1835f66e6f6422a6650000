@@ -38,7 +38,7 @@
                     selected: "History",
                     currentSelection: null,
                     categoryOptions: [
-                        {'label':'History', 'value': 'events'},
+                        {'label':'History', 'value': 'history'},
                         {'label':'50th Anniversary', 'value': 'anniversary'},
                         {'label':'Event', 'value': 'event'}, 
                         {'label':'Landscaping', 'value': 'landscaping'}, 
