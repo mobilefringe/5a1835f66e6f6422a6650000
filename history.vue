@@ -62,7 +62,6 @@
             data: function() {
                 return {
                     currentPage: null,
-                    historyBanners: null,
                     history: null,
                     anniversary: null,
                     slickOptions: {
