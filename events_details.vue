@@ -122,6 +122,15 @@
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
+                },
+                checkEventDates() {
+                    if(this.currentEvent.start_date == this.currentEvent.end_date){
+                        var one_day_event = moment(this.currentEvent.start_date, "dddd, MMMM D YYYY", timezone)
+                        console.log(one_day_event)
+                        // return 
+                    // } else {
+                    //     var multi_day = moment(this.currentEvent.start_date, "dddd, MMMM D YYYY", timezone) to {{currentEvent.end_date | moment("dddd, MMMM D YYYY", timezone)}
+                    }
                 }
             }
         });
