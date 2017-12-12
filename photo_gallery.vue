@@ -28,7 +28,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-pure-lightbox"], function(Vue, moment, tz, VueMoment, Meta, vSelect. Lightbox) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-pure-lightbox"], function(Vue, moment, tz, VueMoment, Meta, vSelect, Lightbox) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         
