@@ -22,7 +22,7 @@
                     <div class="sidebar-container">
                         <h5>Dates</h5>
                         <p>{{currentEvent.start_date | moment("ddd D MMM", timezone)}}<br>
-                        to {{currentEvent.start_end | moment("ddd D MMM", timezone)}}
+                        to {{currentEvent.start_end | moment("ddd D MMM", timezone)}}</p>
                     </div>
                 </div>    
             </div>
