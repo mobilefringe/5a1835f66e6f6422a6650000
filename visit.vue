@@ -8,7 +8,7 @@
                         <h2 class="visit-title">Valet & Parking</h2>
                         <div class="visit-desc" v-if="valet" v-html="truncate(valet.body)"></div>
                         <router-link to="/pages/northpark-parking-valet-page" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr>
                     </div>
@@ -16,7 +16,7 @@
                         <h2 class="visit-title">Concierge</h2>
                         <div class="visit-desc" v-if="concierge" v-html="truncate(concierge.body)"></div>
                         <router-link to="/pages/northpark-concierge-services" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr>
                     </div>
@@ -24,7 +24,7 @@
                         <h2 class="visit-title">Northpark Gold & Gift Cards</h2>
                         <div class="visit-desc" v-if="giftCards" v-html="truncate(giftCards.body)"></div>
                         <router-link to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr>
                     </div>
@@ -32,7 +32,7 @@
                         <h2 class="visit-title">Tourism</h2>
                         <div class="visit-desc" v-if="tourism" v-html="truncate(tourism.body)"></div>
                         <router-link to="/tourism" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr>
                     </div>
@@ -40,7 +40,7 @@
                         <h2 class="visit-title">Contact</h2>
                         <div class="visit-desc" v-if="contact" v-html="truncate(contact.body)"></div>
                         <router-link to="/pages/northpark-contact-us" active-class="active" exact>
-                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                     </div>
                 </div>
