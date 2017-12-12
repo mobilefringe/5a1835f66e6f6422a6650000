@@ -62,7 +62,9 @@
                     history: null,
                     anniversary: null,
                     slickOptions: {
-                        
+                        arrows: true,
+                        autoplay: true,
+                        centerMode: true,
                         dots: true,
                         infinite: true,
                         speed: 300,
@@ -70,10 +72,10 @@
   
                         slidesToShow: 1,
                  
-                        arrows: true,
+                        
                         prevArrow: '.prev',
                         nextArrow: '.next',
-                        autoplay: false
+                        
                         // Any other options that can be got from plugin documentation
                     }
                 }
