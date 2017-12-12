@@ -124,7 +124,7 @@
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     return weekday[val_day];
                 },
-                checkEventDates() {
+                checkEventDates(currentEvent){
                     if(this.currentEvent.start_date == this.currentEvent.end_date){
                         var one_day_event = moment(this.currentEvent.start_date, "dddd, MMMM D YYYY", timezone)
                         console.log(one_day_event)
