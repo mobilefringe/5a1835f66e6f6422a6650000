@@ -36,12 +36,6 @@
                 return {
                     selected: "History",
                     currentSelection: null,
-                    time: moment(),
-                    firstDayOfWeek: 0,
-                    disableDaysBeforeToday: false,
-                    defaultDate: moment(),
-                    showLunar: false,
-                    showLunarButton: false,
                     categoryOptions: [
                         {'label':'History', 'value': 'events'},
                         {'label':'50th Anniversary', 'value': 'anniversary'},
@@ -101,18 +95,6 @@
                         this.currentSelection = this.events
                     }
                 },
-                checkEventDates(event){
-                    var timezone = this.timezone
-                    var start_date = moment(event.start_date).tz(timezone).format("MM-DD-YYYY")
-                    var end_date = moment(event.end_date).tz(timezone).format("MM-DD-YYYY")
-                    if(start_date === end_date){
-                        var one_day_event = moment(start_date).format("dddd, MMMM D, YYYY")
-                        return one_day_event
-                    } else {
-                        var multi_day_event = moment(start_date).format("dddd, MMMM D, YYYY") + " to " + moment(end_date).format("dddd, MMMM D, YYYY")
-                        return multi_day_event
-                    }
-                }
             },
         });
     });
