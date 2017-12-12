@@ -12,6 +12,7 @@
             </div>
         </div>
         <div class="row">
+            <p v-if="!currentSelection">Sorry, there are currently no images to display.</p>
             <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
                 <div class="gallery-image-container">
                     <img :src="item.image_url" />
