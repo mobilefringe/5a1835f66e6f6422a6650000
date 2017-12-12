@@ -16,7 +16,7 @@
                 <div class="gallery-image-container">
                     <img :src="item.image_url" />
                 </div>
-                <h5>{{item.name}}</h5>
+                <h5 class="details-title">{{item.name}}</h5>
             </div>
         </div>
         <div class="row">
