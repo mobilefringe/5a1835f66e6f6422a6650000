@@ -78,6 +78,10 @@
                 },
                 landscapingGallery() {
                     
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "landscaping slideshow" })
+                    var repo_images = repo[0].images
+                    console.log(repo_images)
+                    return repo_images
                 },
                 architectureGallery() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "architecture slideshow" })
