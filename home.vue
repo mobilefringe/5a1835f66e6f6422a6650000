@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container">
+    <div>  <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);">
             <h1>Home</h1>    
         </div>
