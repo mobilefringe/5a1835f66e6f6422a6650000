@@ -19,7 +19,7 @@
                             <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="details-dates">{{ checkEventDates() }}</h5>
+                            <h5 class="details-dates">{{ checkEventDates(event) }}</h5>
                             <h2>{{ event.name }}</h2>
                             <p class="sub_title" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</p>
                             <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
