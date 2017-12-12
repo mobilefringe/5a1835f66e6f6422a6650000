@@ -9,11 +9,11 @@
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentEvent.name}}</h2>
                     <p class="details-description">{{currentEvent.description}}</p>
-                    <div v-if="currentEvent">
-                        <router-link to="/stores" active-class="active" exact>
-                            <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>
-                    </div>
+                    <!--<div v-if="currentEvent">-->
+                    <!--    <router-link to="/stores" active-class="active" exact>-->
+                    <!--        <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
+                    <!--    </router-link>-->
+                    <!--</div>-->
                     
                 </div>    
             </div>
