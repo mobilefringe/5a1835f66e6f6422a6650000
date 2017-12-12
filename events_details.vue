@@ -76,7 +76,6 @@
                 return {
                     currentEvent: null,
                     store_hours: [],
-                    hours: []
                 }
             },
             mounted () {
