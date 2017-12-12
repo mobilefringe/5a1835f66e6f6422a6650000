@@ -1,6 +1,6 @@
 <template>
     <div class="page-container">
-        <div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/800);">
+        <div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1200);">
             <h1>Home</h1>    
         </div>
     </div>
