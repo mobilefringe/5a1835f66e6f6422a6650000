@@ -1,6 +1,10 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <div class="margin-90"></div>
         <div class="row">
+            <div class="col-md-12">
+                <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
+            </div>
             <div class="col-md-8">
                 <h2>The History of NorthPark</h2>
                 <div class="visit-desc" v-if="history" v-html="history.body"></div>
