@@ -61,18 +61,14 @@
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
-                        centerMode: true,
                         cssEase: 'linear',
-                        dots: true,
+                        dots: false,
                         fade: true,
                         infinite: true,
                         slidesToShow: 1,
                         speed: 500,
-                        
                         prevArrow: '.prev',
-                        nextArrow: '.next',
-                        
-                        // Any other options that can be got from plugin documentation
+                        nextArrow: '.next'
                     }
                 }
             },
