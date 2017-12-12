@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <slick ref="slick" :options="slickOptions">
-                    <div v-for="banner in historyBanners" v-if="banners">
+                    <div v-for="banner in historyBanners" v-if="historyBanners">
                         <img :src="banner.image_url" class="" alt="">
                     </div>
                 </slick>
