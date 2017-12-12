@@ -27,8 +27,8 @@
             </div>
             <div class="col-md-4">
                 <div class="sidebar-left">
-                    <p>THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
-                    <p>-NANCY A. NASHER</p>
+                    <p class="quote">THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
+                    <p class="quote-byline">-NANCY A. NASHER</p>
                 </div>    
             </div>
             <div class="col-md-8">
