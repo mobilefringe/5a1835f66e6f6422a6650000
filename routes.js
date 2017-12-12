@@ -40,22 +40,6 @@ define([], function () {
         //         },
         //     ]
         // },
-        // {
-        //     path: '/promotions',
-        //     component: view('default'),
-        //     children: [
-        //         {
-        //             path: '',
-        //             component: view('promotions'),
-        //             name: 'promotionList'
-        //         },
-        //         {
-        //             path: ':id',
-        //             component: view('promotion_details'),
-        //             name: 'promotionDetails'
-        //         }
-        //     ]
-        // },
         {
             path: '/events',
             component: view('default'),
