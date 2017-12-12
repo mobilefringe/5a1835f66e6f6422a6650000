@@ -62,9 +62,15 @@
                     history: null,
                     anniversary: null,
                     slickOptions: {
+                        
+                        dots: true,
+                        infinite: true,
+                        speed: 300,
+
+  
                         slidesToShow: 1,
-                        dots : true,
-                        arrows:true,
+                 
+                        arrows: true,
                         prevArrow: '.prev',
                         nextArrow: '.next',
                         autoplay: false
