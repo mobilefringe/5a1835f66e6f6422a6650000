@@ -23,7 +23,13 @@
                 
             </div>
             <div class="col-md-4">
-                
+                <div class="sidebar">
+                    <div class="sidebar-container">
+                        <h5>Dates</h5>
+                        <p>{{currentEvent.start_date | moment("ddd D MMM", timezone)}}<br>
+                        to {{currentEvent.start_end | moment("ddd D MMM", timezone)}}
+                    </div>
+                </div>    
             </div>
         </div>
         <div class="row">
