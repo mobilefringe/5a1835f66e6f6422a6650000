@@ -12,33 +12,9 @@
             </div>
         </div>
         <div class="row">
-            <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
-            <div class="col-md-7" v-if="currentSelection">
+            <div class="col-md-12" v-if="currentSelection">
                 <div class="row" v-for="event in currentSelection">
-                    <div class="col-md-2">
-                        <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
-                    </div>
-                    <div class="col-md-10">
-                        <h5 class="details-dates">{{ checkEventDates(event) }}</h5>
-                        <h2>{{ event.name }}</h2>
-                        <p class="sub_title" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</p>
-                        <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
-                            <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                        </router-link>
-                    </div>
-                    <div class="col-md-12">
-                        <hr>    
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <!-- CALENDAR -->
-                <!--@change="onChange"-->
-                <lunar-calendar :firstDayOfWeek="parseInt(firstDayOfWeek)" :disableDaysBeforeToday="disableDaysBeforeToday" :defaultDate="defaultDate" :showLunar="showLunar" :showLunarButton="showLunarButton"></lunar-calendar>
-                <div class="category-select-container right">
-                    <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
+                    
                 </div>
             </div>
         </div>
@@ -51,9 +27,8 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-lunar-calendar"], function(Vue, moment, tz, VueMoment, Meta, vSelect, lunarCalendar) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function(Vue, moment, tz, VueMoment, Meta, vSelect) {
         Vue.use(Meta);
-        Vue.use(lunarCalendar);
         
         return Vue.component("photo-gallery-component", {
             template: template, // the variable template will be injected
