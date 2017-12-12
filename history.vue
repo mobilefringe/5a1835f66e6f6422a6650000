@@ -112,7 +112,8 @@
                 },
                 getHistoryBanners(){
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
-                    return repo
+                    console.log(repo)
+                    // return repo
                 }
             },
             methods: {
