@@ -55,9 +55,6 @@
                     hours: []
                 }
             },
-            // mounted: {
-            //     this.hours
-            // },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
@@ -72,7 +69,6 @@
                     var specialty = stores_by_category["Specialty Foods"]
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
                     var filtered_restaurants = _.orderBy(_.uniqBy(all_restaurants, function(o){ return o.name; }), function(o){ return o.name; })
-                    console.log(filtered_restaurants)
                     return filtered_restaurants
                 },
                 restaurants(){
@@ -99,7 +95,6 @@
             },
             methods: {
                 selectCategory(){
-                    console.log(this.selected)
                     if(this.selected.value == "restaurants"){
                         this.currentSelection = this.restaurants;
                     } else if (this.selected.value == "cafes") {
@@ -116,9 +111,6 @@
                     _.forEach(restaurant_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
                     });
-                    
-                    console.log(storeHours)
-                    
                     return storeHours
                 },
                 day_of_the_week(val_day){
