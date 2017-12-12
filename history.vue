@@ -69,7 +69,7 @@
                         fade: true,
                         infinite: true,
                         slidesToShow: 1,
-                        speed: 300,
+                        speed: 500,
                         
                         prevArrow: '.prev',
                         nextArrow: '.next',
