@@ -36,61 +36,61 @@
                                         <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
                                         <ul v-show="showStoresMenu" class="breadcrumb-menu">
                                             <router-link tag="li" to="/stores" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Store Directory</h5></a>
+                                                <a class="main-menu-link"><h5>Store Directory</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/dine" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Restaurants & Eateries</h5></a>
+                                                <a class="main-menu-link"><h5>Restaurants & Eateries</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">AMC</h5></a>
+                                                <a class="main-menu-link"><h5>AMC</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">New Doors</h5></a>
+                                                <a class="main-menu-link"><h5>New Doors</h5></a>
                                             </router-link>
                                         </ul>
                                         <ul v-show="showArtMenu" class="breadcrumb-menu">
                                             <router-link tag="li" to="/art" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Collection Overview</h5></a>
+                                                <a class="main-menu-link"><h5>Collection Overview</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Special Exhibitions</h5></a>
+                                                <a class="main-menu-link"><h5>Special Exhibitions</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Photo Gallery</h5></a>
+                                                <a class="main-menu-link"><h5>Photo Gallery</h5></a>
                                             </router-link>
                                         </ul>
                                         <ul v-show="showVisitMenu" class="breadcrumb-menu">
                                             <router-link tag="li" to="/pages/northpark-parking-valet-page" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Valet & Parking</h5></a>
+                                                <a class="main-menu-link"><h5>Valet & Parking</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/pages/northpark-concierge-services" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Concierge</h5></a>
+                                                <a class="main-menu-link"><h5>Concierge</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">NorthPark Gold & Gift Cards</h5></a>
+                                                <a class="main-menu-link"><h5>NorthPark Gold & Gift Cards</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/tourism" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Tourism</h5></a>
+                                                <a class="main-menu-link"><h5>Tourism</h5></a>
                                             </router-link>
                                             <router-link tag="li" to="/pages/northpark-contact-us" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Contact</h5></a>
+                                                <a class="main-menu-link"><h5>Contact</h5></a>
                                             </router-link>
                                         </ul>
                                         <ul v-show="showStoryMenu" class="breadcrumb-menu">
-                                            <router-link tag="li" to="/pages/northpark-parking-valet-page" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Valet & Parking</h5></a>
+                                            <router-link tag="li" to="/our_story" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>NorthPark Experience</h5></a>
                                             </router-link>
-                                            <router-link tag="li" to="/pages/northpark-concierge-services" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Concierge</h5></a>
+                                            <router-link tag="li" to="/history" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>History</h5></a>
                                             </router-link>
-                                            <router-link tag="li" to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">NorthPark Gold & Gift Cards</h5></a>
+                                            <router-link tag="li" to="" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>Landscaping</h5></a>
                                             </router-link>
-                                            <router-link tag="li" to="/tourism" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Tourism</h5></a>
+                                            <router-link tag="li" to="" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>Architecture</h5></a>
                                             </router-link>
-                                            <router-link tag="li" to="/pages/northpark-contact-us" active-class="active" exact>
-                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Contact</h5></a>
+                                            <router-link tag="li" to="" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>Photo Gallery</h5></a>
                                             </router-link>
                                         </ul>
                                     </div>
