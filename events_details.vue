@@ -10,7 +10,7 @@
                     <h2 class="details-store-name">{{currentEvent.name}}</h2>
                     <p class="details-description">{{currentEvent.description}}</p>
                     <div v-if="checkEventType(currentEvent.eventable_type)">
-                        <router-link to="/stores/{{currentEvent.store.slug}}" active-class="active" exact>
+                        <router-link to="/stores/currentEvent.store.slug" active-class="active" exact>
                             <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                     </div>
