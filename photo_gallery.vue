@@ -12,10 +12,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12" v-if="currentSelection">
-                <div class="row" v-for="event in currentSelection">
-                    
-                </div>
+            <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
+                <div>
+                    <img :src="{{item.iamge_url}}" />
+                    <h5>{{item.name}}</h5>
+                </div>    
             </div>
         </div>
         <div class="row">
