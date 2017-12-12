@@ -8,7 +8,7 @@
             <div class="col-md-8">
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentEvent.name}}</h2>
-                    <h5 class="details-dates">{{ checkEventDates(currentEvent.start_date) }}</h5>
+                    <h5 class="details-dates">{{ checkEventDates( currentEvent.start_date) | moment("MMM D", timezone) }}</h5>
                     <p class="details-description">{{currentEvent.description}}</p>
                 </div>    
             </div>
@@ -134,9 +134,8 @@
                         // return 
                     } else {
                         console.log("No!")
-                        var start_date = moment(this.currentEvent.start_date, "dddd, MMMM D, YYYY")  //"dddd, MMMM D, YYYY"
-                        var end_date = this.currentEvent.end_date | moment("dddd, MMMM D, YYYY")
-                        var multi_day = start_date + " to " + end_date
+
+                        var multi_day = this.currentEvent.start_date + " to " + this.currentEvent.end_date
                         return multi_day
                     }
                 }
