@@ -45,7 +45,7 @@
                         vm.$router.replace({ name: '404'});
                     });
                     //Anniversary
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/.json"}).then(response => {
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-50th-anniversary.json"}).then(response => {
                         vm.anniversary = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
