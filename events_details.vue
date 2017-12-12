@@ -1,7 +1,7 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
-        <div class="row" v-if="currentStore">
+        <div class="row" v-if="currentEvent">
             <div class="col-md-12">
                 <img :src="currentEvent.image_url" class="margin-60" alt="" />
             </div>
