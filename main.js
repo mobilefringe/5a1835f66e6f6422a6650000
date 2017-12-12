@@ -79,6 +79,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 showStoresMenu: false,
                 showArtMenu: false,
                 showVisitMenu: false,
+                showStoryMenu: false,
             }
         },
         // mounted () {
@@ -123,9 +124,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 }
                 if(this.$route.path == "/our_story") {
                     this.breadcrumb = "Our Story"
-                    this.showVisitMenu = true;
+                    this.showStoryMenu = true;
                 } else {
-                    this.showVisitMenu = false;
+                    this.showStoryMenu = false;
                 }
             }
         },
