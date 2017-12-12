@@ -20,7 +20,7 @@
                     <div class="gallery-image-container">
                         <img :src="item.image_url" />
                     </div>
-                    <div class="gallery-content-container" v-if="item.name">
+                    <div class="gallery-content-container">
                         <h5 class="details-title">{{item.name}}</h5>        
                     </div>
                 </div>
