@@ -46,7 +46,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
         Vue.use(Meta);
         return Vue.component("history-component", {
             template: template, // the variable template will be injected
@@ -55,7 +55,16 @@
                     currentPage: null,
                     historyBanners: null,
                     history: null,
-                    anniversary: null
+                    anniversary: null,
+                    slickOptions: {
+                        slidesToShow: 1,
+                        dots : true,
+                        arrows:true,
+                        prevArrow: '.prev',
+                        nextArrow: '.next',
+                        autoplay: false
+                        // Any other options that can be got from plugin documentation
+                    }
                 }
             },
             mounted () {
