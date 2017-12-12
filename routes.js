@@ -175,7 +175,7 @@ define([], function () {
                 {
                     path: '',
                     component: view('our_story'),
-                    name: 'ourStory'
+                    name: 'default'
                 },
                 {
                     path: '/history',
