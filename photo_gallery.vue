@@ -20,7 +20,10 @@
                     <div class="gallery-image-container">
                         <img :src="item.image_url" />
                     </div>
-                    <h5 class="details-title">{{item.name}}</h5>    
+                    <div class="gallery-content-container">
+                        <h5 class="details-title">{{item.name}}</h5>        
+                    </div>
+                    
                 </div>
             </div>
         </div>
