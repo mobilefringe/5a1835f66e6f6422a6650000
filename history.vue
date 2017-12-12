@@ -22,18 +22,17 @@
             <div class="col-md-12">
                 <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
             </div>
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <p>THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
+                    <p>-NANCY A. NASHER</p>
+                </div>    
+            </div>
             <div class="col-md-8">
                 <h2>The History of NorthPark</h2>
                 <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
             </div>
-            <div class="col-md-4">
-                <div class="sidebar">
-                    <p>EVERY COMPANY HAS A SPECIAL RESPONSIBILITY TO ENRICH THE LIVES OF ITS CUSTOMERS AND THE COMMUNITY. IT SHOULD SERVE AS A CATALYST TO LINK ART AND BUSINESS FOR THE BENEFIT OF ALL.</p>
-                    <p>
-                        -RAYMOND D. NASHER
-                    </p>
-                </div>    
-            </div>
+            
         </div>
         <div class="row">
             <div class="col-md-12">
