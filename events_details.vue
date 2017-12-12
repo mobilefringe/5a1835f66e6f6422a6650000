@@ -108,7 +108,6 @@
             },
             methods: {
                 checkEventType(val_eventable_type){
-                    console.log(this.currentEvent)
                     if(this.currentEvent.eventable_type == "Store"){
                         return true
                     }
