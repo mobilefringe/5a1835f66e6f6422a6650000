@@ -29,7 +29,7 @@
                 </div>    
             </div>
             <div class="col-md-8">
-                <h2>The History of NorthPark</h2>
+                <h2>The 50th Anniversary</h2>
                 <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
             </div>
             
