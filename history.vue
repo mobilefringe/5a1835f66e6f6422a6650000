@@ -3,6 +3,15 @@
         <div class="margin-90"></div>
         <div class="row">
             <div class="col-md-12">
+                <slick ref="slick" :options="slickOptions">
+                    <div v-for="banner in banners" v-if="banners">
+                        <div style="background-image:url(http://placehold.it/1920x500)" class="banner_image_div">
+                            <router-link :to="banner.url" class="banner_image_li"></router-link>
+                        </div>
+                        <!--<img :src="banner.image_url" class="" alt="">-->
+                    </div>
+                </slick>
+        
                 <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
             </div>
             <div class="col-md-8">
@@ -119,11 +128,16 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
-                getHistoryBanners(){
+                historyBanners() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
-                    console.log(repo)
-                    // return repo
-                }
+                    var repo_images = repo.images
+                    return repo_images
+                },
+                // getHistoryBanners(){
+                //     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
+                //     console.log(repo)
+                //     // return repo
+                // }
             },
             methods: {
                 day_of_the_week(val_day){
