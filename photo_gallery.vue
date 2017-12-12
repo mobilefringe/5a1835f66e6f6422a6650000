@@ -18,11 +18,10 @@
             <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
                 <div class="gallery-item-container">
                     <div class="gallery-image-container">
-                    <img :src="item.image_url" />
+                        <img :src="item.image_url" />
+                    </div>
+                    <h5 class="details-title">{{item.name}}</h5>    
                 </div>
-                <h5 class="details-title">{{item.name}}</h5>    
-                </div>
-                
             </div>
         </div>
         <div class="row">
