@@ -122,7 +122,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 } else {
                     this.showVisitMenu = false;
                 }
-                if(this.$route.path == "/our_story") {
+                if(this.$route.path == "/our-story") {
                     this.breadcrumb = "Our Story"
                     this.showStoryMenu = true;
                 } else {
