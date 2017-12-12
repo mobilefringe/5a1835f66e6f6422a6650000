@@ -2,7 +2,8 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="row">
             <div class="col-md-8">
-                <h2>History</h2>
+                <h2>The History of NorthPark</h2>
+                <div class="visit-desc" v-if="history" v-html="history.body"></div>
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
