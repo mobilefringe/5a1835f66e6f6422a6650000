@@ -178,22 +178,22 @@ define([], function () {
                     name: 'storeList'
                 },
                 {
-                    path: '/our-story/history',
+                    path: '/history',
                     component: view('history'),
                     name: 'history'
                 },
                 {
-                    path: '/our-story/landscaping',
+                    path: '/landscaping',
                     component: view('landscaping'),
                     name: 'landscaping'
                 },
                 {
-                    path: '/our-story/architecture',
+                    path: '/architecture',
                     component: view('architecture'),
                     name: 'architecture'
                 },
                 {
-                    path: '/our-story/photo-gallery',
+                    path: '/photo-gallery',
                     component: view('photo_gallery'),
                     name: 'photoGallery'
                 },
