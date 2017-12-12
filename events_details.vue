@@ -8,9 +8,9 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-2">
-                        <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
+                        <p class="details-promo-date">{{currentEvent.start_date | moment("ddd", timezone)}}</p>
+                        <p class="details-promo-day">{{currentEvent.start_date | moment("D", timezone)}}</p>
+                        <p class="details-promo-date">{{currentEvent.start_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-10">
                         <div class="details-store-info">
