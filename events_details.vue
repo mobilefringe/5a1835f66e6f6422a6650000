@@ -20,9 +20,12 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-container">
-                        <h5>Dates</h5>
+                        <h5>Event Dates</h5>
                         <p>{{currentEvent.start_date | moment("ddd D MMM", timezone)}}<br>
                         to {{currentEvent.start_end | moment("ddd D MMM", timezone)}}</p>
+                    </div>
+                    <div class="sidebar-container">
+                        <h5>Store Hours</h5>
                     </div>
                 </div>    
             </div>
@@ -41,7 +44,8 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    currentEvent: null
+                    currentEvent: null,
+                    store_hours: [],
                 }
             },
             mounted () {
