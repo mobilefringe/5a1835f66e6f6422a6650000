@@ -33,6 +33,15 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="sidebar-container" v-if="currentEvent && !currentEvent.store">
+                        <h5>Store Hours</h5>
+                        <ul class="details-hours-list">
+                            <li v-for="hour in store_hours">
+                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>    
             </div>
         </div>
