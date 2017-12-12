@@ -96,8 +96,6 @@
                         this.currentSelection = this.landscapingGallery;
                     } else if (this.selected.value == "architecture"){
                         this.currentSelection = this.architectureGallery;
-                    // } else {
-                    //     this.currentSelection = this.events
                     }
                 },
             },
