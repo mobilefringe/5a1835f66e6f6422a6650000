@@ -34,7 +34,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    selected: "All Events",
+                    selected: "History",
                     currentSelection: null,
                     time: moment(),
                     firstDayOfWeek: 0,
@@ -43,10 +43,11 @@
                     showLunar: false,
                     showLunarButton: false,
                     categoryOptions: [
-                        {'label':'All Events', 'value': 'all_events'},
-                        {'label':'NorthPark Events', 'value': 'events'},
-                        {'label':'In-Store Events', 'value': 'promotions'},
-                        {'label':'Holiday Events', 'value': 'holiday'}, 
+                        {'label':'History', 'value': 'events'},
+                        {'label':'50th Anniversary', 'value': 'anniversary'},
+                        {'label':'Event', 'value': 'event'}, 
+                        {'label':'Landscaping', 'value': 'landscaping'}, 
+                        {'label':'Architecture', 'value': 'architecture'}, 
                     ],
                 }
             },
