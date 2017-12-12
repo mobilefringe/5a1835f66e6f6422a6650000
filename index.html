@@ -207,7 +207,7 @@
                 <vue-simple-spinner  size="huge" message="One moment plaese..."></vue-simple-spinner>    
             </div>
             <router-view v-if="dataLoaded"></router-view>
-            <footer>
+            <footer v-show="isHomePage">
                 <div class="page-container">
                     <div class="footer-nav">
                         <div class="row">
