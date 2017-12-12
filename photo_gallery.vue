@@ -47,7 +47,7 @@
                 }
             },
             mounted () {
-                this.currentSelection = this.events;
+                this.currentSelection = this.historyGallery;
             },
             computed: {
                 property(){
@@ -63,37 +63,37 @@
                     var sorted = _.orderBy(merge, function(o) { return o.start_date })
                     return sorted
                 },
-                propertyEvents() {
-                    var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.start_date }); 
-                    return events
+                historyGallery() {
+                    
                 },
-                storeEvents() {
-                    var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.start_date });
-                    return promotions
+                anniversaryGallery() {
+                    
                 },
-                holidayEvents(){
-                   var holiday_events = [];
-                    _.forEach(this.$store.getters.processedEvents, function(value, key) {
-                        var tag_string = _.toLower(_.join(value.tag, ''));
-                        var holiday_string = _.includes(tag_string, "holiday");
-                        if(holiday_string === true){
-                            holiday_events.push(value);
-                        }
-                    });
-                    return holiday_events;
-                }
+                eventGallery() {
+                    
+                },
+                landscapingGallery() {
+                    
+                },
+                architectureGallery() {
+                    
+                },
             },
             methods: {
                 selectCategory(){
                     console.log(this.selected)
-                    if(this.selected.value == "events"){
-                        this.currentSelection = this.propertyEvents;
-                    } else if (this.selected.value == "promotions") {
-                        this.currentSelection = this.storeEvents;
-                    } else if (this.selected.value == "holiday"){
-                        this.currentSelection = this.holidayEvents;
-                    } else {
-                        this.currentSelection = this.events
+                    if(this.selected.value == "history"){
+                        this.currentSelection = this.historyGallery;
+                    } else if (this.selected.value == "anniversary") {
+                        this.currentSelection = this.anniversaryGallery;
+                    } else if (this.selected.value == "event"){
+                        this.currentSelection = this.eventGallery;
+                    } else if (this.selected.value == "landscaping"){
+                        this.currentSelection = this.landscapingGallery;
+                    } else if (this.selected.value == "architecture"){
+                        this.currentSelection = this.architectureGallery;
+                    // } else {
+                    //     this.currentSelection = this.events
                     }
                 },
             },
