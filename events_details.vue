@@ -6,21 +6,10 @@
                 <img :src="currentEvent.image_url" class="margin-60" alt="" />
             </div>
             <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-2">
-                        <p class="details-promo-date">{{currentEvent.start_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{currentEvent.start_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{currentEvent.start_date | moment("MMM", timezone)}}</p>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="details-store-info">
-                            <h2 class="details-store-name">{{currentEvent.name}}</h2>
-                            <p class="details-description">{{currentEvent.description}}</p>
-                            
-                        </div>    
-                    </div>
-                </div>
-                
+                <div class="details-store-info">
+                    <h2 class="details-store-name">{{currentEvent.name}}</h2>
+                    <p class="details-description">{{currentEvent.description}}</p>
+                </div>    
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
