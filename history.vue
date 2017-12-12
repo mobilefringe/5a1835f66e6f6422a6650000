@@ -53,9 +53,14 @@
             data: function() {
                 return {
                     currentPage: null,
+                    historyBanners: null,
                     history: null,
                     anniversary: null
                 }
+            },
+            mounted () {
+                this.historyBanners = this.findRepoByName
+                console.log(historyBanners)
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
