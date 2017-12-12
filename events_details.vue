@@ -83,6 +83,9 @@
             methods: {
                 checkEventType(val_eventable_type){
                     console.log(this.currentEvent)
+                    if(this.currentEvent.eventable_type == "Store"){
+                        return true
+                    }
                 },
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
