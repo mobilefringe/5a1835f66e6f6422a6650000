@@ -27,7 +27,7 @@
                     <div class="sidebar-container">
                         <h5>Store Hours</h5>
                         <ul class="details-hours-list">
-                            <li v-for="hour in hours">
+                            <li v-for="hour in store_hours">
                                {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                 </span>
                             </li>
