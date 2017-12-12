@@ -59,7 +59,7 @@
                 }
             },
             mounted () {
-                this.historyBanners = this.findRepoByName
+                this.historyBanners = this.getHistoryBanners
                 console.log(historyBanners)
             },
             beforeRouteEnter (to, from, next) {
