@@ -64,7 +64,10 @@
                     return sorted
                 },
                 historyGallery() {
-                    
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history slideshow" })
+                    var repo_images = repo[0].images
+                    console.log(repo_images)
+                    return repo_images
                 },
                 anniversaryGallery() {
                     
