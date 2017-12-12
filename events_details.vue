@@ -9,6 +9,12 @@
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentEvent.name}}</h2>
                     <p class="details-description">{{currentEvent.description}}</p>
+                    <div v-if="currentEvent">
+                        <router-link to="/stores" active-class="active" exact>
+                            <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
+                    
                 </div>    
             </div>
             <div class="col-md-4">
@@ -49,6 +55,7 @@
             },
             beforeRouteUpdate (to, from, next) {
                 this.currentEvent = this.findEventBySlug(to.params.id);
+                console.log(this.currentEvent)
                 if (this.currentEvent === null || this.currentEvent === undefined){
                     this.$router.replace({ name: '404'});
                 }
