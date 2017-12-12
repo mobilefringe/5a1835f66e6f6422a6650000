@@ -65,6 +65,7 @@
                         arrows: true,
                         autoplay: true,
                         centerMode: true,
+                        cssEase: 'linear',
                         dots: true,
                         fade: true,
                         infinite: true,
