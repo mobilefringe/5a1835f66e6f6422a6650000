@@ -30,6 +30,8 @@
             data: function() {
                 return {
                     currentPage: null,
+                    history: null,
+                    anniversary: null, 
                 }
             },
             // beforeRouteEnter (to, from, next) {
