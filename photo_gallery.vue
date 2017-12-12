@@ -55,7 +55,7 @@
         Vue.use(Meta);
         Vue.use(lunarCalendar);
         
-        return Vue.component("events-component", {
+        return Vue.component("photo-gallery-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
