@@ -23,7 +23,6 @@
                     <div class="gallery-content-container" v-if="item.name">
                         <h5 class="details-title">{{item.name}}</h5>        
                     </div>
-                    
                 </div>
             </div>
         </div>
