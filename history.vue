@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <slick ref="slick" :options="slickOptions">
                     <div v-for="banner in historyBanners" v-if="banners">
-                        <div style="background-image:url( {{banner.image_url}} )" class="">
+                        <div :style="background-image:url( {{banner.image_url}} )" class="">
                             <!--<router-link :to="banner.url" class="banner_image_li"></router-link>-->
                         </div>
                         <!--<img :src="banner.image_url" class="" alt="">-->
