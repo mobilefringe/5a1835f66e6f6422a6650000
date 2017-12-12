@@ -134,7 +134,7 @@
                         console.log("Yes!")
                         var one_day_event = start_date.format("dddd, MMMM D, YYYY")
                         console.log(one_day_event)
-                        // return 
+                        return one_day_event
                     } else {
                         console.log("No!")
 
