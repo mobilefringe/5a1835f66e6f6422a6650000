@@ -11,7 +11,7 @@
                 <p>Launch</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-60">
             <div class="col-md-12">
                 <p v-if="!currentSelection">Sorry, there are currently no images to display.</p>    
             </div>
@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>
+                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> Photo Gallery</p>
             </div>
         </div>
     </div>
