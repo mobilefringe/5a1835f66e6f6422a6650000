@@ -128,7 +128,7 @@
                     console.log(this.currentEvent)
                     if(this.currentEvent.start_date === this.currentEvent.end_date){
                         console.log("Yes!")
-                        var one_day_event = moment(this.currentEvent.start_date, "dddd, MMMM D YYYY", timezone)
+                        var one_day_event = this.currentEvent.start_date | moment("h A", timezone)
                         console.log(one_day_event)
                         // return 
                     } else {
