@@ -76,6 +76,23 @@
                                                 <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Contact</h5></a>
                                             </router-link>
                                         </ul>
+                                        <ul v-show="showStoryMenu" class="breadcrumb-menu">
+                                            <router-link tag="li" to="/pages/northpark-parking-valet-page" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Valet & Parking</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/pages/northpark-concierge-services" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Concierge</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">NorthPark Gold & Gift Cards</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/tourism" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Tourism</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/pages/northpark-contact-us" active-class="active" exact>
+                                                <a class="main-menu-link"><h5 @click="show_menu = !show_menu">Contact</h5></a>
+                                            </router-link>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div v-if="show_menu" class="menu-container">
