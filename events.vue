@@ -124,7 +124,6 @@
                     }
                 },
                 checkEventDates(event){
-                    console.log(event)
                     var timezone = this.timezone
                     var start_date = moment(event.start_date).tz(timezone).format("MM-DD-YYYY")
                     var end_date = moment(event.end_date).tz(timezone).format("MM-DD-YYYY")
