@@ -75,7 +75,7 @@
                 }
             },
             watch: {
-                currentStore: function() {
+                currentEvent: function() {
                     var vm = this;
                     var storeHours = [];
                     _.forEach(this.currentStore.store_hours, function(value, key) {
