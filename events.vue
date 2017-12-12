@@ -19,7 +19,7 @@
                         <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-10">
-                        <h5 class="details-dates">{{event.start_date | moment("MMMM D", timezone)}} - {{event.end_date | moment("MMMM D", timezone)}}</h5>
+                        <h5 class="details-dates">{{ checkEventDates() }}</h5>
                         <h2>{{ event.name }}</h2>
                         <p class="sub_title" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</p>
                         <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
@@ -122,6 +122,18 @@
                         this.currentSelection = this.events
                     }
                 },
+                checkEventDates(currentEvent){
+                    var timezone = this.timezone
+                    var start_date = moment(this.currentEvent.start_date).tz(timezone).format("MM-DD-YYYY")
+                    var end_date = moment(this.currentEvent.end_date).tz(timezone).format("MM-DD-YYYY")
+                    if(start_date === end_date){
+                        var one_day_event = moment(start_date).format("dddd, MMMM D, YYYY")
+                        return one_day_event
+                    } else {
+                        var multi_day_event = moment(start_date).format("dddd, MMMM D, YYYY") + " to " + moment(end_date).format("dddd, MMMM D, YYYY")
+                        return multi_day_event
+                    }
+                }
             },
         });
     });
