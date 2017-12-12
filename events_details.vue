@@ -128,18 +128,17 @@
                 checkEventDates(currentEvent){
                     var timezone = this.timezone
                     var start_date = moment(this.currentEvent.start_date).tz(timezone).format("MM-DD-YYYY")
-                    // moment(this.currentEvent.start_date | "MM-DD-YYYY", timezone)
                     var end_date = moment(this.currentEvent.end_date).tz(timezone).format("MM-DD-YYYY")
                     console.log(start_date, end_date)
                     if(start_date === end_date){
                         console.log("Yes!")
-                        var one_day_event = this.currentEvent.start_date | moment("dddd, MMMM D, YYYY")
+                        var one_day_event = start_date
                         console.log(one_day_event)
                         // return 
                     } else {
                         console.log("No!")
 
-                        var multi_day = this.currentEvent.start_date + " to " + this.currentEvent.end_date
+                        var multi_day = start_date + " to " + end_date
                         return multi_day
                     }
                 }
