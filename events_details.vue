@@ -131,7 +131,6 @@
                     var end_date = moment(this.currentEvent.end_date).tz(timezone).format("MM-DD-YYYY")
                     console.log(start_date, end_date)
                     if(start_date === end_date){
-                        console.log("Yes!")
                         var one_day_event = moment(start_date).format("dddd, MMMM D, YYYY")
                         return one_day_event
                     } else {
