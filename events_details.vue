@@ -9,11 +9,11 @@
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentEvent.name}}</h2>
                     <p class="details-description">{{currentEvent.description}}</p>
-                    <!--<div v-if="currentEvent.eventable_type">-->
-                    <!--    <router-link to="/stores" active-class="active" exact>-->
-                    <!--        <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
-                    <!--    </router-link>-->
-                    <!--</div>-->
+                    <div v-if="checkEventType(currentEvent.eventable_type)">
+                        <router-link to="/stores" active-class="active" exact>
+                            <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
                     
                 </div>    
             </div>
@@ -82,7 +82,7 @@
             },
             methods: {
                 checkEventType(val_eventable_type){
-                    
+                    console.log(this.currentEvent)
                 },
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
