@@ -59,7 +59,8 @@
                 }
             },
             mounted () {
-                this.currentEvent    
+                this.currentEvent   
+                this.timezone
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
