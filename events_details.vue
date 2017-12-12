@@ -133,12 +133,11 @@
                     if(start_date === end_date){
                         console.log("Yes!")
                         var one_day_event = moment(start_date).format("dddd, MMMM D, YYYY")
-                        console.log(one_day_event)
                         return one_day_event
                     } else {
                         console.log("No!")
 
-                        var multi_day = start_date + " to " + end_date
+                        var multi_day = moment(start_date).format("dddd, MMMM D, YYYY") + " to " + moment(end_date).format("dddd, MMMM D, YYYY")
                         return multi_day
                     }
                 }
