@@ -8,7 +8,7 @@
             <div class="col-md-8">
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentEvent.name}}</h2>
-                    <h5 class="details-dates">{{currentEvent.start_date | moment("dddd, MMMM D", timezone)}} to {{currentEvent.start_end | moment("dddd, MMMM D", timezone)}}</h5>
+                    <h5 class="details-dates">{{currentEvent.start_date | moment("dddd, MMMM D YYYY", timezone)}} to {{currentEvent.start_end | moment("dddd, MMMM D YYYY", timezone)}}</h5>
                     <p class="details-description">{{currentEvent.description}}</p>
                 </div>    
             </div>
