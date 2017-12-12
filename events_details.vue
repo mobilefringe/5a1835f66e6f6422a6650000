@@ -26,6 +26,12 @@
                     </div>
                     <div class="sidebar-container">
                         <h5>Store Hours</h5>
+                        <ul class="details-hours-list">
+                            <li v-for="hour in hours">
+                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                 </div>    
             </div>
@@ -66,6 +72,16 @@
                 console.log(this.currentEvent)
                 if (this.currentEvent === null || this.currentEvent === undefined){
                     this.$router.replace({ name: '404'});
+                }
+            },
+            watch: {
+                currentStore: function() {
+                    var vm = this;
+                    var storeHours = [];
+                    _.forEach(this.currentStore.store_hours, function(value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    this.store_hours = storeHours;
                 }
             },
             computed: {
