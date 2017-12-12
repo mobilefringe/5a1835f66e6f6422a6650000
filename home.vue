@@ -24,9 +24,6 @@
                 },
                 processedStores() {
                     return this.$store.getters.processedStores;
-                },
-                findRepoByName(){
-                    
                 }
             },
             methods: {
