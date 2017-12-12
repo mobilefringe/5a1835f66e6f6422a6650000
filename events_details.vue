@@ -24,7 +24,7 @@
                         <p>{{currentEvent.start_date | moment("ddd D MMM", timezone)}}<br>
                         to {{currentEvent.start_end | moment("ddd D MMM", timezone)}}</p>
                     </div>
-                    <div class="sidebar-container" v-if="currentEvent && currentEvent.store.store_hours">
+                    <div class="sidebar-container" v-if="currentEvent && currentEvent.store">
                         <h5>Store Hours</h5>
                         <ul class="details-hours-list">
                             <li v-for="hour in store_hours">
