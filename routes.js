@@ -192,6 +192,11 @@ define([], function () {
                     component: view('architecture'),
                     name: 'architecture'
                 },
+                {
+                    path: '/our-story/photo-gallery',
+                    component: view('photo_gallery'),
+                    name: 'photoGallery'
+                },
             ]
         },
         {
