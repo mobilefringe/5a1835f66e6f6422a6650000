@@ -84,6 +84,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 showArtMenu: false,
                 showVisitMenu: false,
                 showStoryMenu: false,
+                showHolidayMenu: false,
             }
         },
         // mounted () {
