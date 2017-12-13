@@ -152,7 +152,7 @@ define([], function () {
                 },
                 {
                     path: '/our-story/photo-gallery',
-                    component: view('photo_gallery'),
+                    component: view('story_photo_gallery'),
                     name: 'photoGallery'
                 },
             ]
