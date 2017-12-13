@@ -138,6 +138,11 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 } else {
                     this.showStoryMenu = false;
                 }
+                if(this.$route.path == "/holiday") {
+                    this.showHolidayMenu = true;
+                } else {
+                    this.showHolidayMenu = false;
+                }
             }
         },
         computed: {
