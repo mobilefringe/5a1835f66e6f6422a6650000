@@ -2,21 +2,21 @@
     <div>  <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="home-banner-container">
             <!-- DYNAMIC BANNERS -->
-            <slick ref="slick" :options="slickOptions">
-                <div v-for="banner in homeBanners" v-if="homeBanners">
-                    <router-link :to="banner.url" class="">
-                        <div class="home-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
-                    </router-link>
-                </div>
-            </slick>
-        
             <!--<slick ref="slick" :options="slickOptions">-->
             <!--    <div v-for="banner in homeBanners" v-if="homeBanners">-->
             <!--        <router-link :to="banner.url" class="">-->
-            <!--            <div class="home-banner" style="background-image: url(https://picsum.photos/1920/1400)"></div>-->
+            <!--            <div class="home-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
             <!--        </router-link>-->
             <!--    </div>-->
             <!--</slick>-->
+        
+            <slick ref="slick" :options="slickOptions">
+                <div v-for="banner in homeBanners" v-if="homeBanners">
+                    <router-link :to="banner.url" class="">
+                        <div class="home-banner" style="background-image: url(https://picsum.photos/1920/1400)"></div>
+                    </router-link>
+                </div>
+            </slick>
         </div>
     </div>
 </template>
