@@ -44,7 +44,7 @@
                         fade: true,
                         infinite: true,
                         slidesToShow: 1,
-                        speed: 1500,
+                        speed: 2000,
                         prevArrow: '.prev',
                         nextArrow: '.next'
                     }
