@@ -36,14 +36,10 @@
                 property(){
                     return this.$store.getters.getProperty;
                 },
-                processedStores() {
-                    return this.$store.getters.processedStores;
-                }
+                
             },
             methods: {
-                onOptionSelect(option) {
-                    console.log('Selected option:', option)
-                }
+                
             }
         })
     })
