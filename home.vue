@@ -3,7 +3,7 @@
         <!--<div  style="background-image: url(https://picsum.photos/1920/1400);"></div>-->
         <slick ref="slick" :options="slickOptions">
             <div v-for="banner in homeBanners" v-if="homeBanners">
-                <div class="home-banner-container" :style="styleObject">
+                <div class="home-banner-container" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }">
 
                     <router-link :to="banner.url" class=""></router-link>
                 </div>
@@ -31,9 +31,6 @@
                         speed: 500,
                         prevArrow: '.prev',
                         nextArrow: '.next'
-                    },
-                    styleObject: {
-                        backgroundImage: 'https://picsum.photos/1920/1400'
                     }
                 }
             },
