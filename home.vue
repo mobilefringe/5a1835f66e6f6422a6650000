@@ -12,7 +12,7 @@
         
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in homeBanners" v-if="homeBanners">
-                    <router-link :to="//banner.url" class="">
+                    <router-link :to="banner.url" class="">
                         <div class="home-banner" style="background-image: url(https://picsum.photos/1920/1400)"></div>
                     </router-link>
                 </div>
