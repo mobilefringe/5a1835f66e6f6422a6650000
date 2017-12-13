@@ -7,7 +7,7 @@
                     <div class="columns">
                         <router-link :to="banner.url" class="">
                             <div class="home-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
-                            <div class="hero-text">Dummy text in here 1</div>
+                            <div class="hero-text">{{ banner.name }}</div>
                         </router-link>
                     </div>
                 </div>
