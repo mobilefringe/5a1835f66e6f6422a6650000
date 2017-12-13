@@ -32,9 +32,9 @@
                         prevArrow: '.prev',
                         nextArrow: '.next'
                     },
-                    // styleObject: {
-                    //     backgroundImage: this.homeBanners.image_url
-                    // }
+                    styleObject: {
+                        backgroundImage: 'https://picsum.photos/1920/1400'
+                    }
                 }
             },
             computed: {
