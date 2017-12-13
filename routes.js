@@ -195,17 +195,22 @@ define([], function () {
                 {
                     path: '',
                     component: view('holiday'),
-                    name: 'storeList'
+                    name: 'holiday'
                 },
                 {
                     path: '/holiday/performances',
                     component: view('performances'),
-                    name: 'storeList'
+                    name: ''
                 },
                 {
                     path: '/holiday/events',
                     component: view('holiday_events'),
-                    name: 'storeList'
+                    name: 'holidayEvents'
+                },
+                {
+                    path: '/holiday/activities',
+                    component: view('holiday_activities'),
+                    name: 'holidayActivities'
                 },
             ]
         },
