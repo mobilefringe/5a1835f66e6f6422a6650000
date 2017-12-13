@@ -197,6 +197,16 @@ define([], function () {
                     component: view('holiday'),
                     name: 'storeList'
                 },
+                {
+                    path: '/holiday/performances',
+                    component: view('performances'),
+                    name: 'storeList'
+                },
+                {
+                    path: '/holiday/events',
+                    component: view('holiday_events'),
+                    name: 'storeList'
+                },
             ]
         },
         {
