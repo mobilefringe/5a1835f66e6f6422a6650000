@@ -60,7 +60,7 @@
                     console.log(repo_images)
                     return repo_images
                 },
-            },
+            }
         });
     });
 </script>
