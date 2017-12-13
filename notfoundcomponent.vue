@@ -41,7 +41,7 @@
         return Vue.component("not-found-component", {
             template: template, // the variable template will be injected
             data: function() {
-                return {"text": "Oops! The page you are looking for cannot be found."};
+                return {"text": "The page you are looking for cannot be found."};
             },
             computed: {
                 property(){
