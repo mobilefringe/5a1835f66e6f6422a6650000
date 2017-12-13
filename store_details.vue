@@ -92,6 +92,9 @@
                     hours: [],
                 }
             },
+            mounted () {
+                this.currentStore   
+            },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -144,6 +147,7 @@
             },
             methods: {
                 checkStoreType(val_category_name){
+                    console.log
                     var category_name = this.currentstore.category_name
                     if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
                         true;
