@@ -135,30 +135,16 @@ define([], function () {
                 },
             ],
         },
-        // {
-        //     path: '/tourism',
-        //     component: view('default'),
-        //     meta: {
-        //         breadcrumb: 'Visit',
-        //     },
-        //     children: [
-        //         {
-        //             path: '',
-        //             component: view('tourism'),
-        //             name: 'storeList'
-        //         },
-        //     ]
-        // },
         {
             path: '/our-story',
-            component: view('our_story'),
+            component: view('default'),
             meta: {
                 breadcrumb: 'Our Story',
             },
             children: [
                 {
                     path: '',
-                    component: view('default'),
+                    component: view('our_story'),
                     name: 'default'
                 },
                 {
