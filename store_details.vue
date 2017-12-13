@@ -74,7 +74,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;{{currentStore.name }}</p>
+                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="checkStoreType(val_category_name)"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>{{currentStore.name }}</p>
             </div>
         </div>
     </div>
@@ -143,12 +143,12 @@
                 },
             },
             methods: {
-                checkStoreType(val_eventable_type){
+                checkStoreType(val_category_name){
                     var category_name = this.currentstore.category_name
                     if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
-                        this.isDine = true;
+                        true;
                     } else {
-                        this.isDine = false;
+                        false;
                     }
                 },
                 truncate(val_description){
