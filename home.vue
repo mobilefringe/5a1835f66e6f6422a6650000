@@ -32,9 +32,9 @@
                         prevArrow: '.prev',
                         nextArrow: '.next'
                     },
-                    styleObject: {
-                        backgroundImage: this.homeBanners.image_url
-                    }
+                    // styleObject: {
+                    //     backgroundImage: this.homeBanners.image_url
+                    // }
                 }
             },
             computed: {
