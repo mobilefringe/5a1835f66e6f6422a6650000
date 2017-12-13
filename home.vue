@@ -2,7 +2,7 @@
     <div>  <!-- for some reason if you do not put an outer container div this component template will not render -->
         <!--<div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);"></div>-->
         <slick ref="slick" :options="slickOptions">
-            <div v-for="banner in historyBanners" v-if="historyBanners">
+            <div v-for="banner in homeBanners" v-if="historyBanners">
                 <div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);"></div>
                 <img :src="banner.image_url" class="" alt="">
                 <h5 class="details-title">{{ banner.name }}</h5>
@@ -37,7 +37,10 @@
                 property(){
                     return this.$store.getters.getProperty;
                 },
-                
+                homeBanners () {
+                    console.log(_.orderBy(this.$store.state.results.banners, ['position'], ['asc']));
+                    return _.orderBy(this.$store.state.results.banners, ['position'], ['asc']);
+                },
             },
             methods: {
                 
