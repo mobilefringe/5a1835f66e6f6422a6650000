@@ -5,8 +5,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- QUOTE -->
-                    <h1 class="art-quote">NorthPark Centre is one of the Seven Retail Wonders of the Modern World.</h1>
-                    <p class="art-quote-subtext">Shopping Centers Today</p>
+                    <h1 class="art-quote">NorthPark Centre transforms into a magical winter wonderland for the holiday season.</h1>
+                    <p class="art-quote-subtext">John Doe</p>
                 </div>
             </div>
             <div class="row image-row">
