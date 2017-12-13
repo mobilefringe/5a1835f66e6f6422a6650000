@@ -41,7 +41,7 @@
                         autoplaySpeed: 3000,
                         // cssEase: 'linear',
                         dots: false,
-                        // fade: true,
+                        fade: true,
                         infinite: true,
                         slidesToShow: 1,
                         speed: 1500,
