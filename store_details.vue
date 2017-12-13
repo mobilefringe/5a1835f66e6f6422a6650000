@@ -129,12 +129,12 @@
                     
                     if(this.currentstore.category_name != null) {
                         console.log(this.currentstore.category_name)
-                        // var category_name = this.currentstore.category_name
-                        // if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
-                        //     true;
-                        // } else {
-                        //     false;
-                        // }    
+                        var category_name = this.currentstore.category_name
+                        if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
+                            this.isDine = true;
+                        } else {
+                            this.isDine = false;
+                        }    
                     }
                 }
             },
