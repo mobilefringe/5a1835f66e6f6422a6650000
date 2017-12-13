@@ -38,6 +38,7 @@
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
+                        autoplaySpeed: 3000,
                         // cssEase: 'linear',
                         dots: false,
                         // fade: true,
