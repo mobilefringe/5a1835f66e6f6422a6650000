@@ -94,8 +94,6 @@
             },
             mounted () {
                 this.currentStore   
-                this.$breadcrumbs
-                console.log(this.$breadcrumbs)
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
@@ -114,6 +112,7 @@
             },
             watch: {
                 currentStore: function() {
+                    console.log(this.currentStore)
                     var vm = this;
                     var temp = [];
                     _.forEach(this.currentStore.promotions, function(value, key) {
