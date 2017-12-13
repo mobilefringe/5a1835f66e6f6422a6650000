@@ -28,18 +28,6 @@ define([], function () {
                 }
             ]
         },
-        // {
-        //     path: '/dine',
-        //     component: view('default'),
-            
-        //     children: [
-        //         {
-        //             path: '',
-        //             component: view('dine'),
-        //             name: 'dineList'
-        //         },
-        //     ]
-        // },
         {
             path: '/events',
             component: view('default'),
