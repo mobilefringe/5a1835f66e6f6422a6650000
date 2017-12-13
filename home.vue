@@ -43,7 +43,7 @@
                         // fade: true,
                         infinite: true,
                         slidesToShow: 1,
-                        speed: 1000,
+                        speed: 1200,
                         prevArrow: '.prev',
                         nextArrow: '.next'
                     }
