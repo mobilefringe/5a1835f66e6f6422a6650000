@@ -34,19 +34,19 @@
   /*  outline: none;*/
   /*}*/
   
-  .slider {
-    box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
-  }
+    .slider {
+        box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
+    }
   
-  .slider-track {
-    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
-  }
+    .slider-track {
+        transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+    }
   
-  .item {
-    height: 100%;
-    position: relative;
-    z-index: 1;
-    
+    .item {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+    }
     img {
       width: 100%;
       transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
