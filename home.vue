@@ -3,7 +3,7 @@
         <!--<div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);"></div>-->
         <slick ref="slick" :options="slickOptions">
             <div v-for="banner in homeBanners" v-if="homeBanners">
-                <div class="home-banner-container" :style="background-image: url(banner.image_url);"></div>
+                <div class="home-banner-container" style="background-image: url({{banner.image_url}});"></div>
                 <img :src="banner.image_url" class="" alt="">
                 
             </div>
