@@ -1,7 +1,7 @@
 <template>
     <div class="page-container">
         <div class="margin-90"></div>
-        <div class="row">
+        <div class="row margin-30">
             <div class="col-md-8">
                 <h2>{{text}}</h2>
             </div>
