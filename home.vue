@@ -1,8 +1,13 @@
 <template>
     <div>  <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);">
-  
-        </div>
+        <div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);"></div>
+        <slick ref="slick" :options="slickOptions">
+            <div v-for="banner in historyBanners" v-if="historyBanners">
+                <img :src="banner.image_url" class="" alt="">
+                <h5 class="details-title">{{ banner.name }}</h5>
+            </div>
+        </slick>
+        
     </div>
 </template>
 
