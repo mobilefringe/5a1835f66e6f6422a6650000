@@ -127,30 +127,10 @@
                 hours(){
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
-                },
-                restaurants(){
-                    var stores_by_category = this.$store.getters.storesByCategoryName;
-                    var cafes = stores_by_category["NorthPark Cafés"]
-                    var restaurants = stores_by_category["Restaurants / Beverages"]
-                    var specialty = stores_by_category["Specialty Foods"]
-                    var all_restaurants = _.concat(cafes, restaurants, specialty)
-                    var filtered_restaurants = _.uniqBy(all_restaurants, function(o){ return o.name; })
-                    return filtered_restaurants
                 }
             },
             methods: {
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
-                },
-                changeItem(event) {
-                    this.selected = `${event.target.value}`
-                    console.log("I've changed")
-                    console.log(this.selected)
-                    
-                    // var store_id = this.${event.target.value}
-                    console.log(store_id)
-                }
+                
             }
         });
     });
