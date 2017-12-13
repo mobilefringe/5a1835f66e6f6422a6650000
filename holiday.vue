@@ -7,10 +7,11 @@
                     <!-- QUOTE -->
                     <h1 class="art-quote">NorthPark Centre transforms into a magical winter wonderland for the holiday season.</h1>
                     <p class="art-quote-subtext">John Doe</p>
+                    <div class="hours-management" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
             </div>
             <div class="row image-row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="hover-container">
                         <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
                     	<div class="hover-text-container hover-scale">
@@ -18,7 +19,7 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="hover-container">
                         <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
                     	<div class="hover-text-container hover-scale">
@@ -26,7 +27,15 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
+                    <div class="hover-container">
+                        <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
+                    	<div class="hover-text-container hover-scale">
+                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
+                    	</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
                     <div class="hover-container">
                         <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
                     	<div class="hover-text-container hover-scale">
@@ -47,7 +56,7 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="hours-management" v-if="currentPage" v-html="currentPage.body"></div>
+                    
                 </div>
             </div>
             <div class="row image-row">
