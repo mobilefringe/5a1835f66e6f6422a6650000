@@ -48,7 +48,7 @@
         <div v-if="currentStore && currentStore.total_published_promos > 0">
             <div class="row">
                 <div class="col-md-12 details-promo-header">
-                    <h5>Current Promotions</h5>
+                    <h5>Current Events</h5>
                 </div>
             </div>
             <div v-for="promo in promotions" v-if="promotions">
