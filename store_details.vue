@@ -99,7 +99,6 @@
                 next(vm => {
                     // access to component instance via `vm`
                     vm.currentStore = vm.findStoreBySlug(to.params.id);
-                    console.log(vm.currentStore)
                     if (vm.currentStore === null || vm.currentStore === undefined){
                         vm.$router.replace({ name: '404'});
                     }
@@ -107,7 +106,6 @@
             },
             beforeRouteUpdate(to, from, next) {
                 this.currentStore = this.findStoreBySlug(to.params.id);
-                console.log(this.currentStore)
                 if (this.currentStore === null || this.currentStore === undefined){
                     this.$router.replace({ name: '404'});
                 }
@@ -127,6 +125,7 @@
                     });
                     this.hours = storeHours;
                     
+                    console.log(this.currentStore)
                     if(this.currentstore.category_name != null) {
                         console.log(this.currentstore.category_name)
                         var category_name = this.currentstore.category_name
