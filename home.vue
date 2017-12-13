@@ -3,7 +3,7 @@
         <!--<div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);"></div>-->
         <slick ref="slick" :options="slickOptions">
             <div v-for="banner in homeBanners" v-if="homeBanners">
-                <div class="home-banner-container" :style="{ background-image: url(' + banner.image_url + ') }">
+                <div class="home-banner-container" :style="styleObject">
 
                     <router-link :to="banner.url" class=""></router-link>
                 </div>
@@ -36,8 +36,6 @@
                         nextArrow: '.next'
                     },
                     styleObject: {
-                        color: 'red',
-                        fontSize: '13px'
                         backgroundImage: this.homeBanners.image_url
                     }
                 }
