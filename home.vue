@@ -8,7 +8,7 @@
                         <router-link :to="banner.url" class="">
                             <div class="home-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                             <!--<div class="hero-text">{{ banner.name }}</div>-->
-                            <!--<div class="hero-text">The Art of Shopping</div>-->
+                            <div class="hero-text">The Art of Shopping</div>
                         </router-link>
                     </div>
                 </div>
