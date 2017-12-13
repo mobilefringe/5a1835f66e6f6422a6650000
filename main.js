@@ -116,7 +116,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 } else {
                     this.isHomePage = true;
                 }
-                if(this.$route.path == "/stores" || this.$route.path == "/dine") {
+                if(this.$route.path == "/stores" || this.$route.path == "/dine" || this.$route.path == "/new-stores") {
                     this.showStoresMenu = true;
                 } else {
                     this.showStoresMenu = false;
