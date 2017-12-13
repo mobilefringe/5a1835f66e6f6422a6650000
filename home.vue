@@ -11,8 +11,8 @@
             <!--</slick>-->
         
             <slick ref="slick" :options="slickOptions">
-                <div class="columns">
-                    <div v-for="banner in homeBanners" v-if="homeBanners">
+                <div v-for="banner in homeBanners" v-if="homeBanners">
+                    <div class="columns">
                         <router-link :to="banner.url" class="">
                             <div class="home-banner" style="background-image: url(https://picsum.photos/1920/1400)"></div>
                             <div class="hero-text">Dummy text in here 1</div>
@@ -23,12 +23,12 @@
             
             
             
-            <div class="hero-slider">
-  <div class="columns">
-    <div class="hero-image" style="background-image: url('http://lorempixel.com/output/city-q-c-1900-500-6.jpg')">      
-    </div>
+  <!--          <div class="hero-slider">-->
+  <!--<div class="columns">-->
+  <!--  <div class="hero-image" style="background-image: url('http://lorempixel.com/output/city-q-c-1900-500-6.jpg')">      -->
+  <!--  </div>-->
     
-  </div>
+  <!--</div>-->
         </div>
     </div>
 </template>
