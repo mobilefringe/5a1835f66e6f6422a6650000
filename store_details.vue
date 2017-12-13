@@ -74,7 +74,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if=""><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span><span v-if="currentStore">{{currentStore.name }}</span></p>
+                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="isDine"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span><span v-if="currentStore">{{currentStore.name }}</span></p>
             </div>
         </div>
     </div>
@@ -153,7 +153,7 @@
                 },
                 timezone() {
                     return this.$store.getters.getTimezone;
-                },
+                }
             },
             methods: {
                 truncate(val_description){
