@@ -32,6 +32,10 @@
                     <div class="sidebar-container" v-if="currentStore && currentStore.manager_name">
                         <h5>Manager</h5>
                         <p>{{currentStore.manager_name}}</p>
+                    </div>
+                    <div class="sidebar-container" v-if="currentStore && currentStore.manager_name">
+                        <h5>Manager</h5>
+                        <p>{{currentStore.manager_name}}</p>
                     </div>    
                 </div>
                 
@@ -78,8 +82,6 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    title: "MM with Vue.js!",
-                    description: "An example of integration of Mall Maverick with Vue.js",
                     currentStore: null,
                     promotions : [],
                     hours: [],
@@ -89,6 +91,7 @@
                 next(vm => {
                     // access to component instance via `vm`
                     vm.currentStore = vm.findStoreBySlug(to.params.id);
+                    console.log(vm.currentStore)
                     if (vm.currentStore === null || vm.currentStore === undefined){
                         vm.$router.replace({ name: '404'});
                     }
@@ -96,6 +99,7 @@
             },
             beforeRouteUpdate(to, from, next) {
                 this.currentStore = this.findStoreBySlug(to.params.id);
+                console.log(this.currentStore)
                 if (this.currentStore === null || this.currentStore === undefined){
                     this.$router.replace({ name: '404'});
                 }
