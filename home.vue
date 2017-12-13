@@ -3,15 +3,12 @@
         <!--<div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);"></div>-->
         <slick ref="slick" :options="slickOptions">
             <div v-for="banner in homeBanners" v-if="homeBanners">
-                <div class="home-banner-container" :style="styleObject">
+                <div :style="styleObject">
 
                     <router-link :to="banner.url" class=""></router-link>
                 </div>
-                <img :src="banner.image_url" class="" alt="">
-                
             </div>
         </slick>
-        
     </div>
 </template>
 <div v-bind:style="styleObject"></div>
