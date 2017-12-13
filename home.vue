@@ -51,17 +51,11 @@
                 }
             },
             computed: {
-                property(){
-                    return this.$store.getters.getProperty;
-                },
                 homeBanners () {
                     console.log(_.orderBy(this.$store.state.results.banners, ['position'], ['asc']));
                     return _.orderBy(this.$store.state.results.banners, ['position'], ['asc']);
                 },
             },
-            methods: {
-                
-            }
         })
     })
 </script>
