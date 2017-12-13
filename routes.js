@@ -117,7 +117,7 @@ define([], function () {
                     name: 'storeList'
                 },
                 {
-                    path: '/tourism',
+                    path: '/visit/tourism',
                     component: view('tourism'),
                     name: 'tourism'
                 },
@@ -136,22 +136,22 @@ define([], function () {
                     name: 'default'
                 },
                 {
-                    path: '/history',
+                    path: '/our-story/history',
                     component: view('history'),
                     name: 'history'
                 },
                 {
-                    path: '/landscaping',
+                    path: '/our-story/landscaping',
                     component: view('landscaping'),
                     name: 'landscaping'
                 },
                 {
-                    path: '/architecture',
+                    path: '/our-story/architecture',
                     component: view('architecture'),
                     name: 'architecture'
                 },
                 {
-                    path: '/photo-gallery',
+                    path: '/our-story/photo-gallery',
                     component: view('photo_gallery'),
                     name: 'photoGallery'
                 },
