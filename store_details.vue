@@ -94,6 +94,8 @@
             },
             mounted () {
                 this.currentStore   
+                this.$breadcrumbs
+                console.log(this.$breadcrumbs)
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
