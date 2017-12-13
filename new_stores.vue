@@ -1,14 +1,14 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-60"></div>
-        <div class="row margin-30">
-            <div class="col-md-6">
-                <div class="category-select-container">
-                    <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
-                </div>
-            </div>
-            <div class="col-md-6"></div>
-        </div>
+        <!--<div class="row margin-30">-->
+        <!--    <div class="col-md-6">-->
+        <!--        <div class="category-select-container">-->
+        <!--            <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    -->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    <div class="col-md-6"></div>-->
+        <!--</div>-->
         <div class="dine-container" v-for="restaurant in currentSelection">
             <div class="row">
                 <div class="col-md-9">
@@ -43,14 +43,14 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    selected: "Select A Category",
-                    currentSelection: null,
-                    categoryOptions: [
-                        {'label':'Select A Category', 'value': 'all_dine'},
-                        {'label':'Restaurants', 'value': 'restaurants'},
-                        {'label':'NorthPark Cafes', 'value': 'cafes'},
-                        {'label':'Coffee & Specialty Foods', 'value': 'specialty'}, 
-                    ],
+                    // selected: "Select A Category",
+                    // currentSelection: null,
+                    // categoryOptions: [
+                    //     {'label':'Select A Category', 'value': 'all_dine'},
+                    //     {'label':'Restaurants', 'value': 'restaurants'},
+                    //     {'label':'NorthPark Cafes', 'value': 'cafes'},
+                    //     {'label':'Coffee & Specialty Foods', 'value': 'specialty'}, 
+                    // ],
                     dine_stores: [],
                     hours: []
                 }
@@ -71,40 +71,13 @@
                     var filtered_restaurants = _.orderBy(_.uniqBy(all_restaurants, function(o){ return o.name; }), function(o){ return o.name; })
                     return filtered_restaurants
                 },
-                restaurants(){
-                    var stores_by_category = this.$store.getters.storesByCategoryName;
-                    var restaurants = stores_by_category["Restaurants / Beverages"];
-                    var filtered_restaurants = _.uniqBy(restaurants, function(o){ return o.name; })
-                    return filtered_restaurants
-                },
-                cafes(){
-                    var stores_by_category = this.$store.getters.storesByCategoryName;
-                    var cafes = stores_by_category["NorthPark Cafés"]
-                    var filtered_restaurants = _.uniqBy(cafes, function(o){ return o.name; })
-                    return filtered_restaurants
-                },
-                specialty(){
-                    var stores_by_category = this.$store.getters.storesByCategoryName;
-                    var specialty = stores_by_category["Specialty Foods"]
-                    var filtered_restaurants = _.uniqBy(specialty, function(o){ return o.name; })
-                    return filtered_restaurants
-                },
+                
                 findHourById() {
                     return this.$store.getters.findHourById;
                 },
             },
             methods: {
-                selectCategory(){
-                    if(this.selected.value == "restaurants"){
-                        this.currentSelection = this.restaurants;
-                    } else if (this.selected.value == "cafes") {
-                        this.currentSelection = this.cafes;
-                    } else if (this.selected.value == "specialty"){
-                        this.currentSelection = this.specialty;
-                    } else {
-                        this.currentSelection = this.all_dine
-                    }
-                },
+                
                 storeHours(restaurant_hours){
                     var vm = this;
                     var storeHours = [];
