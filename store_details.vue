@@ -9,7 +9,7 @@
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentStore.name}}</h2>
                     <p class="details-description">{{currentStore.description}}</p>
-                    <div >
+                    <div class="details-reservation" v-if="currentStore && currentStore.website">
                         <h5>Reservations</h5>
                         <a href="" target="_blank">Make Reservations&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </div>
