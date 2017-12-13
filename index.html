@@ -222,7 +222,9 @@
             <div class="loading-container" v-if="!dataLoaded">
                 <vue-simple-spinner  size="huge" message="One moment plaese..."></vue-simple-spinner>    
             </div>
-            <router-view v-if="dataLoaded"></router-view>
+            <transition name="fade">
+                <router-view v-if="dataLoaded"></router-view>
+            </transition>
             <footer v-show="isHomePage">
                 <div class="page-container">
                     <div class="footer-nav">
