@@ -44,7 +44,7 @@
             data: function() {
                 return {
                     // selected: "Select A Category",
-                    // currentSelection: null,
+                    currentSelection: null,
                     // categoryOptions: [
                     //     {'label':'Select A Category', 'value': 'all_dine'},
                     //     {'label':'Restaurants', 'value': 'restaurants'},
