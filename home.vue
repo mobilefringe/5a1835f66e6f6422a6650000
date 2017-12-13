@@ -56,7 +56,7 @@
     &.slick-active img {
       transform: scale(1);
     }
-  }
+  
 }
 </style>
 <script>
