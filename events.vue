@@ -85,15 +85,15 @@
                     var events = this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
                     var merge = _.concat(events, promotions);
-                    var sorted = _.orderBy(merge, function(o) { return o.start_date })
+                    var sorted = _.orderBy(merge, function(o) { return o.end_date })
                     return sorted
                 },
                 propertyEvents() {
-                    var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.start_date }); 
+                    var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.end_date }); 
                     return events
                 },
                 storeEvents() {
-                    var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.start_date });
+                    var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.end_date });
                     return promotions
                 },
                 holidayEvents(){
