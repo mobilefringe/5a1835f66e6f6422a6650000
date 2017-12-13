@@ -39,7 +39,7 @@
                         arrows: true,
                         autoplay: true,
                         autoplaySpeed: 6000,
-                        // cssEase: 'linear',
+                        cssEase: 'linear',
                         dots: false,
                         fade: true,
                         infinite: true,
