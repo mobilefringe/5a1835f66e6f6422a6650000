@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <img :src="currentStore.store_front_url_abs" class="margin-60" alt="" />
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentStore.name}}</h2>
                     <p class="details-description">{{currentStore.description}}</p>
@@ -14,24 +14,27 @@
                     </router-link>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="details-contact-container" v-if="currentStore && currentStore.phone">
-                    <h5 class="dine-contact-header">Contact</h5>
-                    <p>{{currentStore.phone}}</p>
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <div class="sidebar-container" v-if="currentStore && currentStore.phone">
+                        <h5 class="dine-contact-header">Contact</h5>
+                        <p>{{currentStore.phone}}</p>
+                    </div>
+                    <div class="sidebar-container" v-if="currentStore && currentStore.store_hours">
+                        <h5>Hours</h5>
+                        <ul class="details-hours-list">
+                            <li v-for="hour in hours">
+                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-container" v-if="currentStore && currentStore.manager_name">
+                        <h5>Manager</h5>
+                        <p>{{currentStore.manager_name}}</p>
+                    </div>    
                 </div>
-                <div class="details-hours-container" v-if="currentStore && currentStore.store_hours">
-                    <h5>Hours</h5>
-                    <ul class="details-hours-list">
-                        <li v-for="hour in hours">
-                           {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="details-manager-container" v-if="currentStore && currentStore.manager_name">
-                    <h5>Manager</h5>
-                    <p>{{currentStore.manager_name}}</p>
-                </div>
+                
             </div>
         </div>
         <div v-if="currentStore && currentStore.total_published_promos > 0">
