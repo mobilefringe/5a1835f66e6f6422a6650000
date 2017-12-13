@@ -1,9 +1,9 @@
 <template>
     <div>  <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <!--<div class="home-banner-container" style="background-image: url(https://picsum.photos/1920/1400);"></div>-->
+        <!--<div  style="background-image: url(https://picsum.photos/1920/1400);"></div>-->
         <slick ref="slick" :options="slickOptions">
             <div v-for="banner in homeBanners" v-if="homeBanners">
-                <div :style="styleObject">
+                <div class="home-banner-container" :style="styleObject">
 
                     <router-link :to="banner.url" class=""></router-link>
                 </div>
