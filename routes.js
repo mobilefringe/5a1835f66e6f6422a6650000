@@ -19,15 +19,17 @@ define([], function () {
                 {
                     path: '/dine',
                     component: view('dine'),
-                    meta: {
-                        breadcrumb: 'Dine',
-                    },
                     name: 'dineList'
                 },
                 {
                     path: ':id',
                     component: view('store_details'),
                     name: 'storeDetails'
+                },
+                {
+                    path: '/new-doors',
+                    component: view('new_stores'),
+                    name: 'newStores'
                 }
             ]
         },
