@@ -57,8 +57,7 @@
   }
 }
 </style>
-<div v-bind:style="styleObject"></div>
-                <!--<div :style="{ fontSize: size + 'px' }"></div>-->
+
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
         Vue.use(Meta);
