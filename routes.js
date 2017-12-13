@@ -200,7 +200,7 @@ define([], function () {
                 {
                     path: '/holiday/performances',
                     component: view('performances'),
-                    name: ''
+                    name: 'holidayPerformances'
                 },
                 {
                     path: '/holiday/events',
