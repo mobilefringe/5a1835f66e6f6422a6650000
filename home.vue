@@ -12,15 +12,24 @@
 </template>
 
 <script>
-    define(["Vue", "vue!today_hours", "vue!search-component"], function(Vue, TodayHoursComponent, SearchComponent) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
+        Vue.use(Meta);
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    title: "MM with Vue.js!",
-                    description: "An example of integration of Mall Maverick with Vue.js",
-                    suggestionAttribute: 'name',
-                    search: ''
+                    slickOptions: {
+                        arrows: true,
+                        autoplay: true,
+                        cssEase: 'linear',
+                        dots: false,
+                        fade: true,
+                        infinite: true,
+                        slidesToShow: 1,
+                        speed: 500,
+                        prevArrow: '.prev',
+                        nextArrow: '.next'
+                    }
                 }
             },
             computed: {
