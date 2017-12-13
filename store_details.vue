@@ -126,6 +126,16 @@
                         storeHours.push(vm.findHourById(value));
                     });
                     this.hours = storeHours;
+                    
+                    if(this.currentstore.category_name != null) {
+                        console.log(this.currentstore.category_name)
+                        // var category_name = this.currentstore.category_name
+                        // if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
+                        //     true;
+                        // } else {
+                        //     false;
+                        // }    
+                    }
                 }
             },
             computed: {
@@ -146,18 +156,6 @@
                 },
             },
             methods: {
-                checkStoreType(val_category_name){
-                    console.log(this.currentStore)
-                    if(this.currentstore.category_name != null) {
-                        console.log(this.currentstore.category_name)
-                        // var category_name = this.currentstore.category_name
-                        // if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
-                        //     true;
-                        // } else {
-                        //     false;
-                        // }    
-                    }
-                },
                 truncate(val_description){
                     var truncate = _.truncate(val_description, { 'length': 249, 'separator': ' ' });
                     return truncate;
