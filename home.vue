@@ -20,6 +20,43 @@
         </div>
     </div>
 </template>
+<style>
+    .slideshow {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 700px;
+  margin: 50px auto;
+  
+  * {
+    outline: none;
+  }
+  
+  .slider {
+    box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
+  }
+  
+  .slider-track {
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+  
+  .item {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    
+    img {
+      width: 100%;
+      transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+      transform: scale(1.2);
+    }
+    
+    &.slick-active img {
+      transform: scale(1);
+    }
+  }
+}
+</style>
 <div v-bind:style="styleObject"></div>
                 <!--<div :style="{ fontSize: size + 'px' }"></div>-->
 <script>
