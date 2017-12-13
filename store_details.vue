@@ -148,15 +148,14 @@
             methods: {
                 checkStoreType(val_category_name){
                     console.log(this.currentStore)
-                    var category_name = this.currentstore.category_name
-                    if(category_name != null) {
+                    if(this.currentstore.category_name != null) {
+                        var category_name = this.currentstore.category_name
                         if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
                             true;
                         } else {
                             false;
                         }    
                     }
-                    
                 },
                 truncate(val_description){
                     var truncate = _.truncate(val_description, { 'length': 249, 'separator': ' ' });
