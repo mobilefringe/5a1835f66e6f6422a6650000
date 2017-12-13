@@ -7,14 +7,13 @@ define([], function () {
         {
             path: '/stores',
             component: view('default'),
-            
+            meta: {
+                breadcrumb: 'Shops & Dining',
+            },
             children: [
                 {
                     path: '',
                     component: view('stores'),
-                    meta: {
-                breadcrumb: 'Shops & Dining',
-            },
                     name: 'storeList'
                 },
                 {
