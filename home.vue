@@ -37,7 +37,7 @@
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
-                        // cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+                        cssEase: 'linear'
                         dots: false,
                         fade: true,
                         infinite: true,
