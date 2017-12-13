@@ -95,6 +95,20 @@
                                                 <a class="main-menu-link"><h5>Photo Gallery</h5></a>
                                             </router-link>
                                         </ul>
+                                        <ul v-show="showHolidayMenu" class="breadcrumb-menu">
+                                            <router-link tag="li" to="/holiday" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>Holiday Overview</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/holiday/performances" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>Performances</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/holiday/events" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>Events</h5></a>
+                                            </router-link>
+                                            <router-link tag="li" to="/holiday/activities" active-class="active" exact>
+                                                <a class="main-menu-link"><h5>Activities</h5></a>
+                                            </router-link>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div v-if="show_menu" class="menu-container">
