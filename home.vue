@@ -13,17 +13,6 @@
                     </div>
                 </div>
             </slick>
-        
-            <!--<slick ref="slick" :options="slickOptions">-->
-            <!--    <div v-for="banner in homeBanners" v-if="homeBanners">-->
-            <!--        <div class="columns">-->
-            <!--            <router-link :to="banner.url" class="">-->
-            <!--                <div class="home-banner" style="background-image: url(https://picsum.photos/1920/1400)"></div>-->
-            <!--                <div class="hero-text">Dummy text in here 1</div>-->
-            <!--            </router-link>-->
-            <!--        </div>-->
-            <!--    </div>-->
-            <!--</slick>-->
         </div>
     </div>
 </template>
