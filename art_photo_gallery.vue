@@ -65,7 +65,8 @@
                     return this.$store.getters.getTimezone;
                 },
                 pois() {
-                    var alpha =  _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o.name });
+                    var alpha =  this.$store.getters.getPointsOfInterest
+                    // _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o.name });
                     console.log(alpha)
                     // return alpha
                 },
