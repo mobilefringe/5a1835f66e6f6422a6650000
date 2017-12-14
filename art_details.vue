@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
-                    <div class="sidebar-container" v-if="currentpoint">
+                    <div class="sidebar-container" v-if="currentPoint">
                         <h5></h5>
                         <p>This content needs to be added</p>
                     </div>
