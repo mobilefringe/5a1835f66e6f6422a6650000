@@ -46,7 +46,7 @@
                     selected: "History",
                     currentSelection: null,
                     categoryOptions: [
-                        {'label':'Sort By...', 'value': 'history'},
+                        {'label':'Sort By...', 'value': 'title'},
                         {'label':'Name', 'value': 'title'},
                         {'label':'Artist Name', 'value': 'artist'}
                     ],
