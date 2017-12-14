@@ -58,7 +58,7 @@
                         dots: false,
                         // fade: true,
                         infinite: true,
-                        slidesToShow: 3,
+                        // slidesToShow: 3,
                         speed: 1000,
                         centerMode: true,
                         centerPadding: '60px',
