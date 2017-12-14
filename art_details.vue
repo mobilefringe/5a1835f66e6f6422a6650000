@@ -1,6 +1,6 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="row" v-if="currentItem">
+        <div class="row" v-if="currentPoint">
             <!--<div class="col-md-9">-->
             <!--    <div class="details-store-info">-->
             <!--        <h2 class="details-store-name">{{currentStore.name}}</h2>-->
