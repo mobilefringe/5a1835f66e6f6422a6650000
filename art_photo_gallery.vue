@@ -18,7 +18,7 @@
             <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
                 <div class="gallery-item-container">
                     <div class="gallery-image-container">
-                        <img :src="getImageURL(item.item)" />
+                        <img :src="mainImage" />
                     </div>
                     <div class="gallery-content-container">
                         <h5 class="details-title">{{item.name}}</h5>  
@@ -46,6 +46,7 @@
                 return {
                     selected: "Sort Gallery",
                     currentSelection: null,
+                    mainImage: null,
                     categoryOptions: [
                         {'label':'Sort Gallery', 'value': 'title'},
                         {'label':'By Title', 'value': 'title'},
@@ -55,6 +56,7 @@
             },
             mounted () {
                 this.currentSelection = this.pois;
+                this.mainImage = this.getMainImage;
                 console.log(this.currentSelection)
             },
             computed: {
@@ -71,6 +73,9 @@
                 },
                 sortByArtist() {
                     
+                },
+                getMainImage(){
+                    
                 }
             },
             methods: {
@@ -84,10 +89,6 @@
                         this.currentSelection = this.pois;
                     }
                 },
-                getImageURL(item){
-                    console.log(item)
-                    
-                }
             },
         });
     });
