@@ -4,8 +4,8 @@
         <div class="row" v-if="currentStore">
             <div class="col-md-12">
                 <slick ref="slick" :options="slickOptions">
-                    <div v-for="banner in asset" v-if="storeAssets">
-                        <img :src="banner.image_url" class="" alt="">
+                    <div v-for="asset in storeAssets" v-if="storeAssets">
+                        <img :src="asset.url" class="" alt="">
                     </div>
                 </slick>
                 
