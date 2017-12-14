@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div v-if="comingSoonList">
+        <div v-if="comingSoonList" class="margin-60">
             <div class="row margin-30">
                 <div class="col-md-12">
                     <h2>Coming Soon</h2>
