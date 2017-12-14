@@ -1,15 +1,8 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-60"></div>
-        <!--<div class="row margin-30">-->
-        <!--    <div class="col-md-6">-->
-        <!--        <div class="category-select-container">-->
-        <!--            <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    -->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--    <div class="col-md-6"></div>-->
-        <!--</div>-->
-        <div class="dine-container" v-for="restaurant in currentSelection">
+
+        <div class="dine-container" v-for="store in newStores">
             <div class="row">
                 <div class="col-md-9">
                     <img :src="restaurant.image_url" :alt="restaurant.name" />
