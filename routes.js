@@ -71,7 +71,7 @@ define([], function () {
                 },
                 {
                     path: '/art/photo-gallery',
-                    component: view('photo_gallery'),
+                    component: view('art_photo_gallery'),
                     name: 'artPhotoGallery'
                 },
             ]
