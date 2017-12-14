@@ -61,6 +61,7 @@
                         slidesToShow: 3,
                         speed: 1000,
                         centerMode: true,
+                        centerPadding: '60px',
   variableWidth: true
                         // prevArrow: '.prev',
                         // nextArrow: '.next'
