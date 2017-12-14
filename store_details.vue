@@ -108,13 +108,14 @@
                     // https://northside.mallmaverick.com/api/v4/northside/stores/" + store_id + "/store_files.json
                     var store_id = vm.currentStore.id
                     console.log(store_id)
-                    // vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/"+ to.params.id +".json"}).then(response => {
-                    //     vm.currentPage = response.data;
-                    //     console.log(vm.currentPage);
-                    // }, error => {
-                    //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    //     vm.$router.replace({ name: '404'});
-                    // });
+                    console.log(vm.property.mm_host)
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/"+ to.params.id +".json"}).then(response => {
+                        vm.currentPage = response.data;
+                        console.log(vm.currentPage);
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ name: '404'});
+                    });
                 })
             },
             beforeRouteUpdate(to, from, next) {
