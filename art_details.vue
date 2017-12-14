@@ -89,13 +89,14 @@
                 currentItem: function() {
                     console.log(this.currentPoint);
                     var vm = this;
-                    // var temp = [];
-                    // _.forEach(this.currentStore.promotions, function(value, key) {
-                    //     console.log(vm.findPromoById(value));
-                    //     temp.push(vm.findPromoById(value));
-                    // });
-                    // this.promotions = temp;
-                    // console.log("promos", this.promotions);
+                    var images = [];
+                    if(this.currentStore.assets != null){
+                        _.forEach(this.currentDetails.store_files, function(value, key) {
+                            value.url = "https://www.mallmaverick.com" + value.url 
+                            images.push(value);
+                        });
+                        this.storeAssets = images; 
+                    }
                 }
             },
             computed: {
