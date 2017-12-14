@@ -103,12 +103,12 @@
                         autoplay: true,
                         cssEase: 'linear',
                         dots: false,
-                        fade: true,
+                        // fade: true,
                         infinite: true,
                         slidesToShow: 1,
                         speed: 1000,
-                        prevArrow: '.prev',
-                        nextArrow: '.next'
+                        // prevArrow: '.prev',
+                        // nextArrow: '.next'
                     }
                 }
             },
