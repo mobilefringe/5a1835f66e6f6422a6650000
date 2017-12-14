@@ -23,7 +23,7 @@
                         </div>
                         <div class="gallery-content-container">
                             <h5 class="details-title">{{item.name}}</h5>  
-                            <h5 class="details-title">{{item.name}}</h5> <!-- This field needs to be added in the CMS -->
+                            <!--<h5 class="details-title">{{item.name}}</h5> This field needs to be added in the CMS -->
                         </div>
                     </router-link>
                 </div>
