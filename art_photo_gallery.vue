@@ -88,7 +88,8 @@
                         this.currentSelection = this.pois;
                     }
                 },
-                getMainImage(){
+                getMainImage(item){
+                    console.log(item)
                     main_image = "";
                     // _.forEach(this.pois, function(value, key) {
                         var items = value.items
