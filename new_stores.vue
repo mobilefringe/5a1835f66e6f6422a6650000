@@ -41,7 +41,7 @@
                 }
             },
             mounted () {
-                this.newStores = newStoresList
+                this.newStores = this.newStoresList
                 console.log(this.newStores)
             },
             computed: {
@@ -54,7 +54,6 @@
                 newStoresList() {
                     return this.$store.getters.findNewStores;
                 },
-                
                 findHourById() {
                     return this.$store.getters.findHourById;
                 },
