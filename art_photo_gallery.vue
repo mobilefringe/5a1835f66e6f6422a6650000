@@ -75,7 +75,7 @@
                 getMainImage(){
                     console.log(this.pois)
                     _.forEach(this.pois, function(value, key) {
-                        
+                        var items = value.items
                         if(items != null){
                             var images = value.items[0].images
                             console.log(images)
