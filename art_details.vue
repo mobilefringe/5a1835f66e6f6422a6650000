@@ -4,8 +4,8 @@
         <div class="row" v-if="currentPoint">
             <div class="col-md-12 margin-60">
                 <slick v-if="currentDetails" ref="slick" :options="slickOptions">
-                    <div v-for="asset in storeAssets" >
-                        <img :src="asset.url" alt="">
+                    <div v-for="image in artImages" >
+                        <img :src="image.image_url" alt="">
                     </div>
                 </slick>
             </div>
@@ -92,7 +92,6 @@
                             console.log(image_gallery)
                             this.artImages = image_gallery
                         }
-                        
                     }
                 }
             },
