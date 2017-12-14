@@ -60,7 +60,6 @@
                 },
             },
             methods: {
-                
                 storeHours(restaurant_hours){
                     var vm = this;
                     var storeHours = [];
