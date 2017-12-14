@@ -90,17 +90,17 @@
                 },
                 getMainImage(item){
                     console.log(item)
-                    main_image = "";
-                    // _.forEach(this.pois, function(value, key) {
-                        var items = value.items
-                        if(items != null){
-                            var images = items[0].images
-                            if(images != null){
-                                var main_image = images[0].image_url
-                            }
-                        }
-                        return main_image
-                    // });
+                    // main_image = "";
+                    // // _.forEach(this.pois, function(value, key) {
+                    //     var items = value.items
+                    //     if(items != null){
+                    //         var images = items[0].images
+                    //         if(images != null){
+                    //             var main_image = images[0].image_url
+                    //         }
+                    //     }
+                    //     return main_image
+                    // // });
                 }
             },
         });
