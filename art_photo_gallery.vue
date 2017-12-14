@@ -45,7 +45,6 @@
                 return {
                     selected: "Sort Gallery",
                     currentSelection: null,
-                    mainImage: null,
                     categoryOptions: [
                         {'label':'Sort Gallery', 'value': 'title'},
                         {'label':'By Title', 'value': 'title'},
@@ -55,8 +54,6 @@
             },
             mounted () {
                 this.currentSelection = this.pois;
-                this.mainImage = this.getMainImage;
-                console.log(this.mainImage)
             },
             computed: {
                 property(){
