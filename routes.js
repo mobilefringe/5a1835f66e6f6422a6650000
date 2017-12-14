@@ -66,7 +66,7 @@ define([], function () {
                 },
                 {
                     path: '/art/special-exhibitions',
-                    component: view('special_exhibitions'),
+                    component: view('art_exhibition'),
                     name: 'artSpecialExhibition'
                 },
                 {
