@@ -43,10 +43,10 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    selected: "History",
+                    selected: "Sort Gallery",
                     currentSelection: null,
                     categoryOptions: [
-                        {'label':'Sort By...', 'value': 'title'},
+                        {'label':'Sort Gallery', 'value': 'title'},
                         {'label':'Name', 'value': 'title'},
                         {'label':'Artist Name', 'value': 'artist'}
                     ],
