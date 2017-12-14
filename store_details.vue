@@ -175,7 +175,7 @@
                         }    
                     }
                     
-                    if(this.currentStore.category_name != null) {
+                    if(this.currentStore.is_new_store == true || this.currentStore.is_coming_soon_store == true) {
                         var category_name = this.currentStore.category_name
                         if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
                             this.isDine = true;
