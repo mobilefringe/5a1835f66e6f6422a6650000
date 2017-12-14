@@ -12,19 +12,8 @@
             <div class="col-md-8">
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentPoint.name}}</h2>
-                    <p class="details-description">{{currentPoint.description}}</p>
-                    <div class="details-reservation" v-if="currentPoint && currentPoint.website">
-                        <div v-if="!isDine">
-                            <a class="details-link" :href="'http://' + currentPoint.website" target="_blank">View Store Website&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </div>
-                        <div v-if="isDine">
-                            <h5>Reservations</h5>
-                            <a class="details-link" :href="'http://' + currentPoint.website" target="_blank">Make Reservations&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <router-link to="/stores" active-class="active" exact>
-                        <a class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                    </router-link>
+                    <p class="details-description">{{currentPoint.items[0].description}}</p>
+                    
                 </div>
             </div>
             <div class="col-md-4">
