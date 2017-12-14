@@ -158,12 +158,22 @@
             },
             watch: {
                 currentStore: function() {
+                    console.log(this.currentStore)
                     var vm = this;
                     var storeHours = [];
                     _.forEach(this.currentStore.store_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
                     });
                     this.hours = storeHours;
+                    
+                    if(this.currentStore.category_name != null) {
+                        var category_name = this.currentStore.category_name
+                        if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
+                            this.isDine = true;
+                        } else {
+                            this.isDine = false;
+                        }    
+                    }
                     
                     if(this.currentStore.category_name != null) {
                         var category_name = this.currentStore.category_name
