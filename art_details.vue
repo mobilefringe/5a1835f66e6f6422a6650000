@@ -31,21 +31,25 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    currentItem: null,
+                    currentPoint: null,
                 }
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    vm.currentItem = vm.findPointOfInterestBySlug(to.params.id);
-                    if (vm.currentItem === null || vm.currentItem === undefined){
+                    var poiName = "Art Tour";
+                    vm.currentPoint = vm.findPointOfInterestBySlug(blogName, to.params.id);
+                    console.log(vm.currentPoint)
+                    if (vm.currentPoint === null || vm.currentPoint === undefined){
                         vm.$router.replace({ name: '404'});
                     }
                 })
             },
             beforeRouteUpdate(to, from, next) {
-                this.currentItem = this.findPointOfInterestBySlug(to.params.id);
-                if (this.currentItem === null || this.currentItem === undefined){
+                var poiName = "Art Tour";
+                this.currentPoint = this.findPointOfInterestBySlug(blogName, to.params.id);
+                console.log(this.currentPoint)
+                if (this.currentPoint === null || this.currentPoint === undefined){
                     this.$router.replace({ name: '404'});
                 }
             },
