@@ -47,7 +47,7 @@
                     currentSelection: null,
                     categoryOptions: [
                         {'label':'Sort Gallery', 'value': 'title'},
-                        {'label':'Name', 'value': 'title'},
+                        {'label':'By Title', 'value': 'title'},
                         {'label':'Artist Name', 'value': 'artist'}
                     ],
                 }
