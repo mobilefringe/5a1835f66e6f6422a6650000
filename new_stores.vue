@@ -1,7 +1,7 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-60"></div>
-        <div v-if="newStoresList">
+        <div v-if="newStoresList" class="margin-60">
             <div class="row margin-30">
                 <div class="col-md-12">
                     <h2>New Stores</h2>
@@ -26,7 +26,6 @@
                     </ul>
                 </div>
             </div>
-            <!--</div>-->
         </div>
         <div v-if="comingSoonList">
             <div class="row margin-30">
