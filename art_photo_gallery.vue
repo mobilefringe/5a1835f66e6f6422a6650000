@@ -77,7 +77,6 @@
                     // return artist
                 },
                 getMainImage(){
-                    console.log(this.pois)
                     _.forEach(this.pois, function(value, key) {
                         var items = value.items
                         if(items != null){
@@ -89,6 +88,7 @@
                                 return main_image
                             }
                         }
+                        return main_image
                     });
                 }
             },
