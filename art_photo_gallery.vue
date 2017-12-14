@@ -75,7 +75,19 @@
                     
                 },
                 getMainImage(){
-                    
+                    console.log(this.pois)
+                    _.forEach(this.restaurants, function(value, key) {
+                        var name = value.name;
+                        var id = value.id;
+                        if(name != null && id != null){
+                            var object = {
+                                'label': name,
+                                'value': id
+                            }
+                            restaurantData.push(object)
+                        }
+                    });
+                    return restaurantData 
                 }
             },
             methods: {
