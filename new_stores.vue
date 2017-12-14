@@ -15,15 +15,19 @@
                 <div class="col-md-3">
                     <h2 class="dine-name">{{store.name}}</h2>
                     <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}" class="dine-link">Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></router-link>
-                    <h5 class="dine-contact-header">Contact</h5>
-                    <p>{{store.phone}}</p>
-                    <h5>Hours</h5>
-                    <ul class="details-hours-list">
-                        <li v-for="hour in storeHours(store.store_hours)">
-                           {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                            </span>
-                        </li>
-                    </ul>
+                    <div v-if="store.phone">
+                        <h5 class="dine-contact-header">Contact</h5>
+                        <p>{{store.phone}}</p>
+                    </div>
+                    <div v-if="store.store_hours">
+                        <h5>Hours</h5>
+                        <ul class="details-hours-list">
+                            <li v-for="hour in storeHours(store.store_hours)">
+                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
