@@ -3,6 +3,13 @@
         <div class="margin-90"></div>
         <div class="row" v-if="currentStore">
             <div class="col-md-12">
+                <slick ref="slick" :options="slickOptions">
+                    <div v-for="banner in historyBanners" v-if="historyBanners">
+                        <img :src="banner.image_url" class="" alt="">
+                        <h5 class="details-title">{{ banner.name }}</h5>
+                    </div>
+                </slick>
+                
                 <img :src="currentStore.store_front_url_abs" class="margin-60" alt="" />
             </div>
             <div class="col-md-8">
@@ -88,6 +95,18 @@
                 return {
                     currentStore: null,
                     isDine: false,
+                    slickOptions: {
+                        arrows: true,
+                        autoplay: true,
+                        cssEase: 'linear',
+                        dots: false,
+                        fade: true,
+                        infinite: true,
+                        slidesToShow: 1,
+                        speed: 500,
+                        prevArrow: '.prev',
+                        nextArrow: '.next'
+                    }
                     promotions : [],
                     hours: [],
                 }
