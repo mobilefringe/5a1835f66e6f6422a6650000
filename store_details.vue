@@ -105,10 +105,7 @@
                     }
                     
                     // Get Stores JSON
-                    // https://northside.mallmaverick.com/api/v4/northside/stores/" + store_id + "/store_files.json
                     var store_id = vm.currentStore.id
-                    console.log(store_id)
-                    console.log(vm.property)
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
                         vm.currentDetails = response.data;
                         console.log(vm.currentDetails);
