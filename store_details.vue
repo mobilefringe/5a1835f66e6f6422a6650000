@@ -150,6 +150,7 @@
             watch: {
                 currentStore: function() {
                     console.log(this.currentStore)
+                    console.log(this.currentDetails)
                     var vm = this;
                     
                     var store_assets = [];
