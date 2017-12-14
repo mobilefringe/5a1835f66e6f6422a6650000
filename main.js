@@ -122,7 +122,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 } else {
                     this.showStoresMenu = false;
                 }
-                if(this.$route.path == "/art" || this.$route.path == "/art/special-exhibitions" || this.$route.path == "/art/photo-gallery") {
+                if(this.$route.path == "/art" || this.$route.path == "/art/special-exhibition" || this.$route.path == "/art/photo-gallery") {
                     this.showArtMenu = true;
                 } else {
                     this.showArtMenu = false;
