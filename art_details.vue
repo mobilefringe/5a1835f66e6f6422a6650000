@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-8">
                 <div class="details-store-info">
-                    <div>
+                    <div class="margin-30">
                         <h2>{{currentPoint.items[0].name}}</h2>
                         <h5>{{currentPoint.items[0].description}}</h5>
                         <h4>Location</h4>    
