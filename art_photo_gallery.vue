@@ -68,7 +68,6 @@
                 pois() {
                     var name = "Art Tour";
                     var pois = this.$store.getters.findPointOfInterest(name)
-                    console.log(pois)
                     var sortByName = _.orderBy(pois.locations, function(o) { return o.name });
                     return sortByName
                 },
