@@ -69,7 +69,8 @@
                     return alpha
                 },
                 sortByArtist() {
-                    
+                    // var artist =  _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o. });
+                    // return artist
                 },
                 getMainImage(){
                     console.log(this.pois)
