@@ -3,12 +3,12 @@
         <div class="margin-90"></div>
         <div class="row" v-if="currentStore">
             <div class="col-md-12">
-                <!--<slick ref="slick" :options="slickOptions">-->
-                <!--    <div v-for="banner in historyBanners" v-if="historyBanners">-->
-                <!--        <img :src="banner.image_url" class="" alt="">-->
-                <!--        <h5 class="details-title">{{ banner.name }}</h5>-->
-                <!--    </div>-->
-                <!--</slick>-->
+                <slick ref="slick" :options="slickOptions">
+                    <div v-for="banner in historyBanners" v-if="historyBanners">
+                        <img :src="banner.image_url" class="" alt="">
+                        <h5 class="details-title">{{ banner.name }}</h5>
+                    </div>
+                </slick>
                 
                 <img :src="currentStore.store_front_url_abs" class="margin-60" alt="" />
             </div>
@@ -146,7 +146,6 @@
                 //Stores JSON
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
                     this.currentDetails = response.data;
-                    console.log(this.currentDetails);
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
@@ -180,20 +179,17 @@
                     this.promotions = promos;
                 },
                 currentDetails: function() {
-                    console.log(this.currentDetails)  
-                    
                     var vm = this;
                     
                     var store_assets = [];
                     if(this.currentStore.assets != null){
-                        console.log(this.currentStore.assets)
                         _.forEach(this.currentDetails.store_files, function(value, key) {
                             var image_url = "https://www.mallmaverick.com" + value.url 
                             console.log(image_url)
                             store_assets.push(image_url);
                         });
                         console.log(store_assets)
-                        // this.storeAssets = store_assets; 
+                        this.storeAssets = store_assets; 
                         // console.log(storeAssets)
                     }
                 }
