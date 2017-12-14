@@ -13,7 +13,6 @@
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentPoint.name}}</h2>
                     <p class="details-description">{{currentPoint.items[0].description}}</p>
-                    
                 </div>
             </div>
             <div class="col-md-4">
