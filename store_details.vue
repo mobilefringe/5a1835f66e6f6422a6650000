@@ -3,12 +3,12 @@
         <div class="margin-90"></div>
         <div class="row" v-if="currentStore">
             <div class="col-md-12">
-                <slick ref="slick" :options="slickOptions">
-                    <div v-for="banner in historyBanners" v-if="historyBanners">
-                        <img :src="banner.image_url" class="" alt="">
-                        <h5 class="details-title">{{ banner.name }}</h5>
-                    </div>
-                </slick>
+                <!--<slick ref="slick" :options="slickOptions">-->
+                <!--    <div v-for="banner in historyBanners" v-if="historyBanners">-->
+                <!--        <img :src="banner.image_url" class="" alt="">-->
+                <!--        <h5 class="details-title">{{ banner.name }}</h5>-->
+                <!--    </div>-->
+                <!--</slick>-->
                 
                 <img :src="currentStore.store_front_url_abs" class="margin-60" alt="" />
             </div>
