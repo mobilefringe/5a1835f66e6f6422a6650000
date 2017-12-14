@@ -39,10 +39,6 @@
                     hours: []
                 }
             },
-            mounted () {
-                this.newStores = this.newStoresList
-                console.log(this.newStores)
-            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
