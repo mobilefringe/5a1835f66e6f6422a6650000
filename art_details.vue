@@ -72,7 +72,6 @@
                     // access to component instance via `vm`
                     var poiName = "Art Tour";
                     vm.currentPoint = vm.findPointOfInterestBySlug(poiName, to.params.id);
-                    console.log(vm.currentPoint)
                     if (vm.currentPoint === null || vm.currentPoint === undefined){
                         vm.$router.replace({ name: '404'});
                     }
@@ -81,7 +80,6 @@
             beforeRouteUpdate(to, from, next) {
                 var poiName = "Art Tour";
                 this.currentPoint = this.findPointOfInterestBySlug(poiName, to.params.id);
-                console.log(this.currentPoint)
                 if (this.currentPoint === null || this.currentPoint === undefined){
                     this.$router.replace({ name: '404'});
                 }
