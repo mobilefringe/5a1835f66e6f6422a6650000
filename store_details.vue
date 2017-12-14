@@ -16,7 +16,7 @@
                     <p class="details-description">{{currentStore.description}}</p>
                     <div class="details-reservation" v-if="currentStore && currentStore.website">
                         <div v-if="!isDine">
-                            <a class="details-link" :href="'http://' + currentStore.website" target="_blank">View Website&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <a class="details-link" :href="'http://' + currentStore.website" target="_blank">View Store Website&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
                         <div v-if="isDine">
                             <h5>Reservations</h5>
