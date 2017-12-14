@@ -96,6 +96,7 @@
                     currentStore: null,
                     currentDetails: null,
                     isDine: false,
+                    storeAssets: [],
                     promotions : [],
                     hours: [],
                     slickOptions: {
@@ -191,7 +192,7 @@
                             console.log(image_url)
                             store_assets.push(image_url);
                         });
-                        // this.promotions = temp;    
+                        this.storeAssets = store_assets;    
                     }
                 }
             },
