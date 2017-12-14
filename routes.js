@@ -54,14 +54,14 @@ define([], function () {
         },
         {
             path: '/art',
-            component: view('art'),
+            component: view('default'),
             meta: {
                 breadcrumb: 'Art',
             },
             children: [
                 {
                     path: '',
-                    component: view('default'),
+                    component: view('art'),
                     name: 'art'
                 },
                 {
