@@ -36,6 +36,11 @@
     </div>
 </template>
 
+<style>
+   .slick-slide img {
+       max-height: 460px;
+   } 
+</style>
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
         Vue.use(Meta);
