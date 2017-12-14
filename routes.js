@@ -78,7 +78,7 @@ define([], function () {
                     meta: {
                         breadcrumb: 'Special Exhibition',
                     },
-                    name: 'storeList'
+                    name: 'artSpecialExhibition'
                 },
                 {
                     path: '/art/photo-gallery',
@@ -86,7 +86,7 @@ define([], function () {
                     meta: {
                         breadcrumb: 'Photo Gallery',
                     },
-                    name: 'storeList'
+                    name: 'artPhotoGallery'
                 },
             ]
         },
