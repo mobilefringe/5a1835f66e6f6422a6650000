@@ -65,27 +65,13 @@ define([], function () {
                     name: 'storeList'
                 },
                 {
-                    path: '/art/collection',
-                    component: view('collection'),
-                    meta: {
-                        breadcrumb: 'Collection Overview',
-                    },
-                    name: 'storeList'
-                },
-                {
                     path: '/art/special-exhibitions',
                     component: view('special_exhibitions'),
-                    meta: {
-                        breadcrumb: 'Special Exhibition',
-                    },
                     name: 'artSpecialExhibition'
                 },
                 {
                     path: '/art/photo-gallery',
                     component: view('photo_gallery'),
-                    meta: {
-                        breadcrumb: 'Photo Gallery',
-                    },
                     name: 'artPhotoGallery'
                 },
             ]
