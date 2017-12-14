@@ -53,7 +53,7 @@
                         dots: false,
                         // fade: true,
                         infinite: true,
-                        slidesToShow: 1,
+                        slidesToShow: 3,
                         speed: 1000,
                         centerMode: true,
   variableWidth: true
