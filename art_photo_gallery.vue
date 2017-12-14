@@ -76,20 +76,12 @@
                     console.log(this.pois)
                     _.forEach(this.pois, function(value, key) {
                         if(value.items != null){
-                            console.log()
+                            console.log(value.items)
                         }
                         
-                        var name = value.name;
-                        var id = value.id;
-                        if(name != null && id != null){
-                            var object = {
-                                'label': name,
-                                'value': id
-                            }
-                            restaurantData.push(object)
-                        }
+                        
                     });
-                    return restaurantData 
+                    
                 }
             },
             methods: {
