@@ -97,10 +97,14 @@
                             var images = items[0].images
                             if(images != null){
                                 var main_image = images[0].image_url
+                                return main_image
+                            } else {
+                                return "http://placehold.it/300x300"
                             }
+                            
                         }
-                        return main_image
-                    }                  
+                    } 
+                    
                 }
             },
         });
