@@ -45,13 +45,7 @@
             data: function() {
                 return {
                     currentPoint: null,
-                    
-                    currentDetails: null,
-                    isDine: false,
-                    isNewStore: false,
-                    storeAssets: [],
-                    promotions : [],
-                    hours: [],
+                    artImages: [],
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
@@ -90,6 +84,14 @@
                     console.log(this.currentPoint);
                     var vm = this;
                     var images = [];
+                    
+                    if(this.currentPoint.items != null){
+                        var items = this.currentPoint.items[0]
+                        if(items.images != null){
+                            var image_gallery = items.images
+                        }
+                        
+                    }
                     if(this.currentStore.assets != null){
                         _.forEach(this.currentDetails.store_files, function(value, key) {
                             value.url = "https://www.mallmaverick.com" + value.url 
