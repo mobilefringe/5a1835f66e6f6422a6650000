@@ -175,7 +175,7 @@
                         }    
                     }
                     
-                    if(this.currentStore.is_new_store == true || this.currentStore.is_coming_soon_store == true) {
+                    if(this.currentStore.is_coming_soon_store == true) {
                         this.isNewStore = true;
                     } else {
                         this.isNewStore = false;
