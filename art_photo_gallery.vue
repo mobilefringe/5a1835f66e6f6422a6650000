@@ -84,7 +84,8 @@
                         this.currentSelection = this.pois;
                     }
                 },
-                getImageURL(){
+                getImageURL(item){
+                    console.log(this.item)
                     
                 }
             },
