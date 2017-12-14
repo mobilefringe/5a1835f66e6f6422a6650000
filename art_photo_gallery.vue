@@ -65,10 +65,11 @@
                     return this.$store.getters.getTimezone;
                 },
                 pois() {
-                    var alpha =  this.$store.getters.getPointsOfInterest
-                    // _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o.name });
-                    console.log(alpha)
-                    // return alpha
+                    var pois = this.$store.getters.getPointsOfInterest
+                    if(pois != null){
+                        var sorted_alpha = _.orderBy(pois[0].locations, function(o) { return o.name });
+                    }
+                    return sorted_alpha
                 },
                 sortByArtist() {
                     // var artist =  _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o. });
