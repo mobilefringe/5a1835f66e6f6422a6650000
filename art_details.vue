@@ -86,7 +86,7 @@
                 }
             },
             watch: {
-                currentItem: function() {
+                currentPoint: function() {
                     console.log(this.currentPoint);
                     var vm = this;
                     var images = [];
