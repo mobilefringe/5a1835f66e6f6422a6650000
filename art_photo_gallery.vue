@@ -79,10 +79,10 @@
                         if(items != null){
                             var images = items[0].images
                             console.log(images)
-                            if(images != null){
-                                // var main_image = images[0].image_url
-                                // console.log(main_image)
-                            }
+                            // if(images != null){
+                            //     // var main_image = images[0].image_url
+                            //     // console.log(main_image)
+                            // }
                             
                         }
                     });
