@@ -115,6 +115,8 @@
             mounted () {
                 this.currentStore
                 this.currentDetails
+                this.storeAssets
+                console.log(this.storeAssets)
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
