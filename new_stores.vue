@@ -44,8 +44,8 @@
             data: function() {
                 return {
 
-
-                    dine_stores: [],
+                    
+                    newStores: [],
                     hours: []
                 }
             },
