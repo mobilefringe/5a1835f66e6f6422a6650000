@@ -94,6 +94,7 @@
             data: function() {
                 return {
                     currentStore: null,
+                    currentDetails: null,
                     isDine: false,
                     slickOptions: {
                         arrows: true,
@@ -112,7 +113,8 @@
                 }
             },
             mounted () {
-                this.currentStore   
+                this.currentStore,
+                this.currentDetails
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
@@ -144,6 +146,13 @@
                 currentStore: function() {
                     console.log(this.currentStore)
                     var vm = this;
+                    
+                    var store_assets = [];
+                    _.forEach(this.currentDetails.promotions, function(value, key) {
+                        temp.push(vm.findPromoById(value));
+                    });
+                    this.promotions = temp;
+                    
                     var temp = [];
                     _.forEach(this.currentStore.promotions, function(value, key) {
                         temp.push(vm.findPromoById(value));
