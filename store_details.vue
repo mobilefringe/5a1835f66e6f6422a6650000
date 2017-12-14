@@ -100,6 +100,7 @@
                     currentStore: null,
                     currentDetails: null,
                     isDine: false,
+                    isNewStore: false,
                     storeAssets: [],
                     promotions : [],
                     hours: [],
