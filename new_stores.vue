@@ -24,7 +24,7 @@
             </div>
         </div>
         <div v-if="comingSoonList">
-            <div class="dine-container" v-for="store in newStoresList">
+            <div class="dine-container" v-for="store in comingSoonList">
                 <div class="row">
                     <div class="col-md-9">
                         <img :src="store.image_url" :alt="store.name" />
