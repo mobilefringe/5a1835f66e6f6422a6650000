@@ -41,8 +41,6 @@
                 <p class="page-breadcrumb">
                     <span>{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
                     <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
-                    <span v-if="isNewStore"><router-link to="/new-doors">New Doors</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
-                    <span v-if="!isNewStore || isDine"><router-link to="/dine">Dine</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
                     <span v-if="currentPoint">{{currentPoint.name }}</span>
                 </p>
             </div>
@@ -59,6 +57,25 @@
             data: function() {
                 return {
                     currentPoint: null,
+                    
+                    currentDetails: null,
+                    isDine: false,
+                    isNewStore: false,
+                    storeAssets: [],
+                    promotions : [],
+                    hours: [],
+                    slickOptions: {
+                        arrows: true,
+                        autoplay: true,
+                        cssEase: 'linear',
+                        dots: false,
+                        // fade: true,
+                        infinite: true,
+                        slidesToShow: 1,
+                        speed: 1000,
+                        // prevArrow: '.prev',
+                        // nextArrow: '.next'
+                    }
                 }
             },
             beforeRouteEnter(to, from, next) {
