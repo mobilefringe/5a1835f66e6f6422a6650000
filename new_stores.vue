@@ -1,7 +1,6 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-60"></div>
-        {{
         <div class="dine-container" v-for="store in newStoresList">
             <div class="row">
                 <div class="col-md-9">
@@ -14,7 +13,7 @@
                     <p>{{store.phone}}</p>
                     <h5>Hours</h5>
                     <ul class="details-hours-list">
-                        <li v-for="hour in storeHours(restaurant.store_hours)">
+                        <li v-for="hour in storeHours(store.store_hours)">
                            {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                             </span>
                         </li>
