@@ -57,7 +57,6 @@
             mounted () {
                 this.currentSelection = this.pois;
                 this.mainImage = this.getMainImage;
-                console.log(this.currentSelection)
             },
             computed: {
                 property(){
@@ -69,7 +68,6 @@
                 pois() {
                     var alpha =  _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o.name });
                     return alpha
-                    
                 },
                 sortByArtist() {
                     
