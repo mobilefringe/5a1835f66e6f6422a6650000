@@ -136,10 +136,16 @@
                 })
             },
             beforeRouteUpdate(to, from, next) {
+                //Store Details
                 this.currentStore = this.findStoreBySlug(to.params.id);
                 if (this.currentStore === null || this.currentStore === undefined){
                     this.$router.replace({ name: '404'});
                 }
+                //Stores JSON
+                // this.currentStore = this.findStoreBySlug(to.params.id);
+                // if (this.currentStore === null || this.currentStore === undefined){
+                //     this.$router.replace({ name: '404'});
+                // }
             },
             watch: {
                 currentStore: function() {
@@ -147,16 +153,18 @@
                     var vm = this;
                     
                     var store_assets = [];
-                    _.forEach(this.currentDetails.promotions, function(value, key) {
-                        temp.push(vm.findPromoById(value));
-                    });
-                    this.promotions = temp;
+                    if(this.currentDetails.assets != null){
+                        _.forEach(this.currentDetails.promotions, function(value, key) {
+                            temp.push(vm.findPromoById(value));
+                        });
+                        this.promotions = temp;    
+                    }
                     
-                    var temp = [];
+                    var promos = [];
                     _.forEach(this.currentStore.promotions, function(value, key) {
-                        temp.push(vm.findPromoById(value));
+                        promos.push(vm.findPromoById(value));
                     });
-                    this.promotions = temp;
+                    this.promotions = promos;
                     
                     var storeHours = [];
                     _.forEach(this.currentStore.store_hours, function(value, key) {
