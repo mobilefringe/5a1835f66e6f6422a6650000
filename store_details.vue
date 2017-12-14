@@ -6,7 +6,6 @@
                 <slick ref="slick" :options="slickOptions">
                     <div v-for="banner in asset" v-if="storeAssets">
                         <img :src="banner.image_url" class="" alt="">
-                        <h5 class="details-title">{{ banner.name }}</h5>
                     </div>
                 </slick>
                 
@@ -185,7 +184,7 @@
                     var store_assets = [];
                     if(this.currentStore.assets != null){
                         _.forEach(this.currentDetails.store_files, function(value, key) {
-                            var image_url = "https://www.mallmaverick.com" + value.url 
+                            value.url = "https://www.mallmaverick.com" + value.url 
                             console.log(image_url)
                             store_assets.push(image_url);
                         });
