@@ -164,7 +164,7 @@
             },
             watch: {
                 currentStore: function() {
-                    console.log(this.currentStore)
+                    // console.log(this.currentStore)
                     var vm = this;
                     var storeHours = [];
                     _.forEach(this.currentStore.store_hours, function(value, key) {
