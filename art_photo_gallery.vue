@@ -68,10 +68,11 @@
                 pois() {
                     var name = "Art Tour";
                     var pois = this.$store.getters.findPointOfInterest(name)
-                    if(pois != null){
-                        var sorted_alpha = _.orderBy(pois[0].locations, function(o) { return o.name });
-                    }
-                    return sorted_alpha
+                    console.log(pois)
+                    // if(pois != null){
+                    //     var sorted_alpha = _.orderBy(pois[0].locations, function(o) { return o.name });
+                    // }
+                    // return sorted_alpha
                 },
                 sortByArtist() {
                     // var artist =  _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o. });
