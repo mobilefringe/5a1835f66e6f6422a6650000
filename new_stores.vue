@@ -41,8 +41,10 @@
                 <div class="col-md-3">
                     <h2 class="dine-name">{{store.name}}</h2>
                     <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}" class="dine-link">Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></router-link>
-                    <h5 class="dine-contact-header">Contact</h5>
-                    <p>{{store.phone}}</p>
+                    <div v-if="store.phone">
+                        <h5 class="dine-contact-header">Contact</h5>
+                        <p>{{store.phone}}</p>
+                    </div>
                     <div v-if="store.store_hours">
                         <h5>Hours</h5>
                         <ul class="details-hours-list">
