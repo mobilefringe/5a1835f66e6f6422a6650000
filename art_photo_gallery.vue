@@ -92,7 +92,7 @@
                     console.log(item)
                     main_image = "";
                     if(item.items != null){
-                        var items = value.items
+                        var items = item.items
                         if(items != null){
                             var images = items[0].images
                             if(images != null){
