@@ -84,7 +84,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="isDine"><router-link to="/dine">Dine</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span><span v-if="currentStore">{{currentStore.name }}</span></p>
+                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="isNewStore"><router-link to="/new-doors">New Doors</router-link><span v-if="isDine"><router-link to="/dine">Dine</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span><span v-if="currentStore">{{currentStore.name }}</span></p>
             </div>
         </div>
     </div>
