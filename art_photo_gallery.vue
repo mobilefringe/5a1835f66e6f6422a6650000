@@ -78,7 +78,7 @@
                 selectCategory(){
                     console.log(this.selected)
                     if(this.selected.value == "title"){
-                        this.currentSelection = this.sortByName;
+                        this.currentSelection = this.pois;
                     } else if (this.selected.value == "artist") {
                         this.currentSelection = this.sortByArtist;
                     } else {
