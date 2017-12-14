@@ -74,7 +74,11 @@
                 },
                 getMainImage(){
                     console.log(this.pois)
-                    _.forEach(this.restaurants, function(value, key) {
+                    _.forEach(this.pois, function(value, key) {
+                        if(value.items != null){
+                            console.log()
+                        }
+                        
                         var name = value.name;
                         var id = value.id;
                         if(name != null && id != null){
