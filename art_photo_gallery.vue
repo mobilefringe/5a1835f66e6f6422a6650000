@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p>Launch</p>
+                <p>Download Art Tour Map</p>
             </div>
         </div>
         <div class="row margin-60">
@@ -64,34 +64,15 @@
                 timezone () {
                     return this.$store.getters.getTimezone;
                 },
-                events() {
-                    var events = this.$store.getters.processedEvents;
-                    var promotions = this.$store.getters.processedPromos;
-                    var merge = _.concat(events, promotions);
-                    var sorted = _.orderBy(merge, function(o) { return o.start_date })
-                    return sorted
+                pois() {
+                    return this.$store.getters.getPointsOfInterest;
                 },
-                historyGallery() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history slideshow" })
-                    var repo_images = repo[0].images
-                    return repo_images
-                },
-                anniversaryGallery() {
+                sortByName() {
                     
                 },
-                eventGallery() {
+                sortByArtist() {
                     
-                },
-                landscapingGallery() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "landscaping slideshow" })
-                    var repo_images = repo[0].images
-                    return repo_images
-                },
-                architectureGallery() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "architecture slideshow" })
-                    var repo_images = repo[0].images
-                    return repo_images
-                },
+                }
             },
             methods: {
                 selectCategory(){
