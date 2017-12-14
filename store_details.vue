@@ -4,7 +4,7 @@
         <div class="row" v-if="currentStore">
             <div class="col-md-12">
                 <slick ref="slick" :options="slickOptions">
-                    <div v-for="banner in historyBanners" v-if="historyBanners">
+                    <div v-for="banner in asset" v-if="storeAssets">
                         <img :src="banner.image_url" class="" alt="">
                         <h5 class="details-title">{{ banner.name }}</h5>
                     </div>
