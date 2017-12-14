@@ -18,7 +18,7 @@
             <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
                 <div class="gallery-item-container">
                     <div class="gallery-image-container">
-                        <img :src="mainImage" />
+                        <img :src="getMainImage(item)" />
                     </div>
                     <div class="gallery-content-container">
                         <h5 class="details-title">{{item.name}}</h5>  
@@ -90,7 +90,7 @@
                 },
                 getMainImage(){
                     main_image = "";
-                    _.forEach(this.pois, function(value, key) {
+                    // _.forEach(this.pois, function(value, key) {
                         var items = value.items
                         if(items != null){
                             var images = items[0].images
@@ -99,7 +99,7 @@
                             }
                         }
                         return main_image
-                    });
+                    // });
                 }
             },
         });
