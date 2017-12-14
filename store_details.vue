@@ -192,7 +192,8 @@
                             console.log(image_url)
                             store_assets.push(image_url);
                         });
-                        this.storeAssets = store_assets;    
+                        this.storeAssets = store_assets; 
+                        console.log(storeAssets)
                     }
                 }
             },
