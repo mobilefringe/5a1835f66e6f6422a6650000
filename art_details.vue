@@ -55,7 +55,7 @@
             },
             watch: {
                 currentItem: function() {
-                    console.log(this.currentItem);
+                    console.log(this.currentPoint);
                     var vm = this;
                     // var temp = [];
                     // _.forEach(this.currentStore.promotions, function(value, key) {
