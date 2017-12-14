@@ -54,6 +54,7 @@
             },
             mounted () {
                 this.currentSelection = this.pois;
+                console.log(this.currentSelection)
             },
             computed: {
                 property(){
