@@ -54,15 +54,14 @@
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
+                        centerMode: true,
+                        centerPadding: '20px',
                         cssEase: 'linear',
                         dots: false,
-                        // fade: true,
                         infinite: true,
                         slidesToShow: 5,
                         speed: 1000,
-                        centerMode: true,
-                        centerPadding: '20px',
-  variableWidth: true
+                        variableWidth: true
                         // prevArrow: '.prev',
                         // nextArrow: '.next'
                     }
