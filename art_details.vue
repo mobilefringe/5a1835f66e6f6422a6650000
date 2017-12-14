@@ -7,19 +7,19 @@
                         <img :src="asset.url" alt="">
                     </div>
                 </slick>
-                <img v-if="!currentStore.assets" :src="currentStore.store_front_url_abs" alt="" />
+                <img v-if="!currentPoint.assets" :src="currentPoint.store_front_url_abs" alt="" />
             </div>
             <div class="col-md-8">
                 <div class="details-store-info">
-                    <h2 class="details-store-name">{{currentStore.name}}</h2>
-                    <p class="details-description">{{currentStore.description}}</p>
-                    <div class="details-reservation" v-if="currentStore && currentStore.website">
+                    <h2 class="details-store-name">{{currentPoint.name}}</h2>
+                    <p class="details-description">{{currentPoint.description}}</p>
+                    <div class="details-reservation" v-if="currentPoint && currentPoint.website">
                         <div v-if="!isDine">
-                            <a class="details-link" :href="'http://' + currentStore.website" target="_blank">View Store Website&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <a class="details-link" :href="'http://' + currentPoint.website" target="_blank">View Store Website&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
                         <div v-if="isDine">
                             <h5>Reservations</h5>
-                            <a class="details-link" :href="'http://' + currentStore.website" target="_blank">Make Reservations&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <a class="details-link" :href="'http://' + currentPoint.website" target="_blank">Make Reservations&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <router-link to="/stores" active-class="active" exact>
@@ -34,7 +34,6 @@
                         <p>This content needs to be added</p>
                     </div>
                 </div>
-                
             </div>
         </div>
         <div class="row">
@@ -44,7 +43,7 @@
                     <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
                     <span v-if="isNewStore"><router-link to="/new-doors">New Doors</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
                     <span v-if="!isNewStore || isDine"><router-link to="/dine">Dine</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
-                    <span v-if="currentStore">{{currentStore.name }}</span>
+                    <span v-if="currentPoint">{{currentPoint.name }}</span>
                 </p>
             </div>
         </div>
