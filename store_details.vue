@@ -3,7 +3,7 @@
         <div class="margin-90"></div>
         <div class="row" v-if="currentStore">
             <div class="col-md-12 margin-60">
-                <slick v-if="currentStore.assets" ref="slick" :options="slickOptions">
+                <slick v-if="currentDetails" ref="slick" :options="slickOptions">
                     <div v-for="asset in storeAssets" >
                         <img :src="asset.url" alt="">
                     </div>
