@@ -11,9 +11,11 @@
             </div>
             <div class="col-md-8">
                 <div class="details-store-info">
-                    <h2 class="details-store-name">{{currentPoint.items[0].name}}</h2>
-                    <h5>{{currentPoint.items[0].description}}</h5>
-                    <h4>Location</h4>
+                    <div>
+                        <h2 class="details-store-name">{{currentPoint.items[0].name}}</h2>
+                        <h5>{{currentPoint.items[0].description}}</h5>
+                        <h4>Location</h4>    
+                    </div>
                     <p class="details-description">{{currentPoint.items[0].description_2}}</p>
                 </div>
             </div>
