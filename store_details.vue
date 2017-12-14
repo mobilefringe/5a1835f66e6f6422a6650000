@@ -184,7 +184,7 @@
                     
                     var vm = this;
                     
-                    var store_assets = [];
+                    var store_assets = {};
                     if(this.currentStore.assets != null){
                         console.log(this.currentStore.assets)
                         _.forEach(this.currentDetails.store_files, function(value, key) {
@@ -192,8 +192,9 @@
                             console.log(image_url)
                             store_assets.push(image_url);
                         });
-                        this.storeAssets = store_assets; 
-                        console.log(storeAssets)
+                        console.log(store_assets)
+                        // this.storeAssets = store_assets; 
+                        // console.log(storeAssets)
                     }
                 }
             },
