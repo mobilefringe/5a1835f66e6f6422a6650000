@@ -142,10 +142,13 @@
                     this.$router.replace({ name: '404'});
                 }
                 //Stores JSON
-                // this.currentStore = this.findStoreBySlug(to.params.id);
-                // if (this.currentStore === null || this.currentStore === undefined){
-                //     this.$router.replace({ name: '404'});
-                // }
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
+                    this.currentDetails = response.data;
+                    console.log(this.currentDetails);
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
             },
             watch: {
                 currentStore: function() {
