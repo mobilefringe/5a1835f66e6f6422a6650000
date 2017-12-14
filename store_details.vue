@@ -2,13 +2,13 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
         <div class="row" v-if="currentStore">
-            <div class="col-md-12">
+            <div class="col-md-12 margin-60">
                 <slick ref="slick" :options="slickOptions" v-if="storeAssets">
                     <div v-for="asset in storeAssets" >
-                        <img :src="asset.url" class="" alt="">
+                        <img :src="asset.url" alt="">
                     </div>
                 </slick>
-                <img v-if="!storeAssets" :src="currentStore.store_front_url_abs" class="margin-60" alt="" />
+                <img v-if="!storeAssets" :src="currentStore.store_front_url_abs" alt="" />
             </div>
             <div class="col-md-8">
                 <div class="details-store-info">
