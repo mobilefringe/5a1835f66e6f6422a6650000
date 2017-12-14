@@ -17,13 +17,15 @@
             </div>
             <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
                 <div class="gallery-item-container">
-                    <div class="gallery-image-container">
-                        <img :src="getMainImage(item)" />
-                    </div>
-                    <div class="gallery-content-container">
-                        <h5 class="details-title">{{item.name}}</h5>  
-                        <h5 class="details-title">{{item.name}}</h5> <!-- This field needs to be added in the CMS -->
-                    </div>
+                    <router-link :to="{ name: 'artDetails', params: { id: item.slug }}">
+                        <div class="gallery-image-container">
+                            <img :src="getMainImage(item)" />
+                        </div>
+                        <div class="gallery-content-container">
+                            <h5 class="details-title">{{item.name}}</h5>  
+                            <h5 class="details-title">{{item.name}}</h5> <!-- This field needs to be added in the CMS -->
+                        </div>
+                    </router-link>
                 </div>
             </div>
         </div>
