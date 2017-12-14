@@ -96,6 +96,8 @@
                     currentStore: null,
                     currentDetails: null,
                     isDine: false,
+                    promotions : [],
+                    hours: [],
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
@@ -107,9 +109,7 @@
                         speed: 500,
                         prevArrow: '.prev',
                         nextArrow: '.next'
-                    },
-                    promotions : [],
-                    hours: [],
+                    }
                 }
             },
             mounted () {
@@ -141,6 +141,7 @@
                 if (this.currentStore === null || this.currentStore === undefined){
                     this.$router.replace({ name: '404'});
                 }
+                
                 //Stores JSON
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
                     this.currentDetails = response.data;
@@ -158,11 +159,12 @@
                     
                     var store_assets = [];
                     if(this.currentStore.assets != null){
-                        _.forEach(this.currentDetails.store_files, function(value, key) {
-                            var image_url = "https://www.mallmaverick.com" + value.url 
-                            console.log(image_url)
-                            // temp.push(vm.findPromoById(value));
-                        });
+                        console.log(this.currentStore.assets)
+                        // _.forEach(this.currentDetails.store_files, function(value, key) {
+                        //     var image_url = "https://www.mallmaverick.com" + value.url 
+                        //     console.log(image_url)
+                        //     // temp.push(vm.findPromoById(value));
+                        // });
                         // this.promotions = temp;    
                     }
                     
