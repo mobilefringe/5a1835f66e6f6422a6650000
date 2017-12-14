@@ -62,14 +62,8 @@
                 timezone () {
                     return this.$store.getters.getTimezone;
                 },
-                all_dine(){
-                    var stores_by_category = this.$store.getters.storesByCategoryName;
-                    var cafes = stores_by_category["NorthPark Cafés"]
-                    var restaurants = stores_by_category["Restaurants / Beverages"]
-                    var specialty = stores_by_category["Specialty Foods"]
-                    var all_restaurants = _.concat(cafes, restaurants, specialty)
-                    var filtered_restaurants = _.orderBy(_.uniqBy(all_restaurants, function(o){ return o.name; }), function(o){ return o.name; })
-                    return filtered_restaurants
+                newStoresList() {
+                    return this.$store.getters.findNewStores;
                 },
                 
                 findHourById() {
