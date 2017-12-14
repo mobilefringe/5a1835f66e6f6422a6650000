@@ -37,14 +37,14 @@
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    vm.currentItem = vm.findStoreBySlug(to.params.id);
+                    vm.currentItem = vm.findPointOfInterestBySlug(to.params.id);
                     if (vm.currentItem === null || vm.currentItem === undefined){
                         vm.$router.replace({ name: '404'});
                     }
                 })
             },
             beforeRouteUpdate(to, from, next) {
-                this.currentItem = this.findStoreBySlug(to.params.id);
+                this.currentItem = this.findPointOfInterestBySlug(to.params.id);
                 if (this.currentItem === null || this.currentItem === undefined){
                     this.$router.replace({ name: '404'});
                 }
@@ -63,8 +63,8 @@
                 }
             },
             computed: {
-                findStoreBySlug () {
-                    return this.$store.getters.findStoreBySlug;
+                findPointOfInterestBySlug() {
+                    return this.$store.getters.findPointOfInterestBySlug;
                 },
                 property(){
                     return this.$store.getters.getProperty;
