@@ -55,6 +55,8 @@
                         infinite: true,
                         slidesToShow: 1,
                         speed: 1000,
+                        centerMode: true,
+  variableWidth: true
                         // prevArrow: '.prev',
                         // nextArrow: '.next'
                     }
