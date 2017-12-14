@@ -152,10 +152,7 @@
             },
             watch: {
                 currentStore: function() {
-                    console.log(this.currentStore)
-                    
                     var vm = this;
-                    
                     var storeHours = [];
                     _.forEach(this.currentStore.store_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
@@ -179,7 +176,6 @@
                 },
                 currentDetails: function() {
                     var vm = this;
-                    
                     var store_assets = [];
                     if(this.currentStore.assets != null){
                         _.forEach(this.currentDetails.store_files, function(value, key) {
