@@ -113,7 +113,7 @@
                 }
             },
             mounted () {
-                this.currentStore,
+                this.currentStore
                 this.currentDetails
             },
             beforeRouteEnter(to, from, next) {
