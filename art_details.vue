@@ -89,15 +89,9 @@
                         var items = this.currentPoint.items[0]
                         if(items.images != null){
                             var image_gallery = items.images
+                            this.artImages = image_gallery
                         }
                         
-                    }
-                    if(this.currentStore.assets != null){
-                        _.forEach(this.currentDetails.store_files, function(value, key) {
-                            value.url = "https://www.mallmaverick.com" + value.url 
-                            images.push(value);
-                        });
-                        this.storeAssets = images; 
                     }
                 }
             },
