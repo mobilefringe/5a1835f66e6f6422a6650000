@@ -41,7 +41,7 @@
                 }
             },
             mounted () {
-                this.newStores = this.newStoresList
+                this.newStores = newStoresList
                 console.log(this.newStores)
             },
             computed: {
