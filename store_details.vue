@@ -185,7 +185,7 @@
                     if(this.currentStore.assets != null){
                         _.forEach(this.currentDetails.store_files, function(value, key) {
                             value.url = "https://www.mallmaverick.com" + value.url 
-                            console.log(image_url)
+                            console.log(value.url)
                             store_assets.push(image_url);
                         });
                         console.log(store_assets)
