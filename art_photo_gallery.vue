@@ -75,6 +75,18 @@
                 sortByArtist() {
                     // var artist =  _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o. });
                     // return artist
+                }
+            },
+            methods: {
+                selectCategory(){
+                    console.log(this.selected)
+                    if(this.selected.value == "title"){
+                        this.currentSelection = this.pois;
+                    } else if (this.selected.value == "artist") {
+                        this.currentSelection = this.sortByArtist;
+                    } else {
+                        this.currentSelection = this.pois;
+                    }
                 },
                 getMainImage(){
                     main_image = "";
@@ -89,18 +101,6 @@
                         return main_image
                     });
                 }
-            },
-            methods: {
-                selectCategory(){
-                    console.log(this.selected)
-                    if(this.selected.value == "title"){
-                        this.currentSelection = this.pois;
-                    } else if (this.selected.value == "artist") {
-                        this.currentSelection = this.sortByArtist;
-                    } else {
-                        this.currentSelection = this.pois;
-                    }
-                },
             },
         });
     });
