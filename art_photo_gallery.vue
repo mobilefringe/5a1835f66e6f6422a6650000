@@ -56,6 +56,7 @@
             mounted () {
                 this.currentSelection = this.pois;
                 this.mainImage = this.getMainImage;
+                console.log(this.mainImage)
             },
             computed: {
                 property(){
