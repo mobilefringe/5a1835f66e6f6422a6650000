@@ -85,7 +85,7 @@
                     }
                 },
                 getImageURL(item){
-                    console.log(this.item)
+                    console.log(item)
                     
                 }
             },
