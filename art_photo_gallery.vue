@@ -77,8 +77,12 @@
                     _.forEach(this.pois, function(value, key) {
                         var items = value.items
                         if(items != null){
-                            var images = value.items[0].images
+                            var images = items[0].images
                             console.log(images)
+                            if(images != null){
+                                var main_image = images[0].image_url
+                                console.log(main_image)
+                            }
                             
                         }
                         
