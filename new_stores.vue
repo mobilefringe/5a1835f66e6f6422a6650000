@@ -51,7 +51,7 @@
             },
             mounted () {
                 this.newStores = this.newStoresList
-                console.log(this.newStoresList)
+                console.log(this.newStores)
             },
             computed: {
                 property(){
