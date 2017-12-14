@@ -66,7 +66,8 @@
                     return this.$store.getters.getTimezone;
                 },
                 pois() {
-                    var pois = this.$store.getters.getPointsOfInterest
+                    var name = "Art Tour";
+                    var pois = this.$store.getters.findPointOfInterest(name)
                     if(pois != null){
                         var sorted_alpha = _.orderBy(pois[0].locations, function(o) { return o.name });
                     }
