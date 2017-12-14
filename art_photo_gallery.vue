@@ -53,7 +53,7 @@
                 }
             },
             mounted () {
-                this.currentSelection = this.historyGallery;
+                this.currentSelection = this.pois;
             },
             computed: {
                 property(){
