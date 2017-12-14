@@ -70,8 +70,7 @@
                     var pois = this.$store.getters.findPointOfInterest(name)
                     console.log(pois)
                     var sortByName = _.orderBy(pois.locations, function(o) { return o.name });
-                    // }
-                    // return sorted_alpha
+                    return sortByName
                 },
                 sortByArtist() {
                     // var artist =  _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) { return o. });
