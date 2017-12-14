@@ -87,9 +87,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 showHolidayMenu: false,
             }
         },
-        // mounted () {
-        //     this.$store.state
-        // },
+        mounted () {
+            this.$store.state
+        },
         created() {
             // make an async call to the data store to initialize the locale 
             //(i.e. it will check if there is a locale value saved in cookie, otherwise it will default to EN)
