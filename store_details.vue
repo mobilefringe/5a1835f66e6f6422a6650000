@@ -189,7 +189,7 @@
                         _.forEach(this.currentDetails.store_files, function(value, key) {
                             var image_url = "https://www.mallmaverick.com" + value.url 
                             console.log(image_url)
-                            // temp.push(vm.findPromoById(value));
+                            store_assets.push(image_url);
                         });
                         // this.promotions = temp;    
                     }
