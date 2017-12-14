@@ -101,10 +101,8 @@
                             } else {
                                 return "http://placehold.it/300x300"
                             }
-                            
                         }
                     } 
-                    
                 }
             },
         });
