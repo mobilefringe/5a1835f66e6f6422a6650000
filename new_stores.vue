@@ -2,9 +2,10 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-60"></div>
         <div v-if="newStoresList">
-            <div class="row">
+            <div class="row margin-30">
                 <div class="col-md-12">
                     <h2>New Stores</h2>
+                    <hr>
                 </div>
             </div>
             <div class="row dine-container" v-for="store in newStoresList">
@@ -28,9 +29,10 @@
             <!--</div>-->
         </div>
         <div v-if="comingSoonList">
-            <div class="row">
+            <div class="row margin-30">
                 <div class="col-md-12">
                     <h2>Coming Soon</h2>
+                    <hr>
                 </div>
             </div>
             <div class="row dine-container" v-for="store in comingSoonList">
