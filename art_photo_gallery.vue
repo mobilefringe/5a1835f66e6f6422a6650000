@@ -82,7 +82,7 @@
                     } else if (this.selected.value == "artist") {
                         this.currentSelection = this.sortByArtist;
                     } else {
-                        this.currentSelection = this.sortByName;
+                        this.currentSelection = this.pois;
                     }
                 },
             },
