@@ -46,11 +46,9 @@
                     selected: "History",
                     currentSelection: null,
                     categoryOptions: [
-                        {'label':'History', 'value': 'history'},
-                        {'label':'50th Anniversary', 'value': 'anniversary'},
-                        {'label':'Event', 'value': 'event'}, 
-                        {'label':'Landscaping', 'value': 'landscaping'}, 
-                        {'label':'Architecture', 'value': 'architecture'}, 
+                        {'label':'Sort By...', 'value': 'history'},
+                        {'label':'Name', 'value': 'title'},
+                        {'label':'Artist Name', 'value': 'artist'}
                     ],
                 }
             },
