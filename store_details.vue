@@ -107,7 +107,7 @@
                         speed: 500,
                         prevArrow: '.prev',
                         nextArrow: '.next'
-                    }
+                    },
                     promotions : [],
                     hours: [],
                 }
