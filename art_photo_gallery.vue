@@ -65,10 +65,7 @@
                     return this.$store.getters.getTimezone;
                 },
                 pois() {
-                    return this.$store.getters.getPointsOfInterest[0].locations;
-                    
-                },
-                sortByName() {
+                    var alpha =  _.orderBy(this.$store.getters.getPointsOfInterest[0].locations, function(o) {return o.name});
                     
                 },
                 sortByArtist() {
