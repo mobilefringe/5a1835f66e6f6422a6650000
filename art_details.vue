@@ -60,7 +60,7 @@
                         cssEase: 'linear',
                         dots: false,
                         infinite: true,
-                        slidesToShow: 5,
+                        slidesToShow: 1,
                         speed: 1000,
                         variableWidth: true
                         // prevArrow: '.prev',
