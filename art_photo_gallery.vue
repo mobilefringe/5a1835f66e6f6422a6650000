@@ -18,7 +18,7 @@
             <div class="col-md-3" v-if="currentSelection" v-for="item in currentSelection">
                 <div class="gallery-item-container">
                     <div class="gallery-image-container">
-                        <img :src="item.image_url" />
+                        <img :src="getImageURL(item.item)" />
                     </div>
                     <div class="gallery-content-container">
                         <h5 class="details-title">{{item.name}}</h5>  
@@ -84,6 +84,9 @@
                         this.currentSelection = this.pois;
                     }
                 },
+                getImageURL(){
+                    
+                }
             },
         });
     });
