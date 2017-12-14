@@ -109,8 +109,8 @@
                     var store_id = vm.currentStore.id
                     console.log(store_id)
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v4/" + vm.property + "/stores/" + store_id + "/store_files.json"}).then(response => {
-                        vm.currentPage = response.data;
-                        console.log(vm.currentPage);
+                        vm.currentDetails = response.data;
+                        console.log(vm.currentDetails);
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
