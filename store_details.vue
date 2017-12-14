@@ -8,7 +8,7 @@
                         <img :src="asset.url" alt="">
                     </div>
                 </slick>
-                <img v-if="!currentDetails" :src="currentStore.store_front_url_abs" alt="" />
+                <img v-if="!currentStore.assets" :src="currentStore.store_front_url_abs" alt="" />
             </div>
             <div class="col-md-8">
                 <div class="details-store-info">
