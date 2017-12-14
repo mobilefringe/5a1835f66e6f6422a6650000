@@ -154,7 +154,7 @@
             watch: {
                 currentStore: function() {
                     console.log(this.currentStore)
-                    console.log(this.currentDetails)
+                    
                     var vm = this;
                     
                     var store_assets = [];
@@ -188,6 +188,9 @@
                         promos.push(vm.findPromoById(value));
                     });
                     this.promotions = promos;
+                },
+                currentDetails: function() {
+                    console.log(this.currentDetails)    
                 }
             },
             computed: {
