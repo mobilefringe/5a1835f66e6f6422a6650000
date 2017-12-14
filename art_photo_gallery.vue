@@ -75,16 +75,12 @@
             methods: {
                 selectCategory(){
                     console.log(this.selected)
-                    if(this.selected.value == "history"){
-                        this.currentSelection = this.historyGallery;
-                    } else if (this.selected.value == "anniversary") {
-                        this.currentSelection = this.anniversaryGallery;
-                    } else if (this.selected.value == "event"){
-                        this.currentSelection = this.eventGallery;
-                    } else if (this.selected.value == "landscaping"){
-                        this.currentSelection = this.landscapingGallery;
-                    } else if (this.selected.value == "architecture"){
-                        this.currentSelection = this.architectureGallery;
+                    if(this.selected.value == "title"){
+                        this.currentSelection = this.sortByName;
+                    } else if (this.selected.value == "artist") {
+                        this.currentSelection = this.sortByArtist;
+                    } else {
+                        this.currentSelection = this.sortByName;
                     }
                 },
             },
