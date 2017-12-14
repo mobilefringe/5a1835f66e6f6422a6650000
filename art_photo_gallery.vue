@@ -89,7 +89,6 @@
                     }
                 },
                 getMainImage(item){
-                    console.log(item)
                     main_image = "";
                     if(item.items != null){
                         var items = item.items
