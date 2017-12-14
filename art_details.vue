@@ -94,7 +94,6 @@
                         var items = this.currentPoint.items[0]
                         if(items.images != null){
                             var image_gallery = items.images
-                            console.log(image_gallery)
                             this.artImages = image_gallery
                         }
                     }
