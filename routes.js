@@ -74,6 +74,11 @@ define([], function () {
                     component: view('art_photo_gallery'),
                     name: 'artPhotoGallery'
                 },
+                {
+                    path: ':id',
+                    component: view('art_details'),
+                    name: 'artDetails'
+                }
             ]
         },
         {
