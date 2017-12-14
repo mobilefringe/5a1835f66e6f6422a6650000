@@ -3,7 +3,7 @@
         <div class="margin-90"></div>
         <div class="row" v-if="currentPoint">
             <div class="col-md-12 margin-60">
-                <slick v-if="currentDetails" ref="slick" :options="slickOptions">
+                <slick ref="slick" :options="slickOptions">
                     <div v-for="image in artImages" >
                         <img :src="image.image_url" alt="">
                     </div>
