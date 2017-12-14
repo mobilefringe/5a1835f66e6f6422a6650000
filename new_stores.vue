@@ -2,7 +2,7 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-60"></div>
         {{
-        <div class="dine-container" v-for="store in newStores">
+        <div class="dine-container" v-for="store in newStoresList">
             <div class="row">
                 <div class="col-md-9">
                     <img :src="store.image_url" :alt="store.name" />
