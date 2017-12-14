@@ -64,7 +64,7 @@
                     return this.$store.getters.getTimezone;
                 },
                 pois() {
-                    return this.$store.getters.getPointsOfInterest;
+                    return this.$store.getters.getPointsOfInterest.locations;
                 },
                 sortByName() {
                     
