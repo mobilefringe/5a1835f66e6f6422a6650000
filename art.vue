@@ -153,7 +153,8 @@
             },
             methods: {
                 checkID() {
-                    
+                    var itemID = this.$refs
+                    console.log(itemID);    
                 }
             }
         });
