@@ -26,7 +26,10 @@
                     	    </router-link>
                     	</div>
                     	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
-                    		<div class="hover-text">View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		<div class="hover-text">
+                    		    <h2>{{ sectionTwo.name }}</h2>
+                    		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		    </div>
                     	</div>
                     </div>
                 </div>
