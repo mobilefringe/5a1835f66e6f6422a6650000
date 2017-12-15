@@ -1,12 +1,12 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div v-for="item in sectionOne" v-if="sectionOne">
-            <img :src="item.photo_url" alt="" />    
+        <div v-if="sectionOne">
+            <img :src="sectionOne.photo_url" alt="" />    
             <div class="page-container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="art-quote">{{ item.description }}</h1>
-                        <p class="art-quote-subtext">{{ item.name }}</p>
+                        <h1 class="art-quote">{{ sectionOne.description }}</h1>
+                        <p class="art-quote-subtext">{{ sectionOne.name }}</p>
                     </div>
                 </div>
             </div>
