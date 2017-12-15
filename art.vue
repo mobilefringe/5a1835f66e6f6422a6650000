@@ -17,10 +17,10 @@
                     <div class="hover-container">
                         <img class="hover-image" :src="sectionTwo.photo_url_abs" alt="" />
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
-                    		<div class="hover-text">Learn More</div>
+                    		<div class="hover-text">Learn More &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></div>
                     	</div>
                     	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
-                    		<div class="hover-text">View Larger</div>
+                    		<div class="hover-text">View Larger &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></div>
                     	</div>
                     </div>
                 </div>
