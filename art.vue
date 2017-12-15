@@ -145,7 +145,6 @@
             data: function() {
                 return {
                     currentPage: null,
-                    section1: 35507,
                 }
             },
             mounted () {
@@ -174,13 +173,6 @@
             computed: {
                 property() {
                     return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                },
-                hours() {
-                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    return hours;
                 },
                 images() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
@@ -262,11 +254,6 @@
                 },
             },
             methods: {
-                checkID(item_id) {
-                    console.log(item_id == this.section1)
-                    return item_id == this.section1
-    
-                }
             }
         });
     });
