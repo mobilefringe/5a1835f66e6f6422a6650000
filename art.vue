@@ -78,7 +78,7 @@
         </div>
         <div class="image-row">
             <div class="hover-container" v-if="sectionFive">
-                <div class="hover-image extra-height" v-bind:style="{ backgroundImage: 'url(' + sectionFive.photo_url_abs + ')' }"></div>
+                <div class="hover-image max-height" v-bind:style="{ backgroundImage: 'url(' + sectionFive.photo_url_abs + ')' }"></div>
             	<div v-if="sectionFive.url" class="hover-text-container hover-scale">
             	    <router-link :to="sectionFive.url">
             		    <div class="hover-text">
@@ -144,7 +144,7 @@
             <div class="row image-row">
                 <div class="col-md-12">
                     <div class="hover-container" v-if="sectionEight">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionEight.photo_url_abs + ')' }"></div>
+                        <div class="hover-image mid-height" v-bind:style="{ backgroundImage: 'url(' + sectionEight.photo_url_abs + ')' }"></div>
                     	<div v-if="sectionEight.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionEight.url">
                     		    <div class="hover-text">
