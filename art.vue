@@ -22,7 +22,7 @@
                     	    <router-link :to="sectionTwo.url">
                     		    <div class="hover-text">
                     		        <h2>{{ sectionTwo.name }}</h2>
-                    		        <h4>{{ sectionTwo.descriptio }}</h4>
+                    		        <h4>{{ sectionTwo.description }}</h4>
                     		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		        </div>
                     	    </router-link>
@@ -30,7 +30,7 @@
                     	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionTwo.name }}</h2>
-                    		    <h4>{{ sectionTwo.descriptio }}</h4>
+                    		    <h4>{{ sectionTwo.description }}</h4>
                     		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		    </div>
                     	</div>
@@ -44,7 +44,7 @@
                     	    <router-link :to="sectionThree.url">
                     		    <div class="hover-text">
                     		        <h2>{{ sectionThree.name }}</h2>
-                    		        <h4>{{ sectionThree.descriptio }}</h4>
+                    		        <h4>{{ sectionThree.description }}</h4>
                     		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		        </div>
                     	    </router-link>
@@ -52,7 +52,7 @@
                     	<div v-if="!sectionThree.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionThree.name }}</h2>
-                    		    <h4>{{ sectionThree.descriptio }}</h4>
+                    		    <h4>{{ sectionThree.description }}</h4>
                     		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		    </div>
                     	</div>
@@ -66,7 +66,7 @@
                     	    <router-link :to="sectionFour.url">
                     		    <div class="hover-text">
                     		        <h2>{{ sectionFour.name }}</h2>
-                    		        <h4>{{ sectionFour.descriptio }}</h4>
+                    		        <h4>{{ sectionFour.description }}</h4>
                     		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		        </div>
                     	    </router-link>
@@ -74,7 +74,7 @@
                     	<div v-if="!sectionFour.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionFour.name }}</h2>
-                    		    <h4>{{ sectionFour.descriptio }}</h4>
+                    		    <h4>{{ sectionFour.description }}</h4>
                     		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		    </div>
                     	</div>
@@ -89,7 +89,7 @@
             	    <router-link :to="sectionFive.url">
             		    <div class="hover-text">
             		        <h2>{{ sectionFive.name }}</h2>
-            		        <h4>{{ sectionFive.descriptio }}</h4>
+            		        <h4>{{ sectionFive.description }}</h4>
             		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
         		        </div>
             	    </router-link>
@@ -97,7 +97,7 @@
             	<div v-if="!sectionFive.url"class="hover-text-container hover-scale">
             		<div class="hover-text">
             		    <h2>{{ sectionFive.name }}</h2>
-            		    <h4>{{ sectionFive.descriptio }}</h4>
+            		    <h4>{{ sectionFive.description }}</h4>
             		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
         		    </div>
             	</div>
@@ -117,7 +117,7 @@
                     	    <router-link :to="sectionSix.url">
                     		    <div class="hover-text">
                     		        <h2>{{ sectionSix.name }}</h2>
-                    		        <h4>{{ sectionSix.descriptio }}</h4>
+                    		        <h4>{{ sectionSix.description }}</h4>
                     		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		        </div>
                     	    </router-link>
@@ -125,7 +125,7 @@
                     	<div v-if="!sectionSix.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionSix.name }}</h2>
-                    		    <h4>{{ sectionSix.descriptio }}</h4>
+                    		    <h4>{{ sectionSix.description }}</h4>
                     		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		    </div>
                     	</div>
@@ -138,7 +138,7 @@
                     	    <router-link :to="sectionSeven.url">
                     		    <div class="hover-text">
                     		        <h2>{{ sectionSeven.name }}</h2>
-                    		        <h4>{{ sectionSeven.descriptio }}</h4>
+                    		        <h4>{{ sectionSeven.description }}</h4>
                     		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		        </div>
                     	    </router-link>
@@ -146,7 +146,7 @@
                     	<div v-if="!sectionSeven.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionSeven.name }}</h2>
-                    		    <h4>{{ sectionSeven.descriptio }}</h4>
+                    		    <h4>{{ sectionSeven.description }}</h4>
                     		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		    </div>
                     	</div>
@@ -161,7 +161,7 @@
                     	    <router-link :to="sectionEight.url">
                     		    <div class="hover-text">
                     		        <h2>{{ sectionEight.name }}</h2>
-                    		        <h4>{{ sectionEight.descriptio }}</h4>
+                    		        <h4>{{ sectionEight.description }}</h4>
                     		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		        </div>
                     	    </router-link>
