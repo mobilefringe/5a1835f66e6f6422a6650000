@@ -55,7 +55,7 @@
                     		<div class="hover-text">
                     		    <h2>{{ sectionThree.name }}</h2>
                     		    <h4>{{ sectionThree.description }}</h4>
-                    		    <a class="lightbox__thumbnail" href="sectionThree.photo_url_abs"><h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5></a>
+                    		    <a class="lightbox__thumbnail" :href="sectionThree.photo_url_abs"><h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5></a>
                 		    </div>
                     	</div>
                     </div>
