@@ -17,7 +17,9 @@
                     <div class="hover-container">
                         <img class="hover-image" :src="sectionTwo.photo_url_abs" alt="" />
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
-                    		<div class="hover-text">Learn More &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    	    <router-link :to="sectionTwo.url">
+                    		    <div class="hover-text">Learn More &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    	    </router-link>
                     	</div>
                     	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">View Larger &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></div>
