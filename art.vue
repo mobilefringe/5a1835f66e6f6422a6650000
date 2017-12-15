@@ -154,6 +154,7 @@
             },
             methods: {
                 checkID(item_id) {
+                    console.log(item_id == this.section1)
                     return item_id == this.section1
     
                 }
