@@ -78,7 +78,7 @@
         </div>
         <div class="image-row">
             <div class="hover-container" v-if="sectionFive">
-                <div class="hover-image banner-height" v-bind:style="{ backgroundImage: 'url(' + sectionFive.photo_url_abs + ')' }"></div>
+                <div class="hover-image extra-height" v-bind:style="{ backgroundImage: 'url(' + sectionFive.photo_url_abs + ')' }"></div>
             	<div v-if="sectionFive.url" class="hover-text-container hover-scale">
             	    <router-link :to="sectionFive.url">
             		    <div class="hover-text">
