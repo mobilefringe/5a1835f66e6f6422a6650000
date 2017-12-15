@@ -189,7 +189,6 @@
                             sectionOne.push(value);
                         }
                     });
-                    console.log(sectionOne)
                     return sectionOne[0];
                 },
                 sectionTwo(){
@@ -201,7 +200,6 @@
                             sectionTwo.push(value);
                         }
                     });
-                    console.log(sectionTwo)
                     return sectionTwo[0];
                 },
                 sectionThree(){
@@ -213,7 +211,6 @@
                             sectionThree.push(value);
                         }
                     });
-                    console.log(sectionThree)
                     return sectionThree[0];
                 },
                 sectionFour(){
@@ -225,19 +222,6 @@
                             sectionFour.push(value);
                         }
                     });
-                    console.log(sectionFour)
-                    return sectionFour[0];
-                },
-                sectionFour(){
-                    var sectionID = 35510
-                    var sectionFour = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionFour.push(value);
-                        }
-                    });
-                    console.log(sectionFour)
                     return sectionFour[0];
                 },
                 sectionFive(){
