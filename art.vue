@@ -11,19 +11,9 @@
                 </div>
             </div>
         </div>
-        <!--<div >-->
-        <!--    <img v-for="item in images" :key="" :src="item.photo_url" alt="" />    -->
-        <!--</div>-->
         <div class="page-container">
-            <!--<div class="row">-->
-            <!--    <div class="col-md-12">-->
-                    <!-- QUOTE -->
-            <!--        <h1 class="art-quote">NORTHPARK CENTER HAS A LONG AND GREAT TRADITION OF EXHIBITING SIGNIFICANT CONTEMPORARY ARTWORK, AND I THINK IT IS WONDERFUL THAT THE TRADITION CONTINUES INTO THE PRESENT.</h1>-->
-            <!--        <p class="art-quote-subtext">JOEL SHAPIRO</p>-->
-            <!--    </div>-->
-            <!--</div>-->
             <div class="row image-row">
-                <div class="col-md-4">
+                <div class="col-md-4" v-if="sectionTwo">
                     <div class="hover-container">
                         <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
                     	<div class="hover-text-container hover-scale">
@@ -31,7 +21,7 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" v-if="sectionThree">
                     <div class="hover-container">
                         <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
                     	<div class="hover-text-container hover-scale">
@@ -39,7 +29,7 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" v-if="sectionFour">
                     <div class="hover-container">
                         <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
                     	<div class="hover-text-container hover-scale">
