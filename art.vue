@@ -1,6 +1,6 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div v-for="item in images" v-if="checkID(item.id)" ref="35507">
+        <div v-for="item in images" v-if="item.id == 33507" ref="35507">
             <img :src="item.photo_url" alt="" />    
             <div class="page-container">
                 <div class="row">
