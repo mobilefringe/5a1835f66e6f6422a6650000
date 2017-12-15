@@ -20,7 +20,7 @@
                     		<div class="hover-text">Lorem ipsum dolor sit amet</div>
                     	</div>
                     	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
-                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
+                    		<div class="hover-text">View Larger</div>
                     	</div>
                     </div>
                 </div>
