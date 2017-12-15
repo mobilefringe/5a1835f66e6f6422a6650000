@@ -16,6 +16,7 @@
                 <div class="col-md-4" v-if="sectionTwo">
                     <div class="hover-container">
                         <img class="hover-image" :src="sectionTwo.photo_url_abs" alt="" />
+                        <div v-bind:style="{ backgroundImage: 'url(' + sectionTwo.photo_url_abs + ')' }"></div>
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionTwo.url">
                     		    <div class="hover-text">Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
