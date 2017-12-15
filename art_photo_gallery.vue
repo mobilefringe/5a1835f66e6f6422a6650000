@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p>Download Art Tour Map</p>
+                <h4 class="pull-right"><a href="">Download Art Tour Map</a></h4>
             </div>
         </div>
         <div class="row margin-60">
