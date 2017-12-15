@@ -22,6 +22,7 @@
                     	    <router-link :to="sectionTwo.url">
                     		    <div class="hover-text">
                     		        <h2>{{ sectionTwo.name }}</h2>
+                    		        <h4>{{ sectionTwo.descriptio }}</h4>
                     		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		        </div>
                     	    </router-link>
