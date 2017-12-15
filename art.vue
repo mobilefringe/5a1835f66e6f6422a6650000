@@ -1,8 +1,8 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div v-if="sectionOne">
-            <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionOne.photo_url_abs + ')' }"></div>
-            <img :src="sectionOne.photo_url_abs" alt="Art Collection Banner"/>    
+            <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.photo_url_abs + ')' }"></div>
+            <!--<img :src="sectionOne.photo_url_abs" alt="Art Collection Banner"/>    -->
             <div class="page-container">
                 <div class="row">
                     <div class="col-md-12">
