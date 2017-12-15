@@ -152,7 +152,7 @@
                 },
             },
             methods: {
-                checkID() {
+                checkID(item.id) {
                     var itemID = this.$refs
                     console.log(itemID);    
                 }
