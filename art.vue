@@ -108,6 +108,7 @@
             data: function() {
                 return {
                     currentPage: null,
+                    section1: 35507,
                 }
             },
             mounted () {
@@ -153,8 +154,9 @@
             },
             methods: {
                 checkID(item_id) {
-                    var itemID = this.$ref
-                    console.log(itemID);    
+                    var sectionID = this.
+                    // var itemID = this.$ref
+                    // console.log(itemID);    
                 }
             }
         });
