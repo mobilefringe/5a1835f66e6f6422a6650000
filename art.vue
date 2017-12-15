@@ -260,7 +260,7 @@
                 },
                 sectionSix(){
                     var sectionID = 35510
-                    var sectionsectionSix = [];
+                    var sectionSix = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
                         if(itemID === sectionID){
