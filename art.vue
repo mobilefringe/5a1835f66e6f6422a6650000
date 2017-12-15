@@ -259,7 +259,7 @@
                     return sectionFive[0];
                 },
                 sectionSix(){
-                    var sectionID = 35522
+                    var sectionID = 35523
                     var sectionSix = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
@@ -271,7 +271,7 @@
                     return sectionSix[0];
                 },
                 sectionSeven(){
-                    var sectionID = 35523
+                    var sectionID = 35524
                     var sectionSeven = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
