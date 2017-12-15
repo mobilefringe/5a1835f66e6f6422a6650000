@@ -154,9 +154,8 @@
             },
             methods: {
                 checkID(item_id) {
-                    var sectionID = this.
-                    // var itemID = this.$ref
-                    // console.log(itemID);    
+                    return item_id == this.section1
+    
                 }
             }
         });
