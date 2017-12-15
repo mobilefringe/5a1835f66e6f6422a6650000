@@ -281,7 +281,6 @@
                             sectionFive.push(value);
                         }
                     });
-                    console.log(sectionFive)
                     return sectionFive[0];
                 },
                 sectionSix(){
@@ -293,7 +292,6 @@
                             sectionSix.push(value);
                         }
                     });
-                    console.log(sectionSix)
                     return sectionSix[0];
                 },
                 sectionSeven(){
@@ -305,7 +303,6 @@
                             sectionSeven.push(value);
                         }
                     });
-                    console.log(sectionSeven)
                     return sectionSeven[0];
                 },
                 sectionEight(){
@@ -317,7 +314,6 @@
                             sectionEight.push(value);
                         }
                     });
-                    console.log(sectionEight)
                     return sectionEight[0];
                 },
             },
