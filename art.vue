@@ -1,6 +1,6 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <img src="http://via.placeholder.com/1920x640" alt="" />
+        <img v-if="images.id(35507)" :src="images.photo_url" alt="" />
         <div class="page-container">
             <div class="row">
                 <div class="col-md-12">
