@@ -1,6 +1,6 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div v-for="item in images" v-if="checkID(item.id)" ref="35507">
+        <div v-for="item in imageSectionOne">
             <img :src="item.photo_url" alt="" />    
             <div class="page-container">
                 <div class="row">
@@ -151,6 +151,12 @@
                     console.log(repo_images)
                     return repo_images
                 },
+                imageSectionOne(){
+                    console.log(this.images)
+                },
+                imageSectionTwo() {
+                    
+                }
             },
             methods: {
                 checkID(item_id) {
