@@ -17,7 +17,7 @@
                     <div class="hover-container">
                         <img class="hover-image" :src="sectionTwo.photo_url_abs" alt="" />
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
-                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
+                    		<div class="hover-text">Learn More</div>
                     	</div>
                     	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">View Larger</div>
