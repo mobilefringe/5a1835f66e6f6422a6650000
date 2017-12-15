@@ -153,9 +153,42 @@
                     console.log(sectionOne)
                     return sectionOne[0];
                 },
-                imageSectionTwo() {
-                    
-                }
+                sectionTwo(){
+                    var sectionID = 35508
+                    var sectionOne = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionOne.push(value);
+                        }
+                    });
+                    console.log(sectionOne)
+                    return sectionOne[0];
+                },
+                sectionThree(){
+                    var sectionID = 35509
+                    var sectionOne = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionOne.push(value);
+                        }
+                    });
+                    console.log(sectionOne)
+                    return sectionOne[0];
+                },
+                sectionFour(){
+                    var sectionID = 355010
+                    var sectionOne = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionOne.push(value);
+                        }
+                    });
+                    console.log(sectionOne)
+                    return sectionOne[0];
+                },
             },
             methods: {
                 checkID(item_id) {
