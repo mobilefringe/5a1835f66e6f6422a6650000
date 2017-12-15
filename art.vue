@@ -161,6 +161,7 @@
                             sectionOne.push(value);
                         }
                     });
+                    console.log(sectionOne)
                     return sectionOne;
                 },
                 imageSectionTwo() {
