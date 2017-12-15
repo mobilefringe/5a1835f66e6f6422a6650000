@@ -155,27 +155,27 @@
                 },
                 sectionTwo(){
                     var sectionID = 35508
-                    var sectionOne = [];
+                    var sectionTwo = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
                         if(itemID === sectionID){
-                            sectionOne.push(value);
+                            sectionTwo.push(value);
                         }
                     });
-                    console.log(sectionOne)
-                    return sectionOne[0];
+                    console.log(sectionTwo)
+                    return sectionTwo[0];
                 },
                 sectionThree(){
                     var sectionID = 35509
-                    var sectionOne = [];
+                    var sectionThree = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
                         if(itemID === sectionID){
-                            sectionOne.push(value);
+                            sectionThree.push(value);
                         }
                     });
-                    console.log(sectionOne)
-                    return sectionOne[0];
+                    console.log(sectionThree)
+                    return sectionThree[0];
                 },
                 sectionFour(){
                     var sectionID = 355010
