@@ -60,13 +60,16 @@
                     	<div v-if="sectionFour.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionFour.url">
                     		    <div class="hover-text">
-                    		        <h2>{{ sectionThree.name }}</h2>
+                    		        <h2>{{ sectionFour.name }}</h2>
                     		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		        </div>
                     	    </router-link>
                     	</div>
                     	<div v-if="!sectionFour.url"class="hover-text-container hover-scale">
-                    		<div class="hover-text">View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		<div class="hover-text">
+                    		    <h2>{{ sectionFour.name }}</h2>
+                    		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		    </div>
                     	</div>
                     </div>
                 </div>
