@@ -99,7 +99,6 @@
             },
             mounted () {
                 this.images
-                console.log(this.images)
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
