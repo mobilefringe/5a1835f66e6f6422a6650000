@@ -161,7 +161,7 @@
                         }
                     });
                     console.log(sectionOne)
-                    return sectionOne;
+                    return sectionOne[0];
                 },
                 imageSectionTwo() {
                     
