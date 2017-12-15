@@ -18,11 +18,11 @@
                         <img class="hover-image" :src="sectionTwo.photo_url_abs" alt="" />
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionTwo.url">
-                    		    <div class="hover-text">Learn More &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		    <div class="hover-text">Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     	    </router-link>
                     	</div>
                     	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
-                    		<div class="hover-text">View Larger &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		<div class="hover-text">View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     	</div>
                     </div>
                 </div>
@@ -31,11 +31,11 @@
                         <img class="hover-image" :src="sectionThree.photo_url_abs" alt=""/>
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionThree.url">
-                    		    <div class="hover-text">Learn More &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		    <div class="hover-text">Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     	    </router-link>
                     	</div>
                     	<div v-if="!sectionThree.url"class="hover-text-container hover-scale">
-                    		<div class="hover-text">View Larger &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		<div class="hover-text">View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     	</div>
                     </div>
                 </div>
@@ -44,11 +44,11 @@
                         <img class="hover-image" :src="sectionFour.photo_url_abs" alt=""/>
                     	<div v-if="sectionFour.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionFour.url">
-                    		    <div class="hover-text">Learn More &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		    <div class="hover-text">Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     	    </router-link>
                     	</div>
                     	<div v-if="!sectionFour.url"class="hover-text-container hover-scale">
-                    		<div class="hover-text">View Larger &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		<div class="hover-text">View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     	</div>
                     </div>
                 </div>
