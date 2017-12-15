@@ -19,7 +19,7 @@
                 <div class="gallery-item-container">
                     <router-link :to="{ name: 'artDetails', params: { id: item.slug }}">
                         <div class="gallery-image-container">
-                            <div v-bind:style="{ backgroundImage: 'url(' + getMainImage(item) + ')' }"></div>
+                            <div class="gallery-image" v-bind:style="{ backgroundImage: 'url(' + getMainImage(item) + ')' }"></div>
                             <!--<img :src="getMainImage(item)" />-->
                         </div>
                         <div class="gallery-content-container">
