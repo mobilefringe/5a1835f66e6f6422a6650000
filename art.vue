@@ -153,7 +153,7 @@
             },
             methods: {
                 checkID(item_id) {
-                    var itemID = this.$el
+                    var itemID = this.$ref
                     console.log(itemID);    
                 }
             }
