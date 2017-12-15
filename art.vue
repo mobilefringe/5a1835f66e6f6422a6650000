@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col-md-4" v-if="sectionThree">
-                    <lightbox :thumbnail="sectionThree.photo_url_abs" :images="['sectionThree.photo_url_abs ']"></lightbox>
+                    <lightbox :thumbnail="sectionThree.photo_url_abs" :images="{ '[' + sectionThree.photo_url_abs + ']' }"></lightbox>
                     <div class="hover-container">
                         
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.photo_url_abs + ')' }"></div>
