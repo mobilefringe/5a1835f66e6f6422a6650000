@@ -151,7 +151,7 @@
                     console.log(repo_images)
                     return repo_images
                 },
-                imageSectionOne(){
+                sectionOne(){
                     var sectionID = 35507
                     var sectionOne = [];
                     _.forEach(this.images, function(value, key) {
