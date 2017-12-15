@@ -1,27 +1,27 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
-    <div v-for="item in images" v-if="checkID(item.id)" ref="35507">
-        <img v-for="item in images" :key="" :src="item.photo_url" alt="" />    
-        <div class="page-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="art-quote">{{ }}</h1>
-                    <p class="art-quote-subtext">{{ }}</p>
+        <div v-for="item in images" v-if="checkID(item.id)" ref="35507">
+            <img :src="item.photo_url" alt="" />    
+            <div class="page-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="art-quote">{{ }}</h1>
+                        <p class="art-quote-subtext">{{ }}</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-        <div >
-            <img v-for="item in images" :key="" :src="item.photo_url" alt="" />    
-        </div>
+        <!--<div >-->
+        <!--    <img v-for="item in images" :key="" :src="item.photo_url" alt="" />    -->
+        <!--</div>-->
         <div class="page-container">
-            <div class="row">
-                <div class="col-md-12">
+            <!--<div class="row">-->
+            <!--    <div class="col-md-12">-->
                     <!-- QUOTE -->
-                    <h1 class="art-quote">NORTHPARK CENTER HAS A LONG AND GREAT TRADITION OF EXHIBITING SIGNIFICANT CONTEMPORARY ARTWORK, AND I THINK IT IS WONDERFUL THAT THE TRADITION CONTINUES INTO THE PRESENT.</h1>
-                    <p class="art-quote-subtext">JOEL SHAPIRO</p>
-                </div>
-            </div>
+            <!--        <h1 class="art-quote">NORTHPARK CENTER HAS A LONG AND GREAT TRADITION OF EXHIBITING SIGNIFICANT CONTEMPORARY ARTWORK, AND I THINK IT IS WONDERFUL THAT THE TRADITION CONTINUES INTO THE PRESENT.</h1>-->
+            <!--        <p class="art-quote-subtext">JOEL SHAPIRO</p>-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="row image-row">
                 <div class="col-md-4">
                     <div class="hover-container">
