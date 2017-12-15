@@ -5,8 +5,8 @@
             <div class="page-container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="art-quote">{{ }}</h1>
-                        <p class="art-quote-subtext">{{ }}</p>
+                        <h1 class="art-quote">{{ item.description }}</h1>
+                        <p class="art-quote-subtext">{{ item.name }}</p>
                     </div>
                 </div>
             </div>
