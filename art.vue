@@ -248,6 +248,18 @@
                     console.log(sectionFour)
                     return sectionFour[0];
                 },
+                sectionFive(){
+                    var sectionID = 35510
+                    var sectionFive = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionFive.push(value);
+                        }
+                    });
+                    console.log(sectionFive)
+                    return sectionFive[0];
+                },
             },
             methods: {
                 checkID(item_id) {
