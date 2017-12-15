@@ -1,7 +1,7 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div v-if="sectionOne">
-            <img :src="sectionOne.photo_url" alt="" />    
+            <img :src="sectionOne.photo_url_abs" alt="" />    
             <div class="page-container">
                 <div class="row">
                     <div class="col-md-12">
