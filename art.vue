@@ -101,8 +101,8 @@
                 </div>
             </div>
             <div class="row image-row">
-                <div class="col-md-6" v-if="sectionSix">
-                    <div class="hover-container">
+                <div class="col-md-6">
+                    <div class="hover-container" v-if="sectionSix">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSix.photo_url_abs + ')' }"></div>
                     	<div v-if="sectionSix.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionSix.url">
@@ -122,9 +122,20 @@
                 </div>
                 <div class="col-md-6">
                     <div class="hover-container" v-if="sectionSeven">
-                        <img class="hover-image" src="http://via.placeholder.com/468x410" alt="" />
-                    	<div class="hover-text-container hover-scale">
-                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
+                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSeven.photo_url_abs + ')' }"></div>
+                    	<div v-if="sectionSeven.url" class="hover-text-container hover-scale">
+                    	    <router-link :to="sectionSeven.url">
+                    		    <div class="hover-text">
+                    		        <h2>{{ sectionSeven.name }}</h2>
+                    		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		        </div>
+                    	    </router-link>
+                    	</div>
+                    	<div v-if="!sectionSeven.url"class="hover-text-container hover-scale">
+                    		<div class="hover-text">
+                    		    <h2>{{ sectionSeven.name }}</h2>
+                    		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		    </div>
                     	</div>
                     </div>
                 </div>
