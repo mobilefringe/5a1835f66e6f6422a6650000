@@ -134,8 +134,7 @@
                 },
                 images() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
-                    console.log(repo)
-                    var repo_images = repo[0].images
+                    var repo_images = _.orderBy(repo[0].images, function(o) { return [o.id], ['asc'] });
                     console.log(repo_images)
                     return repo_images
                 },
