@@ -59,7 +59,10 @@
                         <!--<img class="hover-image" :src="sectionFour.photo_url_abs" alt=""/>-->
                     	<div v-if="sectionFour.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionFour.url">
-                    		    <div class="hover-text">Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    		    <div class="hover-text">
+                    		        <h2>{{ sectionThree.name }}</h2>
+                    		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		        </div>
                     	    </router-link>
                     	</div>
                     	<div v-if="!sectionFour.url"class="hover-text-container hover-scale">
