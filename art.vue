@@ -15,7 +15,7 @@
             <div class="row image-row">
                 <div class="col-md-4" v-if="sectionTwo">
                     <div class="hover-container">
-                        <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
+                        <img class="hover-image" :src="sectionTwo.photo_url_abs" alt="" />
                     	<div class="hover-text-container hover-scale">
                     		<div class="hover-text">Lorem ipsum dolor sit amet</div>
                     	</div>
