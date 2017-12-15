@@ -188,7 +188,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
-        Vue.use(Lightbox)
+        Vue.use(Lightbox);
         return Vue.component("art-component", {
             template: template, // the variable template will be injected
             data: function() {
