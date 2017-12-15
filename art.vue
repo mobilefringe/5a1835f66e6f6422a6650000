@@ -142,10 +142,21 @@
             </div>
             <div class="row image-row">
                 <div class="col-md-12">
-                    <div class="hover-container">
-                        <img class="hover-image" src="http://via.placeholder.com/960x530" alt="" />
-                    	<div class="hover-text-container hover-scale">
-                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
+                    <div class="hover-container" v-if="sectionEight">
+                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionEight.photo_url_abs + ')' }"></div>
+                    	<div v-if="sectionEight.url" class="hover-text-container hover-scale">
+                    	    <router-link :to="sectionEight.url">
+                    		    <div class="hover-text">
+                    		        <h2>{{ sectionEight.name }}</h2>
+                    		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		        </div>
+                    	    </router-link>
+                    	</div>
+                    	<div v-if="!sectionEight.url"class="hover-text-container hover-scale">
+                    		<div class="hover-text">
+                    		    <h2>{{ sectionEight.name }}</h2>
+                    		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		    </div>
                     	</div>
                     </div>
                 </div>
