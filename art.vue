@@ -169,6 +169,7 @@
                     	<div v-if="!sectionEight.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionEight.name }}</h2>
+                    		    <h4>{{ sectionEight.description }}</h4>
                     		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                 		    </div>
                     	</div>
