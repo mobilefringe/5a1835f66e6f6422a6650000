@@ -153,6 +153,16 @@
                 },
                 imageSectionOne(){
                     console.log(this.images)
+                    var sectionOne = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        console.log(itemID)
+                        // var fashion_string = _.includes(tag_string, "fashion");
+                        // if(fashion_string === true){
+                        //     sectionOne.push(value);
+                        // }
+                    });
+                    return sectionOne;
                 },
                 imageSectionTwo() {
                     
