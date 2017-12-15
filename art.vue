@@ -283,7 +283,7 @@
                     return sectionSeven[0];
                 },
                 sectionEight(){
-                    var sectionID = 35524
+                    var sectionID = 35525
                     var sectionEight = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
