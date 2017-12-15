@@ -1,6 +1,6 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div v-for="item in sectionOne">
+        <div v-for="item in sectionOne" v-if="sectionOne">
             <img :src="item.photo_url" alt="" />    
             <div class="page-container">
                 <div class="row">
