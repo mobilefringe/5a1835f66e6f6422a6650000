@@ -1,7 +1,7 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div >
-            <img v-for="item in images" :key="item.id(35507)" :src="item.photo_url" alt="" />    
+            <img v-for="item in images" :key="item.id[35507]" :src="item.photo_url" alt="" />    
         </div>
         <div class="page-container">
             <div class="row">
