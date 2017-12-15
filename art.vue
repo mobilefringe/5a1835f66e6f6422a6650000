@@ -128,8 +128,8 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
-                historyBanners() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
+                Images() {
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
                     var repo_images = repo[0].images
                     console.log(repo_images)
                     return repo_images
