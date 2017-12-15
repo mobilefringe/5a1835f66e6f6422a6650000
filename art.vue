@@ -179,15 +179,15 @@
                 },
                 sectionFour(){
                     var sectionID = 355010
-                    var sectionOne = [];
+                    var sectionFour = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
                         if(itemID === sectionID){
-                            sectionOne.push(value);
+                            sectionFour.push(value);
                         }
                     });
-                    console.log(sectionOne)
-                    return sectionOne[0];
+                    console.log(sectionFour)
+                    return sectionFour[0];
                 },
             },
             methods: {
