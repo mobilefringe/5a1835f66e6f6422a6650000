@@ -236,6 +236,42 @@
                     console.log(sectionFive)
                     return sectionFive[0];
                 },
+                sectionSix(){
+                    var sectionID = 35510
+                    var sectionsectionSix = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionSix.push(value);
+                        }
+                    });
+                    console.log(sectionSix)
+                    return sectionSix[0];
+                },
+                sectionSeven(){
+                    var sectionID = 35510
+                    var sectionSeven = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionSeven.push(value);
+                        }
+                    });
+                    console.log(sectionSeven)
+                    return sectionSeven[0];
+                },
+                sectionEight(){
+                    var sectionID = 35510
+                    var sectionEight = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionEight.push(value);
+                        }
+                    });
+                    console.log(sectionEight)
+                    return sectionEight[0];
+                },
             },
             methods: {
             }
