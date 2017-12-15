@@ -17,6 +17,7 @@
                 <div class="col-md-4" v-if="sectionTwo">
                     <div class="hover-container">
                         <!--<img class="hover-image" :src="sectionTwo.photo_url_abs" alt="" />-->
+                        
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionTwo.photo_url_abs + ')' }"></div>
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionTwo.url">
@@ -38,7 +39,7 @@
                 </div>
                 <div class="col-md-4" v-if="sectionThree">
                     <div class="hover-container">
-                        <!--<img class="hover-image" :src="sectionThree.photo_url_abs" alt=""/>-->
+                        <lightbox thumbnail="sectionThree.photo_url_abs" :images="['sectionThree.photo_url_abs', 'sectionThree.photo_url_abs']"></lightbox>
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.photo_url_abs + ')' }"></div>
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionThree.url">
