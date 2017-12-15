@@ -156,7 +156,6 @@
                     var sectionOne = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
-                        console.log(itemID)
                         if(itemID === sectionID){
                             sectionOne.push(value);
                         }
