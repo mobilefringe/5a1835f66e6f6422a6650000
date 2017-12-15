@@ -97,6 +97,10 @@
                     currentPage: null,
                 }
             },
+            mounted () {
+                this.images
+                console.log(this.images)
+            },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -128,7 +132,7 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
-                Images() {
+                images() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
                     var repo_images = repo[0].images
                     console.log(repo_images)
