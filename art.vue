@@ -36,10 +36,10 @@
                     </div>
                 </div>
                 <div class="col-md-4" v-if="sectionThree">
-                    <!--<lightbox :thumbnail="sectionThree.photo_url_abs" :images="[sectionThree.photo_url_abs]"></lightbox>-->
+                    <lightbox :thumbnail="sectionThree.photo_url_abs" :images="[sectionThree.photo_url_abs]"></lightbox>
                     <div class="hover-container">
                         <div class="hover-image">
-                            <!--<lightbox :thumbnail="sectionThree.photo_url_abs" :images="sectionThree.photo_url_abs"></lightbox>-->
+                            <lightbox :thumbnail="sectionThree.photo_url_abs" :images="sectionThree.photo_url_abs"></lightbox>
                         </div>
                         <!--<div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.photo_url_abs + ')' }"></div>-->
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
@@ -189,7 +189,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
-        // Vue.use(Lightbox);
+        Vue.use(Lightbox);
         return Vue.component("art-component", {
             template: template, // the variable template will be injected
             data: function() {
