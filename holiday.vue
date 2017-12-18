@@ -46,8 +46,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-7" v-if="currentSelection">
-                        <div class="row" v-for="event in currentSelection">
+                    <div class="col-md-7">
+                        <div class="row" v-for="event in holidayEvents">
                             <div class="col-md-2">
                                 <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
                                 <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
