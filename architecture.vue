@@ -187,13 +187,13 @@
                 </div>
                 <div class="col-md-12">
                     <router-link to="/our-story/photo-gallery">
-                        <h5 class="details-title">View Landcsape Photo Gallery&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                        <h5 class="details-title">View Architecture Photo Gallery&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                     </router-link>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Landscaping</p>
+                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Architecture</p>
                 </div>
             </div>
         </div>
