@@ -37,40 +37,40 @@
             </div>
             
             
-            <div class="row image-row">
-                <div class="col-md-3">
-                    <div class="hover-container">
-                        <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
-                    	<div class="hover-text-container hover-scale">
-                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
-                    	</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="hover-container">
-                        <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
-                    	<div class="hover-text-container hover-scale">
-                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
-                    	</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="hover-container">
-                        <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
-                    	<div class="hover-text-container hover-scale">
-                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
-                    	</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="hover-container">
-                        <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />
-                    	<div class="hover-text-container hover-scale">
-                    		<div class="hover-text">Lorem ipsum dolor sit amet</div>
-                    	</div>
-                    </div>
-                </div>
-            </div>
+            <!--<div class="row image-row">-->
+            <!--    <div class="col-md-3">-->
+            <!--        <div class="hover-container">-->
+            <!--            <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />-->
+            <!--        	<div class="hover-text-container hover-scale">-->
+            <!--        		<div class="hover-text">Lorem ipsum dolor sit amet</div>-->
+            <!--        	</div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--    <div class="col-md-3">-->
+            <!--        <div class="hover-container">-->
+            <!--            <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />-->
+            <!--        	<div class="hover-text-container hover-scale">-->
+            <!--        		<div class="hover-text">Lorem ipsum dolor sit amet</div>-->
+            <!--        	</div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--    <div class="col-md-3">-->
+            <!--        <div class="hover-container">-->
+            <!--            <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />-->
+            <!--        	<div class="hover-text-container hover-scale">-->
+            <!--        		<div class="hover-text">Lorem ipsum dolor sit amet</div>-->
+            <!--        	</div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--    <div class="col-md-3">-->
+            <!--        <div class="hover-container">-->
+            <!--            <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />-->
+            <!--        	<div class="hover-text-container hover-scale">-->
+            <!--        		<div class="hover-text">Lorem ipsum dolor sit amet</div>-->
+            <!--        	</div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="row">
                 <div class="col-md-12">
                     <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>
