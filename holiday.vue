@@ -103,10 +103,6 @@
                     }
                 }
             },
-            // mounted () {
-            //     this.currentBlog = this.holidayBlog
-            //     console.log(this.currentBlog)
-            // },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -168,7 +164,6 @@
                 },
                 holidayEvents(){
                    var holiday_events = [];
-                   console.log(this.$store.getters.processedEvents)
                     _.forEach(this.$store.getters.processedEvents, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ''));
                         var holiday_string = _.includes(tag_string, "holiday");
@@ -176,7 +171,6 @@
                             holiday_events.push(value);
                         }
                     });
-                    console.log(holiday_events)
                     if(holiday_events.length > 0){
                         return holiday_events;
                     }
