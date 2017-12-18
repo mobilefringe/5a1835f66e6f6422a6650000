@@ -127,6 +127,7 @@
                             sectionTwo.push(value);
                         }
                     });
+                    console.log(sectionTwo[0])
                     return sectionTwo[0];
                 }
             },
