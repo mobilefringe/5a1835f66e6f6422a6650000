@@ -177,7 +177,9 @@
                         }
                     });
                     console.log(holiday_events)
-                    return holiday_events;
+                    if(holiday_events.length > 0){
+                        return holiday_events;
+                    }
                 }
             },
             methods: {
