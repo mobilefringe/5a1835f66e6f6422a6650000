@@ -22,13 +22,15 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div> <!-- If there are blog posts -->
                 <div class="row">
                     <div class="col-md-12 details-promo-header">
                         <h5>Main Attractions</h5>
                     </div>
                 </div>
             </div>
+            
+            
             <div class="row image-row">
                 <div class="col-md-3">
                     <div class="hover-container">
