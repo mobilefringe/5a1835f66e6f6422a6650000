@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="page-container">
-            <div class="row">
+            <div class="row margin-60">
                 <div class="col-md-12">
                     <div v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
