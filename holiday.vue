@@ -3,7 +3,7 @@
         <div v-if="sectionOne">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
             <div class="page-container">
-                <div class="row">
+                <div class="row margin-30">
                     <div class="col-md-12">
                         <h1 class="art-quote">{{ sectionOne.description }}</h1>
                         <p class="art-quote-subtext">-{{ sectionOne.name }}</p>
