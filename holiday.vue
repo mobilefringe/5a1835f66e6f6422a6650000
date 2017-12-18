@@ -118,6 +118,17 @@
                     });
                     return sectionOne[0];
                 },
+                sectionTwo(){
+                    var sectionID = 35508
+                    var sectionTwo = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionTwo.push(value);
+                        }
+                    });
+                    return sectionTwo[0];
+                }
             },
             methods: {
                 
