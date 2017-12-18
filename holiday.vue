@@ -13,7 +13,7 @@
         </div>
         <div class="page-container">
             <div class="row">
-                <div class="hours-management" v-if="currentPage" v-html="currentPage.body"></div>
+                <div v-if="currentPage" v-html="currentPage.body"></div>
             </div>
             <div class="row image-row">
                 <div class="col-md-3">
