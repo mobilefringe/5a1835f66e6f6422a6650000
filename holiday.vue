@@ -161,8 +161,11 @@
                     });
                     return sectionTwo[0];
                 },
-                blogs() {
-                    return this.$store.getters.findBlogByName;
+                holidayBlog() {
+                    var blog = this.$store.getters.findBlogByName;
+                    var holiday_blog = _.reverse(_.orderBy(blog("Holiday Attractions").posts, function(o) { return o.publish_date }));
+                    console.log(holiday_blog)
+                    
                 }
             },
             methods: {
