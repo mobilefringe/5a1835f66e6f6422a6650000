@@ -234,7 +234,7 @@
                     return this.$store.getters.getProperty;
                 },
                 images() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Our Story" })
                     var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
                     return repo_images
                 },
