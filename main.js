@@ -31,7 +31,8 @@ require.config({
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'vue-lunar-calendar': 'https://cdn.jsdelivr.net/npm/vue-lunar-calendar@1.5.0/dist/vue-lunar-calendar.min',
         'v-viewer': 'https://cdn.jsdelivr.net/npm/v-viewer@0.2.2/dist/v-viewer.min',
-        'vue-pure-lightbox': 'https://unpkg.com/vue-pure-lightbox/dist/vue-pure-lightbox'
+        'vue-pure-lightbox': 'https://unpkg.com/vue-pure-lightbox/dist/vue-pure-lightbox',
+        'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min'
     }
 });
 
