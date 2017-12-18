@@ -152,7 +152,9 @@
                     		<div class="hover-text">
                     		    <h2>{{ sectionSeven.name }}</h2>
                     		    <h4>{{ sectionSeven.description }}</h4>
-                    		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    		    <a :href="sectionSeven.image_url" :data-lightbox="sectionSeven.name">
+                    		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    		    </a>
                 		    </div>
                     	</div>
                     </div>
@@ -175,7 +177,9 @@
                     		<div class="hover-text">
                     		    <h2>{{ sectionEight.name }}</h2>
                     		    <h4>{{ sectionEight.description }}</h4>
-                    		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    		    <a :href="sectionEight.image_url" :data-lightbox="sectionEight.name">
+                    		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    		    </a>
                 		    </div>
                     	</div>
                     </div>
