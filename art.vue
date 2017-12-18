@@ -1,8 +1,8 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div v-if="sectionOne">
-            <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.photo_url_abs + ')' }"></div>
-            <!--<img :src="sectionOne.photo_url_abs" alt="Art Collection Banner"/>    -->
+            <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
+            <!--<img :src="sectionOne.image_url" alt="Art Collection Banner"/>    -->
             <div class="page-container">
                 <div class="row">
                     <div class="col-md-12">
@@ -16,7 +16,7 @@
             <div class="row image-row">
                 <div class="col-md-4" v-if="sectionTwo">
                     <div class="hover-container">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionTwo.photo_url_abs + ')' }"></div>
+                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionTwo.image_url + ')' }"></div>
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionTwo.url">
                     		    <div class="hover-text">
@@ -36,12 +36,12 @@
                     </div>
                 </div>
                 <div class="col-md-4" v-if="sectionThree">
-                    <lightbox :thumbnail="sectionThree.photo_url_abs" :images="[sectionThree.photo_url_abs]"></lightbox>
+                    <lightbox :thumbnail="sectionThree.image_url" :images="[sectionThree.image_url]"></lightbox>
                     <div class="hover-container">
                         <div class="hover-image">
-                            <lightbox :thumbnail="sectionThree.photo_url_abs" :images="sectionThree.photo_url_abs"></lightbox>
+                            <lightbox :thumbnail="sectionThree.image_url" :images="sectionThree.image_url"></lightbox>
                         </div>
-                        <!--<div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.photo_url_abs + ')' }"></div>-->
+                        <!--<div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.image_url + ')' }"></div>-->
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionThree.url">
                     		    <div class="hover-text">
@@ -55,14 +55,14 @@
                     		<div class="hover-text">
                     		    <h2>{{ sectionThree.name }}</h2>
                     		    <h4>{{ sectionThree.description }}</h4>
-                    		    <a class="lightbox__thumbnail" :href="sectionThree.photo_url_abs"><h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5></a>
+                    		    <a class="lightbox__thumbnail" :href="sectionThree.image_url"><h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5></a>
                 		    </div>
                     	</div>
                     </div>
                 </div>
                 <div class="col-md-4" v-if="sectionFour">
                     <div class="hover-container">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionFour.photo_url_abs + ')' }"></div>
+                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionFour.image_url + ')' }"></div>
                     	<div v-if="sectionFour.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionFour.url">
                     		    <div class="hover-text">
@@ -85,7 +85,7 @@
         </div>
         <div class="image-row">
             <div class="hover-container" v-if="sectionFive">
-                <div class="hover-image max-height" v-bind:style="{ backgroundImage: 'url(' + sectionFive.photo_url_abs + ')' }"></div>
+                <div class="hover-image max-height" v-bind:style="{ backgroundImage: 'url(' + sectionFive.image_url + ')' }"></div>
             	<div v-if="sectionFive.url" class="hover-text-container hover-scale">
             	    <router-link :to="sectionFive.url">
             		    <div class="hover-text">
@@ -113,7 +113,7 @@
             <div class="row image-row">
                 <div class="col-md-6">
                     <div class="hover-container" v-if="sectionSix">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSix.photo_url_abs + ')' }"></div>
+                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSix.image_url + ')' }"></div>
                     	<div v-if="sectionSix.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionSix.url">
                     		    <div class="hover-text">
@@ -134,7 +134,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="hover-container" v-if="sectionSeven">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSeven.photo_url_abs + ')' }"></div>
+                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSeven.image_url + ')' }"></div>
                     	<div v-if="sectionSeven.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionSeven.url">
                     		    <div class="hover-text">
@@ -157,7 +157,7 @@
             <div class="row image-row">
                 <div class="col-md-12">
                     <div class="hover-container" v-if="sectionEight">
-                        <div class="hover-image mid-height" v-bind:style="{ backgroundImage: 'url(' + sectionEight.photo_url_abs + ')' }"></div>
+                        <div class="hover-image mid-height" v-bind:style="{ backgroundImage: 'url(' + sectionEight.image_url + ')' }"></div>
                     	<div v-if="sectionEight.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionEight.url">
                     		    <div class="hover-text">
