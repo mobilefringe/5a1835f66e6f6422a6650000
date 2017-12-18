@@ -22,16 +22,16 @@
                     </a>
                 </div>
             </div>
-            <div> <!-- If there are blog posts -->
+            <div v-if="holidayBlog">
                 <div class="row">
                     <div class="col-md-12 details-promo-header">
                         <h5>Main Attractions</h5>
                     </div>
                 </div>
                 <slick ref="slick" :options="slickOptions">
-                    <div v-for="banner in historyBanners" v-if="historyBanners">
-                        <img :src="banner.image_url" class="" alt="">
-                        <h5 class="details-title">{{ banner.name }}</h5>
+                    <div v-for="post in holidayBlog" v-if="historyBanners">
+                        <img :src="post.image_url" class="" alt="">
+                        <h5 class="details-title">{{ post.name }}</h5>
                     </div>
                 </slick>
             </div>
