@@ -206,9 +206,6 @@
                     currentPage: null,
                 }
             },
-            mounted () {
-                this.images
-            },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -223,7 +220,6 @@
             beforeRouteUpdate (to, from, next) {
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-art-special-exhibition.json"}).then(response => {
                     this.currentPage = response.data;
-                    console.log(this.currentPage);
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
