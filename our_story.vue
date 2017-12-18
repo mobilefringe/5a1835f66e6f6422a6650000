@@ -236,6 +236,7 @@
                 images() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Our Story" })
                     var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
+                    console.log(repo_images)
                     return repo_images
                 },
                 sectionOne(){
