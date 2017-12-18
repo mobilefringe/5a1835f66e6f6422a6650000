@@ -31,7 +31,7 @@
                 <slick ref="slick" :options="slickOptions">
                     <div v-for="post in holidayBlog" v-if="historyBanners">
                         <img :src="post.image_url" class="" alt="">
-                        <h5 class="details-title">{{ post.name }}</h5>
+                        <h5 class="details-title">{{ post.title }}</h5>
                     </div>
                 </slick>
             </div>
