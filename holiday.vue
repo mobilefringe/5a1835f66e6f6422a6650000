@@ -82,6 +82,7 @@
             data: function() {
                 return {
                     currentPage: null,
+                    currentBlog: null
                 }
             },
             beforeRouteEnter (to, from, next) {
