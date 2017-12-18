@@ -184,7 +184,9 @@
                 		    </div>
                     	</div>
                     </div>
-                    <h5>View Photo Gallery&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    <router-link to="/our-story/photo-gallery">
+                        <h5 class="details-title">View Photo Gallery&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    </router-link>
                 </div>
             </div>
             <div class="row">
