@@ -189,7 +189,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
-        Vue.use(Lightbox);
+        // Vue.use(Lightbox);
         return Vue.component("art-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -226,7 +226,6 @@
                 },
                 images() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
-                    console.log(repo)
                     var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
                     console.log(repo_images)
                     return repo_images
