@@ -85,6 +85,9 @@
                     currentBlog: null
                 }
             },
+            mounted () {
+                this.currentBlog = _.reverse(_.orderBy(this.blogs("holiday attractions").posts, function(o) { return o.publish_date }));
+            },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
