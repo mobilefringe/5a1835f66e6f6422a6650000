@@ -325,7 +325,7 @@
                         }
                     });
                     return sectionEight[0];
-                },
+                }
             }
         });
     });
