@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-md-12" v-if="sectionTwo">
                     <a :href="sectionTwo.image_url" target="_blank">
-                        <p class="art-quote-subtext">Download Holiday Map</p>
+                        <p class="holiday_download">Download Holiday Map</p>
                     </a>
                 </div>
             </div>
