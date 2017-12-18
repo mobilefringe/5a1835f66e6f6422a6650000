@@ -16,6 +16,11 @@
                 <div class="col-md-12">
                     <div v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
+                <div class="col-md-12" v-if="sectionTwo">
+                    <a :href="sectionTwo">
+                        <p class="art-quote-subtext">Download Holiday Map</p>
+                    </a>
+                </div>
             </div>
             <div class="row image-row">
                 <div class="col-md-3">
