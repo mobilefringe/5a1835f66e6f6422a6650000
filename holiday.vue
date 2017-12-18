@@ -12,9 +12,9 @@
             </div>
         </div>
         <div class="page-container">
-            <div class="row margin-60">
+            <div class="row ">
                 <div class="col-md-12">
-                    <div v-if="currentPage" v-html="currentPage.body"></div>
+                    <div class="margin-60" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
                 <div class="col-md-12" v-if="sectionTwo">
                     <a :href="sectionTwo.image_url" target="_blank">
