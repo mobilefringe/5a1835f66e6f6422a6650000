@@ -39,42 +39,18 @@
                     </slick>
                 </div>
             </div>
+            <div v-if="holidayEvents">
+                <div class="row">
+                    <div class="col-md-12 details-promo-header">
+                        <h5>Holiday Events & Activities</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                </div>
+            </div>
             
             
-            <!--<div class="row image-row">-->
-            <!--    <div class="col-md-3">-->
-            <!--        <div class="hover-container">-->
-            <!--            <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />-->
-            <!--        	<div class="hover-text-container hover-scale">-->
-            <!--        		<div class="hover-text">Lorem ipsum dolor sit amet</div>-->
-            <!--        	</div>-->
-            <!--        </div>-->
-            <!--    </div>-->
-            <!--    <div class="col-md-3">-->
-            <!--        <div class="hover-container">-->
-            <!--            <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />-->
-            <!--        	<div class="hover-text-container hover-scale">-->
-            <!--        		<div class="hover-text">Lorem ipsum dolor sit amet</div>-->
-            <!--        	</div>-->
-            <!--        </div>-->
-            <!--    </div>-->
-            <!--    <div class="col-md-3">-->
-            <!--        <div class="hover-container">-->
-            <!--            <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />-->
-            <!--        	<div class="hover-text-container hover-scale">-->
-            <!--        		<div class="hover-text">Lorem ipsum dolor sit amet</div>-->
-            <!--        	</div>-->
-            <!--        </div>-->
-            <!--    </div>-->
-            <!--    <div class="col-md-3">-->
-            <!--        <div class="hover-container">-->
-            <!--            <img class="hover-image" src="http://via.placeholder.com/308x410" alt="" />-->
-            <!--        	<div class="hover-text-container hover-scale">-->
-            <!--        		<div class="hover-text">Lorem ipsum dolor sit amet</div>-->
-            <!--        	</div>-->
-            <!--        </div>-->
-            <!--    </div>-->
-            <!--</div>-->
             <div class="row">
                 <div class="col-md-12">
                     <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>
@@ -169,6 +145,17 @@
                     var blog = this.$store.getters.findBlogByName;
                     var holiday_blog = _.orderBy(blog("Holiday Attractions").posts, function(o) { return o.publish_date });
                     return holiday_blog
+                },
+                holidayEvents(){
+                   var holiday_events = [];
+                    _.forEach(this.$store.getters.processedEvents, function(value, key) {
+                        var tag_string = _.toLower(_.join(value.tag, ''));
+                        var holiday_string = _.includes(tag_string, "holiday");
+                        if(holiday_string === true){
+                            holiday_events.push(value);
+                        }
+                    });
+                    return holiday_events;
                 }
             },
             methods: {
