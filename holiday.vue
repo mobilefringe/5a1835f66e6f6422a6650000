@@ -137,6 +137,9 @@
                         }
                     });
                     return sectionTwo[0];
+                },
+                blogs() {
+                    return this.$store.getters.findBlogByName;
                 }
             },
             methods: {
