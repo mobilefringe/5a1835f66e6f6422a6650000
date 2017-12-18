@@ -1,15 +1,17 @@
 <template>
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <img src="http://via.placeholder.com/1920x640" alt="" />
-        <div class="page-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- QUOTE -->
-                    <h1 class="art-quote">NorthPark Centre transforms into a magical winter wonderland for the holiday season.</h1>
-                    <p class="art-quote-subtext">John Doe</p>
-                    <div class="hours-management" v-if="currentPage" v-html="currentPage.body"></div>
+        <div v-if="sectionOne">
+            <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
+            <div class="page-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="art-quote">{{ sectionOne.description }}</h1>
+                        <p class="art-quote-subtext">-{{ sectionOne.name }}</p>
+                    </div>
                 </div>
             </div>
+        </div>
+        
             <div class="row image-row">
                 <div class="col-md-3">
                     <div class="hover-container">
