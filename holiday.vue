@@ -22,7 +22,7 @@
                     </a>
                 </div>
             </div>
-            <div v-if="holidayBlog">
+            <div class="margin-90" v-if="holidayBlog">
                 <div class="row">
                     <div class="col-md-12 details-promo-header">
                         <h5>Main Attractions</h5>
@@ -39,7 +39,7 @@
                     </slick>
                 </div>
             </div>
-            <div v-if="holidayEvents">
+            <div class="margin-90" v-if="holidayEvents">
                 <div class="row">
                     <div class="col-md-12 details-promo-header">
                         <h5>Holiday Events & Activities</h5>
