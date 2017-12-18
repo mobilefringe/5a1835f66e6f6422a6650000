@@ -2,7 +2,6 @@
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div v-if="sectionOne">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
-            <!--<img :src="sectionOne.image_url" alt="Art Collection Banner"/>    -->
             <div class="page-container">
                 <div class="row">
                     <div class="col-md-12">
@@ -30,7 +29,9 @@
                     		<div class="hover-text">
                     		    <h2>{{ sectionTwo.name }}</h2>
                     		    <h4>{{ sectionTwo.description }}</h4>
-                    		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    		    <a :href="sectionTwo.image_url" :data-lightbox="sectionTwo.name">
+                    		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    		    </a>
                 		    </div>
                     	</div>
                     </div>
