@@ -99,10 +99,10 @@
                 property(){
                     return this.$store.getters.getProperty;
                 },
-                timezone() {
+                timezone(){
                     return this.$store.getters.getTimezone;
                 },
-                images() {
+                images(){
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Holiday" })
                     var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
                     return repo_images
