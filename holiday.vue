@@ -29,14 +29,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <slick ref="slick" :options="slickOptions">
-                            <div v-for="post in holidayBlog">
-                                <img :src="post.image_url" class="" alt="">
-                                <h5 class="details-title">{{ post.title }}</h5>
-                            </div>
-                        </slick>
-                    </div>
+                    <slick ref="slick" :options="slickOptions">
+                        <div v-for="post in holidayBlog">
+                            <img :src="post.image_url" class="" alt="">
+                            <h5 class="details-title">{{ post.title }}</h5>
+                        </div>
+                    </slick>
                 </div>
             </div>
             
