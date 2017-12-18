@@ -92,7 +92,7 @@
                     currentPage: null,
                     currentBlog: null,
                     slickOptions: {
-                        arrows: true,
+                        // arrows: true,
                         autoplay: false,
                         cssEase: 'linear',
                         dots: false,
