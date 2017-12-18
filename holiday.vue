@@ -31,7 +31,7 @@
                 <div class="row">
                     <slick ref="slick" :options="slickOptions">
                         <div v-for="post in holidayBlog">
-                            <router-link :to="">
+                            <router-link :to="{ name: 'holidayDetails', params: { id: blog.slug }}">
                                 <img :src="post.image_url" class="" alt="">
                                 <h5 class="details-title">{{ post.title }}</h5>
                             </router-link>
