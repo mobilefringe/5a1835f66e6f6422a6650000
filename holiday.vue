@@ -104,7 +104,7 @@
                 }
             },
             mounted () {
-                this.currentBlog = this.holiday_blog
+                this.currentBlog = this.holidayBlog
                 console.log(this.currentBlog)
             },
             beforeRouteEnter (to, from, next) {
