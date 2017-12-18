@@ -103,10 +103,10 @@
                     }
                 }
             },
-            mounted () {
-                this.currentBlog = this.holidayBlog
-                console.log(this.currentBlog)
-            },
+            // mounted () {
+            //     this.currentBlog = this.holidayBlog
+            //     console.log(this.currentBlog)
+            // },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
