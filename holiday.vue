@@ -168,6 +168,7 @@
                 },
                 holidayEvents(){
                    var holiday_events = [];
+                   console.log(this.$store.getters.processedEvents)
                     _.forEach(this.$store.getters.processedEvents, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ''));
                         var holiday_string = _.includes(tag_string, "holiday");
