@@ -166,7 +166,6 @@
                 holidayBlog() {
                     var blog = this.$store.getters.findBlogByName;
                     var holiday_blog = _.orderBy(blog("Holiday Attractions").posts, function(o) { return o.publish_date });
-                    console.log(holiday_blog)
                     return holiday_blog
                 }
             },
