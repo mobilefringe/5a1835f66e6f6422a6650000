@@ -47,7 +47,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="row" v-for="event in holidayEvents">
+                        <div class="row" v-for="event in events">
                             <div class="col-md-2">
                                 <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
                                 <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
@@ -162,19 +162,26 @@
                     var holiday_blog = _.orderBy(blog("Holiday Attractions").posts, function(o) { return o.publish_date });
                     return holiday_blog
                 },
-                holidayEvents(){
-                   var holiday_events = [];
-                    _.forEach(this.$store.getters.processedEvents, function(value, key) {
-                        var tag_string = _.toLower(_.join(value.tag, ''));
-                        var holiday_string = _.includes(tag_string, "holiday");
-                        if(holiday_string === true){
-                            holiday_events.push(value);
-                        }
-                    });
-                    if(holiday_events.length > 0){
-                        return holiday_events;
-                    }
-                }
+                events() {
+                    var events = this.$store.getters.processedEvents;
+                    var promotions = this.$store.getters.processedPromos;
+                    var merge = _.concat(events, promotions);
+                    var sorted = _.orderBy(merge, function(o) { return o.end_date })
+                    return sorted
+                },
+                // holidayEvents(){
+                //   var holiday_events = [];
+                //     _.forEach(this.$store.getters.processedEvents, function(value, key) {
+                //         var tag_string = _.toLower(_.join(value.tag, ''));
+                //         var holiday_string = _.includes(tag_string, "holiday");
+                //         if(holiday_string === true){
+                //             holiday_events.push(value);
+                //         }
+                //     });
+                //     if(holiday_events.length > 0){
+                //         return holiday_events;
+                //     }
+                // }
             },
             methods: {
                 
