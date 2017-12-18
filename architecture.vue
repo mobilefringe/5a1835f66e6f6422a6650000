@@ -211,9 +211,6 @@
                     currentPage: null,
                 }
             },
-            mounted () {
-                this.images
-            },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
