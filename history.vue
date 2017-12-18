@@ -95,7 +95,6 @@
                 //History
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-history.json"}).then(response => {
                     this.history = response.data;
-                    console.log(this.history);
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
@@ -103,7 +102,6 @@
                 //Anniversary
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-50th-anniversary.json"}).then(response => {
                     this.anniversary = response.data;
-                    console.log(this.anniversary);
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
@@ -123,7 +121,6 @@
                 historyBanners() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
                     var repo_images = repo[0].images
-                    console.log(repo_images)
                     return repo_images
                 },
             },
