@@ -86,7 +86,7 @@
                 }
             },
             mounted () {
-                this.currentBlog = _.reverse(_.orderBy(this.blogs("holiday attractions").posts, function(o) { return o.publish_date }));
+                this.currentBlog = _.reverse(_.orderBy(this.blogs("Holiday Attractions").posts, function(o) { return o.publish_date }));
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
