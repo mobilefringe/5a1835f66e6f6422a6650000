@@ -187,7 +187,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
+    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, jQuery, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         return Vue.component("art-component", {
