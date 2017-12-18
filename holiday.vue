@@ -57,9 +57,7 @@
                                 <h5 class="details-dates">{{ checkEventDates(event) }}</h5>
                                 <h2>{{ event.name }}</h2>
                                 <p class="sub_title" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</p>
-                                <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
-                                    <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                                </router-link>
+                                <p>{{ event.description }}</p>
                             </div>
                             <div class="col-md-12">
                                 <hr>    
