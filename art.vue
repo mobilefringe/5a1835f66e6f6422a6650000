@@ -36,26 +36,24 @@
                     </div>
                 </div>
                 <div class="col-md-4" v-if="sectionThree">
-                    <!--<lightbox :thumbnail="sectionThree.image_url" :images="[sectionThree.image_url]"></lightbox>-->
                     <div class="hover-container">
-                        <!--<div class="hover-image">-->
-                        <!--    <lightbox :thumbnail="sectionThree.image_url" :images="sectionThree.image_url"></lightbox>-->
-                        <!--</div>-->
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.image_url + ')' }"></div>
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
-                    	    <router-link :to="sectionThree.url">
-                    		    <div class="hover-text">
-                    		        <h2>{{ sectionThree.name }}</h2>
-                    		        <h4>{{ sectionThree.description }}</h4>
-                    		        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                		        </div>
-                    	    </router-link>
+                		    <div class="hover-text">
+                		        <h2>{{ sectionThree.name }}</h2>
+                		        <h4>{{ sectionThree.description }}</h4>
+                		        <router-link :to="sectionThree.url">
+                		            <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		        </router-link>
+            		        </div>
                     	</div>
                     	<div v-if="!sectionThree.url"class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionThree.name }}</h2>
                     		    <h4>{{ sectionThree.description }}</h4>
-                    		    <a :href="sectionThree.image_url" :data-lightbox="sectionThree.name"><h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5></a>
+                    		    <a :href="sectionThree.image_url" :data-lightbox="sectionThree.name">
+                    		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		        </a>
                 		    </div>
                     	</div>
                     </div>
