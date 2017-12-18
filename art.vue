@@ -36,12 +36,7 @@
                     </div>
                 </div>
                 <div class="col-md-4" v-if="sectionThree">
-                    <lightbox :thumbnail="sectionThree.image_url" :images="[sectionThree.image_url]"></lightbox>
                     <div class="hover-container">
-                        <div class="hover-image">
-                            <lightbox :thumbnail="sectionThree.image_url" :images="sectionThree.image_url"></lightbox>
-                        </div>
-                        <!--<div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.image_url + ')' }"></div>-->
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
                     	    <router-link :to="sectionThree.url">
                     		    <div class="hover-text">
