@@ -92,10 +92,22 @@
                 timezone() {
                     return this.$store.getters.getTimezone;
                 },
-                hours(){
-                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    return hours;
-                }
+                images() {
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
+                    var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
+                    return repo_images
+                },
+                sectionOne(){
+                    var sectionID = 35507
+                    var sectionOne = [];
+                    _.forEach(this.images, function(value, key) {
+                        var itemID = value.id
+                        if(itemID === sectionID){
+                            sectionOne.push(value);
+                        }
+                    });
+                    return sectionOne[0];
+                },
             },
             methods: {
                 
