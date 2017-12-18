@@ -91,12 +91,12 @@
                     currentBlog: null,
                     slickOptions: {
                         arrows: true,
-                        autoplay: true,
+                        autoplay: false,
                         cssEase: 'linear',
                         dots: false,
-                        fade: true,
-                        infinite: true,
-                        slidesToShow: 1,
+                        // fade: true,
+                        // infinite: true,
+                        slidesToShow: 4,
                         speed: 500,
                         prevArrow: '.prev',
                         nextArrow: '.next'
