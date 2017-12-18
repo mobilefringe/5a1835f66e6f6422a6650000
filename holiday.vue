@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <slick ref="slick" :options="slickOptions">
-                    <div v-for="post in holidayBlog" v-if="holidayBlog">
+                    <div v-for="post in holidayBlog">
                         <img :src="post.image_url" class="" alt="">
                         <h5 class="details-title">{{ post.title }}</h5>
                     </div>
