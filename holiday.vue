@@ -17,7 +17,7 @@
                     <div v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
                 <div class="col-md-12" v-if="sectionTwo">
-                    <a :href="sectionTwo">
+                    <a :href="sectionTwo.image_url">
                         <p class="art-quote-subtext">Download Holiday Map</p>
                     </a>
                 </div>
