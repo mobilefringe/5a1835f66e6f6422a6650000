@@ -74,7 +74,9 @@
                     		<div class="hover-text">
                     		    <h2>{{ sectionFour.name }}</h2>
                     		    <h4>{{ sectionFour.description }}</h4>
-                    		    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		        <a :href="sectionFour.image_url" :data-lightbox="sectionFour.name">
+                    		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    		    </a>
                 		    </div>
                     	</div>
                     </div>
