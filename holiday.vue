@@ -93,12 +93,12 @@
                     return this.$store.getters.getTimezone;
                 },
                 images() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Holiday" })
                     var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
                     return repo_images
                 },
                 sectionOne(){
-                    var sectionID = 35507
+                    var sectionID = 35593
                     var sectionOne = [];
                     _.forEach(this.images, function(value, key) {
                         var itemID = value.id
