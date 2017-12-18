@@ -175,6 +175,7 @@
                             holiday_events.push(value);
                         }
                     });
+                    console.log(holiday_events)
                     return holiday_events;
                 }
             },
