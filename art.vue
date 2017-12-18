@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col-md-4" v-if="sectionThree">
-                    <lightbox :thumbnail="sectionThree.image_url" :images="[sectionThree.image_url]"></lightbox>
+                    <!--<lightbox :thumbnail="sectionThree.image_url" :images="[sectionThree.image_url]"></lightbox>-->
                     <div class="hover-container">
                         <div class="hover-image">
                             <lightbox :thumbnail="sectionThree.image_url" :images="sectionThree.image_url"></lightbox>
