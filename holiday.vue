@@ -87,6 +87,7 @@
             },
             mounted () {
                 this.currentBlog = _.reverse(_.orderBy(this.blogs("Holiday Attractions").posts, function(o) { return o.publish_date }));
+                console.log(this.currentBlog)
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
