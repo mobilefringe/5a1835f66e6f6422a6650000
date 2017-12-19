@@ -208,6 +208,11 @@ define([], function () {
                     component: view('holiday_activities'),
                     name: 'holidayActivities'
                 },
+                {
+                    path: ':id',
+                    component: view('holiday_details'),
+                    name: 'holidayDetails'
+                }
             ]
         },
         {
