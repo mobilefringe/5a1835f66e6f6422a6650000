@@ -71,13 +71,14 @@
                 },
                 property(){
                     return this.$store.getters.getProperty;
-                }
-            },
-            methods: {
+                },
                 currentMessage() {
                     console.log(this.welcomeMessage)
                 }
-            }
+            },
+            // methods: {
+                
+            // }
         })
     })
 </script>
