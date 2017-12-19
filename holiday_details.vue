@@ -19,7 +19,6 @@
                 <div class="sidebar">
                     <div class="sidebar-container">
                         <h5>Need to add sidebar info</h5>
-                        
                     </div>
                 </div>
             </div>
