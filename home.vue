@@ -75,7 +75,7 @@
             },
             methods: {
                 currentMessage() {
-                    console.log(welcomeMessage)
+                    console.log(this.welcomeMessage)
                 }
             }
         })
