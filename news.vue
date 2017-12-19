@@ -124,8 +124,7 @@
                 },
                 pageBanner() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "News" })
-                    console.log(repo)
-                    var repo_images = repo[0].images
+                    var repo_images = repo[0].images[0]
                     return repo_images
                 },
                 blogs() {
