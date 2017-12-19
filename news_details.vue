@@ -116,7 +116,8 @@
                     return this.$store.getters.findBlogByName;
                 },
                 relatedBlog() {
-                    console.log(this.mainBlog)
+                    var main_blog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
+                    console.log(main_blog)
                     console.log(this.currentPost.tag)
                     // var beauty_blog = [];
                     // _.forEach(this.currentPost, function(value, key) {
