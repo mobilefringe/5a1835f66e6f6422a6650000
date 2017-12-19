@@ -2,7 +2,6 @@
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div v-if="pageBanner">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }"></div>
-            <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
         </div>
         <div class="page-container">
             <div class="row margin-30">
