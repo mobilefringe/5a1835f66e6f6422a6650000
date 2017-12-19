@@ -67,6 +67,7 @@
             watch: {
                 welcomeMessage: function() {
                     console.log(this.welcomeMessage)
+                    this.currentMessage = this.welcomeMessage.messages.welcome[0].messages[0]
                 }
             },
             computed: {
