@@ -116,7 +116,7 @@
                     return this.$store.getters.findBlogByName;
                 },
                 relatedBlog() {
-                    
+                    console.log(this.mainBlog)
                     var blogs = _.filter(blogs, function(o) { return o.name == "main" })
                     console.log(blogs)
                     // var beauty_blog = [];
