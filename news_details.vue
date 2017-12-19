@@ -82,7 +82,7 @@
                 }
             },
             mounted () {
-                this.currentPost;
+                // this.currentPost;
                 this.relatedPost 
             },
             beforeRouteEnter(to, from, next) {
@@ -103,13 +103,13 @@
                 }
             },
             computed: {
-                property(){
+                property() {
                     return this.$store.getters.getProperty;
                 },
-                timezone () {
+                timezone() {
                     return this.$store.getters.getTimezone;
                 },
-                findBlogPostBySlug () {
+                findBlogPostBySlug() {
                     return this.$store.getters.findBlogPostBySlug;
                 },
                 blogs() {
