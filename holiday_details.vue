@@ -70,15 +70,12 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing", "vue-instagram"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing, VueInstagram) {
-        // Vue.use(VueInstagram);
-        Vue.component('vue-instagram', VueInstagram)
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
+
         return Vue.component("holiday-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    title: "MM with Vue.js!",
-                    description: "An example of integration of Mall Maverick with Vue.js",
                     blogName: "main",
                     currentBlog: null,
                     currentPost: null
@@ -87,7 +84,7 @@
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    var blogName = "main";
+                    var blogName = ""Holiday Attractions"";
                     vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
                     console.log(vm.currentBlog)
                     if (vm.currentBlog === null || vm.currentBlog === undefined){
@@ -96,7 +93,7 @@
                 })
             },
             beforeRouteUpdate(to, from, next) {
-                var blogName = "main";
+                var blogName = ""Holiday Attractions"";
                 this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
                 console.log(this.currentBlog)
                 if (this.currentBlog === null || this.currentBlog === undefined){
