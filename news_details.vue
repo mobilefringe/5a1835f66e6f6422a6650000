@@ -76,13 +76,13 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    blogName: "main",
+                    mainBlog: null,
                     currentBlog: null,
                     currentPost: null
                 }
             },
             mounted () {
-                this.currentBlog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
+                this.mainBlog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
                 this.relatedBlog    
             },
             beforeRouteEnter(to, from, next) {
