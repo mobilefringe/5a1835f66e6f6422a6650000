@@ -3,33 +3,8 @@
         <div class="margin-90"></div>
         <div class="row" v-if="currentBlog">
             <div class="col-md-8 margin-60">
-                <div class="row">
-                    <div class="col-md-2">
-                        <p class="details-promo-date">{{currentBlog.publish_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{currentBlog.publish_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{currentBlog.publish_date | moment("MMM", timezone)}}</p>
-                    </div>
-                    <div class="col-md-10">
-                        <social-sharing :url="shareURL(currentBlog.slug)" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="NorthParkCenter" :media="currentBlog.image_url" inline-template>
-                            <div class="blog-social-share">
-                                <h5>Share</h5>
-                                <network network="facebook">
-                                    <i class="fa fa-facebook-square"></i>
-                                </network>
-                                <network network="twitter">
-                                    <i class="fa fa-twitter-square"></i>
-                                </network>
-                                <network network="pinterest">
-                                    <i class="fa fa-pinterest-square"></i>
-                                </network>
-                            </div>
-                        </social-sharing>
-                        <p class="blog-category">{{ tagString(currentBlog.tag) }}</p>
-                        <h2 class="">{{currentBlog.title}}</h2> 
-                        <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
-                        <div v-html="currentBlog.html_body"></div>
-                    </div>
-                </div>
+                <h2 class="">{{currentBlog.title}}</h2> 
+                <div v-html="currentBlog.html_body"></div>
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
