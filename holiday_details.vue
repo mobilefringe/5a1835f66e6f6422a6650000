@@ -84,7 +84,7 @@
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    var blogName = ""Holiday Attractions"";
+                    var blogName = "Holiday Attractions";
                     vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
                     console.log(vm.currentBlog)
                     if (vm.currentBlog === null || vm.currentBlog === undefined){
@@ -93,7 +93,7 @@
                 })
             },
             beforeRouteUpdate(to, from, next) {
-                var blogName = ""Holiday Attractions"";
+                var blogName = "Holiday Attractions";
                 this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
                 console.log(this.currentBlog)
                 if (this.currentBlog === null || this.currentBlog === undefined){
