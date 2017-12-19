@@ -138,7 +138,8 @@
                 relatedPost(val_tag){
                     var main_blog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
                     console.log(main_blog)
-                    console.log(this.currentPost)
+                    var current_post_tags = this.currentPost.tags
+                    console.log(current_post_tags)
                 }
             }
         });
