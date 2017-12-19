@@ -73,7 +73,7 @@
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing", "vue-instagram"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing, VueInstagram) {
         // Vue.use(VueInstagram);
         Vue.component('vue-instagram', VueInstagram)
-        return Vue.component("news-details-component", {
+        return Vue.component("holiday-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
