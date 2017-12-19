@@ -81,6 +81,9 @@
                     currentPost: null
                 }
             },
+            mounted() {
+                this.relatedBlog    
+            },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -101,15 +104,28 @@
                 }
             },
             computed: {
-                findBlogPostBySlug () {
-                    return this.$store.getters.findBlogPostBySlug;
-                },
                 property(){
                     return this.$store.getters.getProperty;
                 },
                 timezone () {
                     return this.$store.getters.getTimezone;
-                }
+                },
+                findBlogPostBySlug () {
+                    return this.$store.getters.findBlogPostBySlug;
+                },
+                relatedBlog() {
+                    var blogs = _.filter(this.$store.getters.findBlogByName, function(o) { return o.name == "main" })
+                    console.log(blogs)
+                    // var beauty_blog = [];
+                    // _.forEach(this.currentBlog, function(value, key) {
+                    //     var tag_string = _.toLower(_.join(value.tag, ''));
+                    //     var beauty_string = _.includes(tag_string, "beauty");
+                    //     if(beauty_string === true){
+                    //         beauty_blog.push(value);
+                    //     }
+                    // });
+                    // return beauty_blog;
+                },
             },
             methods: {
                 tagString(val_tag){
