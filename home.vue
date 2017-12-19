@@ -67,6 +67,9 @@
                     console.log(_.orderBy(this.$store.state.results.banners, ['position'], ['asc']));
                     return _.orderBy(this.$store.state.results.banners, ['position'], ['asc']);
                 },
+                property(){
+                    return this.$store.getters.getProperty;
+                },
             },
         })
     })
