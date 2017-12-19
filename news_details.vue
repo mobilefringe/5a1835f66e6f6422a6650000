@@ -78,11 +78,12 @@
                 return {
                     mainBlog: null,
                     currentPost: null,
+                    relatedPost: null,
                 }
             },
             mounted () {
                 this.currentPost;
-                this.relatedBlog    
+                this.relatedPost 
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
@@ -114,7 +115,7 @@
                 blogs() {
                     return this.$store.getters.findBlogByName;
                 },
-                relatedBlog() {
+                relatedPost() {
                     var main_blog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
                     console.log(main_blog)
                     console.log(this.currentPost.tag)
