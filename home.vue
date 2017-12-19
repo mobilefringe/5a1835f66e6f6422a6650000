@@ -63,13 +63,16 @@
                 });
             },
             computed: {
-                homeBanners () {
+                homeBanners() {
                     console.log(_.orderBy(this.$store.state.results.banners, ['position'], ['asc']));
                     return _.orderBy(this.$store.state.results.banners, ['position'], ['asc']);
                 },
                 property(){
                     return this.$store.getters.getProperty;
                 },
+                currentMessage() {
+                    console.log(this.welcomeMessage)
+                }
             },
         })
     })
