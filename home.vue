@@ -43,7 +43,7 @@
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // WELCOME MESSAGE
-                    var store_id = vm.currentStore.id
+                    
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northparkmessages.json"}).then(response => {
                         vm.welcomeMessage = response.data;
                     }, error => {
@@ -56,6 +56,7 @@
                 // WELCOME MESSAGE
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northparkmessages.json"}).then(response => {
                     this.welcomeMessage = response.data;
+                    console.log(this.welcomeMessage)
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
