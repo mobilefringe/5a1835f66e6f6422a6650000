@@ -45,7 +45,6 @@
                     // WELCOME MESSAGE
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v3/northpark/messages.json"}).then(response => {
                         vm.welcomeMessage = response.data;
-                        console.log(response.data)
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
@@ -56,7 +55,6 @@
                 // WELCOME MESSAGE
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"}).then(response => {
                     this.welcomeMessage = response.data;
-                    console.log(response.data)
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
