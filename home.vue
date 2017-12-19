@@ -42,10 +42,10 @@
                     }
                 }
             },
-            mounted () {
-                this.welcomeMessage;
-                this.currentMessage  
-            },
+            // mounted () {
+            //     this.welcomeMessage;
+            //     this.currentMessage  
+            // },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // WELCOME MESSAGE
@@ -68,9 +68,7 @@
             },
             watch: {
                 welcomeMessage: function() {
-                    console.log(this.welcomeMessage)
                     this.currentMessage = this.welcomeMessage.messages.welcome[0].messages[0]
-                    console.log(this.currentMessage)
                 }
             },
             computed: {
