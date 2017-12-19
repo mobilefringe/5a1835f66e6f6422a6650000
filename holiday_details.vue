@@ -1,7 +1,7 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
-        <div class="row margin-30" v-if="currentBlog">
+        <div class="row margin-90" v-if="currentBlog">
             <div class="col-md-12">
                 <slick ref="slick" :options="slickOptions">
                     <div>
