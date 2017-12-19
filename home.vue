@@ -64,6 +64,11 @@
                     this.$router.replace({ name: '404'});
                 });
             },
+            watch: {
+                welcomeMessage: function() {
+                    console.log(this.welcomeMessage)
+                }
+            },
             computed: {
                 homeBanners() {
                     console.log(_.orderBy(this.$store.state.results.banners, ['position'], ['asc']));
@@ -71,15 +76,8 @@
                 },
                 property(){
                     return this.$store.getters.getProperty;
-                },
-                currentMessage() {
-                    var messages = this.welcomeMessage
-                    console.log(messages)
                 }
-            },
-            // methods: {
-                
-            // }
+            }
         })
     })
 </script>
