@@ -146,9 +146,10 @@
                     _.forEach(main_blog, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ''));
                         var current_tag_string = _.join(this.currentPost.tag)
-                        if(current_tag_string === tag_string){
-                            related_blog.push(value);
-                        }
+                        console.log(current_tag_string)
+                        // if(current_tag_string === tag_string){
+                        //     related_blog.push(value);
+                        // }
                     });
                     console.log(related_blog)
                     // return related_blog;
