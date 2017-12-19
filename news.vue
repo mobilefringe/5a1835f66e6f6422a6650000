@@ -5,9 +5,7 @@
         </div>
         <div class="page-container">
             <div class="row margin-30">
-                <div class="col-md-6">
-                    
-                </div>
+                <div class="col-md-6"></div>
                 <div class="col-md-6">
                     <div class="category-select-container right">
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
@@ -84,32 +82,6 @@
                 this.currentBlog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
                 this.currentSelection = this.currentBlog;
             },
-            // watch: {
-            //     selected: function() {
-            //         // console.log(this.selected)
-            //         // if(this.selected == "blogBeauty"){
-            //         //     this.currentSelection = this.blogBeauty;
-            //         // } else if (this.selected == "blogCharity") {
-            //         //     this.currentSelection = this.blogCharity;
-            //         // } else if (this.selected == "blogChildren"){
-            //         //     this.currentSelection = this.blogChildren;
-            //         // } else if (this.selected == "blogFashion"){
-            //         //     this.currentSelection = this.blogFashion;
-            //         // } else if (this.selected == "blogHoliday"){
-            //         //     this.currentSelection = this.blogHoliday;
-            //         // } else if (this.selected == "blogLifestyle"){
-            //         //     this.currentSelection = this.blogLifestyle;
-            //         // } else if (this.selected == "blogLuxury"){
-            //         //     this.currentSelection = this.blogLuxury;
-            //         // } else if (this.selected == "blogMen"){
-            //         //     this.currentSelection = this.blogMen;
-            //         // } else if (this.selected == "blogNorthPark50"){
-            //         //     this.currentSelection = this.blogNorthPark50;
-            //         // } else {
-            //         //     this.currentSelection = this.currentBlog;
-            //         // }
-            //     }
-            // },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
