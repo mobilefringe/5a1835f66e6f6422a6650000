@@ -41,6 +41,7 @@
                 }
             },
             mounted () {
+                this.welcomeMessage
                 this.currentMessage  
             },
             beforeRouteEnter(to, from, next) {
