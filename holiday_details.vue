@@ -4,8 +4,8 @@
         <div class="row margin-60" v-if="currentBlog">
             <div class="col-md-12">
                 <slick ref="slick" :options="slickOptions">
-                    <div v-for="post in holidayBlog">
-                        <img :src="post.image_url" class="" alt="">
+                    <div>
+                        <img :src="currentBlog.image_url" class="" alt="">
                     </div>
                 </slick>
             </div>
