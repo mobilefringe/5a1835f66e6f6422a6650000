@@ -26,6 +26,7 @@
             data: function() {
                 return {
                     welcomeMessage: null,
+                    currentMessage: null,
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
