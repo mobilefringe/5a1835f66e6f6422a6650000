@@ -2,6 +2,16 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
         <div class="row" v-if="currentBlog">
+            <div class="col-md-12">
+                <slick ref="slick" :options="slickOptions">
+                    <div v-for="post in holidayBlog">
+                        <router-link :to="{ name: 'holidayDetails', params: { id: post.slug }}">
+                            <img :src="post.image_url" class="" alt="">
+                            <h5 class="details-title">{{ post.title }}</h5>
+                        </router-link>
+                    </div>
+                </slick>
+            </div>
             <div class="col-md-8 margin-60">
                 <h2 class="">{{currentBlog.title}}</h2> 
                 <div v-html="currentBlog.html_body"></div>
@@ -30,7 +40,19 @@
             data: function() {
                 return {
                     currentBlog: null,
-                    currentPost: null
+                    currentPost: null,
+                    slickOptions: {
+                        // arrows: true,
+                        autoplay: false,
+                        cssEase: 'linear',
+                        dots: false,
+                        // fade: true,
+                        // infinite: true,
+                        slidesToShow: 4,
+                        speed: 500,
+                    //     prevArrow: '.prev',
+                    //     nextArrow: '.next'
+                    }
                 }
             },
             beforeRouteEnter(to, from, next) {
