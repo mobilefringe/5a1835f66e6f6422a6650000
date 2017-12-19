@@ -9,6 +9,7 @@
                     </div>
                 </slick>
             </div>
+            <div class="margin-30"></div>
             <div class="col-md-8">
                 <h2 class="">{{currentBlog.title}}</h2> 
                 <div v-html="currentBlog.html_body"></div>
