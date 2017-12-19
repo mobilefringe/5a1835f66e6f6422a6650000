@@ -150,6 +150,7 @@
                             related_blog.push(value);
                         }
                     });
+                    console.log(related_blog)
                     return related_blog;
                 }
             }
