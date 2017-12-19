@@ -81,8 +81,7 @@
                 }
             },
             mounted () {
-                this.currentPost
-                this.mainBlog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
+                this.currentPost;
                 this.relatedBlog    
             },
             beforeRouteEnter(to, from, next) {
