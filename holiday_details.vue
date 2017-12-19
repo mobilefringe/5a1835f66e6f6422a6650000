@@ -2,7 +2,7 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
         <div class="row" v-if="currentBlog">
-            <div class="col-md-9 margin-60">
+            <div class="col-md-8 margin-60">
                 <div class="row">
                     <div class="col-md-2">
                         <p class="details-promo-date">{{currentBlog.publish_date | moment("ddd", timezone)}}</p>
@@ -37,33 +37,12 @@
                         <h5>Related Blogs</h5>
                         
                     </div>
-                    <div class="sidebar-container">
-                        <h5>Get Connected</h5>
-                        <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
-                        <div class="blog-newsletter-container">
-                            <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
-                                <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email"/>
-                                <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="sidebar-container">
-                        <vue-instagram token="accessTokenHere" username="kevinongko" :count="5" :tags="['hashtag1', 'hashtag2']">
-                            <template slot="feeds" slot-scope="props">
-                                <!--<li class="fancy-list"> {{ props.feed.link }} </li>-->
-                            </template>
-                            <template slot="error" slot-scope="props">
-                                <!--<div class="fancy-alert"> {{ props.error.error_message }} </div>-->
-                            </template>
-                        </vue-instagram>
-                    </div>
                 </div>
             </div>
         </div>
-    
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> News <i class="fa fa-angle-right" aria-hidden="true"></i><span v-if="currentBlog">{{currentBlog.title}}</span></p>
+                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="currentBlog">{{currentBlog.title}}</span></p>
             </div>
         </div>
     </div>
