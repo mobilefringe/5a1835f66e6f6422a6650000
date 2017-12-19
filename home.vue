@@ -74,7 +74,7 @@
                 },
                 currentMessage() {
                     var messages = this.welcomeMessage
-                    console.log()
+                    console.log(messages)
                 }
             },
             // methods: {
