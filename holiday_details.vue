@@ -10,7 +10,7 @@
                 </slick>
             </div>
         </div>
-        <div class="row margin-30" v-if="currentBlog">
+        <div class="row margin-90" v-if="currentBlog">
             <div class="col-md-8">
                 <h2 class="">{{currentBlog.title}}</h2> 
                 <div v-html="currentBlog.html_body"></div>
