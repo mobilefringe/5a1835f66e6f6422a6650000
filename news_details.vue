@@ -118,16 +118,8 @@
                 relatedPost() {
                     var main_blog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
                     console.log(main_blog)
-                    console.log(this.currentPost.tag)
-                    // var beauty_blog = [];
-                    // _.forEach(this.currentPost, function(value, key) {
-                    //     var tag_string = _.toLower(_.join(value.tag, ''));
-                    //     var beauty_string = _.includes(tag_string, "beauty");
-                    //     if(beauty_string === true){
-                    //         beauty_blog.push(value);
-                    //     }
-                    // });
-                    // return beauty_blog;
+                    console.log(this.currentPost)
+
                 },
             },
             methods: {
