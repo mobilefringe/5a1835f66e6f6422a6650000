@@ -24,6 +24,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    welcomeMessage: null,
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
@@ -38,6 +39,27 @@
                         nextArrow: '.next'
                     }
                 }
+            },
+            beforeRouteEnter(to, from, next) {
+                next(vm => {
+                    // WELCOME MESSAGE
+                    var store_id = vm.currentStore.id
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northparkmessages.json"}).then(response => {
+                        vm.welcomeMessage = response.data;
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ name: '404'});
+                    });
+                })
+            },
+            beforeRouteUpdate(to, from, next) {
+                // WELCOME MESSAGE
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northparkmessages.json"}).then(response => {
+                    this.welcomeMessage = response.data;
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
             },
             computed: {
                 homeBanners () {
