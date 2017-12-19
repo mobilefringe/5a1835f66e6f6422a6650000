@@ -60,7 +60,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="row">
             <div class="col-md-12">
                 <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;News&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="currentBlog">{{currentBlog.title}}</span></p>
@@ -77,8 +76,6 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    title: "MM with Vue.js!",
-                    description: "An example of integration of Mall Maverick with Vue.js",
                     blogName: "main",
                     currentBlog: null,
                     currentPost: null
