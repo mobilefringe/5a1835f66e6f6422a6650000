@@ -16,10 +16,12 @@
                 <div class="col-md-12">
                     <div class="margin-60" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
-                <div class="col-md-12" v-if="sectionTwo">
-                    <a class="no-line" :href="sectionTwo.image_url" target="_blank">
-                        <p class="holiday-download">Download Holiday Map</p>
-                    </a>
+                <div class="col-md-12">
+                    <div class="margin-60" v-if="sectionTwo">
+                        <a class="no-line" :href="sectionTwo.image_url" target="_blank">
+                            <p class="holiday-download">Download Holiday Map</p>
+                        </a>    
+                    </div>
                 </div>
             </div>
             <div class="margin-90" v-if="holidayBlog">
