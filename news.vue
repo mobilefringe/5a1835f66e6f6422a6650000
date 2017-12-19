@@ -123,7 +123,7 @@
                     return hours;
                 },
                 pageBanner() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "news" })
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "News" })
                     console.log(repo)
                     var repo_images = repo[0].images
                     return repo_images
