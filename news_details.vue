@@ -117,8 +117,7 @@
                 },
                 relatedBlog() {
                     console.log(this.mainBlog)
-                    var blogs = _.filter(blogs, function(o) { return o.name == "main" })
-                    console.log(blogs)
+                    console.log(this.currentBlog.tag)
                     // var beauty_blog = [];
                     // _.forEach(this.currentBlog, function(value, key) {
                     //     var tag_string = _.toLower(_.join(value.tag, ''));
