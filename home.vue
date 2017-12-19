@@ -44,7 +44,7 @@
                 next(vm => {
                     // WELCOME MESSAGE
                     
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northparkmessages.json"}).then(response => {
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v3/northparkmessages.json"}).then(response => {
                         vm.welcomeMessage = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
