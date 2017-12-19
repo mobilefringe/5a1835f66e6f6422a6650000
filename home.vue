@@ -73,7 +73,8 @@
                     return this.$store.getters.getProperty;
                 },
                 currentMessage() {
-                    console.log(this.welcomeMessage)
+                    var messages = this.welcomeMessage
+                    console.log()
                 }
             },
             // methods: {
