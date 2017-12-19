@@ -89,7 +89,6 @@
                     // access to component instance via `vm`
                     var blogName = "main";
                     vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
-                    console.log(vm.currentBlog)
                     if (vm.currentBlog === null || vm.currentBlog === undefined){
                         vm.$router.replace({ name: '404'});
                     }
@@ -98,7 +97,6 @@
             beforeRouteUpdate(to, from, next) {
                 var blogName = "main";
                 this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
-                console.log(this.currentBlog)
                 if (this.currentBlog === null || this.currentBlog === undefined){
                     this.$router.replace({ name: '404'});
                 }
