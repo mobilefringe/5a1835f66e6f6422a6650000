@@ -78,7 +78,7 @@
                 return {
                     mainBlog: null,
                     currentPost: null,
-                    relatedPost: null,
+
                 }
             },
             mounted () {
