@@ -40,6 +40,9 @@
                     }
                 }
             },
+            mounted () {
+                this.currentMessage  
+            },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // WELCOME MESSAGE
