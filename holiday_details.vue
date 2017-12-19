@@ -9,7 +9,7 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-container">
-                        <h5>Related Blogs</h5>
+                        <h5>Need to add sidebar info</h5>
                         
                     </div>
                 </div>
