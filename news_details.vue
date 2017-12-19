@@ -116,7 +116,7 @@
                 },
                 relatedBlog() {
                     
-                    var blogs = _.filter(this.blogs, function(o) { return o.name == "main" })
+                    var blogs = _.filter(blogs, function(o) { return o.name == "main" })
                     console.log(this.blogs)
                     // var beauty_blog = [];
                     // _.forEach(this.currentBlog, function(value, key) {
