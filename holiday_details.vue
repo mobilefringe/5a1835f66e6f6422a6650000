@@ -24,13 +24,11 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
-
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
         return Vue.component("holiday-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    blogName: "main",
                     currentBlog: null,
                     currentPost: null
                 }
@@ -65,20 +63,20 @@
                     return this.$store.getters.getTimezone;
                 }
             },
-            methods: {
-                tagString(val_tag){
-                    var string = _.join(val_tag, ' , ')  
-                    return string
-                },
-                truncate(val_body){
-                    var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
-                    return truncate;
-                },
-                shareURL(slug){
-                    var share_url = "http://www.northparkcenter.com/news/" + slug
-                    return share_url
-                }
-            }
+            // methods: {
+            //     tagString(val_tag){
+            //         var string = _.join(val_tag, ' , ')  
+            //         return string
+            //     },
+            //     truncate(val_body){
+            //         var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
+            //         return truncate;
+            //     },
+            //     shareURL(slug){
+            //         var share_url = "http://www.northparkcenter.com/news/" + slug
+            //         return share_url
+            //     }
+            // }
         });
     });
 </script>
