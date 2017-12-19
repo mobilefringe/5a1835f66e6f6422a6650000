@@ -1,16 +1,16 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
-        <div class="row" v-if="currentBlog">
+        <div class="row" v-if="currentPost">
             <div class="col-md-8 margin-60">
                 <div class="row">
                     <div class="col-md-2">
-                        <p class="details-promo-date">{{currentBlog.publish_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{currentBlog.publish_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{currentBlog.publish_date | moment("MMM", timezone)}}</p>
+                        <p class="details-promo-date">{{currentPost.publish_date | moment("ddd", timezone)}}</p>
+                        <p class="details-promo-day">{{currentPost.publish_date | moment("D", timezone)}}</p>
+                        <p class="details-promo-date">{{currentPost.publish_date | moment("MMM", timezone)}}</p>
                     </div>
                     <div class="col-md-10">
-                        <social-sharing :url="shareURL(currentBlog.slug)" :title="currentBlog.title" :description="currentBlog.body" :quote="truncate(currentBlog.body)" twitter-user="NorthParkCenter" :media="currentBlog.image_url" inline-template>
+                        <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
                             <div class="blog-social-share">
                                 <h5>Share</h5>
                                 <network network="facebook">
@@ -24,10 +24,10 @@
                                 </network>
                             </div>
                         </social-sharing>
-                        <p class="blog-category">{{ tagString(currentBlog.tag) }}</p>
-                        <h2 class="">{{currentBlog.title}}</h2> 
-                        <p class="blog-author">By {{currentBlog.author}} | {{currentBlog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
-                        <div v-html="currentBlog.html_body"></div>
+                        <p class="blog-category">{{ tagString(currentPost.tag) }}</p>
+                        <h2 class="">{{currentPost.title}}</h2> 
+                        <p class="blog-author">By {{currentPost.author}} | {{currentPost.publish_date | moment("MM-D-YYYY", timezone)}}</p>
+                        <div v-html="currentPost.html_body"></div>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;News&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="currentBlog">{{currentBlog.title}}</span></p>
+                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;News&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="currentPost">{{currentPost.title}}</span></p>
             </div>
         </div>
     </div>
@@ -77,12 +77,11 @@
             data: function() {
                 return {
                     mainBlog: null,
-                    currentBlog: null,
-                    currentPost: null
+                    currentPost: null,
                 }
             },
             mounted () {
-                this.currentBlog
+                this.currentPost
                 this.mainBlog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
                 this.relatedBlog    
             },
@@ -90,16 +89,16 @@
                 next(vm => {
                     // access to component instance via `vm`
                     var blogName = "main";
-                    vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
-                    if (vm.currentBlog === null || vm.currentBlog === undefined){
+                    vm.currentPost = vm.findBlogPostBySlug(blogName, to.params.id);
+                    if (vm.currentPost === null || vm.currentPost === undefined){
                         vm.$router.replace({ name: '404'});
                     }
                 })
             },
             beforeRouteUpdate(to, from, next) {
                 var blogName = "main";
-                this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
-                if (this.currentBlog === null || this.currentBlog === undefined){
+                this.currentPost = this.findBlogPostBySlug(blogName, to.params.id);
+                if (this.currentPost === null || this.currentPost === undefined){
                     this.$router.replace({ name: '404'});
                 }
             },
@@ -118,9 +117,9 @@
                 },
                 relatedBlog() {
                     console.log(this.mainBlog)
-                    console.log(currentBlog.tag)
+                    console.log(currentPost.tag)
                     // var beauty_blog = [];
-                    // _.forEach(this.currentBlog, function(value, key) {
+                    // _.forEach(this.currentPost, function(value, key) {
                     //     var tag_string = _.toLower(_.join(value.tag, ''));
                     //     var beauty_string = _.includes(tag_string, "beauty");
                     //     if(beauty_string === true){
