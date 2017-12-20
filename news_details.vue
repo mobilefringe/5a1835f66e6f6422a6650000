@@ -39,6 +39,9 @@
                             <img :src="relatedPost.image_url"/>
                             <p class="blog-category">{{relatedPost.title }}</p>
                         </router-link>
+                        <div class="blog-image-container">
+                                <img :src="relatedPost.image_url" class="store_logo" alt="">
+                            </div>
                     </div>
                     <div class="sidebar-container">
                         <h5>Get Connected</h5>
