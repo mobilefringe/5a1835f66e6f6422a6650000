@@ -27,11 +27,8 @@ require.config({
         'vue-slick': 'https://mmvue.codecloudapp.com/slick.vue?noext',
         'vue-paginate': 'https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.5.1/vue-paginate',
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
-        'vue-instagram': 'https://unpkg.com/vue-instagram@1.3.1/dist/vue-instagram.min',
+        'vue-instagram': 'https://unpkg.com/vue-instagram',
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
-        'vue-lunar-calendar': 'https://cdn.jsdelivr.net/npm/vue-lunar-calendar@1.5.0/dist/vue-lunar-calendar.min',
-        'v-viewer': 'https://cdn.jsdelivr.net/npm/v-viewer@0.2.2/dist/v-viewer.min',
-        'vue-pure-lightbox': 'https://unpkg.com/vue-pure-lightbox/dist/vue-pure-lightbox',
         'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min'
     }
 });
