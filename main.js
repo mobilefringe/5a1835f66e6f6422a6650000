@@ -27,7 +27,7 @@ require.config({
         'vue-slick': 'https://mmvue.codecloudapp.com/slick.vue?noext',
         'vue-paginate': 'https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.5.1/vue-paginate',
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
-        'vue-instagram': 'https://unpkg.com/vue-instagram',
+        'vue-instagram': 'https://unpkg.com/vue-instagram@1.3.1/dist/vue-instagram.min',
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min'
     }
