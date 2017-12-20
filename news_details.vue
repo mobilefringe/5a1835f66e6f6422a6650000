@@ -1,7 +1,7 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
-        <div class="row" v-if="currentPost">
+        <div class="row" v-if="currentPost" id="currentPost">
             <div class="col-md-8 margin-60">
                 <div class="row">
                     <div class="col-md-2">
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <affix class="sidebar-menu" relative-element-selector="#example-content" style="width: 33.333%">
+                <affix class="sidebar-menu" relative-element-selector="#currentPost" style="width: 33.333%">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
                             <h5>Related Blogs</h5>
