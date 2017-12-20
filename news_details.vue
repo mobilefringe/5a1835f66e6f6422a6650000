@@ -74,7 +74,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing", "vue-instagram"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing, VueInstagram) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing) {
         
         return Vue.component("news-details-component", {
             template: template, // the variable template will be injected,
@@ -99,7 +99,7 @@
                         vm.$router.replace({ name: '404'});
                     }
                     
-                    // INSTAGRAM JSON
+                    // SOCIAL JSON
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:"http://northside.mallmaverick.com/api/v2/northside/social.json"}).then(response => {
                         vm.socialFeed = response.data;
                     }, error => {
@@ -115,7 +115,7 @@
                     this.$router.replace({ name: '404'});
                 }
                 
-                // INSTAGRAM JSON
+                // SOCIAL JSON
                 // this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "api/v2/northside/social.json"}).then(response => {
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:"http://northside.mallmaverick.com/api/v2/northside/social.json"}).then(response => {
                     this.socialFeed = response.data;
@@ -128,7 +128,6 @@
                 socialFeed: function() {
                     var social_feed = this.socialFeed.social.instagram
                     var insta_feed = _.slice(social_feed, [0], [6])
-                    console.log(insta_feed)
                     this.instaFeed = insta_feed
                 }
             },
