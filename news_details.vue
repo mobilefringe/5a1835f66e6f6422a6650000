@@ -35,7 +35,7 @@
                 <div class="sidebar">
                     <div class="sidebar-container" v-if="relatedPost">
                         <h5>Related Blogs</h5>
-                        <p class="blog-category">{{ relatedPost(currentPost.tag) }}</p>
+                        <p class="blog-category">{{ }}</p>
                     </div>
                     <div class="sidebar-container">
                         <h5>Get Connected</h5>
