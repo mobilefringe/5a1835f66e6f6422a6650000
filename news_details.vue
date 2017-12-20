@@ -33,33 +33,38 @@
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
-                    <div class="sidebar-container" v-if="relatedPost">
-                        <h5>Related Blogs</h5>
-                        <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
-                            <img :src="relatedPost.image_url"/>
-                            <p>{{relatedPost.title }}</p>
-                        </router-link>
-                    </div>
-                    <div class="sidebar-container">
-                        <h5>Get Connected</h5>
-                        <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
-                        <div class="blog-newsletter-container">
-                            <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
-                                <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email"/>
-                                <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                            </form>
+                    <div style="position: fixed;">
+                        
+                    
+                        <div class="sidebar-container" v-if="relatedPost">
+                            <h5>Related Blogs</h5>
+                            <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
+                                <img :src="relatedPost.image_url"/>
+                                <p>{{relatedPost.title }}</p>
+                            </router-link>
                         </div>
-                    </div>
-                    <div class="sidebar-container">
-                        <h5>Follow Us On Instagram</h5>
-                        <!--<vue-instagram token="accessTokenHere" username="kevinongko" :count="5" :tags="['hashtag1', 'hashtag2']">-->
-                        <!--    <template slot="feeds" slot-scope="props">-->
-                                <!--<li class="fancy-list"> {{ props.feed.link }} </li>-->
-                        <!--    </template>-->
-                        <!--    <template slot="error" slot-scope="props">-->
-                                <!--<div class="fancy-alert"> {{ props.error.error_message }} </div>-->
-                        <!--    </template>-->
-                        <!--</vue-instagram>-->
+                        <div class="sidebar-container">
+                            <h5>Get Connected</h5>
+                            <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
+                            <div class="blog-newsletter-container">
+                                <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
+                                    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email"/>
+                                    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="sidebar-container">
+                            <h5>Follow Us On Instagram</h5>
+                            <!--<vue-instagram token="accessTokenHere" username="kevinongko" :count="5" :tags="['hashtag1', 'hashtag2']">-->
+                            <!--    <template slot="feeds" slot-scope="props">-->
+                                    <!--<li class="fancy-list"> {{ props.feed.link }} </li>-->
+                            <!--    </template>-->
+                            <!--    <template slot="error" slot-scope="props">-->
+                                    <!--<div class="fancy-alert"> {{ props.error.error_message }} </div>-->
+                            <!--    </template>-->
+                            <!--</vue-instagram>-->
+                        </div>
+                        
                     </div>
                 </div>
             </div>
