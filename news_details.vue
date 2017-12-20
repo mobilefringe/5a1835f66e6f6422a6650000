@@ -37,7 +37,7 @@
                         <h5>Related Blogs</h5>
                         <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
                             <img :src="relatedPost.image_url"/>
-                            <p class="blog-category">{{relatedPost.title }}</p>
+                            <p>{{relatedPost.title }}</p>
                         </router-link>
                     </div>
                     <div class="sidebar-container">
