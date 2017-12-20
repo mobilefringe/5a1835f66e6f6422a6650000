@@ -133,7 +133,6 @@
                     });
                     
                     var related_post = related_blog[0]
-                    console.log(this.currentPost.id)
                     if(related_post.id != this.currentPost.id){
                         return related_post;
                     } else {
