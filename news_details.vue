@@ -139,10 +139,10 @@
                         var tag = value.tag[0];
                         console.log(tag)
                         // var includes = _.includes(tag_string, current_post_tag);
-                        // if(includes === true){
-                        //     related_blog.push(value);
+                        if(tag === current_post_tag){
+                            related_blog.push(value);
                             
-                        // }
+                        }
 
                     });
                     console.log(related_blog)
