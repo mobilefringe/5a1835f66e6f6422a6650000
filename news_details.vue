@@ -134,9 +134,11 @@
                     
                     var related_post = related_blog[0]
                     console.log(this.currentPost.id)
-                    // if(related_post.id === this.)
-
-                    return related_post;
+                    if(related_post.id != this.currentPost.id){
+                        return related_post;
+                    } else {
+                        return related_blog[1]
+                    }
                 }
             },
             methods: {
