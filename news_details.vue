@@ -83,7 +83,7 @@
                 return {
                     mainBlog: null,
                     currentPost: null,
-                    token: 666
+                    token: '666'
                 }
             },
             beforeRouteEnter(to, from, next) {
