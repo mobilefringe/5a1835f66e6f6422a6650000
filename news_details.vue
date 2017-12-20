@@ -32,37 +32,37 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="sidebar">
-
-                    <div class="sidebar-container" v-if="currentPost && relatedPost">
-                        <h5>Related Blogs</h5>
-                        <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
-                            <img :src="relatedPost.image_url"/>
-                            <p>{{relatedPost.title }}</p>
-                        </router-link>
-                    </div>
-                    <div class="sidebar-container">
-                        <h5>Get Connected</h5>
-                        <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
-                        <div class="blog-newsletter-container">
-                            <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
-                                <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email"/>
-                                <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                            </form>
+                <affix class="sidebar-menu" relative-element-selector="#example-content" style="width: 300px">
+                    <div class="sidebar">
+                        <div class="sidebar-container" v-if="currentPost && relatedPost">
+                            <h5>Related Blogs</h5>
+                            <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
+                                <img :src="relatedPost.image_url"/>
+                                <p>{{relatedPost.title }}</p>
+                            </router-link>
                         </div>
-                    </div>
-                    <div class="sidebar-container" v-if="instaFeed">
-                        <h5>Follow Us On Instagram</h5>
-                        <div class="insta-feed-container">
-                            <div class="insta-feed-image" v-for="item in instaFeed">
-                                <a :href="item.link" target="_blank">
-                                    <img :src="item.images.thumbnail.url"/>
-                                </a>
+                        <div class="sidebar-container">
+                            <h5>Get Connected</h5>
+                            <p>Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
+                            <div class="blog-newsletter-container">
+                                <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
+                                    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email"/>
+                                    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="sidebar-container" v-if="instaFeed">
+                            <h5>Follow Us On Instagram</h5>
+                            <div class="insta-feed-container">
+                                <div class="insta-feed-image" v-for="item in instaFeed">
+                                    <a :href="item.link" target="_blank">
+                                        <img :src="item.images.thumbnail.url"/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
+                </affix>
             </div>
         </div>
         <div class="row">
