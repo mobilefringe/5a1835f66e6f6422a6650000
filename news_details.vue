@@ -83,7 +83,8 @@
                 return {
                     mainBlog: null,
                     currentPost: null,
-                    socialFeed: null
+                    socialFeed: null,
+                    instaFeed: null
                 }
             },
             mounted () {
@@ -126,11 +127,10 @@
             },
             watch: {
                 socialFeed: function() {
-                    console.log(this.socialFeed)
-                    var vm = this;
                     var social_feed = this.socialFeed.social.instagram
-                    var insta_feed = _.slice(social_feed, [0], [5])
+                    var insta_feed = _.slice(social_feed, [0], [6])
                     console.log(insta_feed)
+                    this.instaFeed = insta_feed
                 }
             },
             computed: {
