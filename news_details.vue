@@ -34,7 +34,7 @@
             <div class="col-md-4">
                 <div class="sidebar">
 
-                    <div class="sidebar-container" v-if="relatedPost">
+                    <div class="sidebar-container" v-if="currentPost && relatedPost">
                         <h5>Related Blogs</h5>
                         <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
                             <img :src="relatedPost.image_url"/>
