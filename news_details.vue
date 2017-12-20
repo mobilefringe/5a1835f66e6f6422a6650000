@@ -147,9 +147,9 @@
                         var tag_string = _.toLower(_.join(value.tag, ''));
                         // var current_tag_string = _.join(this.currentPost.tag)
                         console.log(current_tag_string)
-                        // if(current_tag_string === tag_string){
-                        //     related_blog.push(value);
-                        // }
+                        if(current_post_tag === tag_string){
+                            related_blog.push(value);
+                        }
                     });
                     console.log(related_blog)
                     // return related_blog;
