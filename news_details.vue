@@ -83,8 +83,12 @@
                 return {
                     mainBlog: null,
                     currentPost: null,
-                    token: '666'
+                    socialFeed: null
                 }
+            },
+            mounted () {
+                this.currentStore
+                this.currentDetails
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
@@ -94,6 +98,15 @@
                     if (vm.currentPost === null || vm.currentPost === undefined){
                         vm.$router.replace({ name: '404'});
                     }
+                    
+                    // INSTAGRAM JSON
+                    var store_id = vm.currentStore.id
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "api/v2/northside/social.json"}).then(response => {
+                        vm.socialFeed = response.data;
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ name: '404'});
+                    });
                 })
             },
             beforeRouteUpdate(to, from, next) {
@@ -101,6 +114,28 @@
                 this.currentPost = this.findBlogPostBySlug(blogName, to.params.id);
                 if (this.currentPost === null || this.currentPost === undefined){
                     this.$router.replace({ name: '404'});
+                }
+                
+                // INSTAGRAM JSON
+                // this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "api/v2/northside/social.json"}).then(response => {
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:"http://northside.mallmaverick.com/api/v2/northside/social.json"}).then(response => {
+                    this.socialFeed = response.data;
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
+            },
+            watch: {
+                socialFeed: function() {
+                    var vm = this;
+                    // var store_assets = [];
+                    // if(this.currentStore.assets != null){
+                    //     _.forEach(this.currentDetails.store_files, function(value, key) {
+                    //         value.url = "https://www.mallmaverick.com" + value.url 
+                    //         store_assets.push(value);
+                    //     });
+                    //     this.storeAssets = store_assets; 
+                    // }
                 }
             },
             computed: {
