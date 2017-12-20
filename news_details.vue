@@ -87,7 +87,7 @@
                 }
             },
             mounted () {
-                // this.currentPost;
+                this.currentPost;
                 this.relatedPost 
             },
             beforeRouteEnter(to, from, next) {
