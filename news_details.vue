@@ -131,9 +131,11 @@
                             }                
                         }
                     });
+                    
                     var related_post = related_blog[0]
-                    console.log(related_blog)
-                    console.log(related_post)
+                    console.log(this.currentPost.id)
+                    if(related_post.id === this.
+
                     return related_post;
                 }
             },
