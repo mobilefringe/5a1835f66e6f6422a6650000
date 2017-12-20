@@ -124,7 +124,7 @@
             },
             methods: {
                 tagString(val_tag){
-                    var string = _.join(val_tag, ' , ')  
+                    var string = _.join(val_tag, ', ')  
                     return string
                 },
                 truncate(val_body){
