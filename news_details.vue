@@ -53,7 +53,11 @@
                     </div>
                     <div class="sidebar-container" v-if="instaFeed">
                         <h5>Follow Us On Instagram</h5>
-                        
+                        <div class="row">
+                            <div class="col-md-4" v-for="item in instaFeed">
+                                <img :src="item.images.thumbnail.url"/>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
