@@ -143,10 +143,12 @@
                     _.forEach(main_blog, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ', '));
                         console.log(tag_string)
-                        if(current_post_tag === tag_string){
-                            
+                        var includes = _.includes(tag_string, current_post_tag);
+                        if(includes === true){
                             related_blog.push(value);
+                            
                         }
+
                     });
                     console.log(related_blog)
                     // return related_blog;
