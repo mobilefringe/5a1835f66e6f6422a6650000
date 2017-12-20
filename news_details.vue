@@ -127,7 +127,7 @@
             },
             watch: {
                 socialFeed: function() {
-                    console.log(this.SocialFeed)
+                    console.log(this.socialFeed)
                     var vm = this;
                     // var store_assets = [];
                     // if(this.currentStore.assets != null){
