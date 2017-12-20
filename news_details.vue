@@ -55,7 +55,9 @@
                         <h5>Follow Us On Instagram</h5>
                         <div class="insta-feed-container">
                             <div class="insta-feed-image" v-for="item in instaFeed">
-                                <img :src="item.images.thumbnail.url"/>
+                                <a :href="item.link">
+                                    <img :src="item.images.thumbnail.url"/>
+                                </a>
                             </div>
                         </div>
                     </div>
