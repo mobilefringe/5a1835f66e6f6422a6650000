@@ -86,10 +86,6 @@
                     currentPost: null,
                 }
             },
-            // mounted () {
-            //     this.currentPost;
-            //     this.relatedPost 
-            // },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
