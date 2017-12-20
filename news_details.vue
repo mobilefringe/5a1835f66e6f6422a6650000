@@ -131,7 +131,7 @@
                 },
                 relatedPost(val_tag){
                     var main_blog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
-                    var current_post_tag = this.currentPost.tag
+                    var current_post_tag = this.currentPost.tag[0]
                     console.log(current_post_tag)
                     
                     // var related_blog = [];
