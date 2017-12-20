@@ -152,25 +152,7 @@
                 shareURL(slug){
                     var share_url = "http://www.northparkcenter.com/news/" + slug
                     return share_url
-                },
-                // relatedPost(val_tag){
-                //     var main_blog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
-                //     var current_post_tag = this.currentPost.tag[0]
-
-                //     var related_blog = [];
-                //     _.forEach(main_blog, function(value, key) {
-                //         if(value.tag != null){
-                //             var tag = value.tag[0];
-                //             if(tag === current_post_tag){
-                //                 related_blog.push(value);
-                //             }                
-                //         }
-                //     });
-                //     var related_post = related_blog[0]
-                //     console.log(related_blog)
-                //     console.log(related_post)
-                //     return related_post;
-                // }
+                }
             }
         });
     });
