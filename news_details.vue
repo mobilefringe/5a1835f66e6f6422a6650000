@@ -35,8 +35,10 @@
                 <div class="sidebar">
                     <div class="sidebar-container" v-if="relatedPost">
                         <h5>Related Blogs</h5>
-                        <img :src="relatedPost.image_url"/>
-                        <p class="blog-category">{{relatedPost.title }}</p>
+                        <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
+                            <img :src="relatedPost.image_url"/>
+                            <p class="blog-category">{{relatedPost.title }}</p>
+                        </router-link>
                     </div>
                     <div class="sidebar-container">
                         <h5>Get Connected</h5>
