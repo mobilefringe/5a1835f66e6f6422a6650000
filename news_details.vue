@@ -51,6 +51,7 @@
                         </div>
                     </div>
                     <div class="sidebar-container">
+                        <h5>Follow Us On Instagram</h5>
                         <!--<vue-instagram token="accessTokenHere" username="kevinongko" :count="5" :tags="['hashtag1', 'hashtag2']">-->
                         <!--    <template slot="feeds" slot-scope="props">-->
                                 <!--<li class="fancy-list"> {{ props.feed.link }} </li>-->
