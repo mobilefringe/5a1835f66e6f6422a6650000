@@ -128,14 +128,9 @@
                 socialFeed: function() {
                     console.log(this.socialFeed)
                     var vm = this;
-                    // var store_assets = [];
-                    // if(this.currentStore.assets != null){
-                    //     _.forEach(this.currentDetails.store_files, function(value, key) {
-                    //         value.url = "https://www.mallmaverick.com" + value.url 
-                    //         store_assets.push(value);
-                    //     });
-                    //     this.storeAssets = store_assets; 
-                    // }
+                    var social_feed = this.socialFeed.social.instagram
+                    var insta_feed = _.slice(social_feed, [0], [5])
+                    console.log(insta_feed)
                 }
             },
             computed: {
