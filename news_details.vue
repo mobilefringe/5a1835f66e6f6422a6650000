@@ -145,7 +145,7 @@
                     var related_post = related_blog[0]
                     console.log(related_blog)
                     console.log(related_post)
-                    // return related_blog;
+                    return related_post;
                 }
             }
         });
