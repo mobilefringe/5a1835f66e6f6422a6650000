@@ -57,7 +57,8 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('v-select', VueSelect.VueSelect);
-    Vue.use(VueInstagram.default)
+    Vue.component('vue-instagram', VueInstagram.default);
+    // Vue.use(VueInstagram.default)
     
     /* bootstrap app */
     const vm = new Vue({
