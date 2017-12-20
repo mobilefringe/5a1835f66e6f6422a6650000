@@ -84,7 +84,6 @@
                 return {
                     mainBlog: null,
                     currentPost: null,
-
                 }
             },
             mounted () {
