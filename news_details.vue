@@ -101,6 +101,7 @@
                     
                     // INSTAGRAM JSON
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:"http://northside.mallmaverick.com/api/v2/northside/social.json"}).then(response => {
+                        console.log(response.data)
                         vm.socialFeed = response.data;
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
