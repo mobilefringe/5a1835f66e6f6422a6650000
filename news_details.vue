@@ -138,10 +138,10 @@
                     _.forEach(main_blog, function(value, key) {
                         var tag = value.tag[0];
                         console.log(tag)
-                        // var includes = _.includes(tag_string, current_post_tag);
-                        if(tag === current_post_tag){
-                            related_blog.push(value);
-                            
+                        if(tag != null){
+                            if(tag === current_post_tag){
+                                related_blog.push(value);
+                            }                
                         }
 
                     });
