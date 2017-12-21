@@ -28,7 +28,7 @@
                     welcomeMessage: null,
                     currentMessage: null,
                     slickOptions: {
-                        arrows: true,
+                        arrows: false,
                         autoplay: true,
                         autoplaySpeed: 6000,
                         cssEase: 'linear',
@@ -36,16 +36,10 @@
                         fade: true,
                         infinite: true,
                         slidesToShow: 1,
-                        speed: 1600,
-                        prevArrow: '.prev',
-                        nextArrow: '.next'
+                        speed: 1600
                     }
                 }
             },
-            // mounted () {
-            //     this.welcomeMessage;
-            //     this.currentMessage  
-            // },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // WELCOME MESSAGE
