@@ -49,7 +49,7 @@
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
                     });
-                })
+                });
             },
             beforeRouteUpdate(to, from, next) {
                 // WELCOME MESSAGE
