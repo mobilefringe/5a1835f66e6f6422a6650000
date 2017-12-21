@@ -81,6 +81,8 @@
                             {{property.contact_phone}}
                         </p>
                         <p>Northpark Center Concierge</p>
+                    </div>
+                    <div class="sidebar-container">
                         <router-link to="" active-class="active" exact>
                             <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
