@@ -200,7 +200,7 @@
 </template>
 
 <script>
-    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, jQuery, moment, tz, VueMoment, Meta) {
+    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox"], function(Vue, jQuery, moment, tz, VueMoment, Meta, Lightbox) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         return Vue.component("our-story-component", {
