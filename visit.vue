@@ -1,6 +1,8 @@
 <template>
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <img class="margin-90" src="http://via.placeholder.com/1920x640" alt="" />
+        <div v-if="pageBanner">
+            <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }"></div>
+        </div>
         <div class="page-container">
             <div class="row">
                 <div class="col-md-8">
@@ -96,9 +98,6 @@
                     contact: null
                 }
             },
-            mounted () {
-                this.restaurant
-            },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
@@ -188,6 +187,11 @@
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
                 },
+                pageBanner() {
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "News" })
+                    var repo_images = repo[0].images[0]
+                    return repo_images
+                }
             },
             methods: {
                 truncate(val_body){
