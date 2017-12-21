@@ -1,8 +1,8 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
-        <div class="row" v-if="currentPost" id="currentPost">
-            <div class="col-md-8 margin-60">
+        <div class="row" v-if="currentPost" >
+            <div class="col-md-8 margin-60" id="currentPost">
                 <div class="row">
                     <div class="col-md-2">
                         <p class="details-promo-date">{{currentPost.publish_date | moment("ddd", timezone)}}</p>
