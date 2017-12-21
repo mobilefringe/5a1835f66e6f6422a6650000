@@ -40,7 +40,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs v-if="currentPage">{{currentPage.title}}</breadcrumbs></p>
+                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="currentPage">{{currentPage.title}}</span></p>
                 </div>
             </div>
         </div>
