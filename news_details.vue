@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <affix relative-element-selector="#currentPost">
+                <affix class="sidebar-menu" relative-element-selector="#currentPost" style="width: 300px">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
                             <h5>Related Blogs</h5>
