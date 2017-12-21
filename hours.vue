@@ -94,6 +94,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    breadcrumb: null,
                     currentPage: null,
                     selected: "Select a Restaurant",
                     categoryOptions: null,
