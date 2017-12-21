@@ -41,7 +41,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueI18n);
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
-    // Vue.use(VueAffix);
+    Vue.use(VueAffix);
     
     /* initialize router */
     const router = new VueRouter({
@@ -58,7 +58,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('v-select', VueSelect.VueSelect);
-    Vue.component('vue-affix', VueAffix)
+    // Vue.component('vue-affix', VueAffix)
     
     /* bootstrap app */
     const vm = new Vue({
