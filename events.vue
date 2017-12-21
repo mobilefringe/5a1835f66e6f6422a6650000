@@ -46,7 +46,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vuejs-datepicker"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VueDatePicker) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function(Vue, moment, tz, VueMoment, Meta, vSelect) {
         Vue.use(Meta);
         
         return Vue.component("events-component", {
