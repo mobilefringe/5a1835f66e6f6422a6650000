@@ -37,6 +37,7 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
+                    breadcrumb: null,
                     currentBlog: null,
                     currentPost: null,
                     slickOptions: {
