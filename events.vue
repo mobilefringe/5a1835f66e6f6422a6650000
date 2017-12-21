@@ -47,9 +47,8 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-lunar-calendar"], function(Vue, moment, tz, VueMoment, Meta, vSelect, lunarCalendar) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function(Vue, moment, tz, VueMoment, Meta, vSelect) {
         Vue.use(Meta);
-        Vue.use(lunarCalendar);
         
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
