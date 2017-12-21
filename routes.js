@@ -117,6 +117,11 @@ define([], function () {
                     component: view('tourism'),
                     name: 'tourism'
                 },
+                {
+                    path: '/pages/northpark-contact-us',
+                    component: view('page_details'),
+                    name: 'contact'
+                },
             ],
         },
         {
