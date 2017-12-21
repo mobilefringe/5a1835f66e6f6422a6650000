@@ -5,9 +5,7 @@
             <div class="col-md-12">
                 <img class="margin-60" src="http://via.placeholder.com/960x460"/>
                 
-                <viewer :images="images">
-                    <img v-for="src in images" :src="src" :key="src">
-                </viewer>
+                <pdf ref="myPdfComponent" src="https://cdn.mozilla.net/pdfjs/tracemonkey.pdf"></pdf>
             </div>
         </div>
         <div class="row">
