@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <!--<div class="col-md-4">-->
                 <affix class="sidebar-menu" relative-element-selector="#currentPost" style="width: 33.333%">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                 </affix>
-            </div>
+            <!--</div>-->
         </div>
         <div class="row">
             <div class="col-md-12">
