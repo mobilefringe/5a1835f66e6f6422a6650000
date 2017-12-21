@@ -60,7 +60,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('v-select', VueSelect.VueSelect);
     // Vue.component('affix', VueAffix)
-    Vue.component('datepicker', Datepicker);
+    Vue.component('vue-datepicker-local', Datepicker);
 
     /* bootstrap app */
     const vm = new Vue({
