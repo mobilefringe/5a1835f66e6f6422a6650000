@@ -153,6 +153,11 @@
                 hours(){
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
+                },
+                pageBanner() {
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Visit" })
+                    var repo_images = repo[0].images[0]
+                    return repo_images
                 }
             },
             methods: {
