@@ -43,7 +43,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
     Vue.use(Lightbox);
-    // Vue.use(VueDatepickerLocal)
+    Vue.use(VueDatepickerLocal)
     
     /* initialize router */
     const router = new VueRouter({
@@ -61,7 +61,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('v-select', VueSelect.VueSelect);
     // Vue.component('affix', VueAffix)
-    Vue.component('vue-datepicker-local', VueDatepickerLocal);
+    // Vue.component('vue-datepicker-local', VueDatepickerLocal);
 
     /* bootstrap app */
     const vm = new Vue({
