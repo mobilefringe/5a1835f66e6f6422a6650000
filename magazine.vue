@@ -5,7 +5,8 @@
             <div class="col-md-12">
                 <img class="margin-60" src="http://via.placeholder.com/960x460"/>
                 
-                <pdf ref="myPdfComponent" src="https://cdn.mozilla.net/pdfjs/tracemonkey.pdf"></pdf>
+               <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=fdulola51&forcewm=1&forceWidget=1&forceSmall=1&rmm=1&novignette=1&t=1507751959&0=northparkcenter" width="100%" height="100%" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+
             </div>
         </div>
         <div class="row">
