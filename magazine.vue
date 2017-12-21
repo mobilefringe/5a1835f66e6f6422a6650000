@@ -46,6 +46,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    breadcrumb: null,
                     images: ['http://via.placeholder.com/960x460']
                 }
             },
