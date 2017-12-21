@@ -32,7 +32,7 @@
                 </div>
             </div>
             
-            <affix relative-element-selector="#currentPost" style="width: 33.333%">
+            <affix relative-element-selector="#currentPost">
                 <div class="col-md-4">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
