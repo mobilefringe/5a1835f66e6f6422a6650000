@@ -32,8 +32,8 @@
                 </div>
             </div>
             
-            <affix relative-element-selector="#currentPost">
-                <div class="col-md-4">
+            <affix class="col-md-4" relative-element-selector="#currentPost">
+                <div >
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
                             <h5>Related Blogs</h5>
