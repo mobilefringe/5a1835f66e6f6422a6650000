@@ -55,6 +55,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    breadcrumb: null,
                     selected: "All Events",
                     currentSelection: null,
                     time: moment(),
