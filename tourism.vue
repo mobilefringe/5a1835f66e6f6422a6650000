@@ -3,7 +3,9 @@
         <div class="margin-90"></div>
         <div class="row">
             <div class="col-md-8">
-                <img  class="margin-30" src="http://via.placeholder.com/630x344" alt="" />
+                <div v-if="pageBanner">
+                    <img  class="margin-30" :src="pageBanner.image_url" alt="" />
+                </div>
                 <div class="" v-if="tourism">
                     <h2 class="tourism-title">Tourism</h2>
                     <div class="margin-30" v-html="tourism.body"></div>
