@@ -30,7 +30,7 @@ require.config({
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min',
         'vue-affix': 'https://cdn.jsdelivr.net/npm/vue-affix@0.2.4/dist/vue-affix',
-        'vuejs-datepicker': 'https://cdn.jsdelivr.net/npm/vuejs-datepicker@0.9.21/dist/build.min'
+        'vuejs-datepicker': 'https://cdn.jsdelivr.net/npm/vuejs-datepicker@0.9.21/dist/build'
     }
 });
 
