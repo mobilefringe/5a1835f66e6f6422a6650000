@@ -36,7 +36,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-pdf"], function(Vue, moment, tz, VueMoment, Meta, VuePDF) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-pdf"], function(Vue, moment, tz, VueMoment, Meta, VuePDF) {
         Vue.use(Meta);
         
         return Vue.component("magazine-component", {
