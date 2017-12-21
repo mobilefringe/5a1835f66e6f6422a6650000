@@ -34,7 +34,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-select', 'lightbox', 'vue-affix', 'vuejs-datepicker'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueSelect, Viewer, Lightbox, VueAffix, VueDatePicker) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-select', 'lightbox', 'vue-affix', 'vuejs-datepicker'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueSelect, Viewer, Lightbox, VueAffix, Datepicker) {
     
     Vue.use(Meta);
     Vue.use(VueRouter);
@@ -61,7 +61,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('v-select', VueSelect.VueSelect);
     Vue.component('affix', VueAffix)
-    Vue.component('datepicker', VueDatePicker);
+    Vue.component('datepicker', Datepicker);
 
     /* bootstrap app */
     const vm = new Vue({
