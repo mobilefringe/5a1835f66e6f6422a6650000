@@ -1,15 +1,25 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <div class="">
+            <slick v-if="currentDetails" ref="slick" :options="slickOptions">
+                <div v-for="asset in storeAssets" >
+                    <img :src="asset.url" alt="">
+                </div>
+            </slick>
+            <img v-if="!currentStore.assets" :src="currentStore.store_front_url_abs" alt="" />
+        </div>
+    </div>
+    <div class="page-container">
         <div class="margin-90 hidden-mobile"></div>
         <div class="row" v-if="currentStore">
-            <div class="col-md-12 margin-60">
-                <slick v-if="currentDetails" ref="slick" :options="slickOptions">
-                    <div v-for="asset in storeAssets" >
-                        <img :src="asset.url" alt="">
-                    </div>
-                </slick>
-                <img v-if="!currentStore.assets" :src="currentStore.store_front_url_abs" alt="" />
-            </div>
+            <!--<div class="col-md-12 margin-60">-->
+            <!--    <slick v-if="currentDetails" ref="slick" :options="slickOptions">-->
+            <!--        <div v-for="asset in storeAssets" >-->
+            <!--            <img :src="asset.url" alt="">-->
+            <!--        </div>-->
+            <!--    </slick>-->
+            <!--    <img v-if="!currentStore.assets" :src="currentStore.store_front_url_abs" alt="" />-->
+            <!--</div>-->
             <div class="col-md-8">
                 <div class="details-store-info">
                     <h2 class="details-store-name">{{currentStore.name}}</h2>
