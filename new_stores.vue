@@ -72,7 +72,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-breadcrumbs"], function(Vue, moment, tz, VueMoment, Meta, VueBreadcrumbs) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
         return Vue.component("new-stores-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -80,6 +80,9 @@
                     breadcrumb: null,
                     hours: []
                 }
+            },
+            mounted () {
+                this.newStoresList
             },
             computed: {
                 property(){
@@ -96,7 +99,7 @@
                 },
                 findHourById() {
                     return this.$store.getters.findHourById;
-                },
+                }
             },
             methods: {
                 storeHours(restaurant_hours){
