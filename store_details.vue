@@ -63,6 +63,9 @@
             </div>
             <div v-for="promo in promotions" v-if="promotions">
                 <div class="row details-promo-container">
+                    <div class="col-sm-12 col-md-6">
+                        <img :src="promo.promo_image_url_abs" class="store_logo" alt="">
+                    </div>
                     <div class="col-sm-3 col-md-1">
                         <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
                         <p class="details-promo-day">{{promo.start_date | moment("D", timezone)}}</p>
@@ -76,9 +79,7 @@
                             <a class="details-link">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>    
                     </div>
-                    <div class="col-sm-12 col-md-6">
-                        <img :src="promo.promo_image_url_abs" class="store_logo" alt="">
-                    </div>
+                    
                 </div>
             </div>
         </div>
