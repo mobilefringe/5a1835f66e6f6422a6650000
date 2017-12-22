@@ -11,10 +11,13 @@
         </div>
         <div class="dine-container" v-for="restaurant in currentSelection">
             <div class="row">
-                <div class="dine-image-container">
-                    <img :src="restaurant.image_url" :alt="restaurant.name" />
+                <div class="col-md-12">
+                    <div class="dine-image-container">
+                        <img :src="restaurant.image_url" :alt="restaurant.name" />
+                    </div>    
                 </div>
-                <div class="col-md-3">
+                
+                <div class="dine-content-container">
                     <h2 class="dine-name">{{restaurant.name}}</h2>
                     <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></router-link>
                     <h5 class="dine-contact-header">Contact</h5>
