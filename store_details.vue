@@ -1,5 +1,5 @@
 <template>
-    <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div class="" v-if="currentStore"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="">
             <slick v-if="currentDetails" ref="slick" :options="slickOptions">
                 <div v-for="asset in storeAssets" >
@@ -11,7 +11,7 @@
     </div>
     <div class="page-container">
         <div class="margin-90 hidden-mobile"></div>
-        <div class="row" v-if="currentStore">
+        <div class="row" >
             <!--<div class="col-md-12 margin-60">-->
             <!--    <slick v-if="currentDetails" ref="slick" :options="slickOptions">-->
             <!--        <div v-for="asset in storeAssets" >-->
