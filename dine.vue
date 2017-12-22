@@ -11,7 +11,7 @@
         </div>
         <div class="dine-container" v-for="restaurant in currentSelection">
             <div class="row">
-                <div class="col-md-9">
+                <div class="dine-image-container">
                     <img :src="restaurant.image_url" :alt="restaurant.name" />
                 </div>
                 <div class="col-md-3">
