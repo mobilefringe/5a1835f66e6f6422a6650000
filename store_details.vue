@@ -1,6 +1,6 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="margin-90"></div>
+        <div class="margin-90 hidden-mobile"></div>
         <div class="row" v-if="currentStore">
             <div class="col-md-12 margin-60">
                 <slick v-if="currentDetails" ref="slick" :options="slickOptions">
