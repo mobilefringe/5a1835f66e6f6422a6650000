@@ -187,7 +187,7 @@
                     	</div>
                     </div>
                     <router-link to="/our-story/photo-gallery">
-                        <h5 class="details-title">View Photo Gallery&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                        <h5 class="details-title hidden-mobile">View Photo Gallery&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                     </router-link>
                 </div>
             </div>
