@@ -93,7 +93,7 @@
         </div>
         <div class="image-container">
             <div class="row image-row">
-                <div class="col-md-4" v-if="sectionFive">
+                <div class="col-sm-6 col-md-4" v-if="sectionFive">
                     <div class="hover-container">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionFive.image_url + ')' }"></div>
                     	<div v-if="sectionFive.url" class="hover-text-container hover-scale">
@@ -116,7 +116,7 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-4" v-if="sectionSix">
+                <div class="col-sm-6 col-md-4" v-if="sectionSix">
                     <div class="hover-container">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSix.image_url + ')' }"></div>
                         <div v-if="sectionSix.url" class="hover-text-container hover-scale">
