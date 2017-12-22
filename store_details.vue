@@ -64,7 +64,7 @@
             <div v-for="promo in promotions" v-if="promotions">
                 <div class="row details-promo-container">
                     <div class="col-sm-12 col-md-6">
-                        <img :src="promo.promo_image_url_abs" class="store_logo" alt="">
+                        <img :src="promo.promo_image_url_abs" class="details-promo-img" alt="">
                     </div>
                     <div class="col-sm-3 col-md-1">
                         <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
