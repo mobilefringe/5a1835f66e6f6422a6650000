@@ -83,6 +83,7 @@
             },
             mounted () {
                 this.newStoresList
+                console.log(this.newStoresList)
             },
             computed: {
                 property(){
