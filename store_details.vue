@@ -1,7 +1,7 @@
 <template>
     <div class="" v-if="currentStore"> <!-- Without an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
-        <div class="details-slider-container">
+        <div class="image-container">
             <slick v-if="currentDetails" ref="slick" :options="slickOptions">
                 <div v-for="asset in storeAssets" >
                     <img :src="asset.url" alt="">
