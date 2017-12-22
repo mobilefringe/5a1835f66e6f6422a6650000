@@ -137,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" v-if="sectionSeven">
+                <div class="col-md-4 hidden-mobile" v-if="sectionSeven">
                     <div class="hover-container">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSeven.image_url + ')' }"></div>
                         <div v-if="sectionSeven.url" class="hover-text-container hover-scale">
