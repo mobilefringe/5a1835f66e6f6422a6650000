@@ -25,7 +25,7 @@ define([], function () {
                     path: '/new-doors',
                     component: view('new_stores'),
                     name: 'newStores'
-                }
+                },
                 {
                     path: ':id',
                     component: view('store_details'),
