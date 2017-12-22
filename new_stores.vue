@@ -1,7 +1,7 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="margin-60"></div>
-        <div v-if="newStoresList" class="margin-60">
+        <div class="margin-42"></div>
+        <div v-if="newStoresList" class="">
             <div class="row margin-30">
                 <div class="col-md-12">
                     <h2>New Stores</h2>
@@ -9,24 +9,26 @@
                 </div>
             </div>
             <div class="row dine-container" v-for="store in newStoresList">
-                <div class="col-md-9">
-                    <img :src="store.image_url" :alt="store.name" />
-                </div>
-                <div class="col-md-3">
-                    <h2 class="dine-name">{{store.name}}</h2>
-                    <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}" class="dine-link">Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></router-link>
-                    <div v-if="store.phone">
-                        <h5 class="dine-contact-header">Contact</h5>
-                        <p>{{store.phone}}</p>
+                <div class="col-md-12">
+                    <div class="dine-image-container">
+                        <img :src="store.image_url" :alt="store.name" />
                     </div>
-                    <div v-if="store.store_hours">
-                        <h5>Hours</h5>
-                        <ul class="details-hours-list">
-                            <li v-for="hour in storeHours(store.store_hours)">
-                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                                </span>
-                            </li>
-                        </ul>
+                    <div class="dine-content-container">
+                        <h2 class="dine-name">{{store.name}}</h2>
+                        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}" class="dine-link">Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></router-link>
+                        <div v-if="store.phone">
+                            <h5 class="dine-contact-header">Contact</h5>
+                            <p>{{store.phone}}</p>
+                        </div>
+                        <div v-if="store.store_hours">
+                            <h5>Hours</h5>
+                            <ul class="details-hours-list">
+                                <li v-for="hour in storeHours(store.store_hours)">
+                                   {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
