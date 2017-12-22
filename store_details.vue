@@ -50,7 +50,7 @@
                     </div>
                     <div class="sidebar-container" v-if="currentStore && currentStore.manager_name">
                         <h5>Manager</h5>
-                        <p>{{currentStore.manager_name}}</p>
+                        <p class="details-manager-name">{{currentStore.manager_name}}</p>
                     </div>    
                 </div>
                 
