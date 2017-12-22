@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <router-link to="/stores" active-class="active" exact>
-                        <a class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        <h5 class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                     </router-link>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                                 <h5 class="details-promo-store">{{promo.store.name}}</h5>
                                 <p class="details-promo-desc">{{ truncate(promo.description) }}</p> 
                                 <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
-                                    <a class="details-link">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                    <h5 class="details-link">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                                 </router-link>    
                             </div>
                         </div>    
