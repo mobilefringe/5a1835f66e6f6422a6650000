@@ -14,21 +14,20 @@
                 <div class="col-md-12">
                     <div class="dine-image-container">
                         <img :src="restaurant.image_url" :alt="restaurant.name" />
-                    </div>    
-                </div>
-                
-                <div class="dine-content-container">
-                    <h2 class="dine-name">{{restaurant.name}}</h2>
-                    <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></router-link>
-                    <h5 class="dine-contact-header">Contact</h5>
-                    <p>{{restaurant.phone}}</p>
-                    <h5>Hours</h5>
-                    <ul class="details-hours-list">
-                        <li v-for="hour in storeHours(restaurant.store_hours)">
-                           {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                            </span>
-                        </li>
-                    </ul>
+                    </div> 
+                    <div class="dine-content-container">
+                        <h2 class="dine-name">{{restaurant.name}}</h2>
+                        <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></router-link>
+                        <h5 class="dine-contact-header">Contact</h5>
+                        <p>{{restaurant.phone}}</p>
+                        <h5>Hours</h5>
+                        <ul class="details-hours-list">
+                            <li v-for="hour in storeHours(restaurant.store_hours)">
+                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
