@@ -68,12 +68,12 @@
                     </div>
                     <div class="col-sm-12 col-md-6 col-md-pull-6">
                         <div class="row">
-                            <div class="col-sm-3 col-md-1">
+                            <div class="col-sm-3 col-md-2">
                                 <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
                                 <p class="details-promo-day">{{promo.start_date | moment("D", timezone)}}</p>
                                 <p class="details-promo-date">{{promo.start_date | moment("MMM", timezone)}}</p>
                             </div>
-                            <div class="col-sm-9 col-md-5">
+                            <div class="col-sm-9 col-md-10">
                                 <h2 class="details-promo-name">{{promo.name}}</h2> 
                                 <h5 class="details-promo-store">{{promo.store.name}}</h5>
                                 <p class="details-promo-desc">{{ truncate(promo.description) }}</p> 
