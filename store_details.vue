@@ -26,7 +26,7 @@
                     <router-link to="/stores" active-class="active" exact>
                         <h5 class="details-link">View Northpark Center Map <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                     </router-link>
-                    <hr class="visible-mobile">
+                    <hr class="visible-mobile mobile-divider">
                 </div>
             </div>
             <div class="col-md-4">
