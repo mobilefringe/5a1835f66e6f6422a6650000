@@ -22,15 +22,15 @@ define([], function () {
                     name: 'dineList'
                 },
                 {
-                    path: ':id',
-                    component: view('store_details'),
-                    name: 'storeDetails'
-                },
-                {
                     path: '/new-doors',
                     component: view('new_stores'),
                     name: 'newStores'
                 }
+                {
+                    path: ':id',
+                    component: view('store_details'),
+                    name: 'storeDetails'
+                },
             ]
         },
         {
