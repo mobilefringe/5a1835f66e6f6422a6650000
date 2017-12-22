@@ -163,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row image-row margin-60">
+            <div class="row image-row">
                 <div class="col-md-12">
                     <div class="hover-container" v-if="sectionEight">
                         <div class="hover-image mid-height" v-bind:style="{ backgroundImage: 'url(' + sectionEight.image_url + ')' }"></div>
@@ -195,7 +195,6 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-md-12">
-                    
                     <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;NorthPark Experience</p>
                 </div>
             </div>
