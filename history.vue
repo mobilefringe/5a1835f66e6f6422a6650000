@@ -48,6 +48,13 @@
                 <div class="col-md-8 col-md-push-4">
                     <h2>The 50th Anniversary</h2>
                     <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
+                    <div class="hidden-mobile">
+                        <router-link to="/photo-gallery">
+                            <p class="details-link">
+                                View 50th Anniversary Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            </p>
+                        </router-link>    
+                    </div>
                 </div>
                 <div class="col-md-4 col-md-pull-8">
                     <div class="sidebar-left">
@@ -55,13 +62,6 @@
                         <p class="quote-byline">-Nancy A. Nasher</p>
                     </div>    
                 </div>
-                <div class="col-md-12 hidden-mobile">
-                    <router-link to="/photo-gallery">
-                        <p class="details-link">
-                            View 50th Anniversary Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                        </p>
-                    </router-link>    
-                </div>    
             </div>
         </div>
         <div class="page-container">
