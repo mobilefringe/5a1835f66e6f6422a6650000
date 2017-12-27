@@ -41,7 +41,7 @@
                         <router-link to="/pages/northpark-parking-valet-page" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
-                        <hr>
+                        <hr class="hidden-mobile">
                     </div>
                     <div class="" v-if="concierge">
                         <h2 class="visit-title">Concierge</h2>
@@ -49,7 +49,7 @@
                         <router-link to="/pages/northpark-concierge-services" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
-                        <hr>
+                        <hr class="hidden-mobile">
                     </div>
                     <div class="" v-if="giftCards">
                         <h2 class="visit-title">Northpark Gold & Gift Cards</h2>
@@ -57,7 +57,7 @@
                         <router-link to="/pages/northpark-northpark-gold-gift-cards" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
-                        <hr>
+                        <hr class="hidden-mobile">
                     </div>
                     <div class="" v-if="tourism">
                         <h2 class="visit-title">Tourism</h2>
@@ -65,7 +65,7 @@
                         <router-link to="/visit/tourism" active-class="active" exact>
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
-                        <hr>
+                        <hr class="hidden-mobile">
                     </div>
                     <div class="" v-if="contact">
                         <h2 class="visit-title">Contact</h2>
