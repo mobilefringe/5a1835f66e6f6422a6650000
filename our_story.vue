@@ -64,7 +64,7 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="hours-management" v-if="currentPage" v-html="currentPage.body"></div>
+                    <div class="story-content" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
             </div>
         </div>
