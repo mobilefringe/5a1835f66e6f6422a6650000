@@ -59,7 +59,7 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-4" v-if="sectionFour">
+                <div class="col-md-4 hidden-mobile" v-if="sectionFour">
                     <div class="hover-container">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionFour.image_url + ')' }"></div>
                     	<div v-if="sectionFour.url" class="hover-text-container hover-scale">
