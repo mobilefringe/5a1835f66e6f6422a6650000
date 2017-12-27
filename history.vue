@@ -57,7 +57,7 @@
                 <div class="col-md-12 hidden-mobile">
                     <router-link to="/photo-gallery">
                         <p class="details-link">
-                            View 50th Anniversary Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            View History Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                         </p>
                     </router-link>    
                 </div>    
