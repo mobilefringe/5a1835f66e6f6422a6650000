@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="sidebar">
-                        <p class="quote">Every company has a special responsibility to enrich the lives of its customers and the community. It should serve as a catalyst to link art and business for the benefr of all.</p>
+                        <p class="quote">Every company has a special responsibility to enrich the lives of its customers and the community. It should serve as a catalyst to link art and business for the benefit of all.</p>
                         <p class="quote-byline">-Raymond D. Nasher</p>
                     </div>    
                 </div>
