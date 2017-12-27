@@ -6,7 +6,7 @@
                 <div v-for="banner in historyBanners" v-if="historyBanners">
                     <img :src="banner.image_url" class="" alt="">
                     <div class="page-container">
-                        <h5 class="details-title">{{ banner.name }}</h5>    
+                        <h5 class="history-slider-title">{{ banner.name }}</h5>    
                     </div>
                 </div>
             </slick>
