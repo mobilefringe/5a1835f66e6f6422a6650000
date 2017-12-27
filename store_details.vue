@@ -9,18 +9,9 @@
             </slick>
             <img v-if="!currentStore.assets" :src="currentStore.store_front_url_abs" alt="" />
         </div>
-
         <div class="page-container">
-            
             <div class="row" >
-                <!--<div class="col-md-12 margin-60">-->
-                <!--    <slick v-if="currentDetails" ref="slick" :options="slickOptions">-->
-                <!--        <div v-for="asset in storeAssets" >-->
-                <!--            <img :src="asset.url" alt="">-->
-                <!--        </div>-->
-                <!--    </slick>-->
-                <!--    <img v-if="!currentStore.assets" :src="currentStore.store_front_url_abs" alt="" />-->
-                <!--</div>-->
+                <div class="margin-60"></div>
                 <div class="col-md-8">
                     <div class="details-store-info">
                         <h2 class="details-store-name">{{currentStore.name}}</h2>
@@ -114,7 +105,7 @@
 </template>
 
 <script>
-     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
+     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick){
         Vue.use(Meta);
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
