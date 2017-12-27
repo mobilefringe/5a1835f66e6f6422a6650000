@@ -2,7 +2,37 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-4 col-md-push-8">
+                <div class="sidebar">
+                    <div class="sidebar-container">
+                        <h5>Hours</h5>
+                        <ul class="sidebar-hours-list">
+                            <li v-for="hour in hours">
+                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                            </li>
+                        </ul> 
+                        <router-link to="/hours" active-class="active" exact>
+                            <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
+                    <div class="sidebar-container">
+                        <h5 class="">Find Us</h5>
+                        <p>
+                            {{property.name}}<br/>
+                            {{property.address1}}<br/>
+                            {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
+                            {{property.contact_phone}}
+                        </p>
+                        <p>Northpark Center Concierge</p>
+                    </div>
+                    <div class="sidebar-container">
+                        <router-link to="" active-class="active" exact>
+                            <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </router-link>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-md-pull-4">
                 <div v-if="pageBanner">
                     <img  class="margin-30" :src="pageBanner.image_url" alt="" />
                 </div>
@@ -59,36 +89,7 @@
                     <div class="" v-html="unionPay.body"></div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="sidebar">
-                    <div class="sidebar-container">
-                        <h5>Hours</h5>
-                        <ul class="sidebar-hours-list">
-                            <li v-for="hour in hours">
-                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                            </li>
-                        </ul> 
-                        <router-link to="/hours" active-class="active" exact>
-                            <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>
-                    </div>
-                    <div class="sidebar-container">
-                        <h5 class="">Find Us</h5>
-                        <p>
-                            {{property.name}}<br/>
-                            {{property.address1}}<br/>
-                            {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
-                            {{property.contact_phone}}
-                        </p>
-                        <p>Northpark Center Concierge</p>
-                    </div>
-                    <div class="sidebar-container">
-                        <router-link to="" active-class="active" exact>
-                            <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>
-                    </div>
-                </div>
-            </div>
+            
         </div>
         <div class="row">
             <div class="col-md-12">
