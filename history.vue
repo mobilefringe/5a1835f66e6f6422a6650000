@@ -12,16 +12,26 @@
             </slick>
         </div>
         <div class="page-container">
-            <div class="col-md-8">
-                <h2>The History of NorthPark</h2>
-                <div class="visit-desc" v-if="history" v-html="history.body"></div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>The History of NorthPark</h2>
+                    <div class="visit-desc" v-if="history" v-html="history.body"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sidebar">
+                        <p class="quote">Every company has a special responsibility to enrich the lives of its customers and the community. It should serve as a catalyst to link art and business for the benefr of all.</p>
+                        <p class="quote-byline">-Raymond D. Nasher</p>
+                    </div>    
+                </div>
+                <div class="col-md-12 hidden-mobile">
+                    <router-link to="/photo-gallery">
+                        <p class="details-link">
+                            View 50th Anniversary Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </p>
+                    </router-link>    
+                </div>
             </div>
-            <div class="col-md-4">
-                <div class="sidebar">
-                    <p class="quote">Every company has a special responsibility to enrich the lives of its customers and the community. It should serve as a catalyst to link art and business for the benefr of all.</p>
-                    <p class="quote-byline">-Raymond D. Nasher</p>
-                </div>    
-            </div>
+            
         </div>
         <!--<div class="row">-->
         <!--    <div class="col-md-12">-->
