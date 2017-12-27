@@ -31,12 +31,7 @@
                     </router-link>    
                 </div>
             </div>
-            
         </div>
-        <!--<div class="row">-->
-        <!--    <div class="col-md-12">-->
-        <!--        <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />-->
-        <!--    </div>-->
         <div class="image-container">
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in historyBanners" v-if="historyBanners">
@@ -48,25 +43,31 @@
             </slick>
         </div>
         <div class="page-container">
-            <div class="col-md-4">
-                <div class="sidebar-left">
-                    <p class="quote">THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
-                    <p class="quote-byline">-Nancy A. Nasher</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="sidebar-left">
+                        <p class="quote">THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
+                        <p class="quote-byline">-Nancy A. Nasher</p>
+                    </div>    
+                </div>
+                <div class="col-md-8">
+                    <h2>The 50th Anniversary</h2>
+                    <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
+                </div>
+                <div class="col-md-12 hidden-mobile">
+                    <router-link to="/photo-gallery">
+                        <p class="details-link">
+                            View 50th Anniversary Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </p>
+                    </router-link>    
                 </div>    
             </div>
-            <div class="col-md-8">
-                <h2>The 50th Anniversary</h2>
-                <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
-            </div>
-            <div class="col-md-12 hidden-mobile">
-                <router-link to="/photo-gallery">
-                    <p class="details-link">View 50th Anniversary Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                </router-link>    
-            </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> History</p>
+        <div class="page-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> History</p>
+                </div>
             </div>
         </div>
     </div>
