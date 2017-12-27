@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="row image-row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="hover-container" v-if="sectionSix">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSix.image_url + ')' }"></div>
                     	<div v-if="sectionSix.url" class="hover-text-container hover-scale">
@@ -137,7 +137,7 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="hover-container" v-if="sectionSeven">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSeven.image_url + ')' }"></div>
                     	<div v-if="sectionSeven.url" class="hover-text-container hover-scale">
@@ -162,28 +162,26 @@
                 </div>
             </div>
             <div class="row image-row">
-                <div class="col-md-12">
-                    <div class="hover-container" v-if="sectionEight">
-                        <div class="hover-image mid-height" v-bind:style="{ backgroundImage: 'url(' + sectionEight.image_url + ')' }"></div>
-                    	<div v-if="sectionEight.url" class="hover-text-container hover-scale">
-                		    <div class="hover-text">
-                		        <h2>{{ sectionEight.name }}</h2>
-                		        <h4>{{ sectionEight.description }}</h4>
-                		        <router-link :to="sectionEight.url">
-                		            <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-            		            </router-link>
-            		        </div>
-                    	</div>
-                    	<div v-if="!sectionEight.url"class="hover-text-container hover-scale">
-                    		<div class="hover-text">
-                    		    <h2>{{ sectionEight.name }}</h2>
-                    		    <h4>{{ sectionEight.description }}</h4>
-                    		    <a :href="sectionEight.image_url" :data-lightbox="sectionEight.name">
-                    		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                    		    </a>
-                		    </div>
-                    	</div>
-                    </div>
+                <div class="hover-container" v-if="sectionEight">
+                    <div class="hover-image mid-height" v-bind:style="{ backgroundImage: 'url(' + sectionEight.image_url + ')' }"></div>
+                	<div v-if="sectionEight.url" class="hover-text-container hover-scale">
+            		    <div class="hover-text">
+            		        <h2>{{ sectionEight.name }}</h2>
+            		        <h4>{{ sectionEight.description }}</h4>
+            		        <router-link :to="sectionEight.url">
+            		            <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+        		            </router-link>
+        		        </div>
+                	</div>
+                	<div v-if="!sectionEight.url"class="hover-text-container hover-scale">
+                		<div class="hover-text">
+                		    <h2>{{ sectionEight.name }}</h2>
+                		    <h4>{{ sectionEight.description }}</h4>
+                		    <a :href="sectionEight.image_url" :data-lightbox="sectionEight.name">
+                		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		    </a>
+            		    </div>
+                	</div>
                 </div>
             </div>
             <div class="row">
