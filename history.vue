@@ -45,15 +45,16 @@
         </div>
         <div class="page-container">
             <div class="row">
-                <div class="col-md-4">
+                
+                <div class="col-md-8 col-md-push-4">
+                    <h2>The 50th Anniversary</h2>
+                    <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
+                </div>
+                <div class="col-md-4 col-md-pull-8">
                     <div class="sidebar-left">
                         <p class="quote">THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
                         <p class="quote-byline">-Nancy A. Nasher</p>
                     </div>    
-                </div>
-                <div class="col-md-8">
-                    <h2>The 50th Anniversary</h2>
-                    <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
                 </div>
                 <div class="col-md-12 hidden-mobile">
                     <router-link to="/photo-gallery">
