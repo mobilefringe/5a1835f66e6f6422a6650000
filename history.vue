@@ -32,6 +32,7 @@
                 </div>
             </div>
         </div>
+        <div class="margin-60"></div>
         <div class="image-container">
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in historyBanners" v-if="historyBanners">
