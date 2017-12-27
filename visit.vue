@@ -1,8 +1,9 @@
 <template>
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div v-if="pageBanner">
+        <div class="page-banner" v-if="pageBanner">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }"></div>
         </div>
+        
         <div class="page-container">
             <div class="row">
                 <div class="col-md-4 col-md-push-8">
