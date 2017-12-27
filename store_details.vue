@@ -55,7 +55,6 @@
                             <p class="details-manager-name">{{currentStore.manager_name}}</p>
                         </div>    
                     </div>
-                    
                 </div>
             </div>
             <div v-if="currentStore && currentStore.total_published_promos > 0">
@@ -113,6 +112,7 @@
                 return {
                     currentStore: null,
                     currentDetails: null,
+                    breadcrumb: null,
                     isDine: false,
                     isNewStore: false,
                     storeAssets: [],
