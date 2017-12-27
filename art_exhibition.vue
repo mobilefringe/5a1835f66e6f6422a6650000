@@ -113,6 +113,8 @@
                     <div class="hours-management" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
             </div>
+        </div>
+        <div class="image-container">
             <div class="row image-row">
                 <div class="col-md-6">
                     <div class="hover-container" v-if="sectionSix">
