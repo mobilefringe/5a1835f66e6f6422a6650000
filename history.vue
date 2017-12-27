@@ -47,11 +47,12 @@
             <div class="col-md-8">
                 <h2>The 50th Anniversary</h2>
                 <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
+            </div>
+            <div class="col-md-12 hidden-mobile">
                 <router-link to="/photo-gallery">
                     <p class="details-link">View 50th Anniversary Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                </router-link>
+                </router-link>    
             </div>
-            
         </div>
         <div class="row">
             <div class="col-md-12">
