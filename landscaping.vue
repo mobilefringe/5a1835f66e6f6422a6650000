@@ -140,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row image-row margin-60">
+            <div class="row image-row">
                 <div class="col-sm-6">
                     <div class="hover-container" v-if="sectionSeven">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSeven.image_url + ')' }"></div>
