@@ -4,6 +4,7 @@
         <div class="row margin-30">
             <div class="col-md-8">
                 <h2>{{text}}</h2>
+                <div class="margin-60"></div>
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
