@@ -23,10 +23,21 @@
                 </div>    
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />
-            </div>
+        <!--<div class="row">-->
+        <!--    <div class="col-md-12">-->
+        <!--        <img class="margin-30" src="http://via.placeholder.com/1920x640" alt="" />-->
+        <!--    </div>-->
+        <div class="image-container">
+            <slick ref="slick" :options="slickOptions">
+                <div v-for="banner in historyBanners" v-if="historyBanners">
+                    <img :src="banner.image_url" class="" alt="">
+                    <div class="page-container">
+                        <h5 class="details-title">{{ banner.name }}</h5>    
+                    </div>
+                </div>
+            </slick>
+        </div>
+        <div class="page-container">
             <div class="col-md-4">
                 <div class="sidebar-left">
                     <p class="quote">THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
