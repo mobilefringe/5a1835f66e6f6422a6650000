@@ -113,6 +113,8 @@
                     <div class="story-content" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
             </div>
+        </div>
+        <div class="image-container">
             <div class="row image-row">
                 <div class="col-sm-6">
                     <div class="hover-container" v-if="sectionSix">
