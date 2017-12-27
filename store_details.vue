@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div v-for="promo in promotions" v-if="promotions">
-                    <div class="row details-promo-container">
+                    <div class="row details-promo-container" v-class="details-promo-container-last : $index === (items.length-1)">
                         <div class="col-sm-12 col-md-6 col-md-push-6">
                             <img :src="promo.promo_image_url_abs" class="details-promo-img" alt="">
                         </div>
