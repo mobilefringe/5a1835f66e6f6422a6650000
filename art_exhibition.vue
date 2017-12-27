@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-container">
+        <div class="image-container">
             <div class="row image-row">
                 <div class="col-md-4" v-if="sectionTwo">
                     <div class="hover-container">
