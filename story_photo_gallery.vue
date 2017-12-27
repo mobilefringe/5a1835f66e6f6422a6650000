@@ -2,12 +2,12 @@
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-60"></div>
         <div class="row margin-30">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="category-select-container">
                     <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <p>Launch</p>
             </div>
         </div>
