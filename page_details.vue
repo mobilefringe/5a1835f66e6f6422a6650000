@@ -3,12 +3,7 @@
         <div class="margin-90"></div>
         <div v-if="currentPage">
             <div class="row">
-                <div class="col-md-8">
-                    <h2 class="page_title" v-html="currentPage.title"></h2>
-                    <hr/>
-                    <div class="" v-html="currentPage.body"></div>
-                </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-push-8">
                     <div class="sidebar">
                         <div class="sidebar-container">
                             <h5>Hours</h5>
@@ -36,6 +31,11 @@
                             </router-link>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-8 col-md-pull-4">
+                    <h2 class="page_title" v-html="currentPage.title"></h2>
+                    <hr/>
+                    <div class="" v-html="currentPage.body"></div>
                 </div>
             </div>
             <div class="row">
