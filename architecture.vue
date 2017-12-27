@@ -11,9 +11,9 @@
                 </div>
             </div>
         </div>
-        <div class="page-container">
+        <div class="image-container">
             <div class="row image-row">
-                <div class="col-md-4" v-if="sectionTwo">
+                <div class="col-sm-4" v-if="sectionTwo">
                     <div class="hover-container">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionTwo.image_url + ')' }"></div>
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
@@ -36,7 +36,7 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-4" v-if="sectionThree">
+                <div class="col-sm-4" v-if="sectionThree">
                     <div class="hover-container">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.image_url + ')' }"></div>
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
@@ -59,7 +59,7 @@
                     	</div>
                     </div>
                 </div>
-                <div class="col-md-4" v-if="sectionFour">
+                <div class="col-md-4 hidden-mobile" v-if="sectionFour">
                     <div class="hover-container">
                         <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionFour.image_url + ')' }"></div>
                     	<div v-if="sectionFour.url" class="hover-text-container hover-scale">
@@ -113,6 +113,8 @@
                     <div class="hours-management" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
             </div>
+        </div>
+        <div class="image-container">
             <div class="row image-row">
                 <div class="col-md-12">
                     <div class="hover-container" v-if="sectionSix">
