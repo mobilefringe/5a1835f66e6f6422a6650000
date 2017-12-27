@@ -5,7 +5,9 @@
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in historyBanners" v-if="historyBanners">
                     <img :src="banner.image_url" class="" alt="">
-                    <h5 class="details-title">{{ banner.name }}</h5>
+                    <div class="page-container">
+                        <h5 class="details-title">{{ banner.name }}</h5>    
+                    </div>
                 </div>
             </slick>
         </div>
