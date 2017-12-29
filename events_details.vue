@@ -63,10 +63,10 @@
                     store_hours: [],
                 }
             },
-            mounted () {
-                this.currentEvent   
-                this.timezone
-            },
+            // mounted () {
+            //     this.currentEvent   
+            //     this.timezone
+            // },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
