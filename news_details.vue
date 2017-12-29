@@ -29,7 +29,7 @@
                         <p class="blog-category">{{ tagString(currentPost.tag) }}</p>
                         <h2 class="">{{currentPost.title}}</h2> 
                         <p class="blog-author">By {{currentPost.author}} | {{currentPost.publish_date | moment("MM-D-YYYY", timezone)}}</p>
-                        <div v-html="currentPost.html_body"></div>
+                        <!--<div v-html="currentPost.html_body"></div>-->
                     </div>
                 </div>
             </div>
