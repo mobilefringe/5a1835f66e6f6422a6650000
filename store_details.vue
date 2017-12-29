@@ -236,7 +236,7 @@
                     return truncate;
                 },
                 isLast(){
-                    
+                        
                 },
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
