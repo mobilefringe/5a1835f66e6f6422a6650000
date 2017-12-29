@@ -12,7 +12,14 @@
         <div class="page-container">
             <div class="row">
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
-                <div class="col-md-7" v-if="currentSelection">
+                <div class="col-md-5 col-md-push-7">
+                    <!-- CALENDAR -->
+                    <vue-datepicker-local v-model="time" type="inline"></vue-datepicker-local>
+                    <div class="category-select-container right">
+                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-pull-5" v-if="currentSelection">
                     <div class="row" v-for="event in currentSelection">
                         <div class="col-md-2">
                             <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
@@ -30,13 +37,6 @@
                         <div class="col-md-12">
                             <hr>    
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <!-- CALENDAR -->
-                    <vue-datepicker-local v-model="time" type="inline"></vue-datepicker-local>
-                    <div class="category-select-container right">
-                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                     </div>
                 </div>
             </div>
