@@ -4,7 +4,7 @@
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }"></div>
         </div>
         <div class="page-container">
-            <div class="margin-30">
+            <div class="margin-30"></div
             <div class="row margin-30">
                 <div class="col-md-6"></div>
                 <div class="col-md-6">
