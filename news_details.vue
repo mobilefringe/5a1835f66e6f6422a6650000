@@ -41,7 +41,6 @@
                     <div class="visible-mobile">
                         <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
                             <div class="blog-social-share">
-                                <h5>Share</h5>
                                 <network network="facebook">
                                     <i class="fa fa-facebook-square"></i>
                                 </network>
@@ -51,6 +50,7 @@
                                 <network network="pinterest">
                                     <i class="fa fa-pinterest-square"></i>
                                 </network>
+                                <h5>Share</h5>
                             </div>
                         </social-sharing>
                         <hr>
