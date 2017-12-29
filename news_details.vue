@@ -10,7 +10,7 @@
                             <p class="details-promo-day">{{currentPost.publish_date | moment("D", timezone)}}</p>
                             <p class="details-promo-date">{{currentPost.publish_date | moment("MMM", timezone)}}</p>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-sm-9 col-md-10">
                             <div class="hidden-mobile">
                                 <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
                                     <div class="blog-social-share">
