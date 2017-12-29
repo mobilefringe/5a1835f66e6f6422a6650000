@@ -62,6 +62,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    breadcrumb: null,
                     currentBlog: null,
                     paginate: ['currentSelection'],
                     selected: "Select A Category",
