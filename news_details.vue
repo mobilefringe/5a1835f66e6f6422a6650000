@@ -36,7 +36,7 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-10">
                             <img class="blog-image" :src="currentPost.image_url"/>
-                            <div v-html="currentPost.html_body"></div>
+                            <div class="margin-60" v-html="currentPost.html_body"></div>
                         </div>
                     </div>
                     <div class="visible-mobile">
