@@ -63,7 +63,7 @@
                         <h5>Upcoming Events</h5>
                     </div>
                 </div>
-                <div v-for="(promo, index) in promotions" v-if="promotions" class="row details-promo-container" v-bind:class="{details-promo-container-last : index === (promotions.length-1)}">
+                <div v-for="(promo, index) in promotions" v-if="promotions" class="row details-promo-container" > <!-- v-bind:class="{details-promo-container-last : index === (promotions.length-1)}" -->
                     <div > <!-- v-class="{ details-promo-container-last: isLast($index) }"-->
                         <div class="col-sm-12 col-md-6 col-md-push-6">
                             <img :src="promo.promo_image_url_abs" class="details-promo-img" alt="">
