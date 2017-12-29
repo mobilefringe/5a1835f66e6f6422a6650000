@@ -2,12 +2,12 @@
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
         <div class="image-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- SLIDER -->
+            <slick ref="slick" :options="slickOptions">
+                <div> <!--v-for="banner in historyBanners" v-if="historyBanners"-->
+                    <!--<img :src="banner.image_url" class="" alt="">-->
                     <img class="margin-60" src="http://via.placeholder.com/960x460"/>
                 </div>
-            </div>
+            </slick>
         </div>
         <div class="page-container">
             <div class="row">
