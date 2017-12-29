@@ -3,33 +3,40 @@
         <div class="margin-90"></div>
         <div class="row" v-if="currentPost">
             <div class="col-md-8 margin-60">
-                <div id="currentPost" class="row">
-                    <div class="col-sm-3 col-md-2">
-                        <p class="details-promo-date">{{currentPost.publish_date | moment("ddd", timezone)}}</p>
-                        <p class="details-promo-day">{{currentPost.publish_date | moment("D", timezone)}}</p>
-                        <p class="details-promo-date">{{currentPost.publish_date | moment("MMM", timezone)}}</p>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="hidden-mobile">
-                            <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
-                                <div class="blog-social-share">
-                                    <h5>Share</h5>
-                                    <network network="facebook">
-                                        <i class="fa fa-facebook-square"></i>
-                                    </network>
-                                    <network network="twitter">
-                                        <i class="fa fa-twitter-square"></i>
-                                    </network>
-                                    <network network="pinterest">
-                                        <i class="fa fa-pinterest-square"></i>
-                                    </network>
-                                </div>
-                            </social-sharing>
+                <div id="currentPost">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-2">
+                            <p class="details-promo-date">{{currentPost.publish_date | moment("ddd", timezone)}}</p>
+                            <p class="details-promo-day">{{currentPost.publish_date | moment("D", timezone)}}</p>
+                            <p class="details-promo-date">{{currentPost.publish_date | moment("MMM", timezone)}}</p>
                         </div>
-                        <h5 class="blog-category">{{ tagString(currentPost.tag) }}</h5>
-                        <h2 class="">{{currentPost.title}}</h2> 
-                        <h5 class="blog-author">By {{currentPost.author}} | {{currentPost.publish_date | moment("MM-D-YYYY", timezone)}}</h5>
-                        <!--<div v-html="currentPost.html_body"></div>-->
+                        <div class="col-md-10">
+                            <div class="hidden-mobile">
+                                <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
+                                    <div class="blog-social-share">
+                                        <h5>Share</h5>
+                                        <network network="facebook">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </network>
+                                        <network network="twitter">
+                                            <i class="fa fa-twitter-square"></i>
+                                        </network>
+                                        <network network="pinterest">
+                                            <i class="fa fa-pinterest-square"></i>
+                                        </network>
+                                    </div>
+                                </social-sharing>
+                            </div>
+                            <h5 class="blog-category">{{ tagString(currentPost.tag) }}</h5>
+                            <h2 class="">{{currentPost.title}}</h2> 
+                            <h5 class="blog-author">By {{currentPost.author}} | {{currentPost.publish_date | moment("MM-D-YYYY", timezone)}}</h5>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div v-html="currentPost.html_body"></div>
+                        </div>
                     </div>
                 </div>
             </div>
