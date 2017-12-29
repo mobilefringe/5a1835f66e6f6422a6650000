@@ -12,7 +12,7 @@
         <div class="page-container">
             <div class="row">
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
-                <div class="col-md-5 col-md-push-7">
+                <div class="col-sm-12 col-md-5 col-md-push-7">
                     <!-- CALENDAR -->
                     <vue-datepicker-local v-model="time" type="inline"></vue-datepicker-local>
                     <div class="category-select-container right">
