@@ -19,14 +19,14 @@
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                     </div>
                 </div>
-                <div class="col-md-7 col-md-pull-5" v-if="currentSelection">
+                <div class="col-sm-12 col-md-7 col-md-pull-5" v-if="currentSelection">
                     <div class="row" v-for="event in currentSelection">
-                        <div class="col-md-2">
+                        <div class="col-sm-2">
                             <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
                             <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
                             <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-sm-10">
                             <h5 class="details-dates">{{ checkEventDates(event) }}</h5>
                             <h2>{{ event.name }}</h2>
                             <p class="sub_title" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</p>
