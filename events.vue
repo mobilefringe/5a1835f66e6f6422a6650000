@@ -50,7 +50,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vuejs-datepicker"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VueDatepickerLocal) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vuejs-datepicker", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VueDatepickerLocal, slick) {
         Vue.use(Meta);
         
         return Vue.component("events-component", {
@@ -72,6 +72,18 @@
                         {'label':'In-Store Events', 'value': 'promotions'},
                         {'label':'Holiday Events', 'value': 'holiday'}, 
                     ],
+                    slickOptions: {
+                        arrows: true,
+                        autoplay: true,
+                        cssEase: 'linear',
+                        dots: false,
+                        fade: true,
+                        infinite: true,
+                        slidesToShow: 1,
+                        speed: 500,
+                        prevArrow: '.prev',
+                        nextArrow: '.next'
+                    }
                 }
             },
             mounted () {
