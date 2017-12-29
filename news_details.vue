@@ -67,6 +67,7 @@
                                 <img :src="relatedPost.image_url"/>
                                 <p>{{relatedPost.title }}</p>
                             </router-link>
+                            <hr class="visible-mobile">
                         </div>
                         <div class="sidebar-container">
                             <h5>Get Connected</h5>
@@ -77,6 +78,7 @@
                                     <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                                 </form>
                             </div>
+                            <hr class="visible-mobile">
                         </div>
                         <div class="sidebar-container" v-if="instaFeed">
                             <h5>Follow Us On Instagram</h5>
@@ -87,6 +89,7 @@
                                     </a>
                                 </div>
                             </div>
+                            <hr class="visible-mobile">
                         </div>
                     </div>
                 </affix>
