@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="offset-md-2 col-md-10 ">
+                        <div class="col-md-10 offset-md-2">
                             <div v-html="currentPost.html_body"></div>
                         </div>
                     </div>
