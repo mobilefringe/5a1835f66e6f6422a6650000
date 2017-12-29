@@ -38,6 +38,22 @@
                             <div v-html="currentPost.html_body"></div>
                         </div>
                     </div>
+                    <div class="visible-mobile">
+                        <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
+                            <div class="blog-social-share">
+                                <h5>Share</h5>
+                                <network network="facebook">
+                                    <i class="fa fa-facebook-square"></i>
+                                </network>
+                                <network network="twitter">
+                                    <i class="fa fa-twitter-square"></i>
+                                </network>
+                                <network network="pinterest">
+                                    <i class="fa fa-pinterest-square"></i>
+                                </network>
+                            </div>
+                        </social-sharing>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
