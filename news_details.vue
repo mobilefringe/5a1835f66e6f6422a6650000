@@ -53,6 +53,7 @@
                                 </network>
                             </div>
                         </social-sharing>
+                        <hr>
                     </div>
                 </div>
             </div>
