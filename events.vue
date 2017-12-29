@@ -34,7 +34,7 @@
                                 <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                             </router-link>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-sm-12">
                             <hr>    
                         </div>
                     </div>
