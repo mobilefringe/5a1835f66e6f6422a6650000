@@ -92,7 +92,6 @@
                                 </div>
                             </div>
                             <div class="visible-mobile margin-90"></div>
-                            <hr class="visible-mobile">
                         </div>
                     </div>
                 </affix>
