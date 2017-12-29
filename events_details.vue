@@ -1,43 +1,48 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
-        <div class="row" v-if="currentEvent">
-            <div class="col-md-12">
+        <div v-if="currentEvent">
+            <div class="image-container">
                 <img :src="currentEvent.image_url" class="margin-60" alt="" />
-            </div>
-            <div class="col-md-8">
-                <div class="details-store-info">
-                    <h2 class="details-store-name">{{currentEvent.name}}</h2>
-                    <h5 class="details-dates">{{ checkEventDates() }}</h5>
-                    <p class="details-description">{{currentEvent.description}}</p>
-                </div>    
-            </div>
-            <div class="col-md-4">
-                <div class="sidebar">
-                    <div class="sidebar-container" v-if="currentEvent && currentEvent.store">
-                        <h5>Store Hours</h5>
-                        <ul class="details-hours-list">
-                            <li v-for="store_hour in store_hours">
-                               {{day_of_the_week(store_hour.day_of_week)}} - {{store_hour.open_time | moment("h A", timezone)}} - {{store_hour.close_time | moment("h A", timezone)}}
-                                </span>
-                            </li>
-                        </ul>
-                        <router-link to="getStoreSlug()" active-class="active" exact>
-                            <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>
+            </div>    
+            <div class="page-container">
+                <div class="row">
+            
+                    <div class="col-md-8">
+                        <div class="details-store-info">
+                            <h2 class="details-store-name">{{currentEvent.name}}</h2>
+                            <h5 class="details-dates">{{ checkEventDates() }}</h5>
+                            <p class="details-description">{{currentEvent.description}}</p>
+                        </div>    
                     </div>
-                    <div class="sidebar-container" v-if="currentEvent && !currentEvent.store">
-                        <h5>Hours</h5>
-                        <ul class="sidebar-hours-list">
-                            <li v-for="hour in hours">
-                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                            </li>
-                        </ul> 
-                        <router-link to="/hours" active-class="active" exact>
-                            <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        </router-link>
+                    <div class="col-md-4">
+                        <div class="sidebar">
+                            <div class="sidebar-container" v-if="currentEvent && currentEvent.store">
+                                <h5>Store Hours</h5>
+                                <ul class="details-hours-list">
+                                    <li v-for="store_hour in store_hours">
+                                       {{day_of_the_week(store_hour.day_of_week)}} - {{store_hour.open_time | moment("h A", timezone)}} - {{store_hour.close_time | moment("h A", timezone)}}
+                                        </span>
+                                    </li>
+                                </ul>
+                                <router-link to="getStoreSlug()" active-class="active" exact>
+                                    <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                </router-link>
+                            </div>
+                            <div class="sidebar-container" v-if="currentEvent && !currentEvent.store">
+                                <h5>Hours</h5>
+                                <ul class="sidebar-hours-list">
+                                    <li v-for="hour in hours">
+                                       {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                    </li>
+                                </ul> 
+                                <router-link to="/hours" active-class="active" exact>
+                                    <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                </router-link>
+                            </div>
+                        </div>    
                     </div>
-                </div>    
+                </div>
             </div>
         </div>
         <div class="row">
