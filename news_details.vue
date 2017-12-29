@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-10">
-                            <img :src="currentPost.image_url"/>
+                            <img class="blog-image" :src="currentPost.image_url"/>
                             <div v-html="currentPost.html_body"></div>
                         </div>
                     </div>
