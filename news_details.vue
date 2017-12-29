@@ -112,6 +112,7 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
+                    currentBlog: null,
                     mainBlog: null,
                     currentPost: null,
                     socialFeed: null,
