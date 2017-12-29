@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-sm-12 col-md-7 col-md-pull-5" v-if="currentSelection">
                     <div class="row" v-for="event in currentSelection">
-                        <div class="col-sm-2">
+                        <div class="hidden-xs col-sm-2">
                             <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
                             <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
                             <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
