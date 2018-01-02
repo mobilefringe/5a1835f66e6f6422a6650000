@@ -62,12 +62,7 @@
                     breadcrumb: null,
                     selected: "All Events",
                     currentSelection: null,
-                    time: moment(),
-                    firstDayOfWeek: 0,
-                    disableDaysBeforeToday: false,
-                    defaultDate: moment(),
-                    showLunar: false,
-                    showLunarButton: false,
+                    
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
