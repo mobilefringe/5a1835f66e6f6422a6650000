@@ -4,7 +4,6 @@
         <div class="row" v-if="currentPost">
             <div class="col-md-8 margin-60">
                 <div id="currentPost">
-                   
                     <div class="blog-details-date">
                         <p class="details-promo-date">{{currentPost.publish_date | moment("ddd", timezone)}}</p>
                         <p class="details-promo-day">{{currentPost.publish_date | moment("D", timezone)}}</p>
