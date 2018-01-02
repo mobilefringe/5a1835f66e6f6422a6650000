@@ -4,7 +4,7 @@
         <div class="image-container">
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in eventsBanners" v-if="eventsBanners">
-                    <router-link v-if="banner.url" :to="banner.url" class="">
+                    <router-link  class=""> <!-- :to="banner.url" -->
                         <img class="margin-60" :src="banner.image_url" alt="">
                     </router-link>
                 </div>
