@@ -64,7 +64,7 @@
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
                             <h5>Related Blogs</h5>
                             <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
-                                <img :src="relatedPost.image_url"/>
+                                <img class="related-post-img" :src="relatedPost.image_url"/>
                                 <p>{{relatedPost.title }}</p>
                             </router-link>
                             <div class="visible-mobile margin-90"></div>
