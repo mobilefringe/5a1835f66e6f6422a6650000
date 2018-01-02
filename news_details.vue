@@ -50,11 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row visibile-mobile">
-                    <div class="col-md-12">
-                        <hr class="">
-                    </div>
-                </div>
+                <hr class="visibile-mobile">
             </div>
             <div class="col-md-4">
                 
