@@ -83,7 +83,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
             }
         },
         mounted () {
-            this.$store.state
+            this.$store.state;
         },
         created() {
             // make an async call to the data store to initialize the locale 
@@ -127,7 +127,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                     this.showVisitMenu = false;
                 }
                 if(this.$route.path == "/our-story" || this.$route.path == "/our-story/history" || this.$route.path == "/our-story/landscaping" || this.$route.path == "/our-story/architecture" || this.$route.path == "/our-story/photo-gallery") {
-                    this.breadcrumb = "Our Story"
+                    this.breadcrumb = "Our Story";
                     this.showStoryMenu = true;
                 } else {
                     this.showStoryMenu = false;
@@ -172,7 +172,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
                 this.show_search = !this.show_search;
             },
             onOptionSelect(option) {
-                console.log('Selected option:', option)
+                console.log('Selected option:', option);
                 this.$router.push("/stores/" + option.slug);
             }
         },
