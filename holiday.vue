@@ -101,7 +101,7 @@
                         // infinite: true,
                         slidesToShow: 4,
                         speed: 500,
-                        prevArrow: '.prev',
+                        prevArrow: 'slick-prev',
                         nextArrow: '.next'
                     }
                 }
