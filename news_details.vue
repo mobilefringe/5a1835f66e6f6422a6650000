@@ -82,7 +82,7 @@
                             <div class="insta-feed-container">
                                 <div class="insta-feed-image" v-for="item in instaFeed">
                                     <a :href="item.link" target="_blank">
-                                        <img :src="item.images.low_resolution.url"/>
+                                        <img :src="item.images.thumbnail.url"/>
                                     </a>
                                 </div>
                             </div>
@@ -155,7 +155,6 @@
             watch: {
                 socialFeed: function() {
                     var social_feed = this.socialFeed.social.instagram;
-                    console.log(social_feed)
                     var insta_feed = _.slice(social_feed, [0], [3])
                     this.instaFeed = insta_feed
                 }
