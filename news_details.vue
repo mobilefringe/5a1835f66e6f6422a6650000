@@ -29,6 +29,8 @@
                         <h5 class="blog-details-category">{{ tagString(currentPost.tag) }}</h5>
                         <h2 class="">{{currentPost.title}}</h2> 
                         <h5 class="blog-author">By {{currentPost.author}} | {{currentPost.publish_date | moment("MM-D-YYYY", timezone)}}</h5>
+                    </div>
+                    <div>
                         <img class="blog-image" :src="currentPost.image_url"/>
                         <div class="margin-60" v-html="currentPost.html_body"></div>
                         <div class="visible-mobile">
@@ -46,14 +48,12 @@
                                     <h5>Share</h5>
                                 </div>
                             </social-sharing>
-                            
                         </div>
                     </div>
                 </div>
                 <hr class="visibile-mobile">
             </div>
             <div class="col-md-4">
-                
                 <affix class="sidebar-menu" relative-element-selector="#currentPost" style="width: 300px">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
