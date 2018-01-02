@@ -51,8 +51,9 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-calendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "VCalendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
         Vue.use(Meta);
+        Vue.use(VCalendar);
 
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
