@@ -1,6 +1,7 @@
 <template>
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
+        <v-calendar></v-calendar>
         <div class="image-container">
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in eventsBanners" v-if="eventsBanners">
@@ -51,8 +52,9 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-calendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "v-calendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
         Vue.use(Meta);
+        Vue.use(VCalendar.default)
 
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
