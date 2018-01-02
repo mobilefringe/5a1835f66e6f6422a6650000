@@ -59,7 +59,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, slick) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "v-calendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
         Vue.use(Meta);
         
         return Vue.component("events-component", {
