@@ -94,6 +94,7 @@
                     currentBlog: null,
                     slickOptions: {
                         autoplay: false,
+                        centerMode: true,
                         centerPadding: '5px',
                         cssEase: 'linear',
                         dots: false,
