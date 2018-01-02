@@ -101,8 +101,8 @@
                         // infinite: true,
                         slidesToShow: 4,
                         speed: 500,
-                    //     prevArrow: '.prev',
-                    //     nextArrow: '.next'
+                        prevArrow: '.prev',
+                        nextArrow: '.next'
                     }
                 }
             },
