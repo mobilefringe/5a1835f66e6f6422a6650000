@@ -93,16 +93,13 @@
                     currentPage: null,
                     currentBlog: null,
                     slickOptions: {
-                        // arrows: true,
+                        
                         autoplay: false,
+                        centerPadding: '5px';
                         cssEase: 'linear',
                         dots: false,
-                        // fade: true,
-                        // infinite: true,
                         slidesToShow: 4,
                         speed: 500,
-                        // prevArrow: 'slick-prev',
-                        // nextArrow: '.next'
                     }
                 }
             },
