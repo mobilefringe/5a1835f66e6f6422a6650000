@@ -29,7 +29,7 @@
                         <h5 class="blog-details-category">{{ tagString(currentPost.tag) }}</h5>
                         <h2 class="">{{currentPost.title}}</h2> 
                         <h5 class="blog-author">By {{currentPost.author}} | {{currentPost.publish_date | moment("MM-D-YYYY", timezone)}}</h5>
-                        <div class="col-md-10">
+                        <!--<div class="col-md-10">-->
                             <img class="blog-image" :src="currentPost.image_url"/>
                             <div class="margin-60" v-html="currentPost.html_body"></div>
                             <div class="visible-mobile">
@@ -49,7 +49,7 @@
                                 </social-sharing>
                                 <hr>
                             </div>
-                        </div>
+                        <!--</div>-->
                     </div>
                 </div>
             </div>
