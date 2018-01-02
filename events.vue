@@ -99,7 +99,7 @@
                     return this.$store.getters.getTimezone;
                 },
                 eventsBanners() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Events" })
                     var repo_images = repo[0].images
                     return repo_images
                 },
