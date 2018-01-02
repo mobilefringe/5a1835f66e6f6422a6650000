@@ -3,9 +3,9 @@
         <div class="margin-90 hidden-mobile"></div>
         <div class="image-container">
             <slick ref="slick" :options="slickOptions">
-                <div> <!--v-for="banner in historyBanners" v-if="historyBanners"-->
-                    <!--<img :src="banner.image_url" class="" alt="">-->
-                    <img class="margin-60" src="http://via.placeholder.com/960x460"/>
+                <div v-for="banner in historyBanners" v-if="historyBanners">
+                    <img :src="banner.image_url" class="" alt="">
+                    <!--<img class="margin-60" src="http://via.placeholder.com/960x460"/>-->
                 </div>
             </slick>
         </div>
@@ -97,6 +97,11 @@
                 },
                 timezone () {
                     return this.$store.getters.getTimezone;
+                },
+                eventsBanners() {
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
+                    var repo_images = repo[0].images
+                    return repo_images
                 },
                 events() {
                     var events = this.$store.getters.processedEvents;
