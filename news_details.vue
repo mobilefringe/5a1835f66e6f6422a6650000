@@ -46,10 +46,11 @@
                                     <h5>Share</h5>
                                 </div>
                             </social-sharing>
-                            <hr>
+                            
                         </div>
                     </div>
                 </div>
+                <hr>
             </div>
             <div class="col-md-4">
                 <affix class="sidebar-menu" relative-element-selector="#currentPost" style="width: 300px">
