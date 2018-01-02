@@ -69,14 +69,14 @@
                     breadcrumb: null,
                     selected: "All Events",
                     currentSelection: null,
-                    props: {
+                    // props: {
                         isDoublePaned: { type: Boolean, default: true },
                         isExpanded: { type: Boolean, default: false },
                         navVisibility: { type: String, default: 'focus' },
                         titlePosition: { type: String, default: 'center' },
                         titleTransition: { type: String, default: 'slide-h' },
                         weeksTransition: { type: String, default: 'slide-h' },
-                    },
+                    // },
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
