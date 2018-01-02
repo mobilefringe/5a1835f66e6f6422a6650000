@@ -60,8 +60,8 @@
                             <div class="col-md-10">
                                 <h5 class="event-date">{{ checkEventDates(event) }}</h5>
                                 <h2 class="event-name">{{ event.name }}</h2>
-                                <h5 class="events-store" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</h5>
-                                <p>{{ event.description }}</p>
+                                <h5 class="event-store" v-if="event.store">{{ event.store.name }}</p><p class="sub_title" v-else>{{ property.name}}</h5>
+                                <p class="event-details">{{ event.description }}</p>
                             </div>
                             <div class="col-md-12">
                                 <hr>    
