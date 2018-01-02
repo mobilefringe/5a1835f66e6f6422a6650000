@@ -93,9 +93,8 @@
                     currentPage: null,
                     currentBlog: null,
                     slickOptions: {
-                        
                         autoplay: false,
-                        centerPadding: '5px';
+                        centerPadding: '5px',
                         cssEase: 'linear',
                         dots: false,
                         slidesToShow: 4,
