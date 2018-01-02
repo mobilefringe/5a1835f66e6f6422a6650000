@@ -52,7 +52,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vuejs-datepicker", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VueDatepickerLocal, slick) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, slick) {
         Vue.use(Meta);
         
         return Vue.component("events-component", {
