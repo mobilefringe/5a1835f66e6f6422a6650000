@@ -4,8 +4,8 @@
         <div class="image-container">
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in eventsBanners" v-if="eventsBanners">
-                    <img :src="banner.image_url" class="" alt="">
-                    <!--<img class="margin-60" src="http://via.placeholder.com/960x460"/>-->
+                    <img class="margin-60" :src="banner.image_url" class="" alt="">
+                    <!--<img  src="http://via.placeholder.com/960x460"/>-->
                 </div>
             </slick>
         </div>
