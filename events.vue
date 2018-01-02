@@ -15,7 +15,6 @@
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <!-- CALENDAR -->
                     <v-calendar
-                      :is-double-paned='isDoublePaned'
                       :is-expanded='isExpanded'
                       :nav-visibility='navVisibility'
                       :title-position='titlePosition'
