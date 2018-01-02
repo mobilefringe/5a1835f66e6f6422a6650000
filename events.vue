@@ -136,7 +136,6 @@
             },
             methods: {
                 selectCategory(){
-                    console.log(this.selected)
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected.value == "promotions") {
