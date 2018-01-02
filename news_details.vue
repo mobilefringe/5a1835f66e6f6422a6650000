@@ -160,7 +160,7 @@
             watch: {
                 socialFeed: function() {
                     var social_feed = this.socialFeed.social.instagram
-                    var insta_feed = _.slice(social_feed, [0], [6])
+                    var insta_feed = _.slice(social_feed, [0], [3])
                     this.instaFeed = insta_feed
                 }
             },
