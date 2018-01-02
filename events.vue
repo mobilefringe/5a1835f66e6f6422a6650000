@@ -12,6 +12,9 @@
         </div>
         <div class="page-container">
             <div class="row">
+            <v-calendar
+    is-double-paned>
+  </v-calendar>
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <!-- CALENDAR -->
