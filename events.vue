@@ -12,9 +12,6 @@
         </div>
         <div class="page-container">
             <div class="row">
-            <v-calendar
-    is-double-paned>
-  </v-calendar>
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <!-- CALENDAR -->
@@ -54,9 +51,8 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue!VCalendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-calendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
         Vue.use(Meta);
-        Vue.use(VCalendar);
 
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
