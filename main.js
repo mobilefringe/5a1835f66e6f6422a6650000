@@ -142,12 +142,11 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
         computed: {
             // computed property for locale which returns locale value from data store and also updates the data store with new locale information
             locale: {
-                get () {
-                    return this.$store.state.locale
-                    
+                get() {
+                    return this.$store.state.locale;
                 },
-                set (value) {
-                    this.$store.commit('SET_LOCALE', { lang: value })
+                set(value) {
+                    this.$store.commit('SET_LOCALE', { lang: value });
                 }
             },
             property(){
