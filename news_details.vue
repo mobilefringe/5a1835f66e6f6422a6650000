@@ -50,10 +50,14 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="row visibile-mobile">
+                    <div class="col-md-12">
+                        <hr class="">
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-                <hr class="visibile-mobile">
+                
                 <affix class="sidebar-menu" relative-element-selector="#currentPost" style="width: 300px">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
