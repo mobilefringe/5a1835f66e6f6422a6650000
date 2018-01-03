@@ -182,7 +182,17 @@
                             holiday_events.push(value);
                         }
                     });
-                    return holiday_events;
+                    var showEvents = [];
+                    _.forEach(this.$store.getters.processedPromos, function(value, key) {
+                        var today = moment().format("YYYY-MM-DD");
+                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
+                        if(today >= showOnWebDate){
+                            showEvents.push(value);
+                        }
+                    });
+                    
+                    var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
+                    return holidayEvents
                 },
                 selectedDate() {
                     console.log("Hello")    
