@@ -208,7 +208,7 @@
                         }
                     });
                     console.log(showEvents);
-                    this.currentSelection = showEvents
+                    currentSelection = showEvents
                 },
                 selectCategory(){
                     if(this.selected.value == "events"){
