@@ -220,6 +220,7 @@
                             showEvents.push(value);
                         }
                     });
+                    return showEvents
                     console.log(showEvents);
                 }
                 selectCategory(){
