@@ -208,6 +208,7 @@
                         }
                     });
                     console.log(showEvents);
+                    this.currentSelection = showEvents
                 },
                 selectCategory(){
                     if(this.selected.value == "events"){
