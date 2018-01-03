@@ -201,8 +201,8 @@
             methods: {
                 dateChange(){
                     
-                    var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
-                    this.currentSelection = sortEventsByDate(selectedDate)
+                    
+                    
                     // var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
                     // var showEvents = [];
                     // _.forEach(this.currentSelection, function(value, key) {
