@@ -142,7 +142,7 @@
                     console.log(moment();)
                     _.forEach(sortedEvents, function(value, key) {
                         var today = moment();
-                        var showOnWebDate = value.show_on_web_date
+                        var showOnWebDate = value.show_on_web_date;
                         console.log(value.name, showOnWebDate)
                     });
                     return sortedEvents
