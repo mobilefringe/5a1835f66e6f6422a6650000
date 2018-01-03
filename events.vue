@@ -125,8 +125,19 @@
             watch: {
                 currentDate: function(){
                     var selectedDate = this.currentDate;
+                    var eventsList = [];
+                    if(this.selected.value == "events"){
+                        eventsList = this.propertyEvents;
+                    } else if (this.selected.value == "promotions") {
+                        eventsList = this.storeEvents;
+                    } else if (this.selected.value == "holiday"){
+                        eventsList = this.holidayEvents;
+                    } else {
+                        eventsList = this.events
+                    }
+                    
                     var showEvents = [];
-                    _.forEach(this.currentSelection, function(value, key) {
+                    _.forEach(eventsList, function(value, key) {
                         var startDate = moment(value.start_date).format("YYYY-MM-DD");
                         var endDate = moment(value.end_date).format("YYYY-MM-DD");
                         if(selectedDate <= endDate && selectedDate >= startDate){
