@@ -18,7 +18,7 @@
                     <v-date-picker
                         mode='single'
                         v-model='selectedDate'
-                        select-color='#ff6666'
+                        select-color='#FFF'
                         :theme-styles='themeStyles'
                         is-inline
                         :input="dateChange()"
