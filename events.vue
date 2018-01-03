@@ -141,7 +141,7 @@
                         var startDate = moment(value.start_date).format("YYYY-MM-DD");
                         var endDate = moment(value.end_date).format("YYYY-MM-DD");
                         console.log(startDate, endDate)
-                        if(selectedDate <= endDate && selectedDate >= startDate){
+                        if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
                             showEvents.push(value);
                         }
                     });
