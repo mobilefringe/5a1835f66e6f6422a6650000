@@ -21,7 +21,7 @@
                         select-color='#ff6666'
                         :theme-styles='themeStyles'
                         is-inline
-                        :input="currentDate"
+                        :input="dateChange()"
                     ></v-date-picker>
                     
                     <div class="category-select-container right">
@@ -124,7 +124,7 @@
             },
             watch: {
                 currentDate: function(){
-                    console.log(this.selectedDate)    
+                    
                 }
             },
             computed: {
@@ -197,6 +197,9 @@
                     });
                     var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
                     return holidayEvents
+                },
+                sortEventsByDate() {
+                    console.log(this.selectedDate);
                 }
             },
             methods: {
