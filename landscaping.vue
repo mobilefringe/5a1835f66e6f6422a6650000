@@ -2,11 +2,17 @@
     <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div v-if="sectionOne">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
+            <div class="margin-90 hidden-mobile"></div>
             <div class="page-container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="art-quote">{{ sectionOne.description }}</h1>
-                        <p class="art-quote-subtext">-{{ sectionOne.name }}</p>
+                        <div class="art-quote-container">
+                            <i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>
+                            <i class="fa fa-quote-right fa-3x fa-pull-right" aria-hidden="true"></i>
+                            <h1 class="art-quote">{{ sectionOne.description }}</h1>
+                            <p class="art-quote-subtext">-{{ sectionOne.name }}</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
