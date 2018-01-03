@@ -197,10 +197,6 @@
             },
             methods: {
                 dateChange(){
-                    console.log(this.selectedDate)   
-                    var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
-                    console.log(selectedDate)
-                    console.log(this.currentSelection)
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
                         var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
@@ -209,7 +205,7 @@
                             showEvents.push(value);
                         }
                     });
-                    this.currentSelection = showEvents;
+                    console.log(showEvents);
                 },
                 selectCategory(){
                     if(this.selected.value == "events"){
