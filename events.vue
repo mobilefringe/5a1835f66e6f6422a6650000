@@ -16,6 +16,7 @@
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <div class="event-calendar-container">
                         <v-date-picker
+                            :is-expanded='isExpanded'
                             :nav-visibility='navVisibility'
                             mode='single'
                             v-model='selectedDate'
@@ -83,6 +84,7 @@
                     currentSelection: null,
                     currentDate: null,
                     selectedDate: new Date(),
+                    isExpanded: true,
                     navVisibility: 'hidden',
                     themeStyles: {
                         wrapper: {
