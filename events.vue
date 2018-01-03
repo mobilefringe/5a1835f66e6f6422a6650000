@@ -209,7 +209,7 @@
                             showEvents.push(value);
                         }
                     });
-                    this.currentSelect = showEvents;
+                    this.currentSelection = showEvents;
                 },
                 selectCategory(){
                     if(this.selected.value == "events"){
