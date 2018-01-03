@@ -95,7 +95,7 @@
                             backgroundColor: '#FFF',
                             borderColor: '#404c59',
                             borderWidth: '1px 1px 0 1px',
-                            paddingTop: '5px',
+                            paddingTop: '0',
                             paddingBottom: '0'
                         },
                         headerVerticalDivider: {
