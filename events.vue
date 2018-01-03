@@ -31,9 +31,9 @@
                 <div class="col-sm-12 col-md-7 col-md-pull-5" v-if="currentSelection">
                     <div class="row" v-for="event in currentSelection">
                         <div class="hidden-xs col-sm-2">
-                            <p class="details-promo-date">{{event.start_date | moment("ddd", timezone)}}</p>
-                            <p class="details-promo-day">{{event.start_date | moment("D", timezone)}}</p>
-                            <p class="details-promo-date">{{event.start_date | moment("MMM", timezone)}}</p>
+                            <p class="details-promo-date">{{event.end_date | moment("ddd", timezone)}}</p>
+                            <p class="details-promo-day">{{event.end_date | moment("D", timezone)}}</p>
+                            <p class="details-promo-date">{{event.end_date | moment("MMM", timezone)}}</p>
                         </div>
                         <div class="col-sm-10">
                             <h5 class="event-date">{{ checkEventDates(event) }}</h5>
