@@ -78,7 +78,13 @@
                         {'label':'Holiday Events', 'value': 'holiday'}, 
                     ],
                     slickOptions: {
-                        arrows: true,
+                        // autoplay: false,
+                        // cssEase: 'linear',
+                        // dots: false,
+                        // slidesToShow: 4,
+                        // speed: 500,
+                        
+                        // arrows: true,
                         autoplay: true,
                         cssEase: 'linear',
                         dots: false,
@@ -86,8 +92,8 @@
                         infinite: true,
                         slidesToShow: 1,
                         speed: 500,
-                        prevArrow: '.prev',
-                        nextArrow: '.next'
+                        // prevArrow: '.prev',
+                        // nextArrow: '.next'
                     }
                 }
             },
