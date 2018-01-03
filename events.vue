@@ -197,12 +197,14 @@
             },
             methods: {
                 dateChange(){
+                    
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
                         
                         var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                        console.log(selectedDate)
                         var endDate = moment(value.end_date).format("YYYY-MM-DD");
-                        console.log(value.name, value.end_date)
+                        console.log(value.name, endDate)
                         // if(selectedDate >= endDate){
                         //     showEvents.push(value);
                         // }
