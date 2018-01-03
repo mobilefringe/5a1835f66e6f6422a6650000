@@ -222,6 +222,7 @@
             methods: {
                 dateChange(){
                     this.currentDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                    console.log(this.currentDate);
                 },
                 // selectCategory(){
                 //     if(this.selected.value == "events"){
