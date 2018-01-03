@@ -45,7 +45,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(VueBreadcrumbs);
     Vue.use(SocialSharing);
     Vue.use(Lightbox);
-    Vue.use(PDFJS);
+    // Vue.use(PDFJS);
 
     /* initialize router */
     const router = new VueRouter({
