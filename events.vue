@@ -80,7 +80,7 @@
                     selected: "All Events",
                     currentSelection: null,
 
-                    selectedDate: null,
+                    selectedDate: new Date(),
                     themeStyles: {
                         wrapper: {
                             border: '0', // Override the default border
