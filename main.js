@@ -36,7 +36,7 @@ require.config({
 });
 
 require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-select', 'lightbox', 'v-calendar', 'pdfjs-dist/build/pdf', 'vue-affix'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueSelect, Viewer, Lightbox, VCalendar, PDFJS, vueAffix) {
-    console.log(vueAffix);
+    console.log(PDFJS);
     
     Vue.use(Meta);
     Vue.use(VueRouter);
