@@ -6,10 +6,12 @@
             <div class="page-container">
                 <div class="row margin-30">
                     <div class="col-md-12">
-                        <i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>
-                        <i class="fa fa-quote-right fa-3x fa-pull-right" aria-hidden="true"></i>
-                        <h1 class="art-quote">{{ sectionOne.description }}</h1>
-                        <p class="art-quote-subtext">-{{ sectionOne.name }}</p>
+                        <div class="art-quote-container">
+                            <i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>
+                            <i class="fa fa-quote-right fa-3x fa-pull-right" aria-hidden="true"></i>
+                            <h1 class="art-quote">{{ sectionOne.description }}</h1>
+                            <p class="art-quote-subtext">-{{ sectionOne.name }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
