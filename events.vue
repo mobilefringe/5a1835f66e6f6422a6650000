@@ -21,7 +21,7 @@
                         select-color='#ff6666'
                         :theme-styles='themeStyles'
                         is-inline
-                        :input="dateChange()"
+                        :input="currentDate"
                     ></v-date-picker>
                     
                     <div class="category-select-container right">
