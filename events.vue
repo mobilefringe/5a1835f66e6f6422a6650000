@@ -138,7 +138,6 @@
                     var events = this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
                     var mergeEvents = _.concat(events, promotions);
-                    
                     var showEvents = [];
                     _.forEach(mergeEvents, function(value, key) {
                         var today = moment().format("YYYY-MM-DD");
@@ -146,7 +145,6 @@
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
-                        console.log(value.name, showOnWebDate)
                     });
                     var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
                     return sortedEvents
