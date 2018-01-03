@@ -88,7 +88,7 @@
                     weeksTransition: 'fade',
                     selectedDate: moment(),
                     
-                    selectedDate: null,
+                    selectedDate: moment(),
                     themeStyles: {
                         wrapper: {
                             border: '0', // Override the default border
