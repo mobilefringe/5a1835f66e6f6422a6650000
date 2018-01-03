@@ -236,7 +236,8 @@
             },
             methods: {
                 dateChange(){
-                    this.currentDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                    // this.currentDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                    this.currentDate = moment.tz(this.selectedDate, this.timezone).format()
                 },
                 // selectCategory(){
                 //     if(this.selected.value == "events"){
