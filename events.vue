@@ -14,16 +14,16 @@
             <div class="row">
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="col-sm-12 col-md-5 col-md-push-7">
-                    <!-- CALENDAR -->
-                    <v-date-picker
-                        mode='single'
-                        v-model='selectedDate'
-                        select-color='red'
-                        :theme-styles='themeStyles'
-                        is-inline
-                        :input="dateChange()"
-                    ></v-date-picker>
-                    
+                    <div class="">
+                        <v-date-picker
+                            mode='single'
+                            v-model='selectedDate'
+                            select-color='red'
+                            :theme-styles='themeStyles'
+                            is-inline
+                            :input="dateChange()"
+                        ></v-date-picker>
+                    </div>
                     <div class="category-select-container right">
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>    
                     </div>
