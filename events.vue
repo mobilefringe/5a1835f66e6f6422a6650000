@@ -183,7 +183,7 @@
                         }
                     });
                     var showEvents = [];
-                    _.forEach(this.$store.getters.processedPromos, function(value, key) {
+                    _.forEach(holiday_events, function(value, key) {
                         var today = moment().format("YYYY-MM-DD");
                         var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
                         if(today >= showOnWebDate){
