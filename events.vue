@@ -21,7 +21,7 @@
                         :title-position='titlePosition'
                         :title-transition='titleTransition'
                         :weeks-transition='weeksTransition'   
-                        :dayselect="daySelect" 
+                        :dayselect="selectedDate" 
                         :attributes='attributes'
                     ></v-calendar>
                     <div class="category-select-container right">
@@ -87,7 +87,7 @@
                     titlePosition: 'center',
                     titleTransition: 'fade',
                     weeksTransition: 'fade',
-                    
+                    selectedDate: moment(),
                         daySelect: moment(),
                     // },
                     categoryOptions: [
