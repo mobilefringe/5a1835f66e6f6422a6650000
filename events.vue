@@ -181,10 +181,8 @@
                     var mergeEvents = _.concat(events, promotions);
                     var showEvents = [];
                     _.forEach(mergeEvents, function(value, key) {
-                        // var today = moment().format("YYYY-MM-DD");
-                        var today = moment.tz(this.timezone).format()
-                        // var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
-                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format()
+                        var today = moment.tz(this.timezone).format();
+                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
@@ -195,8 +193,8 @@
                 propertyEvents() {
                     var showEvents = [];
                     _.forEach(this.$store.getters.processedEvents, function(value, key) {
-                        var today = moment().format("YYYY-MM-DD");
-                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
+                        var today = moment.tz(this.timezone).format();
+                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
@@ -207,8 +205,8 @@
                 storeEvents() {
                     var showEvents = [];
                     _.forEach(this.$store.getters.processedPromos, function(value, key) {
-                        var today = moment().format("YYYY-MM-DD");
-                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
+                        var today = moment.tz(this.timezone).format();
+                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
@@ -227,8 +225,8 @@
                     });
                     var showEvents = [];
                     _.forEach(holiday_events, function(value, key) {
-                        var today = moment().format("YYYY-MM-DD");
-                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
+                        var today = moment.tz(this.timezone).format();
+                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
@@ -239,21 +237,8 @@
             },
             methods: {
                 dateChange(){
-                    // this.currentDate = moment(this.selectedDate).format("YYYY-MM-DD");
-                    this.currentDate = moment.tz(this.selectedDate, this.timezone).format()
+                    this.currentDate = moment.tz(this.selectedDate, this.timezone).format();
                 },
-                // selectCategory(){
-                //     if(this.selected.value == "events"){
-                //         console.log(this.currentSelection)
-                //         this.currentSelection = this.propertyEvents;
-                //     } else if (this.selected.value == "promotions") {
-                //         this.currentSelection = this.storeEvents;
-                //     } else if (this.selected.value == "holiday"){
-                //         this.currentSelection = this.holidayEvents;
-                //     } else {
-                //         this.currentSelection = this.events
-                //     }
-                // },
                 checkEventDates(event){
                     var timezone = this.timezone
                     var start_date = moment(event.start_date).tz(timezone).format("MM-DD-YYYY")
@@ -266,7 +251,7 @@
                         return multi_day_event
                     }
                 }
-            },
+            }
         });
     });
 </script>
