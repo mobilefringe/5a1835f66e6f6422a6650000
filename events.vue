@@ -127,6 +127,7 @@
             watch: {
                 currentDate: function(){
                     var selectedDate = this.currentDate;
+                    console.log(selectedDate)
                     var eventsList = [];
                     if(this.selected.value == "events"){
                         eventsList = this.propertyEvents;
