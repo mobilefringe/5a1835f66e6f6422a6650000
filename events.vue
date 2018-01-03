@@ -74,7 +74,7 @@
                     currentSelection: null,
                     // props: {
                         isDoublePaned: false,
-                        daySelect: null,
+                        daySelect: moment(),
                         isExpanded: { type: Boolean, default: false },
                         navVisibility: { type: String, default: 'focus' },
                         titlePosition: { type: String, default: 'center' },
