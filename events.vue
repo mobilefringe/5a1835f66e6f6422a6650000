@@ -17,7 +17,7 @@
                     <!-- CALENDAR -->
                     <v-date-picker
                         mode='single'
-                        v-model='selectedDate'
+                        v-model='selectedDate()'
                         select-color='#ff6666'
                         :theme-styles='themeStyles'
                         is-inline
@@ -172,6 +172,9 @@
                 }
             },
             methods: {
+                selectedDate() {
+                    console.log(this)    
+                },
                 selectCategory(){
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
