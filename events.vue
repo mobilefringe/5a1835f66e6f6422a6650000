@@ -177,7 +177,7 @@
             },
             methods: {
                 dateChange(){
-                    console.log(this)    
+                    console.log(this.selectedDate)    
                 },
                 selectCategory(){
                     if(this.selected.value == "events"){
