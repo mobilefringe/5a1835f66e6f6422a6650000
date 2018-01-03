@@ -3,7 +3,7 @@
         <div class="margin-90 hidden-mobile"></div>
         <v-calendar></v-calendar>
         <div class="image-container">
-            <slick ref="slick" :options="slickOptions">
+            <slick class="holiday-slider" ref="slick" :options="slickOptions">
                 <div v-for="banner in eventsBanners" v-if="eventsBanners">
                     <router-link to="/events" class=""> <!-- :to="banner.url" -->
                         <img class="margin-60" :src="banner.image_url" alt="">
