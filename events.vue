@@ -124,7 +124,7 @@
             },
             watch: {
                 currentDate: function(){
-                    
+                    console.log(this.currentDate)
                 }
             },
             computed: {
@@ -208,7 +208,7 @@
                     
                     
                     this.currentDate = moment(this.selectedDate).format("YYYY-MM-DD");
-                    console.log(this.selectedDate)
+                    
                     // var showEvents = [];
                     // _.forEach(this.currentSelection, function(value, key) {
                     //     var endDate = moment(value.end_date).format("YYYY-MM-DD");
