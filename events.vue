@@ -121,8 +121,6 @@
             },
             mounted () {
                 this.currentSelection = this.events;
-                this.timezone
-                
             },
             watch: {
                 currentDate: function(){
@@ -167,7 +165,6 @@
                     return this.$store.getters.getProperty;
                 },
                 timezone() {
-                    console.log(this.$store.getters.getTimezone)
                     return this.$store.getters.getTimezone;
                 },
                 eventsBanners() {
