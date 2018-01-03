@@ -212,9 +212,6 @@
                     });
                     var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
                     return holidayEvents
-                },
-                sortEventsByDate() {
-                    console.log(this.selectedDate);
                 }
             },
             methods: {
@@ -236,6 +233,7 @@
                 },
                 selectCategory(){
                     if(this.selected.value == "events"){
+                        console.log(this.currentSelection)
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected.value == "promotions") {
                         this.currentSelection = this.storeEvents;
