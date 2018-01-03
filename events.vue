@@ -201,15 +201,12 @@
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
                         var endDate = moment(value.end_date).format("YYYY-MM-DD");
-                        // console.log(value.name, endDate)
-                        // console.log(selectedDate)
                         if(selectedDate <= endDate){
                             showEvents.push(value);
                         }
                     });
                     console.log(showEvents);
-                    currentSelection = showEvents
-                    this.currentSelection = this.showEvents
+
                 },
                 selectCategory(){
                     if(this.selected.value == "events"){
