@@ -85,8 +85,8 @@
                     isExpanded: false,
                     navVisibility: 'hidden',
                     titlePosition: 'center',
-                    titleTransition: 'slide-h',
-                    weeksTransition: 'slide-h',
+                    titleTransition: 'fade',
+                    weeksTransition: 'fade',
                     
                         daySelect: moment(),
                     // },
