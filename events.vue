@@ -82,12 +82,12 @@
                     currentSelection: null,
                     // props: {
                         isDoublePaned: false,
-                        daySelect: moment(),
-                        isExpanded: { type: Boolean, default: false },
+                        isExpanded: false,
                         navVisibility: 'hidden',
                         titlePosition: { type: String, default: 'center' },
                         titleTransition: { type: String, default: 'slide-h' },
                         weeksTransition: { type: String, default: 'slide-h' },
+                        daySelect: moment(),
                     // },
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
