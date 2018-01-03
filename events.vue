@@ -122,6 +122,19 @@
             mounted () {
                 this.currentSelection = this.events;
             },
+            watch: {
+                dateChange: function() {
+                    var showEvents = [];
+                    _.forEach(this.currentSelection, function(value, key) {
+                        var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                        var endDate = moment(value.end_date).format("YYYY-MM-DD");
+                        if(selectedDate >= endDate){
+                            showEvents.push(value);
+                        }
+                    });
+                    console.log(showEvents);
+                },    
+            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
@@ -196,17 +209,17 @@
                 }
             },
             methods: {
-                dateChange(){
-                    var showEvents = [];
-                    _.forEach(this.currentSelection, function(value, key) {
-                        var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
-                        var endDate = moment(value.end_date).format("YYYY-MM-DD");
-                        if(selectedDate >= endDate){
-                            showEvents.push(value);
-                        }
-                    });
-                    console.log(showEvents);
-                },
+                // dateChange(){
+                //     var showEvents = [];
+                //     _.forEach(this.currentSelection, function(value, key) {
+                //         var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                //         var endDate = moment(value.end_date).format("YYYY-MM-DD");
+                //         if(selectedDate >= endDate){
+                //             showEvents.push(value);
+                //         }
+                //     });
+                //     console.log(showEvents);
+                // },
                 selectCategory(){
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
