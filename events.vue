@@ -84,7 +84,7 @@
                         isDoublePaned: false,
                         isExpanded: false,
                         navVisibility: 'hidden',
-                        titlePosition: { type: String, default: 'center' },
+                        titlePosition: 'center',
                         titleTransition: { type: String, default: 'slide-h' },
                         weeksTransition: { type: String, default: 'slide-h' },
                         daySelect: moment(),
