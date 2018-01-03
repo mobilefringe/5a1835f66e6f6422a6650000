@@ -123,7 +123,10 @@
                 this.currentSelection = this.events;
             },
             watch: {
-                
+                currentDate: function(){
+                    
+                }
+            },
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
