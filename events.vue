@@ -84,7 +84,7 @@
                         isDoublePaned: false,
                         daySelect: moment(),
                         isExpanded: { type: Boolean, default: false },
-                        navVisibility: { type: String, default: 'focus' },
+                        navVisibility: 'hidden',
                         titlePosition: { type: String, default: 'center' },
                         titleTransition: { type: String, default: 'slide-h' },
                         weeksTransition: { type: String, default: 'slide-h' },
