@@ -1,7 +1,6 @@
 <template>
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
-        <v-calendar></v-calendar>
         <div class="image-container">
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in eventsBanners" v-if="eventsBanners">
