@@ -194,12 +194,24 @@
                     var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
                     return holidayEvents
                 },
-                sortEventsByDate() {
-                    
-                }
+                
             },
             methods: {
                 dateChange(){
+                    var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                    this.currentSelection = sortEventsByDate(selectedDate)
+                    // var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                    // var showEvents = [];
+                    // _.forEach(this.currentSelection, function(value, key) {
+                    //     var endDate = moment(value.end_date).format("YYYY-MM-DD");
+                    //     if(selectedDate <= endDate){
+                    //         showEvents.push(value);
+                    //     }
+                    // });
+                    // console.log(showEvents);
+
+                },
+                sortEventsByDate(date) {
                     var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
@@ -209,8 +221,7 @@
                         }
                     });
                     console.log(showEvents);
-
-                },
+                }
                 selectCategory(){
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
