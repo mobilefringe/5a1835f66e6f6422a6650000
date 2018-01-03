@@ -19,6 +19,7 @@
                         mode='single'
                         v-model='selectedDate'
                         select-color='#FFF'
+                        hover-color="#FFF"
                         :theme-styles='themeStyles'
                         is-inline
                         :input="dateChange()"
