@@ -75,7 +75,7 @@
                     selected: "All Events",
                     currentSelection: null,
                     // props: {
-                        isDoublePaned: { false },
+                        isDoublePaned: false,
                         isExpanded: { type: Boolean, default: false },
                         navVisibility: { type: String, default: 'focus' },
                         titlePosition: { type: String, default: 'center' },
