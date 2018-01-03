@@ -140,8 +140,8 @@
                     
                     var showEvents = [];
                     _.forEach(eventsList, function(value, key) {
-                        var startDate = moment(value.start_date);
-                        var endDate = moment(value.end_date);
+                        var startDate = moment.tz(value.start_date, this.timezone).format();
+                        var endDate = moment.tz(value.end_date, this.timezone).format();
                         console.log(startDate, endDate)
                         if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
                             showEvents.push(value);
