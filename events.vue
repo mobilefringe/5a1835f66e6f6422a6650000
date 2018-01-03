@@ -139,6 +139,7 @@
                     var promotions = this.$store.getters.processedPromos;
                     var merge = _.concat(events, promotions);
                     var sorted = _.orderBy(merge, function(o) { return o.end_date })
+                    console.log(sorted)
                     return sorted
                 },
                 propertyEvents() {
