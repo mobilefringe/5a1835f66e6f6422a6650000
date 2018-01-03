@@ -194,7 +194,7 @@
                     var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
                     return holidayEvents
                 },
-                sortEventsByDate(){
+                sortEventsByDate() {
                     console.log(this.selectedDate);
                 }
             },
