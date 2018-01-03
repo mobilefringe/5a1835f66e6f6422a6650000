@@ -12,7 +12,6 @@
                             <h1 class="art-quote">{{ sectionOne.description }}</h1>
                             <p class="art-quote-subtext">-{{ sectionOne.name }}</p>
                         </div>
-                        
                     </div>
                 </div>
             </div>
