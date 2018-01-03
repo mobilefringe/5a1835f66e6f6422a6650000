@@ -139,8 +139,8 @@
                     
                     var showEvents = [];
                     _.forEach(eventsList, function(value, key) {
-                        var startDate = moment(value.start_date).format("YYYY-MM-DD").timezone();
-                        var endDate = moment(value.end_date).format("YYYY-MM-DD").timezone();
+                        var startDate = moment(value.start_date).format("YYYY-MM-DD");
+                        var endDate = moment(value.end_date).format("YYYY-MM-DD");
                         console.log(startDate, endDate)
                         if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
                             showEvents.push(value);
@@ -179,8 +179,8 @@
                     var mergeEvents = _.concat(events, promotions);
                     var showEvents = [];
                     _.forEach(mergeEvents, function(value, key) {
-                        var today = moment().format("YYYY-MM-DD").timezone();
-                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD").timezone();
+                        var today = moment().format("YYYY-MM-DD");
+                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
