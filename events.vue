@@ -127,8 +127,8 @@
                     var selectedDate = this.currentDate;
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
-                        var startDate = moment(value.start_date).format("YYYY-MM-DD");
-                        var endDate = moment(value.end_date).format("YYYY-MM-DD");
+                        var startDate = moment(value.start_date).format("MM/DD/YYYY");
+                        var endDate = moment(value.end_date).format("MM/DD/YYYY");
                         if(selectedDate <= endDate && selectedDate >= startDate){
                             showEvents.push(value);
                         }
@@ -221,7 +221,7 @@
             },
             methods: {
                 dateChange(){
-                    this.currentDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                    this.currentDate = moment(this.selectedDate).format("MM/DD/YYYY");
                     console.log(this.currentDate);
                 },
                 // selectCategory(){
