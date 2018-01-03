@@ -126,7 +126,7 @@
             },
             watch: {
                 currentDate: function(){
-                    var selectedDate = this.currentDate;
+                    var selectedDate = moment.tz(this.selectedDate, this.timezone).format();
                     console.log(selectedDate)
                     var eventsList = [];
                     if(this.selected.value == "events"){
