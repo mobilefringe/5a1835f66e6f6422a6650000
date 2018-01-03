@@ -80,7 +80,7 @@
                     },
                     selected: "All Events",
                     currentSelection: null,
-
+                    currentDate: null,
                     selectedDate: new Date(),
                     themeStyles: {
                         wrapper: {
@@ -121,8 +121,9 @@
             },
             mounted () {
                 this.currentSelection = this.events;
-                this.sortEventsByDate
             },
+            watch: {
+                
             computed: {
                 property(){
                     return this.$store.getters.getProperty;
