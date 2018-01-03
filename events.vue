@@ -137,6 +137,18 @@
                     console.log(showEvents);
                     this.currentSelection = showEvents
                 },
+                selected: function() {
+                    if(this.selected.value == "events"){
+                        console.log(this.currentSelection)
+                        this.currentSelection = this.propertyEvents;
+                    } else if (this.selected.value == "promotions") {
+                        this.currentSelection = this.storeEvents;
+                    } else if (this.selected.value == "holiday"){
+                        this.currentSelection = this.holidayEvents;
+                    } else {
+                        this.currentSelection = this.events
+                    }
+                },
                 currentSelection: function(){
                     console.log(this.currentSelection)
                 }
@@ -231,18 +243,18 @@
                     // console.log(showEvents);
 
                 },
-                selectCategory(){
-                    if(this.selected.value == "events"){
-                        console.log(this.currentSelection)
-                        this.currentSelection = this.propertyEvents;
-                    } else if (this.selected.value == "promotions") {
-                        this.currentSelection = this.storeEvents;
-                    } else if (this.selected.value == "holiday"){
-                        this.currentSelection = this.holidayEvents;
-                    } else {
-                        this.currentSelection = this.events
-                    }
-                },
+                // selectCategory(){
+                //     if(this.selected.value == "events"){
+                //         console.log(this.currentSelection)
+                //         this.currentSelection = this.propertyEvents;
+                //     } else if (this.selected.value == "promotions") {
+                //         this.currentSelection = this.storeEvents;
+                //     } else if (this.selected.value == "holiday"){
+                //         this.currentSelection = this.holidayEvents;
+                //     } else {
+                //         this.currentSelection = this.events
+                //     }
+                // },
                 checkEventDates(event){
                     var timezone = this.timezone
                     var start_date = moment(event.start_date).tz(timezone).format("MM-DD-YYYY")
