@@ -29,13 +29,14 @@ require.config({
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min',
-        'vue-affix': 'https://cdn.jsdelivr.net/npm/vue-affix@0.2.4/dist/vue-affix',
+        
         'v-calendar': 'https://unpkg.com/v-calendar@0.5.1/lib/v-calendar.min',
-        'pdfjs-dist/build/pdf': 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.246/build/pdf.min'
+        'pdfjs-dist/build/pdf': 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.246/build/pdf.min',
+        'vue-affix': 'https://cdn.jsdelivr.net/npm/vue-affix@0.2.4/dist/vue-affix',
     }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-select', 'lightbox', 'vue-affix', 'v-calendar', 'pdfjs-dist/build/pdf'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueSelect, Viewer, Lightbox, VueAffix, VCalendar, pdf) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-select', 'lightbox', 'v-calendar', 'pdfjs-dist/build/pdf', 'vue-affix'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueSelect, Viewer, Lightbox, VCalendar, pdf, VueAffix) {
     console.log(VueAffix);
     
     Vue.use(Meta);
