@@ -80,13 +80,14 @@
                     },
                     selected: "All Events",
                     currentSelection: null,
-                    // props: {
-                        isDoublePaned: false,
-                        isExpanded: false,
-                        navVisibility: 'hidden',
-                        titlePosition: 'center',
-                        titleTransition: 'slide-h',
-                        weeksTransition: 'slide-h' ,
+
+                    isDoublePaned: false,
+                    isExpanded: false,
+                    navVisibility: 'hidden',
+                    titlePosition: 'center',
+                    titleTransition: 'slide-h',
+                    weeksTransition: 'slide-h',
+                    
                         daySelect: moment(),
                     // },
                     categoryOptions: [
