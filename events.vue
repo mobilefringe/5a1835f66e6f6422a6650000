@@ -125,7 +125,7 @@
             watch: {
                 currentDate: function(){
                     console.log(this.currentDate)
-                    console.log(this.currentSelection)
+                    // console.log(this.currentSelection)
                     var selectedDate = this.currentDate;
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
@@ -136,7 +136,11 @@
                     });
                     console.log(showEvents);
                     this.currentSelection = showEvents
+                },
+                currentSelection: function(){
+                    console.log(this.currentSelection)
                 }
+                
             },
             computed: {
                 property(){
