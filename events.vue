@@ -163,17 +163,17 @@
                 selectedDate() {
                     console.log("Hello")    
                 },
-                attributes() {
-                    return [
-                        // Today attribute
-                        {
-                            contentStyle: {
-                                color: 'red',
-                            },
-                            dates: new Date(),
-                        },
-                    ]
-                }
+                // attributes() {
+                //     return [
+                //         // Today attribute
+                //         {
+                //             contentStyle: {
+                //                 color: 'red',
+                //             },
+                //             dates: new Date(),
+                //         },
+                //     ]
+                // }
             },
             methods: {
                 dateChange(){
