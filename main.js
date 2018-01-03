@@ -30,7 +30,7 @@ require.config({
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min',
         'v-calendar': 'https://unpkg.com/v-calendar@0.5.1/lib/v-calendar.min',
-        //'pdfjs-dist/build/pdf': 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.246/pdf.min',
+        'pdfjs-dist/build/pdf': 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.246/pdf.min',
         'vue-affix': 'https://cdn.jsdelivr.net/npm/vue-affix@0.2.4/dist/vue-affix.min',
     }
 });
