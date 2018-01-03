@@ -21,9 +21,10 @@
                         :title-position='titlePosition'
                         :title-transition='titleTransition'
                         :weeks-transition='weeksTransition'   
-                        <!--:dayselect="selectedDate" -->
+                        
                         :attributes='attributes'
                     ></v-calendar>
+                    <!--:dayselect="selectedDate" -->
                     <div class="category-select-container right">
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                     </div>
