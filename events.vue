@@ -17,7 +17,7 @@
                     <!-- CALENDAR -->
                     <v-date-picker
                         mode='single'
-                        v-model='selectedDate()'
+                        v-model='selectedDate'
                         select-color='#ff6666'
                         :theme-styles='themeStyles'
                         is-inline
@@ -159,6 +159,9 @@
                     });
                     return holiday_events;
                 },
+                selectedDate() {
+                    console.log("Hello")    
+                },
                 attributes() {
                     return [
                         // Today attribute
@@ -172,9 +175,6 @@
                 }
             },
             methods: {
-                selectedDate() {
-                    console.log(this)    
-                },
                 selectCategory(){
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
