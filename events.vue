@@ -14,7 +14,7 @@
             <div class="row">
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="col-sm-12 col-md-5 col-md-push-7">
-                    <div class="">
+                    <div class="event-calendar-container">
                         <v-date-picker
                             mode='single'
                             v-model='selectedDate'
