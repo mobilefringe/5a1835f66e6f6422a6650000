@@ -31,7 +31,7 @@ require.config({
         'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min',
         'v-calendar': 'https://unpkg.com/v-calendar@0.5.1/lib/v-calendar.min',
         //'pdfjs-dist/build/pdf': 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.246/pdf.min',
-        'vue-affix': 'https://github.com/eddiemf/vue-affix/blob/master/dist/vue-affix.min',
+        'vue-affix': 'https://cdn.jsdelivr.net/npm/vue-affix@0.2.4/dist/vue-affix.min',
     }
 });
 
