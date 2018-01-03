@@ -64,7 +64,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "v-calendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
         Vue.use(Meta);
-        Vue.use(VCalendar.default)
+        Vue.use(VCalendar.default);
 
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
@@ -116,7 +116,6 @@
                             border: 'none',
                         },
                     },
-                    
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
