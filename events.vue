@@ -107,7 +107,7 @@
                             borderLeft: '1px solid #404c59',
                         },
                         weeks: {
-                            border: '1px solid #dadada',
+                            border: 'none',
                         },
                     },
                     
