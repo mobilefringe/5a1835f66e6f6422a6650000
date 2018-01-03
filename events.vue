@@ -135,7 +135,7 @@
                         }
                     });
                     console.log(showEvents);
-                    this.currentSelection = this.showEvents
+                    this.currentSelection = showEvents
                 }
             },
             computed: {
