@@ -15,21 +15,21 @@
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <!-- CALENDAR -->
-                    <v-calendar 
-                        :is-double-paned="isDoublePaned" 
-                        :nav-visibility='navVisibility'
-                        :title-position='titlePosition'
-                        :title-transition='titleTransition'
-                        :weeks-transition='weeksTransition'   
+                    <!--<v-calendar -->
+                    <!--    :is-double-paned="isDoublePaned" -->
+                    <!--    :nav-visibility='navVisibility'-->
+                    <!--    :title-position='titlePosition'-->
+                    <!--    :title-transition='titleTransition'-->
+                    <!--    :weeks-transition='weeksTransition'   -->
                         
-                        :attributes='attributes'
-                    ></v-calendar>
+                    <!--    :attributes='attributes'-->
+                    <!--></v-calendar>-->
                     <v-date-picker
                         mode='single'
                         v-model='selectedDate'
                         select-color='#ff6666'
                         :theme-styles='themeStyles'
-                        is-double-paned
+                        
                         is-inline
                     ></v-date-picker>
                     <div class="category-select-container right">
