@@ -1,5 +1,5 @@
 <template>
-    <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div class=""> <!-- without an outer container div this component template will not render -->
         <div v-if="sectionOne">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
             <div class="margin-90 hidden-mobile"></div>
