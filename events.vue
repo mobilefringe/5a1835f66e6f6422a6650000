@@ -150,7 +150,15 @@
                     return sortedEvents
                 },
                 propertyEvents() {
-                    var events = _.orderBy(this.$store.getters.processedEvents, function(o) { return o.end_date }); 
+                    var showEvents = [];
+                    _.forEach(this.$store.getters.processedEvents, function(value, key) {
+                        var today = moment().format("YYYY-MM-DD");
+                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
+                        if(today >= showOnWebDate){
+                            showEvents.push(value);
+                        }
+                    });
+                    var events = _.orderBy(showEvents, function(o) { return o.end_date }); 
                     return events
                 },
                 storeEvents() {
