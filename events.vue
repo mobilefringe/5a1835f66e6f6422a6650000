@@ -19,7 +19,6 @@
                         mode='single'
                         v-model='selectedDate'
                         select-color='#FFF'
-                        hover-color="#FFF"
                         :theme-styles='themeStyles'
                         is-inline
                         :input="dateChange()"
@@ -92,6 +91,8 @@
                             backgroundColor: '#FFF',
                             borderColor: '#404c59',
                             borderWidth: '1px 1px 0 1px',
+                            paddingTop: '5px',
+                            paddingBottom: '0'
                         },
                         headerVerticalDivider: {
                             borderLeft: '1px solid #404c59',
@@ -102,7 +103,7 @@
                             borderColor: '#384763',
                             borderWidth: '0 1px',
                             paddingTop: '5px',
-                            paddingBottom: '10px',
+                            paddingBottom: '5px',
                         },
                         weekdaysVerticalDivider: {
                             borderLeft: '1px solid #404c59',
