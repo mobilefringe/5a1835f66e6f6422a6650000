@@ -141,26 +141,16 @@
                     return holiday_events;
                 },
                 attributes() {
-                    if (!this.patterns || Object.keys(this.patterns).length === 0) return [];
                     return [
+                        // Today attribute
                         {
-                            highlight: {
-                                backgroundColor: '#ff8080', // Red
-                                borderColor: '#ff6666',
-                                borderWidth: '2px',
-                                borderStyle: 'solid',
-                            },
                             contentStyle: {
-                                color: 'white',
+                                fontWeight: '700',
+                                fontSize: '.9rem',
                             },
-                            dates: [
-                                {
-                                start: new Date(thisMonthYear, thisMonth, 1),
-                                ...this.patterns,
-                                },
-                            ],
+                            dates: new Date(),
                         },
-                    ];
+                    ]
                 }
             },
             methods: {
