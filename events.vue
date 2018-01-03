@@ -135,6 +135,7 @@
                         }
                     });
                     console.log(showEvents);
+                    this.currentSelection = showEvents
                 }
             },
             computed: {
