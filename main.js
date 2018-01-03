@@ -61,7 +61,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('v-select', VueSelect.VueSelect);
-    // Vue.component('affix', VueAffix)
+    Vue.component('affix', VueAffix.default)
 
     /* bootstrap app */
     const vm = new Vue({
