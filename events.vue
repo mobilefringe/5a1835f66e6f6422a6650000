@@ -103,7 +103,7 @@
                             borderColor: '#384763',
                             borderWidth: '0 1px',
                             paddingTop: '5px',
-                            paddingBottom: '5px',
+                            paddingBottom: '0',
                         },
                         weekdaysVerticalDivider: {
                             borderLeft: '1px solid #404c59',
