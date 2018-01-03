@@ -46,7 +46,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(SocialSharing);
     Vue.use(Lightbox);
     Vue.use(PDFJS);
-
+    Vue.use(vueAffix.default)
     /* initialize router */
     const router = new VueRouter({
         mode: 'history',
@@ -62,7 +62,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('v-select', VueSelect.VueSelect);
-    Vue.component('affix', vueAffix.default)
+    // Vue.component('affix', vueAffix.default)
 
     /* bootstrap app */
     const vm = new Vue({
