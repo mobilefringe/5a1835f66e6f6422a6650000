@@ -85,8 +85,8 @@
                         isExpanded: false,
                         navVisibility: 'hidden',
                         titlePosition: 'center',
-                        titleTransition: { type: String, default: 'slide-h' },
-                        weeksTransition: { type: String, default: 'slide-h' },
+                        titleTransition: 'slide-h',
+                        weeksTransition: 'slide-h' ,
                         daySelect: moment(),
                     // },
                     categoryOptions: [
