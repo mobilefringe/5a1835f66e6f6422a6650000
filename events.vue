@@ -127,8 +127,8 @@
                     var selectedDate = this.currentDate;
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
-                        var startDate = moment(value.start_date).format("MM/DD/YYYY");
-                        var endDate = moment(value.end_date).format("MM/DD/YYYY");
+                        var startDate = moment(value.start_date).format("YYYY-MM-DD");
+                        var endDate = moment(value.end_date).format("YYYY-MM-DD");
                         if(selectedDate <= endDate && selectedDate >= startDate){
                             showEvents.push(value);
                         }
@@ -165,8 +165,8 @@
                     var mergeEvents = _.concat(events, promotions);
                     var showEvents = [];
                     _.forEach(mergeEvents, function(value, key) {
-                        var today = moment().format("MM/DD/YYYY");
-                        var showOnWebDate = moment(value.show_on_web_date).format("MM/DD/YYYY");
+                        var today = moment().format("YYYY-MM-DD");
+                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
@@ -177,8 +177,8 @@
                 propertyEvents() {
                     var showEvents = [];
                     _.forEach(this.$store.getters.processedEvents, function(value, key) {
-                        var today = moment().format("MM/DD/YYYY");
-                        var showOnWebDate = moment(value.show_on_web_date).format("MM/DD/YYYY");
+                        var today = moment().format("YYYY-MM-DD");
+                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
@@ -189,8 +189,8 @@
                 storeEvents() {
                     var showEvents = [];
                     _.forEach(this.$store.getters.processedPromos, function(value, key) {
-                        var today = moment().format("MM/DD/YYYY");
-                        var showOnWebDate = moment(value.show_on_web_date).format("MM/DD/YYYY");
+                        var today = moment().format("YYYY-MM-DD");
+                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
@@ -209,8 +209,8 @@
                     });
                     var showEvents = [];
                     _.forEach(holiday_events, function(value, key) {
-                        var today = moment().format("MM/DD/YYYY");
-                        var showOnWebDate = moment(value.show_on_web_date).format("MM/DD/YYYY");
+                        var today = moment().format("YYYY-MM-DD");
+                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
@@ -221,7 +221,7 @@
             },
             methods: {
                 dateChange(){
-                    this.currentDate = moment(this.selectedDate).format("MM/DD/YYYY");
+                    this.currentDate = moment(this.selectedDate).format("YYYY-MM-DD");
                     console.log(this.currentDate);
                 },
                 // selectCategory(){
