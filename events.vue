@@ -199,11 +199,11 @@
                 dateChange(){
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
-                        var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
-                        var endDate = moment(value.end_date).format("YYYY-MM-DD");
-                        if(selectedDate >= endDate){
+                        // var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                        // var endDate = moment(value.end_date).format("YYYY-MM-DD");
+                        // if(selectedDate >= endDate){
                             showEvents.push(value);
-                        }
+                        // }
                     });
                     console.log(showEvents);
                 },
