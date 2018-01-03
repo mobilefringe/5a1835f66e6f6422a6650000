@@ -16,6 +16,7 @@
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <div class="event-calendar-container">
                         <v-date-picker
+                            :nav-visibility='navVisibility'
                             mode='single'
                             v-model='selectedDate'
                             select-color='red'
@@ -82,6 +83,7 @@
                     currentSelection: null,
                     currentDate: null,
                     selectedDate: new Date(),
+                    navVisibility: 'hidden',
                     themeStyles: {
                         wrapper: {
                             border: '0', // Override the default border
