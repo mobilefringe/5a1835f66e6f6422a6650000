@@ -80,14 +80,6 @@
                     selected: "All Events",
                     currentSelection: null,
 
-                    isDoublePaned: false,
-                    isExpanded: false,
-                    navVisibility: 'hidden',
-                    titlePosition: 'center',
-                    titleTransition: 'fade',
-                    weeksTransition: 'fade',
-                    selectedDate: moment(),
-                    
                     selectedDate: moment(),
                     themeStyles: {
                         wrapper: {
@@ -117,7 +109,7 @@
                             border: '1px solid #dadada',
                         },
                     },
-                    // },
+                    
                     categoryOptions: [
                         {'label':'All Events', 'value': 'all_events'},
                         {'label':'NorthPark Events', 'value': 'events'},
