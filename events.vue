@@ -61,6 +61,15 @@
             data: function() {
                 return {
                     breadcrumb: null,
+                    slickOptions: {
+                        autoplay: true,
+                        cssEase: 'linear',
+                        dots: false,
+                        fade: true,
+                        infinite: true,
+                        slidesToShow: 1,
+                        speed: 1000,
+                    },
                     selected: "All Events",
                     currentSelection: null,
                     // props: {
@@ -77,24 +86,6 @@
                         {'label':'In-Store Events', 'value': 'promotions'},
                         {'label':'Holiday Events', 'value': 'holiday'}, 
                     ],
-                    slickOptions: {
-                        // autoplay: false,
-                        // cssEase: 'linear',
-                        // dots: false,
-                        // slidesToShow: 4,
-                        // speed: 500,
-                        
-                        // arrows: true,
-                        autoplay: true,
-                        cssEase: 'linear',
-                        dots: false,
-                        fade: true,
-                        infinite: true,
-                        slidesToShow: 1,
-                        speed: 1000,
-                        // prevArrow: '.prev',
-                        // nextArrow: '.next'
-                    }
                 }
             },
             mounted () {
