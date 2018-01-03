@@ -200,6 +200,7 @@
                     console.log(this.selectedDate)   
                     var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
                     console.log(selectedDate)
+                    console.log(this.currentSelection)
                     // _.forEach(holiday_events, function(value, key) {
                     //     var today = moment().format("YYYY-MM-DD");
                     //     var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
