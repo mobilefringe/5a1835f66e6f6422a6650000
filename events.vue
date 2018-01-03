@@ -15,7 +15,9 @@
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <!-- CALENDAR -->
-                    <v-calendar :is-expanded='isExpanded'></v-calendar>
+                    <v-calendar is-double-paned></v-calendar>
+                    <v-date-picker mode='single' v-model='selectedValue'></v-date-picker>
+                    <!--<v-calendar :is-expanded='isExpanded'></v-calendar>-->
                     <div class="category-select-container right">
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                     </div>
