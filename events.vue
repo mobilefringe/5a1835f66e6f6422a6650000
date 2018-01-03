@@ -119,7 +119,7 @@
                     var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.end_date });
                     return promotions
                 },
-                holidayEvents(){
+                holidayEvents() {
                    var holiday_events = [];
                     _.forEach(this.$store.getters.processedEvents, function(value, key) {
                         var tag_string = _.toLower(_.join(value.tag, ''));
@@ -151,7 +151,7 @@
                                 ],
                             },
                         ];
-                    },
+                    }
                 }
             },
             methods: {
