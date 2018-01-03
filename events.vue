@@ -197,7 +197,8 @@
             },
             methods: {
                 dateChange(){
-                    
+                    var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                    console.log(selectedDate)
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
                         
