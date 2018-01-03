@@ -15,7 +15,7 @@
                 <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <!-- CALENDAR -->
-                    <v-calendar is-double-paned></v-calendar>
+                    <v-calendar :is-double-paned="isDoublePaned"></v-calendar>
                     <v-date-picker mode='single' v-model='selectedValue'></v-date-picker>
                     <!--<v-calendar :is-expanded='isExpanded'></v-calendar>-->
                     <div class="category-select-container right">
@@ -75,7 +75,7 @@
                     selected: "All Events",
                     currentSelection: null,
                     // props: {
-                        isDoublePaned: { type: Boolean, default: true },
+                        isDoublePaned: { false },
                         isExpanded: { type: Boolean, default: false },
                         navVisibility: { type: String, default: 'focus' },
                         titlePosition: { type: String, default: 'center' },
