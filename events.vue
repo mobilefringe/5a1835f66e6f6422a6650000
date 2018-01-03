@@ -24,7 +24,14 @@
                         
                         :attributes='attributes'
                     ></v-calendar>
-                    <!--:dayselect="selectedDate" -->
+                    <v-date-picker
+                        mode='single'
+                        v-model='selectedDate'
+                        select-color='#ff6666'
+                        :theme-styles='themeStyles'
+                        is-double-paned
+                        is-inline
+                    ></v-date-picker>
                     <div class="category-select-container right">
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                     </div>
