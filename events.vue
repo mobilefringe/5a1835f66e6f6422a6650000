@@ -87,8 +87,8 @@
                             border: '0', // Override the default border
                         },
                         header: {
-                            color: '#fafafa',
-                            backgroundColor: '#4a5867',
+                            color: '#000',
+                            backgroundColor: '#FFF',
                             borderColor: '#404c59',
                             borderWidth: '1px 1px 0 1px',
                         },
@@ -96,8 +96,8 @@
                             borderLeft: '1px solid #404c59',
                         },
                         weekdays: {
-                            color: '#98aeb3',
-                            backgroundColor: '#4a5867',
+                            color: '#000',
+                            backgroundColor: '#FFF',
                             borderColor: '#384763',
                             borderWidth: '0 1px',
                             paddingTop: '5px',
