@@ -124,8 +124,6 @@
             },
             watch: {
                 currentDate: function(){
-                    console.log(this.currentDate)
-                    // console.log(this.currentSelection)
                     var selectedDate = this.currentDate;
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
@@ -134,12 +132,10 @@
                             showEvents.push(value);
                         }
                     });
-                    console.log(showEvents);
                     this.currentSelection = showEvents
                 },
                 selected: function() {
                     if(this.selected.value == "events"){
-                        console.log(this.currentSelection)
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected.value == "promotions") {
                         this.currentSelection = this.storeEvents;
@@ -148,11 +144,7 @@
                     } else {
                         this.currentSelection = this.events
                     }
-                },
-                currentSelection: function(){
-                    console.log(this.currentSelection)
                 }
-                
             },
             computed: {
                 property(){
