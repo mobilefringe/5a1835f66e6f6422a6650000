@@ -147,6 +147,7 @@
                             contentStyle: {
                                 fontWeight: '700',
                                 fontSize: '.9rem',
+                                color: 'red',
                             },
                             dates: new Date(),
                         },
