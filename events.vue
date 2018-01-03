@@ -200,13 +200,13 @@
                     console.log(this.selectedDate)   
                     var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
                     console.log(selectedDate)
-                    _.forEach(holiday_events, function(value, key) {
-                        var today = moment().format("YYYY-MM-DD");
-                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
-                        if(today >= showOnWebDate){
-                            showEvents.push(value);
-                        }
-                    });
+                    // _.forEach(holiday_events, function(value, key) {
+                    //     var today = moment().format("YYYY-MM-DD");
+                    //     var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
+                    //     if(today >= showOnWebDate){
+                    //         showEvents.push(value);
+                    //     }
+                    // });
                 },
                 selectCategory(){
                     if(this.selected.value == "events"){
