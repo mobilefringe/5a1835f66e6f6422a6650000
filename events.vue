@@ -124,7 +124,7 @@
             },
             watch: {
                 currentDate: function(){
-                    
+                    console.log(this.selectedDate)    
                 }
             },
             computed: {
@@ -197,9 +197,6 @@
                     });
                     var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
                     return holidayEvents
-                },
-                sortEventsByDate() {
-                    console.log(this.selectedDate);
                 }
             },
             methods: {
