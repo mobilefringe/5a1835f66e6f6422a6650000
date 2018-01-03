@@ -195,7 +195,7 @@
                     return holidayEvents
                 },
                 sortEventsByDate(){
-                    
+                    console.log(this.selectedDate);
                 }
             },
             methods: {
