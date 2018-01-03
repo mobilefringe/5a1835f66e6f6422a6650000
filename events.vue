@@ -121,6 +121,7 @@
             },
             mounted () {
                 this.currentSelection = this.events;
+                this.sortEventsByDate
             },
             computed: {
                 property(){
@@ -190,14 +191,16 @@
                             showEvents.push(value);
                         }
                     });
-                    
                     var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
                     return holidayEvents
                 },
-                
+                sortEventsByDate(){
+                    
+                }
             },
             methods: {
                 dateChange(){
+                    
                     var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
                     this.currentSelection = sortEventsByDate(selectedDate)
                     // var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
