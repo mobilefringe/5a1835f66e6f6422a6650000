@@ -212,7 +212,7 @@
 
                 },
                 sortEventsByDate(date) {
-                    var selectedDate = moment(this.selectedDate).format("YYYY-MM-DD");
+                    var selectedDate = date;
                     var showEvents = [];
                     _.forEach(this.currentSelection, function(value, key) {
                         var endDate = moment(value.end_date).format("YYYY-MM-DD");
