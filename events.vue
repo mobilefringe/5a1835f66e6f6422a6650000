@@ -222,7 +222,7 @@
                     });
                     return showEvents
                     console.log(showEvents);
-                }
+                },
                 selectCategory(){
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
