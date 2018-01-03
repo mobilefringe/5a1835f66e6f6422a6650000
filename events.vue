@@ -162,7 +162,15 @@
                     return events
                 },
                 storeEvents() {
-                    var promotions = _.orderBy(this.$store.getters.processedPromos, function(o) { return o.end_date });
+                    var showEvents = [];
+                    _.forEach(this.$store.getters.processedPromos, function(value, key) {
+                        var today = moment().format("YYYY-MM-DD");
+                        var showOnWebDate = moment(value.show_on_web_date).format("YYYY-MM-DD");
+                        if(today >= showOnWebDate){
+                            showEvents.push(value);
+                        }
+                    });
+                    var promotions = _.orderBy(showEvents, function(o) { return o.end_date });
                     return promotions
                 },
                 holidayEvents() {
