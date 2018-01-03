@@ -21,6 +21,7 @@
                         select-color='#ff6666'
                         :theme-styles='themeStyles'
                         is-inline
+                        :input="dateChange()"
                     ></v-date-picker>
                     
                     <div class="category-select-container right">
@@ -175,6 +176,9 @@
                 }
             },
             methods: {
+                dateChange(){
+                    console.log(this.value)    
+                },
                 selectCategory(){
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
