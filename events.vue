@@ -25,7 +25,7 @@
                     ></v-date-picker>
                     
                     <div class="category-select-container right">
-                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
+                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>    
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-7 col-md-pull-5" v-if="currentSelection">
