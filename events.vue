@@ -126,15 +126,15 @@
                 currentDate: function(){
                     console.log(this.currentDate)
                     console.log(this.currentSelection)
-                    
-                    // var showEvents = [];
-                    // _.forEach(this.currentSelection, function(value, key) {
-                    //     var endDate = moment(value.end_date).format("YYYY-MM-DD");
-                    //     if(selectedDate <= endDate){
-                    //         showEvents.push(value);
-                    //     }
-                    // });
-                    // console.log(showEvents);
+                    var selectedDate = this.currentDate;
+                    var showEvents = [];
+                    _.forEach(this.currentSelection, function(value, key) {
+                        var endDate = moment(value.end_date).format("YYYY-MM-DD");
+                        if(selectedDate <= endDate){
+                            showEvents.push(value);
+                        }
+                    });
+                    console.log(showEvents);
                 }
             },
             computed: {
