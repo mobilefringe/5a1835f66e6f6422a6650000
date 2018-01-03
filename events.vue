@@ -132,26 +132,25 @@
                 },
                 attributes() {
                     if (!this.patterns || Object.keys(this.patterns).length === 0) return [];
-                        return [
-                            {
-                                highlight: {
-                                    backgroundColor: '#ff8080', // Red
-                                    borderColor: '#ff6666',
-                                    borderWidth: '2px',
-                                    borderStyle: 'solid',
-                                },
-                                contentStyle: {
-                                    color: 'white',
-                                },
-                                dates: [
-                                    {
-                                    start: new Date(thisMonthYear, thisMonth, 1),
-                                    ...this.patterns,
-                                    },
-                                ],
+                    return [
+                        {
+                            highlight: {
+                                backgroundColor: '#ff8080', // Red
+                                borderColor: '#ff6666',
+                                borderWidth: '2px',
+                                borderStyle: 'solid',
                             },
-                        ];
-                    }
+                            contentStyle: {
+                                color: 'white',
+                            },
+                            dates: [
+                                {
+                                start: new Date(thisMonthYear, thisMonth, 1),
+                                ...this.patterns,
+                                },
+                            ],
+                        },
+                    ];
                 }
             },
             methods: {
