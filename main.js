@@ -26,18 +26,16 @@ require.config({
         'slick': 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min',
         'vue-slick': 'https://mmvue.codecloudapp.com/slick.vue?noext',
         'vue-paginate': 'https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.5.1/vue-paginate',
-        // 'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.3/dist/vue-social-sharing.min',
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min',
         'v-calendar': 'https://unpkg.com/v-calendar@0.5.1/lib/v-calendar.min',
         'vue-affix': 'https://cdn.jsdelivr.net/npm/vue-affix@0.2.4/dist/vue-affix.min',
-        'vue-pdf': 'https://mmvue.codecloudapp.com/pdf.vue?noext',
     }
 });
 
 require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!search-component', 'vue-simple-spinner', 'vue-breadcrumbs', 'vue-paginate', 'vue-social-sharing', 'vue-select', 'lightbox', 'v-calendar', 'vue-affix'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner, VueBreadcrumbs, VuePaginate, SocialSharing, VueSelect, Viewer, Lightbox, VCalendar, vueAffix) {
-
+    console.log(vueAffix)
     Vue.use(Meta);
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
