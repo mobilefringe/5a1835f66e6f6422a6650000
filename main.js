@@ -61,7 +61,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.component('vue-simple-spinner', Spinner);
     Vue.component('social-sharing', SocialSharing);
     Vue.component('v-select', VueSelect.VueSelect);
-    Vue.component('affix', vueAffix)
+    Vue.component('affix', VueAffix)
 
     /* bootstrap app */
     const vm = new Vue({
