@@ -3,6 +3,7 @@
         <div class="margin-90"></div>
         <div class="row">
             <div class="col-md-12">
+                <iframe src="https://www.flipsnack.com/northparkcenter/northpark-the-magazine-fallwinter-2017.html"></iframe>
                 <canvas id="the-canvas"></canvas>
                 <img class="margin-60" src="http://via.placeholder.com/960x460"/>
             </div>
