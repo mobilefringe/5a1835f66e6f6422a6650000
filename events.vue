@@ -32,28 +32,30 @@
                     </affix>
                 </div>
                 <div class="col-sm-12 col-md-8 col-md-pull-4">
-                    <div class="row" v-if="currentSelection.length >= 1" v-for="event in currentSelection">
-                        <div class="hidden-xs col-sm-2">
-                            <p class="details-promo-date">{{event.end_date | moment("ddd", timezone)}}</p>
-                            <p class="details-promo-day">{{event.end_date | moment("D", timezone)}}</p>
-                            <p class="details-promo-date">{{event.end_date | moment("MMM", timezone)}}</p>
+                    <div id="eventList">
+                        <div class="row" v-if="currentSelection.length >= 1" v-for="event in currentSelection">
+                            <div class="hidden-xs col-sm-2">
+                                <p class="details-promo-date">{{event.end_date | moment("ddd", timezone)}}</p>
+                                <p class="details-promo-day">{{event.end_date | moment("D", timezone)}}</p>
+                                <p class="details-promo-date">{{event.end_date | moment("MMM", timezone)}}</p>
+                            </div>
+                            <div class="col-sm-10">
+                                <h5 class="event-date">{{ checkEventDates(event) }}</h5>
+                                <h2 class="event-name">{{ event.name }}</h2>
+                                <h5 class="event-store" v-if="event.store">{{ event.store.name }}</h5>
+                                <h5 class="event-store" v-if="!event.store">{{ property.name}}</h5>
+                                <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
+                                    <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
+                                </router-link>
+                            </div>
+                            <div class="col-sm-12">
+                                <hr>    
+                            </div>
                         </div>
-                        <div class="col-sm-10">
-                            <h5 class="event-date">{{ checkEventDates(event) }}</h5>
-                            <h2 class="event-name">{{ event.name }}</h2>
-                            <h5 class="event-store" v-if="event.store">{{ event.store.name }}</h5>
-                            <h5 class="event-store" v-if="!event.store">{{ property.name}}</h5>
-                            <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
-                                <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                            </router-link>
-                        </div>
-                        <div class="col-sm-12">
-                            <hr>    
-                        </div>
-                    </div>
-                    <div class="row" v-else>
-                        <div class="col-md-12">
-                            <p>Sorry, there are no events that match your search.</p>
+                        <div class="row" v-else>
+                            <div class="col-md-12">
+                                <p>Sorry, there are no events that match your search.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
