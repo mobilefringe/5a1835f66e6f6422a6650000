@@ -151,9 +151,10 @@
                     var vm = this;
                     var showEvents = [];
                     showEvents = _.filter(eventsList, function(val){
-                        start_date = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
-                        end_date = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
-                        return moment(selectedDate).isBetween(start_date, end_date, null, '[]');
+                        startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
+                        endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
+                        console.log(startDate, endDate)
+                        return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
                     });
                     
                     // var showEvents = [];
