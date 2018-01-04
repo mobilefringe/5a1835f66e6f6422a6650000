@@ -13,21 +13,23 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-sm-12 col-md-4 col-md-push-8">
-                    <div class="event-calendar-container">
-                        <v-date-picker
-                            :is-expanded='isExpanded'
-                            :nav-visibility='navVisibility'
-                            mode='single'
-                            v-model='selectedDate'
-                            select-color='red'
-                            :theme-styles='themeStyles'
-                            is-inline
-                            :input="dateChange()"
-                        ></v-date-picker>
-                    </div>
-                    <div class="category-select-container right">
-                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>    
-                    </div>
+                    <affix class="sidebar-menu" relative-element-selector="#currentPost" style="width: 300px">
+                        <div class="event-calendar-container">
+                            <v-date-picker
+                                :is-expanded='isExpanded'
+                                :nav-visibility='navVisibility'
+                                mode='single'
+                                v-model='selectedDate'
+                                select-color='red'
+                                :theme-styles='themeStyles'
+                                is-inline
+                                :input="dateChange()"
+                            ></v-date-picker>
+                        </div>
+                        <div class="category-select-container right">
+                            <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>    
+                        </div>
+                    </affix>
                 </div>
                 <div class="col-sm-12 col-md-8 col-md-pull-4">
                     <div class="row" v-if="currentSelection.length >= 1" v-for="event in currentSelection">
