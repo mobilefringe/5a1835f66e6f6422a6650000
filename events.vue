@@ -136,6 +136,7 @@
                     console.log(this.currentSelection)    
                 },
                 currentDate: function(){
+                    console.log(this.selectedDate)
                     var selectedDate = moment.tz(this.selectedDate, this.timezone).format("MM DD YYYY");
                     // console.log(selectedDate)
                     var eventsList = [];
