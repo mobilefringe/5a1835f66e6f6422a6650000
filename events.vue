@@ -137,7 +137,7 @@
                 },
                 currentDate: function(){
                     console.log(this.selectedDate)
-                    var selectedDate = moment(this.selectedDate);
+                    var selectedDate = moment(this.selectedDate).tz(this.timezone).format("MM DD YYYY");
                     // .tz(this.selectedDate, this.timezone).format("MM DD YYYY")
                     console.log(selectedDate)
                     var eventsList = [];
