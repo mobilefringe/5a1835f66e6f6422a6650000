@@ -149,16 +149,22 @@
                         eventsList = this.events
                     }
                     
-                    var showEvents = [];
-                    _.forEach(eventsList, function(value, key) {
-                        var startDate = moment.tz(value.start_date, this.timezone).format();
-                        var endDate = moment.tz(value.end_date, this.timezone).format();
-                        console.log(startDate, endDate)
-                        if(moment(selectedDate).isBetween(startDate, endDate, null, '[]')){
-                        // if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
-                            showEvents.push(value);
-                        }
+                    eventsList = _.filter(eventsList, function(val){
+                        start_date = moment(val.start_date).tz(vm.timezone).format('MM DD YYYY');
+                        end_date = moment(val.end_date).tz(vm.timezone).format('MM DD YYYY');
+                        return moment(selectedDate).isBetween(start_date,end_date, null, '[]');
                     });
+                    this.currentSelection = eventsList
+                    // var showEvents = [];
+                    // _.forEach(eventsList, function(value, key) {
+                    //     var startDate = moment.tz(value.start_date, this.timezone).format();
+                    //     var endDate = moment.tz(value.end_date, this.timezone).format();
+                    //     console.log(startDate, endDate)
+                    //     if(moment(selectedDate).isBetween(startDate, endDate, null, '[]')){
+                    //     // if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
+                    //         showEvents.push(value);
+                    //     }
+                    // });
                     this.currentSelection = showEvents
                 },
                 selected: function() {
