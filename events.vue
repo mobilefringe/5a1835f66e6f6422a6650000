@@ -12,7 +12,7 @@
         </div>
         <div class="page-container">
             <div class="row">
-                
+                <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                 <div class="col-sm-12 col-md-5 col-md-push-7">
                     <div class="event-calendar-container">
                         <v-date-picker
@@ -30,9 +30,8 @@
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>    
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-7 col-md-pull-5">
-                    <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
-                    <div class="row" v-if="currentSelection" v-for="event in currentSelection">
+                <div class="col-sm-12 col-md-7 col-md-pull-5" v-if="currentSelection">
+                    <div class="row" v-for="event in currentSelection">
                         <div class="hidden-xs col-sm-2">
                             <p class="details-promo-date">{{event.end_date | moment("ddd", timezone)}}</p>
                             <p class="details-promo-day">{{event.end_date | moment("D", timezone)}}</p>
