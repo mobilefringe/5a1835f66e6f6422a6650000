@@ -132,6 +132,9 @@
                 this.currentSelection = this.events;
             },
             watch: {
+                currentselection: function() {
+                    console.log(this.currentSelection)    
+                },
                 currentDate: function(){
                     var selectedDate = moment.tz(this.selectedDate, this.timezone).format();
                     console.log(selectedDate)
