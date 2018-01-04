@@ -148,7 +148,7 @@
                     } else {
                         eventsList = this.events
                     }
-                    
+                    var vm = this;
                     var showEvents = [];
                     showEvents = _.filter(eventsList, function(val){
                         start_date = moment(val.start_date).tz(this.timezone).format();
