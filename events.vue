@@ -242,11 +242,11 @@
                         }
                     });
                     var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
-                    if(holidayEvents.length > 0){
+                    // if(holidayEvents.length > 0){
                         return holidayEvents
-                    } else {
-                        return null
-                    }
+                    // } else {
+                    //     return null
+                    // }
                 }
             },
             methods: {
