@@ -36,7 +36,6 @@
                         </div>
                     </div>
                     <div class="row" v-if="currentSelection" v-for="event in currentSelection">
-                        
                         <div class="hidden-xs col-sm-2">
                             <p class="details-promo-date">{{event.end_date | moment("ddd", timezone)}}</p>
                             <p class="details-promo-day">{{event.end_date | moment("D", timezone)}}</p>
