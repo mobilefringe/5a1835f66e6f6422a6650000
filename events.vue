@@ -52,7 +52,7 @@
                     </div>
                     <div class="row" v-else>
                         <div class="col-md-12">
-                            <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
+                            <p>Sorry, there are no events that match your search.</p>
                         </div>
                     </div>
                 </div>
