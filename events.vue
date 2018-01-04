@@ -150,8 +150,8 @@
                     }
                     
                     eventsList = _.filter(eventsList, function(val){
-                        start_date = moment(val.start_date).tz(vm.timezone).format('MM DD YYYY');
-                        end_date = moment(val.end_date).tz(vm.timezone).format('MM DD YYYY');
+                        start_date = moment(val.start_date).tz(vm.timezone).format();
+                        end_date = moment(val.end_date).tz(vm.timezone).format();
                         return moment(selectedDate).isBetween(start_date,end_date, null, '[]');
                     });
                     this.currentSelection = eventsList
@@ -165,7 +165,7 @@
                     //         showEvents.push(value);
                     //     }
                     // });
-                    this.currentSelection = showEvents
+                    // this.currentSelection = showEvents
                 },
                 selected: function() {
                     console.log(this.selected.value)
