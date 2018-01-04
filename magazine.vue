@@ -35,9 +35,9 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "pdfjs-dist/build/pdf"], function(Vue, moment, tz, VueMoment, Meta, PDFJS) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-pdf"], function(Vue, moment, tz, VueMoment, Meta, pdf) {
         Vue.use(Meta);
-        Vue.use(PDFJS);
+        // Vue.use(PDFJS);
         
         return Vue.component("magazine-component", {
             template: template, // the variable template will be injected
