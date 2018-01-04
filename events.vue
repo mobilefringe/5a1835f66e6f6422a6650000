@@ -148,7 +148,14 @@
                     } else {
                         eventsList = this.events
                     }
-
+                    
+                    var showEvents = [];
+                    showEvents = _.filter(eventsList, function(val){
+                        start_date = moment(val.start_date).tz(this.timezone).format();
+                        end_date = moment(val.end_date).tz(this.timezone).format();
+                        return moment(selectedDate).isBetween(start_date, end_date, null, '[]');
+                    });
+                    
                     var showEvents = [];
                     _.forEach(eventsList, function(value, key) {
                         var startDate = moment.tz(value.start_date, this.timezone).format();
