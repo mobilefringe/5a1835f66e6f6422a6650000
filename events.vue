@@ -260,6 +260,7 @@
             },
             methods: {
                 dateChange(){
+                    console.log(this.selectedDate)
                     this.currentDate = moment.tz(this.selectedDate, this.timezone).format();
                 },
                 checkEventDates(event){
