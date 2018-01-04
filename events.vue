@@ -166,7 +166,7 @@
                     //         showEvents.push(value);
                     //     }
                     // });
-                    // this.currentSelection = showEvents
+                    this.currentSelection = showEvents
                 },
                 selected: function() {
                     console.log(this.selected.value)
