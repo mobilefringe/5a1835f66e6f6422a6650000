@@ -150,8 +150,8 @@
                     }
                     
                     eventsList = _.filter(eventsList, function(val){
-                        start_date = moment(val.start_date).tz(vm.timezone).format();
-                        end_date = moment(val.end_date).tz(vm.timezone).format();
+                        start_date = moment(val.start_date).tz(this.timezone).format();
+                        end_date = moment(val.end_date).tz(this.timezone).format();
                         return moment(selectedDate).isBetween(start_date,end_date, null, '[]');
                     });
                     this.currentSelection = eventsList
