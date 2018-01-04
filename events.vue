@@ -30,11 +30,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-7 col-md-pull-5">
-                    <div class="row" v-if="!currentSelection">
-                        <div class="col-md-12">
-                            <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
-                        </div>
-                    </div>
+                    
                     <div class="row" v-if="currentSelection" v-for="event in currentSelection">
                         <div class="hidden-xs col-sm-2">
                             <p class="details-promo-date">{{event.end_date | moment("ddd", timezone)}}</p>
@@ -52,6 +48,11 @@
                         </div>
                         <div class="col-sm-12">
                             <hr>    
+                        </div>
+                    </div>
+                    <div class="row" v-else>
+                        <div class="col-md-12">
+                            <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                         </div>
                     </div>
                 </div>
