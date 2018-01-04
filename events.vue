@@ -136,7 +136,7 @@
                     console.log(this.currentSelection)    
                 },
                 currentDate: function(){
-                    var selectedDate = moment.tz(this.selectedDate, this.timezone).format();
+                    var selectedDate = moment.tz(this.selectedDate, this.timezone).format("YYYY-MM-DD");
                     console.log(selectedDate)
                     var eventsList = [];
                     if(this.selected.value == "events"){
@@ -151,8 +151,8 @@
                     var vm = this;
                     var showEvents = [];
                     showEvents = _.filter(eventsList, function(val){
-                        start_date = moment(val.start_date).tz(vm.timezone).format();
-                        end_date = moment(val.end_date).tz(vm.timezone).format();
+                        start_date = moment(val.start_date).tz(vm.timezone).format("YYYY-MM-DD");
+                        end_date = moment(val.end_date).tz(vm.timezone).format("YYYY-MM-DD");
                         return moment(selectedDate).isBetween(start_date, end_date, null, '[]');
                     });
                     
