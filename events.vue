@@ -13,7 +13,7 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-sm-12 col-md-4 col-md-push-8">
-                    <affix relative-element-selector="#eventList" style="width: 33.333%">
+                    <affix class="sidebar-menu" relative-element-selector="#eventList" style="width: 300px">
                         <div class="event-calendar-container">
                             <v-date-picker
                                 :is-expanded='isExpanded'
