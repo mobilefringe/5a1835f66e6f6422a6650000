@@ -54,7 +54,7 @@
                 <hr class="visibile-mobile">
             </div>
             <div class="col-md-4">
-                <affix relative-element-selector="#currentPost" style="width: 300px">
+                <affix relative-element-selector="#currentPost" style="width: 33.3%">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
                             <h5>Related Blogs</h5>
