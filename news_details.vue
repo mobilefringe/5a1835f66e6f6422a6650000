@@ -11,7 +11,7 @@
                     </div>
                     <div class="blog-details-title">
                         <div class="hidden-mobile">
-                            <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
+                            <social-sharing v-if="currentPost" :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
                                 <div class="blog-social-share">
                                     <h5>Share</h5>
                                     <network network="facebook">
