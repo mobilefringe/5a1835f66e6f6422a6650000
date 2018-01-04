@@ -34,7 +34,7 @@
                         <img class="blog-details-image" :src="currentPost.image_url"/>
                         <div class="margin-60" v-html="currentPost.html_body"></div>
                         <div class="visible-mobile">
-                            <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
+                            <social-sharing v-if="currentPost" :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
                                 <div class="blog-social-share">
                                     <network network="facebook">
                                         <i class="fa fa-facebook-square"></i>
