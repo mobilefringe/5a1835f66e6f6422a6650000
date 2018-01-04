@@ -43,7 +43,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
     Vue.use(VueBreadcrumbs);
-    Vue.use(SocialSharing);
+    // Vue.use(SocialSharing);
     Vue.use(Lightbox);
     // Vue.use(PDFJS);
 
@@ -61,6 +61,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
     });
     
     Vue.component('vue-simple-spinner', Spinner);
+    Vue.component('social-sharing', SocialSharing);
     Vue.component('v-select', VueSelect.VueSelect);
     Vue.component('affix', vueAffix)
 
