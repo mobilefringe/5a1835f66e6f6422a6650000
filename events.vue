@@ -153,7 +153,7 @@
                     showEvents = _.filter(eventsList, function(val){
                         startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
                         endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
-                        console.log(startDate, endDate)
+                        // console.log(startDate, endDate)
                         return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
                     });
                     
