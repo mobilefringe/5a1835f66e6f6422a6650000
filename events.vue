@@ -151,25 +151,27 @@
                     } else {
                         eventsList = this.events
                     }
-                    // var vm = this;
-                    // var showEvents = [];
-                    // showEvents = _.filter(eventsList, function(val){
-                    //     startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
-                    //     endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
-                    //     // console.log(startDate, endDate)
-                    //     return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
-                    // });
-                    
+                    var vm = this;
                     var showEvents = [];
-                    _.forEach(eventsList, function(value, key) {
-                        var startDate = moment.tz(value.start_date, this.timezone).format("MM DD YYYY");
-                        var endDate = moment.tz(value.end_date, this.timezone).format("MM DD YYYY");
-                        console.log(startDate, endDate)
-                        
-                        if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
-                            showEvents.push(value);
+                    showEvents = _.filter(eventsList, function(val){
+                        startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
+                        endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
+                        // console.log(startDate, endDate)
+                        if(startDate != endDate){
+                            return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
                         }
                     });
+                    
+                    // var showEvents = [];
+                    // _.forEach(eventsList, function(value, key) {
+                    //     var startDate = moment.tz(value.start_date, this.timezone).format("MM DD YYYY");
+                    //     var endDate = moment.tz(value.end_date, this.timezone).format("MM DD YYYY");
+                    //     console.log(startDate, endDate)
+                        
+                    //     if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
+                    //         showEvents.push(value);
+                    //     }
+                    // });
                     this.currentSelection = showEvents
                 },
                 selected: function() {
