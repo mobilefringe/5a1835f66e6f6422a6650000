@@ -13,7 +13,7 @@
         <div class="page-container">
             <div class="row">
                 <affix class="col-sm-12 col-md-4 col-md-push-8" relative-element-selector="#eventList">
-                    >
+                    
                         <div class="event-calendar-container">
                             <v-date-picker
                                 :is-expanded='isExpanded'
