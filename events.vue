@@ -30,7 +30,7 @@
                         <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>    
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-7 col-md-pull-5" >
+                <div class="col-sm-12 col-md-7 col-md-pull-5">
                     <p v-if="!currentSelection">Sorry, there are no events that match your search.</p>
                     <div class="row" v-if="currentSelection" v-for="event in currentSelection">
                         <div class="hidden-xs col-sm-2">
