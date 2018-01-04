@@ -148,24 +148,18 @@
                     } else {
                         eventsList = this.events
                     }
-                    
-                    eventsList = _.filter(eventsList, function(val){
-                        start_date = moment(val.start_date).tz(this.timezone).format();
-                        end_date = moment(val.end_date).tz(this.timezone).format();
-                        return moment(selectedDate).isBetween(start_date,end_date, null, '[]');
+
+                    var showEvents = [];
+                    _.forEach(eventsList, function(value, key) {
+                        var startDate = moment.tz(value.start_date, this.timezone).format();
+                        var endDate = moment.tz(value.end_date, this.timezone).format();
+                        console.log(startDate, endDate)
+                        if(moment(selectedDate).isBetween(startDate, endDate, null, '[]')){
+                        // if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
+                            showEvents.push(value);
+                        }
                     });
-                    this.currentSelection = eventsList
-                    // var showEvents = [];
-                    // _.forEach(eventsList, function(value, key) {
-                    //     var startDate = moment.tz(value.start_date, this.timezone).format();
-                    //     var endDate = moment.tz(value.end_date, this.timezone).format();
-                    //     console.log(startDate, endDate)
-                    //     if(moment(selectedDate).isBetween(startDate, endDate, null, '[]')){
-                    //     // if(selectedDate <= endDate && selectedDate >= startDate || selectedDate <= endDate){
-                    //         showEvents.push(value);
-                    //     }
-                    // });
-                    // this.currentSelection = showEvents
+                    this.currentSelection = showEvents
                 },
                 selected: function() {
                     console.log(this.selected.value)
