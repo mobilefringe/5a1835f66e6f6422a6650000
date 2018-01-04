@@ -164,7 +164,7 @@
                     console.log(this.selected.value)
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
-                    } else if (this.selected.value == "promotions") {
+                    } else if (this.selected.value == "promotions"){
                         this.currentSelection = this.storeEvents;
                     } else if (this.selected.value == "holiday"){
                         this.currentSelection = this.holidayEvents;
@@ -242,7 +242,9 @@
                         }
                     });
                     var holidayEvents = _.orderBy(showEvents, function(o) { return o.end_date });
-                    return holidayEvents
+                    if(holidayEvents.length > 0){
+                        return holidayEvents
+                    }
                 }
             },
             methods: {
