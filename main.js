@@ -31,6 +31,7 @@ require.config({
         'lightbox': 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min',
         'v-calendar': 'https://unpkg.com/v-calendar@0.5.1/lib/v-calendar.min',
         'vue-affix': 'https://cdn.jsdelivr.net/npm/vue-affix@0.2.4/dist/vue-affix.min',
+        'vue-flipbook': 'https://mmvue.codecloudapp.com/flipbook.vue?noext',
     }
 });
 
