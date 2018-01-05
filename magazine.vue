@@ -1,7 +1,7 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90"></div>
-        <div class="row">
+        <div class="row margin-60">
             <div class="col-md-12">
                 <flipbook></flipbook>
             </div>
