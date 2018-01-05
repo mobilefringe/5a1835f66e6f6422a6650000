@@ -32,6 +32,14 @@ require.config({
         'v-calendar': 'https://unpkg.com/v-calendar@0.5.1/lib/v-calendar.min',
         'vue-affix': 'https://cdn.jsdelivr.net/npm/vue-affix@0.2.4/dist/vue-affix.min',
         'vue-flipbook': 'https://mmvue.codecloudapp.com/flipbook.vue?noext',
+        //Dependencies for Flipbook Component//
+        'turn-js': 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1367673584000/turn',
+        'wait-js': 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1401803814000/wait',
+        'fullscreen-js': 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1401803814000/jquery.fullscreen',
+        'address-js': 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1401803814000/jquery.address-1.6.min',
+        'compatibility-js': 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1447723212000/compatibility',
+        'pdf-js': 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1447723212000/pdf',
+        'onload-js': 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1481226232000/onload'
     }
 });
 
