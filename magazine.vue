@@ -3,6 +3,7 @@
         <div class="margin-90"></div>
         <div class="row">
             <div class="col-md-12">
+            <flipbook></flipbook>
                 <img class="margin-60" src="http://via.placeholder.com/960x460"/>
             </div>
         </div>
@@ -34,7 +35,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-flipbook"], function(Vue, moment, tz, VueMoment, Meta, flipbook) {
         Vue.use(Meta);
 
         return Vue.component("magazine-component", {
