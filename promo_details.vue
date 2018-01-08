@@ -106,8 +106,8 @@
                 findHourById() {
                     return this.$store.getters.findHourById;
                 },
-                findEventBySlug () {
-                    return this.$store.getters.findEventBySlug;
+                findPromoBySlug () {
+                    return this.$store.getters.findPromoBySlug;
                 },
             },
             methods: {
