@@ -12,7 +12,7 @@
                         class="category-select">
                     </v-select>
                 </div>
-                <div>
+                <div class="store-search-container">
                     <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
                         <template slot="item" scope="option">
                             <article class="media">
