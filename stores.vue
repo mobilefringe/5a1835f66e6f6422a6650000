@@ -104,14 +104,16 @@
                     console.log(categories)
                     var categoryData = [];
                     _.forEach(categories, function(value, key) {
-                        var name = value.name;
-                        var id = value.id;
-                        if(name != null && id != null){
-                            var object = {
-                                'label': name,
-                                'value': name
+                        if(value.store_ids != null){
+                            var name = value.name;
+                            var id = value.id;
+                            if(name != null && id != null){
+                                var object = {
+                                    'label': name,
+                                    'value': name
+                                }
+                                categoryData.push(object)
                             }
-                            categoryData.push(object)
                         }
                     });
                     return categoryData 
