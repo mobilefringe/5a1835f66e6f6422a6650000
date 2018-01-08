@@ -7,7 +7,7 @@
                     <v-select v-if="categoryOptions" v-model="selected" 
                         :options="categoryOptions" 
                         :searchable="false" 
-                        class="category-select" >
+                        class="category-select">
                     </v-select>
                 </div>
                 <div>
@@ -101,6 +101,7 @@
                 },
                 allCategories() {
                     var categories = this.$store.getters.processedCategories
+                    console.log(categories)
                     var categoryData = [];
                     _.forEach(categories, function(value, key) {
                         var name = value.name;
