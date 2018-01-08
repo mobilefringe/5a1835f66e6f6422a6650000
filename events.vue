@@ -225,7 +225,7 @@
                         }
                     });
                     var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
-                    return sortedEvents
+                    return showEvents
                 },
                 propertyEvents() {
                     var showEvents = [];
