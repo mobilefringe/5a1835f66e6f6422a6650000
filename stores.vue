@@ -64,7 +64,7 @@
             watch: {
                 selected: function() {
                     console.log(this.selected.value)
-                    // this.$store.getters.storesByCategoryName
+                    console.log(this.$store.getters.storesByCategoryName)
                     // if(this.selected.value == "events"){
                     //     this.currentSelection = this.propertyEvents;
                     // } else if (this.selected.value == "promotions"){
