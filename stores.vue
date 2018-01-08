@@ -32,7 +32,6 @@
                 <p class="page-breadcrumb">
                     <span>{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
                     <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
-                    
                     <span>Store Directory</span>
                 </p>
             </div>
