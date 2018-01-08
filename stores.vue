@@ -3,7 +3,12 @@
         <div class="margin_60"></div>
         <div class="row">
             <div class="col-md-4">
-                
+                <v-select v-model="selected" 
+                    :options="categoryOptions" 
+                    :searchable="false" 
+                    :on-change="selectCategory()"
+                    class="category-select" >
+                </v-select>        
             </div>
             <div class="col-md-8">
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
