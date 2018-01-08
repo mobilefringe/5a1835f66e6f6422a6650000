@@ -259,11 +259,12 @@
                                 </ul>    
                             </div>
                             <div class="col-sm-12 col-md-8">
-                                <img class="footer-logo" src="//codecloud.cdn.speedyrails.net/sites/5a1835f66e6f6422a6650000/image/png/1511801610000/northpark-logo-white.png"  alt="Northpark Property Logo">
-                                <div class="footer-address">
-                                    <p  v-if="property">{{property.address1}} - {{property.city}}, {{property.province_state}} - {{property.contact_phone}}</p>    
+                                <div>
+                                    <img class="footer-logo" src="//codecloud.cdn.speedyrails.net/sites/5a1835f66e6f6422a6650000/image/png/1511801610000/northpark-logo-white.png"  alt="Northpark Property Logo">    
                                 </div>
-                                
+                                <div class="footer-address">
+                                    <p v-if="property">{{property.address1}} - {{property.city}}, {{property.province_state}} - {{property.contact_phone}}</p>    
+                                </div>
                                 <div class="footer-social-container">
                                     <a href="https://www.facebook.com/northparkcenter" target="_blank">
                                         <i class="fa fa-facebook-square" aria-hidden="true"></i>
