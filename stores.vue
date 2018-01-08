@@ -49,6 +49,9 @@
                 property (){
                     return this.$store.getters.getProperty;
                 },
+                allCategories() {
+                    return this.$store.getters.processedCategories;
+                },
                 getSVGurl () {
                     // return "https://www.mallmaverick.com" + this.property.svgmap_url;
                     return "https://www.mallmaverick.com/system/properties/svgmaps/000/000/056/original/Northpark_-_Map_-_Dec-15-2017.svg?1513376531";
