@@ -24,7 +24,7 @@
                 </div>
                 <div class="storelist-container" v-if="currentSelection">
                     <div v-for="store in currentSelection">
-                        <p @click="dropPin(store)">{{store.name}}</p>
+                        <p v-on:click="dropPin(store)">{{store.name}}</p>
                     </div>    
                 </div>
                 <div class="store-map-download">
