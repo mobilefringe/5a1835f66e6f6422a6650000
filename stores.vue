@@ -4,7 +4,9 @@
             <div class="col-md-4">
                 
             </div>
-            <svg-map v-bind:svgMapUrl="getSVGurl"></svg-map>
+            <div class="col-md-8">
+                <svg-map v-bind:svgMapUrl="getSVGurl"></svg-map>
+            </div>
         </div>
     </div>
 </template>
