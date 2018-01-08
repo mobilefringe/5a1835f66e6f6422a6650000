@@ -27,6 +27,16 @@
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="page-breadcrumb">
+                    <span>{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
+                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                    
+                    <span>Store Directory</span>
+                </p>
+            </div>
+        </div>
     </div>
 </template>
 <!--:on-change="selectCategory()"-->
