@@ -218,7 +218,7 @@
                     var mergeEvents = _.concat(events, promotions);
                     var showEvents = [];
                     _.forEach(mergeEvents, function(value, key) {
-                        var today = moment.tz(this.timezone).format();
+                        var today = moment.tz(this.timezone).format("MM DD YYYY");
                         var showOnWebDate = moment(val.show_on_web_date).tz(vm.timezone).format("MM DD YYYY");
                         if(today >= showOnWebDate){
                             showEvents.push(value);
