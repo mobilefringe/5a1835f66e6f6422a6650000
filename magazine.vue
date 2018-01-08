@@ -68,7 +68,7 @@
                 },
                 magazines() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "PDFs" })
-                    var repo_images = _.slice(repo[0].images, [0], [3])
+                    var repo_images = _.slice(repo[0].images, [0], [6])
                     console.log(repo_images)
                     return repo_images
                 },
