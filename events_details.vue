@@ -74,7 +74,7 @@
                     console.log(vm.currentEvent)
                 })
             },
-            beforeRouteUpdate (to, from, next) {
+            beforeRouteUpdate (to, from, next, eventType) {
                 console.log(this.to.params.id)
                 this.currentEvent = this.findEventBySlug(to.params.id);
                 if(this.currentEvent === null || this.currentEvent === undefined){
