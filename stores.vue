@@ -65,7 +65,13 @@
                     suggestionAttribute: 'name',
                     search: '',
                     currentSelection: null,
-                    listMode: "alphabetical"
+                    listMode: "alphabetical",
+                    floorOptions: [
+                        {'label':'Select A Level', 'value': 'hello'},
+                        {'label':'Level One', 'value': 'all_events'},
+                        {'label':'Level Two', 'value': 'events'},
+                        
+                    ],
                 }
             },
             created (){
