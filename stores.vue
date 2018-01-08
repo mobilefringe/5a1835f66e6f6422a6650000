@@ -20,6 +20,7 @@
                             </article>
                         </template>
                     </search-component>
+                    <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
                 </div>
                 <div class="storelist-container" v-if="currentSelection">
                     <div v-for="store in currentSelection">
