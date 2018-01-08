@@ -9,6 +9,16 @@
         <div class="row">
             <div class="col-md-8">
                 <h2>The Magazine</h2>
+                <!--<div class="row">-->
+                    <slick class="holiday-slider" ref="slick" :options="slickOptions">
+                        <div v-for="post in holidayBlog">
+                            <router-link :to="{ name: 'holidayDetails', params: { id: post.slug }}">
+                                <img :src="post.image_url" class="" alt="">
+                                <h5 class="details-title">{{ post.title }}</h5>
+                            </router-link>
+                        </div>
+                    </slick>
+                <!--</div>-->
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
@@ -50,7 +60,12 @@
                 },
                 timezone() {
                     return this.$store.getters.getTimezone;
-                }
+                },
+                historyBanners() {
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "PDFs" })
+                    var repo_images = repo[0].images
+                    return repo_images
+                },
             },
             methods: {
                 
