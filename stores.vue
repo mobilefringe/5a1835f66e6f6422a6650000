@@ -14,6 +14,9 @@
                         <p>{{store.name}}</p>
                     </div>    
                 </div>
+                <div class="store-map-download">
+                    <a href=""><h5>Download Directory Map</h5></a>
+                </div>
             </div>
             <div class="col-md-8">
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
