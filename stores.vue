@@ -18,7 +18,7 @@
 </template>
 <!--:on-change="selectCategory()"-->
 <script>
-    define(["Vue", "jquery", "Raphael", "mm_mapsvg", "mousewheel", "vue!svg-map"], function(Vue, $, Raphael, mapSvg, mousewheel, SVGMapComponent) {
+    define(["Vue", "vue-breadcrumbs", "v-select", "jquery", "Raphael", "mm_mapsvg", "mousewheel", "vue!svg-map"], function(Vue, VueBreadcrumbs, vSelect, $, Raphael, mapSvg, mousewheel, SVGMapComponent) {
         return Vue.component("stores-component", {
             template: template, // the variable template will be injected
             data: function() {
