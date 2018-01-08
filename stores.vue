@@ -6,7 +6,7 @@
                 <v-select v-model="selected" 
                     :options="categoryOptions" 
                     :searchable="false" 
-                    :on-change="selectCategory()"
+                    
                     class="category-select" >
                 </v-select>        
             </div>
@@ -16,6 +16,7 @@
         </div>
     </div>
 </template>
+<!--:on-change="selectCategory()"-->
 <script>
     define(["Vue", "jquery", "Raphael", "mm_mapsvg", "mousewheel", "vue!svg-map"], function(Vue, $, Raphael, mapSvg, mousewheel, SVGMapComponent) {
         return Vue.component("stores-component", {
