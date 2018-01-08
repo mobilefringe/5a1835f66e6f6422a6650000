@@ -30,6 +30,7 @@
                 return {
                     selected: "Select a Category",
                     categoryOptions: null,
+                    currentSelection: null,
                     listMode: "alphabetical"
                 }
             },
