@@ -39,8 +39,8 @@
                     return this.$store.getters.getProperty;
                 },
                 getSVGurl () {
-                    return "https://www.mallmaverick.com" + this.property.svgmap_url;
-                    // return "//www.mallmaverick.com/system/site_images/photos/000/035/014/original/Canyon_Crest_-_Map.svg?1512066588";
+                    // return "https://www.mallmaverick.com" + this.property.svgmap_url;
+                    return "https://www.mallmaverick.com/system/properties/svgmaps/000/000/056/original/Northpark_-_Map_-_Dec-15-2017.svg?1513376531";
                 },
                 svgMapRef() {
                     return _.filter(this.$children, function(o) { return (o.$el.className == "svg-map") })[0];
