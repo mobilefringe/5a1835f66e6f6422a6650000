@@ -65,16 +65,8 @@
                 selected: function() {
                     console.log(this.selected.value)
                     var catName = this.selected.value;
-                    console.log(this.$store.getters.storesByCategoryName[catName])
-                    // if(this.selected.value == "events"){
-                    //     this.currentSelection = this.propertyEvents;
-                    // } else if (this.selected.value == "promotions"){
-                    //     this.currentSelection = this.storeEvents;
-                    // } else if (this.selected.value == "holiday"){
-                    //     this.currentSelection = this.holidayEvents;
-                    // } else {
-                    //     this.currentSelection = this.events
-                    // }
+                    console.log(this.$store.getters.storesByCategoryName)
+
                 }
             },
             methods: {
