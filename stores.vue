@@ -27,6 +27,7 @@
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
             </div>
         </div>
+        <div class="margin-60"></div>
         <div class="row">
             <div class="col-md-12">
                 <p class="page-breadcrumb">
