@@ -98,6 +98,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    breadcrumb: null,
                     valet: null,
                     concierge: null, 
                     giftCards: null,
