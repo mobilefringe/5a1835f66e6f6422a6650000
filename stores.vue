@@ -69,6 +69,7 @@
                     var storesByCategory = this.$store.getters.storesByCategoryName
                     var sortedList = storesByCategory[catName];
                     console.log(sortedList)
+                    this.currentSelection = sortedList
 
                 }
             },
