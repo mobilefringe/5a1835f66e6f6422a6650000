@@ -3,7 +3,7 @@
         <div class="margin-60"></div>
         <div class="row">
             <div class="col-md-4">
-                <v-select v-for="cat in allCategories" v-model="selected" 
+                <v-select v-model="selected" 
                     :options="categoryOptions" 
                     :searchable="false" 
                     
@@ -33,6 +33,7 @@
             },
             mounted () {
                 console.log(this.getSVGurl)
+                this.categoryOptions = this.allCategories
             },
             methods: {
                 changeMode (mode) {
