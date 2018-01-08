@@ -63,10 +63,9 @@
                     store_hours: [],
                 }
             },
-            beforeRouteEnter (to, from, next, eventType) {
+            beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    console.log(vm.to.params.id)
                     vm.currentEvent = vm.findEventBySlug(to.params.id);
                     if(vm.currentEvent === null || vm.currentEvent === undefined){
                         vm.$router.replace({ name: '404'});
@@ -74,8 +73,7 @@
                     console.log(vm.currentEvent)
                 })
             },
-            beforeRouteUpdate (to, from, next, eventType) {
-                console.log(this.to.params.id)
+            beforeRouteUpdate (to, from, next) {
                 this.currentEvent = this.findEventBySlug(to.params.id);
                 if(this.currentEvent === null || this.currentEvent === undefined){
                     this.$router.replace({ name: '404'});
