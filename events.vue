@@ -219,7 +219,7 @@
                     var showEvents = [];
                     _.forEach(mergeEvents, function(value, key) {
                         var today = moment.tz(this.timezone).format("MM DD YYYY");
-                        var showOnWebDate = moment(value.show_on_web_date).tz(this.timezone).format("MM DD YYYY");
+                        var showOnWebDate = momenttz(value.show_on_web_date, this.timezone).format("MM DD YYYY");
                         if(today >= showOnWebDate){
                             showEvents.push(value);
                         }
