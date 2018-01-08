@@ -52,6 +52,13 @@
             data: function() {
                 return {
                     breadcrumb: null,
+                    slickOptions: {
+                        autoplay: false,
+                        cssEase: 'linear',
+                        dots: false,
+                        slidesToShow: 4,
+                        speed: 500,
+                    }
                 }
             },
             computed: {
