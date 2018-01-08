@@ -163,11 +163,15 @@
                     var vm = this;
                     var showEvents = [];
                     showEvents = _.filter(eventsList, function(val){
-                        startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
-                        endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
-                        // console.log(startDate, endDate)
-                        if(startDate != endDate){
-                            return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
+                        var today = moment.tz(this.timezone).format();
+                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
+                        if(today >= showOnWebDate){
+                            startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
+                            endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
+                            // console.log(startDate, endDate)
+                            if(startDate != endDate){
+                                return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
+                            }
                         }
                     });
                     
