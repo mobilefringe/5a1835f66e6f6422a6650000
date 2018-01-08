@@ -45,7 +45,7 @@
                                 <h5 class="event-store" v-if="event.store">{{ event.store.name }}</h5>
                                 <h5 class="event-store" v-if="!event.store">{{ property.name}}</h5>
                                 
-                                <router-link v-if="" :to="{ name: 'eventDetails', params: { id: event.slug }}">
+                                <router-link v-if="event.eventable_type !='Store'" :to="{ name: 'eventDetails', params: { id: event.slug }}">
                                     <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
                                 <router-link v-else :to="{ name: 'promoDetails', params: { id: event.slug }}">
