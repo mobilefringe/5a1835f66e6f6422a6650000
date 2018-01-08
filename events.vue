@@ -138,6 +138,7 @@
             },
             mounted () {
                 this.currentSelection = this.events;
+                console.log(this.currentSelection)
             },
             watch: {
                 currentselection: function() {
