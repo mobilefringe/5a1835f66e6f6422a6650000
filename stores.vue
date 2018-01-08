@@ -23,6 +23,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    selected: "Select a Category",
                     categoryOptions: null,
                     listMode: "alphabetical"
                 }
