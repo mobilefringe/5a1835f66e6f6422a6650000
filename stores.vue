@@ -1,6 +1,6 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div v-if="property">
+        <div>
             <svg-map :svgMapUrl="getSVGurl"></svg-map>
         </div>
     </div>
