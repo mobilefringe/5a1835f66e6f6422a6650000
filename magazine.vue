@@ -44,7 +44,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-flipbook"], function(Vue, moment, tz, VueMoment, Meta, flipbook) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-flipbook", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, flipbook, slick) {
         Vue.use(Meta);
 
         return Vue.component("magazine-component", {
