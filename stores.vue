@@ -41,6 +41,20 @@
                 console.log(this.getSVGurl)
                 this.categoryOptions = this.allCategories
             },
+            watch: {
+                selected: function() {
+                    console.log(this.selected.value)
+                    // if(this.selected.value == "events"){
+                    //     this.currentSelection = this.propertyEvents;
+                    // } else if (this.selected.value == "promotions"){
+                    //     this.currentSelection = this.storeEvents;
+                    // } else if (this.selected.value == "holiday"){
+                    //     this.currentSelection = this.holidayEvents;
+                    // } else {
+                    //     this.currentSelection = this.events
+                    // }
+                }
+            },
             methods: {
                 changeMode (mode) {
                     this.listMode = mode;
