@@ -7,7 +7,6 @@
                     <v-select v-if="categoryOptions" v-model="selected" 
                         :options="categoryOptions" 
                         :searchable="false" 
-                        
                         class="category-select" >
                     </v-select>
                 </div>
