@@ -48,7 +48,7 @@
                                 <router-link v-if="!event.promotionable_type" :to="{ name: 'eventDetails', params: { idEvent: event.slug }}">
                                     <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
-                                <router-link v-if="event.promotionable_type == 'Store'" :to="{ name: 'promoDetails', params: { idPromo: event.slug }}">
+                                <router-link v-if="event.promotionable_type" :to="{ name: 'promoDetails', params: { idPromo: event.slug }}">
                                     <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
                             </div>
