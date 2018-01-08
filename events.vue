@@ -44,7 +44,7 @@
                                 <h2 class="event-name">{{ event.name }}</h2>
                                 <h5 class="event-store" v-if="event.store">{{ event.store.name }}</h5>
                                 <h5 class="event-store" v-if="!event.store">{{ property.name}}</h5>
-                                <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
+                                <router-link :to="'/events/'+ event.slug ">
                                     <p class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
                             </div>
