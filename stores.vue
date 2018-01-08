@@ -101,7 +101,7 @@
                         if(name != null && id != null){
                             var object = {
                                 'label': name,
-                                'value': id
+                                'value': name
                             }
                             categoryData.push(object)
                         }
