@@ -3,12 +3,14 @@
         <div class="margin-60"></div>
         <div class="row">
             <div class="col-md-4">
-                <v-select v-if="categoryOptions" v-model="selected" 
-                    :options="categoryOptions" 
-                    :searchable="false" 
-                    
-                    class="category-select" >
-                </v-select>
+                <div class="category-select-container">
+                    <v-select v-if="categoryOptions" v-model="selected" 
+                        :options="categoryOptions" 
+                        :searchable="false" 
+                        
+                        class="category-select" >
+                    </v-select>
+                </div>
                 <div>
                     <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
                         <template slot="item" scope="option">
