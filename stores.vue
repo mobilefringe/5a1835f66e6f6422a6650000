@@ -1,9 +1,9 @@
 <template>
     <div class="page-container"> <!-- without an outer container div this component template will not render -->
-        <div class="margin_60"></div>
+        <div class="margin-60"></div>
         <div class="row">
             <div class="col-md-4">
-                <v-select v-model="selected" 
+                <v-select v-for="cat in allCategories" v-model="selected" 
                     :options="categoryOptions" 
                     :searchable="false" 
                     
