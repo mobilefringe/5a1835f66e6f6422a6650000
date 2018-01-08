@@ -54,6 +54,7 @@
                     return this.$store.getters.getProperty;
                 },
                 allCategories() {
+                    console.log(this.$store.getters.processedCategories);
                     return this.$store.getters.processedCategories;
                 },
                 getSVGurl () {
