@@ -96,17 +96,9 @@
                 },
             },
             methods: {
-                // checkEventType(val_eventable_type){
-                //     if(this.currentEvent.eventable_type == "Store"){
-                //         return true
-                //     }
-                // },
                 getStoreSlug(){
-                    // if(this.currentEvent.eventable_type == "Store"){
-                        var store_slug = "/stores/" + this.currentEvent.store.slug
-                        console.log(store_slug)
-                        return store_slug
-                    // }    
+                    var store_slug = "/stores/" + this.currentEvent.store.slug
+                    return store_slug
                 },
                 day_of_the_week(val_day){
                     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
