@@ -22,6 +22,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    categoryOptions: null,
                     listMode: "alphabetical"
                 }
             },
