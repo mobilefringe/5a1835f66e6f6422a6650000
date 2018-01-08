@@ -24,7 +24,7 @@
                                         </span>
                                     </li>
                                 </ul>
-                                <router-link to="getStoreSlug(currentEvent)" active-class="active" exact>
+                                <router-link to="{{ getStoreSlug(currentEvent) }}" active-class="active" exact>
                                     <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                                 </router-link>
                             </div>
