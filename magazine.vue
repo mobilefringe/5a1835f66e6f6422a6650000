@@ -61,7 +61,7 @@
                 timezone() {
                     return this.$store.getters.getTimezone;
                 },
-                historyBanners() {
+                magazines() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "PDFs" })
                     var repo_images = repo[0].images
                     return repo_images
