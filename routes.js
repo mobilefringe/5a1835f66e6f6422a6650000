@@ -46,12 +46,12 @@ define([], function () {
                     name: 'eventList'
                 },
                 {
-                    path: ':id',
+                    path: ':idEvent',
                     component: view('events_details'),
                     name: 'eventDetails'
                 },
                 {
-                    path: ':id',
+                    path: ':idPromo',
                     component: view('promo_details'),
                     name: 'promoDetails'
                 }
