@@ -11,10 +11,10 @@
                 <h2>The Magazine</h2>
                 <!--<div class="row">-->
                     <slick class="holiday-slider" ref="slick" :options="slickOptions">
-                        <div v-for="post in holidayBlog">
+                        <div v-for="item in magazines">
                             <router-link :to="{ name: 'holidayDetails', params: { id: post.slug }}">
                                 <img :src="post.image_url" class="" alt="">
-                                <h5 class="details-title">{{ post.title }}</h5>
+                                <h5 class="details-title">{{ item.title }}</h5>
                             </router-link>
                         </div>
                     </slick>
