@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-    define(["Vue","mousewheel", "hammer", "vue!mapplic-map"], function(Vue, mousewheel, hammer,MapplicComponent) {
+    define(["Vue","mousewheel", "hammer", "vue!mapplic-map"], function(Vue, mousewheel, hammer, MapplicComponent) {
         return Vue.component("stores-component", {
             template: template, // the variable template will be injected
             data: function() {
