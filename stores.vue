@@ -5,7 +5,7 @@
                 
             </div>
             <div class="col-md-8">
-                <svg-map v-bind:svgMapUrl="getSVGurl"></svg-map>
+                <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
             </div>
         </div>
     </div>
