@@ -67,7 +67,7 @@
                     var catName = this.selected.value;
                     console.log(this.$store.getters.storesByCategoryName)
                     var storesByCategory = this.$store.getters.storesByCategoryName
-                    var sortedList = _.indexOf(storesByCategory, catName);
+                    var sortedList = _.findKey(storesByCategory, function(o) { catName });;
                     console.log(sortedList)
 
                 }
