@@ -39,7 +39,8 @@
             },
             mounted () {
                 console.log(this.getSVGurl)
-                this.categoryOptions = this.allCategories
+                this.categoryOptions = this.allCategories,
+                this.currentSelection = this.allStores
             },
             watch: {
                 selected: function() {
