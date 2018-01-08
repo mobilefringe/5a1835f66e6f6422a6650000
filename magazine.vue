@@ -10,7 +10,7 @@
             <div class="col-md-8">
                 <h2>The Magazine</h2>
                 <!--<div class="row">-->
-                    <slick class="holiday-slider" ref="slick" :options="slickOptions">
+                    <slick class="magazine-slider" ref="slick" :options="slickOptions">
                         <div v-for="item in magazines">
                             
                                 <embed :src="item.image_url" width="500" height="375" type='application/pdf'>
