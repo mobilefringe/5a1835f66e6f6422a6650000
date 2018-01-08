@@ -67,7 +67,7 @@
                     var catName = this.selected.value;
                     console.log(this.$store.getters.storesByCategoryName)
                     var storesByCategory = this.$store.getters.storesByCategoryName
-                    var sortedList = storesByCategory[catName];
+                    var sortedList = _.uniq(storesByCategory[catName]);
                     console.log(sortedList)
                     this.currentSelection = sortedList
 
