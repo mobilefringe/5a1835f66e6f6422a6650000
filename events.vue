@@ -23,8 +23,8 @@
                                 select-color='red'
                                 :theme-styles='themeStyles'
                                 is-inline
-                                :input="dateChange()"
-                            ></v-date-picker>
+                                :input="dateChange()">
+                            </v-date-picker>
                         </div>
                         <div class="category-select-container right">
                             <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>    
