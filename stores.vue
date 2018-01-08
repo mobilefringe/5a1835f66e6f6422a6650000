@@ -55,19 +55,19 @@
                 },
                 allCategories() {
                     console.log(this.$store.getters.processedCategories);
-                    var categoryData = [];
-                    _.forEach(this.restaurants, function(value, key) {
-                        var name = value.name;
-                        var id = value.id;
-                        if(name != null && id != null){
-                            var object = {
-                                'label': name,
-                                'value': id
-                            }
-                            categoryData.push(object)
-                        }
-                    });
-                    return categoryData 
+                    // var categoryData = [];
+                    // _.forEach(this.restaurants, function(value, key) {
+                    //     var name = value.name;
+                    //     var id = value.id;
+                    //     if(name != null && id != null){
+                    //         var object = {
+                    //             'label': name,
+                    //             'value': id
+                    //         }
+                    //         categoryData.push(object)
+                    //     }
+                    // });
+                    // return categoryData 
                 },
                 getSVGurl () {
                     // return "https://www.mallmaverick.com" + this.property.svgmap_url;
