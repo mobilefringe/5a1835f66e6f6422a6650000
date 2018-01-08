@@ -65,7 +65,9 @@
                 selected: function() {
                     console.log(this.selected.value)
                     var catName = this.selected.value;
-                    console.log(this.$store.getters.storesByCategoryName)
+                    var storesByCategory = this.$store.getters.storesByCategoryName
+                    var sortedList = _.indexOf(storesByCategory, catName);
+                    console.log(sortedList)
 
                 }
             },
