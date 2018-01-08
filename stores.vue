@@ -17,6 +17,11 @@
                 <div class="store-map-download">
                     <a href=""><h5>Download Directory Map</h5></a>
                 </div>
+                <div>
+                    <router-link to="" active-class="active" exact>
+                        <a class="details-link">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </router-link>
+                </div>
             </div>
             <div class="col-md-8">
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
