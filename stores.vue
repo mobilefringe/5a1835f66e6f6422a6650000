@@ -104,7 +104,6 @@
                     return categoryData 
                 },
                 allStores() {
-                    console.log(this.$store.getters.processedStores)
                     return this.$store.getters.processedStores;
                 },
                 getSVGurl () {
