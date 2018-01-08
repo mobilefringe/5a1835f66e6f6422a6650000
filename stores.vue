@@ -8,7 +8,10 @@
                     :searchable="false" 
                     
                     class="category-select" >
-                </v-select>        
+                </v-select>
+                <div>
+                    
+                </div>
             </div>
             <div class="col-md-8">
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
@@ -54,7 +57,6 @@
                     return this.$store.getters.getProperty;
                 },
                 allCategories() {
-                    console.log(this.$store.getters.processedCategories);
                     var categories = this.$store.getters.processedCategories
                     var categoryData = [];
                     _.forEach(categories, function(value, key) {
@@ -69,6 +71,9 @@
                         }
                     });
                     return categoryData 
+                },
+                allStores() {
+                    return this.$store.getters.processedStores;
                 },
                 getSVGurl () {
                     // return "https://www.mallmaverick.com" + this.property.svgmap_url;
