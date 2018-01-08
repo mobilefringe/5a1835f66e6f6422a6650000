@@ -1,7 +1,10 @@
 <template>
     <div class="page-container"> <!-- without an outer container div this component template will not render -->
-        <div>
-            <svg-map :svgMapUrl="getSVGurl"></svg-map>
+        <div class="row">
+            <div class="col-md-4">
+                
+            </div>
+            <svg-map v-bind:svgMapUrl="getSVGurl"></svg-map>
         </div>
     </div>
 </template>
