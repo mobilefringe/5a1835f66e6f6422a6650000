@@ -13,7 +13,7 @@
                     <slick class="magazine-slider" ref="slick" :options="slickOptions">
                         <div v-for="item in magazines">
                             
-                                <object :src="item.image_url" width="500" height="375" type='application/pdf'>
+                                <embed :src="item.image_url" width="500" height="375" type='application/pdf'>
                                 <h5 class="details-title">{{ item.title }}</h5>
                             
                         </div>
