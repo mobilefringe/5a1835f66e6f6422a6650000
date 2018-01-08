@@ -70,6 +70,7 @@
                     if (vm.currentEvent === null || vm.currentEvent === undefined){
                         vm.$router.replace({ name: '404'});
                     }
+                    console.log(this.currentEvent)
                 })
             },
             beforeRouteUpdate (to, from, next) {
