@@ -75,6 +75,7 @@
                         {'label':'Level Two', 'value': 'events'},
                         
                     ],
+                    floorSelect: "Select a Floor"
                 }
             },
             created (){
