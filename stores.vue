@@ -92,7 +92,7 @@
                     this.currentSelection = sortedList
                 },
                 floorSelected: function() {
-                    
+                    console.log(this.selected.value;)
                 }
             },
             methods: {
