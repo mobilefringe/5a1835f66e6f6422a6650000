@@ -46,6 +46,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    breadcrumb: null,
                     selected: "Select a Category",
                     categoryOptions: null,
                     currentSelection: null,
