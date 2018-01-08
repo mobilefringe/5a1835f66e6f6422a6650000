@@ -20,7 +20,7 @@
                         </div>
                         <div class="sidebar-container">
                             <h5 class="">Find Us</h5>
-                            <p>
+                            <p class="uppercase">
                                 {{property.name}}<br/>
                                 {{property.address1}}<br/>
                                 {{property.city}}, {{property.province_state}} {{property.postal_code}}<br/>
