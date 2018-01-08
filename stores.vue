@@ -9,6 +9,15 @@
                     
                     class="category-select" >
                 </v-select>
+                <div>
+                    <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
+                        <template slot="item" scope="option">
+                            <article class="media">
+                                <p @click="show_search = !show_search">{{ option.data.name }}</p>
+                            </article>
+                        </template>
+                    </search-component>
+                </div>
                 <div class="storelist-container" v-if="currentSelection">
                     <div v-for="store in currentSelection">
                         <p>{{store.name}}</p>
