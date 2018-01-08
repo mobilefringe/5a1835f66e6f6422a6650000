@@ -59,6 +59,8 @@
                     breadcrumb: null,
                     selected: "Select a Category",
                     categoryOptions: null,
+                    suggestionAttribute: 'name',
+                    search: '',
                     currentSelection: null,
                     listMode: "alphabetical"
                 }
