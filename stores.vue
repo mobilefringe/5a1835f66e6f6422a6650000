@@ -10,7 +10,7 @@
                     class="category-select" >
                 </v-select>
                 <div class="storelist-container" v-if="allStores">
-                    <div  v-for="store in allStores">
+                    <div v-for="store in allStores">
                         <p>{{store.name}}</p>
                     </div>    
                 </div>
