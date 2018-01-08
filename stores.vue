@@ -37,6 +37,9 @@
                 </div>
             </div>
             <div class="col-md-8">
+                <div class="category-select-container right">
+                    <v-select v-model="floorSelect" :options="floorOptions" :searchable="false" class="category-select"></v-select>    
+                </div>
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
             </div>
         </div>
