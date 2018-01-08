@@ -69,13 +69,12 @@
                     search: '',
                     currentSelection: null,
                     listMode: "alphabetical",
+                    floorSelect: "Select a Level",
                     floorOptions: [
                         {'label':'Select A Level', 'value': 'hello'},
                         {'label':'Level One', 'value': 'all_events'},
                         {'label':'Level Two', 'value': 'events'},
-                        
                     ],
-                    floorSelect: "Select a Floor"
                 }
             },
             created (){
