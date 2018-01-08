@@ -90,6 +90,9 @@
                     var storesByCategory = this.$store.getters.storesByCategoryName
                     var sortedList = _.uniq(storesByCategory[catName]);
                     this.currentSelection = sortedList
+                },
+                floorSelected: function() {
+                    
                 }
             },
             methods: {
