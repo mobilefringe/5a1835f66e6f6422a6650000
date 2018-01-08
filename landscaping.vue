@@ -120,8 +120,8 @@
             </div>
         </div>
         <div class="image-container">
-            <div calss="col-md-12">
-                <div class="row image-row">
+            <div class="row image-row">
+                <div calss="col-md-12">
                     <div class="hover-container" v-if="sectionSix">
                         <div class="hover-image mid-height" v-bind:style="{ backgroundImage: 'url(' + sectionSix.image_url + ')' }"></div>
                     	<div v-if="sectionSix.url" class="hover-text-container hover-scale">
