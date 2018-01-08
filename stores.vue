@@ -14,7 +14,6 @@
                         <p>{{store.name}}</p>
                     </div>    
                 </div>
-                
             </div>
             <div class="col-md-8">
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
