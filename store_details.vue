@@ -79,7 +79,7 @@
                                     <h2 class="details-promo-name">{{promo.name}}</h2> 
                                     <h5 class="details-promo-store">{{promo.store.name}}</h5>
                                     <p class="details-promo-desc">{{ truncate(promo.description) }}</p> 
-                                    <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
+                                    <router-link :to="{ name: 'promoDetails', params: { idPromo: promo.slug }}">
                                         <h5 class="details-link">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
                                     </router-link>    
                                 </div>
