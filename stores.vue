@@ -9,9 +9,12 @@
                     
                     class="category-select" >
                 </v-select>
-                <div v-if="allStores" v-for="store in allStores">
-                    <p >{{store.name}}</p>
+                <div class="storelist-container">
+                    <div v-if="allStores" v-for="store in allStores">
+                        <p>{{store.name}}</p>
+                    </div>    
                 </div>
+                
             </div>
             <div class="col-md-8">
                 <svg-map v-bind:svg-map-url="getSVGurl"></svg-map>
