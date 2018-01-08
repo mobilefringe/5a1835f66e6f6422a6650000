@@ -188,7 +188,7 @@
                     this.currentSelection = showEvents
                 },
                 selected: function() {
-                    console.log(this.selected.value)
+                    // console.log(this.selected.value)
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected.value == "promotions"){
