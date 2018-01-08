@@ -9,8 +9,8 @@
                     
                     class="category-select" >
                 </v-select>
-                <div>
-                    
+                <div v-if="allStores">
+                    <p v-for="store in allStores">store.name</p>
                 </div>
             </div>
             <div class="col-md-8">
