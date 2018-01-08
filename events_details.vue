@@ -66,7 +66,7 @@
             beforeRouteEnter (to, from, next) {
                 next(vm => {
                     // access to component instance via `vm`
-                    console.log(this.to.params.id)
+                    console.log(vm.to.params.id)
                     vm.currentEvent = vm.findEventBySlug(to.params.id);
                     if (vm.currentEvent === null || vm.currentEvent === undefined){
                         vm.$router.replace({ name: '404'});
@@ -75,6 +75,7 @@
                 })
             },
             beforeRouteUpdate (to, from, next) {
+                console.log(this.to.params.id)
                 this.currentEvent = this.findEventBySlug(to.params.id);
                 if (this.currentEvent === null || this.currentEvent === undefined){
                     
