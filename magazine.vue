@@ -45,7 +45,7 @@
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-flipbook", "vue!vue-slick", "vee-validate"], function(Vue, moment, tz, VueMoment, Meta, flipbook, slick, VeeValidate) {
         Vue.use(Meta);
-
+        Vue.use(VeeValidate);
         return Vue.component("magazine-component", {
             template: template, // the variable template will be injected
             data: function() {
