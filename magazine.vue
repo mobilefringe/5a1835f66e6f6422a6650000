@@ -27,7 +27,7 @@
                         <div class="blog-newsletter-container">
                             <form action="https://mobilefringe.createsend.com/t/d/s/fldith/" method="post" id="magazineForm">
                                 <input id="fieldEmail" name="cm-fldith-fldith" type="email" required />
-                                <button class="submit" type="submit">Subscribe</button>
+                                <button class="submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </form>
     
                             <!--<form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">-->
