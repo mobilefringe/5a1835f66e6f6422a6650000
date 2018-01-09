@@ -145,7 +145,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-bread
                 var filtered_restaurants = _.uniqBy(all_restaurants, function (o) {
                     return o.name;
                 });
-                console.log(filtered_restaurants)
+                console.log(filtered_restaurants.name)
                 return filtered_restaurants;
             },
             restaurantData: function restaurantData() {
