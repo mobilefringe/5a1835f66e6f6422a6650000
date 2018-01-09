@@ -51,7 +51,7 @@
                             <label for="fieldEmail">Email</label><br />
                             <div class="tourism-form">
                                 <input id="fieldEmail" name="cm-fldilt-fldilt" type="email" required />
-                                <button type="news-submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>    
+                                <button class="submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>    
                             </div>
                         </form>
                     </div>
