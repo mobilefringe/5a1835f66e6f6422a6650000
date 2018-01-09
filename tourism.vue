@@ -62,7 +62,7 @@
                     <h2 class="tourism-title">Group Visits</h2>
                     <div class="margin-60" v-html="groupVisits.body"></div>
                     <div class="tourism-contact-container margin-30">
-                        <form class="form-horizontal" action="form-submit" @submit.prevent="validateBeforeSubmit">
+                        <form class="form-horizontal" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
                             <div class="form-group ">
                                 <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('name')}">
                                     <label for="name">Name</label>
@@ -127,7 +127,6 @@
                     <div class="" v-html="unionPay.body"></div>
                 </div>
             </div>
-            
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -221,37 +220,37 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-valid
                 return weekday[val_day];
             },
             validateBeforeSubmit() {
-                    this.$validator.validateAll().then((result) => {
-                        if (result) {
-                            let errors = this.errors;
-                            console.log("sending form data", this.form_data);
-                            send_data = {};
-                            // send_data.url = '/api/v1/contact_us';
-                            send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
-                            this.$store.dispatch("CONTACT_US", send_data).then(res => {
-                                // this.$router.replace({
-                                //     name: 'home'
-                                // })
-                                this.formSuccess = true;
-                            }).catch(error => {
-                                try {
-                                    if (error.response.status == 401) {
-                                        console.log("Data load error: " + error.message);
-                                        this.formError = true;
-                                    } 
-                                    else {
-                                        console.log("Data load error: " + error.message);
-                                        this.formError = true;
-                                    }
+                this.$validator.validateAll().then((result) => {
+                    if (result) {
+                        let errors = this.errors;
+                        console.log("sending form data", this.form_data);
+                        send_data = {};
+                        // send_data.url = '/api/v1/contact_us';
+                        send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
+                        this.$store.dispatch("CONTACT_US", send_data).then(res => {
+                            // this.$router.replace({
+                            //     name: 'home'
+                            // })
+                            this.formSuccess = true;
+                        }).catch(error => {
+                            try {
+                                if (error.response.status == 401) {
+                                    console.log("Data load error: " + error.message);
+                                    this.formError = true;
                                 } 
-                                catch (e) {
+                                else {
                                     console.log("Data load error: " + error.message);
                                     this.formError = true;
                                 }
-                            })
-                        }
-                    })
-                },
+                            } 
+                            catch (e) {
+                                console.log("Data load error: " + error.message);
+                                this.formError = true;
+                            }
+                        })
+                    }
+                })
+            },
                 serializeObject (obj) {
                     console.log(obj);
                     var newObj = [];
