@@ -61,7 +61,7 @@
                 <div class="" v-if="groupVisits">
                     <h2 class="tourism-title">Group Visits</h2>
                     <div class="margin-60" v-html="groupVisits.body"></div>
-                    <div class="tourism-newsletter-container margin-30">
+                    <div class="tourism-contact-container margin-30">
                         <form class="form-horizontal" action="form-submit" @submit.prevent="validateBeforeSubmit">
                             <div class="form-group ">
                                 <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('name')}">
