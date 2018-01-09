@@ -54,13 +54,14 @@
                     </div>
                     <div class="sidebar-container">
                         <h5>Find Us</h5>
-                        <p>
+                        <p class="uppercase">
                             {{property.name}}<br>
                             {{property.address1}}<br>
                             {{property.city}}, {{property.province_state}} {{property.postal_code}}<br>
                             {{property.contact_phone}}
                         </p>
-                        <p>Northpark Center Concierge<br>
+                        <p class="uppercase">
+                            Northpark Center Concierge<br>
                             {{property.contact_fax}}
                         </p>
                     </div>
