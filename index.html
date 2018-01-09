@@ -14,7 +14,7 @@
     </head>
     <body>
         <div id="app" v-cloak>
-            <div id="main-container">
+            <div id="main-container" v-bind:class="{ no-scroll: show_menu, no-scroll: show_search }">
                 <header :class="{ home: !isHomePage }">
                     <div class="page-container">
                         <div class="row">
