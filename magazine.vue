@@ -1,6 +1,6 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="margin-90"></div>
+        <div class="margin-90 hidden-mobile"></div>
         <div class="row margin-60">
             <div class="col-md-12">
                 <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=fdulola51&bgcolor=EEEEEE&t=1507751959" width="100%" height="580" seamless="seamless" scrolling="no" frameBorder="0" allowTransparency="true" allowFullScreen="true"></iframe>
