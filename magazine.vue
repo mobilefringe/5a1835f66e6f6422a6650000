@@ -29,11 +29,6 @@
                                 <input id="fieldEmail" name="cm-fldith-fldith" type="email" placeholder="Subscribe to Magazine" required />
                                 <button class="submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </form>
-    
-                            <!--<form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">-->
-                            <!--    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Subscribe to Magazine"/>-->
-                            <!--    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>-->
-                            <!--</form>-->
                         </div>
                     </div>
                 </div>
