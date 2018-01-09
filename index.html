@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        <div id="app" v-cloak :class="{ no-scroll: show_search }">
-            <div id="main-container">
+        <div id="app" v-cloak>
+            <div id="main-container" :class="{ no-scroll: show_search }">
                 <header :class="{ home: !isHomePage }">
                     <div class="page-container">
                         <div class="row">
