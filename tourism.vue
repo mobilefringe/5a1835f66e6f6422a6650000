@@ -214,7 +214,53 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-valid
             day_of_the_week: function day_of_the_week(val_day) {
                 weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 return weekday[val_day];
-            }
+            },
+            validateBeforeSubmit() {
+                    this.$validator.validateAll().then((result) => {
+                        if (result) {
+                            let errors = this.errors;
+                            console.log("sending form data", this.form_data);
+                            send_data = {};
+                            // send_data.url = '/api/v1/contact_us';
+                            send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
+                            this.$store.dispatch("CONTACT_US", send_data).then(res => {
+                                // this.$router.replace({
+                                //     name: 'home'
+                                // })
+                                this.formSuccess = true;
+                            }).catch(error => {
+                                try {
+                                    if (error.response.status == 401) {
+                                        console.log("Data load error: " + error.message);
+                                        this.formError = true;
+                                    } 
+                                    else {
+                                        console.log("Data load error: " + error.message);
+                                        this.formError = true;
+                                    }
+                                } 
+                                catch (e) {
+                                    console.log("Data load error: " + error.message);
+                                    this.formError = true;
+                                }
+                            })
+                        }
+                    })
+                },
+                serializeObject (obj) {
+                    console.log(obj);
+                    var newObj = [];
+                    // var counter = 0;
+                    _.forEach(obj, function(value, key) {
+                        var tempVal = {};
+                        tempVal.name = key;
+                        tempVal.value = value;
+                        // console.log(key);
+                        // counter ++;
+                        newObj.push(tempVal);
+                    });
+                    return newObj;
+                }
         }
     });
 });</script>
