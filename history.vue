@@ -50,7 +50,7 @@
                     <h2>The 50th Anniversary</h2>
                     <div class="visit-desc" v-if="anniversary" v-html="anniversary.body"></div>
                     <div class="hidden-mobile">
-                        <router-link to="/photo-gallery">
+                        <router-link to="/our-story/photo-gallery">
                             <p class="details-link">
                                 View 50th Anniversary Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             </p>
