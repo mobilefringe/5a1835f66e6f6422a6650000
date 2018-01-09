@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <hr class="hidden-now visibile-mobile">
+                <hr class="visible-mobile">
             </div>
             <div class="col-md-4">
                 <affix class="sidebar-affix" relative-element-selector="#currentPost">
