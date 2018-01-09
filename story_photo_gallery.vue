@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-6">
                 <div class="launch-gallery-container">
-                    <a :href="item.image_url" :data-lightbox="item.name">
+                    <a :href="" :data-lightbox="">
                         <h5>Launch Slideshow</h5>    
                     </a>
                 </div>
