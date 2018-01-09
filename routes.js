@@ -122,6 +122,16 @@ define([], function () {
                     component: view('tourism'),
                     name: 'tourism'
                 },
+                {
+                    path: 'pages/northpark-parking-valet-page',
+                    component: view('page_details'),
+                    name: 'pageDetails'
+                },
+                // {
+                //     path: '/visit/tourism',
+                //     component: view('tourism'),
+                //     name: 'tourism'
+                // },
             ],
         },
         {
