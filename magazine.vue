@@ -25,7 +25,7 @@
                         <h5>Subscribe</h5>
                         <p>Sign up to recieve a physical copy of NorthPark The Magazine.</p>
                         <div class="magazine-newsletter-container">
-                            <form action="https://mobilefringe.createsend.com/t/d/s/fldith/" method="post" id="magazineForm">
+                            <form @submit.prevent="validateBeforeSubmit" action="https://mobilefringe.createsend.com/t/d/s/fldith/" method="post" id="magazineForm">
                                 <input id="fieldEmail" name="cm-fldith-fldith" type="email" placeholder="Subscribe to Magazine" required />
                                 <button class="submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </form>
@@ -75,7 +75,38 @@
                 },
             },
             methods: {
-                
+                validateBeforeSubmit() {
+                    this.$validator.validateAll().then((result) => {
+                        if (result) {
+                            let errors = this.errors;
+                            console.log("sending form data", this.form_data);
+                            send_data = {};
+                            // send_data.url = '/api/v1/contact_us';
+                            send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
+                            this.$store.dispatch("CONTACT_US", send_data).then(res => {
+                                // this.$router.replace({
+                                //     name: 'home'
+                                // })
+                                this.formSuccess = true;
+                            }).catch(error => {
+                                try {
+                                    if (error.response.status == 401) {
+                                        console.log("Data load error: " + error.message);
+                                        this.formError = true;
+                                    } 
+                                    else {
+                                        console.log("Data load error: " + error.message);
+                                        this.formError = true;
+                                    }
+                                } 
+                                catch (e) {
+                                    console.log("Data load error: " + error.message);
+                                    this.formError = true;
+                                }
+                            })
+                        }
+                    })
+                },    
             }
         });
     });
