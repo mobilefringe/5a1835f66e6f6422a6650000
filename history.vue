@@ -17,7 +17,7 @@
                     <h2>The History of NorthPark</h2>
                     <div class="visit-desc" v-if="history" v-html="history.body"></div>
                     <div class="hidden-mobile">
-                        <router-link to="/photo-gallery">
+                        <router-link to="/our-story/photo-gallery">
                             <p class="details-link">
                                 View History Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             </p>
