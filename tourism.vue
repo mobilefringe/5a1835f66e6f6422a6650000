@@ -48,7 +48,7 @@
                     <div class="visit-desc" v-html="guestRewards.body"></div>
                     <div class="tourism-newsletter-container margin-30">
                         <form action="https://mobilefringe.createsend.com/t/d/s/fldilt/" method="post" id="tourismForm">
-                            <label for="fieldEmail">Email</label><br class="visible-mobile"/>
+                            <label for="fieldEmail">Email</label>
                             <div class="tourism-form">
                                 <input id="fieldEmail" name="cm-fldilt-fldilt" type="email" required />
                                 <button class="submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>    
