@@ -25,10 +25,15 @@
                         <h5>Subscribe</h5>
                         <p>Sign up to recieve a physical copy of NorthPark The Magazine.</p>
                         <div class="blog-newsletter-container">
-                            <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
-                                <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Subscribe to Magazine"/>
-                                <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            <form action="https://mobilefringe.createsend.com/t/d/s/fldith/" method="post" id="magazineForm">
+                                <input id="fieldEmail" name="cm-fldith-fldith" type="email" required />
+                                <button class="submit" type="submit">Subscribe</button>
                             </form>
+    
+                            <!--<form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">-->
+                            <!--    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Subscribe to Magazine"/>-->
+                            <!--    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>-->
+                            <!--</form>-->
                         </div>
                     </div>
                 </div>
