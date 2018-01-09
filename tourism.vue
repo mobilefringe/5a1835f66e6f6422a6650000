@@ -60,7 +60,7 @@
                 </div>
                 <div class="" v-if="groupVisits">
                     <h2 class="tourism-title">Group Visits</h2>
-                    <div class="margin-60" v-html="groupVisits.body"></div>
+                    <div class="margin-30" v-html="groupVisits.body"></div>
                     <div class="tourism-contact-container margin-30">
                         <form class="form-horizontal" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
                             <div class="form-group ">
