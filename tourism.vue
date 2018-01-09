@@ -47,11 +47,16 @@
                     <h2 class="tourism-title">Guest Rewards</h2>
                     <div class="visit-desc" v-html="guestRewards.body"></div>
                     <div class="tourism-newsletter-container margin-30">
-                        <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
-                            <label for="fieldEmail">Email</label>
-                            <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required>
-                            <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        <form action="https://mobilefringe.createsend.com/t/d/s/fldilt/" method="post" id="tourismForm">
+                            <label for="fieldEmail">Email</label><br />
+                            <input id="fieldEmail" name="cm-fldilt-fldilt" type="email" required />
+                            <button type="news-submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                         </form>
+                        <!--<form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">-->
+                        <!--    <label for="fieldEmail">Email</label>-->
+                        <!--    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required>-->
+                        <!--    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>-->
+                        <!--</form>-->
                     </div>
                     <hr class="hidden-mobile">
                     <div class="visible-mobile margin-120"></div>
