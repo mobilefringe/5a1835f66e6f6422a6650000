@@ -142,15 +142,8 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-bread
                 var restaurants = stores_by_category["Restaurants / Beverages"];
                 var specialty = stores_by_category["Specialty Foods"];
                 var all_restaurants = _.concat(cafes, restaurants, specialty);
-                var filtered_restaurants = _.uniqBy(all_restaurants, function (o) {
-                    return o.name;
-                });
-                filtered_restaurants = _.sortBy(filtered_restaurants, function (o) { return o.name })
-                _.forEach(filtered_restaurants, function (value, key) {
-                    
-                    console.log(value.name)
-                    
-                });
+                var filtered_restaurants = _.uniqBy(all_restaurants, function (o) { return o.name });
+                filtered_restaurants = _.sortBy(filtered_restaurants, function (o) { return o.name });
                 return filtered_restaurants;
             },
             restaurantData: function restaurantData() {
