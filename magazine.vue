@@ -80,13 +80,13 @@
                         if (result) {
                             let errors = this.errors;
                             console.log("sending form data", this.form_data);
-                            send_data = {};
-                            // send_data.url = '/api/v1/contact_us';
-                            send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
-                            this.$store.dispatch("CONTACT_US", send_data).then(res => {
-                                // this.$router.replace({
-                                //     name: 'home'
-                                // })
+                            // send_data = {};
+                            // // send_data.url = '/api/v1/contact_us';
+                            // send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
+                            // this.$store.dispatch("CONTACT_US", send_data).then(res => {
+                            //     // this.$router.replace({
+                            //     //     name: 'home'
+                            //     // })
                                 this.formSuccess = true;
                             }).catch(error => {
                                 try {
