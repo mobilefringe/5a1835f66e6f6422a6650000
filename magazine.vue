@@ -4,7 +4,7 @@
         <div class="row margin-60">
             <div class="col-md-12">
                 <iframe width="100%" height="500px" src="https://cdn.flipsnack.com/widget/v2/flipsnackwidget.html?hash=fdn3bis3z&bgcolor=EEEEEE&t=1501168503&p=3" frameboarder="0"></iframe>
-                <flipbook></flipbook>
+                <!--<flipbook></flipbook>-->
             </div>
         </div>
         <div class="row">
