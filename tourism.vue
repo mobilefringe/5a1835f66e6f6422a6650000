@@ -97,7 +97,9 @@
                         
                             <div class="form-group account-btn text-left m-t-10">
                                 <div class="col-xs-12">
-                                    <button class="submit" type="submit" :disabled="formSuccess">Submit</button>
+                                    <button class="submit" type="submit" :disabled="formSuccess">
+                                        Send <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </button>
                                 </div>
                             </div>
                         </form>
