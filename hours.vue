@@ -41,11 +41,6 @@
                         <div class="category-select-container right">
                             <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
                         </div>
-                        
-                        <!--<select class="hours-dine-select" v-model="selected">-->
-                        <!--    <option selected="selected" value="">{{selected}}</option>-->
-                        <!--    <option v-for="restaurant in restaurants" v-bind:value="restaurant.id">{{ restaurant.name }}</option>-->
-                        <!--</select>-->
                     </div>
                 </div>
             </div>
