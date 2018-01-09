@@ -145,7 +145,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-bread
                 var filtered_restaurants = _.uniqBy(all_restaurants, function (o) {
                     return o.name;
                 });
-                
+                filtered_restaurants = _.sortBy(filtered_restaurants, function (o) { return o.name })
                 _.forEach(filtered_restaurants, function (value, key) {
                     
                     console.log(value.name)
