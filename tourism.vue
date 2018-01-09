@@ -62,25 +62,56 @@
                     <h2 class="tourism-title">Group Visits</h2>
                     <div class="margin-60" v-html="groupVisits.body"></div>
                     <div class="tourism-newsletter-container margin-30">
-                        <form action="" method="post">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="">First Name</label>
-                                    <input class="" id="" name="" type="text" required>
+                        <form class="form-horizontal" action="form-submit" @submit.prevent="validateBeforeSubmit">
+                            <div class="form-group ">
+                                <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('name')}">
+                                    <label class="label" for="name">Name</label>
+                                    <input v-model="form_data.name" v-validate="'required|alpha_spaces'" class="form-control" :class="{'input': true}" name="name" type="text" data-vv-delay="1000">
+                                    <span v-show="errors.has('name')" class="form-control-feedback">{{ errors.first('name') }}</span>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="">Last Name</label>
-                                    <input class="" id="" name="" type="text" required>
+                                <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('email')}">
+                                    <label class="label" for="email">Email</label>
+                                    <input v-model="form_data.email" v-validate="'required|email'" class="form-control" :class="{'input': true}" name="email" type="email" data-vv-delay="1000">
+                                    <span v-show="errors.has('email')" class="form-control-feedback">{{ errors.first('email') }}</span>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="fieldEmail">Email</label>
-                                    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required>
-                                    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            <div class="form-group">
+                                <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('phone')}">
+                                    <label class="label" for="phone">Phone</label>
+                                    <input v-model="form_data.phone" v-validate="'required|alpha_dash'" class="form-control" :class="{'input': true}" name="phone" type="phone" placeholder="Phone" data-vv-delay="1000">
+                                    <span v-show="errors.has('phone')" class="form-control-feedback">{{ errors.first('phone') }}</span>
+                                </div>
+                                <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('subject')}">
+                                    <label class="label" for="subject">Subject</label>
+                                    <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000">
+                                    <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12" :class="{'has-error': errors.has('message')}">
+                                    <label class="label" for="message">Message</label>
+                                    <input v-model="form_data.message" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="message" type="text" placeholder="Message" data-vv-delay="1000">
+                                    <span v-show="errors.has('message')" class="form-control-feedback">{{ errors.first('message') }}</span>
+                                </div>
+                            </div>
+                        
+                            <div class="form-group account-btn text-left m-t-10">
+                                <div class="col-xs-12">
+                                    <button class="animated_btn" type="submit" :disabled="formSuccess">Submit</button>
                                 </div>
                             </div>
                         </form>
+                        
+                        <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
+                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            <span class="sr-only">Success</span>
+                            Thank you for contacting us. A member from our team will contact you shortly.
+                        </div>
+                        <div id="send_contact_error" class="alert alert-danger" role="alert" v-show="formError">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            There was an error when trying to submit your request. Please try again later.
+                        </div>
                     </div>
                     <hr class="hidden-mobile">
                     <div class="visible-mobile margin-120"></div>
@@ -108,8 +139,9 @@
 
 <script>
 
-define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, moment, tz, VueMoment, Meta) {
+define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate"], function (Vue, moment, tz, VueMoment, Meta, VeeValidate) {
     Vue.use(Meta);
+    Vue.use(VeeValidate);
     return Vue.component("visit-component", {
         template: template, // the variable template will be injected
         data: function data() {
