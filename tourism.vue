@@ -78,12 +78,12 @@
                             <div class="form-group">
                                 <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('phone')}">
                                     <label for="phone">Phone</label>
-                                    <input v-model="form_data.phone" class="form-control" :class="{'input': true}" name="phone" type="phone" data-vv-delay="1000">
+                                    <input v-model="form_data.phone" v-validate="'required|alpha_dash'" class="form-control" :class="{'input': true}" name="phone" type="phone" data-vv-delay="1000">
                                     <span v-show="errors.has('phone')" class="form-control-feedback">{{ errors.first('phone') }}</span>
                                 </div>
                                 <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('subject')}">
                                     <label for="subject">Subject</label>
-                                    <input v-model="form_data.subject"  class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000">
+                                    <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000">
                                     <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>
                                 </div>
                             </div>
@@ -127,6 +127,7 @@
                     <div class="" v-html="unionPay.body"></div>
                 </div>
             </div>
+            
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -225,12 +226,8 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-valid
                         let errors = this.errors;
                         console.log("sending form data", this.form_data);
                         send_data = {};
-                        // send_data.url = '/api/v1/contact_us';
                         send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
                         this.$store.dispatch("CONTACT_US", send_data).then(res => {
-                            // this.$router.replace({
-                            //     name: 'home'
-                            // })
                             this.formSuccess = true;
                         }).catch(error => {
                             try {
@@ -251,20 +248,17 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-valid
                     }
                 })
             },
-                serializeObject (obj) {
-                    console.log(obj);
-                    var newObj = [];
-                    // var counter = 0;
-                    _.forEach(obj, function(value, key) {
-                        var tempVal = {};
-                        tempVal.name = key;
-                        tempVal.value = value;
-                        // console.log(key);
-                        // counter ++;
-                        newObj.push(tempVal);
-                    });
-                    return newObj;
-                }
+            serializeObject (obj) {
+                console.log(obj);
+                var newObj = [];
+                _.forEach(obj, function(value, key) {
+                    var tempVal = {};
+                    tempVal.name = key;
+                    tempVal.value = value;
+                    newObj.push(tempVal);
+                });
+                return newObj;
+            }
         }
     });
 });</script>
