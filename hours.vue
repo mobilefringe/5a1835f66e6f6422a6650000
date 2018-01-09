@@ -25,7 +25,7 @@
                     </router-link>
                 </div>
                 <hr>
-                <div class="row">
+                <div class="row restaurant-hours-row">
                     <div class="col-md-6">
                         <h2 class="hours-restaurant-title">Restaurant Hours</h2>
                         <p v-if="!storeName">Please select a Store</p>
