@@ -26,7 +26,7 @@
                         <p>Sign up to recieve a physical copy of NorthPark The Magazine.</p>
                         <div class="magazine-newsletter-container">
                             <form action="https://mobilefringe.createsend.com/t/d/s/fldith/" method="post" id="magazineForm">
-                                <input id="fieldEmail" name="cm-fldith-fldith" type="email" required />
+                                <input id="fieldEmail" name="cm-fldith-fldith" type="email" placeholder="Subscribe to Magazine" required />
                                 <button class="submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </form>
     
