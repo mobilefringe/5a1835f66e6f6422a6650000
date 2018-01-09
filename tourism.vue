@@ -152,7 +152,12 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-valid
                 guestRewards: null,
                 groupVisits: null,
                 taxFreeShopping: null,
-                unionPay: null
+                unionPay: null,
+                form_data : {},
+                loginPending: null,
+                formSuccess : false,
+                formError: false,
+                time: new Date()
             };
         },
         beforeRouteEnter: function beforeRouteEnter(to, from, next) {
