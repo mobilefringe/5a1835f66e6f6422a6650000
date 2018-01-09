@@ -8,7 +8,11 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p>Launch</p>
+                <div class="launch-gallery-container">
+                    <a :href="item.image_url" :data-lightbox="item.name">
+                        <h5>Launch Slideshow</h5>    
+                    </a>
+                </div>
             </div>
         </div>
         <div class="row margin-60">
