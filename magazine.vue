@@ -11,12 +11,12 @@
             <div class="col-md-8">
                 <h2>The Magazine</h2>
                 <!--<div class="row">-->
-                    <slick class="magazine-slider" ref="slick" :options="slickOptions">
-                        <div v-for="item in magazines">
-                            <embed :src="item.image_url" width="150" height="190" type='application/pdf'>
-                            <h5 class="details-title">{{ item.title }}</h5>
-                        </div>
-                    </slick>
+                    <!--<slick class="magazine-slider" ref="slick" :options="slickOptions">-->
+                    <!--    <div v-for="item in magazines">-->
+                    <!--        <embed :src="item.image_url" width="150" height="190" type='application/pdf'>-->
+                    <!--        <h5 class="details-title">{{ item.title }}</h5>-->
+                    <!--    </div>-->
+                    <!--</slick>-->
                 <!--</div>-->
             </div>
             <div class="col-md-4">
