@@ -3,7 +3,7 @@
         <div class="margin-90"></div>
         <div class="row margin-60">
             <div class="col-md-12">
-                <iframe width="100%" height="500px" src="https://cdn.flipsnack.com/widget/v2/flipsnackwidget.html?hash=fdn3bis3z&bgcolor=EEEEEE&t=1501168503&p=3" frameboarder="0"></iframe>
+                <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=fdulola51&bgcolor=EEEEEE&t=1507751959" width="100%" height="580" seamless="seamless" scrolling="no" frameBorder="0" allowTransparency="true" allowFullScreen="true"></iframe>
                 <!--<flipbook></flipbook>-->
             </div>
         </div>
