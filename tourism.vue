@@ -49,14 +49,11 @@
                     <div class="tourism-newsletter-container margin-30">
                         <form action="https://mobilefringe.createsend.com/t/d/s/fldilt/" method="post" id="tourismForm">
                             <label for="fieldEmail">Email</label><br />
-                            <input id="fieldEmail" name="cm-fldilt-fldilt" type="email" required />
-                            <button type="news-submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            <div class="tourism-form">
+                                <input id="fieldEmail" name="cm-fldilt-fldilt" type="email" required />
+                                <button type="news-submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>    
+                            </div>
                         </form>
-                        <!--<form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">-->
-                        <!--    <label for="fieldEmail">Email</label>-->
-                        <!--    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required>-->
-                        <!--    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>-->
-                        <!--</form>-->
                     </div>
                     <hr class="hidden-mobile">
                     <div class="visible-mobile margin-120"></div>
