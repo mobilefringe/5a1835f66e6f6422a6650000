@@ -26,7 +26,8 @@
                                 {{property.city}}, {{property.province_state}} {{property.postal_code}}<br>
                                 {{property.contact_phone}}
                             </p>
-                            <p class="uppercase">Northpark Center Concierge <br>
+                            <p class="uppercase">
+                                Northpark Center Concierge <br>
                                 {{property.contact_phone}}
                             </p>
                             <router-link to="" active-class="active" exact>
