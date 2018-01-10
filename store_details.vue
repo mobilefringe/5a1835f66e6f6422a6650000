@@ -91,8 +91,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
-                        <span>{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
-                        <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        <span>{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                        <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
                         <span v-if="isNewStore"><router-link to="/new-doors">New Doors</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
                         <span v-if="!isNewStore || isDine"><router-link to="/dine">Dine</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
                         <span v-if="currentStore">{{currentStore.name }}</span>
@@ -149,6 +149,7 @@
                     var store_id = vm.currentStore.id
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
                         vm.currentDetails = response.data;
+                        console.log(vm.currentDetails)
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
