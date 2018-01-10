@@ -43,7 +43,7 @@
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
                         {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
-                        <span>{{ breadcrumb() }}</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        <span>{{ footerBreadcrumb() }}</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
                         <span v-if="currentPage">{{currentPage.title}}</span>
                             
                     </p>
@@ -111,7 +111,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
                 weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 return weekday[val_day];
             },
-            breadcrumb: function breadcrumb(){
+            breadcrumb: function footerBreadcrumb(){
                 return this.breadcrumb;
             }
         }
