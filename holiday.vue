@@ -191,7 +191,7 @@
                 //     }
                 // }
                 holidayMapDownload() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Holiday Map Download" })
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { console.log(o) return o.name == "Holiday Map Download" })
                     var map = _.filter(repo[0].images, function(o) { return o.name == "Holiday Map" });
                     console.log(map)
                     return map
