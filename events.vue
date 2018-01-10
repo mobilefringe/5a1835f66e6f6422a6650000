@@ -213,16 +213,16 @@
                     var events = this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
                     var mergeEvents = _.concat(events, promotions);
-                    var showEvents = [];
-                    _.forEach(mergeEvents, function(value, key) {
-                        var today = moment.tz(this.timezone).format("MM DD YYYY");
-                        console.log("Today", today)
-                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format("MM DD YYYY");
-                        console.log("Show Date", showOnWebDate )
-                        if(today >= showOnWebDate){
-                            showEvents.push(value);
-                        }
-                    });
+                    // var showEvents = [];
+                    // _.forEach(mergeEvents, function(value, key) {
+                    //     var today = moment.tz(this.timezone).format("MM DD YYYY");
+                    //     console.log("Today", today)
+                    //     var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format("MM DD YYYY");
+                    //     console.log("Show Date", showOnWebDate )
+                    //     if(today >= showOnWebDate){
+                    //         showEvents.push(value);
+                    //     }
+                    // });
                     
                     var vm = this;
                     var showEvents = [];
@@ -234,7 +234,7 @@
                             endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
                             // console.log(startDate, endDate)
                             if(startDate != endDate){
-                                return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
+                                return moment(today).isBetween(startDate, endDate, null, '[]');
                             }
                         }
                     });
