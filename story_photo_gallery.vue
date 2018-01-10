@@ -10,7 +10,7 @@
             <div class="col-md-6">
                 <div class="launch-gallery-container" v-if="currentSelection" v-for="(item, index) in currentSelection" :class="{ 'active': index === 0 }">
                     <a :href="item.image_url" :data-lightbox="currentSelection">
-                        <h5>Launch Slideshow</h5>    
+                        <h4>Launch Slideshow</h4>    
                     </a>
                 </div>
             </div>
