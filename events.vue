@@ -136,10 +136,10 @@
                     ],
                 }
             },
-            mounted () {
-                this.currentSelection = this.events;
-                console.log(this.currentSelection)
-            },
+            // mounted () {
+            //     this.currentSelection = this.events;
+            //     console.log(this.currentSelection)
+            // },
             watch: {
                 currentselection: function() {
                     console.log(this.currentSelection)    
