@@ -123,7 +123,7 @@ define([], function () {
                     name: 'tourism'
                 },
                 {
-                    path: 'pages/northpark-parking-valet-page',
+                    path: '/pages/northpark-parking-valet-page',
                     component: view('page_details'),
                     name: 'pageDetails'
                 },
