@@ -22,8 +22,7 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-container" v-if="currentPoint">
-                        <!--<h5 v-html="currentPoint.items[0].extra_details"></h5>-->
-                        <div v-html="currentPoint.items[0].extra_details"></div>
+                        <h5> parseDescription(currentPoint.items[0].extra_details) </h5>
                     </div>
                 </div>
             </div>
@@ -113,8 +112,16 @@
                 },
             },
             methods: {
-                
+                parseDescription: function parseDescription(desc){
+                    var description = desc
+                    console.log(description)
+                    var parsedDesc = _.replace([description, (/\r\n\r\n/g), ("</p><p>"))
+                    console.log(parseDesc)
+                }    
             }
         });
     });
 </script>
+
+parse_description = item.description_2.replace(/\r\n\r\n/g, "</p><p>").replace(/\n\n/g, "</p><p>");
+parse_description = parse_description.replace(/\r\n/g, "<br />").replace(/\n/g, "<br />");
