@@ -48,12 +48,12 @@
                         </div>
                         <div class="sidebar-container" v-if="currentStore && currentStore.keywords">
                             <h5>Ammenities</h5>
-                            <p>{{currentStore.keywords}}</p>
-                            <!--<ul>-->
-                            <!--    <li v-for="keyword in currentStore.keywords">-->
-                            <!--        {{ keyword }}   -->
-                            <!--    </li>-->
-                            <!--</ul>-->
+                            <!--<p>{{currentStore.keywords}}</p>-->
+                            <ul>
+                                <li v-for="keyword in currentStore.keywords">
+                                    {{ keyword }}   
+                                </li>
+                            </ul>
                         </div>
                         <div class="sidebar-container" v-if="currentStore && currentStore.manager_name">
                             <h5>Manager</h5>
