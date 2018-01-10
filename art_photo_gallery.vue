@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-6">
                 <div class="launch-gallery-container">
-                    <a :href="item.image_url" target="_blank">
+                    <a href="" target="_blank">
                         <h5 class="pull-right">Download Art Tour Map</h5>
                     </a>
                 </div>
