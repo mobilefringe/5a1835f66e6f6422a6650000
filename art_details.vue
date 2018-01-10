@@ -22,7 +22,8 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-container" v-if="currentPoint">
-                        <h5 v-html="currentPoint.items[0].extra_details"></h5>
+                        <!--<h5 v-html="currentPoint.items[0].extra_details"></h5>-->
+                        <div v-html="currentPoint.items[0].extra_details"></div>
                     </div>
                 </div>
             </div>
@@ -38,7 +39,6 @@
         </div>
     </div>
 </template>
-
 <style>
    .slick-slide img {
        max-height: 460px;
