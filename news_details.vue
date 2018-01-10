@@ -65,7 +65,7 @@
                             <hr class="visible-mobile">
                         </div>
                         <div class="sidebar-container">
-                            <h5>Get Connected</h5>
+                            <h5 class="related-post-title">Get Connected</h5>
                             <p class="sidebar-newsletter-info">Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
                             <div class="blog-newsletter-container">
                                 <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
