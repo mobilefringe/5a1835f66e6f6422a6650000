@@ -241,17 +241,16 @@ define([], function () {
                     name: 'pageDetails'
                 }
             ]
+        },
+        {
+            path: '/404',
+            name: '404',
+            component: view('notfoundcomponent')
+        },
+        {
+            path: '*',
+            redirect: '/404'
         }
-        // },
-        // {
-        //     path: '/404',
-        //     name: '404',
-        //     component: view('notfoundcomponent')
-        // },
-        // {
-        //     path: '*',
-        //     redirect: '/404'
-        // }
     ]
 
     /**
