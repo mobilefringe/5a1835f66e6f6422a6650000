@@ -31,8 +31,8 @@
         <div class="row">
             <div class="col-md-12">
                 <p class="page-breadcrumb">
-                    <span>{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
-                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                    <span>{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
                     <span v-if="currentPoint">{{currentPoint.name }}</span>
                 </p>
             </div>
