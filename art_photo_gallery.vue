@@ -8,7 +8,11 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h4 class="pull-right"><a href="">Download Art Tour Map</a></h4>
+                <div class="launch-gallery-container">
+                    <a :href="item.image_url" target="_blank">
+                        <h5 class="pull-right">Download Art Tour Map</h5>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="row margin-60">
