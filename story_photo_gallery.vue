@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-6">
                 <div class="launch-gallery-container" v-if="currentSelection" v-for="item in currentSelection">
-                    <a :href="item.image_url" :data-lightbox="currentSelection">
+                    <a :href="item[0].image_url" :data-lightbox="currentSelection">
                         <h5>Launch Slideshow</h5>    
                     </a>
                 </div>
