@@ -213,31 +213,17 @@
                     var events = this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
                     var mergeEvents = _.concat(events, promotions);
-                    // var showEvents = [];
-                    // _.forEach(mergeEvents, function(value, key) {
-                    //     var today = moment.tz(this.timezone).format("MM DD YYYY");
-                    //     console.log("Today", today)
-                    //     var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format("MM DD YYYY");
-                    //     console.log("Show Date", showOnWebDate )
-                    //     if(today >= showOnWebDate){
-                    //         showEvents.push(value);
-                    //     }
-                    // });
-                    
-                    var vm = this;
                     var showEvents = [];
-                    showEvents = _.filter(mergeEvents, function(val){
-                        var today = moment.tz(vm.timezone).format("MM DD YYYY");
-                        var showOnWebDate = moment(val.show_on_web_date).tz(vm.timezone).format("MM DD YYYY");
+                    _.forEach(mergeEvents, function(value, key) {
+                        var today = moment.tz(this.timezone).format("MM DD YYYY");
+                        console.log("Today", today)
+                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format("MM DD YYYY");
+                        console.log("Show Date", showOnWebDate )
                         if(today >= showOnWebDate){
-                            startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
-                            endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
-                            // console.log(startDate, endDate)
-                            if(startDate != endDate){
-                                return moment(today).isBetween(startDate, endDate, null, '[]');
-                            }
+                            showEvents.push(value);
                         }
                     });
+                    
                     console.log(showEvents)
                     // var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
                     // return showEvents
