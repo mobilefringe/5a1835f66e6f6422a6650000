@@ -226,7 +226,7 @@
                     
                     console.log(showEvents)
                     // var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
-                    // return showEvents
+                    return showEvents
                     // return sortedEvents
                 },
                 propertyEvents() {
