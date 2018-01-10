@@ -13,7 +13,6 @@
                         <ul class="sidebar-hours-list">
                             <li v-for="hour in hours">
                                {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                                
                             </li>
                         </ul> 
                         <router-link to="/hours" active-class="active" exact>
@@ -22,16 +21,18 @@
                     </div>
                     <div class="sidebar-container">
                         <h5 class="">Find Us</h5>
-                        <p class="sidebar-container">
+                        <p class="uppercase">
                             {{property.name}}<br>
                             {{property.address1}}<br>
                             {{property.city}}, {{property.province_state}} {{property.postal_code}}<br>
                             {{property.contact_phone}}
                         </p>
-                        <p class="sidebar-container">
-                            Northpark Center Concierge<br/>
+                        <p class="uppercase">
+                            Northpark Center Concierge<br>
                             {{property.contact_phone}}
                         </p>
+                    </div>
+                    <div class="sidebar-container">
                         <a class="details-link" href="https://www.google.com/maps/place/NorthPark+Center/@32.868225,-96.773204,15z/data=!4m5!3m4!1s0x0:0x95fc10ba98f7aad4!8m2!3d32.8680671!4d-96.7735128?hl=en-US" target="_blank">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
