@@ -231,8 +231,8 @@
                         var today = moment.tz(this.timezone).format("MM DD YYYY");
                         var showOnWebDate = moment.tz(val.show_on_web_date, this.timezone).format("MM DD YYYY");
                         if(today >= showOnWebDate){
-                            startDate = moment(val.start_date).tz(this.timezone).format("MM DD YYYY");
-                            endDate = moment(val.end_date).tz(this.timezone).format("MM DD YYYY");
+                            startDate = moment.tz(val.start_date, this.timezone).format("MM DD YYYY");
+                            endDate = moment.tz(val.end_date, this.timezone).format("MM DD YYYY");
                             // console.log(startDate, endDate)
                             if(startDate != endDate){
                                 return moment(today).isBetween(startDate, endDate, null, '[]');
