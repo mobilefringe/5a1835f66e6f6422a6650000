@@ -145,12 +145,8 @@
                     console.log(this.currentSelection)    
                 },
                 currentDate: function(){
-                    console.log(this.selectedDate)
                     var selectedDate = moment(this.selectedDate).format("MM DD YYYY");
-                    // .tz(this.selectedDate, this.timezone).format("MM DD YYYY")
-                    console.log(selectedDate)
-                    
-                     eventsList = [];
+                    var eventsList = [];
                     if(this.selected.value == "events"){
                         eventsList = this.propertyEvents;
                     } else if (this.selected.value == "promotions") {
@@ -160,6 +156,7 @@
                     } else {
                         eventsList = this.events
                     }
+                    
                     var vm = this;
                     var showEvents = [];
                     showEvents = _.filter(eventsList, function(val){
