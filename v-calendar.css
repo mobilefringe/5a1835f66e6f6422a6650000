@@ -412,7 +412,8 @@
     width: 100%
 }
 
-.c-header-wrapper[data-v-b35e463a] {
+/*.c-header-wrapper[data-v-b35e463a] {*/
+.c-header-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
