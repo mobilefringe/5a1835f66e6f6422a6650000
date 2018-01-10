@@ -44,7 +44,7 @@
                         autoplay: false,
                         cssEase: 'linear',
                         dots: false,
-                        slidesToShow: 4,
+                        slidesToShow: 1,
                         speed: 500,
                     }
                 }
