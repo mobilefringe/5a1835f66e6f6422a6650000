@@ -24,6 +24,7 @@
                         </router-link>    
                     </div>
                 </div>
+                <hr class="visible-mobile">
                 <div class="col-md-4">
                     <div class="sidebar">
                         <p class="quote">Every company has a special responsibility to enrich the lives of its customers and the community. It should serve as a catalyst to link art and business for the benefit of all.</p>
