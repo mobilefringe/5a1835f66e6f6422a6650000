@@ -145,7 +145,6 @@
                     // access to component instance via `vm`
                     //Get Store Details
                     vm.currentStore = vm.findStoreBySlug(to.params.id);
-                    console.log(vm.currentStore)
                     if (vm.currentStore === null || vm.currentStore === undefined){
                         vm.$router.replace({ name: '404'});
                     }
@@ -154,7 +153,6 @@
                     var store_id = vm.currentStore.id
                     vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
                         vm.currentDetails = response.data;
-                        console.log(vm.currentDetails)
                     }, error => {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         vm.$router.replace({ name: '404'});
@@ -178,7 +176,6 @@
             },
             watch: {
                 currentStore: function() {
-                    // console.log(this.currentStore)
                     var vm = this;
                     var storeHours = [];
                     _.forEach(this.currentStore.store_hours, function(value, key) {
