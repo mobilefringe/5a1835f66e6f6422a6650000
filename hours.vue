@@ -48,7 +48,7 @@
                 <div class="sidebar">
                     <div class="sidebar-container">
                         <h5>Holiday Hours</h5>
-                        <router-link tag="p" to="" active-class="active" exact>
+                        <router-link tag="p" to="/holiday" active-class="active" exact>
                             <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
                     </div>
