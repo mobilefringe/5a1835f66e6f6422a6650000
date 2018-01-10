@@ -163,7 +163,7 @@
                     var vm = this;
                     var showEvents = [];
                     showEvents = _.filter(eventsList, function(val){
-                        var today = moment.tz(this.timezone).format("MM DD YYYY");
+                        var today = moment.tz(vm.timezone).format("MM DD YYYY");
                         var showOnWebDate = moment(val.show_on_web_date).tz(vm.timezone).format("MM DD YYYY");
                         if(today >= showOnWebDate){
                             startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
