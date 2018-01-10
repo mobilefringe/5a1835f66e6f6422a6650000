@@ -58,6 +58,7 @@
                         </router-link>    
                     </div>
                 </div>
+                <hr class="visible-mobile">
                 <div class="col-md-4 col-md-pull-8">
                     <div class="sidebar-left">
                         <p class="quote">THE 50TH ANNIVERSARY OF NORTHPARK CENTER LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA AL.</p>
