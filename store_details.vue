@@ -47,8 +47,7 @@
                             </ul>
                         </div>
                         <div class="sidebar-container" v-if="currentStore && currentStore.keywords">
-                            <h5>Ammenities</h5>
-                            <!--<p>{{currentStore.keywords}}</p>-->
+                            <h5>Amenities</h5>
                             <ul>
                                 <li v-for="keyword in currentStore.keywords">
                                     {{ keyword }}   
