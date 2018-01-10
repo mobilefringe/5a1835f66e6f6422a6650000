@@ -103,7 +103,6 @@
             },
             methods: {
                 selectCategory(){
-                    console.log(this.selected)
                     if(this.selected.value == "history"){
                         this.currentSelection = this.historyGallery;
                     } else if (this.selected.value == "anniversary") {
