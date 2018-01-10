@@ -21,7 +21,7 @@
             </div>
             <div class="col-sm-4 col-md-3" v-if="currentSelection" v-for="item in currentSelection">
                 <div class="gallery-item-container">
-                    <a :href="item.image_url" :data-lightbox="item.name">
+                    <a :href="item.image_url" :data-lightbox="item">
                         <div class="gallery-image-container">
                             <img :src="item.image_url" />
                         </div>
