@@ -223,9 +223,9 @@
                     });
                     
                     console.log(showEvents)
-                    // var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
-                    return showEvents
-                    // return sortedEvents
+                    var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
+                    // return showEvents
+                    return sortedEvents
                 },
                 propertyEvents() {
                     var showEvents = [];
