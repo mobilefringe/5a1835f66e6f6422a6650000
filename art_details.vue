@@ -14,7 +14,7 @@
                     <div class="margin-30">
                         <h2>{{currentPoint.items[0].name}}</h2>
                         <h5>{{currentPoint.items[0].description}}</h5>
-                        <h4>Location</h4>    
+                        <h4>{{currentPoint.items[0].source}}</h4>    
                     </div>
                     <p class="details-description">{{currentPoint.items[0].description_2}}</p>
                 </div>
@@ -22,8 +22,7 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-container" v-if="currentPoint">
-                        <h5></h5>
-                        <p>This content needs to be added</p>
+                        <h5>{{currentPoint.items[0].extra_details}}</h5>
                     </div>
                 </div>
             </div>
