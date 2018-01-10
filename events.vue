@@ -224,10 +224,24 @@
                         }
                     });
                     
-                    
-                    var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
+                    var vm = this;
+                    var showEvents = [];
+                    showEvents = _.filter(eventsList, function(val){
+                        var today = moment.tz(vm.timezone).format("MM DD YYYY");
+                        var showOnWebDate = moment(val.show_on_web_date).tz(vm.timezone).format("MM DD YYYY");
+                        if(today >= showOnWebDate){
+                            startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
+                            endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
+                            // console.log(startDate, endDate)
+                            if(startDate != endDate){
+                                return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
+                            }
+                        }
+                    });
+                    console.log(showEvents)
+                    // var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
                     // return showEvents
-                    return sortedEvents
+                    // return sortedEvents
                 },
                 propertyEvents() {
                     var showEvents = [];
