@@ -18,9 +18,9 @@
         </div>
         
         <div class="page-container">
-            <div class="row ">
-                <div class="col-md-12">
-                    <div class="holiday-desc margin-60" v-if="currentPage" v-html="currentPage.body"></div>
+            <div class="row margin-60">
+                <div class="col-md-12 ">
+                    <div class="holiday-desc" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
                 <div class="col-md-12">
                     <div class="margin-60" v-if="sectionTwo">
