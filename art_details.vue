@@ -13,8 +13,8 @@
                 <div class="details-store-info">
                     <div class="margin-30">
                         <h2>{{currentPoint.items[0].name}}</h2>
-                        <h5>{{currentPoint.items[0].description}}</h5>
-                        <h4>{{currentPoint.items[0].source}}</h4>    
+                        <h5 class="art-detail-artist">{{currentPoint.items[0].description}}</h5>
+                        <h5 class="art-detail-location">{{currentPoint.items[0].source}}</h5>    
                     </div>
                     <p class="details-description">{{currentPoint.items[0].description_2}}</p>
                 </div>
