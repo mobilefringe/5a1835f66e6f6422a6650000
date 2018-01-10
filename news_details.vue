@@ -59,6 +59,7 @@
                             <h5 class="related-post-title">Related Blogs</h5>
                             <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
                                 <img class="related-post-img" :src="relatedPost.image_url"/>
+                                <div class="" v-bind:style="{ backgroundImage: 'url(' + relatedPost.image_url + ')' }"></div>
                                 <p>{{relatedPost.title }}</p>
                             </router-link>
                             <div class="visible-mobile margin-90"></div>
