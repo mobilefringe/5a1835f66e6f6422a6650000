@@ -61,6 +61,8 @@
             },
             mounted () {
                 this.currentSelection = this.pois;
+                this.artMapDownload
+                console.log(this.artMapDownload)
             },
             computed: {
                 property(){
