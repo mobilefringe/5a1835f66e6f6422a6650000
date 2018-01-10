@@ -23,7 +23,12 @@
                     <div class="holiday-desc" v-if="currentPage" v-html="currentPage.body"></div>
                 </div>
                 <div class="col-md-12">
-                    <div class="margin-60" v-if="sectionTwo">
+                    <div class="margin-60">
+                        <div class="art-download-container" v-if="artMapDownload" v-for="item in artMapDownload">
+                            <a :href="item.image_url" target="_blank">
+                                <h4>Download Art Tour Map</h4>
+                            </a>
+                        </div>
                         <a class="no-line" :href="sectionTwo.image_url" target="_blank">
                             <p class="holiday-download">Download Holiday Map</p>
                         </a>    
@@ -185,6 +190,11 @@
                 //         return holiday_events;
                 //     }
                 // }
+                holidayMapDownload() {
+                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Tour Map Download" })
+                    var map = _.filter(repo[0].images, function(o) { return o.name == "Art Tour Map" });
+                    return map
+                },
             },
             methods: {
                 checkEventDates(event){
