@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="launch-gallery-container" v-if="currentSelection > 1">
+                <div class="launch-gallery-container" v-if="currentSelection">
                     <a :href="currentSelection[0].image_url" :data-lightbox="item">
                         <h5>Launch Slideshow</h5>    
                     </a>
