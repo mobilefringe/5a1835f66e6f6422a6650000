@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="launch-gallery-container">
+                <div class="art-download-container">
                     <a href="" target="_blank">
                         <h5 class="pull-right">Download Art Tour Map</h5>
                     </a>
