@@ -14,7 +14,7 @@
                 </div>
             </div>
             <paginate name="currentSelection" v-if="currentSelection" :list="currentSelection" class="paginate-list margin-60">
-                <div class="row details-promo-container" v-for="blog in paginated('currentSelection')" v-if="currentSelection">
+                <div class="row details-promo-container" v-for="(blog, index) in paginated('currentSelection')" v-if="currentSelection" :class="{ 'no-line': index === (items.length - 1) }">
                     <div class="col-sm-12 col-md-6 col-md-push-6">
                         <div class="blog-image-container">
                             <img :src="blog.image_url" class="store_logo" alt="">    
@@ -203,11 +203,10 @@
                         }
                     });
                     return northpark_blog;
-                },
+                }
             },
             methods: {
                 selectCategory(){
-                    console.log(this.selected.value)
                     if(this.selected.value == "blogBeauty"){
                         this.currentSelection = this.blogBeauty;
                     } else if (this.selected.value == "blogCharity") {
