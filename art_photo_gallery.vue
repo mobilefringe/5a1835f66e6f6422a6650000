@@ -50,7 +50,6 @@
                     selected: "Sort Gallery",
                     currentSelection: null,
                     categoryOptions: [
-                        {'label':'Sort Gallery', 'value': 'title'},
                         {'label':'By Title', 'value': 'title'},
                         {'label':'Artist Name', 'value': 'artist'}
                     ],
