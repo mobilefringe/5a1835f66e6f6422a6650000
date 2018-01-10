@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="margin-60">
-                        <div class="art-download-container" v-if="artMapDownload" v-for="item in artMapDownload">
+                        <div class="holiday-download-container" v-if="holidayMapDownload" v-for="item in holidayMapDownload">
                             <a :href="item.image_url" target="_blank">
                                 <h4>Download Art Tour Map</h4>
                             </a>
