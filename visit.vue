@@ -186,7 +186,6 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
         },
         computed: {
             property: function property() {
-                console.log(this.$store.getters.getProperty)
                 return this.$store.getters.getProperty;
             },
             timezone: function timezone() {
