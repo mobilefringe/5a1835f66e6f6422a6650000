@@ -23,8 +23,8 @@
                             <!--<img :src="getMainImage(item)" />-->
                         </div>
                         <div class="gallery-content-container">
-                            <h5 class="details-title">{{item.name}}</h5>  
-                            <h5 class="details-title" v-html="item.description"></h5>
+                            <h5 class="art-gallery-title">{{item.name}}</h5>  
+                            <h5 class="art-gallery-artist" v-html="item.description"></h5>
                         </div>
                     </router-link>
                 </div>
