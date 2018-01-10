@@ -104,7 +104,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing", "vue-affix"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing, vueAffix) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing) {
 
         return Vue.component("news-details-component", {
             template: template, // the variable template will be injected,
