@@ -115,7 +115,7 @@ define([], function () {
                 {
                     path: '',
                     component: view('visit'),
-                    name: 'storeList'
+                    name: 'visit'
                 },
                 {
                     path: '/visit/tourism',
