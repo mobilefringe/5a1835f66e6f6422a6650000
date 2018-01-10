@@ -66,8 +66,6 @@
                         slidesToShow: 1,
                         speed: 1000,
                         variableWidth: true
-                        // prevArrow: '.prev',
-                        // nextArrow: '.next'
                     }
                 }
             },
