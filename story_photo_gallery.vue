@@ -26,7 +26,8 @@
                             <img :src="item.image_url" />
                         </div>
                         <div class="gallery-content-container">
-                            <h5 class="details-title">{{item.name}}</h5>        
+                            <h5 class="art-gallery-title">{{item.name}}</h5>  
+                            <h5 class="art-gallery-artist">{{item.description}}</h5>  
                         </div>
                     </a>
                 </div>
