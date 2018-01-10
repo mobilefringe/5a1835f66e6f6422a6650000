@@ -58,8 +58,8 @@
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
-                        centerMode: true,
-                        centerPadding: '20px',
+                        // centerMode: true,
+                        // centerPadding: '20px',
                         cssEase: 'linear',
                         dots: false,
                         infinite: true,
