@@ -18,7 +18,7 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-container">
-                        <h5>Need to add sidebar info</h5>
+                        <div v-html="currentBlog.caption"></div>
                     </div>
                 </div>
             </div>
