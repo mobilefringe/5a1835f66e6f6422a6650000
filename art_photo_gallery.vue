@@ -62,7 +62,6 @@
             mounted () {
                 this.currentSelection = this.pois;
                 this.artMapDownload
-                console.log(this.artMapDownload)
             },
             computed: {
                 property(){
@@ -86,6 +85,9 @@
                 artMapDownload() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Tour Map Download" })
                     console.log(repo)
+                    
+                    var map = _.filter(repo, function(o) { return o.name == "Art Tour Map Download" }
+                    console.log(map)
                     var repo_images = repo[0].images
                     return repo_images
                 },
