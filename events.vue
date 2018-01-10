@@ -235,7 +235,7 @@
                             endDate = moment(val.end_date).tz(this.timezone).format("MM DD YYYY");
                             // console.log(startDate, endDate)
                             if(startDate != endDate){
-                                return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
+                                return moment(today).isBetween(startDate, endDate, null, '[]');
                             }
                         }
                     });
