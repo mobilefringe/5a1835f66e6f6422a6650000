@@ -25,7 +25,7 @@
                         <div class="gallery-image-container">
                             <img :src="item.image_url" />
                         </div>
-                        <div class="gallery-content-container">
+                        <div class="gallery-content-container" v-if="item.name">
                             <h5 class="art-gallery-title">{{item.name}}</h5>  
                             <h5 class="art-gallery-artist">{{item.description}}</h5>  
                         </div>
