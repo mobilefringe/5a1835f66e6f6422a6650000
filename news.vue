@@ -29,7 +29,7 @@
                             </div>
                             <div class="col-sm-9 col-md-10">
                                 <p class="blog-category">{{ tagString(blog.tag) }}</p>
-                                <h2 class="">{{blog.title}}</h2> 
+                                <h2 class="blog-title">{{blog.title}}</h2> 
                                 <p class="blog-author">By {{blog.author}} | {{blog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
                                 <p class="details-promo-desc">{{ truncate(blog.body) }}</p> 
                                 <router-link :to="{ name: 'newsDetails', params: { id: blog.slug }}">
