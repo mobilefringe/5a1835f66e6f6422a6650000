@@ -148,7 +148,6 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
         },
         beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
             var _this = this;
-
             //Valet
             this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-parking-valet-page.json" }).then(function (response) {
                 _this.valet = response.data;
@@ -187,6 +186,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
         },
         computed: {
             property: function property() {
+                console.log(this.$store.getters.getProperty)
                 return this.$store.getters.getProperty;
             },
             timezone: function timezone() {
