@@ -41,16 +41,11 @@
                     currentBlog: null,
                     currentPost: null,
                     slickOptions: {
-                        // arrows: true,
                         autoplay: false,
                         cssEase: 'linear',
                         dots: false,
-                        // fade: true,
-                        // infinite: true,
                         slidesToShow: 4,
                         speed: 500,
-                    //     prevArrow: '.prev',
-                    //     nextArrow: '.next'
                     }
                 }
             },
