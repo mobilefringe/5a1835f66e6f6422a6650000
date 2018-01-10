@@ -13,7 +13,7 @@
         <div class="page-container">
             <div class="row">
                 <div class="col-sm-12 col-md-4 col-md-push-8">
-                    <affix class="sidebar-affix" relative-element-selector="#eventList">
+                    <!--<affix class="sidebar-affix" relative-element-selector="#eventList">-->
                         <div class="event-calendar-container">
                             <v-date-picker
                                 :is-expanded='isExpanded'
@@ -29,7 +29,7 @@
                         <div class="category-select-container right">
                             <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>    
                         </div>
-                    </affix>
+                    <!--</affix>-->
                 </div>
                 <div class="col-sm-12 col-md-8 col-md-pull-4">
                     <div id="eventList">
