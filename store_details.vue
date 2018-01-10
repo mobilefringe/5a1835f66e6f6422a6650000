@@ -141,6 +141,7 @@
                     // access to component instance via `vm`
                     //Get Store Details
                     vm.currentStore = vm.findStoreBySlug(to.params.id);
+                    console.log(vm.currentStore)
                     if (vm.currentStore === null || vm.currentStore === undefined){
                         vm.$router.replace({ name: '404'});
                     }
