@@ -56,7 +56,7 @@
                 <affix relative-element-selector="#currentPost">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
-                            <h5>Related Blogs</h5>
+                            <h5 class="related-post-title">Related Blogs</h5>
                             <router-link :to="{ name: 'newsDetails', params: { id: relatedPost.slug }}">
                                 <img class="related-post-img" :src="relatedPost.image_url"/>
                                 <p>{{relatedPost.title }}</p>
