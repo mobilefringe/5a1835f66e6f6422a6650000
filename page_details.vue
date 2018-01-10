@@ -41,7 +41,12 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> <span v-if="currentPage">{{currentPage.title}}</span></p>
+                    <p class="page-breadcrumb">
+                        {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        <span>breadcrumb();</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        <span v-if="currentPage">{{currentPage.title}}</span>
+                            
+                    </p>
                 </div>
             </div>
         </div>
@@ -105,6 +110,9 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
             day_of_the_week: function day_of_the_week(val_day) {
                 weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 return weekday[val_day];
+            },
+            breadcrumb: function breadcrumb(){
+                return this.breadcrumb;
             }
         }
     });
