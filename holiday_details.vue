@@ -4,8 +4,8 @@
         <div class="row margin-90" v-if="currentBlog.additional_images">
             <div class="col-md-12">
                 <slick ref="slick" :options="slickOptions">
-                    <div v-for="image in currentBlog.additional_images" v-if="historyBanners">
-                        <img :src="banner.image_url" class="" alt="">
+                    <div v-for="image in currentBlog.additional_images">
+                        <img :src="image.image_url" class="" alt="">
                     </div>
                 </slick>
             </div>
