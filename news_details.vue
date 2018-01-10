@@ -27,7 +27,7 @@
                             </social-sharing>
                         </div>
                         <h5 class="blog-details-category">{{ tagString(currentPost.tag) }}</h5>
-                        <h2 class="blog-details-title">{{currentPost.title}}</h2> 
+                        <h2 class="blog-details-name">{{currentPost.title}}</h2> 
                         <h5 class="blog-author">By {{currentPost.author}} | {{currentPost.publish_date | moment("MM-D-YYYY", timezone)}}</h5>
                     </div>
                     <div class="blog-details-content">
