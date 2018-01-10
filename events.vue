@@ -217,28 +217,17 @@
                     var promotions = this.$store.getters.processedPromos;
                     var mergeEvents = _.concat(events, promotions);
                     var showEvents = [];
-                    // _.forEach(mergeEvents, function(value, key) {
-                    //     var today = moment.tz(this.timezone).format("MM DD YYYY");
-                    //     console.log("Today", today)
-                    //     var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format("MM DD YYYY");
-                    //     console.log("Show Date", showOnWebDate )
-                    //     if(today >= showOnWebDate){
-                    //         showEvents.push(value);
-                    //     }
-                    // });
-                    
-                    showEvents = _.filter(mergeEvents, function(val){
+                    _.forEach(mergeEvents, function(value, key) {
                         var today = moment.tz(this.timezone).format("MM DD YYYY");
-                        var showOnWebDate = moment.tz(val.show_on_web_date, this.timezone).format("MM DD YYYY");
+                        console.log("Today", today)
+                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format("MM DD YYYY");
+                        console.log("Show Date", showOnWebDate )
                         if(today >= showOnWebDate){
-                            startDate = moment.tz(val.start_date, this.timezone).format();
-                            endDate = moment.tz(val.end_date, this.timezone).format();
-                            // console.log(startDate, endDate)
-                            if(startDate != endDate){
-                                return moment(today).isBetween(startDate, endDate, null, '[]');
-                            }
+                            showEvents.push(value);
                         }
                     });
+                    
+                    
                     var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
                     // return showEvents
                     return sortedEvents
