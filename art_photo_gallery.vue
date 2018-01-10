@@ -73,7 +73,10 @@
                     return sortByName
                 },
                 sortByArtist() {
-
+                    var name = "Art Tour";
+                    var pois = this.$store.getters.findPointOfInterest(name)
+                    var sortByArtist = _.orderBy(pois.locations, function(o) { return o.description });
+                    return sortByArtist
                 }
             },
             methods: {
