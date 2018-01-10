@@ -8,10 +8,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="launch-gallery-container">
-                    <!--<a :href="" :data-lightbox="">-->
+                <div v-if="currentSelection" class="launch-gallery-container">
+                    <a :href="item.image_url" :data-lightbox="item">
                         <h5>Launch Slideshow</h5>    
-                    <!--</a>-->
+                    </a>
                 </div>
             </div>
         </div>
