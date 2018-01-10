@@ -43,7 +43,7 @@
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
                         {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
-                        <span>breadcrumb();</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        <span>{{ breadcrumb() }}</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
                         <span v-if="currentPage">{{currentPage.title}}</span>
                             
                     </p>
