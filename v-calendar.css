@@ -468,11 +468,13 @@
     user-select: none
 }
 
-.c-header .c-arrow-layout .c-arrow[data-v-b35e463a]:hover {
+/*.c-header .c-arrow-layout .c-arrow[data-v-b35e463a]:hover {*/
+.c-header .c-arrow-layout .c-arrow:hover {
     opacity: .5
 }
 
-.c-header .c-title-layout[data-v-b35e463a] {
+/*.c-header .c-title-layout[data-v-b35e463a] {*/
+.c-header .c-title-layout {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
