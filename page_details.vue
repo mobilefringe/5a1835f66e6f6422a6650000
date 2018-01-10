@@ -79,7 +79,8 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
                 _this.currentPage = response.data;
                 console.log(_this.currentPage);
                 if(_this.currentPage.slug === "northpark-parking-valet-page"){
-                    console.log(Valet)
+                    this.breadcrumb = "Visit"
+                    console.log(this.breadcrumb)
                 }
             }, function (error) {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
