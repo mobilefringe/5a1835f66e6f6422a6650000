@@ -55,6 +55,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
         template: template, // the variable template will be injected,
         data: function data() {
             return {
+                breadcrumb: null,
                 currentPage: null
             };
         },
