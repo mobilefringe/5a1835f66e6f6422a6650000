@@ -229,10 +229,10 @@
                     
                     showEvents = _.filter(mergeEvents, function(val){
                         var today = moment.tz(this.timezone).format("MM DD YYYY");
-                        var showOnWebDate = moment(val.show_on_web_date).tz(vm.timezone).format("MM DD YYYY");
+                        var showOnWebDate = moment(val.show_on_web_date).tz(this.timezone).format("MM DD YYYY");
                         if(today >= showOnWebDate){
-                            startDate = moment(val.start_date).tz(vm.timezone).format("MM DD YYYY");
-                            endDate = moment(val.end_date).tz(vm.timezone).format("MM DD YYYY");
+                            startDate = moment(val.start_date).tz(this.timezone).format("MM DD YYYY");
+                            endDate = moment(val.end_date).tz(this.timezone).format("MM DD YYYY");
                             // console.log(startDate, endDate)
                             if(startDate != endDate){
                                 return moment(selectedDate).isBetween(startDate, endDate, null, '[]');
