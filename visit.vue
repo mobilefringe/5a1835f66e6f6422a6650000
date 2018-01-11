@@ -45,7 +45,9 @@
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr class="hidden-mobile">
-                        <div class="visible-mobile margin-120"></div>
+                        <div class="visible-mobile margin-120">
+                            <hr>    
+                        </div>
                     </div>
                     <div class="" v-if="concierge">
                         <h2 class="visit-title">Concierge</h2>
@@ -54,7 +56,9 @@
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr class="hidden-mobile">
-                        <div class="visible-mobile margin-120"></div>
+                        <div class="visible-mobile margin-120">
+                            <hr>    
+                        </div>
                     </div>
                     <div class="" v-if="giftCards">
                         <h2 class="visit-title">Northpark Gold &amp; Gift Cards</h2>
@@ -63,7 +67,9 @@
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr class="hidden-mobile">
-                        <div class="visible-mobile margin-120"></div>
+                        <div class="visible-mobile margin-120">
+                            <hr>    
+                        </div>
                     </div>
                     <div class="" v-if="tourism">
                         <h2 class="visit-title">Tourism</h2>
@@ -72,7 +78,9 @@
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr class="hidden-mobile">
-                        <div class="visible-mobile margin-120"></div>
+                        <div class="visible-mobile margin-120">
+                            <hr>    
+                        </div>
                     </div>
                     <div class="" v-if="contact">
                         <h2 class="visit-title">Contact</h2>
