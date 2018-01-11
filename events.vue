@@ -184,7 +184,6 @@
                     this.currentSelection = showEvents
                 },
                 selected: function() {
-                    // console.log(this.selected.value)
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected.value == "promotions"){
@@ -212,19 +211,20 @@
                     var events = this.$store.getters.processedEvents;
                     var promotions = this.$store.getters.processedPromos;
                     var mergeEvents = _.concat(events, promotions);
-                    var showEvents = [];
-                    _.forEach(mergeEvents, function(value, key) {
-                        var today = moment.tz(this.timezone).format();
-                        var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
-                        if(today >= showOnWebDate){
-                            showEvents.push(value);
-                        }
-                    });
+                    return mergeEvents
+                    // var showEvents = [];
+                    // _.forEach(mergeEvents, function(value, key) {
+                    //     var today = moment.tz(this.timezone).format();
+                    //     var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
+                    //     if(today >= showOnWebDate){
+                    //         showEvents.push(value);
+                    //     }
+                    // });
                     
-                    console.log(showEvents)
-                    var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
-                    // return showEvents
-                    return sortedEvents
+                    // console.log(showEvents)
+                    // var sortedEvents = _.orderBy(showEvents, function(o) { return o.end_date })
+                    // // return showEvents
+                    // return sortedEvents
                 },
                 propertyEvents() {
                     var showEvents = [];
