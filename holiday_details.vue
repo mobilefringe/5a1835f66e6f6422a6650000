@@ -1,31 +1,35 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div class="margin-90"></div>
-        <div class="row margin-90" v-if="currentBlog">
-            <div class="col-md-12">
-                <slick ref="slick" :options="slickOptions">
-                    <div v-for="image in currentBlog.additional_images">
-                        <img :src="image.image_url" class="" alt="">
-                    </div>
-                </slick>
-            </div>
-        </div>
-        <div class="row margin-90" v-if="currentBlog">
-            <div class="col-md-8">
-                <h2 class="">{{currentBlog.title}}</h2> 
-                <div v-html="currentBlog.html_body"></div>
-            </div>
-            <div class="col-md-4">
-                <div class="sidebar">
-                    <div class="sidebar-container">
-                        <div v-html="currentBlog.caption"></div>
-                    </div>
+    <div> <!-- without an outer container div this component template will not render -->
+        <div class="margin-90 hidden-mobile"></div>
+        <div class="image-container">
+            <div class="row margin-90" v-if="currentBlog">
+                <div class="col-md-12">
+                    <slick ref="slick" :options="slickOptions">
+                        <div v-for="image in currentBlog.additional_images">
+                            <img :src="image.image_url" class="" alt="">
+                        </div>
+                    </slick>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="currentBlog">{{currentBlog.title}}</span></p>
+        <div class="page-container">
+            <div class="row margin-90" v-if="currentBlog">
+                <div class="col-md-8">
+                    <h2 class="">{{currentBlog.title}}</h2> 
+                    <div v-html="currentBlog.html_body"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sidebar">
+                        <div class="sidebar-container">
+                            <div v-html="currentBlog.caption"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="currentBlog">{{currentBlog.title}}</span></p>
+                </div>
             </div>
         </div>
     </div>
