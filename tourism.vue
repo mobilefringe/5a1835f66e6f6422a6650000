@@ -119,18 +119,12 @@
                             There was an error when trying to submit your request. Please try again later.
                         </div>
                     </div>
-                    <hr class="hidden-mobile">
-                    <div class="visible-mobile margin-60">
-                        <hr>    
-                    </div>
+                    <hr>
                 </div>
                 <div class="" v-if="taxFreeShopping">
                     <h2 class="tourism-title">Tax-Free Shopping</h2>
                     <div class="margin-60" v-html="taxFreeShopping.body"></div>
-                    <hr class="hidden-mobile">
-                    <div class="visible-mobile margin-60">
-                        <hr>    
-                    </div>
+                    <hr>
                 </div>
                 <div class="margin-90" v-if="unionPay">
                     <h2 class="tourism-title">Union Pay</h2>
