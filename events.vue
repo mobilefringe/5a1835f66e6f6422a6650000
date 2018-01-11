@@ -190,8 +190,8 @@
                         this.currentSelection = this.storeEvents;
                     } else if (this.selected.value == "holiday"){
                         this.currentSelection = this.holidayEvents;
-                    } else {
-                        this.currentSelection = this.events
+                    // } else {
+                    //     this.currentSelection = this.events
                     }
                 }
             },
