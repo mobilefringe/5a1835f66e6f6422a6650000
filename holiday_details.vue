@@ -3,10 +3,9 @@
         <div class="margin-90 hidden-mobile"></div>
         <div class="image-container">
             <div v-if="currentBlog">
-
                 <slick ref="slick" :options="slickOptions">
                     <div v-for="image in currentBlog.additional_images">
-                        <img :src="image.image_url" class="" alt="">
+                        <img class="margin-60" :src="image.image_url" alt="Holiday Event Image">
                     </div>
                 </slick>
             </div>
