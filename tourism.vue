@@ -41,7 +41,9 @@
                     <h2 class="tourism-title">Tourism</h2>
                     <div class="margin-30" v-html="tourism.body"></div>
                     <hr class="hidden-mobile">
-                    <div class="visible-mobile margin-120"></div>
+                    <div class="visible-mobile margin-60">
+                        <hr>    
+                    </div>
                 </div>
                 <div class="" v-if="guestRewards">
                     <h2 class="tourism-title">Guest Rewards</h2>
@@ -56,7 +58,9 @@
                         </form>
                     </div>
                     <hr class="hidden-mobile">
-                    <div class="visible-mobile margin-120"></div>
+                    <div class="visible-mobile margin-60">
+                        <hr>    
+                    </div>
                 </div>
                 <div class="" v-if="groupVisits">
                     <h2 class="tourism-title">Group Visits</h2>
@@ -116,13 +120,17 @@
                         </div>
                     </div>
                     <hr class="hidden-mobile">
-                    <div class="visible-mobile margin-120"></div>
+                    <div class="visible-mobile margin-60">
+                        <hr>    
+                    </div>
                 </div>
                 <div class="" v-if="taxFreeShopping">
                     <h2 class="tourism-title">Tax-Free Shopping</h2>
                     <div class="margin-60" v-html="taxFreeShopping.body"></div>
                     <hr class="hidden-mobile">
-                    <div class="visible-mobile margin-120"></div>
+                    <div class="visible-mobile margin-60">
+                        <hr>    
+                    </div>
                 </div>
                 <div class="margin-90" v-if="unionPay">
                     <h2 class="tourism-title">Union Pay</h2>
