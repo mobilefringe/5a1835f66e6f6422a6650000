@@ -15,6 +15,9 @@
                 <div class="col-md-8">
                     <h2 class="">{{currentBlog.title}}</h2> 
                     <div v-html="currentBlog.html_body"></div>
+                    <div class="visible-mobile margin-30">
+                        <hr>    
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="sidebar">
