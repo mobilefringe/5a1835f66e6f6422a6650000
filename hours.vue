@@ -43,6 +43,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="visible-mobile margin-30">
+                    <hr>    
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
