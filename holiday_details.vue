@@ -2,14 +2,13 @@
     <div> <!-- without an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
         <div class="image-container">
-            <div class="row margin-90" v-if="currentBlog">
-                <div class="col-md-12">
-                    <slick ref="slick" :options="slickOptions">
-                        <div v-for="image in currentBlog.additional_images">
-                            <img :src="image.image_url" class="" alt="">
-                        </div>
-                    </slick>
-                </div>
+            <div v-if="currentBlog">
+
+                <slick ref="slick" :options="slickOptions">
+                    <div v-for="image in currentBlog.additional_images">
+                        <img :src="image.image_url" class="" alt="">
+                    </div>
+                </slick>
             </div>
         </div>
         <div class="page-container">
