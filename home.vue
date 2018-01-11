@@ -1,5 +1,5 @@
 <template>
-    <div>  <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div>  <!-- without an outer container div this component template will not render -->
         <div class="home-banner-container">
             <!-- DYNAMIC BANNERS -->
             <slick ref="slick" :options="slickOptions">
@@ -7,8 +7,6 @@
                     <div class="columns">
                         <router-link :to="banner.url" class="">
                             <div class="home-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
-                            <!--<div class="hero-text">{{ banner.name }}</div>-->
-                            <!--<div class="hero-text">The Art of Shopping</div>-->
                         </router-link>
                     </div>
                 </div>
@@ -17,7 +15,6 @@
         </div>
     </div>
 </template>
-
 <script>
     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
         Vue.use(Meta);
