@@ -12,8 +12,12 @@
                             <h2 class="details-store-name">{{currentEvent.name}}</h2>
                             <h5 class="details-dates">{{ checkEventDates() }}</h5>
                             <p class="details-description">{{currentEvent.description}}</p>
-                        </div>    
+                        </div> 
+                        <div class="visible-mobile margin-30">
+                            <hr>    
+                        </div>
                     </div>
+                    
                     <div class="col-md-4">
                         <div class="sidebar">
                             <div class="sidebar-container" v-if="currentEvent">
