@@ -45,7 +45,7 @@
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr class="hidden-mobile">
-                        <div class="visible-mobile margin-120">
+                        <div class="visible-mobile margin-60">
                             <hr>    
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr class="hidden-mobile">
-                        <div class="visible-mobile margin-120">
+                        <div class="visible-mobile margin-60">
                             <hr>    
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr class="hidden-mobile">
-                        <div class="visible-mobile margin-120">
+                        <div class="visible-mobile margin-60">
                             <hr>    
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                         </router-link>
                         <hr class="hidden-mobile">
-                        <div class="visible-mobile margin-120">
+                        <div class="visible-mobile margin-60">
                             <hr>    
                         </div>
                     </div>
