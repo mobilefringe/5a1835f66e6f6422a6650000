@@ -22,12 +22,12 @@
                     </div>
                     <div class="col-sm-12 col-md-6 col-md-pull-6">
                         <div class="row">
-                            <div class="col-sm-3 col-md-2">
+                            <div class="hidden-xs col-sm-2">
                                 <p class="details-promo-date">{{blog.publish_date | moment("ddd", timezone)}}</p>
                                 <p class="details-promo-day">{{blog.publish_date | moment("D", timezone)}}</p>
                                 <p class="details-promo-date">{{blog.publish_date | moment("MMM", timezone)}}</p>
                             </div>
-                            <div class="col-sm-9 col-md-10">
+                            <div class="col-sm-10">
                                 <p class="blog-category">{{ tagString(blog.tag) }}</p>
                                 <h2 class="blog-title">{{blog.title}}</h2> 
                                 <p class="blog-author">By {{blog.author}} | {{blog.publish_date | moment("MM-D-YYYY", timezone)}}</p>
