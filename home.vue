@@ -5,9 +5,9 @@
             <slick ref="slick" :options="slickOptions">
                 <div v-for="banner in homeBanners" v-if="homeBanners">
                     <div class="columns">
-                        <router-link :to="banner.url" class="">
+                        <!--<router-link :to="banner.url" class="">-->
                             <div class="home-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
-                        </router-link>
+                        <!--</router-link>-->
                     </div>
                 </div>
             </slick>
