@@ -41,7 +41,7 @@
                             <h5>Hours</h5>
                             <ul class="details-hours-list">
                                 <li v-for="hour in hours">
-                                   {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                   {{moment.weekday(hour.day_of_week).format('dddd'}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </span>
                                 </li>
                             </ul>
@@ -235,13 +235,6 @@
                 truncate(val_description){
                     var truncate = _.truncate(val_description, { 'length': 249, 'separator': ' ' });
                     return truncate;
-                },
-                isLast(){
-                        
-                },
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
                 }
             }
         });
