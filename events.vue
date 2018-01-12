@@ -138,6 +138,7 @@
             },
             mounted () {
                 this.currentSelection = this.events;
+                console.log(this.$store.getters.processedEvents);
             },
             watch: {
                 currentselection: function() {
@@ -210,10 +211,10 @@
                 },
                 events() {
                     var events = this.$store.getters.processedEvents;
-                    var promotions = this.$store.getters.processedPromos;
-                    var mergeEvents = _.concat(events, promotions);
+                    // var promotions = this.$store.getters.processedPromos;
+                    // var mergeEvents = _.concat(events, promotions);
                     var showEvents = [];
-                    _.forEach(mergeEvents, function(value, key) {
+                    _.forEach(events, function(value, key) {
                         var today = moment.tz(this.timezone).format();
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if(today >= showOnWebDate){
@@ -227,6 +228,7 @@
                     return sortedEvents
                 },
                 propertyEvents() {
+                    var propertyEvents = _.filter(this.$store.getters.processedEvents, function(o) { return o.name == "Events" })
                     var showEvents = [];
                     _.forEach(this.$store.getters.processedEvents, function(value, key) {
                         var today = moment.tz(this.timezone).format();
