@@ -211,6 +211,7 @@
                 },
                 events() {
                     var events = this.$store.getters.processedEvents;
+                    console.log(events);
                     // var promotions = this.$store.getters.processedPromos;
                     // var mergeEvents = _.concat(events, promotions);
                     var showEvents = [];
