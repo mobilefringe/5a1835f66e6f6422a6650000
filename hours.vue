@@ -135,9 +135,9 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-bread
             });
         },
         computed: {
-            // property: function property() {
-            //     return this.$store.getters.getProperty;
-            // },
+            property: function property() {
+                return this.$store.getters.getProperty;
+            },
             timezone: function timezone() {
                 return this.$store.getters.getTimezone;
             },
