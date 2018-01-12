@@ -102,7 +102,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-bread
             };
         },
         created(){
-            this.$store.dispatch("getData", "categories").then(response => {
+            this.$store.dispatch("getData", "hours").then(response => {
                 this.dataLoaded = true
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
