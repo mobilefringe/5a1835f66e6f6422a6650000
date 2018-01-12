@@ -142,7 +142,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-bread
                 return this.$store.getters.getTimezone;
             },
             hours: function hours() {
-                var hours = _.filter(getPropertyHours(), function (o) {
+                var hours = _.filter(this.$store.dispatch("getData", "hours");, function (o) {
                     return o.store_ids == null && o.is_holiday == 0;
                 });
                 return hours;
