@@ -108,10 +108,6 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
             }
         },
         methods: {
-            day_of_the_week: function day_of_the_week(val_day) {
-                weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                return weekday[val_day];
-            },
             footerBreadcrumb: function footerBreadcrumb(){
                 return this.breadcrumb;
             }
