@@ -92,6 +92,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-bread
         template: template, // the variable template will be injected
         data: function data() {
             return {
+                dataLoaded: false,
                 breadcrumb: null,
                 currentPage: null,
                 selected: "Select a Restaurant",
@@ -99,6 +100,13 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vue-bread
                 storeName: "",
                 storeHoursById: []
             };
+        },
+        created(){
+            this.$store.dispatch("getData", "categories").then(response => {
+                this.dataLoaded = true
+            }, error => {
+                console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            });
         },
         mounted: function mounted() {
             this.restaurant, this.restaurantData;
