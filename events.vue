@@ -150,18 +150,15 @@
             },
             mounted () {
                 this.currentSelection = this.events;
-                this.events;
-                console.log(this.events);
             },
             watch: {
-                currentselection: function() {
-                    console.log(this.currentSelection)    
-                },
                 currentDate: function(){
                     var selectedDate = moment(this.selectedDate).format("MM DD YYYY");
                     var eventsList = [];
-                    if(this.selected.value == "events"){
-                        eventsList = this.propertyEvents;
+                    if(this.selected.value == "all_events"){
+                        this.currentSelection = this.events
+                    } else if(this.selected.value == "events"){
+                        this.currentSelection = this.propertyEvents;
                     } else if (this.selected.value == "promotions") {
                         eventsList = this.storeEvents;
                     } else if (this.selected.value == "holiday"){
