@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded" class="page-container"> <!-- without an outer container div this component template will not render -->
         <div class="margin-90"></div>
         <div class="row">
             <div class="col-md-4 col-md-push-8">
@@ -146,7 +146,7 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
         template: template, // the variable template will be injected
         data: function data() {
             return {
-                dataLoaded: null,
+                dataLoaded: false,
                 breadcrumb: null,
                 mainPage: null,
                 tourism: null,
