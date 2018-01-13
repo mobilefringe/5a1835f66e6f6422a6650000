@@ -23,7 +23,7 @@
          return {
          }
         },
-        created(){
+        mounted(){
           console.log(this.$route)
         }
     });
