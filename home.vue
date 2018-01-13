@@ -64,7 +64,7 @@
             },
             computed: {
                 homeBanners() {
-                    return _.orderBy(this.$store.state.results.banners, ['position'], ['asc']);
+                    return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 },
                 ...Vuex.mapGetters([
                     'property'
