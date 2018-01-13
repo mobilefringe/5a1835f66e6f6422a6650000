@@ -208,20 +208,20 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'getPropertyHours',
-                    'storesByCategoryName'
+                    'findRepoByName',
+                    'processedEvents',
                 ]),
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                },
-                eventsBanners() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Events" })
-                    var repo_images = repo[0].images
-                    return repo_images
-                },
+                // property(){
+                //     return this.$store.getters.getProperty;
+                // },
+                // timezone() {
+                //     return this.$store.getters.getTimezone;
+                // },
+                // eventsBanners() {
+                //     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Events" })
+                //     var repo_images = repo[0].images
+                //     return repo_images
+                // },
                 events() {
                     var events = this.$store.getters.processedEvents;
                     console.log(events);
