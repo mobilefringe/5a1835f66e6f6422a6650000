@@ -12,7 +12,6 @@
                             <ul class="sidebar-hours-list">
                                 <li v-if="getPropertyHours" v-for="hour in getPropertyHours">
                                    {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                                   <!--day_of_the_week(hour.day_of_week)-->
                                 </li>
                             </ul> 
                             <router-link to="/hours" active-class="active" exact>
@@ -121,7 +120,6 @@ define(["Vue", "vuex", "vue-meta"], function (Vue, Vuex, Meta) {
         },
         created(){
             this.$store.dispatch("getData", "repos").then(response => {
-                console.log(this.$store.dispatch("getData", "repos"));
                 this.dataLoaded = true
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
