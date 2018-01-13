@@ -220,11 +220,7 @@ define(["Vue", "vuex", "vue-meta"], function (Vue, Vuex, Meta) {
             truncate: function truncate(val_body) {
                 var truncate = _.truncate(val_body, { 'length': 350, 'separator': ' ' });
                 return truncate;
-            },
-            // day_of_the_week: function day_of_the_week(val_day) {
-            //     weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            //     return weekday[val_day];
-            // }
+            }
         }
     });
 });</script>
