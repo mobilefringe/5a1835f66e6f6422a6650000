@@ -203,7 +203,7 @@
 </template>
 
 <script>
-    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox"], function(Vue, jQuery, moment, tz, VueMoment, Meta, Lightbox) {
+    define(["Vue", "vuex", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, moment, tz, VueMoment, Meta, Lightbox) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         return Vue.component("art-component", {
@@ -214,6 +214,7 @@
                     currentPage: null,
                 }
             },
+            /*
             mounted () {
                 this.images
             },
@@ -237,10 +238,21 @@
                     this.$router.replace({ name: '404'});
                 });
             },
+            */
+            created(){
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-about-the-collection.json"}).then(response => {
+                    this.currentPage = response.data;
+                    console.log(this.currentPage);
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
+            },
             computed: {
-                property() {
-                    return this.$store.getters.getProperty;
-                },
+                ...Vuex.mapGetters([
+                    'property',
+                    'repos'
+                ]),
                 images() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
                     var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
