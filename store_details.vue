@@ -108,7 +108,7 @@
 </template>
 
 <script>
-     define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick){
+     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, Vuex, moment, tz, VueMoment, Meta, slick){
         Vue.use(Meta);
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
