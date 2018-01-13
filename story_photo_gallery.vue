@@ -88,10 +88,10 @@
                     // return this.findRepoByName(" ").images
                 },
                 landscapingGallery() {
-                    // return this.findRepoByName("landscaping slideshow").images
+                    return this.findRepoByName("landscaping slideshow").images
                 },
                 architectureGallery() {
-                    // return this.findRepoByName("architecture slideshow").images
+                    return this.findRepoByName("architecture slideshow").images
                 },
             },
             methods: {
