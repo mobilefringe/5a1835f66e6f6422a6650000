@@ -219,7 +219,7 @@
                 ]),
                 eventsBanners() {
                     // this.findRepoByName('photos').images;
-                    var repo = this.$store.getters.findRepoByName("Events").images;
+                    var repo = this.$store.getters.findRepoByName();
                     console.log(repo)
                     var repo_images = repo[0].images
                     return repo_images
