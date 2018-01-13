@@ -209,13 +209,14 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
                 'getPropertyHours',
                 'findRepoByName',
             ]),
-            // pageBanner: function pageBanner() {
+            pageBanner: function pageBanner() {
+                console.log(this.getPropertyHours)
             //     var repo = _.filter(this.$store.state.results.repos, function (o) {
             //         return o.name == "Tourism";
             //     });
             //     var repo_images = repo[0].images[0];
             //     return repo_images;
-            // }
+            }
         },
         methods: {
             // day_of_the_week: function day_of_the_week(val_day) {
