@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded" class="page-container"> <!-- without an outer container div this component template will not render -->
         <div class="margin-60"></div>
         <div class="row margin-30">
             <div class="col-md-6">
@@ -42,15 +42,13 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "lightbox"], function(Vue, Vuex, moment, tz, VueMoment, Meta, vSelect, Lightbox) {
+    define(["Vue", "vuex", "vue-meta", "v-select", "lightbox"], function(Vue, Vuex, Meta, vSelect, Lightbox) {
         Vue.use(Meta);
-        // Vue.use(Lightbox);
-        
         return Vue.component("story-photo-gallery-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    dataLoaded: null,
+                    dataLoaded: false,
                     breadcrumb: null,
                     selected: "History",
                     currentSelection: null,
@@ -76,6 +74,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
+                    'repos',
                     'findRepoByName'
                 ]),
                 historyGallery() {
