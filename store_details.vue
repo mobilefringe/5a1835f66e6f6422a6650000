@@ -142,6 +142,7 @@
                 }
                 
                 //Stores JSON
+                var store_id = this.currentStore.id
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
                     this.currentDetails = response.data;
                 }, error => {
