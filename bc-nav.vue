@@ -20,7 +20,11 @@
 <script>
   define(["Vue"], function(Vue) {
     return Vue.component('bc-nav', {
-    
+        template: template,
+        data() {
+         return {
+         }
+        }
     });
   });
 </script>
