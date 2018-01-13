@@ -26,11 +26,11 @@
                             </div>
                             <div class="col-xs-6 col-sm-9">
                                 <div class="menu-icons">
-                                    <div @click="show_search = !show_search" :class="{ open: show_search }" id="search-icon">
+                                    <div @click="show_search = !show_search" :class="{ open: show_search, hidden: show_menu }" id="search-icon">
                                         <span class="circle"></span>
                                         <span class="handle"></span>
                                     </div>
-                                    <div @click="show_menu = !show_menu" :class="{ open: show_menu }" id="menu-icon">
+                                    <div @click="show_menu = !show_menu" :class="{ open: show_menu, hidden: show_search }" id="menu-icon">
                                         <span></span>
                                         <span></span>
                                         <span></span>
