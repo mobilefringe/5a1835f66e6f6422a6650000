@@ -68,9 +68,9 @@
             created(){
                 this.$store.dispatch("getData", "events").then(response => {
                     this.currentEvent = this.findEventBySlug(this.id);
-                    if (this.currentEvent === null || this.currentEvent === undefined){
-                        this.$router.replace({ name: '404'});
-                    }
+                    // if (this.currentEvent === null || this.currentEvent === undefined){
+                    //     this.$router.replace({ name: '404'});
+                    // }
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
