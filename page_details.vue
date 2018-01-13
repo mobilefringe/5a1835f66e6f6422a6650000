@@ -64,8 +64,6 @@
                     currentPage: null
                 };
             },
-
-            
             beforeRouteEnter: function beforeRouteEnter(to, from, next) {
                 next(function (vm) {
                     // access to component instance via `vm`
