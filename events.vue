@@ -74,7 +74,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "v-calendar", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "v-calendar", "vue!vue-slick"], function(Vue, Vuex, moment, tz, VueMoment, Meta, vSelect, VCalendar, slick) {
         Vue.use(Meta);
         Vue.use(VCalendar.default);
 
