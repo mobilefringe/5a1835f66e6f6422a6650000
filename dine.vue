@@ -84,7 +84,8 @@
                     return this.$store.getters.getTimezone;
                 },
                 all_dine(){
-                    var stores_by_category = this.$store.getters.storesByCategoryName;
+                    var stores_by_category = this.storesByCategoryName;
+                    console.log(stores_by_category)
                     var cafes = stores_by_category["NorthPark Cafés"]
                     var restaurants = stores_by_category["Restaurants / Beverages"]
                     var specialty = stores_by_category["Specialty Foods"]
