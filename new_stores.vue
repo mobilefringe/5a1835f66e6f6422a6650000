@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded" class="page-container"> <!-- without an outer container div this component template will not render -->
         <div class="margin-42"></div>
         <div v-if="findNewStores" class="">
             <div class="row margin-30">
@@ -24,7 +24,7 @@
                             <h5>Hours</h5>
                             <ul class="details-hours-list">
                                 <li v-for="hour in storeHours(store.store_hours)">
-                                   {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                   {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </span>
                                 </li>
                             </ul>
@@ -108,12 +108,8 @@
                         storeHours.push(vm.findHourById(value));
                     });
                     return storeHours
-                },
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
                 }
-            },
+            }
         });
     });
 </script>
