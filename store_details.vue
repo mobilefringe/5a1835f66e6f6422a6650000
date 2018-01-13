@@ -189,35 +189,35 @@
             //     });
             // },
             watch: {
-                currentStore: function() {
-                    // var vm = this;
-                    // var storeHours = [];
-                    // _.forEach(this.currentStore.store_hours, function(value, key) {
-                    //     storeHours.push(vm.findHourById(value));
-                    // });
-                    // this.hours = storeHours;
+                // currentStore: function() {
+                //     // var vm = this;
+                //     // var storeHours = [];
+                //     // _.forEach(this.currentStore.store_hours, function(value, key) {
+                //     //     storeHours.push(vm.findHourById(value));
+                //     // });
+                //     // this.hours = storeHours;
                     
-                    if(this.currentStore.category_name != null) {
-                        var category_name = this.currentStore.category_name
-                        if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
-                            this.isDine = true;
-                        } else {
-                            this.isDine = false;
-                        }    
-                    }
+                //     if(this.currentStore.category_name != null) {
+                //         var category_name = this.currentStore.category_name
+                //         if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
+                //             this.isDine = true;
+                //         } else {
+                //             this.isDine = false;
+                //         }    
+                //     }
                     
-                    if(this.currentStore.is_coming_soon_store == true) {
-                        this.isNewStore = true;
-                    } else {
-                        this.isNewStore = false;
-                    }    
+                //     if(this.currentStore.is_coming_soon_store == true) {
+                //         this.isNewStore = true;
+                //     } else {
+                //         this.isNewStore = false;
+                //     }    
                     
-                    var promos = [];
-                    _.forEach(this.currentStore.promotions, function(value, key) {
-                        promos.push(vm.findPromoById(value));
-                    });
-                    this.promotions = promos;
-                },
+                //     var promos = [];
+                //     _.forEach(this.currentStore.promotions, function(value, key) {
+                //         promos.push(vm.findPromoById(value));
+                //     });
+                //     this.promotions = promos;
+                // },
                 currentDetails: function() {
                     var vm = this;
                     var store_assets = [];
