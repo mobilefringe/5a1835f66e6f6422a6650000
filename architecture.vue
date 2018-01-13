@@ -210,16 +210,24 @@
 </template>
 
 <script>
-    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox"], function(Vue, jQuery, moment, tz, VueMoment, Meta, Lightbox) {
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, Meta, Lightbox) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         return Vue.component("architecture-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: null,
                     breadcrumb: null,
-                    currentPage: null,
+                    currentPage: null
                 }
+            },
+            created(){
+                this.$store.dispatch("getData", "repos").then(response => {
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
@@ -241,13 +249,16 @@
                 });
             },
             computed: {
-                property() {
-                    return this.$store.getters.getProperty;
-                },
+                ...Vuex.mapGetters([
+                    'property',
+                    'findRepoByName',
+                ]),
                 images() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Architecture" })
-                    var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
-                    return repo_images
+                    // var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Architecture" })
+                    // var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
+                    // return repo_images
+                    
+                    return this.findRepoByName("Architecture").images
                 },
                 sectionOne(){
                     var sectionID = 35580
