@@ -22,6 +22,9 @@
         data() {
          return {
          }
+        },
+        created(){
+          console.log(this.$route)
         }
     });
   });
