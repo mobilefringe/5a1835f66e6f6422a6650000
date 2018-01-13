@@ -44,7 +44,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment"], function(Vue, moment, tz, VueMoment) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
         return Vue.component("event-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
@@ -64,23 +64,23 @@
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
             },
-            beforeRouteEnter (to, from, next) {
-                next(vm => {
-                    // access to component instance via `vm`
-                    vm.currentEvent = vm.findEventBySlug(to.params.idEvent);
-                    if(vm.currentEvent === null || vm.currentEvent === undefined){
-                        vm.$router.replace({ name: '404'});
-                    }
-                    console.log(vm.currentEvent)
-                })
-            },
-            beforeRouteUpdate (to, from, next) {
-                this.currentEvent = this.findEventBySlug(to.params.idEvent);
-                if(this.currentEvent === null || this.currentEvent === undefined){
-                    this.$router.replace({ name: '404'});
-                }
-                console.log(this.currentEvent)
-            },
+            // beforeRouteEnter (to, from, next) {
+            //     next(vm => {
+            //         // access to component instance via `vm`
+            //         vm.currentEvent = vm.findEventBySlug(to.params.idEvent);
+            //         if(vm.currentEvent === null || vm.currentEvent === undefined){
+            //             vm.$router.replace({ name: '404'});
+            //         }
+            //         console.log(vm.currentEvent)
+            //     })
+            // },
+            // beforeRouteUpdate (to, from, next) {
+            //     this.currentEvent = this.findEventBySlug(to.params.idEvent);
+            //     if(this.currentEvent === null || this.currentEvent === undefined){
+            //         this.$router.replace({ name: '404'});
+            //     }
+            //     console.log(this.currentEvent)
+            // },
             watch: {
                 currentEvent: function() {
                     // if(this.currentEvent.eventable_type == "Store"){
@@ -94,6 +94,12 @@
                 }
             },
             computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'getPropertyHours',
+                    'processedEvents',
+                ]),
                 property(){
                     return this.$store.getters.getProperty;
                 },
