@@ -148,9 +148,9 @@
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
             },
-            mounted () {
-                this.currentSelection = this.events;
-            },
+            // mounted () {
+            //     this.currentSelection = this.events;
+            // },
             watch: {
                 currentDate: function(){
                     var selectedDate = moment(this.selectedDate).format("MM DD YYYY");
