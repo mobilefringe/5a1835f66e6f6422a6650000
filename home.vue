@@ -16,7 +16,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, Vuex, moment, tz, VueMoment, Meta, slick) {
         Vue.use(Meta);
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
@@ -66,9 +66,9 @@
                 homeBanners() {
                     return _.orderBy(this.$store.state.results.banners, ['position'], ['asc']);
                 },
-                property(){
-                    return this.$store.getters.getProperty;
-                }
+                ...Vuex.mapGetters([
+                    'property'
+                ])
             }
         })
     })
