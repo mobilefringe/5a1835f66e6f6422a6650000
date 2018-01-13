@@ -23,6 +23,9 @@
          return {
          }
         },
+        created(){
+          console.log(this.$router)
+        },
         watch: {
             $route: function() {
                 console.log(this.$route);
