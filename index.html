@@ -226,7 +226,7 @@
             <transition name="fade">
                 <router-view v-if="dataLoaded"></router-view>
             </transition>
-            <footer-component></footer-component>
+            <footer-component v-show="isHomePage"></footer-component>
             <!--<footer v-show="isHomePage">-->
             <!--    <div class="page-container">-->
             <!--        <div class="footer-nav">-->
