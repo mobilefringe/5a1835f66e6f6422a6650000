@@ -215,11 +215,6 @@
                     currentPage: null
                 }
             },
-            /*
-            mounted () {
-                this.images
-            },
-            */
             created(){
                 this.$store.dispatch("getData", "repos").then(response => {
                     this.dataLoaded = true;
@@ -229,7 +224,6 @@
                 
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-about-the-collection.json"}).then(response => {
                     this.currentPage = response.data;
-                    //console.log(this.currentPage);
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
