@@ -198,6 +198,12 @@
                 }
             },
             computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'getPropertyHours',
+                    'storesByCategoryName'
+                ]),
                 property(){
                     return this.$store.getters.getProperty;
                 },
