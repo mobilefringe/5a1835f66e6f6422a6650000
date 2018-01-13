@@ -174,30 +174,30 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
                 this.$router.replace({ name: '404'});
             });
         },
-        beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-            next(function (vm) {
-                // access to component instance via `vm`
-                //Tourism Main Page
-                vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
-                    vm.mainPage = response.data;
-                }, function (error) {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    vm.$router.replace({ name: '404' });
-                });
-            });
-        },
-        beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
-            var _this = this;
+        // beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+        //     next(function (vm) {
+        //         // access to component instance via `vm`
+        //         //Tourism Main Page
+        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
+        //             vm.mainPage = response.data;
+        //         }, function (error) {
+        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+        //             vm.$router.replace({ name: '404' });
+        //         });
+        //     });
+        // },
+        // beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
+        //     var _this = this;
 
-            //Tourism Main Page
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
-                _this.mainPage = response.data;
-            }, function (error) {
-                console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                _this.$router.replace({ name: '404' });
-            });
+        //     //Tourism Main Page
+        //     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
+        //         _this.mainPage = response.data;
+        //     }, function (error) {
+        //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
+        //         _this.$router.replace({ name: '404' });
+        //     });
             
-        },
+        // },
         watch: {
             mainPage: function mainPage() {
                 if (this.mainPage != null) {
