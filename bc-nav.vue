@@ -1,5 +1,5 @@
 <template>
-    <ul class="breadcrumb-menu">
+    <ul class="breadcrumb-menu" v-if="showMenu">
         <router-link tag="li" to="/stores" active-class="active" exact>
             <a class="main-menu-link"><h5>Store Directory</h5></a>
         </router-link>
@@ -21,15 +21,21 @@
         template: template,
         data() {
          return {
+           white
          }
         },
         created(){
           console.log(this.$router)
         },
         watch: {
-            $route: function() {
-                console.log(this.$route);
-            }
+          $route: function() {
+            this.currentRoute = this.$route;
+          }
+        },
+        methods:{
+          showMenu(){
+            console.log(this.currentRoute.matched.some(m => m.meta.showNav))
+          }
         }
     });
   });
