@@ -255,6 +255,7 @@
                     'repos'
                 ]),
                 images() {
+                    console.log(this.repos);
                     var repo = _.filter(this.repos, function(o) { return o.name == "Art Collection Overview" })
                     var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
                     return repo_images
