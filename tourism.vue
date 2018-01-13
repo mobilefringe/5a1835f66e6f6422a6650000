@@ -226,7 +226,7 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
                 this.$validator.validateAll().then((result) => {
                     if (result) {
                         let errors = this.errors;
-                        console.log("sending form data", this.form_data);
+                        // console.log("sending form data", this.form_data);
                         send_data = {};
                         send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
                         this.$store.dispatch("CONTACT_US", send_data).then(res => {
