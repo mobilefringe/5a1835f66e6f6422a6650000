@@ -2,7 +2,11 @@
     
         <div class="row">
             <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> <breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>
+                <p class="page-breadcrumb">
+                    {{property.name}}&nbps;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbps;
+                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
+                        
+                </p>
             </div>
         </div>
     </div>
@@ -19,10 +23,6 @@ define(["Vue", "vuex", "vue-breadcrumbs"], function (Vue, Vuex, VueBreadcrumbs) 
             return {
                 dataLoaded: false,
                 breadcrumb: null,
-                currentPage: null,
-                selected: "Select a Restaurant",
-                storeName: "",
-                storeHoursById: [],
             };
         },
         created(){
@@ -45,7 +45,7 @@ define(["Vue", "vuex", "vue-breadcrumbs"], function (Vue, Vuex, VueBreadcrumbs) 
         },
         */
         watch: {
-               
+           
         },
         computed: {
             ...Vuex.mapGetters([
