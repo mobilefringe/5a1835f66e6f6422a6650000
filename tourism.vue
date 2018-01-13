@@ -7,8 +7,9 @@
                     <div class="sidebar-container">
                         <h5>Hours</h5>
                         <ul class="sidebar-hours-list">
-                            <li v-for="hour in hours">
-                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                            <li v-if="getPropertyHours" v-for="hour in getPropertyHours">
+                               {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                               <!--day_of_the_week(hour.day_of_week)-->
                             </li>
                         </ul> 
                         <router-link to="/hours" active-class="active" exact>
@@ -138,7 +139,7 @@
 
 <script>
 
-define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate"], function (Vue, moment, tz, VueMoment, Meta, VeeValidate) {
+define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate) {
     Vue.use(Meta);
     Vue.use(VeeValidate);
     return Vue.component("visit-component", {
@@ -203,31 +204,25 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-valid
             }
         },
         computed: {
-            property: function property() {
-                return this.$store.getters.getProperty;
-            },
-            timezone: function timezone() {
-                return this.$store.getters.getTimezone;
-            },
-            hours: function hours() {
-                var hours = _.filter(this.$store.state.results.hours, function (o) {
-                    return o.store_ids == null && o.is_holiday == 0;
-                });
-                return hours;
-            },
-            pageBanner: function pageBanner() {
-                var repo = _.filter(this.$store.state.results.repos, function (o) {
-                    return o.name == "Tourism";
-                });
-                var repo_images = repo[0].images[0];
-                return repo_images;
-            }
+            ...Vuex.mapGetters([
+                'property',
+                'timezone',
+                'getPropertyHours',
+                'findRepoByName',
+            ]),
+            // pageBanner: function pageBanner() {
+            //     var repo = _.filter(this.$store.state.results.repos, function (o) {
+            //         return o.name == "Tourism";
+            //     });
+            //     var repo_images = repo[0].images[0];
+            //     return repo_images;
+            // }
         },
         methods: {
-            day_of_the_week: function day_of_the_week(val_day) {
-                weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                return weekday[val_day];
-            },
+            // day_of_the_week: function day_of_the_week(val_day) {
+            //     weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            //     return weekday[val_day];
+            // },
             validateBeforeSubmit() {
                 this.$validator.validateAll().then((result) => {
                     if (result) {
