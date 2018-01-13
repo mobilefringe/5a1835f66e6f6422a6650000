@@ -32,13 +32,13 @@
                         <a class="details-link" href="https://www.google.com/maps/place/NorthPark+Center/@32.868225,-96.773204,15z/data=!4m5!3m4!1s0x0:0x95fc10ba98f7aad4!8m2!3d32.8680671!4d-96.7735128?hl=en-US" target="_blank">Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </div>
                     <div class="visible-mobile margin-30">
-                            <hr>    
-                        </div>
+                        <hr>    
+                    </div>
                 </div>
             </div>
             <div class="col-md-8 col-md-pull-4">
-                <div v-if="pageBanner">
-                    <img class="margin-30" :src="pageBanner.image_url" alt="">
+                <div v-if="pageBanner" v-for="banner in pageBanner">
+                    <img class="margin-30" :src="banner.image_url" alt="">
                 </div>
                 <div class="" v-if="tourism">
                     <h2 class="tourism-title">Tourism</h2>
@@ -138,129 +138,105 @@
 
 <script>
 
-define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate) {
-    Vue.use(Meta);
-    Vue.use(VeeValidate);
-    return Vue.component("visit-component", {
-        template: template, // the variable template will be injected
-        data: function data() {
-            return {
-                dataLoaded: false,
-                breadcrumb: null,
-                mainPage: null,
-                tourism: null,
-                guestRewards: null,
-                groupVisits: null,
-                taxFreeShopping: null,
-                unionPay: null,
-                form_data : {},
-                loginPending: null,
-                formSuccess : false,
-                formError: false,
-                time: new Date()
-            };
-        },
-        created(){
-            this.$store.dispatch("getData", "repos").then(response => {
-                this.dataLoaded = true
-            }, error => {
-                console.error("Could not retrieve data from server. Please check internet connection and try again.");
-            });
-            
-            this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
-                this.mainPage = response.data;
-            }, error => {
-                console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                this.$router.replace({ name: '404'});
-            });
-        },
-        // beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-        //     next(function (vm) {
-        //         // access to component instance via `vm`
-        //         //Tourism Main Page
-        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
-        //             vm.mainPage = response.data;
-        //         }, function (error) {
-        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
-        //             vm.$router.replace({ name: '404' });
-        //         });
-        //     });
-        // },
-        // beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
-        //     var _this = this;
-
-        //     //Tourism Main Page
-        //     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
-        //         _this.mainPage = response.data;
-        //     }, function (error) {
-        //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
-        //         _this.$router.replace({ name: '404' });
-        //     });
-            
-        // },
-        watch: {
-            mainPage: function mainPage() {
-                if (this.mainPage != null) {
-                    this.tourism = this.mainPage.subpages[0];
-                    this.guestRewards = this.mainPage.subpages[1];
-                    this.groupVisits = this.mainPage.subpages[2];
-                    this.taxFreeShopping = this.mainPage.subpages[3];
-                    this.unionPay = this.mainPage.subpages[4];
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate) {
+        Vue.use(Meta);
+        Vue.use(VeeValidate);
+        return Vue.component("visit-component", {
+            template: template, // the variable template will be injected
+            data: function data() {
+                return {
+                    dataLoaded: false,
+                    breadcrumb: null,
+                    mainPage: null,
+                    tourism: null,
+                    guestRewards: null,
+                    groupVisits: null,
+                    taxFreeShopping: null,
+                    unionPay: null,
+                    form_data : {},
+                    loginPending: null,
+                    formSuccess : false,
+                    formError: false,
+                    time: new Date()
+                };
+            },
+            created(){
+                this.$store.dispatch("getData", "repos").then(response => {
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
+                    this.mainPage = response.data;
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
+            },
+            watch: {
+                mainPage: function mainPage() {
+                    if (this.mainPage != null) {
+                        this.tourism = this.mainPage.subpages[0];
+                        this.guestRewards = this.mainPage.subpages[1];
+                        this.groupVisits = this.mainPage.subpages[2];
+                        this.taxFreeShopping = this.mainPage.subpages[3];
+                        this.unionPay = this.mainPage.subpages[4];
+                    }
                 }
-            }
-        },
-        computed: {
-            ...Vuex.mapGetters([
-                'property',
-                'timezone',
-                'getPropertyHours',
-                'repos',
-                'findRepoByName',
-            ]),
-            pageBanner: function pageBanner() {
-                return this.findRepoByName("Tourism").images;
-            }
-        },
-        methods: {
-            validateBeforeSubmit() {
-                this.$validator.validateAll().then((result) => {
-                    if (result) {
-                        let errors = this.errors;
-                        // console.log("sending form data", this.form_data);
-                        send_data = {};
-                        send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
-                        this.$store.dispatch("CONTACT_US", send_data).then(res => {
-                            this.formSuccess = true;
-                        }).catch(error => {
-                            try {
-                                if (error.response.status == 401) {
-                                    console.log("Data load error: " + error.message);
-                                    this.formError = true;
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'getPropertyHours',
+                    'repos',
+                    'findRepoByName',
+                ]),
+                pageBanner: function pageBanner() {
+                    return this.findRepoByName("Tourism").images;
+                }
+            },
+            methods: {
+                validateBeforeSubmit() {
+                    this.$validator.validateAll().then((result) => {
+                        if (result) {
+                            let errors = this.errors;
+                            // console.log("sending form data", this.form_data);
+                            send_data = {};
+                            send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
+                            this.$store.dispatch("CONTACT_US", send_data).then(res => {
+                                this.formSuccess = true;
+                            }).catch(error => {
+                                try {
+                                    if (error.response.status == 401) {
+                                        console.log("Data load error: " + error.message);
+                                        this.formError = true;
+                                    } 
+                                    else {
+                                        console.log("Data load error: " + error.message);
+                                        this.formError = true;
+                                    }
                                 } 
-                                else {
+                                catch (e) {
                                     console.log("Data load error: " + error.message);
                                     this.formError = true;
                                 }
-                            } 
-                            catch (e) {
-                                console.log("Data load error: " + error.message);
-                                this.formError = true;
-                            }
-                        })
-                    }
-                })
-            },
-            serializeObject (obj) {
-                // console.log(obj);
-                var newObj = [];
-                _.forEach(obj, function(value, key) {
-                    var tempVal = {};
-                    tempVal.name = key;
-                    tempVal.value = value;
-                    newObj.push(tempVal);
-                });
-                return newObj;
+                            })
+                        }
+                    })
+                },
+                serializeObject (obj) {
+                    // console.log(obj);
+                    var newObj = [];
+                    _.forEach(obj, function(value, key) {
+                        var tempVal = {};
+                        tempVal.name = key;
+                        tempVal.value = value;
+                        newObj.push(tempVal);
+                    });
+                    return newObj;
+                }
             }
-        }
+        });
     });
-});</script>
+</script>
