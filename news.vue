@@ -56,7 +56,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate", "v-select"], function(Vue, moment, tz, VueMoment, Meta, VuePaginate, vSelect) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate", "v-select"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VuePaginate, vSelect) {
         Vue.use(Meta);
         Vue.use(VuePaginate);
         
@@ -64,6 +64,8 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    repoLoaded: null,
+                    blogLoaded: null,
                     breadcrumb: null,
                     currentBlog: null,
                     paginate: ['currentSelection'],
@@ -82,25 +84,37 @@
                     ],
                 }
             },
+            created(){
+                this.$store.dispatch("getData", "repos").then(response => {
+                    this.repoLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+                this.$store.dispatch("getData", "blogs").then(response => {
+                    this.blogLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+            },
             mounted () {
                 this.currentBlog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
                 this.currentSelection = this.currentBlog;
             },
             computed: {
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                },
-                hours(){
-                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    return hours;
-                },
+                ..Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'findRepoByName',
+                    'findNewStores',
+                    'findComingSoonStores',
+                    'findHourById'
+                ]),
                 pageBanner() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "News" })
-                    var repo_images = repo[0].images[0]
-                    return repo_images
+                    // var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "News" })
+                    // var repo_images = repo[0].images[0]
+                    // return repo_images
+                    
+                    // return this.findRepoByName("News").images
                 },
                 blogs() {
                     return this.$store.getters.findBlogByName;
