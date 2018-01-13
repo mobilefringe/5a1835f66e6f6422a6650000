@@ -25,11 +25,12 @@
          }
         },
         created(){
-          console.log(this.$router)
+          //console.log(this.$router)
         },
         watch: {
           $route: function() {
             this.currentRoute = this.$route;
+            console.log(this.currentRoute.matched.some(m => m.meta.showNav))
           }
         },
         methods:{
