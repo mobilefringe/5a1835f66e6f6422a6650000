@@ -72,11 +72,10 @@
                     'property',
                     'timezone',
                     'storesByCategoryName',
-                    'findStoreById',
                     'findHourById'
                 ]),
                 all_dine: function all_dine(){
-                    var stores_by_category = this.storesByCategoryName;
+                    var stores_by_category = this.$store.getters.storesByCategoryName;
                     console.log(stores_by_category)
                     var cafes = stores_by_category["NorthPark Cafés"]
                     var restaurants = stores_by_category["Restaurants / Beverages"]
@@ -115,7 +114,7 @@
                     var specialty = stores_by_category["Specialty Foods"]
                     var filtered_restaurants = _.uniqBy(specialty, function(o){ return o.name; })
                     return filtered_restaurants
-                },
+                }
             },
             methods: {
                 selectCategory(){
@@ -136,12 +135,8 @@
                         storeHours.push(vm.findHourById(value));
                     });
                     return storeHours
-                },
-                // day_of_the_week(val_day){
-                //     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                //     return weekday[val_day];
-                // }
-            },
+                }
+            }
         });
     });
 </script>
