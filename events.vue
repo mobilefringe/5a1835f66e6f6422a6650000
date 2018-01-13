@@ -236,6 +236,7 @@
                 },
                 propertyEvents() {
                     var propertyEvents = _.filter(this.$store.getters.processedEvents, function(o) { return o.eventable_type == "Property" })
+                    console.log(propertyEvents)
                     var showEvents = [];
                     _.forEach(propertyEvents, function(value, key) {
                         var today = moment.tz(this.timezone).format();
