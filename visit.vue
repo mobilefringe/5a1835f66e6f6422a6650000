@@ -158,6 +158,8 @@ define(["Vue", "vuex", "vue-meta"], function (Vue, Vuex, Meta) {
         computed: {
             ...Vuex.mapGetters([
                 'property',
+                'timezone',
+                'getPropertyHours',
                 'repos',
                 'findRepoByName',
             ]),
