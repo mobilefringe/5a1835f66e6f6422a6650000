@@ -212,11 +212,13 @@
                     'findRepoByName',
                     'processedEvents',
                 ]),
-                // eventsBanners() {
-                //     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Events" })
-                //     var repo_images = repo[0].images
-                //     return repo_images
-                // },
+                eventsBanners() {
+                    // this.findRepoByName('photos').images;
+                    var repo = this.findRepoByName("Events");
+                    console.log(repo)
+                    var repo_images = repo[0].images
+                    return repo_images
+                },
                 events() {
                     var events = this.processedEvents;
                     console.log(events);
