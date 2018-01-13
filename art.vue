@@ -240,6 +240,7 @@
             },
             */
             created(){
+                this.$store.dispatch("getData", "repos");
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-about-the-collection.json"}).then(response => {
                     this.currentPage = response.data;
                     console.log(this.currentPage);
@@ -254,7 +255,7 @@
                     'repos'
                 ]),
                 images() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Art Collection Overview" })
+                    var repo = _.filter(this.repos, function(o) { return o.name == "Art Collection Overview" })
                     var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
                     return repo_images
                 },
