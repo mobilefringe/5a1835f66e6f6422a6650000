@@ -224,7 +224,7 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
             pageBanner: function pageBanner() {
                 // return this.$store.getters.findRepoByName("Events").images;
                 
-                var repo = this.$store.getters.findRepoByName("Visit").images;
+                var repo = this.findRepoByName("Visit").images;
                 // var repo_images = repo[0].images[0];
                 return repo;
             }
