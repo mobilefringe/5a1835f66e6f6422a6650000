@@ -235,9 +235,9 @@
                     return sortedEvents
                 },
                 propertyEvents() {
-                    var propertyEvents = _.filter(this.$store.getters.processedEvents, function(o) { return o.name == "Events" })
+                    var propertyEvents = _.filter(this.$store.getters.processedEvents, function(o) { return o.eventable_type == "Property" })
                     var showEvents = [];
-                    _.forEach(this.$store.getters.processedEvents, function(value, key) {
+                    _.forEach(propertyEvents, function(value, key) {
                         var today = moment.tz(this.timezone).format();
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if(today >= showOnWebDate){
