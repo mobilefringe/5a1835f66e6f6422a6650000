@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <h2>The History of NorthPark</h2>
-                    <div class="history-desc" v-if="historyPage" v-html="history.body"></div>
+                    <div class="history-desc" v-if="historyPage" v-html="historyPage.body"></div>
                     <div class="hidden-mobile">
                         <router-link to="/our-story/photo-gallery">
                             <p class="details-link">
@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-push-4">
                     <h2>The 50th Anniversary</h2>
-                    <div class="history-desc" v-if="anniversaryPage" v-html="anniversary.body"></div>
+                    <div class="history-desc" v-if="anniversaryPage" v-html="anniversaryPage.body"></div>
                     <div class="hidden-mobile">
                         <router-link to="/our-story/photo-gallery">
                             <p class="details-link">
