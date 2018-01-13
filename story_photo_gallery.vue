@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dataLoaded" class="page-container"> <!-- without an outer container div this component template will not render -->
+    <div class="page-container"> <!-- without an outer container div this component template will not render -->
         <div class="margin-60"></div>
         <div class="row margin-30">
             <div class="col-md-6">
@@ -74,7 +74,6 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'repos',
                     'findRepoByName'
                 ]),
                 historyGallery() {
