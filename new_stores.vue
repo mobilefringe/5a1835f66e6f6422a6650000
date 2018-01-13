@@ -1,14 +1,14 @@
 <template>
     <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-42"></div>
-        <div v-if="newStoresList" class="">
+        <div v-if="findNewStores" class="">
             <div class="row margin-30">
                 <div class="col-md-12">
                     <h2>New Stores</h2>
                     <hr>
                 </div>
             </div>
-            <div class="row dine-container" v-for="store in newStoresList">
+            <div class="row dine-container" v-for="store in findNewStores">
                 <div class="col-md-12">
                     <div class="dine-image-container">
                         <img :src="store.image_url" :alt="store.name" />
@@ -33,14 +33,14 @@
                 </div>
             </div>
         </div>
-        <div v-if="comingSoonList" class="margin-60">
+        <div v-if="findComingSoonStores" class="margin-60">
             <div class="row margin-30">
                 <div class="col-md-12">
                     <h2>Coming Soon</h2>
                     <hr>
                 </div>
             </div>
-            <div class="row dine-container" v-for="store in comingSoonList">
+            <div class="row dine-container" v-for="store in findComingSoonStores">
                 <div class="col-md-12">
                     <div class="dine-image-container">
                         <img :src="store.image_url" :alt="store.name" />
