@@ -79,7 +79,6 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
         },
         beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
             var _this = this;
-
             this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
                 // this.dataLoaded = true;
                 _this.currentPage = response.data;
@@ -94,18 +93,11 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
             });
         },
         computed: {
-            property: function property() {
-                return this.$store.getters.getProperty;
-            },
-            timezone: function timezone() {
-                return this.$store.getters.getTimezone;
-            },
-            hours: function hours() {
-                var hours = _.filter(this.$store.state.results.hours, function (o) {
-                    return o.store_ids == null && o.is_holiday == 0;
-                });
-                return hours;
-            }
+            ...Vuex.mapGetters([
+                'property',
+                'timezone',
+                'getPropertyHours'
+            ])
         },
         methods: {
             footerBreadcrumb: function footerBreadcrumb(){
