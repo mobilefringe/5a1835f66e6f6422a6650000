@@ -154,40 +154,6 @@
                 this.currentStore
                 this.currentDetails
             },
-            // beforeRouteEnter(to, from, next) {
-            //     next(vm => {
-            //         // access to component instance via `vm`
-            //         //Get Store Details
-            //         vm.currentStore = vm.findStoreBySlug(to.params.id);
-            //         if (vm.currentStore === null || vm.currentStore === undefined){
-            //             vm.$router.replace({ name: '404'});
-            //         }
-                    
-            //         // Get Stores JSON
-            //         var store_id = vm.currentStore.id
-            //         vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
-            //             vm.currentDetails = response.data;
-            //         }, error => {
-            //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
-            //             vm.$router.replace({ name: '404'});
-            //         });
-            //     })
-            // },
-            // beforeRouteUpdate(to, from, next) {
-            //     //Store Details
-            //     this.currentStore = this.findStoreBySlug(to.params.id);
-            //     if (this.currentStore === null || this.currentStore === undefined){
-            //         this.$router.replace({ name: '404'});
-            //     }
-                
-            //     //Stores JSON
-            //     this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
-            //         this.currentDetails = response.data;
-            //     }, error => {
-            //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
-            //         this.$router.replace({ name: '404'});
-            //     });
-            // },
             watch: {
                 // currentStore: function() {
                 //     // var vm = this;
@@ -218,17 +184,17 @@
                 //     });
                 //     this.promotions = promos;
                 // },
-                currentDetails: function() {
-                    var vm = this;
-                    var store_assets = [];
-                    if(this.currentStore.assets != null){
-                        _.forEach(this.currentDetails.store_files, function(value, key) {
-                            value.url = "https://www.mallmaverick.com" + value.url 
-                            store_assets.push(value);
-                        });
-                        this.storeAssets = store_assets; 
-                    }
-                }
+                // currentDetails: function() {
+                //     var vm = this;
+                //     var store_assets = [];
+                //     if(this.currentStore.assets != null){
+                //         _.forEach(this.currentDetails.store_files, function(value, key) {
+                //             value.url = "https://www.mallmaverick.com" + value.url 
+                //             store_assets.push(value);
+                //         });
+                //         this.storeAssets = store_assets; 
+                //     }
+                // }
             },
             computed: {
                 ...Vuex.mapGetters([
