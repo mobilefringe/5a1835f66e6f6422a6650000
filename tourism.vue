@@ -163,7 +163,6 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
         },
         created(){
             this.$store.dispatch("getData", "repos").then(response => {
-                console.log(this.$store.dispatch("getData", "repos"));
                 this.dataLoaded = true
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
@@ -252,7 +251,7 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
                 })
             },
             serializeObject (obj) {
-                console.log(obj);
+                // console.log(obj);
                 var newObj = [];
                 _.forEach(obj, function(value, key) {
                     var tempVal = {};
