@@ -37,6 +37,7 @@
                     }
                 }
             },
+            /*
             beforeRouteEnter(to, from, next) {
                 next(vm => {
                     // WELCOME MESSAGE
@@ -56,6 +57,16 @@
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
                 });
+            },
+            */
+            created(){
+              this.$store.dispatch("getData", "banners")
+              this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"}).then(response => {
+                this.welcomeMessage = response.data;
+              }, error => {
+                console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                this.$router.replace({ name: '404'});
+              });
             },
             watch: {
                 welcomeMessage: function() {
