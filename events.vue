@@ -250,6 +250,7 @@
                 },
                 storeEvents() {
                     var storeEvents = _.filter(this.$store.getters.processedEvents, function(o) { return o.eventable_type == "Store" })
+                    console.log(storeEvents)
                     var showEvents = [];
                     _.forEach(storeEvents, function(value, key) {
                         var today = moment.tz(this.timezone).format();
