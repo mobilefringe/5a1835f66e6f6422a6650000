@@ -190,12 +190,12 @@
             // },
             watch: {
                 currentStore: function() {
-                    var vm = this;
-                    var storeHours = [];
-                    _.forEach(this.currentStore.store_hours, function(value, key) {
-                        storeHours.push(vm.findHourById(value));
-                    });
-                    this.hours = storeHours;
+                    // var vm = this;
+                    // var storeHours = [];
+                    // _.forEach(this.currentStore.store_hours, function(value, key) {
+                    //     storeHours.push(vm.findHourById(value));
+                    // });
+                    // this.hours = storeHours;
                     
                     if(this.currentStore.category_name != null) {
                         var category_name = this.currentStore.category_name
