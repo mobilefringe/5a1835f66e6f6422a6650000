@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container">
+    <div v-if="currentPage" class="page-container">
         <div class="margin-90"></div>
         <div v-if="currentPage">
             <div class="row">
@@ -46,7 +46,6 @@
                         {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
                         <span>{{ footerBreadcrumb() }}</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
                         <span v-if="currentPage">{{currentPage.title}}</span>
-                            
                     </p>
                 </div>
             </div>
@@ -56,51 +55,61 @@
 
 <script>
 
-define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
-    return Vue.component("page-details-component", {
-        template: template, // the variable template will be injected,
-        data: function data() {
-            return {
-                breadcrumb: null,
-                currentPage: null
-            };
-        },
-        beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-            next(function (vm) {
-                // access to component instance via `vm`
-                vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
-                    vm.currentPage = response.data;
-                }, function (error) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
+        return Vue.component("page-details-component", {
+            template: template, // the variable template will be injected,
+            data: function data() {
+                return {
+                    breadcrumb: null,
+                    currentPage: null
+                };
+            },
+            created(){
+                this.$store.dispatch('LOAD_PAGE_DATA', { url:this.property.mm_host + "/pages/" + to.params.id + ".json"}).then(response => {
+                    this.currentPage = response.data;
+                }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    vm.$router.replace({ name: '404' });
+                    this.$router.replace({ name: '404'});
                 });
-            });
-        },
-        beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
-            var _this = this;
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
-                // this.dataLoaded = true;
-                _this.currentPage = response.data;
-                if(_this.currentPage.slug === "northpark-parking-valet-page"){
-                    this.breadcrumb = "Visit"
-                    console.log(this.breadcrumb)
+            },
+            
+            // beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+            //     next(function (vm) {
+            //         // access to component instance via `vm`
+            //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
+            //             vm.currentPage = response.data;
+            //         }, function (error) {
+            //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //             vm.$router.replace({ name: '404' });
+            //         });
+            //     });
+            // },
+            // beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
+            //     var _this = this;
+            //     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
+            //         // this.dataLoaded = true;
+            //         _this.currentPage = response.data;
+            //         if(_this.currentPage.slug === "northpark-parking-valet-page"){
+            //             this.breadcrumb = "Visit"
+            //             console.log(this.breadcrumb)
+            //         }
+            //     }, function (error) {
+            //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //         _this.$router.replace({ name: '404' });
+            //     });
+            // },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'getPropertyHours'
+                ])
+            },
+            methods: {
+                footerBreadcrumb: function footerBreadcrumb(){
+                    return this.breadcrumb;
                 }
-            }, function (error) {
-                console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                _this.$router.replace({ name: '404' });
-            });
-        },
-        computed: {
-            ...Vuex.mapGetters([
-                'property',
-                'timezone',
-                'getPropertyHours'
-            ])
-        },
-        methods: {
-            footerBreadcrumb: function footerBreadcrumb(){
-                return this.breadcrumb;
             }
-        }
+        });
     });
-});</script>
+</script>
