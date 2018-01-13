@@ -158,7 +158,7 @@
                     // var repo_images = repo[0].images
                     // return repo_images
                     
-                    return this.findRepoByName('history banners').images;
+                    // return this.findRepoByName('history banners').images;
                 },
             },
             methods: {
