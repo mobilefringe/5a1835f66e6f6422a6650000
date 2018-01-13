@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-sm-12 col-md-8 col-md-pull-4">
                     <div id="eventList">
-                        <div class="row" v-if="currentSelection" v-for="event in currentSelection">
+                        <div class="row" v-if="events" v-for="event in events">
                             <div class="hidden-xs col-sm-2">
                                 <p class="details-promo-date">{{event.end_date | moment("ddd", timezone)}}</p>
                                 <p class="details-promo-day">{{event.end_date | moment("D", timezone)}}</p>
@@ -226,7 +226,6 @@
                 // },
                 events() {
                     var events = this.$store.getters.processedEvents;
-                    console.log(events);
                     var showEvents = [];
                     _.forEach(events, function(value, key) {
                         var today = moment.tz(this.timezone).format();
