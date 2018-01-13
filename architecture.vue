@@ -252,11 +252,12 @@
                 ...Vuex.mapGetters([
                     'property',
                     'repos',
+                    'findRepoByName'
                 ]),
                 images() {
-                    var repo = _.filter(this.repos, function(o) { return o.name == "Architecture" })
-                    var repo_items = _.orderBy(repo[0].images, function(o) { return o.id });
-                    return repo_items
+                    // var repo = _.filter(this.repos, function(o) { return o.name == "Architecture" })
+                    // var repo_items = _.orderBy(repo[0].images, function(o) { return o.id });
+                    // return repo_items
                     
                     return this.findRepoByName("Architecture").images
                 },
