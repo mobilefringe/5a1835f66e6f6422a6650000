@@ -145,6 +145,7 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-valid
         template: template, // the variable template will be injected
         data: function data() {
             return {
+                dataLoaded: null,
                 breadcrumb: null,
                 mainPage: null,
                 tourism: null,
@@ -158,6 +159,14 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-valid
                 formError: false,
                 time: new Date()
             };
+        },
+        created(){
+            this.$store.dispatch("getData", "repos").then(response => {
+                console.log(this.$store.dispatch("getData", "repos"));
+                this.dataLoaded = true
+            }, error => {
+                console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            });
         },
         beforeRouteEnter: function beforeRouteEnter(to, from, next) {
             next(function (vm) {
