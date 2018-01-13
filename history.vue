@@ -79,7 +79,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, Vuex, moment, tz, VueMoment, Meta, slick) {
         Vue.use(Meta);
         return Vue.component("history-component", {
             template: template, // the variable template will be injected
@@ -102,6 +102,13 @@
                         nextArrow: '.next'
                     }
                 }
+            },
+            created(){
+                this.$store.dispatch("getData", "repos").then(response => {
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
@@ -139,20 +146,19 @@
                 });
             },
             computed: {
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                },
-                hours(){
-                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    return hours;
-                },
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'getPropertyHours',
+                    'findRepoByName',
+                    'processedEvents',
+                ]),
                 historyBanners() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
-                    var repo_images = repo[0].images
-                    return repo_images
+                    // var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
+                    // var repo_images = repo[0].images
+                    // return repo_images
+                    
+                    return this.findRepoByName('history banners').images;
                 },
             },
             methods: {
