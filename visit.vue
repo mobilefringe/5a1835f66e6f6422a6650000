@@ -11,7 +11,8 @@
                             <h5>Hours</h5>
                             <ul class="sidebar-hours-list">
                                 <li v-if="getPropertyHours" v-for="hour in getPropertyHours">
-                                   {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                   {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                   <!--day_of_the_week(hour.day_of_week)-->
                                 </li>
                             </ul> 
                             <router-link to="/hours" active-class="active" exact>
@@ -220,18 +221,6 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
                 'findStoreById',
                 'findHourById'
             ]),
-            // property: function property() {
-            //     return this.$store.getters.getProperty;
-            // },
-            // timezone: function timezone() {
-            //     return this.$store.getters.getTimezone;
-            // },
-            // hours: function hours() {
-            //     var hours = _.filter(this.$store.state.results.hours, function (o) {
-            //         return o.store_ids == null && o.is_holiday == 0;
-            //     });
-            //     return hours;
-            // },
             // pageBanner: function pageBanner() {
             //     var repo = _.filter(this.$store.state.results.repos, function (o) {
             //         return o.name == "Visit";
@@ -245,10 +234,10 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
                 var truncate = _.truncate(val_body, { 'length': 350, 'separator': ' ' });
                 return truncate;
             },
-            day_of_the_week: function day_of_the_week(val_day) {
-                weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                return weekday[val_day];
-            }
+            // day_of_the_week: function day_of_the_week(val_day) {
+            //     weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            //     return weekday[val_day];
+            // }
         }
     });
 });</script>
