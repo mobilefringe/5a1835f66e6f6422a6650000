@@ -1,5 +1,5 @@
 <template>
-    <div class="" v-if="currentStore"> <!-- Without an outer container div this component template will not render -->
+    <div v-if="currentStore"> <!-- Without an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
         <div class="image-container">
             <slick v-if="currentDetails" ref="slick" :options="slickOptions">
@@ -140,36 +140,6 @@
                 if (this.currentStore === null || this.currentStore === undefined){
                     this.$router.replace({ name: '404'});
                 }
-            },
-            mounted () {
-                this.currentStore
-                this.currentDetails
-            },
-            beforeRouteEnter(to, from, next) {
-                next(vm => {
-                    // access to component instance via `vm`
-                    //Get Store Details
-                    vm.currentStore = vm.findStoreBySlug(to.params.id);
-                    if (vm.currentStore === null || vm.currentStore === undefined){
-                        vm.$router.replace({ name: '404'});
-                    }
-                    
-                    // Get Stores JSON
-                    var store_id = vm.currentStore.id
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
-                        vm.currentDetails = response.data;
-                    }, error => {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ name: '404'});
-                    });
-                })
-            },
-            beforeRouteUpdate(to, from, next) {
-                //Store Details
-                this.currentStore = this.findStoreBySlug(to.params.id);
-                if (this.currentStore === null || this.currentStore === undefined){
-                    this.$router.replace({ name: '404'});
-                }
                 
                 //Stores JSON
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
@@ -179,6 +149,44 @@
                     this.$router.replace({ name: '404'});
                 });
             },
+            mounted () {
+                this.currentStore
+                this.currentDetails
+            },
+            // beforeRouteEnter(to, from, next) {
+            //     next(vm => {
+            //         // access to component instance via `vm`
+            //         //Get Store Details
+            //         vm.currentStore = vm.findStoreBySlug(to.params.id);
+            //         if (vm.currentStore === null || vm.currentStore === undefined){
+            //             vm.$router.replace({ name: '404'});
+            //         }
+                    
+            //         // Get Stores JSON
+            //         var store_id = vm.currentStore.id
+            //         vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
+            //             vm.currentDetails = response.data;
+            //         }, error => {
+            //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //             vm.$router.replace({ name: '404'});
+            //         });
+            //     })
+            // },
+            // beforeRouteUpdate(to, from, next) {
+            //     //Store Details
+            //     this.currentStore = this.findStoreBySlug(to.params.id);
+            //     if (this.currentStore === null || this.currentStore === undefined){
+            //         this.$router.replace({ name: '404'});
+            //     }
+                
+            //     //Stores JSON
+            //     this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json"}).then(response => {
+            //         this.currentDetails = response.data;
+            //     }, error => {
+            //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //         this.$router.replace({ name: '404'});
+            //     });
+            // },
             watch: {
                 currentStore: function() {
                     var vm = this;
@@ -222,21 +230,13 @@
                 }
             },
             computed: {
-                findStoreBySlug() {
-                    return this.$store.getters.findStoreBySlug;
-                },
-                findHourById() {
-                    return this.$store.getters.findHourById;
-                },
-                findPromoById() {
-                    return this.$store.getters.findPromoById;
-                },
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                }
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'findStoreBySlug',
+                    'findHourById',
+                    'findPromoById'
+                ])
             },
             methods: {
                 truncate(val_description){
