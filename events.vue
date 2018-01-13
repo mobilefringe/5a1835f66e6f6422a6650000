@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-sm-12 col-md-8 col-md-pull-4">
                     <div id="eventList">
-                        <div class="row" v-if="events" v-for="event in events">
+                        <div class="row" v-if="currentSelection" v-for="event in currentSelection">
                             <div class="hidden-xs col-sm-2">
                                 <p class="details-promo-date">{{event.end_date | moment("ddd", timezone)}}</p>
                                 <p class="details-promo-day">{{event.end_date | moment("D", timezone)}}</p>
@@ -198,7 +198,7 @@
                     this.currentSelection = showEvents
                 },
                 selected: function() {
-                    // console.log(this.selected.value)
+                    console.log(this.selected.value)
                     if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected.value == "promotions"){
