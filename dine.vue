@@ -45,6 +45,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: null,
                     breadcrumb: null,
                     selected: "Select A Category",
                     currentSelection: null,
@@ -57,6 +58,14 @@
                     dine_stores: [],
                     hours: []
                 }
+            },
+            created(){
+                this.$store.dispatch("getData", "stores").then(response => {
+                    console.log(this.$store.dispatch("getData", "pois"))
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
             },
             computed: {
                 ...Vuex.mapGetters([
