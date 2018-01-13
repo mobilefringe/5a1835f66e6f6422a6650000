@@ -249,8 +249,9 @@
                     return events
                 },
                 storeEvents() {
+                    var storeEvents = _.filter(this.$store.getters.processedEvents, function(o) { return o.eventable_type == "Store" })
                     var showEvents = [];
-                    _.forEach(this.$store.getters.processedPromos, function(value, key) {
+                    _.forEach(storeEvents, function(value, key) {
                         var today = moment.tz(this.timezone).format();
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if(today >= showOnWebDate){
