@@ -9,7 +9,6 @@
                         <ul class="sidebar-hours-list">
                             <li v-if="getPropertyHours" v-for="hour in getPropertyHours">
                                {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                               <!--day_of_the_week(hour.day_of_week)-->
                             </li>
                         </ul> 
                         <router-link to="/hours" active-class="active" exact>
@@ -167,6 +166,13 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
             });
+            
+            this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
+                this.mainPage = response.data;
+            }, error => {
+                console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                this.$router.replace({ name: '404'});
+            });
         },
         beforeRouteEnter: function beforeRouteEnter(to, from, next) {
             next(function (vm) {
@@ -190,6 +196,7 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 _this.$router.replace({ name: '404' });
             });
+            
         },
         watch: {
             mainPage: function mainPage() {
@@ -207,14 +214,11 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
                 'property',
                 'timezone',
                 'getPropertyHours',
+                'repos',
                 'findRepoByName',
             ]),
             pageBanner: function pageBanner() {
-            //     var repo = _.filter(this.$store.state.results.repos, function (o) {
-            //         return o.name == "Tourism";
-            //     });
-            //     var repo_images = repo[0].images[0];
-            //     return repo_images;
+                return this.findRepoByName("Tourism").images;
             }
         },
         methods: {
