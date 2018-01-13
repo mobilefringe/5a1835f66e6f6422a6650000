@@ -240,9 +240,6 @@
                     'repos',
                     'findRepoByName'
                 ]),
-                property() {
-                    return this.$store.getters.getProperty;
-                },
                 images() {
                     return this.findRepoByName("Landscaping").images
                 },
