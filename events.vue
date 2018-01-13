@@ -199,8 +199,10 @@
                 },
                 selected: function() {
                     console.log(this.selected.value)
-                    this.currentSelection = this.events
-                    if(this.selected.value == "events"){
+                    
+                    if(this.selected.value == "all_events"){
+                        this.currentSelection = this.events
+                    } else if(this.selected.value == "events"){
                         this.currentSelection = this.propertyEvents;
                     } else if (this.selected.value == "promotions"){
                         this.currentSelection = this.storeEvents;
