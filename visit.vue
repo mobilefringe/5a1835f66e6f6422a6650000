@@ -126,89 +126,40 @@ define(["Vue", "vuex", "vue-meta"], function (Vue, Vuex, Meta) {
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
             });
-        },
-        // beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-        //     next(function (vm) {
-        //         // access to component instance via `vm`
-        //         //Valet
-        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-parking-valet-page.json" }).then(function (response) {
-        //             vm.valet = response.data;
-        //         }, function (error) {
-        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
-        //             vm.$router.replace({ name: '404' });
-        //         });
-        //         //Concierge
-        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-concierge-services.json" }).then(function (response) {
-        //             vm.concierge = response.data;
-        //         }, function (error) {
-        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
-        //             vm.$router.replace({ name: '404' });
-        //         });
-        //         //Gift Cards
-        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json" }).then(function (response) {
-        //             vm.giftCards = response.data;
-        //         }, function (error) {
-        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
-        //             vm.$router.replace({ name: '404' });
-        //         });
-        //         //Tourism
-        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
-        //             vm.tourism = response.data;
-        //         }, function (error) {
-        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
-        //             vm.$router.replace({ name: '404' });
-        //         });
-        //         //Contact
-        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-contact-us.json" }).then(function (response) {
-        //             vm.contact = response.data;
-        //         }, function (error) {
-        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
-        //             vm.$router.replace({ name: '404' });
-        //         });
-        //     });
-        // },
-        beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
-            var _this = this;
-            //Valet
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-parking-valet-page.json" }).then(function (response) {
-                _this.valet = response.data;
-            }, function (error) {
+            this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-parking-valet-page.json"}).then(response => {
+                this.valet = response.data;
+            }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                _this.$router.replace({ name: '404' });
+                this.$router.replace({ name: '404'});
             });
-            //Concierge
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-concierge-services.json" }).then(function (response) {
-                _this.concierge = response.data;
-            }, function (error) {
+            this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
+                this.concierge = response.data;
+            }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                _this.$router.replace({ name: '404' });
+                this.$router.replace({ name: '404'});
             });
-            //Gift Cards
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json" }).then(function (response) {
-                _this.giftCards = response.data;
-            }, function (error) {
+            this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json"}).then(response => {
+                this.giftCards = response.data;
+            }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                _this.$router.replace({ name: '404' });
+                this.$router.replace({ name: '404'});
             });
-            //Tourism
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
-                _this.giftCards = response.data;
-            }, function (error) {
+            this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
+                this.tourism = response.data;
+            }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                _this.$router.replace({ name: '404' });
+                this.$router.replace({ name: '404'});
             });
-            //Contact
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-contact-us.json" }).then(function (response) {
-                _this.giftCards = response.data;
-            }, function (error) {
+            this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-contact-us.json"}).then(response => {
+                this.contact = response.data;
+            }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                _this.$router.replace({ name: '404' });
+                this.$router.replace({ name: '404'});
             });
         },
         computed: {
             ...Vuex.mapGetters([
                 'property',
-                'timezone',
                 'repos',
                 'findRepoByName',
             ]),
