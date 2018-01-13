@@ -203,9 +203,8 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, moment, tz, VueMoment, Meta, Lightbox) {
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, Meta, Lightbox) {
         Vue.use(Meta);
-        Vue.use(Lightbox);
         return Vue.component("art-component", {
             template: template, // the variable template will be injected
             data: function() {
