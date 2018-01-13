@@ -8,7 +8,7 @@
                         <h5>Hours</h5>
                         <ul class="sidebar-hours-list">
                             <li v-if="getPropertyHours" v-for="hour in getPropertyHours">
-                               {{hour.day_of_week | moment("dddd", timezone).weekday()}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                               {{hour.day_of_week | moment(timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                <!--day_of_the_week(hour.day_of_week)-->
                             </li>
                         </ul> 
