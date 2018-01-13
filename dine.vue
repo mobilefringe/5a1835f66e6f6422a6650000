@@ -23,8 +23,8 @@
                         <h5>Hours</h5>
                         <ul class="details-hours-list">
                             <li v-for="hour in storeHours(restaurant.store_hours)">
-                               {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                                </span>
+                               {{hour.day_of_week | moment("h A", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                               <!--day_of_the_week(hour.day_of_week)-->
                             </li>
                         </ul>
                     </div>
@@ -96,8 +96,6 @@
                             
                         }
                     });
-                
-                    // var filtered_restaurants = _.orderBy(_.uniqBy(all_restaurants, function(o){ return o.name; }), function(o){ return o.name; })
                     return filtered_restaurants
                 },
                 restaurants(){
@@ -117,9 +115,6 @@
                     var specialty = stores_by_category["Specialty Foods"]
                     var filtered_restaurants = _.uniqBy(specialty, function(o){ return o.name; })
                     return filtered_restaurants
-                },
-                findHourById() {
-                    return this.$store.getters.findHourById;
                 },
             },
             methods: {
@@ -142,10 +137,10 @@
                     });
                     return storeHours
                 },
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
-                }
+                // day_of_the_week(val_day){
+                //     weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                //     return weekday[val_day];
+                // }
             },
         });
     });
