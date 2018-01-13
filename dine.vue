@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="dine-image-container">
-                        <img :src="restaurant.image_url" :alt="restaurant.name" />
+                        <img v-if="restaurant.image_url" :src="restaurant.image_url" :alt="restaurant.name" />
                     </div> 
                     <div class="dine-content-container">
                         <h2 class="dine-name">{{restaurant.name}}</h2>
