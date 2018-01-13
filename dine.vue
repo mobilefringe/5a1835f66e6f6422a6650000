@@ -22,7 +22,7 @@
                         <p>{{restaurant.phone}}</p>
                         <h5>Hours</h5>
                         <ul class="details-hours-list">
-                            <li v-for="hour in storeHours(restaurant.store_hours)">
+                            <li v-if="hour in storeHours(restaurant.store_hours)" v-for="hour in storeHours(restaurant.store_hours)">
                                {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                <!--day_of_the_week(hour.day_of_week)-->
                             </li>
