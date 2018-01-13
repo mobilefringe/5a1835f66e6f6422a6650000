@@ -19,7 +19,18 @@
                     </div>
                     <div class="col-md-4">
                         <div class="sidebar">
-                            <div class="sidebar-container" v-if="currentEvent">
+                            <div class="sidebar-container" v-if="currentEvent && currentEvent.eventable_type == 'Property'">
+                                <h5>Hours</h5>
+                                <ul class="sidebar-hours-list">
+                                    <li v-for="hour in hours">
+                                       {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                    </li>
+                                </ul> 
+                                <router-link to="/hours" active-class="active" exact>
+                                    <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                </router-link>
+                            </div>
+                            <div class="sidebar-container" v-if="currentEvent && currentEvent.eventable_type == 'Store'">
                                 <h5>Hours</h5>
                                 <ul class="sidebar-hours-list">
                                     <li v-for="hour in hours">
@@ -100,12 +111,6 @@
                     'getPropertyHours',
                     'processedEvents',
                 ]),
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                },
                 hours() {
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
                     return hours;
