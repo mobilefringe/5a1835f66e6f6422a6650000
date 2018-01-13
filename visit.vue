@@ -1,5 +1,5 @@
 <template>
-    <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded"> <!-- without an outer container div this component template will not render -->
         <div class="page-banner" v-if="pageBanner">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }"></div>
         </div>
@@ -104,7 +104,7 @@
 
 <script>
 
-define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
+define(["Vue", "vuex", "vue-meta"], function (Vue, Vuex, Meta) {
     Vue.use(Meta);
     return Vue.component("visit-component", {
         template: template, // the variable template will be injected
@@ -127,46 +127,46 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
             });
         },
-        beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-            next(function (vm) {
-                // access to component instance via `vm`
-                //Valet
-                vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-parking-valet-page.json" }).then(function (response) {
-                    vm.valet = response.data;
-                }, function (error) {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    vm.$router.replace({ name: '404' });
-                });
-                //Concierge
-                vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-concierge-services.json" }).then(function (response) {
-                    vm.concierge = response.data;
-                }, function (error) {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    vm.$router.replace({ name: '404' });
-                });
-                //Gift Cards
-                vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json" }).then(function (response) {
-                    vm.giftCards = response.data;
-                }, function (error) {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    vm.$router.replace({ name: '404' });
-                });
-                //Tourism
-                vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
-                    vm.tourism = response.data;
-                }, function (error) {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    vm.$router.replace({ name: '404' });
-                });
-                //Contact
-                vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-contact-us.json" }).then(function (response) {
-                    vm.contact = response.data;
-                }, function (error) {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    vm.$router.replace({ name: '404' });
-                });
-            });
-        },
+        // beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+        //     next(function (vm) {
+        //         // access to component instance via `vm`
+        //         //Valet
+        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-parking-valet-page.json" }).then(function (response) {
+        //             vm.valet = response.data;
+        //         }, function (error) {
+        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+        //             vm.$router.replace({ name: '404' });
+        //         });
+        //         //Concierge
+        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-concierge-services.json" }).then(function (response) {
+        //             vm.concierge = response.data;
+        //         }, function (error) {
+        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+        //             vm.$router.replace({ name: '404' });
+        //         });
+        //         //Gift Cards
+        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json" }).then(function (response) {
+        //             vm.giftCards = response.data;
+        //         }, function (error) {
+        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+        //             vm.$router.replace({ name: '404' });
+        //         });
+        //         //Tourism
+        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-tourism.json" }).then(function (response) {
+        //             vm.tourism = response.data;
+        //         }, function (error) {
+        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+        //             vm.$router.replace({ name: '404' });
+        //         });
+        //         //Contact
+        //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/northpark-contact-us.json" }).then(function (response) {
+        //             vm.contact = response.data;
+        //         }, function (error) {
+        //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+        //             vm.$router.replace({ name: '404' });
+        //         });
+        //     });
+        // },
         beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
             var _this = this;
             //Valet
@@ -209,16 +209,11 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
             ...Vuex.mapGetters([
                 'property',
                 'timezone',
-                'getPropertyHours',
+                'repos',
                 'findRepoByName',
-                'storesByCategoryName',
-                'findStoreById',
-                'findHourById'
             ]),
             pageBanner: function pageBanner() {
-                // var repo = this.findRepoByName("Visit").images;
-                // var repo_images = repo.images;
-                // return repo;
+                return this.findRepoByName("Visit").images;
             }
         },
         methods: {
