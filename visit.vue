@@ -103,7 +103,7 @@
 
 <script>
 
-define(["Vue", "vuex", "vue-meta"], function (Vue, Vuex, Meta) {
+define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
     Vue.use(Meta);
     return Vue.component("visit-component", {
         template: template, // the variable template will be injected
