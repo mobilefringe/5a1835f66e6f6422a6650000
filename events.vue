@@ -225,7 +225,7 @@
                     return repo_images
                 },
                 events() {
-                    var events = this.processedEvents;
+                    var events = this.$store.getters.processedEvents;
                     console.log(events);
                     var showEvents = [];
                     _.forEach(events, function(value, key) {
