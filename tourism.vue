@@ -26,7 +26,7 @@
                         </p>
                         <p class="uppercase">
                             Northpark Center Concierge<br>
-                            {{property.contact_phone}}
+                            {{property.contact_fax}}
                         </p>
                     </div>
                     <div class="sidebar-container">
