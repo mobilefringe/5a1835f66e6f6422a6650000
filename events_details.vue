@@ -23,7 +23,7 @@
                                 <h5>Hours</h5>
                                 <ul class="sidebar-hours-list">
                                     <li v-for="hour in hours">
-                                       {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                       {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </li>
                                 </ul> 
                                 <router-link to="/hours" active-class="active" exact>
@@ -34,7 +34,7 @@
                                 <h5>Hours</h5>
                                 <ul class="sidebar-hours-list">
                                     <li v-for="hour in currentEvent.store.store_hours">
-                                       {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                       {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </li>
                                 </ul> 
                                 <!--<router-link :to="/stores/{{currentEvent.store.slug}}" active-class="active" exact>-->
@@ -133,10 +133,6 @@
                         var store_slug = "/stores/" + this.currentEvent.store.slug
                         return store_slug
                     }    
-                },
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
                 },
                 checkEventDates(currentEvent){
                     var timezone = this.timezone
