@@ -119,6 +119,7 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
         },
         created(){
             this.$store.dispatch("getData", "repos").then(response => {
+                consol.log(this.$store.dispatch("getData", "repos"));
                 this.dataLoaded = true
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
