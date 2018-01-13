@@ -83,7 +83,7 @@
                 timezone () {
                     return this.$store.getters.getTimezone;
                 },
-                all_dine(){
+                all_dine: function all_dine(){
                     var stores_by_category = this.storesByCategoryName;
                     console.log(stores_by_category)
                     var cafes = stores_by_category["NorthPark Cafés"]
