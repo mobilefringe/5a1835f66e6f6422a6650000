@@ -219,25 +219,25 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
                 'findStoreById',
                 'findHourById'
             ]),
-            property: function property() {
-                return this.$store.getters.getProperty;
-            },
-            timezone: function timezone() {
-                return this.$store.getters.getTimezone;
-            },
-            hours: function hours() {
-                var hours = _.filter(this.$store.state.results.hours, function (o) {
-                    return o.store_ids == null && o.is_holiday == 0;
-                });
-                return hours;
-            },
-            pageBanner: function pageBanner() {
-                var repo = _.filter(this.$store.state.results.repos, function (o) {
-                    return o.name == "Visit";
-                });
-                var repo_images = repo[0].images[0];
-                return repo_images;
-            }
+            // property: function property() {
+            //     return this.$store.getters.getProperty;
+            // },
+            // timezone: function timezone() {
+            //     return this.$store.getters.getTimezone;
+            // },
+            // hours: function hours() {
+            //     var hours = _.filter(this.$store.state.results.hours, function (o) {
+            //         return o.store_ids == null && o.is_holiday == 0;
+            //     });
+            //     return hours;
+            // },
+            // pageBanner: function pageBanner() {
+            //     var repo = _.filter(this.$store.state.results.repos, function (o) {
+            //         return o.name == "Visit";
+            //     });
+            //     var repo_images = repo[0].images[0];
+            //     return repo_images;
+            // }
         },
         methods: {
             truncate: function truncate(val_body) {
