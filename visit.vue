@@ -123,12 +123,12 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
             }, error => {
                 console.error("Could not retrieve data from server. Please check internet connection and try again.");
             });
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-management-hours.json" }).then(function (response) {
-                this.currentPage = response.data;
-            }, function (error) {
-                console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                this.$router.replace({ name: '404' });
-            });
+            // this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-management-hours.json" }).then(function (response) {
+            //     this.currentPage = response.data;
+            // }, function (error) {
+            //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //     this.$router.replace({ name: '404' });
+            // });
         },
         beforeRouteEnter: function beforeRouteEnter(to, from, next) {
             next(function (vm) {
