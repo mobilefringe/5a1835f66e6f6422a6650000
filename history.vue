@@ -1,5 +1,5 @@
 <template>
-    <div> <!-- Without an outer container div this component template will not render -->
+    <div v-if="dataLoaded"> <!-- Without an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
         <div class="image-container">
             <slick ref="slick" :options="slickOptions">
@@ -85,6 +85,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     breadcrumb: null,
                     currentPage: null,
                     history: null,
@@ -109,37 +110,16 @@
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
-            },
-            beforeRouteEnter (to, from, next) {
-                next(vm => {
-                    // access to component instance via `vm`
-                    //History
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-history.json"}).then(response => {
-                        vm.history = response.data;
-                    }, error => {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ name: '404'});
-                    });
-                    //Anniversary
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-50th-anniversary.json"}).then(response => {
-                        vm.anniversary = response.data;
-                    }, error => {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ name: '404'});
-                    });
-                })
-            },
-            beforeRouteUpdate (to, from, next) {
-                //History
+                
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-history.json"}).then(response => {
-                    this.history = response.data;
+                    this.currentPage = response.data;
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
                 });
-                //Anniversary
+                
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-50th-anniversary.json"}).then(response => {
-                    this.anniversary = response.data;
+                    this.currentPage = response.data;
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ name: '404'});
@@ -148,15 +128,12 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
+                    'repos',
                     'findRepoByName',
                     'processedEvents',
                 ]),
                 historyBanners() {
-                    // var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history banners" })
-                    // var repo_images = repo[0].images
-                    // return repo_images
-                    
-                    // return this.findRepoByName('history banners').images;
+                    return this.findRepoByName('history banners').images;
                 },
             }
         });
