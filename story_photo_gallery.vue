@@ -42,7 +42,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "lightbox"], function(Vue, moment, tz, VueMoment, Meta, vSelect, Lightbox) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "lightbox"], function(Vue, Vuex, moment, tz, VueMoment, Meta, vSelect, Lightbox) {
         Vue.use(Meta);
         // Vue.use(Lightbox);
         
@@ -50,6 +50,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: null,
                     breadcrumb: null,
                     selected: "History",
                     currentSelection: null,
@@ -62,23 +63,24 @@
                     ],
                 }
             },
+            created(){
+                this.$store.dispatch("getData", "repos").then(response => {
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+            },
             mounted () {
                 this.currentSelection = this.historyGallery;
             },
             computed: {
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone () {
-                    return this.$store.getters.getTimezone;
-                },
-                events() {
-                    var events = this.$store.getters.processedEvents;
-                    var promotions = this.$store.getters.processedPromos;
-                    var merge = _.concat(events, promotions);
-                    var sorted = _.orderBy(merge, function(o) { return o.start_date })
-                    return sorted
-                },
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'findNewStores',
+                    'findComingSoonStores',
+                    'findHourById'
+                ]),
                 historyGallery() {
                     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history slideshow" })
                     var repo_images = repo[0].images
