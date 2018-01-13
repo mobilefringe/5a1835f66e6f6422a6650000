@@ -245,8 +245,8 @@
                             showEvents.push(value);
                         }
                     });
-                    var events = _.orderBy(showEvents, function(o) { return o.end_date }); 
-                    return events
+                    var propertyEvents = _.orderBy(showEvents, function(o) { return o.end_date }); 
+                    return propertyEvents
                 },
                 storeEvents() {
                     var storeEvents = _.filter(this.$store.getters.processedEvents, function(o) { return o.eventable_type == "Store" })
@@ -259,8 +259,8 @@
                             showEvents.push(value);
                         }
                     });
-                    var promotions = _.orderBy(showEvents, function(o) { return o.end_date });
-                    return promotions
+                    var storeEvents = _.orderBy(showEvents, function(o) { return o.end_date });
+                    return storeEvents
                 },
                 holidayEvents() {
                    var holiday_events = [];
