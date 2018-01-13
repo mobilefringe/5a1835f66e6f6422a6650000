@@ -74,7 +74,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, moment, tz, VueMoment, Meta) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, Vuex, moment, tz, VueMoment, Meta) {
         return Vue.component("new-stores-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -83,22 +83,31 @@
                     hours: []
                 }
             },
+            created(){
+                this.$store.dispatch("getData", "stores").then(response => {
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+            },
             computed: {
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone () {
-                    return this.$store.getters.getTimezone;
-                },
-                newStoresList() {
-                    return this.$store.getters.findNewStores;
-                },
-                comingSoonList() {
-                    return this.$store.getters.findComingSoonStores;
-                },
-                findHourById() {
-                    return this.$store.getters.findHourById;
-                }
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'findNewStores',
+                    'findComingSoonStores',
+                    'findHourById'
+                ]),
+
+                // newStoresList() {
+                //     return this.$store.getters.findNewStores;
+                // },
+                // comingSoonList() {
+                //     return this.$store.getters.findComingSoonStores;
+                // },
+                // findHourById() {
+                //     return this.$store.getters.findHourById;
+                // }
             },
             methods: {
                 storeHours(restaurant_hours){
