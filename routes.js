@@ -9,6 +9,7 @@ define([], function () {
             component: view('default'),
             meta: {
                 breadcrumb: 'Shops & Dining',
+                showNav: true
             },
             children: [
                 {
@@ -21,6 +22,11 @@ define([], function () {
                     component: view('dine'),
                     name: 'dineList'
                 },
+                {   path: '/amc',
+                    beforeEnter() { 
+                      location.href = 'https://www.amctheatres.com/movie-theatres/dallas-ft-worth/amc-northpark-15' 
+                    }
+                }
                 {
                     path: '/new-doors',
                     component: view('new_stores'),
@@ -38,6 +44,7 @@ define([], function () {
             component: view('default'),
             meta: {
                 breadcrumb: 'Events',
+                showNav: false
             },
             children: [
                 {
@@ -62,6 +69,7 @@ define([], function () {
             component: view('default'),
             meta: {
                 breadcrumb: 'Art',
+                showNav: true
             },
             children: [
                 {
@@ -91,6 +99,7 @@ define([], function () {
             component: view('default'),
             meta: {
                 breadcrumb: 'News',
+                showNav: false
             },
             children: [
                 {
@@ -110,6 +119,7 @@ define([], function () {
             component: view('default'),
             meta: {
                 breadcrumb: 'Visit',
+                showNav: true
             },
             children: [
                 {
@@ -139,6 +149,7 @@ define([], function () {
             component: view('default'),
             meta: {
                 breadcrumb: 'Our Story',
+                showNav: true
             },
             children: [
                 {
