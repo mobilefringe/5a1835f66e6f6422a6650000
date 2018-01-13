@@ -78,12 +78,7 @@
             beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
                 var _this = this;
                 this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
-                    // this.dataLoaded = true;
                     _this.currentPage = response.data;
-                    if(_this.currentPage.slug === "northpark-parking-valet-page"){
-                        this.breadcrumb = "Visit"
-                        console.log(this.breadcrumb)
-                    }
                 }, function (error) {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     _this.$router.replace({ name: '404' });
