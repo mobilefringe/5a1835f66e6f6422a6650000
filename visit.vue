@@ -1,7 +1,7 @@
 <template>
     <div v-if="dataLoaded"> <!-- without an outer container div this component template will not render -->
-        <div class="page-banner" v-if="pageBanner">
-            <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }"></div>
+        <div class="page-banner" v-if="pageBanner" v-for="banner in pageBanner">
+            <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
         </div>
         <div class="page-container">
             <div class="row">
