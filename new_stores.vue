@@ -79,7 +79,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    dataLoaded: null,
+                    dataLoaded: false,
                     breadcrumb: null,
                     hours: []
                 }
