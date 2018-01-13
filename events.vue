@@ -145,7 +145,7 @@
             },
             mounted () {
                 this.currentSelection = this.events;
-                console.log(this.$store.getters.processedEvents);
+                console.log(this.events);
             },
             watch: {
                 currentselection: function() {
@@ -211,12 +211,6 @@
                     'findRepoByName',
                     'processedEvents',
                 ]),
-                // property(){
-                //     return this.$store.getters.getProperty;
-                // },
-                // timezone() {
-                //     return this.$store.getters.getTimezone;
-                // },
                 // eventsBanners() {
                 //     var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Events" })
                 //     var repo_images = repo[0].images
@@ -225,8 +219,6 @@
                 events() {
                     var events = this.processedEvents;
                     console.log(events);
-                    // var promotions = this.$store.getters.processedPromos;
-                    // var mergeEvents = _.concat(events, promotions);
                     var showEvents = [];
                     _.forEach(events, function(value, key) {
                         var today = moment.tz(this.timezone).format();
