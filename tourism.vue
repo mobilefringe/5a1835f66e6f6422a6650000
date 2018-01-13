@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-8 col-md-pull-4">
                 <div v-if="pageBanner" v-for="banner in pageBanner">
-                    <img class="margin-30" :src="banner.image_url" alt="">
+                    <img class="margin-30" :src="banner.image_url" alt="Tourism Banner">
                 </div>
                 <div class="" v-if="tourism">
                     <h2 class="tourism-title">Tourism</h2>
