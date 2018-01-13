@@ -208,16 +208,24 @@
 </template>
 
 <script>
-    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox"], function(Vue, jQuery, moment, tz, VueMoment, Meta, Lightbox) {
+    define(["Vue", "vues", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, moment, tz, VueMoment, Meta, Lightbox) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         return Vue.component("our-story-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: null,
                     breadcrumb: null,
                     currentPage: null,
                 }
+            },
+            created(){
+                this.$store.dispatch("getData", "repos").then(response => {
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
             },
             beforeRouteEnter (to, from, next) {
                 next(vm => {
@@ -240,13 +248,19 @@
                 });
             },
             computed: {
+                ..Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'findRepoByName',
+                    'findNewStores',
+                    'findComingSoonStores',
+                    'findHourById'
+                ]),
                 property() {
                     return this.$store.getters.getProperty;
                 },
                 images() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Our Story" })
-                    var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
-                    return repo_images
+                    // return this.findRepoByName("Our Story").images
                 },
                 sectionOne(){
                     var sectionID = 35557
