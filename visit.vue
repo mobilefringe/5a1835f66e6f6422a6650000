@@ -164,7 +164,6 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
                 'findRepoByName',
             ]),
             pageBanner: function pageBanner() {
-                console.log(this.findRepoByName("Visit").images)
                 return this.findRepoByName("Visit").images;
             }
         },
