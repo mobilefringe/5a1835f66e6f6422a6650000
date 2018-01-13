@@ -30,12 +30,11 @@
         watch: {
           $route: function() {
             this.currentRoute = this.$route;
-            console.log(this.currentRoute.matched.some(m => m.meta.showNav))
           }
         },
         methods:{
           showMenu(){
-            console.log(this.currentRoute.matched.some(m => m.meta.showNav))
+            return this.currentRoute.matched.some(m => m.meta.showNav);
           }
         }
     });
