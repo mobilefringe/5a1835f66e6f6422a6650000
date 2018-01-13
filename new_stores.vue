@@ -99,16 +99,6 @@
                     'findComingSoonStores',
                     'findHourById'
                 ]),
-
-                // newStoresList() {
-                //     return this.$store.getters.findNewStores;
-                // },
-                // comingSoonList() {
-                //     return this.$store.getters.findComingSoonStores;
-                // },
-                // findHourById() {
-                //     return this.$store.getters.findHourById;
-                // }
             },
             methods: {
                 storeHours(restaurant_hours){
