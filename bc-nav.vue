@@ -21,7 +21,7 @@
         template: template,
         data() {
          return {
-           white
+           
          }
         },
         created(){
