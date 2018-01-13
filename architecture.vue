@@ -217,7 +217,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    dataLoaded: null,
+                    dataLoaded: false,
                     breadcrumb: null,
                     currentPage: null
                 }
@@ -251,12 +251,12 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'findRepoByName',
+                    'repos',
                 ]),
                 images() {
-                    // var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Architecture" })
-                    // var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
-                    // return repo_images
+                    var repo = _.filter(this.repos, function(o) { return o.name == "Architecture" })
+                    var repo_items = _.orderBy(repo[0].images, function(o) { return o.id });
+                    return repo_items
                     
                     return this.findRepoByName("Architecture").images
                 },
