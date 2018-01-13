@@ -70,7 +70,6 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
                 // access to component instance via `vm`
                 vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
                     vm.currentPage = response.data;
-                    console.log(vm.currentPage);
                 }, function (error) {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     vm.$router.replace({ name: '404' });
@@ -82,7 +81,6 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], f
             this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
                 // this.dataLoaded = true;
                 _this.currentPage = response.data;
-                console.log(_this.currentPage);
                 if(_this.currentPage.slug === "northpark-parking-valet-page"){
                     this.breadcrumb = "Visit"
                     console.log(this.breadcrumb)
