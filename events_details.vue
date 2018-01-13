@@ -37,7 +37,7 @@
                                        {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </li>
                                 </ul> 
-                                <!--<router-link :to="/stores/{{currentEvent.store.slug}}" active-class="active" exact>-->
+                                <!--<router-link :to="getStoreSlug()" active-class="active" exact>-->
                                 <!--    <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>-->
                                 <!--</router-link>-->
                             </div>
@@ -123,11 +123,6 @@
                 },
             },
             methods: {
-                checkEventType(val_eventable_type){
-                    if(this.currentEvent.eventable_type == "Store"){
-                        return true
-                    }
-                },
                 getStoreSlug(){
                     if(this.currentEvent.eventable_type == "Store"){
                         var store_slug = "/stores/" + this.currentEvent.store.slug
