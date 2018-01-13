@@ -40,7 +40,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function(Vue, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect) {
         return Vue.component("dine-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -59,6 +59,15 @@
                 }
             },
             computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'getPropertyHours',
+                    'storesByCategoryName',
+                    'findStoreById',
+                    'findHourById'
+                ]),
+            
                 property(){
                     return this.$store.getters.getProperty;
                 },
