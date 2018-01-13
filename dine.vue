@@ -60,7 +60,7 @@
                 }
             },
             created(){
-                this.$store.dispatch("getData", "stores").then(response => {
+                this.$store.dispatch("getData", "categories").then(response => {
                     console.log(this.$store.dispatch("getData", "pois"))
                     this.dataLoaded = true
                 }, error => {
