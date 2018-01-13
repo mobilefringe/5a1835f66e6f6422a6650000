@@ -71,18 +71,10 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'getPropertyHours',
                     'storesByCategoryName',
                     'findStoreById',
                     'findHourById'
                 ]),
-            
-                property(){
-                    return this.$store.getters.getProperty;
-                },
-                timezone () {
-                    return this.$store.getters.getTimezone;
-                },
                 all_dine: function all_dine(){
                     var stores_by_category = this.storesByCategoryName;
                     console.log(stores_by_category)
@@ -90,7 +82,22 @@
                     var restaurants = stores_by_category["Restaurants / Beverages"]
                     var specialty = stores_by_category["Specialty Foods"]
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
-                    var filtered_restaurants = _.orderBy(_.uniqBy(all_restaurants, function(o){ return o.name; }), function(o){ return o.name; })
+                    var filtered_restaurants = _.uniqBy(all_restaurants, function (o) { 
+                        try{
+                            return o.name
+                        } catch(e) {
+                            
+                        }
+                    });
+                    filtered_restaurants = _.orderBy(filtered_restaurants, function (o) { 
+                        try{
+                           return o.name
+                        } catch(e) {
+                            
+                        }
+                    });
+                
+                    // var filtered_restaurants = _.orderBy(_.uniqBy(all_restaurants, function(o){ return o.name; }), function(o){ return o.name; })
                     return filtered_restaurants
                 },
                 restaurants(){
