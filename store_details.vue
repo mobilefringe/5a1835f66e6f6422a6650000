@@ -134,6 +134,13 @@
                     }
                 }
             },
+            props:['id'],
+            created(){
+                this.currentStore = this.findStoreBySlug(this.id);
+                if (this.currentStore === null || this.currentStore === undefined){
+                    this.$router.replace({ name: '404'});
+                }
+            },
             mounted () {
                 this.currentStore
                 this.currentDetails
