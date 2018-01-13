@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded" class="page-container"> <!-- without an outer container div this component template will not render -->
         <div class="margin-42"></div>
         <div class="row">
             <div class="col-md-6">
@@ -45,7 +45,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    dataLoaded: null,
+                    dataLoaded: false,
                     breadcrumb: null,
                     selected: "Select A Category",
                     currentSelection: null,
