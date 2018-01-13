@@ -210,7 +210,6 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
                 'findRepoByName',
             ]),
             pageBanner: function pageBanner() {
-                console.log(this.getPropertyHours)
             //     var repo = _.filter(this.$store.state.results.repos, function (o) {
             //         return o.name == "Tourism";
             //     });
@@ -219,10 +218,6 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v
             }
         },
         methods: {
-            // day_of_the_week: function day_of_the_week(val_day) {
-            //     weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            //     return weekday[val_day];
-            // },
             validateBeforeSubmit() {
                 this.$validator.validateAll().then((result) => {
                     if (result) {
