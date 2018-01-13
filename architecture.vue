@@ -1,5 +1,5 @@
 <template>
-    <div class="" v-if="dataLoaded"> <!-- without an outer container div this component template will not render -->
+    <div v-if="dataLoaded"> <!-- without an outer container div this component template will not render -->
         <div v-if="sectionOne">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
             <div class="margin-90 hidden-mobile"></div>
@@ -227,6 +227,14 @@
                     this.dataLoaded = true
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+                
+                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-architecture.json"}).then(response => {
+                    this.currentPage = response.data;
+                    //console.log(this.currentPage);
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
                 });
             },
             // beforeRouteEnter (to, from, next) {
