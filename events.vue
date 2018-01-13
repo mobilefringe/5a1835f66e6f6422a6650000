@@ -223,7 +223,7 @@
                 //     return repo_images
                 // },
                 events() {
-                    var events = this.$store.getters.processedEvents;
+                    var events = this.processedEvents;
                     console.log(events);
                     // var promotions = this.$store.getters.processedPromos;
                     // var mergeEvents = _.concat(events, promotions);
