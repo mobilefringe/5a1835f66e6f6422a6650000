@@ -76,31 +76,24 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'timezone',
-                    'findNewStores',
-                    'findComingSoonStores',
-                    'findHourById'
+                    'findRepoByName'
                 ]),
                 historyGallery() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "history slideshow" })
-                    var repo_images = repo[0].images
-                    return repo_images
+                    return this.findRepoByName("history slideshow").images
                 },
                 anniversaryGallery() {
-                    
+                    // Need to create repo and add images
+                    // return this.findRepoByName(" ").images
                 },
                 eventGallery() {
-                    
+                    // Need to create repo and add images
+                    // return this.findRepoByName(" ").images
                 },
                 landscapingGallery() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "landscaping slideshow" })
-                    var repo_images = repo[0].images
-                    return repo_images
+                    // return this.findRepoByName("landscaping slideshow").images
                 },
                 architectureGallery() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "architecture slideshow" })
-                    var repo_images = repo[0].images
-                    return repo_images
+                    // return this.findRepoByName("architecture slideshow").images
                 },
             },
             methods: {
