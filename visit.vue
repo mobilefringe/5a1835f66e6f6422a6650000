@@ -103,7 +103,7 @@
 
 <script>
 
-define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, moment, tz, VueMoment, Meta) {
+define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, vuex, moment, tz, VueMoment, Meta) {
     Vue.use(Meta);
     return Vue.component("visit-component", {
         template: template, // the variable template will be injected
@@ -116,6 +116,19 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
                 tourism: null,
                 contact: null
             };
+        },
+        created(){
+            this.$store.dispatch("getData", "repos").then(response => {
+                this.dataLoaded = true
+            }, error => {
+                console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            });
+            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-management-hours.json" }).then(function (response) {
+                this.currentPage = response.data;
+            }, function (error) {
+                console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                this.$router.replace({ name: '404' });
+            });
         },
         beforeRouteEnter: function beforeRouteEnter(to, from, next) {
             next(function (vm) {
@@ -196,6 +209,15 @@ define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta"], function 
             });
         },
         computed: {
+            ...Vuex.mapGetters([
+                'property',
+                'timezone',
+                'getPropertyHours',
+                'findRepoByName',
+                'storesByCategoryName',
+                'findStoreById',
+                'findHourById'
+            ]),
             property: function property() {
                 return this.$store.getters.getProperty;
             },
