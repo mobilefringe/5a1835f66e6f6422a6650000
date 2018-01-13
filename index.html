@@ -267,10 +267,12 @@
                                 <div class="footer-address">
                                     <p v-if="property">{{property.address1}} - {{property.city}}, {{property.province_state}} - {{property.contact_phone}}</p>    
                                 </div>
-                                <div class="footer-social-container" v-for="item in socialMedia">
-                                    <a :href="item.url" target="_blank">
-                                        <i :class="item.iconClass" aria-hidden="true"></i>
-                                    </a>
+                                <div class="footer-social-container">
+                                    <span v-for="item in socialMedia">
+                                        <a :href="item.url" target="_blank">
+                                            <i :class="item.iconClass" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
                                     <!--<a href="https://twitter.com/NorthParkCenter" target="_blank">-->
                                     <!--    <i class="fa fa-twitter-square" aria-hidden="true"></i>-->
                                     <!--</a>  -->
