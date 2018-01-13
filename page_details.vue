@@ -9,7 +9,7 @@
                             <h5>Hours</h5>
                             <ul class="sidebar-hours-list">
                                 <li v-if="getPropertyHours" v-for="hour in getPropertyHours">
-                                   {{moment().weekday(hour.day_of_week).format('dddd')}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                   {{hour.open_time | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                 </li>
                             </ul> 
                             <router-link to="/hours" active-class="active" exact>
