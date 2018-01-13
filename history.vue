@@ -79,7 +79,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, Vuex, moment, tz, VueMoment, Meta, slick) {
+    define(["Vue", "vuex", "vue-meta", "vue!vue-slick"], function(Vue, Vuex, Meta, slick) {
         Vue.use(Meta);
         return Vue.component("history-component", {
             template: template, // the variable template will be injected
@@ -148,8 +148,6 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'timezone',
-                    'getPropertyHours',
                     'findRepoByName',
                     'processedEvents',
                 ]),
@@ -159,12 +157,6 @@
                     // return repo_images
                     
                     // return this.findRepoByName('history banners').images;
-                },
-            },
-            methods: {
-                day_of_the_week(val_day){
-                    weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                    return weekday[val_day];
                 },
             }
         });
