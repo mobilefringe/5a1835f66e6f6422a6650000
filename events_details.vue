@@ -33,11 +33,11 @@
                             <div class="sidebar-container" v-if="currentEvent && currentEvent.eventable_type == 'Store'">
                                 <h5>Hours</h5>
                                 <ul class="sidebar-hours-list">
-                                    <li v-for="hour in hours">
+                                    <li v-for="hour in currentEvent.store.store_hours">
                                        {{day_of_the_week(hour.day_of_week)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </li>
                                 </ul> 
-                                <router-link to="/hours" active-class="active" exact>
+                                <router-link :to="/stores/{{currentEvent.store.slug}}" active-class="active" exact>
                                     <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                                 </router-link>
                             </div>
