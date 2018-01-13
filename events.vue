@@ -215,6 +215,7 @@
                     'property',
                     'timezone',
                     'findRepoByName',
+                    'findRepoBySlug','
                     'processedEvents',
                 ]),
                 eventsBanners() {
