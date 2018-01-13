@@ -145,6 +145,7 @@
             },
             mounted () {
                 this.currentSelection = this.events;
+                this.events;
                 console.log(this.events);
             },
             watch: {
