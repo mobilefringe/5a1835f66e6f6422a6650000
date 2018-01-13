@@ -22,9 +22,6 @@
         data() {
          return {
          }
-        },
-        mounted(){
-          console.log(this.$route)
         }
     });
   });
