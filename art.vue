@@ -1,5 +1,5 @@
 <template>
-    <div class="" v-if="dataLoaded"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded"> <!-- without an outer container div this component template will not render -->
         <div v-if="sectionOne">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
             <div class="margin-90 hidden-mobile"></div>
@@ -210,34 +210,14 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     breadcrumb: null,
-                    currentPage: null,
-                    dataLoaded: false
+                    currentPage: null
                 }
             },
             /*
             mounted () {
                 this.images
-            },
-            beforeRouteEnter (to, from, next) {
-                next(vm => {
-                    // access to component instance via `vm`
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-about-the-collection.json"}).then(response => {
-                        vm.currentPage = response.data;
-                    }, error => {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ name: '404'});
-                    });
-                })
-            },
-            beforeRouteUpdate (to, from, next) {
-                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-about-the-collection.json"}).then(response => {
-                    this.currentPage = response.data;
-                    console.log(this.currentPage);
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    this.$router.replace({ name: '404'});
-                });
             },
             */
             created(){
@@ -258,12 +238,11 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
+                    'findRepoByName',
                     'repos'
                 ]),
                 images() {
-                    var repo = _.filter(this.repos, function(o) { return o.name == "Art Collection Overview" })
-                    var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
-                    return repo_images
+                    return this.findRepoByName("Art Collection Overview").images
                 },
                 sectionOne(){
                     var sectionID = 35507
