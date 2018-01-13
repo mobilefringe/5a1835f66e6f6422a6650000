@@ -268,7 +268,7 @@
                                     <p v-if="property">{{property.address1}} - {{property.city}}, {{property.province_state}} - {{property.contact_phone}}</p>    
                                 </div>
                                 <div class="footer-social-container" v-for="item in socialMedia">
-                                    <a href="https://www.facebook.com/northparkcenter" target="_blank">
+                                    <a :href="item.url" target="_blank">
                                         <i :class="item.iconClass" aria-hidden="true"></i>
                                     </a>
                                     <!--<a href="https://twitter.com/NorthParkCenter" target="_blank">-->
