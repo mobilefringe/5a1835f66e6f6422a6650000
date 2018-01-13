@@ -1,5 +1,5 @@
 <template>
-    <div class=""> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded"> <!-- without an outer container div this component template will not render -->
         <div v-if="sectionOne">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
             <div class="margin-90 hidden-mobile"></div>
@@ -203,29 +203,24 @@
 </template>
 
 <script>
-    define(["Vue", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox"], function(Vue, jQuery, moment, tz, VueMoment, Meta, Lightbox) {
+    define(["Vue", "vuex", "jquery", "vue-moment", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, Meta, Lightbox) {
         Vue.use(Meta);
-        Vue.use(Lightbox);
         return Vue.component("art-exhibition-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     breadcrumb: null,
                     currentPage: null,
                 }
             },
-            beforeRouteEnter (to, from, next) {
-                next(vm => {
-                    // access to component instance via `vm`
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/pages/northpark-art-special-exhibition.json"}).then(response => {
-                        vm.currentPage = response.data;
-                    }, error => {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ name: '404'});
-                    });
-                })
-            },
-            beforeRouteUpdate (to, from, next) {
+            created(){
+                this.$store.dispatch("getData", "repos").then(response => {
+                    this.dataLoaded = true;
+                }, error => {
+                    console.error("Could not retrieve repos data from server. Please check internet connection and try again.");
+                });
+                
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-art-special-exhibition.json"}).then(response => {
                     this.currentPage = response.data;
                 }, error => {
@@ -234,13 +229,13 @@
                 });
             },
             computed: {
-                property() {
-                    return this.$store.getters.getProperty;
-                },
+                ...Vuex.mapGetters([
+                    'property',
+                    'findRepoByName',
+                    'repos'
+                ]),
                 images() {
-                    var repo = _.filter(this.$store.state.results.repos, function(o) { return o.name == "Special Exhibition" })
-                    var repo_images = _.orderBy(repo[0].images, function(o) { return o.id });
-                    return repo_images
+                    return this.findRepoByName("Special Exhibition").images
                 },
                 sectionOne(){
                     var sectionID = 35548
