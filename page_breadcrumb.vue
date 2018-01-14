@@ -3,9 +3,7 @@
             <div class="col-md-12">
                 <p class="page-breadcrumb">
                     {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs> <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    
-                        
+                    <breadcrumbs>{{ breadcrumb }}</breadcrumbs>
                 </p>
             </div>
         </div>
