@@ -38,7 +38,7 @@
                                     </li>
                                 </ul> 
                                 <router-link :to="getStoreSlug()" active-class="active" exact>
-                                    <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                    <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                                 </router-link>
                             </div>
                         </div>    
