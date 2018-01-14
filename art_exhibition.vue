@@ -193,11 +193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Special Exhibition</p>
-                </div>
-            </div>
+            <page-breadcrumb></page-breadcrumb>
         </div>
     </div>
 </template>
@@ -210,7 +206,6 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    breadcrumb: null,
                     currentPage: null,
                 }
             },
