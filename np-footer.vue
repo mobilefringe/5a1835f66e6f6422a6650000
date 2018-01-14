@@ -105,7 +105,7 @@
             data: function data() {
                 return {
                     isHomePage: false,
-                };
+                }
             },
             watch: {
                 $route: function() {
