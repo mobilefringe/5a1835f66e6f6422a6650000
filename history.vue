@@ -70,11 +70,6 @@
         <div class="page-container">
             <div class="margin-30"></div>
             <page-breadcrumb></page-breadcrumb>
-            <!--<div class="row">-->
-            <!--    <div class="col-md-12">-->
-            <!--        <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> History</p>-->
-            <!--    </div>-->
-            <!--</div>-->
         </div>
     </div>
 </template>
@@ -98,9 +93,7 @@
                         fade: true,
                         infinite: true,
                         slidesToShow: 1,
-                        speed: 500,
-                        prevArrow: '.prev',
-                        nextArrow: '.next'
+                        speed: 1000,
                     }
                 }
             },
