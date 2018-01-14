@@ -61,41 +61,28 @@
                     store_hours: [],
                 }
             },
-            // props:['id'],
-            // created(){
-            //     this.currentEvent = this.findEventBySlug(this.id);
-            //     if (this.currentEvent === null || this.currentEvent === undefined){
-            //         // this.$router.replace({ name: '404'});
-            //         console.log(this.currentEvent)
-            //     }
-            // },
             created(){
                 this.$store.dispatch("getData", "events").then(response => {
                     this.dataLoaded = true
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
-                
+            },
+            beforeRouteEnter (to, from, next) {
+                next(vm => {
+                    // access to component instance via `vm`
+                    vm.currentEvent = vm.findEventBySlug(to.params.idEvent);
+                    if(vm.currentEvent === null || vm.currentEvent === undefined){
+                        vm.$router.replace({ name: '404'});
+                    }
+                })
+            },
+            beforeRouteUpdate (to, from, next) {
                 this.currentEvent = this.findEventBySlug(to.params.idEvent);
                 if(this.currentEvent === null || this.currentEvent === undefined){
                     this.$router.replace({ name: '404'});
                 }
             },
-            // beforeRouteEnter (to, from, next) {
-            //     next(vm => {
-            //         // access to component instance via `vm`
-            //         vm.currentEvent = vm.findEventBySlug(to.params.idEvent);
-            //         if(vm.currentEvent === null || vm.currentEvent === undefined){
-            //             vm.$router.replace({ name: '404'});
-            //         }
-            //     })
-            // },
-            // beforeRouteUpdate (to, from, next) {
-            //     this.currentEvent = this.findEventBySlug(to.params.idEvent);
-            //     if(this.currentEvent === null || this.currentEvent === undefined){
-            //         this.$router.replace({ name: '404'});
-            //     }
-            // },
             watch: {
                 currentEvent: function() {
                     // if(this.currentEvent.eventable_type == "Store"){
