@@ -102,18 +102,19 @@
                     'timezone',
                     'getPropertyHours',
                     'processedEvents',
-                    'findEventBySlug'
+                    'findEventBySlug',
+                    'findHourById'
                 ]),
-                hours() {
-                    var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
-                    return hours;
-                },
-                findHourById() {
-                    return this.$store.getters.findHourById;
-                },
-                findEventBySlug () {
-                    return this.$store.getters.findEventBySlug;
-                },
+                // hours() {
+                //     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
+                //     return hours;
+                // },
+                // findHourById() {
+                //     return this.$store.getters.findHourById;
+                // },
+                // findEventBySlug () {
+                //     return this.$store.getters.findEventBySlug;
+                // },
             },
             methods: {
                 getStoreSlug(){
