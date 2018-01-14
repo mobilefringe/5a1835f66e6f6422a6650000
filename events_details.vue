@@ -44,18 +44,19 @@
                         </div>    
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i><span v-if="currentEvent"> {{currentEvent.name}}</span></p>
-                    </div>
-                </div>
+                <page-breadcrumb></page-breadcrumb>
+                <!--<div class="row">-->
+                <!--    <div class="col-md-12">-->
+                <!--        <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i><span v-if="currentEvent"> {{currentEvent.name}}</span></p>-->
+                <!--    </div>-->
+                <!--</div>-->
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!page_breadcrumb.vue"], function(Vue, Vuex, moment, tz, VueMoment, PageBreadcrumbComponent) {
         return Vue.component("event-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
