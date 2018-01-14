@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="sidebar">
-                            <div class="sidebar-container" v-if="currentEvent && currentEvent.eventable_type == 'Property'">
+                            <div class="sidebar-container" v-if="currentEvent.eventable_type === 'Property'">
                                 <h5>Hours</h5>
                                 <ul class="sidebar-hours-list">
                                     <li v-for="hour in hours">
@@ -30,7 +30,7 @@
                                     <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                                 </router-link>
                             </div>
-                            <div class="sidebar-container" v-if="currentEvent && currentEvent.eventable_type == 'Store'">
+                            <div class="sidebar-container" v-if="currentEvent.eventable_type === 'Store'">
                                 <h5>Hours</h5>
                                 <ul class="sidebar-hours-list">
                                     <li v-for="hour in currentEvent.store.store_hours">
@@ -45,11 +45,6 @@
                     </div>
                 </div>
                 <page-breadcrumb></page-breadcrumb>
-                <!--<div class="row">-->
-                <!--    <div class="col-md-12">-->
-                <!--        <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i><span v-if="currentEvent"> {{currentEvent.name}}</span></p>-->
-                <!--    </div>-->
-                <!--</div>-->
             </div>
         </div>
     </div>
