@@ -1,5 +1,5 @@
 <template>
-    <footer v-show="isHomePage">
+    <footer> <!--v-show="isHomePage"-->
         <div class="page-container">
             <div class="footer-nav">
                 <div class="row">
@@ -110,7 +110,10 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property'
-                ])
+                ]),
+                copyright_year() {
+                    return moment().year();
+                }
             }
         });
     });
