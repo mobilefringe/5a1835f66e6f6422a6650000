@@ -1,5 +1,5 @@
 <template>
-    <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
         <div v-if="currentEvent">
             <div class="image-container">
@@ -61,7 +61,7 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    breadcrumb: null,
+                    dataLoaded: false,
                     currentEvent: null,
                     store_hours: [],
                 }
@@ -75,13 +75,8 @@
             //     }
             // },
             created(){
-                this.$store.dispatch("getData", "repos").then(response => {
-                    this.reposLoaded = true
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                });
                 this.$store.dispatch("getData", "events").then(response => {
-                    this.eventsLoaded = true
+                    this.dataLoaded = true
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
