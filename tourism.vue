@@ -128,11 +128,6 @@
             </div>
         </div>
         <page-breadcrumb></page-breadcrumb>
-        <!--<div class="row">-->
-        <!--    <div class="col-md-12">-->
-        <!--        <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> <breadcrumbs>{{ breadcrumb }}</breadcrumbs> <i class="fa fa-angle-right" aria-hidden="true"></i>  Tourism</p>-->
-        <!--    </div>-->
-        <!--</div>-->
     </div>
 </template>
 
@@ -146,7 +141,6 @@
             data: function data() {
                 return {
                     dataLoaded: false,
-                    breadcrumb: null,
                     mainPage: null,
                     tourism: null,
                     guestRewards: null,
