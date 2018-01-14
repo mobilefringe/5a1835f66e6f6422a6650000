@@ -33,7 +33,7 @@
                             <div class="sidebar-container" v-if="currentEvent.eventable_type === 'Store'">
                                 <h5>Hours</h5>
                                 <ul class="sidebar-hours-list">
-                                    <li v-for="hour in currentEvent.store.store_hours">
+                                    <li v-for="hour in store_hours">
                                        {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </li>
                                 </ul> 
@@ -85,14 +85,14 @@
             },
             watch: {
                 currentEvent: function() {
-                    // if(this.currentEvent.eventable_type == "Store"){
-                    //     var vm = this;
-                    //     var storeHours = [];
-                    //     _.forEach(this.currentEvent.store.store_hours, function(value, key) {
-                    //         storeHours.push(vm.findHourById(value));
-                    //     });
-                    //     this.store_hours = storeHours;
-                    // }
+                    if(this.currentEvent.eventable_type == "Store"){
+                        var vm = this;
+                        var storeHours = [];
+                        _.forEach(this.currentEvent.store.store_hours, function(value, key) {
+                            storeHours.push(vm.findHourById(value));
+                        });
+                        this.store_hours = storeHours;
+                    }
                 }
             },
             computed: {
