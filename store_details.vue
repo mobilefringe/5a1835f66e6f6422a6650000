@@ -92,23 +92,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">
-                        <span>{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                        <breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <span v-if="isNewStore"><router-link to="/new-doors">New Doors</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span>
-                        <span v-if="!isNewStore || isDine"><router-link to="/dine">Dine</router-link>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                        <span v-if="currentStore">{{currentStore.name }}</span>
-                    </p>
-                </div>
-            </div>
+            <page-breadcrumb></page-breadcrumb>
         </div>
     </div>
 </template>
 
 <script>
-     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, Vuex, moment, tz, VueMoment, Meta, slick){
+     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick", "vue!page_breadcrumb.vue"], function(Vue, Vuex, moment, tz, VueMoment, Meta, slick, PageBreadcrumbComponent){
         Vue.use(Meta);
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
