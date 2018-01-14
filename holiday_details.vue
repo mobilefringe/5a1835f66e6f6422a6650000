@@ -27,22 +27,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span v-if="currentBlog">{{currentBlog.title}}</span></p>
-                </div>
-            </div>
+            <page-breadcrumb></page-breadcrumb>
         </div>
     </div>
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick"], function(Vue, moment, tz, VueMoment, Meta, slick) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick", "vue!page_breadcrumb.vue"
+], function(Vue, moment, tz, VueMoment, Meta, slick, PageBreadcrumbComponent) {
         return Vue.component("holiday-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    breadcrumb: null,
                     currentBlog: null,
                     currentPost: null,
                     slickOptions: {
