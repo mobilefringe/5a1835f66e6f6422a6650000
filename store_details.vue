@@ -190,6 +190,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
+                    'stores',
                     'findStoreBySlug',
                     'findHourById',
                     'findPromoById'
