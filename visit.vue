@@ -92,24 +92,25 @@
                 </div>
                 <div class="margin-90"></div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> <breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>
-                </div>
-            </div>
+            <page-breadcrumb></page-breadcrumb>
+            <!--<div class="row">-->
+            <!--    <div class="col-md-12">-->
+            <!--        <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> <breadcrumbs>{{ breadcrumb }}</breadcrumbs></p>-->
+            <!--    </div>-->
+            <!--</div>-->
         </div>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!page_breadcrumb.vue"], function (Vue, Vuex, moment, tz, VueMoment, Meta, PageBreadcrumbComponent) {
         Vue.use(Meta);
         return Vue.component("visit-component", {
             template: template, // the variable template will be injected
             data: function data() {
                 return {
                     dataLoaded: false,
-                    breadcrumb: null,
+                    // breadcrumb: null,
                     valet: null,
                     concierge: null,
                     giftCards: null,
