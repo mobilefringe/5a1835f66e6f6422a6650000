@@ -89,6 +89,7 @@
                         var vm = this;
                         var storeHours = [];
                         _.forEach(this.currentEvent.store.store_hours, function(value, key) {
+                            console.log(this.currentEvent.store.store_hours)
                             storeHours.push(vm.findHourById(value));
                         });
                         this.store_hours = storeHours;
