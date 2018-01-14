@@ -69,24 +69,24 @@
         </div>
         <div class="page-container">
             <div class="margin-30"></div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> History</p>
-                </div>
-            </div>
+            <page-breadcrumb></page-breadcrumb>
+            <!--<div class="row">-->
+            <!--    <div class="col-md-12">-->
+            <!--        <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> History</p>-->
+            <!--    </div>-->
+            <!--</div>-->
         </div>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-meta", "vue!vue-slick"], function(Vue, Vuex, Meta, slick) {
+    define(["Vue", "vuex", "vue-meta", "vue!vue-slick", "vue!page_breadcrumb.vue"], function(Vue, Vuex, Meta, slick, PageBreadcrumbComponent) {
         Vue.use(Meta);
         return Vue.component("history-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
                     dataLoaded: false,
-                    breadcrumb: null,
                     currentPage: null,
                     historyPage: null,
                     anniversaryPage: null,
