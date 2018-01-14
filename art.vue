@@ -193,17 +193,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Collection Overview</p>
-                </div>
-            </div>
+            <page-breadcrumb></page-breadcrumb>
+            <!--<div class="row">-->
+            <!--    <div class="col-md-12">-->
+            <!--        <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Collection Overview</p>-->
+            <!--    </div>-->
+            <!--</div>-->
         </div>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, Meta, Lightbox) {
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue!page_breadcrumb.vue"], function(Vue, Vuex, jQuery, Meta, Lightbox,PageBreadcrumbComponent) {
         Vue.use(Meta);
         return Vue.component("art-component", {
             template: template, // the variable template will be injected
