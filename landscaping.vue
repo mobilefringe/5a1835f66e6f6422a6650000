@@ -198,17 +198,14 @@
                     </router-link>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Landscaping</p>
-                </div>
-            </div>
+            <page-breadcrumb></page-breadcrumb>
         </div>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, Meta, Lightbox) {
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue!page_breadcrumb.vue"], function(Vue, Vuex, jQuery, Meta, Lightbox, PageBreadcrumbComponent
+) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         return Vue.component("landscaping-component", {
@@ -216,7 +213,6 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    breadcrumb: null,
                     currentPage: null,
                 }
             },
