@@ -126,19 +126,19 @@
                     <div class="" v-html="unionPay.body"></div>
                 </div>
             </div>
-            
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> <breadcrumbs>{{ breadcrumb }}</breadcrumbs> <i class="fa fa-angle-right" aria-hidden="true"></i>  Tourism</p>
-            </div>
-        </div>
+        <page-breadcrumb></page-breadcrumb>
+        <!--<div class="row">-->
+        <!--    <div class="col-md-12">-->
+        <!--        <p class="page-breadcrumb">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> <breadcrumbs>{{ breadcrumb }}</breadcrumbs> <i class="fa fa-angle-right" aria-hidden="true"></i>  Tourism</p>-->
+        <!--    </div>-->
+        <!--</div>-->
     </div>
 </template>
 
 <script>
 
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate", "vue!page_breadcrumb.vue"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate, PageBreadcrumbComponent) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
         return Vue.component("visit-component", {
