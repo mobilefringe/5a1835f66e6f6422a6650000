@@ -41,7 +41,6 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    breadcrumb: null,
                     selected: "Select A Category",
                     currentSelection: null,
                     categoryOptions: [
