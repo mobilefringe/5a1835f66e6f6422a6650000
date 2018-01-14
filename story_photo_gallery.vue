@@ -33,23 +33,18 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> Photo Gallery</p>
-            </div>
-        </div>
+        <page-breadcrumb></page-breadcrumb>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-meta", "v-select", "lightbox"], function(Vue, Vuex, Meta, vSelect, Lightbox) {
+    define(["Vue", "vuex", "vue-meta", "v-select", "lightbox", "vue!page_breadcrumb.vue"], function(Vue, Vuex, Meta, vSelect, Lightbox, PageBreadcrumbComponent) {
         Vue.use(Meta);
         return Vue.component("story-photo-gallery-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
                     dataLoaded: false,
-                    breadcrumb: null,
                     selected: "History",
                     currentSelection: null,
                     categoryOptions: [
