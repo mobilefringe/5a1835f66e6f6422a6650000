@@ -65,22 +65,17 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;New Stores</p>
-            </div>
-        </div>
+        <page-breadcrumb></page-breadcrumb>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, Vuex, moment, tz, VueMoment, Meta) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!page_breadcrumb.vue"], function(Vue, Vuex, moment, tz, VueMoment, Meta, PageBreadcrumbComponent) {
         return Vue.component("new-stores-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
                     dataLoaded: false,
-                    breadcrumb: null,
                     hours: []
                 }
             },
