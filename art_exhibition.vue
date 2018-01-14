@@ -199,7 +199,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "vue-moment", "vue-meta", "lightbox"], function(Vue, Vuex, jQuery, Meta, Lightbox) {
+    define(["Vue", "vuex", "jquery", "vue-moment", "vue-meta", "lightbox", "vue!page_breadcrumb.vue"], function(Vue, Vuex, jQuery, Meta, Lightbox, PageBreadcrumbComponent) {
         Vue.use(Meta);
         return Vue.component("art-exhibition-component", {
             template: template, // the variable template will be injected
