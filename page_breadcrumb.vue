@@ -18,38 +18,13 @@ define(["Vue", "vuex", "vue-breadcrumbs"], function (Vue, Vuex, VueBreadcrumbs) 
         template: template, // the variable template will be injected
         data: function data() {
             return {
-                dataLoaded: false,
                 breadcrumb: null,
-            };
-        },
-        created(){
-            this.$store.dispatch("getData", "categories").then(response => {
-                this.dataLoaded = true
-            }, error => {
-                console.error("Could not retrieve data from server. Please check internet connection and try again.");
-            });
-            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/northpark-management-hours.json" }).then(function (response) {
-                this.currentPage = response.data;
-            }, function (error) {
-                console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                this.$router.replace({ name: '404' });
-            });
-        },
-        /*
-        mounted: function mounted() {
-            this.restaurants;
-            this.findStoreById;
-        },
-        */
-        watch: {
-           
+            }
         },
         computed: {
             ...Vuex.mapGetters([
-                'property',
-                
-            ]),
-            
+                'property'
+            ])
         }
     });
 });</script>
