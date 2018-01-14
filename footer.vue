@@ -100,7 +100,7 @@
 
 <script>
     define(["Vue", "vuex"], function (Vue, Vuex) {
-        return Vue.component("npfooter-component", {
+        return Vue.component("np-footer-component", {
             template: template, // the variable template will be injected,
             data: function data() {
                 return {
