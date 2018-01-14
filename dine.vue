@@ -30,16 +30,12 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="page-breadcrumb">{{property.name}}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<breadcrumbs>{{ breadcrumb }}</breadcrumbs>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Dine</p>
-            </div>
-        </div>
+        <page-breadcrumb></page-breadcrumb>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue!page_breadcrumb.vue"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect, PageBreadcrumbComponent) {
         return Vue.component("dine-component", {
             template: template, // the variable template will be injected
             data: function() {
