@@ -1,5 +1,5 @@
 <template>
-    <footer> <!--v-show="isHomePage"-->
+    <footer v-show="!isHomePage">
         <div class="page-container">
             <div class="footer-nav">
                 <div class="row">
@@ -104,8 +104,17 @@
             template: template, // the variable template will be injected,
             data: function data() {
                 return {
-
+                    isHomePage: false,
                 };
+            },
+            watch: {
+                $route: function() {
+                    if(this.$route.path == "/") {
+                        this.isHomePage = true;
+                    } else {
+                       this.isHomePage = false; 
+                    }
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
