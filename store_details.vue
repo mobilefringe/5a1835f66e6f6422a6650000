@@ -124,12 +124,19 @@
                     }
                 }
             },
-            props:['id'],
             created(){
-                this.currentStore = this.findStoreBySlug(this.id);
-                if (this.currentStore === null || this.currentStore === undefined){
-                    this.$router.replace({ name: '404'});
-                }
+                this.$store.dispatch("getData", "stores").then(response => {
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+            },
+            // props:['id'],
+            // created(){
+            //     this.currentStore = this.findStoreBySlug(this.id);
+            //     if (this.currentStore === null || this.currentStore === undefined){
+            //         this.$router.replace({ name: '404'});
+            //     }
                 
                 //Stores JSON
                 // var store_id = this.currentStore.id
