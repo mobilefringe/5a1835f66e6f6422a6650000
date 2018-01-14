@@ -65,31 +65,43 @@
                     store_hours: [],
                 }
             },
-            props:['id'],
-            created(){
-                this.currentEvent = this.findEventBySlug(this.id);
-                if (this.currentEvent === null || this.currentEvent === undefined){
-                    // this.$router.replace({ name: '404'});
-                    console.log(this.currentEvent)
-                }
-            },
-            // beforeRouteEnter (to, from, next) {
-            //     next(vm => {
-            //         // access to component instance via `vm`
-            //         vm.currentEvent = vm.findEventBySlug(to.params.idEvent);
-            //         if(vm.currentEvent === null || vm.currentEvent === undefined){
-            //             vm.$router.replace({ name: '404'});
-            //         }
-            //         console.log(vm.currentEvent)
-            //     })
-            // },
-            // beforeRouteUpdate (to, from, next) {
-            //     this.currentEvent = this.findEventBySlug(to.params.idEvent);
-            //     if(this.currentEvent === null || this.currentEvent === undefined){
-            //         this.$router.replace({ name: '404'});
+            // props:['id'],
+            // created(){
+            //     this.currentEvent = this.findEventBySlug(this.id);
+            //     if (this.currentEvent === null || this.currentEvent === undefined){
+            //         // this.$router.replace({ name: '404'});
+            //         console.log(this.currentEvent)
             //     }
-            //     console.log(this.currentEvent)
             // },
+            created(){
+                this.$store.dispatch("getData", "repos").then(response => {
+                    this.reposLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+                this.$store.dispatch("getData", "events").then(response => {
+                    this.eventsLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+            },
+            beforeRouteEnter (to, from, next) {
+                next(vm => {
+                    // access to component instance via `vm`
+                    vm.currentEvent = vm.findEventBySlug(to.params.idEvent);
+                    if(vm.currentEvent === null || vm.currentEvent === undefined){
+                        vm.$router.replace({ name: '404'});
+                    }
+                    console.log(vm.currentEvent)
+                })
+            },
+            beforeRouteUpdate (to, from, next) {
+                this.currentEvent = this.findEventBySlug(to.params.idEvent);
+                if(this.currentEvent === null || this.currentEvent === undefined){
+                    this.$router.replace({ name: '404'});
+                }
+                console.log(this.currentEvent)
+            },
             watch: {
                 currentEvent: function() {
                     // if(this.currentEvent.eventable_type == "Store"){
@@ -108,6 +120,7 @@
                     'timezone',
                     'getPropertyHours',
                     'processedEvents',
+                    'findEventBySlug'
                 ]),
                 hours() {
                     var hours = _.filter(this.$store.state.results.hours, function(o) { return o.store_ids==null && o.is_holiday==0 })
