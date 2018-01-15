@@ -54,6 +54,7 @@
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!page_breadcrumb.vue"], function(Vue, Vuex, moment, tz, VueMoment, PageBreadcrumbComponent) {
         return Vue.component("event-details-component", {
             template: template, // the variable template will be injected,
+            props:['id'],
             data: function() {
                 return {
                     dataLoaded: false,
@@ -61,7 +62,7 @@
                     store_hours: [],
                 }
             },
-            props:['id'],
+            
             created(){
                 this.$store.dispatch("getData", "events").then(response => {
                     console.log(this);
