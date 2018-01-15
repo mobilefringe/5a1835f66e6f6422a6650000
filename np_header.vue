@@ -217,6 +217,7 @@
                 onOptionSelect(option) {
                     console.log('Selected option:', option);
                     this.$router.push("/stores/" + option.slug);
+                    this.show_search = false,
                 }
             }
         });
