@@ -1,5 +1,5 @@
 <template>
-    <div> <!-- without an outer container div this component template will not render -->
+    <div v-if="dataLoaded"> <!-- without an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
         <div class="image-container">
             <div v-if="currentBlog">
@@ -38,6 +38,7 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
+                    dataLoaded: false,
                     currentBlog: null,
                     currentPost: null,
                     slickOptions: {
@@ -48,6 +49,13 @@
                         speed: 500,
                     }
                 }
+            },
+            created(){
+                this.$store.dispatch("getData", "blogs").then(response => {
+                    this.dataLoaded = true
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
             },
             beforeRouteEnter(to, from, next) {
                 next(vm => {
@@ -69,15 +77,15 @@
                 }
             },
             computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'blogs',
+                    'findBlogPostBySlug',
+                ]),
                 findBlogPostBySlug() {
                     return this.$store.getters.findBlogPostBySlug;
                 },
-                property() {
-                    return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                }
             }
         });
     });
