@@ -62,7 +62,6 @@
                     // access to component instance via `vm`
                     var blogName = "Holiday Attractions";
                     vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
-                    console.log(vm.currentBlog)
                     if (vm.currentBlog === null || vm.currentBlog === undefined){
                         vm.$router.replace({ name: '404'});
                     }
@@ -82,10 +81,7 @@
                     'timezone',
                     'blogs',
                     'findBlogPostBySlug',
-                ]),
-                findBlogPostBySlug() {
-                    return this.$store.getters.findBlogPostBySlug;
-                },
+                ])
             }
         });
     });
