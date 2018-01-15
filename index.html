@@ -198,7 +198,7 @@
                 <vue-simple-spinner  size="huge" message="One moment please..."></vue-simple-spinner>    
             </div>
             <transition name="fade">
-                <router-view v-if="dataLoaded"></router-view>
+                <router-view v-if="dataLoaded" :socialMedia="socialMedia"></router-view>
             </transition>
             <np-footer></np-footer>
             <!--<footer v-show="isHomePage">-->
