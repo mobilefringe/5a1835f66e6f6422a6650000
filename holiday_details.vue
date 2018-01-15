@@ -33,8 +33,7 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick", "vue!page_breadcrumb.vue"
-], function(Vue, moment, tz, VueMoment, Meta, slick, PageBreadcrumbComponent) {
+    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick", "vue!page_breadcrumb.vue"], function(Vue, moment, tz, VueMoment, Meta, slick, PageBreadcrumbComponent) {
         return Vue.component("holiday-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
