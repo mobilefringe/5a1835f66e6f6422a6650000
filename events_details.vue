@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dataLoaded"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="currentEvent"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
         <div v-if="currentEvent">
             <div class="image-container">
