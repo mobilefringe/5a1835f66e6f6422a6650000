@@ -94,7 +94,7 @@
                     isHomePage: false,
                 }
             },
-            props:['socialMedia'],
+            props:['social_media'],
             watch: {
                 $route: function() {
                     if(this.$route.path == "/") {
