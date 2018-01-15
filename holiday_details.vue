@@ -53,6 +53,19 @@
             },
             created(){
                 this.$store.dispatch("getData", "blogs").then(response => {
+                    console.log(this);
+                    var blogName = "Holiday Attractions";
+                    this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
+                    console.log(this.currentBlog)
+                    if (this.currentBlog === null || this.currentBlog === undefined){
+                        this.$router.replace({ name: '404'});
+                    }
+                }, error => {
+                  console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
+            },
+            created(){
+                this.$store.dispatch("getData", "blogs").then(response => {
                     this.dataLoaded = true
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
