@@ -64,13 +64,13 @@
                   console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
             },
-            created(){
-                this.$store.dispatch("getData", "blogs").then(response => {
-                    this.dataLoaded = true
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                });
-            },
+            // created(){
+            //     this.$store.dispatch("getData", "blogs").then(response => {
+            //         this.dataLoaded = true
+            //     }, error => {
+            //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //     });
+            // },
             // beforeRouteEnter(to, from, next) {
             //     next(vm => {
             //         // access to component instance via `vm`
