@@ -212,9 +212,6 @@
                     'property',
                     'processedStores'
                 ])
-                // copyright_year() {
-                //     return moment().year();
-                // }
             },
             methods: {
                 onOptionSelect(option) {
