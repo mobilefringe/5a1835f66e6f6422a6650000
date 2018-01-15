@@ -185,6 +185,9 @@
             data: function data() {
                 return {
                     isHomePage: false,
+                    isOpen: false,
+                    show_menu: false,
+                    show_search: false
                 }
             },
             watch: {
