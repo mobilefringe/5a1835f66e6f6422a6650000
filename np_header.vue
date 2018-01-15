@@ -193,7 +193,9 @@
                     showArtMenu: false,
                     showVisitMenu: false,
                     showStoryMenu: false,
-                    showHolidayMenu: false
+                    showHolidayMenu: false,
+                    suggestionAttribute: 'name',
+                    search: '',
                 }
             },
             watch: {
