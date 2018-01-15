@@ -177,6 +177,7 @@
                     'property',
                     'timezone',
                     'blogs',
+                    'findBlogByName',
                     'findBlogPostBySlug',
                 ]),
                 // property() {
@@ -188,11 +189,11 @@
                 // findBlogPostBySlug() {
                 //     return this.$store.getters.findBlogPostBySlug;
                 // },
-                blogs() {
-                    return this.$store.getters.findBlogByName;
-                },
+                // blogs() {
+                //     return this.$store.getters.findBlogByName;
+                // },
                 relatedPost(){
-                    var main_blog = _.reverse(_.orderBy(this.blogs("main").posts, function(o) { return o.publish_date }));
+                    var main_blog = _.reverse(_.orderBy(this.findBlogByName("main").posts, function(o) { return o.publish_date }));
                     if(this.currentPost.tag != null){
                         var current_post_tag = this.currentPost.tag[0]
                     }
