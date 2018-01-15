@@ -38,30 +38,7 @@
                     }
                 }
             },
-            /*
-            beforeRouteEnter(to, from, next) {
-                next(vm => {
-                    // WELCOME MESSAGE
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:vm.property.mm_host + "/api/v3/northpark/messages.json"}).then(response => {
-                        vm.welcomeMessage = response.data;
-                    }, error => {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ name: '404'});
-                    });
-                });
-            },
-            beforeRouteUpdate(to, from, next) {
-                // WELCOME MESSAGE
-                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"}).then(response => {
-                    this.welcomeMessage = response.data;
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    this.$router.replace({ name: '404'});
-                });
-            },
-            */
             created(){
-                // this.$store.dispatch("getData", "banners")
                 this.$store.dispatch("getData", "banners").then(response => {
                     this.dataLoaded = true
                 }, error => {
@@ -85,8 +62,7 @@
                 ]),
                 homeBanners() {
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
-                },
-                
+                }
             }
         })
     })
