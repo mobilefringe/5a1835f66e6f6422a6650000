@@ -207,11 +207,12 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
-                ]),
-                copyright_year() {
-                    return moment().year();
-                }
+                    'property',
+                    'processedStores'
+                ])
+                // copyright_year() {
+                //     return moment().year();
+                // }
             }
         });
     });
