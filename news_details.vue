@@ -173,15 +173,21 @@
                 }
             },
             computed: {
-                property() {
-                    return this.$store.getters.getProperty;
-                },
-                timezone() {
-                    return this.$store.getters.getTimezone;
-                },
-                findBlogPostBySlug() {
-                    return this.$store.getters.findBlogPostBySlug;
-                },
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'blogs',
+                    'findBlogPostBySlug',
+                ]),
+                // property() {
+                //     return this.$store.getters.getProperty;
+                // },
+                // timezone() {
+                //     return this.$store.getters.getTimezone;
+                // },
+                // findBlogPostBySlug() {
+                //     return this.$store.getters.findBlogPostBySlug;
+                // },
                 blogs() {
                     return this.$store.getters.findBlogByName;
                 },
