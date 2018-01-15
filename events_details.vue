@@ -57,12 +57,10 @@
             props:['id'],
             data: function() {
                 return {
-                    dataLoaded: false,
                     currentEvent: null,
                     store_hours: [],
                 }
             },
-            
             created(){
                 this.$store.dispatch("getData", "events").then(response => {
                     console.log(this);
