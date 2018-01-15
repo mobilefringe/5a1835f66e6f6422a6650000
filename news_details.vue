@@ -113,33 +113,17 @@
                 this.currentStore
                 this.currentDetails
             },
-            beforeRouteEnter(to, from, next) {
-                next(vm => {
-                    // access to component instance via `vm`
+            created(){
+                this.$store.dispatch("getData", "blogs").then(response => {
                     var blogName = "main";
-                    vm.currentPost = vm.findBlogPostBySlug(blogName, to.params.id);
-                    if (vm.currentPost === null || vm.currentPost === undefined){
-                        vm.$router.replace({ name: '404'});
+                    this.currentPost = this.findBlogPostBySlug(blogName, this.id);
+                    if (this.currentPost === null || this.currentPost === undefined){
+                        this.$router.replace({ name: '404'});
                     }
-                    
-                    // SOCIAL JSON
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {url:"http://northside.mallmaverick.com/api/v2/northside/social.json"}).then(response => {
-                        vm.socialFeed = response.data;
-                    }, error => {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ name: '404'});
-                    });
-                })
-            },
-            beforeRouteUpdate(to, from, next) {
-                var blogName = "main";
-                this.currentPost = this.findBlogPostBySlug(blogName, to.params.id);
-                if (this.currentPost === null || this.currentPost === undefined){
-                    this.$router.replace({ name: '404'});
-                }
-                
+                }, error => {
+                  console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                });
                 // SOCIAL JSON
-                // this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "api/v2/northside/social.json"}).then(response => {
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:"http://northside.mallmaverick.com/api/v2/northside/social.json"}).then(response => {
                     this.socialFeed = response.data;
                 }, error => {
@@ -147,6 +131,40 @@
                     this.$router.replace({ name: '404'});
                 });
             },
+            // beforeRouteEnter(to, from, next) {
+            //     next(vm => {
+            //         // access to component instance via `vm`
+            //         var blogName = "main";
+            //         vm.currentPost = vm.findBlogPostBySlug(blogName, to.params.id);
+            //         if (vm.currentPost === null || vm.currentPost === undefined){
+            //             vm.$router.replace({ name: '404'});
+            //         }
+                    
+            //         // SOCIAL JSON
+            //         vm.$store.dispatch('LOAD_PAGE_DATA', {url:"http://northside.mallmaverick.com/api/v2/northside/social.json"}).then(response => {
+            //             vm.socialFeed = response.data;
+            //         }, error => {
+            //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //             vm.$router.replace({ name: '404'});
+            //         });
+            //     })
+            // },
+            // beforeRouteUpdate(to, from, next) {
+            //     var blogName = "main";
+            //     this.currentPost = this.findBlogPostBySlug(blogName, to.params.id);
+            //     if (this.currentPost === null || this.currentPost === undefined){
+            //         this.$router.replace({ name: '404'});
+            //     }
+                
+            //     // SOCIAL JSON
+            //     // this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "api/v2/northside/social.json"}).then(response => {
+            //     this.$store.dispatch('LOAD_PAGE_DATA', {url:"http://northside.mallmaverick.com/api/v2/northside/social.json"}).then(response => {
+            //         this.socialFeed = response.data;
+            //     }, error => {
+            //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //         this.$router.replace({ name: '404'});
+            //     });
+            // },
             watch: {
                 socialFeed: function() {
                     var social_feed = this.socialFeed.social.instagram;
