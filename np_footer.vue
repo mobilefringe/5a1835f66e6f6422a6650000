@@ -40,24 +40,11 @@
                             <p v-if="property">{{property.address1}} - {{property.city}}, {{property.province_state}} - {{property.contact_phone}}</p>    
                         </div>
                         <div class="footer-social-container">
-                            <a href="https://www.facebook.com/northparkcenter" target="_blank">
-                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://twitter.com/NorthParkCenter" target="_blank">
-                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                            </a>  
-                            <a href="https://www.pinterest.ca/northparkcenter" target="_blank">    
-                                <i class="fa fa-pinterest-square" aria-hidden="true"></i>
-                            </a>    
-                            <a href="https://www.youtube.com/user/NorthParkCenter" target="_blank">    
-                                <i class="fa fa-youtube-square" aria-hidden="true"></i>
-                            </a>    
-                            <a href="https://www.instagram.com/northparkcenter/" target="_blank">    
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                            <a href="" target="_blank">  
-                                <i class="fa fa-snapchat-square" aria-hidden="true"></i>
-                            </a>
+                            <span v-for="item in socialMedia">
+                                <a :href="item.url" target="_blank">
+                                    <i :class="item.iconClass" aria-hidden="true"></i>
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>
