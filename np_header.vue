@@ -187,7 +187,8 @@
                     isHomePage: false,
                     isOpen: false,
                     show_menu: false,
-                    show_search: false
+                    show_search: false,
+                    breadcrumb: this.$breadcrumbs
                 }
             },
             watch: {
