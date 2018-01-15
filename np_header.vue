@@ -188,7 +188,12 @@
                     isOpen: false,
                     show_menu: false,
                     show_search: false,
-                    breadcrumb: this.$breadcrumbs
+                    breadcrumb: this.$breadcrumbs,
+                    showStoresMenu: false,
+                    showArtMenu: false,
+                    showVisitMenu: false,
+                    showStoryMenu: false,
+                    showHolidayMenu: false
                 }
             },
             watch: {
