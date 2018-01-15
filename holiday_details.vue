@@ -36,6 +36,7 @@
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick", "vue!page_breadcrumb.vue"], function(Vue, Vuex, moment, tz, VueMoment, Meta, slick, PageBreadcrumbComponent) {
         return Vue.component("holiday-details-component", {
             template: template, // the variable template will be injected,
+            props:['id'],
             data: function() {
                 return {
                     dataLoaded: false,
@@ -57,24 +58,24 @@
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
             },
-            beforeRouteEnter(to, from, next) {
-                next(vm => {
-                    // access to component instance via `vm`
-                    var blogName = "Holiday Attractions";
-                    vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
-                    if (vm.currentBlog === null || vm.currentBlog === undefined){
-                        vm.$router.replace({ name: '404'});
-                    }
-                })
-            },
-            beforeRouteUpdate(to, from, next) {
-                var blogName = "Holiday Attractions";
-                this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
-                console.log(this.currentBlog)
-                if (this.currentBlog === null || this.currentBlog === undefined){
-                    this.$router.replace({ name: '404'});
-                }
-            },
+            // beforeRouteEnter(to, from, next) {
+            //     next(vm => {
+            //         // access to component instance via `vm`
+            //         var blogName = "Holiday Attractions";
+            //         vm.currentBlog = vm.findBlogPostBySlug(blogName, to.params.id);
+            //         if (vm.currentBlog === null || vm.currentBlog === undefined){
+            //             vm.$router.replace({ name: '404'});
+            //         }
+            //     })
+            // },
+            // beforeRouteUpdate(to, from, next) {
+            //     var blogName = "Holiday Attractions";
+            //     this.currentBlog = this.findBlogPostBySlug(blogName, to.params.id);
+            //     console.log(this.currentBlog)
+            //     if (this.currentBlog === null || this.currentBlog === undefined){
+            //         this.$router.replace({ name: '404'});
+            //     }
+            // },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
