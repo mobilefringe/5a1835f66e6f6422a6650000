@@ -213,6 +213,12 @@
                 // copyright_year() {
                 //     return moment().year();
                 // }
+            },
+            methods: {
+                onOptionSelect(option) {
+                    console.log('Selected option:', option);
+                    this.$router.push("/stores/" + option.slug);
+                }
             }
         });
     });
