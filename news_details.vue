@@ -96,10 +96,10 @@
 </template>
 
 <script>
-    define(["Vue", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing", "vue!page_breadcrumb.vue"], function(Vue, moment, tz, VueMoment, Meta, SocialSharing, PageBreadcrumbComponent) {
-
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing", "vue!page_breadcrumb.vue"], function(Vue, Vuex, moment, tz, VueMoment, Meta, SocialSharing, PageBreadcrumbComponent) {
         return Vue.component("news-details-component", {
             template: template, // the variable template will be injected,
+            props:['id'],
             data: function() {
                 return {
                     currentBlog: null,
