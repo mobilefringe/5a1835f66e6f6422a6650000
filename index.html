@@ -15,7 +15,7 @@
     <body>
         <div id="app" v-cloak>
             <div id="main-container">
-                <np-header></np-header>
+                <np-header :socialMedia="socialMedia"></np-header>
             </div>
             <div class="loading-container" v-if="!dataLoaded">
                 <vue-simple-spinner  size="huge" message="One moment please..."></vue-simple-spinner>    
@@ -23,7 +23,7 @@
             <transition name="fade">
                 <router-view v-if="dataLoaded"></router-view>
             </transition>
-            <np-footer></np-footer>
+            <np-footer :socialMedia="socialMedia"></np-footer>
         </div>
         <script data-main="/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
     </body>
