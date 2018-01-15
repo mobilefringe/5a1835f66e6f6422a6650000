@@ -40,7 +40,7 @@
                             <p v-if="property">{{property.address1}} - {{property.city}}, {{property.province_state}} - {{property.contact_phone}}</p>    
                         </div>
                         <div class="footer-social-container">
-                            <span v-for="item in socialMedia">
+                            <span v-for="item in social_media">
                                 <a :href="item.url" target="_blank">
                                     <i :class="item.iconClass" aria-hidden="true"></i>
                                 </a>
