@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="" class="page-container"> <!-- without an outer container div this component template will not render -->
         <div class="margin-90"></div>
         <div class="row" v-if="currentPost">
             <div class="col-md-8 margin-60">
