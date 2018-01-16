@@ -40,7 +40,16 @@
                     <div class="" v-html="currentPage.body"></div>
                 </div>
             </div>
-            <page-breadcrumb></page-breadcrumb>
+            <div class="row">
+-                <div class="col-md-12">
+-                    <p class="page-breadcrumb">
+-                        {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+-                        <span>{{ footerBreadcrumb() }}</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+-                        <span v-if="currentPage">{{currentPage.title}}</span>
+-                    </p>
+-                </div>
+-            </div>
+            <!--<page-breadcrumb></page-breadcrumb>-->
         </div>
     </div>
 </template>
