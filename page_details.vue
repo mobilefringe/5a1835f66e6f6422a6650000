@@ -51,7 +51,7 @@
                     </p>
                 </div>
             </div>
-            <!--<page-breadcrumb></page-breadcrumb>-->
+            <page-breadcrumb v-if="!footerBreadcrumb()"></page-breadcrumb>
         </div>
     </div>
 </template>
