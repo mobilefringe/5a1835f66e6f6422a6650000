@@ -99,6 +99,15 @@
             methods: {
                 footerBreadcrumb: function footerBreadcrumb(){
                     return this.breadcrumb;
+                    if(this.$route.path == "/pages/northpark-parking-valet-page"){
+                        return "Valet & Parking"    
+                    } else if(this.$route.path == "/pages/northpark-concierge-services"){
+                        return "Concierge"    
+                    } else if(this.$route.path == "/pages/northpark-northpark-gold-gift-cards"){
+                        return "NorthPark Gold & Gift Cards"
+                    } else if (this.$route.path == "/pages/northpark-contact-us") {
+                        return "Contact us"
+                    }
                 }
             }
         });
