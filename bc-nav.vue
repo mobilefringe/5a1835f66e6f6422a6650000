@@ -30,6 +30,7 @@
         watch: {
           $route: function() {
             this.currentRoute = this.$route;
+            console.log(this.$route)
           }
         },
         methods:{
