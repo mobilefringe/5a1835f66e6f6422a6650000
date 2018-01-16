@@ -112,7 +112,7 @@
             created(){
                 this.$store.dispatch("getData", "blogs").then(response => {
                     var blogName = "main";
-                     this.updateCurrentPromo(this.id);
+                     this.updateCurrentBlog(this.id);
                 }, error => {
                   console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
