@@ -40,6 +40,7 @@
                     <div class="" v-html="currentPage.body"></div>
                 </div>
             </div>
+            {{visitSubPage}}
             <div v-if="visitSubPage" class="row">
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
