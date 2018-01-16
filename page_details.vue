@@ -40,7 +40,7 @@
                     <div class="" v-html="currentPage.body"></div>
                 </div>
             </div>
-            <div v-if="footerBreadcrumb()" class="row">
+            <div v-if="visitSubPage" class="row">
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
                         {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -51,7 +51,7 @@
                     </p>
                 </div>
             </div>
-            <page-breadcrumb v-if="!footerBreadcrumb()"></page-breadcrumb>
+            <page-breadcrumb v-if="!visitSubPage"></page-breadcrumb>
         </div>
     </div>
 </template>
