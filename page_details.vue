@@ -109,7 +109,7 @@
                     } else {
                         this.visitSubPage = false;
                     }
-                    // console.log(this.visitSubPage)
+                    console.log(this.visitSubPage)
                 }    
             },
             computed: {
