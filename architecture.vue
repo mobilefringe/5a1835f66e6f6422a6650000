@@ -280,8 +280,12 @@
             methods: {
                 loadData: async function() {
                     try{
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-architecture.json"})]);
-                        this.currentPage = response.data;
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-architecture.json"}).then(response => {
+                    this.currentPage = response.data;
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ name: '404'});
+                });
                     }
                     catch (e){
                         console.log("Error loading data: " + e.message);    
