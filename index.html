@@ -21,8 +21,7 @@
                 <vue-simple-spinner  size="huge" message="One moment please..."></vue-simple-spinner>    
             </div>
             <transition name="fade">
-                <router-view v-if="dataLoaded" class="wrapper"></router-view>
-                <div class="push"></div>
+                <router-view v-if="dataLoaded" class="content"></router-view>
             </transition>
             <np-footer :social_media="social_media"></np-footer>
         </div>
