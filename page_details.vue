@@ -61,24 +61,34 @@
     define(["Vue", "vuex", "vue_router", "routes", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!page_breadcrumb.vue"], function (Vue, Vuex, VueRouter, appRoutes, moment, tz, VueMoment, Meta, PageBreadcrumbComponent) {
         return Vue.component("page-details-component", {
             template: template, // the variable template will be injected,
+            props:['id'],
             data: function data() {
                 return {
                     currentPage: null,
                     visitSubPage: false,
                 };
             },
-            beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-                next(function (vm) {
-                    // access to component instance via `vm`
-                    vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
-                        vm.currentPage = response.data;
-                    }, function (error) {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ name: '404' });
-                    });
-                });
-            },
-            beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
+            // beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+            //     next(function (vm) {
+            //         // access to component instance via `vm`
+            //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
+            //             vm.currentPage = response.data;
+            //         }, function (error) {
+            //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //             vm.$router.replace({ name: '404' });
+            //         });
+            //     });
+            // },
+            // beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
+            //     var _this = this;
+            //     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
+            //         _this.currentPage = response.data;
+            //     }, function (error) {
+            //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //         _this.$router.replace({ name: '404' });
+            //     });
+            // },
+            created(){
                 var _this = this;
                 this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
                     _this.currentPage = response.data;
