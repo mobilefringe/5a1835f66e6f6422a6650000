@@ -224,8 +224,8 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'findRepoByName',
-                    'repos'
+                    'repos',
+                    'findRepoByName'
                 ]),
                 images() {
                     return this.findRepoByName("Special Exhibition").images
