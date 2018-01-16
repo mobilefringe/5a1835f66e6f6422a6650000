@@ -43,9 +43,9 @@
             <div v-if="footerBreadcrumb()" class="row">
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
-                        {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
                         <router-link tag="span" to="/visit" active-class="active" exact>
-                            Visit <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                            Visit <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </router-link>
                         <span v-if="currentPage">{{currentPage.title}}</span>
                     </p>
