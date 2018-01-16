@@ -22,6 +22,7 @@
             </div>
             <transition name="fade">
                 <router-view v-if="dataLoaded" class="wrapper"></router-view>
+                <div class="push"></div>
             </transition>
             <np-footer :social_media="social_media"></np-footer>
         </div>
