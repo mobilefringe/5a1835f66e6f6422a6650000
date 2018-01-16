@@ -89,13 +89,14 @@
             //     });
             // },
             created(){
-                var _this = this;
-                this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
-                    _this.currentPage = response.data;
-                }, function (error) {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    _this.$router.replace({ name: '404' });
-                });
+                this.updateCurrentPage(id);
+                // var _this = this;
+                // this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
+                //     _this.currentPage = response.data;
+                // }, function (error) {
+                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                //     _this.$router.replace({ name: '404' });
+                // });
             },
             watch: {
                 $route: function() {
@@ -122,6 +123,15 @@
                 //         return false
                 //     }
                 // }
+                updateCurrentPage(id) {
+                    var _this = this;
+                    this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.id + ".json" }).then(function (response) {
+                        _this.currentPage = response.data;
+                    }, function (error) {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        _this.$router.replace({ name: '404' });
+                    });
+                },
             }
         });
     });
