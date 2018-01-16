@@ -86,7 +86,7 @@
             },
             watch: {
                 $route: function() {
-                    this.updateCurrentPromo(this.$route.params.id);
+                    console.log(this.$route)
                 }    
             },
             computed: {
