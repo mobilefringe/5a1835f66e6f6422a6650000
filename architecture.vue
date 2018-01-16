@@ -218,18 +218,22 @@
                 }
             },
             created(){
-                this.$store.dispatch("getData", "repos").then(response => {
-                    this.dataLoaded = true
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                this.loadData().then(response => {
+                    this.dataLoaded = true;      
                 });
                 
-                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-architecture.json"}).then(response => {
-                    this.currentPage = response.data;
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    this.$router.replace({ name: '404'});
-                });
+                // this.$store.dispatch("getData", "repos").then(response => {
+                //     this.dataLoaded = true
+                // }, error => {
+                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                // });
+                
+                // this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-architecture.json"}).then(response => {
+                //     this.currentPage = response.data;
+                // }, error => {
+                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                //     this.$router.replace({ name: '404'});
+                // });
             },
             computed: {
                 ...Vuex.mapGetters([
