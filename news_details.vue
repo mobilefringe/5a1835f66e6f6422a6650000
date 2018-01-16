@@ -125,13 +125,13 @@
                     this.$router.replace({ name: '404'});
                 });
             },
-            beforeRouteUpdate (to, from, next) {
-                var blogName = "main";
-                this.currentPost = this.findBlogPostBySlug(blogName, this.id);
-                if (this.currentPost === null || this.currentPost === undefined){
-                    this.$router.replace({ name: '404'});
-                }
-            },
+            // beforeRouteUpdate (to, from, next) {
+            //     var blogName = "main";
+            //     this.currentPost = this.findBlogPostBySlug(blogName, this.id);
+            //     if (this.currentPost === null || this.currentPost === undefined){
+            //         this.$router.replace({ name: '404'});
+            //     }
+            // },
             watch: {
                 $route : function () {
                     this.updateCurrentBlog(this.$route.params.id);
