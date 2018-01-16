@@ -103,6 +103,8 @@
                 footerBreadcrumb: function footerBreadcrumb(){
                     if(this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
                         return true
+                    } else {
+                        return false
                     }
                 }
             }
