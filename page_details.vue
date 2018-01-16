@@ -84,6 +84,11 @@
                     _this.$router.replace({ name: '404' });
                 });
             },
+            watch: {
+                $route: function() {
+                    this.updateCurrentPromo(this.$route.params.id);
+                }    
+            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
