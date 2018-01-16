@@ -109,7 +109,7 @@
                     } else {
                         this.visitSubPage = false;
                     }
-                    console.log(this.visitSubPage)
+                    console.log("Route", this.visitSubPage)
                 }    
             },
             computed: {
@@ -130,7 +130,7 @@
                         } else {
                             this.visitSubPage = false;
                         }
-                        console.log(this.visitSubPage)
+                        console.log("Method", this.visitSubPage)
                     }, function (error) {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         _this.$router.replace({ name: '404' });
