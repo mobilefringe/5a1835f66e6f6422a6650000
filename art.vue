@@ -30,7 +30,7 @@
                 		        </router-link>
             		        </div>
                     	</div>
-                    	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
+                    	<div v-if="!sectionTwo.url" class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionTwo.name }}</h2>
                     		    <h4>{{ sectionTwo.description }}</h4>
@@ -53,7 +53,7 @@
                 		        </router-link>
             		        </div>
                     	</div>
-                    	<div v-if="!sectionThree.url"class="hover-text-container hover-scale">
+                    	<div v-if="!sectionThree.url" class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionThree.name }}</h2>
                     		    <h4>{{ sectionThree.description }}</h4>
@@ -76,7 +76,7 @@
             		            </router-link>
             		        </div>
                     	</div>
-                    	<div v-if="!sectionFour.url"class="hover-text-container hover-scale">
+                    	<div v-if="!sectionFour.url" class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionFour.name }}</h2>
                     		    <h4>{{ sectionFour.description }}</h4>
@@ -101,7 +101,7 @@
     		            </router-link>
     		        </div>
             	</div>
-            	<div v-if="!sectionFive.url"class="hover-text-container hover-scale">
+            	<div v-if="!sectionFive.url" class="hover-text-container hover-scale">
             		<div class="hover-text">
             		    <h2>{{ sectionFive.name }}</h2>
             		    <h4>{{ sectionFive.description }}</h4>
@@ -133,7 +133,7 @@
             		            </router-link>
             		        </div>
                     	</div>
-                    	<div v-if="!sectionSix.url"class="hover-text-container hover-scale">
+                    	<div v-if="!sectionSix.url" class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionSix.name }}</h2>
                     		    <h4>{{ sectionSix.description }}</h4>
@@ -156,7 +156,7 @@
         		                </router-link>
             		        </div>
                     	</div>
-                    	<div v-if="!sectionSeven.url"class="hover-text-container hover-scale">
+                    	<div v-if="!sectionSeven.url" class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionSeven.name }}</h2>
                     		    <h4>{{ sectionSeven.description }}</h4>
@@ -181,7 +181,7 @@
             		            </router-link>
             		        </div>
                     	</div>
-                    	<div v-if="!sectionEight.url"class="hover-text-container hover-scale">
+                    	<div v-if="!sectionEight.url" class="hover-text-container hover-scale">
                     		<div class="hover-text">
                     		    <h2>{{ sectionEight.name }}</h2>
                     		    <h4>{{ sectionEight.description }}</h4>
