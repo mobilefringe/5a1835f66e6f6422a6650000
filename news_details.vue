@@ -136,6 +136,9 @@
                 }
             },
             watch: {
+                $route : function () {
+                    this.updateCurrentBlog(this.$route.params.id);
+                },
                 socialFeed: function() {
                     var social_feed = this.socialFeed.social.instagram;
                     var insta_feed = _.slice(social_feed, [0], [3])
@@ -175,6 +178,13 @@
                 }
             },
             methods: {
+                updateCurrentBlog(id){
+                    var blogName = "main";
+                    this.currentPost = this.findBlogPostBySlug(blogName, id);
+                    if (this.currentPost === null || this.currentPost === undefined){
+                        this.$router.replace({ name: '404'});
+                    }
+                },
                 tagString(val_tag){
                     var string = _.join(val_tag, ', ')  
                     return string
