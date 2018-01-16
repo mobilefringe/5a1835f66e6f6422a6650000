@@ -128,6 +128,13 @@
                     this.$router.replace({ name: '404'});
                 });
             },
+            beforeRouteUpdate (to, from, next) {
+                var blogName = "main";
+                this.currentPost = this.findBlogPostBySlug(blogName, this.id);
+                if (this.currentPost === null || this.currentPost === undefined){
+                    this.$router.replace({ name: '404'});
+                }
+            },
             watch: {
                 socialFeed: function() {
                     var social_feed = this.socialFeed.social.instagram;
