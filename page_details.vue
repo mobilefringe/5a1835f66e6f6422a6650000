@@ -40,11 +40,11 @@
                     <div class="" v-html="currentPage.body"></div>
                 </div>
             </div>
-            <div class="row">
+            <div v-if="footerBreadcrumb()" class="row">
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
                         {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
-                        <span>{{ footerBreadcrumb() }}</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        <span>Visit</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
                         <span v-if="currentPage">{{currentPage.title}}</span>
                     </p>
                 </div>
@@ -98,15 +98,8 @@
             },
             methods: {
                 footerBreadcrumb: function footerBreadcrumb(){
-                    return this.breadcrumb;
-                    if(this.$route.path == "/pages/northpark-parking-valet-page"){
-                        return "Valet & Parking"    
-                    } else if(this.$route.path == "/pages/northpark-concierge-services"){
-                        return "Concierge"    
-                    } else if(this.$route.path == "/pages/northpark-northpark-gold-gift-cards"){
-                        return "NorthPark Gold & Gift Cards"
-                    } else if (this.$route.path == "/pages/northpark-contact-us") {
-                        return "Contact us"
+                    if(this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
+                        return true
                     }
                 }
             }
