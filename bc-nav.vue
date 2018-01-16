@@ -33,7 +33,7 @@
             console.log(this.$route)
           }
         },
-        methods:{
+        computed:{
           showMenu(){
             console.log(this.currentRoute.matched.some(m => m.meta.showNav));
             return false
