@@ -65,7 +65,7 @@
 
 <script>
 
-    define(["Vue", "vuex", "vue_router", "routes", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!page_breadcrumb.vue"], function (Vue, Vuex, VueRouter, appRoutes, moment, tz, VueMoment, Meta, PageBreadcrumbComponent) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!page_breadcrumb.vue"], function (Vue, Vuex, moment, tz, VueMoment, Meta, PageBreadcrumbComponent) {
         return Vue.component("page-details-component", {
             template: template, // the variable template will be injected,
             props:['id'],
