@@ -44,8 +44,8 @@
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
                         {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
-                        <router-link tag="" to="/visit" active-class="active" exact>
-                            <span>Visit </span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        <router-link tag="span" to="/visit" active-class="active" exact>
+                            Visit <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
                         </router-link>
                         <span v-if="currentPage">{{currentPage.title}}</span>
                     </p>
