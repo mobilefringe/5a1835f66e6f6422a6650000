@@ -44,7 +44,9 @@
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
                         {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
-                        <span>Visit</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        <router-link tag="li" to="/visit" active-class="active" exact>
+                            <span>Visit</span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;
+                        </router-link>
                         <span v-if="currentPage">{{currentPage.title}}</span>
                     </p>
                 </div>
@@ -61,7 +63,8 @@
             template: template, // the variable template will be injected,
             data: function data() {
                 return {
-                    currentPage: null
+                    currentPage: null,
+                    currentRoute: null,
                 };
             },
             beforeRouteEnter: function beforeRouteEnter(to, from, next) {
