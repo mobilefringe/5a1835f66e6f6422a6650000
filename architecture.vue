@@ -258,7 +258,7 @@
                     return _.find(this.images, function(o) { return o.id === sectionID; })
                 },
                 sectionTwo(){
-                    // var sectionID = 35581
+                    var sectionID = 35581
                     // var sectionTwo = [];
                     // _.forEach(this.images, function(value, key) {
                     //     var itemID = value.id
