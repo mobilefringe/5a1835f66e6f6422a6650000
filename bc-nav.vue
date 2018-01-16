@@ -35,7 +35,8 @@
         },
         methods:{
           showMenu(){
-            return this.currentRoute.matched.some(m => m.meta.showNav);
+            console.log(this.currentRoute.matched.some(m => m.meta.showNav));
+            return false
           }
         }
     });
