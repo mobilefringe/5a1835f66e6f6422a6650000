@@ -246,15 +246,16 @@
                 },
                 sectionOne(){
                     var sectionID = 35580
-                    var sectionOne = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionOne.push(value);
-                        }
-                    });
-                    console.log(_.find(this.images, function(o) { return o.id === sectionID; }))
-                    return sectionOne[0];
+                    // var sectionOne = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionOne.push(value);
+                    //     }
+                    // });
+                    // return sectionOne[0];
+                    
+                    return _.find(this.images, function(o) { return o.id === sectionID; })
                 },
                 sectionTwo(){
                     var sectionID = 35581
