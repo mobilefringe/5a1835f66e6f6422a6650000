@@ -120,13 +120,6 @@
                 ])
             },
             methods: {
-                // footerBreadcrumb: function footerBreadcrumb(){
-                //     if(this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
-                //         return true
-                //     } else {
-                //         return false
-                //     }
-                // }
                 updateCurrentPage(id) {
                     var _this = this;
                     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.id + ".json" }).then(function (response) {
