@@ -253,6 +253,7 @@
                             sectionOne.push(value);
                         }
                     });
+                    console.log(_.find(this.images, function(o) { return o.id === sectionID; }))
                     return sectionOne[0];
                 },
                 sectionTwo(){
