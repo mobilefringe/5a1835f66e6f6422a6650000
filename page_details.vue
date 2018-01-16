@@ -44,7 +44,7 @@
                 <div class="col-md-12">
                     <p class="page-breadcrumb">
                         {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <router-link tag="span" to="/visit" active-class="active" exact>
+                        <router-link tag="a" to="/visit" active-class="active" exact>
                             Visit <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </router-link>
                         <span v-if="currentPage">{{currentPage.title}}</span>
@@ -90,13 +90,6 @@
             // },
             created(){
                 this.updateCurrentPage(this.id);
-                // var _this = this;
-                // this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
-                //     _this.currentPage = response.data;
-                // }, function (error) {
-                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                //     _this.$router.replace({ name: '404' });
-                // });
             },
             watch: {
                 $route: function() {
