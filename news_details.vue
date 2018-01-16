@@ -112,10 +112,7 @@
             created(){
                 this.$store.dispatch("getData", "blogs").then(response => {
                     var blogName = "main";
-                    this.currentPost = this.findBlogPostBySlug(blogName, this.id);
-                    if (this.currentPost === null || this.currentPost === undefined){
-                        this.$router.replace({ name: '404'});
-                    }
+                     this.updateCurrentPromo(this.id);
                 }, error => {
                   console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
