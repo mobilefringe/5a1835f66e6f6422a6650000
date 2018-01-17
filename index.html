@@ -14,11 +14,12 @@
     </head>
     <body>
         <div id="app" v-cloak>
+            <div class="loading-container" v-if="!dataLoaded">
+                <vue-simple-spinner size="huge" message="NorthPark Center is loading..."></vue-simple-spinner>    
+            </div>
             <np-header :social_media="social_media"></np-header>
             <transition name="fade">
-                <div class="loading-container" v-if="!dataLoaded">
-                    <vue-simple-spinner size="huge" message="NorthPark Center is loading..."></vue-simple-spinner>    
-                </div>
+                
                 <router-view v-if="dataLoaded" class="content"></router-view>
             </transition>
             <np-footer :social_media="social_media"></np-footer>
