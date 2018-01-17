@@ -21,7 +21,6 @@
                 		        </div>
                         	</div>
                         </div>
-                        <!--<img :src="store.image_url" :alt="store.name" />-->
                     </div>
                     <div class="dine-content-container">
                         <h2 class="dine-name">{{store.name}}</h2>
