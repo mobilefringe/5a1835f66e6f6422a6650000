@@ -22,7 +22,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    dataLoaded: false,
+                    //dataLoaded: false,
                     welcomeMessage: null,
                     currentMessage: null,
                     slickOptions: {
