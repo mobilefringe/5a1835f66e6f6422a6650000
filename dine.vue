@@ -13,6 +13,29 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="dine-image-container">
+                        <div class="hover-container">
+                            <img v-if="restaurant.image_url" :src="restaurant.image_url" :alt="restaurant.name" />
+                            <!--<div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionTwo.image_url + ')' }"></div>-->
+                        	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
+                    		    <div class="hover-text">
+                    		        <h2>{{ sectionTwo.name }}</h2>
+                    		        <h4>{{ sectionTwo.description }}</h4>
+                    		        <router-link :to="sectionTwo.url">
+                    		            <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                    		        </router-link>
+                		        </div>
+                        	</div>
+                        	<div v-if="!sectionTwo.url"class="hover-text-container hover-scale">
+                        		<div class="hover-text">
+                        		    <h2>{{ sectionTwo.name }}</h2>
+                        		    <h4>{{ sectionTwo.description }}</h4>
+                        		    <a :href="sectionTwo.image_url" :data-lightbox="sectionTwo.name">
+                        		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                        		    </a>
+                    		    </div>
+                        	</div>
+                        </div>
+                    	
                         <img v-if="restaurant.image_url" :src="restaurant.image_url" :alt="restaurant.name" />
                     </div> 
                     <div class="dine-content-container">
