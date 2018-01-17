@@ -15,13 +15,12 @@
                     <div class="dine-image-container">
                         <div class="hover-container">
                             <img v-if="restaurant.image_url" :src="restaurant.image_url" :alt="restaurant.name" />
-                            <!--<div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionTwo.image_url + ')' }"></div>-->
-                        	<div class="hover-text-container hover-scale">
-                        		<div class="hover-text">
-                        		    <a :href="restaurant.image_url" :data-lightbox="restaurant.name">
-                        		        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                        		    </a>
-                    		    </div>
+                            <div class="hover-text-container hover-scale">
+                    		    <div class="hover-text">
+                    		        <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
+                    		            <h5>Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		            </router-link>
+                		        </div>
                         	</div>
                         </div>
                     	
