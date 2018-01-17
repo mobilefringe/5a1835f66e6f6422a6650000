@@ -16,10 +16,10 @@
         <div id="app" v-cloak>
             <np-header :social_media="social_media"></np-header>
             <transition name="fade">
-                <div class="loading-container" > <!--v-if="!dataLoaded"-->
+                <div class="loading-container" v-if="!dataLoaded">
                     <vue-simple-spinner  size="huge" message="NorthPark Center is loading..."></vue-simple-spinner>    
                 </div>
-                <!--<router-view v-if="dataLoaded" class="content"></router-view>-->
+                <router-view v-if="dataLoaded" class="content"></router-view>
             </transition>
             <np-footer :social_media="social_media"></np-footer>
         </div>
