@@ -40,7 +40,8 @@
             },
             created(){
                 this.loadData().then(response => {
-                    this.dataLoaded = true;      
+                    //this.dataLoaded = true; 
+                    this.$store.dispatch("setDataLoaded", true); 
                 });
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"}).then(response => {
                     this.welcomeMessage = response.data;
