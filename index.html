@@ -15,12 +15,12 @@
     <body>
         <div id="app" v-cloak>
             <np-header :social_media="social_media"></np-header>
-            <transition name="fade">
+            <!--<transition name="fade">-->
                 <div class="loading-container" v-if="!dataLoaded">
                     <vue-simple-spinner size="huge" message="NorthPark Center is loading..."></vue-simple-spinner>    
                 </div>
                 <router-view class="content"></router-view>
-            </transition>
+            <!--</transition>-->
             <np-footer :social_media="social_media"></np-footer>
         </div>
         <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
