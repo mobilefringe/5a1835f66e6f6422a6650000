@@ -42,12 +42,6 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;      
                 });
-                
-                // this.$store.dispatch("getData", "banners").then(response => {
-                //     this.dataLoaded = true
-                // }, error => {
-                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                // });
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"}).then(response => {
                     this.welcomeMessage = response.data;
                 }, error => {
