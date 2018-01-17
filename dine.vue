@@ -23,8 +23,6 @@
                 		        </div>
                         	</div>
                         </div>
-                    	
-                        <!--<img v-if="restaurant.image_url" :src="restaurant.image_url" :alt="restaurant.name" />-->
                     </div> 
                     <div class="dine-content-container">
                         <h2 class="dine-name">{{restaurant.name}}</h2>
