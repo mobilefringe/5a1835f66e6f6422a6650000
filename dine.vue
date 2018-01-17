@@ -57,12 +57,6 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;      
                 });
-                
-                // this.$store.dispatch("getData", "categories").then(response => {
-                //     this.dataLoaded = true
-                // }, error => {
-                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                // });
             },
             computed: {
                 ...Vuex.mapGetters([
