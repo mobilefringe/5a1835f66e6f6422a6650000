@@ -104,9 +104,6 @@
                     }
                 }
             },
-            mounted(){
-                console.log(this.$store.getters)
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
