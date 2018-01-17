@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dataLoaded"><!-- without an outer container div this component template will not render -->
+    <div v-if="dataLoaded" v-cloak><!-- without an outer container div this component template will not render -->
         <div class="home-banner-container">
             <!-- DYNAMIC BANNERS -->
             <slick ref="slick" :options="slickOptions">
@@ -39,11 +39,15 @@
                 }
             },
             created(){
-                this.$store.dispatch("getData", "banners").then(response => {
-                    this.dataLoaded = true
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                this.loadData().then(response => {
+                    this.dataLoaded = true;      
                 });
+                
+                // this.$store.dispatch("getData", "banners").then(response => {
+                //     this.dataLoaded = true
+                // }, error => {
+                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                // });
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"}).then(response => {
                     this.welcomeMessage = response.data;
                 }, error => {
@@ -62,6 +66,15 @@
                 ]),
                 homeBanners() {
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
+                }
+            },
+            methods: {
+                loadData: async function() {
+                    try{
+                        let results = await Promise.all([this.$store.dispatch("getData", "banners")]);
+                    } catch(e){
+                        console.log("Error loading data: " + e.message);    
+                    }
                 }
             }
         })
