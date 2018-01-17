@@ -31,7 +31,7 @@
                         <h5 class="blog-details-author">By {{currentPost.author}} | {{currentPost.publish_date | moment("MM-D-YYYY", timezone)}}</h5>
                     </div>
                     <div class="blog-details-content">
-                        <div class="margin-60" v-html="currentPost.html_body"></div>
+                        <div class="margin-60 blog-details-body" v-html="currentPost.html_body"></div>
                         <div class="visible-mobile">
                             <social-sharing v-if="currentPost" :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="truncate(currentPost.body)" twitter-user="NorthParkCenter" :media="currentPost.image_url" inline-template>
                                 <div class="blog-social-share">
