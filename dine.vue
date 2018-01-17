@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dataLoaded" class="page-container"> <!-- without an outer container div this component template will not render -->
+    <div v-if="dataLoaded" class="page-container" v-cloak> <!-- without an outer container div this component template will not render -->
         <div class="margin-42"></div>
         <div class="row">
             <div class="col-md-6">
