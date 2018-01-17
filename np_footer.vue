@@ -104,6 +104,9 @@
                     }
                 }
             },
+            mounted(){
+                console.log(this.route)
+            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
