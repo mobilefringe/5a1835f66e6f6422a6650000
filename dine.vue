@@ -67,7 +67,8 @@
             },
             created(){
                 this.loadData().then(response => {
-                    this.dataLoaded = true;      
+                    this.dataLoaded = true;  
+                    this.currentSelection = this.all_dine;
                 });
             },
             computed: {
