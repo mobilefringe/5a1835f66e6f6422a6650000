@@ -10,8 +10,8 @@
                     <div class="col-md-8">
                         <div class="details-store-info">
                             <h2 class="details-store-name">{{currentEvent.name}}</h2>
-                            <h5 class="details-dates" v-if="isMultiDayEvent(event)">{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}} to {{ event.end_date | moment("dddd, MMMM D, YYYY", timezone)}}</h5>
-                            <h5 class="details-dates" v-else>{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</h5>
+                            <h5 class="details-dates" v-if="isMultiDayEvent(currentEvent)">{{ currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)}} to {{ currentEvent.end_date | moment("dddd, MMMM D, YYYY", timezone)}}</h5>
+                            <h5 class="details-dates" v-else>{{ currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</h5>
                                 
                             <h5 class="details-dates">{{ checkEventDates() }}</h5>
                             <p class="details-description">{{currentEvent.description}}</p>
@@ -104,10 +104,10 @@
                         return store_slug
                     }    
                 },
-                isMultiDayEvent(event){
+                isMultiDayEvent(currentEvent){
                     var timezone = this.timezone
-                    var start_date = moment(event.start_date).tz(timezone).format("MM-DD-YYYY")
-                    var end_date = moment(event.end_date).tz(timezone).format("MM-DD-YYYY")
+                    var start_date = moment(currentEvent.start_date).tz(timezone).format("MM-DD-YYYY")
+                    var end_date = moment(currentEvent.end_date).tz(timezone).format("MM-DD-YYYY")
                     if(start_date === end_date){
                       return false
                     } 
