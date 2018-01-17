@@ -1,5 +1,5 @@
 <template>
-    <footer v-show="route.path != '/'">
+    <footer v-show="!isHomePage">
         <div class="page-container">
             <div class="footer-nav">
                 <div class="row">
