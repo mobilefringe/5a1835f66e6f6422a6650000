@@ -56,7 +56,8 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
+                    'property',
+                    'dataLoaded'
                 ]),
                 homeBanners() {
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
