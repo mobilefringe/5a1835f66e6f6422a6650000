@@ -101,13 +101,6 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;      
                 });
-                
-                // this.$store.dispatch("getData", "repos").then(response => {
-                //     this.dataLoaded = true
-                // }, error => {
-                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                // });
-                
                 this.$store.dispatch('LOAD_PAGE_DATA', { url:this.property.mm_host + "/pages/northpark-history.json" }).then(response => {
                     this.historyPage = response.data;
                 }, error => {
