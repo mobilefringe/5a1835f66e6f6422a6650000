@@ -1,5 +1,5 @@
 <template>
-    <footer v-show="!isHomePage">
+    <footer v-show="route.path != '/'">
         <div class="page-container">
             <div class="footer-nav">
                 <div class="row">
@@ -106,7 +106,8 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
+                    'property',
+                    'route'
                 ]),
                 copyright_year() {
                     return moment().year();
