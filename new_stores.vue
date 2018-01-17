@@ -52,7 +52,16 @@
             <div class="row dine-container" v-for="store in findComingSoonStores">
                 <div class="col-md-12">
                     <div class="dine-image-container">
-                        <img :src="store.image_url" :alt="store.name" />
+                        <div class="hover-container">
+                            <img v-if="store.image_url" :src="store.image_url" :alt="store.name" />
+                            <div class="hover-text-container hover-scale">
+                    		    <div class="hover-text">
+                    		        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}" class="dine-link">
+                    		            <h5>Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                		            </router-link>
+                		        </div>
+                        	</div>
+                        </div>
                     </div>
                     <div class="dine-content-container">
                         <h2 class="dine-name">{{store.name}}</h2>
