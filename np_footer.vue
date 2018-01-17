@@ -105,7 +105,7 @@
                 }
             },
             mounted(){
-                console.log(this.route)
+                console.log(this.$store.state)
             },
             computed: {
                 ...Vuex.mapGetters([
