@@ -45,11 +45,22 @@
                     currentBlog: null,
                     currentPost: null,
                     slickOptions: {
-                        autoplay: false,
+                        // autoplay: false,
+                        // cssEase: 'linear',
+                        // dots: false,
+                        // slidesToShow: 1,
+                        // speed: 500,
+                        
+                        arrows: false,
+                        autoplay: true,
                         cssEase: 'linear',
                         dots: false,
+                        fade: true,
+                        infinite: true,
+                        nextArrow: '.next',
+                        prevArrow: '.prev',
                         slidesToShow: 1,
-                        speed: 500,
+                        speed: 1000
                     }
                 }
             },
