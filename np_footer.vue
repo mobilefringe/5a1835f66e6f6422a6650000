@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer v-show="route.path != '/'">
         <div class="page-container">
             <div class="footer-nav">
                 <div class="row">
@@ -97,7 +97,8 @@
             props:['social_media'],
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
+                    'property',
+                    'route'
                 ]),
                 copyright_year() {
                     return moment().year();
