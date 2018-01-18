@@ -2,12 +2,14 @@
     <div v-if="currentBlog"> <!-- without an outer container div this component template will not render -->
         <div class="margin-90 hidden-mobile"></div>
         <div class="image-container">
-            <div v-if="currentBlog">
+            <div v-if="currentBlog" class="position-relative">
+                <div class="prev"></div>
                 <slick ref="slick" :options="slickOptions">
                     <div v-for="image in currentBlog.additional_images">
                         <img class="margin-60" :src="image.image_url" alt="Holiday Event Image">
                     </div>
                 </slick>
+                <div class="next"></div>
             </div>
         </div>
         <div class="page-container">
