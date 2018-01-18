@@ -45,12 +45,6 @@
                     currentBlog: null,
                     currentPost: null,
                     slickOptions: {
-                        // autoplay: false,
-                        // cssEase: 'linear',
-                        // dots: false,
-                        // slidesToShow: 1,
-                        // speed: 500,
-                        
                         arrows: false,
                         autoplay: true,
                         cssEase: 'linear',
