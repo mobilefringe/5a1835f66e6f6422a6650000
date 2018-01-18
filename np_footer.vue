@@ -91,19 +91,10 @@
             template: template, // the variable template will be injected,
             data: function data() {
                 return {
-                    isHomePage: false,
+                    
                 }
             },
             props:['social_media'],
-            watch: {
-                $route: function() {
-                    if(this.$route.path == "/") {
-                        this.isHomePage = true;
-                    } else {
-                       this.isHomePage = false; 
-                    }
-                }
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
