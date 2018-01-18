@@ -57,15 +57,20 @@
                 }
             },
             created(){
-                this.$store.dispatch("getData", "repos").then(response => {
-                    this.dataLoaded = true
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                this.loadData().then(response => {
+                    this.dataLoaded = true;  
+                    this.currentSelection = this.historyGallery;
                 });
+                
+                // this.$store.dispatch("getData", "repos").then(response => {
+                //     this.dataLoaded = true
+                // }, error => {
+                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                // });
             },
-            mounted () {
-                this.currentSelection = this.historyGallery;
-            },
+            // mounted () {
+                
+            // },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
@@ -90,6 +95,13 @@
                 },
             },
             methods: {
+                loadData: async function() {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                    } catch(e) {
+                        console.log("Error loading data: " + e.message);    
+                    }
+                },
                 selectCategory(){
                     if(this.selected.value == "history"){
                         this.currentSelection = this.historyGallery;
