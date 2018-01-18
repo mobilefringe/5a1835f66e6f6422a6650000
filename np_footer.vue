@@ -54,9 +54,9 @@
                     <div class="col-md-12">
                         <ul>
                             <li>Site Map</li>
-                            <router-link tag="li" to="/" active-class="active" exact>
-                                <a>Mobile App</a>
-                            </router-link>
+                            <li>
+                                <a href="" target="_blank">Mobile App</a>
+                            </li>
                             <router-link tag="li" to="/pages/northpark-terms-of-use" active-class="active" exact>
                                 <a>Terms of Use</a>
                             </router-link>
