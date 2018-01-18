@@ -107,7 +107,6 @@
                     } else {
                         this.visitSubPage = false;
                     }
-                    console.log("Route", this.visitSubPage)
                 }    
             },
             computed: {
