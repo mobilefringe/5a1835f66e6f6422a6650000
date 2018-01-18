@@ -61,16 +61,7 @@
                     this.dataLoaded = true;  
                     this.currentSelection = this.historyGallery;
                 });
-                
-                // this.$store.dispatch("getData", "repos").then(response => {
-                //     this.dataLoaded = true
-                // }, error => {
-                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                // });
             },
-            // mounted () {
-                
-            // },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
