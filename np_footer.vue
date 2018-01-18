@@ -70,7 +70,7 @@
                                 <a>Contact Us</a>
                             </router-link>
                             <li>
-                                <a href="http://northparkcenter.com/login" target="_blank">Admin Login</a>
+                                <a href="http://www.northparkcenter.com/login" target="_blank">Admin Login</a>
                             </li>
                         </ul>
                     </div>
