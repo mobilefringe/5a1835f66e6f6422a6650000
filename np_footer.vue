@@ -69,9 +69,9 @@
                             <router-link tag="li" to="/pages/northpark-contact-us" active-class="active" exact>
                                 <a>Contact Us</a>
                             </router-link>
-                            <router-link tag="li" to="http://northparkcenter.com/login" active-class="active" exact>
-                                <a>Admin Login</a>
-                            </router-link>
+                            <li>
+                                <a href="http://northparkcenter.com/login" target="_blank">Admin Login</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
