@@ -24,7 +24,7 @@
                 <div class="col-md-4">
                     <div class="sidebar">
                         <div class="sidebar-container">
-                            <div v-html="currentBlog.caption"></div>
+                            <div v-html="currentBlog.html_caption"></div>
                         </div>
                     </div>
                 </div>
