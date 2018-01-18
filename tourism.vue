@@ -11,6 +11,7 @@
                                {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                             </li>
                         </ul> 
+                        <br>
                         <router-link to="/hours" active-class="active" exact>
                             <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </router-link>
