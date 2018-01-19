@@ -41,25 +41,26 @@
                     <div class="" v-html="currentPage.body"></div>
                 </div>
             </div>
-            <div v-if="visitSubPage" class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">
-                        {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <router-link tag="a" to="/visit" active-class="active" exact>
-                            Visit <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        </router-link>
-                        <span v-if="currentPage">{{currentPage.title}}</span>
-                    </p>
-                </div>
-            </div>
-            <div v-if="!visitSubPage" class="row">
-                <div class="col-md-12">
-                    <p class="page-breadcrumb">
-                        {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <span v-if="currentPage">{{currentPage.title}}</span>
-                    </p>
-                </div>
-            </div>
+            <!--<div v-if="visitSubPage" class="row">-->
+            <!--    <div class="col-md-12">-->
+            <!--        <p class="page-breadcrumb">-->
+            <!--            {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>-->
+            <!--            <router-link tag="a" to="/visit" active-class="active" exact>-->
+            <!--                Visit <i class="fa fa-angle-right" aria-hidden="true"></i>-->
+            <!--            </router-link>-->
+            <!--            <span v-if="currentPage">{{currentPage.title}}</span>-->
+            <!--        </p>-->
+            <!--    </div>-->
+            <!--</div>-->
+            <!--<div v-if="!visitSubPage" class="row">-->
+            <!--    <div class="col-md-12">-->
+            <!--        <p class="page-breadcrumb">-->
+            <!--            {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>-->
+            <!--            <span v-if="currentPage">{{currentPage.title}}</span>-->
+            <!--        </p>-->
+            <!--    </div>-->
+            <!--</div>-->
+            <page-breadcrumb></page-breadcrumb>
         </div>
     </div>
 </template>
@@ -82,11 +83,11 @@
             watch: {
                 $route: function() {
                     this.updateCurrentPage(this.$route.params.id);
-                    if(this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
-                        this.visitSubPage = true;
-                    } else {
-                        this.visitSubPage = false;
-                    }
+                    // if(this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
+                    //     this.visitSubPage = true;
+                    // } else {
+                    //     this.visitSubPage = false;
+                    // }
                 }    
             },
             computed: {
