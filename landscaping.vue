@@ -338,7 +338,7 @@
                     //     }
                     // });
                     // return sectionEight[0];
-                    return _.find(this.images, function(o) { return o.id === sectionID; })
+                    return _.find(this.images, function(o) { return o.id === sectionID; });
                 }
             },
             methods: {
