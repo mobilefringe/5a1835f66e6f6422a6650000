@@ -41,26 +41,26 @@
                     <div class="" v-html="currentPage.body"></div>
                 </div>
             </div>
-            <!--<div v-if="visitSubPage" class="row">-->
-            <!--    <div class="col-md-12">-->
-            <!--        <p class="page-breadcrumb">-->
-            <!--            {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-            <!--            <router-link tag="a" to="/visit" active-class="active" exact>-->
-            <!--                Visit <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-            <!--            </router-link>-->
-            <!--            <span v-if="currentPage">{{currentPage.title}}</span>-->
-            <!--        </p>-->
-            <!--    </div>-->
-            <!--</div>-->
-            <!--<div v-if="!visitSubPage" class="row">-->
-            <!--    <div class="col-md-12">-->
-            <!--        <p class="page-breadcrumb">-->
-            <!--            {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-            <!--            <span v-if="currentPage">{{currentPage.title}}</span>-->
-            <!--        </p>-->
-            <!--    </div>-->
-            <!--</div>-->
-            <page-breadcrumb></page-breadcrumb>
+            <div v-if="visitSubPage" class="row">
+                <div class="col-md-12">
+                    <p class="page-breadcrumb">
+                        {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <router-link tag="a" to="/visit" active-class="active" exact>
+                            Visit <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </router-link>
+                        <span v-if="currentPage">{{currentPage.title}}</span>
+                    </p>
+                </div>
+            </div>
+            <div v-if="!visitSubPage" class="row">
+                <div class="col-md-12">
+                    <p class="page-breadcrumb">
+                        {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span v-if="currentPage">{{currentPage.title}}</span>
+                    </p>
+                </div>
+            </div>
+            <!--<page-breadcrumb></page-breadcrumb>-->
         </div>
     </div>
 </template>
@@ -83,11 +83,11 @@
             watch: {
                 $route: function() {
                     this.updateCurrentPage(this.$route.params.id);
-                    // if(this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
-                    //     this.visitSubPage = true;
-                    // } else {
-                    //     this.visitSubPage = false;
-                    // }
+                    if(this.$route.path == "/pages/northpark-parking-valet-page" || this.$route.path == "/pages/northpark-concierge-services" || this.$route.path == "/pages/northpark-northpark-gold-gift-cards" || this.$route.path == "/pages/northpark-contact-us") {
+                        this.visitSubPage = true;
+                    } else {
+                        this.visitSubPage = false;
+                    }
                 }    
             },
             computed: {
@@ -102,11 +102,11 @@
                     var _this = this;
                     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.id + ".json" }).then(function (response) {
                         _this.currentPage = response.data;
-                        // if(_this.currentPage.slug == "northpark-parking-valet-page" || _this.currentPage.slug == "northpark-concierge-services" || _this.currentPage.slug == "northpark-northpark-gold-gift-cards" || _this.currentPage.slug == "northpark-contact-us") {
-                        //     this.visitSubPage = true;
-                        // } else {
-                        //     this.visitSubPage = false;
-                        // }
+                        if(_this.currentPage.slug == "northpark-parking-valet-page" || _this.currentPage.slug == "northpark-concierge-services" || _this.currentPage.slug == "northpark-northpark-gold-gift-cards" || _this.currentPage.slug == "northpark-contact-us") {
+                            this.visitSubPage = true;
+                        } else {
+                            this.visitSubPage = false;
+                        }
                     }, function (error) {
                         console.error("Could not retrieve data from server. Please check internet connection and try again.");
                         // _this.$router.replace({ name: '404' });
