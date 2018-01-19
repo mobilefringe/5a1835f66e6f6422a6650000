@@ -175,6 +175,7 @@
                     }
                 },
                 tagString(val_tag){
+                    console.log(val_tag)
                     var string = _.join(val_tag, ', ')  
                     return string
                 },
