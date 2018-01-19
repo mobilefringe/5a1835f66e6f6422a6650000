@@ -176,8 +176,10 @@
                 },
                 tagString(val_tag){
                     console.log(val_tag)
-                    var string = _.join(val_tag, ', ')  
-                    return string
+                    // var string = _.join(val_tag, ', ')  
+                    // return string
+                    var tag = val_tag[0];
+                    console.log(tag)
                 },
                 truncate(val_body){
                     var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
