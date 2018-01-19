@@ -3,7 +3,7 @@
         <div class="margin-90"></div>
         <div class="row" v-if="currentPost">
             <div class="col-md-8 margin-60">
-                <div id="currentPost">
+                <div id="post">
                     <div class="blog-details-date">
                         <p class="details-promo-date">{{currentPost.publish_date | moment("ddd", timezone)}}</p>
                         <p class="details-promo-day">{{currentPost.publish_date | moment("D", timezone)}}</p>
@@ -53,7 +53,7 @@
                 <hr class="visible-mobile">
             </div>
             <div class="col-md-4">
-                <affix relative-element-selector="#currentPost">
+                <affix relative-element-selector="#post">
                     <div class="sidebar">
                         <div class="sidebar-container" v-if="currentPost && relatedPost">
                             <h5 class="related-post-title">Related Blogs</h5>
