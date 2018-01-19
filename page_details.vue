@@ -1,5 +1,5 @@
 <template>
-    <div v-if="currentPage" class="page-container">
+    <div v-if="currentPage" class="page-container" v-cloak>
         <div class="margin-90"></div>
         <div v-if="currentPage">
             <div class="row">
