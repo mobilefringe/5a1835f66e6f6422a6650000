@@ -217,13 +217,17 @@
                 }
             },
             created(){
-                this.$store.dispatch("getData", "repos").then(response => {
-                    this.dataLoaded = true
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                this.loadData().then(response => {
+                    this.dataLoaded = true;      
                 });
                 
-                this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-landscaping.json"}).then(response => {
+                // this.$store.dispatch("getData", "repos").then(response => {
+                //     this.dataLoaded = true
+                // }, error => {
+                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                // });
+                
+                this.$store.dispatch('LOAD_PAGE_DATA', { url:this.property.mm_host + "/pages/northpark-landscaping.json" }).then(response => {
                     this.currentPage = response.data;
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
@@ -326,6 +330,15 @@
                         }
                     });
                     return sectionEight[0];
+                }
+            },
+            methods: {
+                loadData: async function() {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                    } catch(e) {
+                        console.log("Error loading data: " + e.message);    
+                    }
                 }
             }
         });
