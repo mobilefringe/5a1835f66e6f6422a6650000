@@ -10,10 +10,8 @@
 </template>
 
 <script>
-
 define(["Vue", "vuex", "vue-breadcrumbs"], function (Vue, Vuex, VueBreadcrumbs) {
     Vue.use(VueBreadcrumbs);
-
     return Vue.component("page-breadcrumb", {
         template: template, // the variable template will be injected
         data: function data() {
@@ -27,4 +25,5 @@ define(["Vue", "vuex", "vue-breadcrumbs"], function (Vue, Vuex, VueBreadcrumbs) 
             ])
         }
     });
-});</script>
+});
+</script>
