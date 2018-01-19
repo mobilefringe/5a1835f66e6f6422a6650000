@@ -180,6 +180,7 @@
                     // return string
                     var tag = val_tag[0];
                     console.log(tag)
+                    return tag
                 },
                 truncate(val_body){
                     var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
