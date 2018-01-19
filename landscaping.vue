@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dataLoaded"> <!-- without an outer container div this component template will not render -->
+    <div v-if="dataLoaded" v-cloak> <!-- without an outer container div this component template will not render -->
         <div v-if="sectionOne">
             <div class="gallery-banner" v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"></div>
             <div class="margin-90 hidden-mobile"></div>
@@ -221,12 +221,6 @@
                     this.dataLoaded = true;      
                 });
                 
-                // this.$store.dispatch("getData", "repos").then(response => {
-                //     this.dataLoaded = true
-                // }, error => {
-                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                // });
-                
                 this.$store.dispatch('LOAD_PAGE_DATA', { url:this.property.mm_host + "/pages/northpark-landscaping.json" }).then(response => {
                     this.currentPage = response.data;
                 }, error => {
@@ -241,103 +235,38 @@
                     'findRepoByName'
                 ]),
                 images() {
-                    return this.findRepoByName("Landscaping").images
+                    return this.findRepoByName("Landscaping").images;
                 },
                 sectionOne(){
                     var sectionID = 35568
-                    // var sectionOne = [];
-                    // _.forEach(this.images, function(value, key) {
-                    //     var itemID = value.id
-                    //     if(itemID === sectionID){
-                    //         sectionOne.push(value);
-                    //     }
-                    // });
-                    // return sectionOne[0];
-                    
                     return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionTwo(){
                     var sectionID = 35569
-                    // var sectionTwo = [];
-                    // _.forEach(this.images, function(value, key) {
-                    //     var itemID = value.id
-                    //     if(itemID === sectionID){
-                    //         sectionTwo.push(value);
-                    //     }
-                    // });
-                    // return sectionTwo[0];
                     return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionThree(){
                     var sectionID = 35570
-                    // var sectionThree = [];
-                    // _.forEach(this.images, function(value, key) {
-                    //     var itemID = value.id
-                    //     if(itemID === sectionID){
-                    //         sectionThree.push(value);
-                    //     }
-                    // });
-                    // return sectionThree[0];
                     return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionFour(){
                     var sectionID = 35571
-                    // var sectionFour = [];
-                    // _.forEach(this.images, function(value, key) {
-                    //     var itemID = value.id
-                    //     if(itemID === sectionID){
-                    //         sectionFour.push(value);
-                    //     }
-                    // });
-                    // return sectionFour[0];
                     return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionFive(){
                     var sectionID = 35572
-                    // var sectionFive = [];
-                    // _.forEach(this.images, function(value, key) {
-                    //     var itemID = value.id
-                    //     if(itemID === sectionID){
-                    //         sectionFive.push(value);
-                    //     }
-                    // });
-                    // return sectionFive[0];
                     return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionSix(){
                     var sectionID = 35573
-                    // var sectionSix = [];
-                    // _.forEach(this.images, function(value, key) {
-                    //     var itemID = value.id
-                    //     if(itemID === sectionID){
-                    //         sectionSix.push(value);
-                    //     }
-                    // });
-                    // return sectionSix[0];
                     return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionSeven(){
                     var sectionID = 35574
-                    // var sectionSeven = [];
-                    // _.forEach(this.images, function(value, key) {
-                    //     var itemID = value.id
-                    //     if(itemID === sectionID){
-                    //         sectionSeven.push(value);
-                    //     }
-                    // });
-                    // return sectionSeven[0];
                     return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionEight(){
                     var sectionID = 35575
-                    // var sectionEight = [];
-                    // _.forEach(this.images, function(value, key) {
-                    //     var itemID = value.id
-                    //     if(itemID === sectionID){
-                    //         sectionEight.push(value);
-                    //     }
-                    // });
-                    // return sectionEight[0];
                     return _.find(this.images, function(o) { return o.id === sectionID; });
                 }
             },
