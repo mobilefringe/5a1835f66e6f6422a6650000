@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dataLoaded" class="page-container"> <!-- without an outer container div this component template will not render -->
+    <div v-if="dataLoaded" class="page-container" v-cloak> <!-- without an outer container div this component template will not render -->
         <div class="margin-42"></div>
         <div v-if="findNewStores" class="">
             <div class="row margin-30">
@@ -98,11 +98,15 @@
                 }
             },
             created(){
-                this.$store.dispatch("getData", "stores").then(response => {
-                    this.dataLoaded = true
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                this.loadData().then(response => {
+                    this.dataLoaded = true;      
                 });
+                
+                // this.$store.dispatch("getData", "stores").then(response => {
+                //     this.dataLoaded = true
+                // }, error => {
+                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                // });
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -114,6 +118,13 @@
                 ]),
             },
             methods: {
+                loadData: async function() {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "stores")]);
+                    } catch(e) {
+                        console.log("Error loading data: " + e.message);    
+                    }
+                },
                 storeHours(restaurant_hours){
                     var vm = this;
                     var storeHours = [];
