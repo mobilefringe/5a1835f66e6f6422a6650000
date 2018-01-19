@@ -178,6 +178,7 @@
                     // Returns all tags
                     // var string = _.join(val_tag, ', ')  
                     // return string
+                    
                     //Returns only the first tag
                     var tag = val_tag[0];
                     console.log(tag)
