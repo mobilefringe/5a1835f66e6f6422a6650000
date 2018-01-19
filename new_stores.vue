@@ -125,14 +125,14 @@
                         console.log("Error loading data: " + e.message);    
                     }
                 },
-                // storeHours(restaurant_hours){
-                //     var vm = this;
-                //     var storeHours = [];
-                //     _.forEach(restaurant_hours, function(value, key) {
-                //         storeHours.push(vm.findHourById(value));
-                //     });
-                //     return storeHours
-                // }
+                storeHours(restaurant_hours){
+                    var vm = this;
+                    var storeHours = [];
+                    _.forEach(restaurant_hours, function(value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    return storeHours
+                }
             }
         });
     });
