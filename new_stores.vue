@@ -94,19 +94,13 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    hours: []
+                    hours: [];
                 }
             },
             created(){
                 this.loadData().then(response => {
                     this.dataLoaded = true;      
                 });
-                
-                // this.$store.dispatch("getData", "stores").then(response => {
-                //     this.dataLoaded = true
-                // }, error => {
-                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                // });
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -125,10 +119,10 @@
                         console.log("Error loading data: " + e.message);    
                     }
                 },
-                storeHours(restaurant_hours){
+                storeHours(store_hours){
                     var vm = this;
                     var storeHours = [];
-                    _.forEach(restaurant_hours, function(value, key) {
+                    _.forEach(store_hours, function(value, key) {
                         storeHours.push(vm.findHourById(value));
                     });
                     return storeHours
