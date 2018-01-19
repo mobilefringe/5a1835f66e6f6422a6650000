@@ -76,26 +76,6 @@
                     visitSubPage: false,
                 };
             },
-            // beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-            //     next(function (vm) {
-            //         // access to component instance via `vm`
-            //         vm.$store.dispatch('LOAD_PAGE_DATA', { url: vm.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
-            //             vm.currentPage = response.data;
-            //         }, function (error) {
-            //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
-            //             vm.$router.replace({ name: '404' });
-            //         });
-            //     });
-            // },
-            // beforeRouteUpdate: function beforeRouteUpdate(to, from, next) {
-            //     var _this = this;
-            //     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + to.params.id + ".json" }).then(function (response) {
-            //         _this.currentPage = response.data;
-            //     }, function (error) {
-            //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
-            //         _this.$router.replace({ name: '404' });
-            //     });
-            // },
             created(){
                 this.updateCurrentPage(this.id);
             },
