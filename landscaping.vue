@@ -245,91 +245,100 @@
                 },
                 sectionOne(){
                     var sectionID = 35568
-                    var sectionOne = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionOne.push(value);
-                        }
-                    });
-                    return sectionOne[0];
+                    // var sectionOne = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionOne.push(value);
+                    //     }
+                    // });
+                    // return sectionOne[0];
+                    
+                    return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionTwo(){
                     var sectionID = 35569
-                    var sectionTwo = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionTwo.push(value);
-                        }
-                    });
-                    return sectionTwo[0];
+                    // var sectionTwo = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionTwo.push(value);
+                    //     }
+                    // });
+                    // return sectionTwo[0];
+                    return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionThree(){
                     var sectionID = 35570
-                    var sectionThree = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionThree.push(value);
-                        }
-                    });
-                    return sectionThree[0];
+                    // var sectionThree = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionThree.push(value);
+                    //     }
+                    // });
+                    // return sectionThree[0];
+                    return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionFour(){
                     var sectionID = 35571
-                    var sectionFour = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionFour.push(value);
-                        }
-                    });
-                    return sectionFour[0];
+                    // var sectionFour = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionFour.push(value);
+                    //     }
+                    // });
+                    // return sectionFour[0];
+                    return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionFive(){
                     var sectionID = 35572
-                    var sectionFive = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionFive.push(value);
-                        }
-                    });
-                    return sectionFive[0];
+                    // var sectionFive = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionFive.push(value);
+                    //     }
+                    // });
+                    // return sectionFive[0];
+                    return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionSix(){
                     var sectionID = 35573
-                    var sectionSix = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionSix.push(value);
-                        }
-                    });
-                    return sectionSix[0];
+                    // var sectionSix = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionSix.push(value);
+                    //     }
+                    // });
+                    // return sectionSix[0];
+                    return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionSeven(){
                     var sectionID = 35574
-                    var sectionSeven = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionSeven.push(value);
-                        }
-                    });
-                    return sectionSeven[0];
+                    // var sectionSeven = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionSeven.push(value);
+                    //     }
+                    // });
+                    // return sectionSeven[0];
+                    return _.find(this.images, function(o) { return o.id === sectionID; });
                 },
                 sectionEight(){
                     var sectionID = 35575
-                    var sectionEight = [];
-                    _.forEach(this.images, function(value, key) {
-                        var itemID = value.id
-                        if(itemID === sectionID){
-                            sectionEight.push(value);
-                        }
-                    });
-                    return sectionEight[0];
+                    // var sectionEight = [];
+                    // _.forEach(this.images, function(value, key) {
+                    //     var itemID = value.id
+                    //     if(itemID === sectionID){
+                    //         sectionEight.push(value);
+                    //     }
+                    // });
+                    // return sectionEight[0];
+                    return _.find(this.images, function(o) { return o.id === sectionID; })
                 }
             },
             methods: {
