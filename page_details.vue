@@ -77,7 +77,6 @@
                 };
             },
             created(){
-                console.log(this.id)
                 this.updateCurrentPage(this.id);
             },
             watch: {
