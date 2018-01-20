@@ -2,7 +2,6 @@
     <div v-if="dataLoaded" v-cloak> <!-- without an outer container div this component template will not render -->
         <div v-if="sectionOne">
             <div class="gallery-banner" v-lazy:background-image="sectionOne.image_url"></div>
-            <!--v-bind:style="{ backgroundImage: 'url(' + sectionOne.image_url + ')' }"-->
             <div class="margin-90 hidden-mobile"></div>
             <div class="page-container">
                 <div class="row">
@@ -22,7 +21,6 @@
                 <div class="col-sm-6 col-md-4" v-if="sectionTwo">
                     <div class="hover-container">
                         <div class="hover-image" v-lazy:background-image="sectionTwo.image_url"></div>
-                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionTwo.image_url + ')' }"-->
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionTwo.name }}</h2>
@@ -46,7 +44,6 @@
                 <div class="col-sm-6 col-md-4" v-if="sectionThree">
                     <div class="hover-container">
                         <div class="hover-image" v-lazy:background-image="sectionThree.image_url"></div>
-                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionThree.image_url + ')' }"-->
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionThree.name }}</h2>
@@ -96,7 +93,6 @@
         <div class="image-row">
             <div class="hover-container" v-if="sectionFive">
                 <div class="hover-image max-height" v-lazy:background-image="sectionFive.image_url"></div>
-                <!--v-bind:style="{ backgroundImage: 'url(' + sectionFive.image_url + ')' }"-->
             	<div v-if="sectionFive.url" class="hover-text-container hover-scale">
         		    <div class="hover-text">
         		        <h2>{{ sectionFive.name }}</h2>
@@ -129,7 +125,6 @@
                 <div class="col-sm-6">
                     <div class="hover-container" v-if="sectionSix">
                         <div class="hover-image" v-lazy:background-image="sectionSix.image_url"></div>
-                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionSix.image_url + ')' }"-->
                     	<div v-if="sectionSix.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionSix.name }}</h2>
@@ -153,7 +148,6 @@
                 <div class="col-sm-6">
                     <div class="hover-container" v-if="sectionSeven">
                         <div class="hover-image" v-lazy:background-image="sectionSeven.image_url"></div>
-                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionSeven.image_url + ')' }"-->
                     	<div v-if="sectionSeven.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionSeven.name }}</h2>
@@ -179,7 +173,6 @@
                 <div class="col-md-12">
                     <div class="hover-container" v-if="sectionEight">
                         <div class="hover-image mid-height" v-lazy:background-image="sectionEight.image_url"></div>
-                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionEight.image_url + ')' }"-->
                     	<div v-if="sectionEight.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionEight.name }}</h2>
