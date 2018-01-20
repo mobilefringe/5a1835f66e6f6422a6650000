@@ -125,7 +125,9 @@
                     }
                 },
                 selectCategory(){
-                    if(this.selected.value == "restaurants"){
+                    if(this.selected.value == "all_dine"){
+                        this.currentSelection = this.all_dine
+                    } else if(this.selected.value == "restaurants"){
                         this.currentSelection = this.restaurants;
                     } else if (this.selected.value == "cafes") {
                         this.currentSelection = this.cafes;
