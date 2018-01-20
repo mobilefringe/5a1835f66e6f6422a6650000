@@ -200,7 +200,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue!page_breadcrumb.vue", "vue-lazy-load"], function(Vue, Vuex, jQuery, Meta, Lightbox,PageBreadcrumbComponent, VueLazyload) {
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load", "vue!page_breadcrumb.vue"], function(Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload, PageBreadcrumbComponent) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         Vue.use(VueLazyload);
