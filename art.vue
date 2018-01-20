@@ -202,6 +202,7 @@
 <script>
     define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue!page_breadcrumb.vue", "vue-lazy-load"], function(Vue, Vuex, jQuery, Meta, Lightbox,PageBreadcrumbComponent, VueLazyload) {
         Vue.use(Meta);
+        Vue.use(Lightbox);
         Vue.use(VueLazyload);
         return Vue.component("art-component", {
             template: template, // the variable template will be injected
