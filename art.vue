@@ -200,8 +200,9 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue!page_breadcrumb.vue"], function(Vue, Vuex, jQuery, Meta, Lightbox,PageBreadcrumbComponent) {
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue!page_breadcrumb.vue", "vue-lazy-load"], function(Vue, Vuex, jQuery, Meta, Lightbox,PageBreadcrumbComponent, VueLazyload) {
         Vue.use(Meta);
+        Vue.use(VueLazyload);
         return Vue.component("art-component", {
             template: template, // the variable template will be injected
             data: function() {
