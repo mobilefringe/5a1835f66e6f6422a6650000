@@ -54,7 +54,8 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect, VueLazyload) {
+        Vue.use(VueLazyload);
       return Vue.component("dine-component", {
         template: template, // the variable template will be injected
         data: function () {
