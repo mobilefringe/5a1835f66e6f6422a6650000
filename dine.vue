@@ -18,7 +18,7 @@
           <div class="col-md-12">
             <div class="dine-image-container">
               <div class="hover-container">
-                <img v-if="restaurant.image_url" :src="restaurant.image_url" :alt="restaurant.name" />
+                <img v-if="restaurant.image_url" v-lazy="restaurant.image_url" :alt="restaurant.name" />
                 <div class="hover-text-container hover-scale">
                   <div class="hover-text">
                     <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
@@ -56,40 +56,29 @@
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, Meta, vSelect, VueLazyload) {
         Vue.use(VueLazyload);
-      return Vue.component("dine-component", {
-        template: template, // the variable template will be injected
-        data: function () {
-          return {
-            dataLoaded: false,
-            selected: "Select A Category",
-            currentSelection: null,
-            categoryOptions: [{
-                'label': 'All',
-                'value': 'all_dine'
-              },
-              {
-                'label': 'Restaurants',
-                'value': 'restaurants'
-              },
-              {
-                'label': 'NorthPark Cafes',
-                'value': 'cafes'
-              },
-              {
-                'label': 'Coffee & Specialty Foods',
-                'value': 'specialty'
-              },
-            ],
-            dine_stores: [],
-            hours: []
-          }
-        },
-        created() {
-          this.loadData().then(response => {
-            this.dataLoaded = true;
-            this.currentSelection = this.all_dine;
-          });
-        },
+        return Vue.component("dine-component", {
+            template: template, // the variable template will be injected
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    selected: "Select A Category",
+                    currentSelection: null,
+                    categoryOptions: [
+                        { 'label': 'All', 'value': 'all_dine' },
+                        { 'label': 'Restaurants', 'value': 'restaurants' },
+                        { 'label': 'NorthPark Cafes', 'value': 'cafes' },
+                        { 'label': 'Coffee & Specialty Foods', 'value': 'specialty' },
+                    ],
+                    dine_stores: [],
+                    hours: []
+                }
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                    this.currentSelection = this.all_dine;
+                });
+            },
         watch: {
           selected: function () {
             if (this.selected.value == "all_dine") {
