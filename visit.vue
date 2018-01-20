@@ -119,113 +119,56 @@
 </template>
 
 <script>
-  define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!page_breadcrumb.vue"], function (
-    Vue, Vuex, moment, tz, VueMoment, Meta, PageBreadcrumbComponent) {
-    Vue.use(Meta);
-    return Vue.component("visit-component", {
-      template: template, // the variable template will be injected
-      data: function data() {
-        return {
-          dataLoaded: false,
-          valet: null,
-          concierge: null,
-          giftCards: null,
-          tourism: null,
-          contact: null
-        };
-      },
-      created() {
-        this.loadData().then(response => {
-          this.valet = response[1].data;
-          this.concierge = response[2].data;
-          this.giftCards = response[3].data;
-          this.tourism = response[4].data;
-          this.contact = response[5].data;
-          this.dataLoaded = true;
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
+        Vue.use(Meta);
+        return Vue.component("visit-component", {
+            template: template, // the variable template will be injected
+            data: function data() {
+                return {
+                    dataLoaded: false,
+                    valet: null,
+                    concierge: null,
+                    giftCards: null,
+                    tourism: null,
+                    contact: null
+                };
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.valet = response[1].data;
+                    this.concierge = response[2].data;
+                    this.giftCards = response[3].data;
+                    this.tourism = response[4].data;
+                    this.contact = response[5].data;
+                    this.dataLoaded = true;
+                });
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'getPropertyHours',
+                    'repos',
+                    'findRepoByName',
+                ]),
+                pageBanner: function pageBanner() {
+                    return this.findRepoByName("Visit").images;
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-parking-valet-page.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-concierge-services.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-tourism.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-contact-us.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                truncate: function truncate(val_body) {
+                    var truncate = _.truncate(val_body, { 'length': 350, 'separator': ' ' });
+                    return truncate;
+                }
+            }
         });
-        /*
-        this.$store.dispatch("getData", "repos").then(response => {
-          this.dataLoaded = true
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-        });
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-parking-valet-page.json"}).then(response => {
-          this.valet = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-concierge-services.json"}).then(response => {
-          this.concierge = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json"}).then(response => {
-          this.giftCards = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
-          this.tourism = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-contact-us.json"}).then(response => {
-          this.contact = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        */
-      },
-      computed: {
-        ...Vuex.mapGetters([
-          'property',
-          'timezone',
-          'getPropertyHours',
-          'repos',
-          'findRepoByName',
-        ]),
-        pageBanner: function pageBanner() {
-          return this.findRepoByName("Visit").images;
-        }
-      },
-      methods: {
-        loadData: async function () {
-          try {
-            let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-parking-valet-page.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-concierge-services.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-tourism.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-contact-us.json"})]);
-            return results;
-          } catch (e) {
-            console.log("Error loading data: " + e.message);
-          }
-        },
-        truncate: function truncate(val_body) {
-          var truncate = _.truncate(val_body, {
-            'length': 350,
-            'separator': ' '
-          });
-          return truncate;
-        }
-      }
     });
-  });
 </script>
