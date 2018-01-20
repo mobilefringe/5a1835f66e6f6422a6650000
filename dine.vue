@@ -4,7 +4,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="category-select-container">
-                    <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select" :on-change="selectCategory()"></v-select>    
+                    <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select> 
+                     <!--:on-change="selectCategory()"-->
                 </div>
             </div>
             <div class="col-md-6"></div>
@@ -67,6 +68,21 @@
                     this.dataLoaded = true;  
                     this.currentSelection = this.all_dine;
                 });
+            },
+            watch: {
+                selected: function() {
+                    if(this.selected.value == "all_dine"){
+                        this.currentSelection = this.all_dine
+                    } else if(this.selected.value == "restaurants"){
+                        this.currentSelection = this.restaurants;
+                    } else if (this.selected.value == "cafes") {
+                        this.currentSelection = this.cafes;
+                    } else if (this.selected.value == "specialty"){
+                        this.currentSelection = this.specialty;
+                    } else {
+                        this.currentSelection = this.all_dine
+                    }
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
