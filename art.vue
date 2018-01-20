@@ -200,7 +200,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load", "vue!page_breadcrumb.vue"], function(Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload, PageBreadcrumbComponent) {
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load"], function(Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload) {
         Vue.use(Meta);
         Vue.use(Lightbox);
         Vue.use(VueLazyload);
@@ -216,7 +216,6 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;      
                 });
-
                 this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/pages/northpark-about-the-collection.json"}).then(response => {
                     this.currentPage = response.data;
                 }, error => {
@@ -270,8 +269,7 @@
                 loadData: async function() {
                     try{
                         let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
-                    }
-                    catch (e){
+                    } catch(e) {
                         console.log("Error loading data: " + e.message);    
                     }
                 }
