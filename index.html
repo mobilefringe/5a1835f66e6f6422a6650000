@@ -14,9 +14,7 @@
     </head>
     <body>
         <div id="app" v-cloak>
-            <div class="loading-container" v-if="!dataLoaded">
-                <vue-simple-spinner size="huge" message="NorthPark Center is loading..."></vue-simple-spinner>    
-            </div>
+            <np-loader v-if="!dataLoaded"></np-loader>
             <np-header :social_media="social_media" v-if="dataLoaded"></np-header>
             <transition name="fade">
                 
