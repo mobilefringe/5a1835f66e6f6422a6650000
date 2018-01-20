@@ -119,7 +119,7 @@
             url: this.property.mm_host + "/pages/" + this.id + ".json"
           }).then(function (response) {
             _this.currentPage = response.data;
-            this.dataLoaded = true;
+            _this.dataLoaded = true;
             if (_this.currentPage.slug == "northpark-parking-valet-page" || _this.currentPage.slug ==
               "northpark-concierge-services" || _this.currentPage.slug ==
               "northpark-northpark-gold-gift-cards" || _this.currentPage.slug == "northpark-contact-us") {
