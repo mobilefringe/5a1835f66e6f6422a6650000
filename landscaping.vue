@@ -220,7 +220,6 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;      
                 });
-                
                 this.$store.dispatch('LOAD_PAGE_DATA', { url:this.property.mm_host + "/pages/northpark-landscaping.json" }).then(response => {
                     this.currentPage = response.data;
                 }, error => {
