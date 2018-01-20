@@ -1,24 +1,23 @@
 <template>
-  <div>
-    <np-loader v-if="!dataLoaded"></np-loader>
-    <div v-if="dataLoaded" class="page-container" v-cloak>
-      <!-- without an outer container div this component template will not render -->
-      <div class="margin-42"></div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="category-select-container">
-            <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>
-            <!--:on-change="selectCategory()"-->
-          </div>
-        </div>
-        <div class="col-md-6"></div>
-      </div>
+    <div>
+        <np-loader v-if="!dataLoaded"></np-loader>
+        <div v-if="dataLoaded" class="page-container" v-cloak><!-- without an outer container div this component template will not render -->
+            <div class="margin-42"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="category-select-container">
+                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>
+                        <!--:on-change="selectCategory()"-->
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
       <div class="dine-container" v-for="restaurant in currentSelection">
         <div class="row">
           <div class="col-md-12">
             <div class="dine-image-container">
               <div class="hover-container">
-                <img v-if="restaurant.image_url" :src="restaurant.image_url" :alt="restaurant.name" />
+                <img v-if="restaurant.image_url" v-lazy="restaurant.image_url" :alt="restaurant.name" />
                 <div class="hover-text-container hover-scale">
                   <div class="hover-text">
                     <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
@@ -54,36 +53,35 @@
 </template>
 
 <script>
-  define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue!page_breadcrumb.vue"],
-    function (Vue, Vuex, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect, PageBreadcrumbComponent) {
-      return Vue.component("dine-component", {
-        template: template, // the variable template will be injected
-        data: function () {
-          return {
-            dataLoaded: false,
-            selected: "Select A Category",
-            currentSelection: null,
-            categoryOptions: [{
-                'label': 'All',
-                'value': 'all_dine'
-              },
-              {
-                'label': 'Restaurants',
-                'value': 'restaurants'
-              },
-              {
-                'label': 'NorthPark Cafes',
-                'value': 'cafes'
-              },
-              {
-                'label': 'Coffee & Specialty Foods',
-                'value': 'specialty'
-              },
-            ],
-            dine_stores: [],
-            hours: []
-          }
-        },
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "v-select", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VueBreadcrumbs, vSelect, VueLazyload) {
+        Vue.use(VueLazyload);
+        return Vue.component("dine-component", {
+            template: template, // the variable template will be injected
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    selected: "Select A Category",
+                    currentSelection: null,
+                    categoryOptions: [{
+                        'label': 'All',
+                        'value': 'all_dine'
+                    },
+                    {
+                        'label': 'Restaurants',
+                        'value': 'restaurants'
+                    },
+                    {
+                        'label': 'NorthPark Cafes',
+                        'value': 'cafes'
+                    },
+                    {
+                        'label': 'Coffee & Specialty Foods',
+                        'value': 'specialty'
+                    }],
+                    dine_stores: [],
+                    hours: []
+                }
+            },
         created() {
           this.loadData().then(response => {
             this.dataLoaded = true;
