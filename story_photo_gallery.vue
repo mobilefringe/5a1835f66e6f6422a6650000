@@ -107,8 +107,8 @@
                     } else if (this.selected.value == "architecture"){
                         this.currentSelection = this.architectureGallery;
                     }
-                },
-            },
+                }
+            }
         });
     });
 </script>
