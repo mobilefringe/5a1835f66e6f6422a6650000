@@ -1,56 +1,52 @@
 <template>
-  <div>
-    <np-loader v-if="!dataLoaded"></np-loader>
-    <div v-if="dataLoaded" class="page-container" v-cloak>
-      <!-- without an outer container div this component template will not render -->
-      <div class="margin-42"></div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="category-select-container">
-            <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>
-            <!--:on-change="selectCategory()"-->
-          </div>
-        </div>
-        <div class="col-md-6"></div>
-      </div>
-      <div class="dine-container" v-for="restaurant in currentSelection">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="dine-image-container">
-              <div class="hover-container">
-                <img v-if="restaurant.image_url" v-lazy="restaurant.image_url" :alt="restaurant.name" />
-                <div class="hover-text-container hover-scale">
-                  <div class="hover-text">
-                    <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
-                      <h5>Visit Store Page
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                      </h5>
-                    </router-link>
-                  </div>
+    <div>
+        <np-loader v-if="!dataLoaded"></np-loader>
+        <div v-if="dataLoaded" class="page-container" v-cloak><!-- without an outer container div this component template will not render -->
+            <div class="margin-42"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="category-select-container">
+                        <v-select v-model="selected" :options="categoryOptions" :searchable="false" class="category-select"></v-select>
+                        <!--:on-change="selectCategory()"-->
+                    </div>
                 </div>
-              </div>
+                <div class="col-md-6"></div>
             </div>
-            <div class="dine-content-container">
-              <h2 class="dine-name">{{restaurant.name}}</h2>
-              <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">Visit Store Page
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-              </router-link>
-              <h5 class="dine-contact-header">Contact</h5>
-              <p>{{restaurant.phone}}</p>
-              <h5>Hours</h5>
-              <ul class="details-hours-list">
-                <li v-if="storeHours(restaurant.store_hours)" v-for="hour in storeHours(restaurant.store_hours)">
-                  {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h
-                  A", timezone)}}
-                </li>
-              </ul>
+            <div class="dine-container" v-for="restaurant in currentSelection">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="dine-image-container">
+                            <div class="hover-container">
+                                <img v-if="restaurant.image_url" v-lazy="restaurant.image_url" :alt="restaurant.name" />
+                                <div class="hover-text-container hover-scale">
+                                    <div class="hover-text">
+                                        <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
+                                            <h5>Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                                        </router-link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dine-content-container">
+                            <h2 class="dine-name">{{restaurant.name}}</h2>
+                            <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
+                                Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            </router-link>
+                            <h5 class="dine-contact-header">Contact</h5>
+                            <p>{{restaurant.phone}}</p>
+                            <h5>Hours</h5>
+                            <ul class="details-hours-list">
+                                <li v-if="storeHours(restaurant.store_hours)" v-for="hour in storeHours(restaurant.store_hours)">
+                                    {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <page-breadcrumb></page-breadcrumb>
         </div>
-      </div>
-      <page-breadcrumb></page-breadcrumb>
     </div>
-  </div>
 </template>
 
 <script>
