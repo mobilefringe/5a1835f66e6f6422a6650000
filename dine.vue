@@ -140,19 +140,6 @@
                         console.log("Error loading data: " + e.message);    
                     }
                 },
-                // selectCategory(){
-                //     if(this.selected.value == "all_dine"){
-                //         this.currentSelection = this.all_dine
-                //     } else if(this.selected.value == "restaurants"){
-                //         this.currentSelection = this.restaurants;
-                //     } else if (this.selected.value == "cafes") {
-                //         this.currentSelection = this.cafes;
-                //     } else if (this.selected.value == "specialty"){
-                //         this.currentSelection = this.specialty;
-                //     } else {
-                //         this.currentSelection = this.all_dine
-                //     }
-                // },
                 storeHours(restaurant_hours){
                     var vm = this;
                     var storeHours = [];
