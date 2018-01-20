@@ -23,7 +23,7 @@
                 <div class="gallery-item-container">
                     <a :href="item.image_url" :data-lightbox="item">
                         <div class="gallery-image-container">
-                            <img :src="item.image_url" />
+                            <img v-lazy="item.image_url" />
                         </div>
                         <div class="gallery-content-container" v-if="item.name">
                             <h5 class="art-gallery-title">{{item.name}}</h5>  
@@ -38,8 +38,10 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-meta", "v-select", "lightbox", "vue!page_breadcrumb.vue"], function(Vue, Vuex, Meta, vSelect, Lightbox, PageBreadcrumbComponent) {
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load", "vue!page_breadcrumb.vue"], function(Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload, PageBreadcrumbComponent) {
         Vue.use(Meta);
+        Vue.use(Lightbox);
+        Vue.use(VueLazyload);
         return Vue.component("story-photo-gallery-component", {
             template: template, // the variable template will be injected
             data: function() {
