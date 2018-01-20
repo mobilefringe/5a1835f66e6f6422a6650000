@@ -21,7 +21,8 @@
             <div class="row image-row">
                 <div class="col-sm-6 col-md-4" v-if="sectionTwo">
                     <div class="hover-container">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionTwo.image_url + ')' }"></div>
+                        <div class="hover-image" v-lazy:background-image="sectionTwo.image_url"></div>
+                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionTwo.image_url + ')' }"-->
                     	<div v-if="sectionTwo.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionTwo.name }}</h2>
@@ -44,7 +45,8 @@
                 </div>
                 <div class="col-sm-6 col-md-4" v-if="sectionThree">
                     <div class="hover-container">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionThree.image_url + ')' }"></div>
+                        <div class="hover-image" v-lazy:background-image="sectionThree.image_url"></div>
+                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionThree.image_url + ')' }"-->
                     	<div v-if="sectionThree.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionThree.name }}</h2>
@@ -67,7 +69,8 @@
                 </div>
                 <div class="col-md-4 hidden-mobile" v-if="sectionFour">
                     <div class="hover-container">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionFour.image_url + ')' }"></div>
+                        <div class="hover-image" v-lazy:background-image="sectionFour.image_url"></div>
+                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionFour.image_url + ')' }"-->
                     	<div v-if="sectionFour.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionFour.name }}</h2>
