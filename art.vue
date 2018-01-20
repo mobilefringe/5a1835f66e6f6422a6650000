@@ -95,7 +95,8 @@
         </div>
         <div class="image-row">
             <div class="hover-container" v-if="sectionFive">
-                <div class="hover-image max-height" v-bind:style="{ backgroundImage: 'url(' + sectionFive.image_url + ')' }"></div>
+                <div class="hover-image max-height" v-lazy:background-image="sectionFive.image_url"></div>
+                <!--v-bind:style="{ backgroundImage: 'url(' + sectionFive.image_url + ')' }"-->
             	<div v-if="sectionFive.url" class="hover-text-container hover-scale">
         		    <div class="hover-text">
         		        <h2>{{ sectionFive.name }}</h2>
@@ -127,7 +128,8 @@
             <div class="row image-row">
                 <div class="col-sm-6">
                     <div class="hover-container" v-if="sectionSix">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSix.image_url + ')' }"></div>
+                        <div class="hover-image" v-lazy:background-image="sectionSix.image_url"></div>
+                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionSix.image_url + ')' }"-->
                     	<div v-if="sectionSix.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionSix.name }}</h2>
@@ -150,7 +152,8 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="hover-container" v-if="sectionSeven">
-                        <div class="hover-image" v-bind:style="{ backgroundImage: 'url(' + sectionSeven.image_url + ')' }"></div>
+                        <div class="hover-image" v-lazy:background-image="sectionSeven.image_url"></div>
+                        v-bind:style="{ backgroundImage: 'url(' + sectionSeven.image_url + ')' }"
                     	<div v-if="sectionSeven.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionSeven.name }}</h2>
@@ -175,7 +178,8 @@
             <div class="row image-row">
                 <div class="col-md-12">
                     <div class="hover-container" v-if="sectionEight">
-                        <div class="hover-image mid-height" v-bind:style="{ backgroundImage: 'url(' + sectionEight.image_url + ')' }"></div>
+                        <div class="hover-image mid-height" v-lazy:background-image="sectionEight.image_url"></div>
+                        <!--v-bind:style="{ backgroundImage: 'url(' + sectionEight.image_url + ')' }"-->
                     	<div v-if="sectionEight.url" class="hover-text-container hover-scale">
                 		    <div class="hover-text">
                 		        <h2>{{ sectionEight.name }}</h2>
