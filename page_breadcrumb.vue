@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <p class="page-breadcrumb">
-                 <breadcrumbs></breadcrumbs>
+                <breadcrumbs></breadcrumbs>
                 <span class="pull-left">{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i> </span>
             </p>
         </div>
