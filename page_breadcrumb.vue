@@ -1,10 +1,10 @@
 <template>
     <div class="row">
         <div class="col-md-12">
-            <span class="page-breadcrumb">
-                {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <p class="page-breadcrumb">
+                <li>{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i></li>
                 <breadcrumbs></breadcrumbs>
-            </span>
+            </p>
         </div>
     </div>
 </template>
