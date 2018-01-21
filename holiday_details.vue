@@ -45,7 +45,7 @@
                     currentBlog: null,
                     currentPost: null,
                     slickOptions: {
-                        arrows: false,
+                        arrows: true,
                         autoplay: true,
                         cssEase: 'linear',
                         dots: false,
