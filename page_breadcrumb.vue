@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <p class="page-breadcrumb">
-                <li>{{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                {{property.name}} <i class="fa fa-angle-right" aria-hidden="true"></i>
                 <breadcrumbs></breadcrumbs>
             </p>
         </div>
