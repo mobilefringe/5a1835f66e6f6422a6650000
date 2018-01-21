@@ -40,4 +40,7 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .loading-container .vue-simple-spinner-text{
+    line-height: 1;
+  }
 </style>
