@@ -142,120 +142,101 @@
 </template>
 
 <script>
-  define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate","vue!page_breadcrumb.vue"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate, PageBreadcrumbComponent) {
-    Vue.use(Meta);
-    Vue.use(VeeValidate);
-    return Vue.component("visit-component", {
-      template: template, // the variable template will be injected
-      data: function data() {
-        return {
-          dataLoaded: false,
-          mainPage: null,
-          tourism: null,
-          guestRewards: null,
-          groupVisits: null,
-          taxFreeShopping: null,
-          unionPay: null,
-          form_data: {},
-          loginPending: null,
-          formSuccess: false,
-          formError: false,
-          time: new Date()
-        };
-      },
-      created() {
-        /*
-        this.$store.dispatch("getData", "repos").then(response => {
-          this.dataLoaded = true
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-        });
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-tourism.json"}).then(response => {
-          this.mainPage = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        */
-        this.loadData().then(response => {
-          this.mainPage = response[1].data;
-          this.dataLoaded = true;
-        });
-      },
-      watch: {
-        mainPage: function mainPage() {
-          if (this.mainPage != null) {
-            this.tourism = this.mainPage.subpages[0];
-            this.guestRewards = this.mainPage.subpages[1];
-            this.groupVisits = this.mainPage.subpages[2];
-            this.taxFreeShopping = this.mainPage.subpages[3];
-            this.unionPay = this.mainPage.subpages[4];
-          }
-        }
-      },
-      computed: {
-        ...Vuex.mapGetters([
-          'property',
-          'timezone',
-          'getPropertyHours',
-          'repos',
-          'findRepoByName',
-        ]),
-        pageBanner: function pageBanner() {
-          return this.findRepoByName("Tourism").images;
-        }
-      },
-      methods: {
-        loadData: async function () {
-          try {
-            let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-tourism.json"})]);
-            return results;
-          } catch (e) {
-            console.log("Error loading data: " + e.message);
-          }
-        },
-        validateBeforeSubmit() {
-          this.$validator.validateAll().then((result) => {
-            if (result) {
-              let errors = this.errors;
-              // console.log("sending form data", this.form_data);
-              send_data = {};
-              send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
-              this.$store.dispatch("CONTACT_US", send_data).then(res => {
-                this.formSuccess = true;
-              }).catch(error => {
-                try {
-                  if (error.response.status == 401) {
-                    console.log("Data load error: " + error.message);
-                    this.formError = true;
-                  } else {
-                    console.log("Data load error: " + error.message);
-                    this.formError = true;
-                  }
-                } catch (e) {
-                  console.log("Data load error: " + error.message);
-                  this.formError = true;
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vee-validate"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate) {
+        Vue.use(Meta);
+        Vue.use(VeeValidate);
+        return Vue.component("visit-component", {
+            template: template, // the variable template will be injected
+            data: function data() {
+                return {
+                    dataLoaded: false,
+                    mainPage: null,
+                    tourism: null,
+                    guestRewards: null,
+                    groupVisits: null,
+                    taxFreeShopping: null,
+                    unionPay: null,
+                    form_data: {},
+                    loginPending: null,
+                    formSuccess: false,
+                    formError: false,
+                    time: new Date()
                 }
-              })
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.mainPage = response[1].data;
+                    this.dataLoaded = true;
+                });
+            },
+            watch: {
+                mainPage: function mainPage() {
+                    if (this.mainPage != null) {
+                        this.tourism = this.mainPage.subpages[0];
+                        this.guestRewards = this.mainPage.subpages[1];
+                        this.groupVisits = this.mainPage.subpages[2];
+                        this.taxFreeShopping = this.mainPage.subpages[3];
+                        this.unionPay = this.mainPage.subpages[4];
+                    }
+                }
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'getPropertyHours',
+                    'repos',
+                    'findRepoByName',
+                ]),
+                pageBanner: function pageBanner() {
+                    return this.findRepoByName("Tourism").images;
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-tourism.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                }
+            },
+            validateBeforeSubmit() {
+                this.$validator.validateAll().then((result) => {
+                    if (result) {
+                        let errors = this.errors;
+                        send_data = {};
+                        send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
+                        this.$store.dispatch("CONTACT_US", send_data).then(res => {
+                            this.formSuccess = true;
+                        }).catch(error => {
+                            try {
+                                if (error.response.status == 401) {
+                                    console.log("Data load error: " + error.message);
+                                    this.formError = true;
+                                } else {
+                                    console.log("Data load error: " + error.message);
+                                    this.formError = true;
+                                }
+                            } catch (e) {
+                                console.log("Data load error: " + error.message);
+                                this.formError = true;
+                            }
+                        })
+                    }
+                })
+            },
+            serializeObject(obj) {
+                var newObj = [];
+                _.forEach(obj, function (value, key) {
+                    var tempVal = {};
+                    tempVal.name = key;
+                    tempVal.value = value;
+                    newObj.push(tempVal);
+                });
+                return newObj;
             }
-          })
-        },
-        serializeObject(obj) {
-          // console.log(obj);
-          var newObj = [];
-          _.forEach(obj, function (value, key) {
-            var tempVal = {};
-            tempVal.name = key;
-            tempVal.value = value;
-            newObj.push(tempVal);
-          });
-          return newObj;
-        }
-      }
+            }
+        });
     });
-  });
 </script>
