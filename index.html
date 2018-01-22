@@ -19,7 +19,7 @@
                 <np-loader v-if="!dataLoaded"></np-loader>
             </transition>
             <np-header :social_media="social_media" v-if="dataLoaded"></np-header>
-            <transition name="fade">
+            <transition name="fadeDown">
                 
                 <router-view v-if="dataLoaded" class="content"></router-view>
             </transition>
