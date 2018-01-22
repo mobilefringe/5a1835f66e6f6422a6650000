@@ -1,4 +1,5 @@
 <template>
+<transition name="fade">
   <div>
     <np-loader v-if="!dataLoaded"></np-loader>
     <div v-if="currentPage && dataLoaded" class="page-container" v-cloak>
@@ -75,6 +76,7 @@
       </div>
     </div>
   </div>
+  </transition>
 </template>
 
 <script>
