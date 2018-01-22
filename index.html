@@ -18,10 +18,11 @@
             <np-loader v-if="!dataLoaded"></np-loader>
 
             <np-header :social_media="social_media" v-if="dataLoaded"></np-header>
+            
             <transition name="fade">
-                
                 <router-view v-if="dataLoaded" class="content"></router-view>
             </transition>
+            
             <np-footer :social_media="social_media" v-if="dataLoaded"></np-footer>
         </div>
         <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
