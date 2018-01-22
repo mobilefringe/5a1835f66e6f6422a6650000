@@ -212,105 +212,76 @@
 </template>
 
 <script>
-  define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load"], function (Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload) {
-    Vue.use(Meta);
-    Vue.use(Lightbox);
-    Vue.use(VueLazyload);
-    return Vue.component("art-component", {
-      template: template, // the variable template will be injected
-      data: function () {
-        return {
-          dataLoaded: false,
-          currentPage: null
-        }
-      },
-      created() {
-        this.loadData().then(response => {
-          this.currentPage = response[1].data;
-          this.dataLoaded = true;
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load"], function (Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload) {
+        Vue.use(Meta);
+        Vue.use(Lightbox);
+        Vue.use(VueLazyload);
+        return Vue.component("art-component", {
+            template: template, // the variable template will be injected
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    currentPage: null
+                }
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.currentPage = response[1].data;
+                    this.dataLoaded = true;
+                });
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'findRepoByName',
+                    'repos'
+                ]),
+                images() {
+                    return this.findRepoByName("Art Collection Overview").images
+                },
+                sectionOne() {
+                    var sectionID = 35507
+                    return _.find(this.images, function (o) { return o.id === sectionID; })
+                },
+                sectionTwo() {
+                    var sectionID = 35508
+                    return _.find(this.images, function (o) { return o.id === sectionID; })
+                },
+                sectionThree() {
+                    var sectionID = 35509
+                    return _.find(this.images, function (o) { return o.id === sectionID; })
+                },
+                sectionFour() {
+                    var sectionID = 35510
+                    return _.find(this.images, function (o) { return o.id === sectionID; })
+                },
+                sectionFive() {
+                    var sectionID = 35522
+                    return _.find(this.images, function (o) { return o.id === sectionID; })
+                },
+                sectionSix() {
+                    var sectionID = 35523
+                    return _.find(this.images, function (o) { return o.id === sectionID; })
+                },
+                sectionSeven() {
+                    var sectionID = 35524
+                    return _.find(this.images, function (o) { return o.id === sectionID; })
+                },
+                sectionEight() {
+                    var sectionID = 35525
+                    return _.find(this.images, function (o) { return o.id === sectionID; })
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-about-the-collection.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                }
+            }
         });
-        /*
-        this.$store.dispatch('LOAD_PAGE_DATA', {
-          url: this.property.mm_host + "/pages/northpark-about-the-collection.json"
-        }).then(response => {
-          this.currentPage = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        */
-      },
-      computed: {
-        ...Vuex.mapGetters([
-          'property',
-          'findRepoByName',
-          'repos'
-        ]),
-        images() {
-          return this.findRepoByName("Art Collection Overview").images
-        },
-        sectionOne() {
-          var sectionID = 35507
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          })
-        },
-        sectionTwo() {
-          var sectionID = 35508
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          })
-        },
-        sectionThree() {
-          var sectionID = 35509
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          })
-        },
-        sectionFour() {
-          var sectionID = 35510
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          })
-        },
-        sectionFive() {
-          var sectionID = 35522
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          })
-        },
-        sectionSix() {
-          var sectionID = 35523
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          })
-        },
-        sectionSeven() {
-          var sectionID = 35524
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          })
-        },
-        sectionEight() {
-          var sectionID = 35525
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          })
-        }
-      },
-      methods: {
-        loadData: async function () {
-          try {
-            let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-about-the-collection.json"})]);
-            return results;
-          } catch (e) {
-            console.log("Error loading data: " + e.message);
-          }
-        }
-      }
     });
-  });
 </script>
