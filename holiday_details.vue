@@ -1,5 +1,6 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
+        <np-loader v-if="!dataLoaded"></np-loader>
         <transition name="fade">
             <div v-if="currentBlog"> <!-- without an outer container div this component template will not render -->
                 <div class="margin-90 hidden-mobile"></div>
