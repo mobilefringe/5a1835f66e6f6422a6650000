@@ -112,26 +112,6 @@
           this.anniversaryPage = response[2].data;
           this.dataLoaded = true;
         });
-        /*
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-history.json"}).then(response => {
-          this.historyPage = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-50th-anniversary.json"}).then(response => {
-          this.anniversaryPage = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        */
       },
       computed: {
         ...Vuex.mapGetters([
