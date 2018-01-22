@@ -34,7 +34,7 @@
                     <page-breadcrumb></page-breadcrumb>
                 </div>
             </div>
-        </trasnition>
+        </transition>
     </div>
 </template>
 
