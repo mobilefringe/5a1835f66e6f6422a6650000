@@ -19,9 +19,9 @@
 
             <np-header :social_media="social_media" v-if="dataLoaded"></np-header>
             
-            <transition name="fade">
+            <!--<transition name="fade">-->
                 <router-view v-if="dataLoaded" class="content"></router-view>
-            </transition>
+            <!--</transition>-->
             
             <np-footer :social_media="social_media" v-if="dataLoaded"></np-footer>
         </div>
