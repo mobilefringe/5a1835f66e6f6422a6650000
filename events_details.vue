@@ -1,66 +1,61 @@
 <template>
-  <div>
-    <np-loader v-if="!dataLoaded"></np-loader>
-    <div v-if="currentEvent && dataLoaded" v-cloak>
-      <!-- for some reason if you do not put an outer container div this component template will not render -->
-      <div class="margin-90 hidden-mobile"></div>
-      <div v-if="currentEvent">
-        <div class="image-container">
-          <img :src="currentEvent.image_url" class="margin-60" alt="" />
-        </div>
-        <div class="page-container">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="details-store-info">
-                <h2 class="details-store-name">{{currentEvent.name}}</h2>
-                <h5 class="details-dates" v-if="isMultiDayEvent(currentEvent)">{{ currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)}} to {{ currentEvent.end_date | moment("dddd,
-                  MMMM D, YYYY", timezone)}}</h5>
-                <h5 class="details-dates" v-else>{{ currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</h5>
-                <p class="details-description">{{currentEvent.description}}</p>
-              </div>
-              <div class="visible-mobile margin-30">
-                <hr>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="sidebar">
-                <div class="sidebar-container" v-if="currentEvent.eventable_type === 'Property'">
-                  <h5>Hours</h5>
-                  <ul class="sidebar-hours-list">
-                    <li v-for="hour in getPropertyHours">
-                      {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h
-                      A", timezone)}}
-                    </li>
-                  </ul>
-                  <router-link to="/hours" active-class="active" exact>
-                    <a class="details-link">View Detailed Hours
-                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </a>
-                  </router-link>
+    <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <np-loader v-if="!dataLoaded"></np-loader>
+        <transition name="fade">
+            <div v-if="currentEvent && dataLoaded" v-cloak>
+                <div class="margin-90 hidden-mobile"></div>
+                <div v-if="currentEvent">
+                    <div class="image-container">
+                        <img :src="currentEvent.image_url" class="margin-60" alt="" />
+                    </div>
+                    <div class="page-container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="details-store-info">
+                                    <h2 class="details-store-name">{{currentEvent.name}}</h2>
+                                    <h5 class="details-dates" v-if="isMultiDayEvent(currentEvent)">{{ currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)}} to {{ currentEvent.end_date | moment("dddd, MMMM D, YYYY", timezone)}}
+                                    </h5>
+                                    <h5 class="details-dates" v-else>{{ currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</h5>
+                                    <p class="details-description">{{currentEvent.description}}</p>
+                                </div>
+                                <div class="visible-mobile margin-30">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="sidebar">
+                                    <div class="sidebar-container" v-if="currentEvent.eventable_type === 'Property'">
+                                        <h5>Hours</h5>
+                                        <ul class="sidebar-hours-list">
+                                            <li v-for="hour in getPropertyHours">
+                                                {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                            </li>
+                                        </ul>
+                                        <router-link to="/hours" active-class="active" exact>
+                                            <a class="details-link">View Detailed Hours <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                        </router-link>
+                                    </div>
+                                    <div class="sidebar-container" v-if="currentEvent.eventable_type === 'Store'">
+                                        <h5>Hours</h5>
+                                        <ul class="sidebar-hours-list">
+                                            <li v-for="hour in store_hours">
+                                                {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                            </li>
+                                        </ul>
+                                        <br>
+                                        <router-link :to="getStoreSlug()" active-class="active" exact>
+                                            <a class="details-link">View Store Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                        </router-link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <page-breadcrumb></page-breadcrumb>
+                    </div>
                 </div>
-                <div class="sidebar-container" v-if="currentEvent.eventable_type === 'Store'">
-                  <h5>Hours</h5>
-                  <ul class="sidebar-hours-list">
-                    <li v-for="hour in store_hours">
-                      {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h
-                      A", timezone)}}
-                    </li>
-                  </ul>
-                  <br>
-                  <router-link :to="getStoreSlug()" active-class="active" exact>
-                    <a class="details-link">View Store Details
-                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </a>
-                  </router-link>
-                </div>
-              </div>
             </div>
-          </div>
-          <page-breadcrumb></page-breadcrumb>
-        </div>
-      </div>
+        </transition>
     </div>
-  </div>
 </template>
 
 <script>
