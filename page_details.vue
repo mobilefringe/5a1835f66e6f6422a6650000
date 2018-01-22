@@ -49,29 +49,29 @@
             <div class="" v-html="currentPage.body"></div>
           </div>
         </div>
-        <!--<div v-if="visitSubPage" class="row">-->
-        <!--  <div class="col-md-12">-->
-        <!--    <p class="page-breadcrumb">-->
-        <!--      {{property.name}}-->
-        <!--      <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-        <!--      <router-link tag="a" to="/visit" active-class="active" exact>-->
-        <!--        Visit-->
-        <!--        <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-        <!--      </router-link>-->
-        <!--      <span v-if="currentPage">{{currentPage.title}}</span>-->
-        <!--    </p>-->
-        <!--  </div>-->
-        <!--</div>-->
-        <!--<div v-if="!visitSubPage" class="row">-->
-        <!--  <div class="col-md-12">-->
-        <!--    <p class="page-breadcrumb">-->
-        <!--      {{property.name}}-->
-        <!--      <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-        <!--      <span v-if="currentPage">{{currentPage.title}}</span>-->
-        <!--    </p>-->
-        <!--  </div>-->
-        <!--</div>-->
-        <page-breadcrumb></page-breadcrumb>
+        <div v-if="visitSubPage" class="row">
+          <div class="col-md-12">
+            <p class="page-breadcrumb">
+              {{property.name}}
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <router-link tag="a" to="/visit" active-class="active" exact>
+                Visit
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </router-link>
+              <span v-if="currentPage">{{currentPage.title}}</span>
+            </p>
+          </div>
+        </div>
+        <div v-if="!visitSubPage" class="row">
+          <div class="col-md-12">
+            <p class="page-breadcrumb">
+              {{property.name}}
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <span v-if="currentPage">{{currentPage.title}}</span>
+            </p>
+          </div>
+        </div>
+        <!--<page-breadcrumb></page-breadcrumb>-->
       </div>
     </div>
   </div>
