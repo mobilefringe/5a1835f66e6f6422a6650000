@@ -67,6 +67,7 @@
                 this.$store.dispatch("getData", "blogs").then(response => {
                     var blogName = "Holiday Attractions";
                     this.currentBlog = this.findBlogPostBySlug(blogName, this.id);
+                    this.dataLoaded = true;
                     if (this.currentBlog === null || this.currentBlog === undefined){
                         this.$router.replace({ name: '404'});
                     }
