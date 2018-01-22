@@ -1,7 +1,7 @@
 <template>
-  <div> <!-- without an outer container div this component template will not render -->
-    <np-loader v-if="!dataLoaded"></np-loader>
-    <transition name="fade">
+    <div> <!-- without an outer container div this component template will not render -->
+        <np-loader v-if="!dataLoaded"></np-loader>
+        <transition name="fade">
         <div v-if="dataLoaded" v-cloak>
           
           <div v-if="sectionOne">
