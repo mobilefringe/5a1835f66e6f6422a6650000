@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div> <!-- without an outer container div this component template will not render -->
     <np-loader v-if="!dataLoaded"></np-loader>
+    <transition name="fade">
     <div v-if="dataLoaded" v-cloak>
-      <!-- without an outer container div this component template will not render -->
+      
       <div v-if="sectionOne">
         <div class="gallery-banner" v-lazy:background-image="sectionOne.image_url"></div>
         <div class="margin-90 hidden-mobile"></div>
@@ -227,6 +228,7 @@
         <page-breadcrumb></page-breadcrumb>
       </div>
     </div>
+    </transition>
   </div>
 </template>
 
