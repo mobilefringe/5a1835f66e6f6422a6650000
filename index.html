@@ -15,9 +15,9 @@
     </head>
     <body>
         <div id="app" v-cloak>
-            <transition name="fade">
+            <!--<transition name="fade">-->
                 <np-loader v-if="!dataLoaded"></np-loader>
-            </transition>
+            <!--</transition>-->
             <np-header :social_media="social_media" v-if="dataLoaded"></np-header>
             <transition name="fade">
                 
