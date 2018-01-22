@@ -49,92 +49,78 @@
 </template>
 
 <script>
-  define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load"], function (Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload) {
-    Vue.use(Meta);
-    Vue.use(Lightbox);
-    Vue.use(VueLazyload);
-    return Vue.component("story-photo-gallery-component", {
-      template: template, // the variable template will be injected
-      data: function () {
-        return {
-          dataLoaded: false,
-          selected: "History",
-          currentSelection: null,
-          categoryOptions: [{
-              'label': 'History',
-              'value': 'history'
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load"], function (Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload) {
+        Vue.use(Meta);
+        Vue.use(Lightbox);
+        Vue.use(VueLazyload);
+        return Vue.component("story-photo-gallery-component", {
+            template: template, // the variable template will be injected
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    selected: "History",
+                    currentSelection: null,
+                    categoryOptions: [
+                        { 'label': 'History', 'value': 'history' },
+                        { 'label': '50th Anniversary', 'value': 'anniversary' },
+                        { 'label': 'Event', 'value': 'event' },
+                        { 'label': 'Landscaping', 'value': 'landscaping' },
+                        { 'label': 'Architecture', 'value': 'architecture' },
+                    ],
+                }
             },
-            {
-              'label': '50th Anniversary',
-              'value': 'anniversary'
+            created() {
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                    this.currentSelection = this.historyGallery;
+                });
             },
-            {
-              'label': 'Event',
-              'value': 'event'
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'findRepoByName'
+                ]),
+                historyGallery() {
+                    return this.findRepoByName("history slideshow").images
+                },
+                anniversaryGallery() {
+                    // Need to create repo and add images
+                    // return this.findRepoByName(" ").images
+                },
+                eventGallery() {
+                    // Need to create repo and add images
+                    // return this.findRepoByName(" ").images
+                },
+                landscapingGallery() {
+                    return this.findRepoByName("landscaping slideshow").images
+                },
+                architectureGallery() {
+                    return this.findRepoByName("architecture slideshow").images
+                },
             },
-            {
-              'label': 'Landscaping',
-              'value': 'landscaping'
-            },
-            {
-              'label': 'Architecture',
-              'value': 'architecture'
-            },
-          ],
-        }
-      },
-      created() {
-        this.loadData().then(response => {
-          this.dataLoaded = true;
-          this.currentSelection = this.historyGallery;
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                selectCategory() {
+                    if (this.selected.value == "history") {
+                        this.currentSelection = this.historyGallery;
+                    } else if (this.selected.value == "anniversary") {
+                        this.currentSelection = this.anniversaryGallery;
+                    } else if (this.selected.value == "event") {
+                        this.currentSelection = this.eventGallery;
+                    } else if (this.selected.value == "landscaping") {
+                        this.currentSelection = this.landscapingGallery;
+                    } else if (this.selected.value == "architecture") {
+                        this.currentSelection = this.architectureGallery;
+                    }
+                }
+            }
         });
-      },
-      computed: {
-        ...Vuex.mapGetters([
-          'property',
-          'findRepoByName'
-        ]),
-        historyGallery() {
-          return this.findRepoByName("history slideshow").images
-        },
-        anniversaryGallery() {
-          // Need to create repo and add images
-          // return this.findRepoByName(" ").images
-        },
-        eventGallery() {
-          // Need to create repo and add images
-          // return this.findRepoByName(" ").images
-        },
-        landscapingGallery() {
-          return this.findRepoByName("landscaping slideshow").images
-        },
-        architectureGallery() {
-          return this.findRepoByName("architecture slideshow").images
-        },
-      },
-      methods: {
-        loadData: async function () {
-          try {
-            let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
-            return results;
-          } catch (e) {
-            console.log("Error loading data: " + e.message);
-          }
-        },
-        selectCategory() {
-          if (this.selected.value == "history") {
-            this.currentSelection = this.historyGallery;
-          } else if (this.selected.value == "anniversary") {
-            this.currentSelection = this.anniversaryGallery;
-          } else if (this.selected.value == "event") {
-            this.currentSelection = this.eventGallery;
-          } else if (this.selected.value == "landscaping") {
-            this.currentSelection = this.landscapingGallery;
-          } else if (this.selected.value == "architecture") {
-            this.currentSelection = this.architectureGallery;
-          }
-        }
-      }
     });
-  });
 </script>
