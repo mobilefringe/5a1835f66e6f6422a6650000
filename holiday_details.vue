@@ -1,37 +1,39 @@
 <template>
-    <div v-if="currentBlog"> <!-- without an outer container div this component template will not render -->
-        <div class="margin-90 hidden-mobile"></div>
-        <div class="image-container">
-            <div v-if="currentBlog" class="position-relative">
-                <div class="prev"></div>
-                <slick ref="slick" :options="slickOptions">
-                    <div v-for="image in currentBlog.additional_images">
-                        <img class="margin-60" :src="image.image_url" alt="Holiday Event Image">
-                    </div>
-                </slick>
-                <div class="next"></div>
-            </div>
-        </div>
-        <div class="page-container">
-            <div class="row margin-90" v-if="currentBlog">
-                <div class="col-md-8">
-                    <h2 class="">{{currentBlog.title}}</h2> 
-                    <div v-html="currentBlog.html_body"></div>
-                    <div class="visible-mobile margin-30">
-                        <hr>    
-                    </div>
+    <transition name="fade">
+        <div v-if="currentBlog"> <!-- without an outer container div this component template will not render -->
+            <div class="margin-90 hidden-mobile"></div>
+            <div class="image-container">
+                <div v-if="currentBlog" class="position-relative">
+                    <div class="prev"></div>
+                    <slick ref="slick" :options="slickOptions">
+                        <div v-for="image in currentBlog.additional_images">
+                            <img class="margin-60" :src="image.image_url" alt="Holiday Event Image">
+                        </div>
+                    </slick>
+                    <div class="next"></div>
                 </div>
-                <div class="col-md-4">
-                    <div class="sidebar">
-                        <div class="sidebar-container">
-                            <div v-html="currentBlog.html_caption"></div>
+            </div>
+            <div class="page-container">
+                <div class="row margin-90" v-if="currentBlog">
+                    <div class="col-md-8">
+                        <h2 class="">{{currentBlog.title}}</h2> 
+                        <div v-html="currentBlog.html_body"></div>
+                        <div class="visible-mobile margin-30">
+                            <hr>    
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sidebar">
+                            <div class="sidebar-container">
+                                <div v-html="currentBlog.html_caption"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <page-breadcrumb></page-breadcrumb>
             </div>
-            <page-breadcrumb></page-breadcrumb>
         </div>
-    </div>
+    </trasnition>
 </template>
 
 <script>
