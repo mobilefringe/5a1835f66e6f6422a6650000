@@ -236,7 +236,6 @@
                 });
                 return newObj;
             }
-            }
         });
     });
 </script>
