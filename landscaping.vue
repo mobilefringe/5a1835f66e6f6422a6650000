@@ -239,103 +239,76 @@
 </template>
 
 <script>
-  define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load"], function (Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload) {
-    Vue.use(Meta);
-    Vue.use(Lightbox);
-    Vue.use(VueLazyload);
-    return Vue.component("landscaping-component", {
-      template: template, // the variable template will be injected
-      data: function () {
-        return {
-          dataLoaded: false,
-          currentPage: null,
-        }
-      },
-      created() {
-        this.loadData().then(response => {
-          this.currentPage = response[1].data;
-          this.dataLoaded = true;
+    define(["Vue", "vuex", "jquery", "vue-meta", "lightbox", "vue-lazy-load"], function (Vue, Vuex, jQuery, Meta, Lightbox, VueLazyload) {
+        Vue.use(Meta);
+        Vue.use(Lightbox);
+        Vue.use(VueLazyload);
+        return Vue.component("landscaping-component", {
+            template: template, // the variable template will be injected
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    currentPage: null,
+                }
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.currentPage = response[1].data;
+                    this.dataLoaded = true;
+                });
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'repos',
+                    'findRepoByName'
+                ]),
+                images() {
+                    return this.findRepoByName("Landscaping").images;
+                },
+                sectionOne() {
+                    var sectionID = 35568
+                    return _.find(this.images, function (o) { return o.id === sectionID; });
+                },
+                sectionTwo() {
+                    var sectionID = 35569
+                    return _.find(this.images, function (o) { return o.id === sectionID; });
+                },
+                sectionThree() {
+                    var sectionID = 35570
+                    return _.find(this.images, function (o) { return o.id === sectionID; });
+                },
+                sectionFour() {
+                    var sectionID = 35571
+                    return _.find(this.images, function (o) { return o.id === sectionID; });
+                },
+                sectionFive() {
+                    var sectionID = 35572
+                    return _.find(this.images, function (o) { return o.id === sectionID; });
+                },
+                sectionSix() {
+                    var sectionID = 35573
+                    return _.find(this.images, function (o) { return o.id === sectionID; });
+                },
+                sectionSeven() {
+                    var sectionID = 35574
+                    return _.find(this.images, function (o) { return o.id === sectionID; });
+                },
+                sectionEight() {
+                    var sectionID = 35575
+                    return _.find(this.images, function (o) { return o.id === sectionID; });
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-landscaping.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                }
+            }
         });
-        /*
-        this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-landscaping.json"}).then(response => {
-          this.currentPage = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        */
-      },
-      computed: {
-        ...Vuex.mapGetters([
-          'property',
-          'repos',
-          'findRepoByName'
-        ]),
-        images() {
-          return this.findRepoByName("Landscaping").images;
-        },
-        sectionOne() {
-          var sectionID = 35568
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          });
-        },
-        sectionTwo() {
-          var sectionID = 35569
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          });
-        },
-        sectionThree() {
-          var sectionID = 35570
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          });
-        },
-        sectionFour() {
-          var sectionID = 35571
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          });
-        },
-        sectionFive() {
-          var sectionID = 35572
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          });
-        },
-        sectionSix() {
-          var sectionID = 35573
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          });
-        },
-        sectionSeven() {
-          var sectionID = 35574
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          });
-        },
-        sectionEight() {
-          var sectionID = 35575
-          return _.find(this.images, function (o) {
-            return o.id === sectionID;
-          });
-        }
-      },
-      methods: {
-        loadData: async function () {
-          try {
-            let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-landscaping.json"})]);
-            return results;
-          } catch (e) {
-            console.log("Error loading data: " + e.message);
-          }
-        }
-      }
     });
-  });
 </script>
