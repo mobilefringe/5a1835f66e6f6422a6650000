@@ -18,7 +18,7 @@
                         <div class="col-md-12">
                             <div class="dine-image-container">
                                 <div class="hover-container">
-                                    <div class="hover-image" v-lazy:background-image="estaurant.image_url"></div>
+                                    <div class="hover-image" v-lazy:background-image="restaurant.image_url"></div>
                                     <!--<img v-if="restaurant.image_url" v-lazy="restaurant.image_url" :alt="restaurant.name" />-->
                                     <div class="hover-text-container hover-scale">
                                         <div class="hover-text">
