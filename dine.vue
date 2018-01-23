@@ -18,7 +18,7 @@
                         <div class="col-md-12">
                             <div class="dine-image-container">
                                 <div class="hover-container">
-                                    <img v-if="restaurant.image_url" v-lazy="restaurant.image_url" :loading="loadingImg" :alt="restaurant.name" />
+                                    <img v-if="restaurant.image_url" v-lazy="restaurant.image_url" data="http://via.placeholder.com/350x150" :alt="restaurant.name" />
                                     <div class="hover-text-container hover-scale">
                                         <div class="hover-text">
                                             <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
@@ -67,7 +67,6 @@
                         { 'label': 'NorthPark Cafes', 'value': 'cafes' },
                         { 'label': 'Coffee & Specialty Foods', 'value': 'specialty' },
                     ],
-                    loadingImg: "http://via.placeholder.com/350x150",
                     dine_stores: [],
                     hours: []
                 }
