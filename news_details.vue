@@ -64,7 +64,7 @@
                                         <div class="related-post-img" v-bind:style="{ backgroundImage: 'url(' + relatedPost.image_url + ')' }"></div>
                                         <p>{{relatedPost.title }}</p>
                                     </router-link>
-                                    <div class="visible-mobile margin-90"></div>
+                                    <div class="visible-mobile margin-30"></div>
                                     <hr class="visible-mobile">
                                 </div>
                                 <div class="sidebar-container">
@@ -76,7 +76,7 @@
                                             <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                                         </form>
                                     </div>
-                                    <div class="visible-mobile margin-90"></div>
+                                    <div class="visible-mobile margin-30"></div>
                                     <hr class="visible-mobile">
                                 </div>
                                 <div class="sidebar-container" v-if="instaFeed">
@@ -86,7 +86,7 @@
                                             <a :href="item.link" target="_blank"><img :src="item.images.thumbnail.url"/></a>
                                         </div>
                                     </div>
-                                    <div class="visible-mobile margin-90"></div>
+                                    <div class="visible-mobile margin-60"></div>
                                 </div>
                             </div>
                         </affix>
