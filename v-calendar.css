@@ -401,9 +401,11 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+    -webkit-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
     align-items: stretch;
     position: relative
 }
