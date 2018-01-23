@@ -99,132 +99,103 @@
 </template>
 
 <script>
-  define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing","vue!page_breadcrumb.vue"], function (Vue, Vuex, moment, tz, VueMoment, Meta, SocialSharing, PageBreadcrumbComponent) {
-    return Vue.component("news-details-component", {
-      template: template, // the variable template will be injected,
-      props: ['id'],
-      data: function () {
-        return {
-          dataLoaded: false,
-          currentBlog: null,
-          mainBlog: null,
-          currentPost: null,
-          socialFeed: null,
-          instaFeed: null
-        }
-      },
-      created() {
-        /*
-        this.$store.dispatch("getData", "blogs").then(response => {
-          this.updateCurrentBlog(this.id);
-          this.dataLoaded = true;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-        });
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, Meta, SocialSharing) {
+        return Vue.component("news-details-component", {
+            template: template, // the variable template will be injected,
+            props: ['id'],
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    currentBlog: null,
+                    mainBlog: null,
+                    currentPost: null,
+                    socialFeed: null,
+                    instaFeed: null
+                }
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.updateCurrentBlog(this.id);
+                    this.socialFeed = response[1].data;
+                    this.dataLoaded = true;
+                });
+            },
+            watch: {
+                $route: function () {
+                    this.updateCurrentBlog(this.$route.params.id);
+                },
+                socialFeed: function () {
+                    var social_feed = this.socialFeed.social.instagram;
+                    var insta_feed = _.slice(social_feed, [0], [3])
+                    this.instaFeed = insta_feed
+                }
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'blogs',
+                    'findBlogByName',
+                    'findBlogPostBySlug',
+                ]),
+                relatedPost() {
+                    var main_blog = _.reverse(_.orderBy(this.findBlogByName("main").posts, function (o) { return o.publish_date }));
+                    if (this.currentPost.tag != null) {
+                        var current_post_tag = this.currentPost.tag[0]
+                    }   
 
-        // SOCIAL JSON
-        this.$store.dispatch('LOAD_PAGE_DATA', {
-          url: "http://northside.mallmaverick.com/api/v2/northside/social.json"
-        }).then(response => {
-          this.socialFeed = response.data;
-        }, error => {
-          console.error(
-            "Could not retrieve data from server. Please check internet connection and try again.");
-          this.$router.replace({
-            name: '404'
-          });
-        });
-        */
-        this.loadData().then(response => {
-          this.updateCurrentBlog(this.id);
-          this.socialFeed = response[1].data;
-          this.dataLoaded = true;
-        });
-      },
-      watch: {
-        $route: function () {
-          this.updateCurrentBlog(this.$route.params.id);
-        },
-        socialFeed: function () {
-          var social_feed = this.socialFeed.social.instagram;
-          var insta_feed = _.slice(social_feed, [0], [3])
-          this.instaFeed = insta_feed
-        }
-      },
-      computed: {
-        ...Vuex.mapGetters([
-          'property',
-          'timezone',
-          'blogs',
-          'findBlogByName',
-          'findBlogPostBySlug',
-        ]),
-        relatedPost() {
-          var main_blog = _.reverse(_.orderBy(this.findBlogByName("main").posts, function (o) {
-            return o.publish_date
-          }));
-          if (this.currentPost.tag != null) {
-            var current_post_tag = this.currentPost.tag[0]
-          }
+                    var related_blog = [];
+                    _.forEach(main_blog, function (value, key) {
+                        if (value.tag != null) {
+                            var tag = value.tag[0];
+                            if (tag === current_post_tag) {
+                                related_blog.push(value);
+                            }
+                        }
+                    });
 
-          var related_blog = [];
-          _.forEach(main_blog, function (value, key) {
-            if (value.tag != null) {
-              var tag = value.tag[0];
-              if (tag === current_post_tag) {
-                related_blog.push(value);
-              }
+                    var related_post = related_blog[0]
+                    if (related_post.id != this.currentPost.id) {
+                        return related_post;
+                    } else {
+                        return related_blog[1]
+                    }
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "blogs"), this.$store.dispatch('LOAD_PAGE_DATA', {url: "http://northside.mallmaverick.com/api/v2/northside/social.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                updateCurrentBlog(id) {
+                    var blogName = "main";
+                    this.currentPost = this.findBlogPostBySlug(blogName, id);
+                    if (this.currentPost === null || this.currentPost === undefined) {
+                        this.$router.replace({ name: '404' });
+                    }
+                },
+                tagString(val_tag) {
+                    // Returns all tags
+                    // var string = _.join(val_tag, ', ')  
+                    // return string
+                    
+                    //Returns only the first tag
+                    var tag = val_tag[0];
+                    return tag
+                },
+                truncate(val_body) {
+                    var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
+                    return truncate;
+                },
+                shareURL(slug) {
+                    var share_url = "http://www.northparkcenter.com/news/" + slug
+                    return share_url
+                }
             }
-          });
-
-          var related_post = related_blog[0]
-          if (related_post.id != this.currentPost.id) {
-            return related_post;
-          } else {
-            return related_blog[1]
-          }
-        }
-      },
-      methods: {
-        loadData: async function () {
-          try {
-            let results = await Promise.all([this.$store.dispatch("getData", "blogs"), this.$store.dispatch('LOAD_PAGE_DATA', {url: "http://northside.mallmaverick.com/api/v2/northside/social.json"})]);
-            return results;
-          } catch (e) {
-            console.log("Error loading data: " + e.message);
-          }
-        },
-        updateCurrentBlog(id) {
-          var blogName = "main";
-          this.currentPost = this.findBlogPostBySlug(blogName, id);
-          if (this.currentPost === null || this.currentPost === undefined) {
-            this.$router.replace({
-              name: '404'
-            });
-          }
-        },
-        tagString(val_tag) {
-          // Returns all tags
-          // var string = _.join(val_tag, ', ')  
-          // return string
-
-          //Returns only the first tag
-          var tag = val_tag[0];
-          return tag
-        },
-        truncate(val_body) {
-          var truncate = _.truncate(val_body, {
-            'length': 99,
-            'separator': ' '
-          });
-          return truncate;
-        },
-        shareURL(slug) {
-          var share_url = "http://www.northparkcenter.com/news/" + slug
-          return share_url
-        }
-      }
+        });
     });
-  });
 </script>
