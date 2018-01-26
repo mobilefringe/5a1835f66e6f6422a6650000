@@ -82,58 +82,58 @@
 </template>
 
 <script>
-  define(["Vue", "vuex", "vue-meta", "vue!vue-slick", "vue!page_breadcrumb.vue"], function (Vue, Vuex, Meta, slick,PageBreadcrumbComponent) {
-    Vue.use(Meta);
-    return Vue.component("history-component", {
-      template: template, // the variable template will be injected
-      data: function () {
-        return {
-          dataLoaded: false,
-          currentPage: null,
-          historyPage: null,
-          anniversaryPage: null,
-          slickOptions: {
-            arrows: false,
-            autoplay: true,
-            cssEase: 'linear',
-            dots: false,
-            fade: true,
-            infinite: true,
-            nextArrow: '.next',
-            prevArrow: '.prev',
-            slidesToShow: 1,
-            speed: 1000
-          }
-        }
-      },
-      created() {
-        this.loadData().then(response => {
-          this.historyPage = response[1].data;
-          this.anniversaryPage = response[2].data;
-          this.dataLoaded = true;
+    define(["Vue", "vuex", "vue-meta", "vue!vue-slick"], function (Vue, Vuex, Meta, slick) {
+        Vue.use(Meta);
+        return Vue.component("history-component", {
+            template: template, // the variable template will be injected
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    currentPage: null,
+                    historyPage: null,
+                    anniversaryPage: null,
+                    slickOptions: {
+                        arrows: false,
+                        autoplay: true,
+                        cssEase: 'linear',
+                        dots: false,
+                        fade: true,
+                        infinite: true,
+                        nextArrow: '.next',
+                        prevArrow: '.prev',
+                        slidesToShow: 1,
+                        speed: 1000
+                    }
+                }
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.historyPage = response[1].data;
+                    this.anniversaryPage = response[2].data;
+                    this.dataLoaded = true;
+                });
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'repos',
+                    'findRepoByName',
+                    'processedEvents',
+                ]),
+                historyBanners() {
+                    return this.findRepoByName('history banners').images;
+                },
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-history.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-50th-anniversary.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                }
+            }
         });
-      },
-      computed: {
-        ...Vuex.mapGetters([
-          'property',
-          'repos',
-          'findRepoByName',
-          'processedEvents',
-        ]),
-        historyBanners() {
-          return this.findRepoByName('history banners').images;
-        },
-      },
-      methods: {
-        loadData: async function () {
-          try {
-            let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-history.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-50th-anniversary.json"})]);
-            return results;
-          } catch (e) {
-            console.log("Error loading data: " + e.message);
-          }
-        }
-      }
     });
-  });
 </script>
