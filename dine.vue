@@ -77,92 +77,86 @@
                     this.currentSelection = this.all_dine;
                 });
             },
-        watch: {
-          selected: function () {
-            if (this.selected.value == "all_dine") {
-              this.currentSelection = this.all_dine
-            } else if (this.selected.value == "restaurants") {
-              this.currentSelection = this.restaurants;
-            } else if (this.selected.value == "cafes") {
-              this.currentSelection = this.cafes;
-            } else if (this.selected.value == "specialty") {
-              this.currentSelection = this.specialty;
-            } else {
-              this.currentSelection = this.all_dine
+            watch: {
+                selected: function () {
+                    if (this.selected.value == "all_dine") {
+                        this.currentSelection = this.all_dine
+                    } else if (this.selected.value == "restaurants") {
+                        this.currentSelection = this.restaurants;
+                    } else if (this.selected.value == "cafes") {
+                        this.currentSelection = this.cafes;
+                    } else if (this.selected.value == "specialty") {
+                        this.currentSelection = this.specialty;
+                    } else {
+                        this.currentSelection = this.all_dine
+                    }
+                }
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'storesByCategoryName',
+                    'findHourById'
+                ]),
+                all_dine: function all_dine() {
+                    var stores_by_category = this.$store.getters.storesByCategoryName;
+                    var cafes = stores_by_category["NorthPark Cafés"]
+                    var restaurants = stores_by_category["Restaurants / Beverages"]
+                    var specialty = stores_by_category["Specialty Foods"]
+                    var all_restaurants = _.concat(cafes, restaurants, specialty)
+                    var filtered_restaurants = _.uniqBy(all_restaurants, function (o) {
+                        try {
+                            return o.name
+                        } catch (e) {
+                            // exception
+                        }
+                    });
+                    filtered_restaurants = _.orderBy(filtered_restaurants, function (o) {
+                        try {
+                            return o.name
+                        } catch (e) {
+                            // exception
+                        }
+                    });
+                    return filtered_restaurants
+                },
+                restaurants() {
+                    var stores_by_category = this.$store.getters.storesByCategoryName;
+                    var restaurants = stores_by_category["Restaurants / Beverages"];
+                    var filtered_restaurants = _.uniqBy(restaurants, function (o) { return o.name; })
+                    return filtered_restaurants
+                },
+                cafes() {
+                    var stores_by_category = this.$store.getters.storesByCategoryName;
+                    var cafes = stores_by_category["NorthPark Cafés"]
+                    var filtered_restaurants = _.uniqBy(cafes, function (o) { return o.name; })
+                    return filtered_restaurants
+                },
+                specialty() {
+                    var stores_by_category = this.$store.getters.storesByCategoryName;
+                    var specialty = stores_by_category["Specialty Foods"]
+                    var filtered_restaurants = _.uniqBy(specialty, function (o) { return o.name; })
+                    return filtered_restaurants
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "categories")]);
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                storeHours(restaurant_hours) {
+                    var vm = this;
+                    var storeHours = [];
+                    _.forEach(restaurant_hours, function (value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    return storeHours
+                }
             }
-          }
-        },
-        computed: {
-          ...Vuex.mapGetters([
-            'property',
-            'timezone',
-            'storesByCategoryName',
-            'findHourById'
-          ]),
-          all_dine: function all_dine() {
-            var stores_by_category = this.$store.getters.storesByCategoryName;
-            var cafes = stores_by_category["NorthPark Cafés"]
-            var restaurants = stores_by_category["Restaurants / Beverages"]
-            var specialty = stores_by_category["Specialty Foods"]
-            var all_restaurants = _.concat(cafes, restaurants, specialty)
-            var filtered_restaurants = _.uniqBy(all_restaurants, function (o) {
-              try {
-                return o.name
-              } catch (e) {
-
-              }
-            });
-            filtered_restaurants = _.orderBy(filtered_restaurants, function (o) {
-              try {
-                return o.name
-              } catch (e) {
-
-              }
-            });
-            return filtered_restaurants
-          },
-          restaurants() {
-            var stores_by_category = this.$store.getters.storesByCategoryName;
-            var restaurants = stores_by_category["Restaurants / Beverages"];
-            var filtered_restaurants = _.uniqBy(restaurants, function (o) {
-              return o.name;
-            })
-            return filtered_restaurants
-          },
-          cafes() {
-            var stores_by_category = this.$store.getters.storesByCategoryName;
-            var cafes = stores_by_category["NorthPark Cafés"]
-            var filtered_restaurants = _.uniqBy(cafes, function (o) {
-              return o.name;
-            })
-            return filtered_restaurants
-          },
-          specialty() {
-            var stores_by_category = this.$store.getters.storesByCategoryName;
-            var specialty = stores_by_category["Specialty Foods"]
-            var filtered_restaurants = _.uniqBy(specialty, function (o) {
-              return o.name;
-            })
-            return filtered_restaurants
-          }
-        },
-        methods: {
-          loadData: async function () {
-            try {
-              let results = await Promise.all([this.$store.dispatch("getData", "categories")]);
-            } catch (e) {
-              console.log("Error loading data: " + e.message);
-            }
-          },
-          storeHours(restaurant_hours) {
-            var vm = this;
-            var storeHours = [];
-            _.forEach(restaurant_hours, function (value, key) {
-              storeHours.push(vm.findHourById(value));
-            });
-            return storeHours
-          }
-        }
-      });
+        });
     });
 </script>
