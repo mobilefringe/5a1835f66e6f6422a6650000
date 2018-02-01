@@ -192,7 +192,7 @@
                     return truncate;
                 },
                 shareURL(slug) {
-                    var share_url = "http://www.northparkcenter.com/news/" + slug
+                    var share_url = "http://www.northparkcenter.com/posts/" + slug
                     return share_url
                 }
             }
