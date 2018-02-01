@@ -18,14 +18,16 @@
                         <div class="col-md-12">
                             <div class="dine-image-container">
                                 <div class="hover-container">
-                                    <img v-if="restaurant.image_url" v-lazy="restaurant.image_url" :alt="restaurant.name" />
-                                    <div class="hover-text-container hover-scale">
-                                        <div class="hover-text">
-                                            <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
-                                                <h5>Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                                            </router-link>
+                                    <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
+                                        <img v-if="restaurant.image_url" v-lazy="restaurant.image_url" :alt="restaurant.name" />
+                                        <div class="hover-text-container hover-scale">
+                                            <div class="hover-text">
+                                                
+                                                    <h5>Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                                                
+                                            </div>
                                         </div>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
                             <div class="dine-content-container">
