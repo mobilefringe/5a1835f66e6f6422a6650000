@@ -14,7 +14,7 @@
                             <router-link tag="li" to="/art">
                                 <a>Art</a>
                             </router-link>
-                            <router-link tag="li" to="/news">
+                            <router-link tag="li" to="/posts">
                                 <a>News</a>
                             </router-link>
                             <router-link tag="li" to="/visit">
