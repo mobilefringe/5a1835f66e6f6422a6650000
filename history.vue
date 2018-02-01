@@ -6,7 +6,7 @@
                 <div class="margin-90 hidden-mobile"></div>
                 <div class="image-container">
                     <div class="prev"></div>
-                    <slick ref="slick" :options="slickOptions">
+                    <slick ref="slick" :options="slickOptionsOne">
                         <div v-for="banner in historyBanners" v-if="historyBanners">
                             <img :src="banner.image_url" class="" alt="">
                             <div class="page-container">
@@ -39,7 +39,7 @@
                 <div class="margin-60 hidden-mobile"></div>
                 <div class="image-container">
                     <div class="prev"></div>
-                    <slick ref="slick" :options="slickOptions">
+                    <slick ref="slick" :options="slickOptionsTwo">
                         <div v-for="banner in historyBanners" v-if="historyBanners">
                             <img :src="banner.image_url" class="" alt="">
                             <div class="page-container">
