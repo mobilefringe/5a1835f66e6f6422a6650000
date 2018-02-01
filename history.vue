@@ -38,16 +38,16 @@
                 </div>
                 <div class="margin-60 hidden-mobile"></div>
                 <div class="image-container">
-                    <!--<div class="prev"></div>-->
-                    <!--<slick ref="slick" :options="slickOptions">-->
-                    <!--    <div v-for="banner in historyBanners" v-if="historyBanners">-->
-                    <!--        <img :src="banner.image_url" class="" alt="">-->
-                    <!--        <div class="page-container">-->
-                    <!--            <h5 class="details-slider-title">{{ banner.name }}</h5>-->
-                    <!--        </div>-->
-                    <!--    </div>-->
-                    <!--</slick>-->
-                    <!--<div class="next"></div>-->
+                    <div class="prev"></div>
+                    <slick ref="slick" :options="slickOptions">
+                        <div v-for="banner in historyBanners" v-if="historyBanners">
+                            <img :src="banner.image_url" class="" alt="">
+                            <div class="page-container">
+                                <h5 class="details-slider-title">{{ banner.name }}</h5>
+                            </div>
+                        </div>
+                    </slick>
+                    <div class="next"></div>
                 </div>
                 <div class="page-container">
                     <div class="row">
