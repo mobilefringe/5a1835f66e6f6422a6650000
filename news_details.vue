@@ -184,7 +184,7 @@
                     // return string
                     
                     //Returns only the first tag
-                    var tag = val_tag[0];
+                    var tag = val_tag[0].replace(/_/g, " ");
                     return tag
                 },
                 truncate(val_body) {
