@@ -92,7 +92,19 @@
                     currentPage: null,
                     historyPage: null,
                     anniversaryPage: null,
-                    slickOptions: {
+                    slickOptionsOne: {
+                        arrows: true,
+                        autoplay: true,
+                        cssEase: 'linear',
+                        dots: false,
+                        fade: true,
+                        infinite: true,
+                        nextArrow: '.next',
+                        prevArrow: '.prev',
+                        slidesToShow: 1,
+                        speed: 1000
+                    },
+                    slickOptionsTwo: {
                         arrows: true,
                         autoplay: true,
                         cssEase: 'linear',
