@@ -93,7 +93,7 @@
                     historyPage: null,
                     anniversaryPage: null,
                     slickOptions: {
-                        arrows: false,
+                        arrows: true,
                         autoplay: true,
                         cssEase: 'linear',
                         dots: false,
