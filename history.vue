@@ -99,8 +99,8 @@
                         dots: false,
                         fade: true,
                         infinite: true,
-                        nextArrow: '.next',
-                        prevArrow: '.prev',
+                        nextArrow: '#sliderOneNext',
+                        prevArrow: '#sliderOnePrev',
                         slidesToShow: 1,
                         speed: 1000
                     },
@@ -111,8 +111,8 @@
                         dots: false,
                         fade: true,
                         infinite: true,
-                        nextArrow: '.next',
-                        prevArrow: '.prev',
+                        nextArrow: '#sliderTwoNext',
+                        prevArrow: '#sliderTwoPrev',
                         slidesToShow: 1,
                         speed: 1000
                     }
