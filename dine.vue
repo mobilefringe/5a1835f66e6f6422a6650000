@@ -42,6 +42,7 @@
                                 <!--        {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}-->
                                 <!--    </li>-->
                                 <!--</ul>-->
+                                <hr>
                             </div>
                         </div>
                     </div>
