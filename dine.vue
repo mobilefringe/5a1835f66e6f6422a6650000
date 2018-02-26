@@ -30,17 +30,18 @@
                             </div>
                             <div class="dine-content-container">
                                 <h2 class="dine-name">{{restaurant.name}}</h2>
+                                <div class="dine-desc" v-html="restaurant.desc_short"></div>
                                 <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
                                     Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 </router-link>
-                                <h5 class="dine-contact-header">Contact</h5>
-                                <p>{{restaurant.phone}}</p>
-                                <h5>Hours</h5>
-                                <ul class="details-hours-list">
-                                    <li v-if="storeHours(restaurant.store_hours)" v-for="hour in storeHours(restaurant.store_hours)">
-                                        {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                                    </li>
-                                </ul>
+                                <!--<h5 class="dine-contact-header">Contact</h5>-->
+                                <!--<p>{{restaurant.phone}}</p>-->
+                                <!--<h5>Hours</h5>-->
+                                <!--<ul class="details-hours-list">-->
+                                <!--    <li v-if="storeHours(restaurant.store_hours)" v-for="hour in storeHours(restaurant.store_hours)">-->
+                                <!--        {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}-->
+                                <!--    </li>-->
+                                <!--</ul>-->
                             </div>
                         </div>
                     </div>
