@@ -107,11 +107,12 @@
                     var specialty = stores_by_category["Specialty Foods"]
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
                     var filtered_restaurants = _.uniqBy(all_restaurants, function (o) {
-                        try {
+                        // try {
+                            o.desc_short = _.truncate(o.description);
                             return o.name
-                        } catch (e) {
-                            // exception
-                        }
+                        // } catch (e) {
+                        //     // exception
+                        // }
                     });
                     filtered_restaurants = _.orderBy(filtered_restaurants, function (o) {
                         try {
