@@ -13,9 +13,9 @@
                     </div>
                     <div class="col-md-6"></div>
                 </div>
-                <div class="dine-container" v-for="restaurant in currentSelection">
+                <div class="dine-container" >
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" v-for="restaurant in currentSelection">
                             <div class="dine-image-container">
                                 <div class="hover-container">
                                     <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
