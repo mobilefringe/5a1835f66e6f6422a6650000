@@ -32,7 +32,7 @@
                                 <h2 class="dine-name">{{restaurant.name}}</h2>
                                 <div class="dine-desc" v-html="restaurant.desc_short"></div>
                                 <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
-                                    Visit Store Page <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    Visit More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 </router-link>
                                 <!--<h5 class="dine-contact-header">Contact</h5>-->
                                 <!--<p>{{restaurant.phone}}</p>-->
@@ -125,7 +125,10 @@
                 restaurants() {
                     var stores_by_category = this.$store.getters.storesByCategoryName;
                     var restaurants = stores_by_category["Restaurants / Beverages"];
-                    var filtered_restaurants = _.uniqBy(restaurants, function (o) { return o.name; })
+                    var filtered_restaurants = _.uniqBy(restaurants, function (o) { 
+                        o.desc_short = _.truncate(o.description);
+                        return o.name; 
+                    });
                     return filtered_restaurants
                 },
                 cafes() {
