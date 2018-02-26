@@ -109,7 +109,7 @@
                     var all_restaurants = _.concat(cafes, restaurants, specialty)
                     var filtered_restaurants = _.uniqBy(all_restaurants, function (o) {
                         // try {
-                            o.desc_short = _.truncate(o.description);
+                            o.desc_short = _.truncate(o.description, 'length': 50, 'separator': ...);
                             return o.name
                         // } catch (e) {
                         //     // exception
