@@ -32,7 +32,7 @@
                                 <h2 class="dine-name">{{restaurant.name}}</h2>
                                 <div class="dine-desc" v-html="restaurant.desc_short"></div>
                                 <router-link :to="{ name: 'storeDetails', params: { id: restaurant.slug }}" class="dine-link">
-                                    Visit More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    View More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 </router-link>
                                 <!--<h5 class="dine-contact-header">Contact</h5>-->
                                 <!--<p>{{restaurant.phone}}</p>-->
