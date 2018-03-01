@@ -8,17 +8,20 @@
                             <router-link tag="li" to="/stores">
                                 <a>Shops & Dining</a>
                             </router-link>
+                            <router-link tag="li" to="/hours">
+                                <a>Hours</a>
+                            </router-link>
                             <router-link tag="li" to="/events">
                                 <a>Events</a>
                             </router-link>
-                            <router-link tag="li" to="/art">
-                                <a>Art</a>
+                            <router-link tag="li" to="/visit">
+                                <a>Visit</a>
                             </router-link>
                             <router-link tag="li" to="/posts">
                                 <a>News</a>
                             </router-link>
-                            <router-link tag="li" to="/visit">
-                                <a>Visit</a>
+                            <router-link tag="li" to="/art">
+                                <a>Art</a>
                             </router-link>
                             <router-link tag="li" to="/our-story">
                                 <a>Our Story</a>
@@ -26,10 +29,6 @@
                             <router-link tag="li" to="/magazine">
                                 <a>The Magazine</a>
                             </router-link>
-                            <router-link tag="li" to="/hours">
-                                <a>Hours</a>
-                            </router-link>
-                            <li></li>
                         </ul>    
                     </div>
                     <div class="col-sm-12 col-md-8">
