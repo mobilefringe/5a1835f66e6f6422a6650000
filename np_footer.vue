@@ -37,7 +37,7 @@
                             <img src="//codecloud.cdn.speedyrails.net/sites/5a1835f66e6f6422a6650000/image/png/1511801610000/northpark-logo-white.png"  alt="Northpark Property Logo">  
                         </div>
                         <div class="footer-address">
-                            <p v-if="property">{{property.address1}} - {{property.city}}, {{property.province_state}} - {{property.contact_phone}}</p>    
+                            <p v-if="property">{{property.address1}} - {{property.city}}, {{property.province_state}} <br> {{property.contact_phone}}</p>    
                         </div>
                         <div class="footer-social-container">
                             <span v-for="item in social_media">
