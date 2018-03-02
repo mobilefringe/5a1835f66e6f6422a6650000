@@ -92,6 +92,13 @@
                         </affix>
                     </div>
                 </div>
+                <div class="row margin-60">
+                    <div class="col-md-12">
+                        <router-link to="/posts">
+                            <p class="details-link"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to News</p>
+                        </router-link>
+                    </div>
+                </div>
                 <page-breadcrumb></page-breadcrumb>
             </div>
         </transition>
