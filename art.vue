@@ -107,24 +107,28 @@
                 <div class="image-row">
                     <div class="hover-container" v-if="sectionFive">
                         <div class="hover-image max-height" v-lazy:background-image="sectionFive.image_url"></div>
-                        <div v-if="sectionFive.url" class="hover-text-container hover-scale">
-                            <div class="hover-text">
-                                <h2>{{ sectionFive.name }}</h2>
-                                <h4>{{ sectionFive.description }}</h4>
-                                <router-link :to="sectionFive.url">
-                                    <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                                </router-link>
-                            </div>
-                        </div>
-                        <div v-if="!sectionFive.url" class="hover-text-container hover-scale">
-                            <div class="hover-text">
-                                <h2>{{ sectionFive.name }}</h2>
-                                <h4>{{ sectionFive.description }}</h4>
-                                <a :href="sectionFive.image_url" :data-lightbox="sectionFive.name">
-                                    <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                                </a>
-                            </div>
-                        </div>
+                        <span v-if="sectionFive.url">
+                            <router-link :to="sectionFive.url">
+                                <div class="hover-text-container hover-scale">
+                                    <div class="hover-text">
+                                        <h2>{{ sectionFive.name }}</h2>
+                                        <h4>{{ sectionFive.description }}</h4>
+                                        <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                                    </div>
+                                </div>
+                            </router-link>
+                        </span>
+                        <span v-if="!sectionFive.url">
+                            <a :href="sectionFive.image_url" :data-lightbox="sectionFive.name">
+                                <div class="hover-text-container hover-scale">
+                                    <div class="hover-text">
+                                        <h2>{{ sectionFive.name }}</h2>
+                                        <h4>{{ sectionFive.description }}</h4>
+                                        <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </span>
                     </div>
                 </div>
                 <div class="page-container">
