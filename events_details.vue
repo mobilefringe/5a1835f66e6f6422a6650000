@@ -28,7 +28,7 @@
                                         <h5>Hours</h5>
                                         <ul class="sidebar-hours-list">
                                             <li v-for="hour in getPropertyHours">
-                                                {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                                {{hour.day_of_week | moment("dddd", timezone)}}: {{hour.open_time | moment("hA", timezone)}}-{{hour.close_time | moment("hA", timezone)}}
                                             </li>
                                         </ul>
                                         <router-link to="/hours" active-class="active" exact>
@@ -38,8 +38,11 @@
                                     <div class="sidebar-container" v-if="currentEvent.eventable_type === 'Store'">
                                         <h5>Hours</h5>
                                         <ul class="sidebar-hours-list">
-                                            <li v-for="hour in store_hours">
-                                                {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                            <li v-if="!hour.is_closed" v-for="hour in store_hours">
+                                                {{hour.day_of_week | moment("dddd", timezone)}}: {{hour.open_time | moment("hA", timezone)}}-{{hour.close_time | moment("hA", timezone)}}
+                                            </li>
+                                            <li v-else>
+                                                {{hour.day_of_week | moment("dddd", timezone)}}: CLOSED
                                             </li>
                                         </ul>
                                         <br>
