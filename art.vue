@@ -51,24 +51,28 @@
                         <div class="col-sm-6 col-md-4" v-if="sectionThree">
                             <div class="hover-container">
                                 <div class="hover-image" v-lazy:background-image="sectionThree.image_url"></div>
-                                <div v-if="sectionThree.url" class="hover-text-container hover-scale">
-                                    <div class="hover-text">
-                                        <h2>{{ sectionThree.name }}</h2>
-                                        <h4>{{ sectionThree.description }}</h4>
-                                        <router-link :to="sectionThree.url">
-                                            <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                                        </router-link>
-                                    </div>
-                                </div>
-                                <div v-if="!sectionThree.url" class="hover-text-container hover-scale">
-                                    <div class="hover-text">
-                                        <h2>{{ sectionThree.name }}</h2>
-                                        <h4>{{ sectionThree.description }}</h4>
-                                        <a :href="sectionThree.image_url" :data-lightbox="sectionThree.name">
-                                            <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                                        </a>
-                                    </div>
-                                </div>
+                                <span v-if="sectionThree.url">
+                                    <router-link :to="sectionThree.url">
+                                        <div class="hover-text-container hover-scale">
+                                            <div class="hover-text">
+                                                <h2>{{ sectionThree.name }}</h2>
+                                                <h4>{{ sectionThree.description }}</h4>
+                                                <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                                            </div>
+                                        </div>
+                                    </router-link>
+                                </span>
+                                <span v-if="!sectionThree.url">
+                                    <a :href="sectionThree.image_url" :data-lightbox="sectionThree.name">
+                                        <div class="hover-text-container hover-scale">
+                                            <div class="hover-text">
+                                                <h2>{{ sectionThree.name }}</h2>
+                                                <h4>{{ sectionThree.description }}</h4>
+                                                <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </span>
                             </div>
                         </div>
                         <div class="col-md-4 hidden-mobile" v-if="sectionFour">
