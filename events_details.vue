@@ -17,6 +17,7 @@
                                     </h5>
                                     <h5 class="details-dates" v-else>{{ currentEvent.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</h5>
                                     <p class="details-description">{{currentEvent.description}}</p>
+                                    <div class="details-description" v-html="currentEvent.rich_description"></div>
                                 </div>
                                 <div class="visible-mobile margin-30">
                                     <hr>
