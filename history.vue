@@ -22,7 +22,7 @@
                             <h2>The History of NorthPark</h2>
                             <div class="history-desc" v-if="historyPage" v-html="historyPage.body"></div>
                             <div class="hidden-mobile">
-                                <router-link to="/our-story/photo-gallery">
+                                <router-link to="/our-story/photo-gallery" :to="{ name: 'photoGallery', params: { id: 'history' }}">
                                     <p class="details-link">View History Photo Gallery <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
                             </div>
