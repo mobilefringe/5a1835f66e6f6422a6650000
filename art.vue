@@ -25,22 +25,26 @@
                             <div class="hover-container">
                                 <div class="hover-image" v-lazy:background-image="sectionTwo.image_url"></div>
                                 <div v-if="sectionTwo.url" class="hover-text-container hover-scale">
-                                    <div class="hover-text">
-                                        <h2>{{ sectionTwo.name }}</h2>
-                                        <h4>{{ sectionTwo.description }}</h4>
-                                        <router-link :to="sectionTwo.url">
+                                    <router-link :to="sectionTwo.url">
+                                        <div class="hover-text">
+                                            <h2>{{ sectionTwo.name }}</h2>
+                                            <h4>{{ sectionTwo.description }}</h4>
+                                        
                                             <h5>Learn More&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                                        </router-link>
-                                    </div>
+                                        
+                                        </div>
+                                    </router-link>
                                 </div>
                                 <div v-if="!sectionTwo.url" class="hover-text-container hover-scale">
-                                    <div class="hover-text">
-                                        <h2>{{ sectionTwo.name }}</h2>
-                                        <h4>{{ sectionTwo.description }}</h4>
-                                        <a :href="sectionTwo.image_url" :data-lightbox="sectionTwo.name">
-                                            <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
-                                        </a>
-                                    </div>
+                                    <a :href="sectionTwo.image_url" :data-lightbox="sectionTwo.name">
+                                        <div class="hover-text">
+                                            <h2>{{ sectionTwo.name }}</h2>
+                                            <h4>{{ sectionTwo.description }}</h4>
+                                            
+                                                <h5>View Larger&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+                                            
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
