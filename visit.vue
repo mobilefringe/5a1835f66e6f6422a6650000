@@ -92,10 +92,13 @@
                             </div>
                             <div class="" v-if="contact">
                                 <h2 class="visit-title">Contact</h2>
-                                <div class="visit-desc" v-if="contact" v-html="truncate(contact.body)"></div>
                                 <router-link to="/visit/northpark-contact-us" active-class="active" exact>
-                                    <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
+                                    <p class="visit-link details-link">Contact Us If You Need Further Assistance <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
+                                <!--<div class="visit-desc" v-if="contact" v-html="truncate(contact.body)"></div>-->
+                                <!--<router-link to="/visit/northpark-contact-us" active-class="active" exact>-->
+                                <!--    <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>-->
+                                <!--</router-link>-->
                             </div>
                         </div>
                         <div class="margin-90"></div>
