@@ -55,6 +55,7 @@
         Vue.use(VueLazyload);
         return Vue.component("story-photo-gallery-component", {
             template: template, // the variable template will be injected
+            props: ['id'],
             data: function () {
                 return {
                     dataLoaded: false,
