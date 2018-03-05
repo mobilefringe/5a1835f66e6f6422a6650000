@@ -225,8 +225,8 @@
                         </div>
                         <div class="col-md-12 hidden-mobile">
                             <router-link to="/our-story/photo-gallery" :to="{ name: 'photoGallery', params: { id: 'landscaping' }}">
-                                <h5 class="details-title">View Landcsape Photo Gallery&nbsp;
-                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                <h5 class="details-title">
+                                    View Landcsape Photo Gallery&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 </h5>
                             </router-link>
                         </div>
