@@ -121,8 +121,7 @@
                     valet: null,
                     concierge: null,
                     giftCards: null,
-                    tourism: null,
-                    contact: null
+                    tourism: null
                 };
             },
             created() {
@@ -132,7 +131,6 @@
                     this.concierge = response[1].data.subpages[1];
                     this.giftCards = response[1].data.subpages[2];
                     this.tourism = response[2].data;
-                    // this.contact = response[5].data;
                     this.dataLoaded = true;
                 });
             },
