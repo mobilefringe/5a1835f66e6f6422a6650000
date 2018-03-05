@@ -55,10 +55,9 @@
                             <h2>The 50th Anniversary</h2>
                             <div class="history-desc" v-if="anniversaryPage" v-html="anniversaryPage.body"></div>
                             <div class="hidden-mobile">
-                                <router-link to="/our-story/photo-gallery">
+                                <router-link to="/our-story/photo-gallery" :to="{ name: 'photoGallery', params: { id: 'anniversary' }}">
                                     <p class="details-link">
-                                        View 50th Anniversary Photo Gallery
-                                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                        View 50th Anniversary Photo Gallery<i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                     </p>
                                 </router-link>
                             </div>
