@@ -127,11 +127,12 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.valet = response[1].data;
-                    this.concierge = response[2].data;
-                    this.giftCards = response[3].data;
-                    this.tourism = response[4].data;
-                    this.contact = response[5].data;
+                    console.log(response)
+                    // this.valet = response[1].data;
+                    // this.concierge = response[2].data;
+                    // this.giftCards = response[3].data;
+                    // this.tourism = response[4].data;
+                    // this.contact = response[5].data;
                     this.dataLoaded = true;
                 });
             },
@@ -150,7 +151,7 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-parking-valet-page.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-concierge-services.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-northpark-gold-gift-cards.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-tourism.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-contact-us.json"})]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-visit.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/northpark-tourism.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
