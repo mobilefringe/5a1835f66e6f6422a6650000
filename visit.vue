@@ -126,7 +126,6 @@
             },
             created() {
                 this.loadData().then(response => {
-                    console.log(response)
                     this.valet = response[1].data.subpages[0];
                     this.concierge = response[1].data.subpages[1];
                     this.giftCards = response[1].data.subpages[2];
