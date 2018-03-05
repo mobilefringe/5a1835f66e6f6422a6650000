@@ -48,7 +48,7 @@
                         <div class="col-md-8 col-md-pull-4">
                             <div class="" v-if="valet">
                                 <h2 class="visit-title">Valet &amp; Parking</h2>
-                                <div class="visit-desc" v-if="valet" v-html="truncate(valet.body)"></div>
+                                <div class="visit-desc" v-if="valet" v-html="valet.body"></div>
                                 <router-link to="/visit/northpark-parking-valet-page" active-class="active" exact>
                                     <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
@@ -59,7 +59,7 @@
                             </div>
                             <div class="" v-if="concierge">
                                 <h2 class="visit-title">Concierge</h2>
-                                <div class="visit-desc" v-if="concierge" v-html="truncate(concierge.body)"></div>
+                                <div class="visit-desc" v-if="concierge" v-html="concierge.body"></div>
                                 <router-link to="/visit/northpark-concierge-services" active-class="active" exact>
                                     <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="" v-if="giftCards">
                                 <h2 class="visit-title">Northpark Gold &amp; Gift Cards</h2>
-                                <div class="visit-desc" v-if="giftCards" v-html="truncate(giftCards.body)"></div>
+                                <div class="visit-desc" v-if="giftCards" v-html="giftCards.body"></div>
                                 <router-link to="/visit/northpark-northpark-gold-gift-cards" active-class="active" exact>
                                     <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
@@ -81,7 +81,7 @@
                             </div>
                             <div class="" v-if="tourism">
                                 <h2 class="visit-title">Tourism</h2>
-                                <div class="visit-desc" v-if="tourism" v-html="truncate(tourism.body)"></div>
+                                <div class="visit-desc" v-if="tourism" v-html="tourism.body"></div>
                                 <router-link to="/visit/tourism" active-class="active" exact>
                                     <p class="visit-link details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                                 </router-link>
