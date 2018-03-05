@@ -74,8 +74,13 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     console.log(this.id)
-                    // if(this.props.id)
-                    this.currentSelection = this.historyGallery;
+                    if(this.id == 'history'){
+                        this.currentSelection = this.historyGallery;
+                    } else if(this.id == 'anniversary'){
+                        this.currentSelection = this.anniversaryGallery;
+                    } else if (this.id == ){ 
+                    
+                    }
                 });
             },
             computed: {
