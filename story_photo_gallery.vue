@@ -73,7 +73,7 @@
             created() {
                 this.loadData().then(response => {
                     this.dataLoaded = true;
-                    console.log(this.props)
+                    console.log(this.id)
                     // if(this.props.id)
                     this.currentSelection = this.historyGallery;
                 });
