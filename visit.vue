@@ -128,10 +128,10 @@
             created() {
                 this.loadData().then(response => {
                     console.log(response)
-                    // this.valet = response[1].data;
-                    // this.concierge = response[2].data;
-                    // this.giftCards = response[3].data;
-                    // this.tourism = response[4].data;
+                    this.valet = response[1].data.subpages[0];
+                    this.concierge = response[1].data.subpages[1];
+                    this.giftCards = response[1].data.subpages[2];
+                    this.tourism = response[2].data;
                     // this.contact = response[5].data;
                     this.dataLoaded = true;
                 });
