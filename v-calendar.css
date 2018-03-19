@@ -1433,7 +1433,8 @@
 .c-day-dot {
     width: 5px;
     height: 5px;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
+    border-radius: 0;
     background-color: #66b3cc;
     -webkit-transition: all .18s ease-in-out;
     -o-transition: all .18s ease-in-out;
