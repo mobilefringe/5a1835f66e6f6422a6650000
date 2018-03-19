@@ -1396,6 +1396,8 @@
 }
 
 .c-day-background {
+    width: 100% !important;
+    border-radius: 0 !important;
     -webkit-transition: height .13s ease-in-out,background-color .13s ease-in-out;
     -o-transition: height .13s ease-in-out,background-color .13s ease-in-out;
     transition: height .13s ease-in-out,background-color .13s ease-in-out
