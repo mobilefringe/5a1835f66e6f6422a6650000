@@ -87,7 +87,8 @@
                 return {
                     dataLoaded: false,
                     currentPage: null,
-                    visitSubPage: false
+                    visitSubPage: false,
+                    contactUs: false
                 }
             },
             created() {
@@ -100,6 +101,9 @@
                         this.visitSubPage = true;
                     } else {
                         this.visitSubPage = false;
+                    }
+                    if (this.$route.path == "/pages/northpark-contact-us") {
+                        this.contactUs = true;    
                     }
                 }
             },
