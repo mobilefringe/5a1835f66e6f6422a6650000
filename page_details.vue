@@ -106,7 +106,7 @@
                     if (this.$route.path == "/visit/northpark-contact-us") {
                         this.contactUs = true;    
                     }
-                    if (this.$route.path == "/pages/northpark-holiday-hours") {
+                    if (this.$route.path == "/hours/northpark-holiday-hours") {
                         this.hours = true; 
                     }
                 }
@@ -133,7 +133,7 @@
                                 this.contactUs = true;   
                             });
                         }
-                        if (_this.$route.path == "/pages/northpark-holiday-hours") {
+                        if (_this.$route.path == "/hours/northpark-holiday-hours") {
                             _this.$nextTick(function() {
                                 this.hours = true;   
                             });
