@@ -140,6 +140,12 @@
                                 this.contactUs = true;   
                             });
                         }
+                        if (_this.$route.path == "/pages/northpark-holiday-hours") {
+                            _this.$nextTick(function() {
+                                this.hours = true;   
+                            });
+                        }
+                        
                         _this.dataLoaded = true;
                     }, function (error) {
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
