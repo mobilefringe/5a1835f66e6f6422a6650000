@@ -265,35 +265,35 @@
                     }
                 },
                 sectionOne() {
-                    var sectionID = 35548
+                    var sectionID = 37883
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionTwo() {
-                    var sectionID = 35549
+                    var sectionID = 37884
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionThree() {
-                    var sectionID = 35550
+                    var sectionID = 37885
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionFour() {
-                    var sectionID = 35551
+                    var sectionID = 37886
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionFive() {
-                    var sectionID = 35552
+                    var sectionID = 37887
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionSix() {
-                    var sectionID = 35553
+                    var sectionID = 37888
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionSeven() {
-                    var sectionID = 35554
+                    var sectionID = 37889
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionEight() {
-                    var sectionID = 35555
+                    var sectionID = 37890
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 }
             },
