@@ -119,6 +119,7 @@
                         this.contactUs = true;    
                     }
                     if (this.$route.path == "/hours/northpark-holiday-hours") {
+                        this.hoursSubPage = true;
                         this.hours = true; 
                     }
                 }
