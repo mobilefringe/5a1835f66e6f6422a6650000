@@ -132,7 +132,7 @@
                             this.visitSubPage = false;
                         }
                         
-                        if (_this.currentPage.slug == "northpark-contact-us") {
+                        if (this.$route.path == "/visit/northpark-contact-us") {
                             this.contactUs = true;       
                         } else {
                             this.contactUs = false;  
