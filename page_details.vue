@@ -125,7 +125,7 @@
                     var _this = this;
                     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.id + ".json" }).then(function (response) {
                         _this.currentPage = response.data;
-                        _this.dataLoaded = true;
+                        
                         
                         if (_this.currentPage.slug == "northpark-parking-valet-page" || _this.currentPage.slug == "northpark-concierge-services" || _this.currentPage.slug == "northpark-northpark-gold-gift-cards" || _this.currentPage.slug == "northpark-contact-us") {
                             this.visitSubPage = true;
@@ -141,6 +141,8 @@
                             this.contactUs = false;  
                         }
                         console.log("M ", this.contactUs)
+                        
+                        _this.dataLoaded = true;
                     }, function (error) {
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
                         _this.$router.replace({ name: '404' });
