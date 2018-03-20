@@ -134,9 +134,9 @@
                         }
                         console.log("M ", _this.$route.path)
                         if (_this.$route.path == "/visit/northpark-contact-us") {
-                            this.$nextTick(function() {
+                            // this.$nextTick(function() {
                                 this.contactUs = true;   
-                             });
+                            //  });
                         } else {
                             this.contactUs = false;  
                         }
