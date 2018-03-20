@@ -105,7 +105,7 @@
                         this.visitSubPage = false;
                     }
                     
-                    if (this.$route.path == "/pages/northpark-contact-us") {
+                    if (this.$route.path == "/visit/northpark-contact-us") {
                         this.contactUs = true;    
                     } else {
                         this.contactUs = false;    
