@@ -112,9 +112,9 @@
                     }
                     
                     if (this.$route.path == "/pages/northpark-holiday-hours") {
-                        this.contactUs = true;    
+                        this.hours = true;    
                     } else {
-                        this.contactUs = false;    
+                        this.hours = false;    
                     }
                 }
             },
