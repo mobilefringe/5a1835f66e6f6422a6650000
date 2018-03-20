@@ -46,7 +46,7 @@
                         <div class="col-md-8 col-md-pull-4">
                             <h2 class="page_title" v-html="currentPage.title"></h2>
                             <hr>
-                            <div :class="{ contact-page-body: contactUs }" v-html="currentPage.body"></div>
+                            <div :class="{ contact: contactUs }" v-html="currentPage.body"></div>
                         </div>
                     </div>
                     <div v-if="visitSubPage" class="row">
