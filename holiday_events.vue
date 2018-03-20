@@ -259,7 +259,7 @@
                     'findRepoByName'
                 ]),
                 images() {
-                    return this.findRepoByName("Special Exhibition").images
+                    return this.findRepoByName("Holiday Events").images
                 },
                 sectionOne() {
                     var sectionID = 35548
