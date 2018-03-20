@@ -93,7 +93,7 @@
                 }
             },
             created() {
-                this.updateCurrentPage(this.id);
+                this.updateCurrentPage(this.id, this.$route);
             },
             watch: {
                 $route: function () {
@@ -120,7 +120,7 @@
                 ])
             },
             methods: {
-                updateCurrentPage(id) {
+                updateCurrentPage(id, route) {
                     var _this = this;
                     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.id + ".json" }).then(function (response) {
                         _this.currentPage = response.data;
@@ -132,7 +132,7 @@
                             this.visitSubPage = false;
                         }
                         
-                        if (this.$route.path == "/visit/northpark-contact-us") {
+                        if (_this.$route.path == "/visit/northpark-contact-us") {
                             this.contactUs = true;       
                         } else {
                             this.contactUs = false;  
