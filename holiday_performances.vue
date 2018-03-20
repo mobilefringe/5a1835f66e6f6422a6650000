@@ -259,7 +259,10 @@
                     'findRepoByName'
                 ]),
                 images() {
-                    return this.findRepoByName("Holiday Performances").images
+                    var images = this.findRepoByName("Holiday Performances").images
+                    if(images != undefined){
+                        return images
+                    }
                 },
                 sectionOne() {
                     var sectionID = 35548
