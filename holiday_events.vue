@@ -238,7 +238,7 @@
         Vue.use(Meta);
         Vue.use(Lightbox);
         Vue.use(VueLazyload);
-        return Vue.component("holiday-event-component", {
+        return Vue.component("holiday-events-component", {
             template: template, // the variable template will be injected
             data: function () {
                 return {
