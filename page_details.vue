@@ -110,6 +110,7 @@
                     } else {
                         this.contactUs = false;    
                     }
+                    console.log("W ", this.$route.path)
                 }
             },
             computed: {
@@ -130,7 +131,7 @@
                         } else {
                             this.visitSubPage = false;
                         }
-                        console.log(_this.$route.path)
+                        console.log("M ", _this.$route.path)
                         if (_this.$route.path == "/visit/northpark-contact-us") {
                             this.contactUs = true;   
                         } else {
