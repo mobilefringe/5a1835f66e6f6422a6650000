@@ -138,6 +138,7 @@
                         } else {
                             this.contactUs = false;  
                         }
+                        console.log("M ", this.contactUs)
                     }, function (error) {
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
                         _this.$router.replace({ name: '404' });
