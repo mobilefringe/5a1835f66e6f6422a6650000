@@ -147,6 +147,7 @@
                         }
                         if (_this.$route.path == "/hours/northpark-holiday-hours") {
                             _this.$nextTick(function() {
+                                this.hoursSubPage = true;
                                 this.hours = true;   
                             });
                         }
