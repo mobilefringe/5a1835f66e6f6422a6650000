@@ -47,8 +47,6 @@
                             <h2 class="page_title" v-html="currentPage.title"></h2>
                             <hr>
                             <div :class="{ contact_page_body: contactUs, hours_page_body: hours }" v-html="currentPage.body"></div>
-                            <!--<div v-if="hours" class="hours-page-body" v-html="currentPage.body"></div>-->
-                            <!--<div v-else v-html="currentPage.body"></div>-->
                         </div>
                     </div>
                     <div v-if="visitSubPage" class="row">
