@@ -125,22 +125,19 @@
                     var _this = this;
                     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.id + ".json" }).then(function (response) {
                         _this.currentPage = response.data;
-                        
-                        
                         if (_this.currentPage.slug == "northpark-parking-valet-page" || _this.currentPage.slug == "northpark-concierge-services" || _this.currentPage.slug == "northpark-northpark-gold-gift-cards" || _this.currentPage.slug == "northpark-contact-us") {
-                            this.visitSubPage = true;
-                        } else {
-                            this.visitSubPage = false;
+                            _this.$nextTick(function() {
+                                this.visitSubPage = true;
+                            });
+                        // } else {
+                        //     this.visitSubPage = false;
                         }
-                        console.log("M ", _this.$route.path)
+
                         if (_this.$route.path == "/visit/northpark-contact-us") {
                             _this.$nextTick(function() {
                                 this.contactUs = true;   
-                             });
-                        } else {
-                            this.contactUs = false;  
+                            });
                         }
-                        console.log("M ", this.contactUs)
                         
                         _this.dataLoaded = true;
                     }, function (error) {
