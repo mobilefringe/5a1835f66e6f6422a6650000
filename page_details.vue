@@ -90,7 +90,8 @@
                     dataLoaded: false,
                     currentPage: null,
                     visitSubPage: false,
-                    contactUs: false
+                    contactUs: false,
+                    hours: false
                 }
             },
             created() {
@@ -105,6 +106,12 @@
                         this.visitSubPage = false;
                     }
                     if (this.$route.path == "/visit/northpark-contact-us") {
+                        this.contactUs = true;    
+                    } else {
+                        this.contactUs = false;    
+                    }
+                    
+                    if (this.$route.path == "/pages/northpark-holiday-hours") {
                         this.contactUs = true;    
                     } else {
                         this.contactUs = false;    
