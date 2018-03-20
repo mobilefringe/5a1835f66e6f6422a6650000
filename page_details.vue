@@ -129,6 +129,7 @@
                         if (_this.currentPage.slug == "northpark-contact-us") {
                             this.contactUs = true;       
                         }
+                        console.log(this.contactUs)
                     }, function (error) {
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
                         _this.$router.replace({ name: '404' });
