@@ -75,7 +75,7 @@
                             </p>
                         </div>
                     </div>
-                    <div v-if="!visitSubPage" class="row">
+                    <div v-if="!visitSubPage || !hoursSubPage" class="row">
                         <div class="col-md-12">
                             <p class="page-breadcrumb">
                                 {{property.name}}
