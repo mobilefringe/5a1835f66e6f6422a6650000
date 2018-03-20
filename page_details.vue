@@ -62,13 +62,13 @@
                             </p>
                         </div>
                     </div>
-                    <div v-if="visitSubPage" class="row">
+                    <div v-if="hoursSubPage" class="row">
                         <div class="col-md-12">
                             <p class="page-breadcrumb">
                                 {{property.name}}
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                <router-link tag="a" to="/visit" active-class="active" exact>
-                                    Visit
+                                <router-link tag="a" to="/hours" active-class="active" exact>
+                                    Hours
                                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                                 </router-link>
                                 <span v-if="currentPage">{{currentPage.title}}</span>
