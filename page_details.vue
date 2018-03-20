@@ -47,6 +47,7 @@
                             <h2 class="page_title" v-html="currentPage.title"></h2>
                             <hr>
                             <div v-if="contactUs" class="contact-page-body" v-html="currentPage.body"></div>
+                            <div v-else v-html="currentPage.body"></div>
                             <div v-if="hours" class="hours-page-body" v-html="currentPage.body"></div>
                             <div v-else v-html="currentPage.body"></div>
                         </div>
