@@ -133,7 +133,8 @@
                         }
                         
                         if (_this.$route.path == "/visit/northpark-contact-us") {
-                            this.contactUs = true;       
+                            this.contactUs = true;   
+                            console.log(this.contactUs)
                         } else {
                             this.contactUs = false;  
                         }
