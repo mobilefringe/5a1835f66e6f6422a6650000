@@ -121,7 +121,7 @@
                     'findRepoByName',
                 ]),
                 pageBanner: function pageBanner() {
-                    return this.findRepoByName("Tourism").images;
+                    return this.findRepoByName("Newsletter Banner").images;
                 }
             },
             methods: {
