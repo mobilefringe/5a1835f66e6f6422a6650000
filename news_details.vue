@@ -241,7 +241,7 @@
                 validateNewsletter(form){
                     var vm = this;
                     $.getJSON(
-                        "https://mobilefringe.createsend.com/t/d/s/fldilt/?callback=?",
+                        "https://mobilefringe.createsend.com/t/d/s/jhithd/?callback=?",
                         $(form.target).serialize(),
                         function (data) {
                         if (data.Status === 400) {
@@ -252,7 +252,7 @@
                             console.log("SUCCESS");
                         }
                     });    
-                },
+                }
             }
         });
     });
