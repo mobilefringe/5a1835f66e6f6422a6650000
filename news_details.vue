@@ -71,6 +71,42 @@
                                     <h5 class="related-post-title">Get Connected</h5>
                                     <p class="sidebar-newsletter-info">Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
                                     <div class="blog-newsletter-container">
+                                        <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
+                                            <div class="form-group ">
+                                                <div class="col-xs-12">
+                                                    <label for="fieldEmail">Email</label>
+                                                    <input id="fieldEmail" name="cm-fldilt-fldilt" type="email" required />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="col-xs-12">
+                                                    <label class="checkbox">
+                                                        <input name="agree_newsletter" required  type="checkbox">
+                                                            I agree to receive electronic communications from {{ property.name }}. 
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group ">
+                                                <div class="col-xs-12">
+                                                    <button class="submit" type="submit">
+                                                        Submit <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                <div class="alert alert-success" role="alert" v-show="newsletterSuccess">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                    <span class="sr-only">Success</span>
+                                    Thank you. Your email has been added to our mailing list.
+                                </div>
+                                <div class="alert alert-danger" role="alert" v-show="newsletterError">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error:</span>
+                                    There was an error when trying to submit your request. Please try again later.
+                                </div>
+                                    
+                                    
+                                    
                                         <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
                                             <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email" />
                                             <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
@@ -201,7 +237,22 @@
                 shareURL(slug) {
                     var share_url = "http://www.northparkcenter.com/posts/" + slug
                     return share_url
-                }
+                },
+                validateNewsletter(form){
+                    var vm = this;
+                    $.getJSON(
+                        "https://mobilefringe.createsend.com/t/d/s/fldilt/?callback=?",
+                        $(form.target).serialize(),
+                        function (data) {
+                        if (data.Status === 400) {
+                            vm.newsletterError = true;
+                            console.log("ERROR");
+                        } else { // 200
+                            vm.newsletterSuccess = true;
+                            console.log("SUCCESS");
+                        }
+                    });    
+                },
             }
         });
     });
