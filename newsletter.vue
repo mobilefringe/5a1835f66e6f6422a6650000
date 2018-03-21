@@ -18,7 +18,7 @@
                                         <div class="form-group ">
                                             <div class="col-xs-12">
                                                 <label for="fieldEmail">Email</label>
-                                                <input id="fieldEmail" name="cm-fldilt-fldilt" type="email" required />
+                                                <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required />
                                             </div>
                                         </div>
                                         <div>
@@ -89,7 +89,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 <page-breadcrumb></page-breadcrumb>
             </div>
@@ -163,7 +162,7 @@
                 validateNewsletter(form){
                     var vm = this;
                     $.getJSON(
-                        "https://mobilefringe.createsend.com/t/d/s/fldilt/?callback=?",
+                        "https://mobilefringe.createsend.com/t/d/s/jhithd/?callback=?",
                         $(form.target).serialize(),
                         function (data) {
                         if (data.Status === 400) {
@@ -174,41 +173,6 @@
                             console.log("SUCCESS");
                         }
                     });    
-                },
-                validateBeforeSubmit() {
-                    this.$validator.validateAll().then((result) => {
-                        if (result) {
-                            let errors = this.errors;
-                            send_data = {};
-                            send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
-                            this.$store.dispatch("CONTACT_US", send_data).then(res => {
-                                this.formSuccess = true;
-                            }).catch(error => {
-                                try {
-                                    if (error.response.status == 401) {
-                                        console.log("Data load error: " + error.message);
-                                        this.formError = true;
-                                    } else {
-                                        console.log("Data load error: " + error.message);
-                                        this.formError = true;
-                                    }
-                                } catch (e) {
-                                    console.log("Data load error: " + error.message);
-                                    this.formError = true;
-                                }
-                            })
-                        }
-                    })
-                },
-                serializeObject(obj) {
-                    var newObj = [];
-                    _.forEach(obj, function (value, key) {
-                        var tempVal = {};
-                        tempVal.name = key;
-                        tempVal.value = value;
-                        newObj.push(tempVal);
-                    });
-                    return newObj;
                 }
             }
         });
