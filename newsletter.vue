@@ -10,7 +10,7 @@
                             <img class="margin-30" :src="banner.image_url" alt="Tourism Banner">
                         </div>
                         <div class="" v-if="guestRewards">
-                            <h2>Guest Rewards</h2>
+                            <h2>Newsletter Sign Up</h2>
                             <div class="visit-desc" v-html="guestRewards.body"></div>
                             <div class="tourism-newsletter-container margin-30">
                                 <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
