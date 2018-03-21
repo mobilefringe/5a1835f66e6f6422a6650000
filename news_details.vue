@@ -75,7 +75,7 @@
                                             <div class="form-group ">
                                                 <div class="col-xs-12">
                                                     <label for="fieldEmail">Email</label>
-                                                    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email" />
+                                                    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required />
                                                 </div>
                                             </div>
                                             <div>
