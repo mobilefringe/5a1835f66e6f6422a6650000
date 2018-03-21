@@ -18,7 +18,6 @@
                                         <div class="col-xs-12">
                                             <label for="fieldEmail">Email</label>
                                             <input v-model="form_data.email" required class="js-cm-email-input" name="cm-jhithd-jhithd" type="email" id="fieldEmail">
-                            
                                         </div>
                                     </div>
                                     <div>
