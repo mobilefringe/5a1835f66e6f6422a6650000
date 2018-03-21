@@ -116,7 +116,6 @@
             mounted () {
                 this.form_data.email = this.$route.query.email;
                 $("#fieldEmail").val(this.$route.query.email);
-                console.log("this.$route.query", this.$route.query);
             },
             watch : {
                 $route () {
