@@ -9,47 +9,44 @@
                         <div v-if="pageBanner" v-for="banner in pageBanner">
                             <img class="margin-30" :src="banner.image_url" alt="Tourism Banner">
                         </div>
-                        <div class="" v-if="guestRewards">
-                            <h2>Newsletter Sign Up</h2>
-                            <div class="visit-desc" v-html="guestRewards.body"></div>
-                            <div class="tourism-newsletter-container margin-30">
-                                <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
-                                    <div class="tourism-form">
-                                        <div class="form-group ">
-                                            <div class="col-xs-12">
-                                                <label for="fieldEmail">Email</label>
-                                                <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-xs-12">
-                                                <label class="checkbox">
-                                                    <input name="agree_newsletter" required  type="checkbox">
-                                                        I agree to receive electronic communications from {{ property.name }}. 
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group ">
-                                            <div class="col-xs-12">
-                                                <button class="submit" type="submit">
-                                                    Submit <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                                </button>
-                                            </div>
+                        <h2>Newsletter Sign Up</h2>
+                        <div class="visit-desc" v-if="currentPage" v-html="currentPage.body"></div>
+                        <div class="tourism-newsletter-container margin-30">
+                            <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
+                                <div class="tourism-form">
+                                    <div class="form-group ">
+                                        <div class="col-xs-12">
+                                            <label for="fieldEmail">Email</label>
+                                            <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required />
                                         </div>
                                     </div>
-                                </form>
-                                <div class="alert alert-success" role="alert" v-show="newsletterSuccess">
-                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                    <span class="sr-only">Success</span>
-                                    Your subscription has been confirmed. You've been added to our list and will hear from us soon.
+                                    <div>
+                                        <div class="col-xs-12">
+                                            <label class="checkbox">
+                                                <input name="agree_newsletter" required  type="checkbox">
+                                                    I agree to receive electronic communications from {{ property.name }}. 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <div class="col-xs-12">
+                                            <button class="submit" type="submit">
+                                                Submit <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="alert alert-danger" role="alert" v-show="newsletterError">
-                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                    <span class="sr-only">Error:</span>
-                                    There was an error when trying to submit your request. Please try again later.
-                                </div>
+                            </form>
+                            <div class="alert alert-success" role="alert" v-show="newsletterSuccess">
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                <span class="sr-only">Success</span>
+                                Your subscription has been confirmed. You've been added to our list and will hear from us soon.
                             </div>
-                            <hr>
+                            <div class="alert alert-danger" role="alert" v-show="newsletterError">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error:</span>
+                                There was an error when trying to submit your request. Please try again later.
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 hidden-mobile">
@@ -104,39 +101,16 @@
             data: function data() {
                 return {
                     dataLoaded: false,
-                    mainPage: null,
-                    tourism: null,
-                    guestRewards: null,
-                    groupVisits: null,
-                    taxFreeShopping: null,
-                    unionPay: null,
-                    hotels: null,
-                    form_data: {},
-                    loginPending: null,
+                    currentPage: null,
                     newsletterSuccess: false,
-                    newsletterError: false,
-                    formSuccess: false,
-                    formError: false,
-                    time: new Date()
+                    newsletterError: false
                 }
             },
             created() {
                 this.loadData().then(response => {
-                    this.mainPage = response[1].data;
+                    this.currentPage = response.data;
                     this.dataLoaded = true;
                 });
-            },
-            watch: {
-                mainPage: function mainPage() {
-                    if (this.mainPage != null) {
-                        this.tourism = this.mainPage.subpages[0];
-                        this.guestRewards = this.mainPage.subpages[1];
-                        this.groupVisits = this.mainPage.subpages[2];
-                        this.taxFreeShopping = this.mainPage.subpages[3];
-                        this.unionPay = this.mainPage.subpages[4];
-                        this.hotels = this.mainPage.subpages[5];
-                    }
-                }
             },
             computed: {
                 ...Vuex.mapGetters([
