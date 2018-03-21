@@ -11,7 +11,7 @@
                         </div>
                         <h2>Newsletter Sign Up</h2>
                         <div class="visit-desc" v-if="currentPage" v-html="currentPage.body"></div>
-                        <div class="tourism-newsletter-container margin-30">
+                        <div class="tourism-newsletter-container margin-90">
                             <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
                                 <div class="tourism-form">
                                     <div class="form-group ">
@@ -112,6 +112,23 @@
                     this.currentPage = response[1].data;
                     this.dataLoaded = true;
                 });
+            },
+            mounted () {
+                this.form_data.email = this.$route.query.email;
+                $("#fieldEmail").val(this.form_data.email);
+                console.log("this.$route.query", this.$route.query);
+                if(this.$route.query.success == 'success') {
+                    
+                    this.formSuccess = true;
+                    console.log('this.$router' ,this.$router);
+                    this.$router.replace('/newsletter');
+                }
+            },
+            watch : {
+                $route () {
+                    this.form_data.email = this.$route.query.email;
+                    $("#fieldEmail").val(this.form_data.email);
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
