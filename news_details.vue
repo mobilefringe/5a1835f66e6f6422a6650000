@@ -71,7 +71,7 @@
                                     <h5 class="related-post-title">Get Connected</h5>
                                     <p class="sidebar-newsletter-info">Subscribe to our newsletter and receive insider information on events, exclusive sales, special offers and much more.</p>
                                     <div class="blog-newsletter-container">
-                                        <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
+                                        <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post">
                                             <div class="form-group ">
                                                 <div class="col-xs-12">
                                                     <label for="fieldEmail">Email</label>
