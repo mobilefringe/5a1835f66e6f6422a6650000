@@ -104,13 +104,6 @@
                                             <span class="sr-only">Error:</span>
                                             There was an error when trying to submit your request. Please try again later.
                                         </div>
-                                    
-                                    
-                                    
-                                        <!--<form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">-->
-                                        <!--    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email" />-->
-                                        <!--    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>-->
-                                        <!--</form>-->
                                     </div>
                                     <div class="visible-mobile margin-30"></div>
                                     <hr class="visible-mobile">
