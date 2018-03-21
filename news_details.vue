@@ -142,7 +142,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, Meta, SocialSharing) {
+    define(["Vue", "vuex", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function (Vue, Vuex, $, moment, tz, VueMoment, Meta, SocialSharing) {
         return Vue.component("news-details-component", {
             template: template, // the variable template will be injected,
             props: ['id'],
