@@ -10,7 +10,7 @@
                             <img class="margin-30" :src="banner.image_url" alt="Tourism Banner">
                         </div>
                         <div class="" v-if="guestRewards">
-                            <h2 class="tourism-title">Guest Rewards</h2>
+                            <h2>Guest Rewards</h2>
                             <div class="visit-desc" v-html="guestRewards.body"></div>
                             <div class="tourism-newsletter-container margin-30">
                                 <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
@@ -41,7 +41,7 @@
                                 <div class="alert alert-success" role="alert" v-show="newsletterSuccess">
                                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                     <span class="sr-only">Success</span>
-                                    Thank you. Your email has been added to our mailing list.
+                                    Your subscription has been confirmed. You've been added to our list and will hear from us soon.
                                 </div>
                                 <div class="alert alert-danger" role="alert" v-show="newsletterError">
                                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
