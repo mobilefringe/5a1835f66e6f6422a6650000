@@ -117,12 +117,6 @@
                 this.form_data.email = this.$route.query.email;
                 $("#fieldEmail").val(this.$route.query.email);
                 console.log("this.$route.query", this.$route.query);
-                // if(this.$route.query.success == 'success') {
-                    
-                //     this.formSuccess = true;
-                //     console.log('this.$router' ,this.$router);
-                //     this.$router.replace('/newsletter');
-                // }
             },
             watch : {
                 $route () {
