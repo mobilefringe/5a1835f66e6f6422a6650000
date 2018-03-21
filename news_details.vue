@@ -97,7 +97,7 @@
                                         <div class="alert alert-success" role="alert" v-show="newsletterSuccess">
                                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                             <span class="sr-only">Success</span>
-                                            Thank you. Your email has been added to our mailing list.
+                                            Your subscription has been confirmed. You've been added to our list and will hear from us soon.
                                         </div>
                                         <div class="alert alert-danger" role="alert" v-show="newsletterError">
                                             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
