@@ -109,21 +109,20 @@
             },
             created() {
                 this.loadData().then(response => {
-                    console.log(response)
                     this.currentPage = response[1].data;
                     this.dataLoaded = true;
                 });
             },
             mounted () {
-                this.form_data.email = this.$route.query.email;
+                // this.form_data.email = this.$route.query.email;
                 $("#fieldEmail").val(this.form_data.email);
                 console.log("this.$route.query", this.$route.query);
-                if(this.$route.query.success == 'success') {
+                // if(this.$route.query.success == 'success') {
                     
-                    this.formSuccess = true;
-                    console.log('this.$router' ,this.$router);
-                    this.$router.replace('/newsletter');
-                }
+                //     this.formSuccess = true;
+                //     console.log('this.$router' ,this.$router);
+                //     this.$router.replace('/newsletter');
+                // }
             },
             watch : {
                 $route () {
