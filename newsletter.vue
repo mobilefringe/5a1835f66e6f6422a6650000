@@ -108,6 +108,7 @@
             },
             created() {
                 this.loadData().then(response => {
+                    console.log(response)
                     this.currentPage = response.data;
                     this.dataLoaded = true;
                 });
