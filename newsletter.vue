@@ -114,7 +114,7 @@
                 });
             },
             mounted () {
-                // this.form_data.email = this.$route.query.email;
+                this.form_data.email = this.$route.query.email;
                 $("#fieldEmail").val(this.form_data.email);
                 console.log("this.$route.query", this.$route.query);
                 // if(this.$route.query.success == 'success') {
