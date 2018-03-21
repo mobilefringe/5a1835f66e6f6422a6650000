@@ -152,6 +152,8 @@
                     currentBlog: null,
                     mainBlog: null,
                     currentPost: null,
+                    newsletterError: false,
+                    newsletterSuccess: false,
                     socialFeed: null,
                     instaFeed: null
                 }
