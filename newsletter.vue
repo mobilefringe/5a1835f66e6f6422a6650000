@@ -17,8 +17,8 @@
                                     <div class="form-group ">
                                         <div class="col-xs-12">
                                             <label for="fieldEmail">Email</label>
-                                            <input v-model="form_data.email" required class="form-control js-cm-email-input" name="cm-jhithd-jhithd" type="email" id="fieldEmail">
-                                            <!--<input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required />-->
+                                            <input v-model="form_data.email" required class="js-cm-email-input" name="cm-jhithd-jhithd" type="email" id="fieldEmail">
+                            
                                         </div>
                                     </div>
                                     <div>
