@@ -102,6 +102,7 @@
                 return {
                     dataLoaded: false,
                     currentPage: null,
+                    form_data : {},
                     newsletterSuccess: false,
                     newsletterError: false
                 }
