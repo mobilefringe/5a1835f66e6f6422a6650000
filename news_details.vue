@@ -75,7 +75,7 @@
                                             <div class="form-group ">
                                                 <div class="col-xs-12">
                                                     <label for="fieldEmail">Email</label>
-                                                    <input id="fieldEmail" name="cm-fldilt-fldilt" type="email" required />
+                                                    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Enter Your Email" />
                                                 </div>
                                             </div>
                                             <div>
@@ -94,16 +94,16 @@
                                                 </div>
                                             </div>
                                         </form>
-                                <div class="alert alert-success" role="alert" v-show="newsletterSuccess">
-                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                    <span class="sr-only">Success</span>
-                                    Thank you. Your email has been added to our mailing list.
-                                </div>
-                                <div class="alert alert-danger" role="alert" v-show="newsletterError">
-                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                    <span class="sr-only">Error:</span>
-                                    There was an error when trying to submit your request. Please try again later.
-                                </div>
+                                        <div class="alert alert-success" role="alert" v-show="newsletterSuccess">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            <span class="sr-only">Success</span>
+                                            Thank you. Your email has been added to our mailing list.
+                                        </div>
+                                        <div class="alert alert-danger" role="alert" v-show="newsletterError">
+                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                            <span class="sr-only">Error:</span>
+                                            There was an error when trying to submit your request. Please try again later.
+                                        </div>
                                     
                                     
                                     
