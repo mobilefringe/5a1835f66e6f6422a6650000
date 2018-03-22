@@ -68,7 +68,7 @@
                             <router-link tag="li" to="/pages/northpark-privacy-policy" active-class="active" exact>
                                 <a>Privacy Policy</a>
                             </router-link>
-                            <router-link tag="li" to="/pages/northpark-contact-us" active-class="active" exact>
+                            <router-link tag="li" to="/visit/northpark-contact-us" active-class="active" exact>
                                 <a>Contact Us</a>
                             </router-link>
                             <li>
