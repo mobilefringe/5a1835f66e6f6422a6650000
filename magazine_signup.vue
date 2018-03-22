@@ -15,37 +15,37 @@
                             <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post">
                                 <div class="form-group ">
                                     <div class="col-xs-12">
-                                        <label for="fieldName">Full Name</label><br />
+                                        <label for="fieldName">Full Name</label>
                                         <input id="fieldName" name="cm-name" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-xs-12">
-                                        <label for="fieldEmail">Email</label><br />
+                                        <label for="fieldEmail">Email</label>
                                         <input id="fieldEmail" name="cm-fldith-fldith" type="email" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-xs-12">
-                                        <label for="fieldqkjiir">Address</label><br />
+                                        <label for="fieldqkjiir">Address</label>
                                         <input id="fieldqkjiir" name="cm-f-qkjiir" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-xs-12">
-                                        <label for="fieldqkjiiy">City</label><br />
+                                        <label for="fieldqkjiiy">City</label>
                                         <input id="fieldqkjiiy" name="cm-f-qkjiiy" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-xs-12">
-                                        <label for="fieldqkjiij">State</label><br />
+                                        <label for="fieldqkjiij">State</label>
                                         <input id="fieldqkjiij" name="cm-f-qkjiij" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-xs-12">
-                                        <label for="fieldqkjiit">ZIP Code</label><br />
+                                        <label for="fieldqkjiit">ZIP Code</label>
                                         <input id="fieldqkjiit" name="cm-f-qkjiit" type="text" required />
                                     </div>
                                 </div>
@@ -57,34 +57,6 @@
                                     </div>
                                 </div>
                             </form>
-
-    
-    
-                            <!--<form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">-->
-                            <!--    <div class="tourism-form">-->
-                            <!--        <div class="form-group ">-->
-                            <!--            <div class="col-xs-12">-->
-                            <!--                <label for="fieldEmail">Email</label>-->
-                            <!--                <input v-model="form_data.email" required class="js-cm-email-input" name="cm-jhithd-jhithd" type="email" id="fieldEmail">-->
-                            <!--            </div>-->
-                            <!--        </div>-->
-                            <!--        <div>-->
-                            <!--            <div class="col-xs-12">-->
-                            <!--                <label class="checkbox">-->
-                            <!--                    <input name="agree_newsletter" required  type="checkbox">-->
-                            <!--                        I agree to receive electronic communications from {{ property.name }}. -->
-                            <!--                </label>-->
-                            <!--            </div>-->
-                            <!--        </div>-->
-                            <!--        <div class="form-group ">-->
-                            <!--            <div class="col-xs-12">-->
-                            <!--                <button class="submit" type="submit">-->
-                            <!--                    Submit <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-                            <!--                </button>-->
-                            <!--            </div>-->
-                            <!--        </div>-->
-                            <!--    </div>-->
-                            <!--</form>-->
                             <div class="alert alert-success" role="alert" v-show="newsletterSuccess">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                 <span class="sr-only">Success</span>
