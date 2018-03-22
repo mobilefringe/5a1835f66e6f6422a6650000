@@ -147,7 +147,7 @@
                 validateNewsletter(form){
                     var vm = this;
                     $.getJSON(
-                        "https://mobilefringe.createsend.com/t/d/s/jhithd/?callback=?",
+                        "https://mobilefringe.createsend.com/t/d/s/fldith/?callback=?",
                         $(form.target).serialize(),
                         function (data) {
                         if (data.Status === 400) {
@@ -163,3 +163,10 @@
         });
     });
 </script>
+
+<!--<form action="https://mobilefringe.createsend.com/t/d/s/fldith/" method="post" id="magazineForm">-->
+                                        <!--    <input id="fieldEmail" name="cm-fldith-fldith" type="email" placeholder="Subscribe to Magazine" required />-->
+                                        <!--    <button class="submit" type="submit">-->
+                                        <!--        <i class="fa fa-angle-right" aria-hidden="true"></i>-->
+                                        <!--    </button>-->
+                                        <!--</form>-->
