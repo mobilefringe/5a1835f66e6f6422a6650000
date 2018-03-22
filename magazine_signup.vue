@@ -132,7 +132,7 @@
                     'findRepoByName',
                 ]),
                 pageBanner: function pageBanner() {
-                    return this.findRepoByName("Newsletter Banner").images;
+                    return this.findRepoByName("The Magazine Sign Up").images;
                 }
             },
             methods: {
