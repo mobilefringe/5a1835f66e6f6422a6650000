@@ -16,7 +16,7 @@
                                 <div class="form-group ">
                                     <div class="col-xs-12">
                                         <label for="fieldName">Name</label><br />
-                                        <input id="fieldName" name="cm-name" type="text" />
+                                        <input id="fieldName" name="cm-name" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -28,25 +28,25 @@
                                 <div class="form-group ">
                                     <div class="col-xs-12">
                                         <label for="fieldqkjiir">Address</label><br />
-                                        <input id="fieldqkjiir" name="cm-f-qkjiir" type="text" />
+                                        <input id="fieldqkjiir" name="cm-f-qkjiir" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-xs-12">
                                         <label for="fieldqkjiiy">City</label><br />
-                                        <input id="fieldqkjiiy" name="cm-f-qkjiiy" type="text" />
+                                        <input id="fieldqkjiiy" name="cm-f-qkjiiy" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-xs-12">
                                         <label for="fieldqkjiij">State</label><br />
-                                        <input id="fieldqkjiij" name="cm-f-qkjiij" type="text" />
+                                        <input id="fieldqkjiij" name="cm-f-qkjiij" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-xs-12">
                                         <label for="fieldqkjiit">ZIP Code</label><br />
-                                        <input id="fieldqkjiit" name="cm-f-qkjiit" type="text" />
+                                        <input id="fieldqkjiit" name="cm-f-qkjiit" type="text" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
