@@ -96,7 +96,7 @@
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "jquery"], function (Vue, Vuex, moment, tz, VueMoment, Meta, $) {
         Vue.use(Meta);
-        return Vue.component("newsletter-component", {
+        return Vue.component("magazine-sign-up-component", {
             template: template, // the variable template will be injected
             data: function data() {
                 return {
