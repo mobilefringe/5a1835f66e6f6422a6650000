@@ -268,7 +268,7 @@
                     'findRepoByName'
                 ]),
                 images() {
-                    return this.findRepoByName("Architecture").images
+                    return this.findRepoByName("The Magazine Landing").images
                 },
                 sectionOne() {
                     var sectionID = 35580
