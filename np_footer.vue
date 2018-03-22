@@ -26,7 +26,7 @@
                             <router-link tag="li" to="/our-story">
                                 <a>Our Story</a>
                             </router-link>
-                            <router-link tag="li" to="/magazine">
+                            <router-link tag="li" to="/magazine-overview">
                                 <a>The Magazine</a>
                             </router-link>
                         </ul>    
