@@ -271,35 +271,35 @@
                     return this.findRepoByName("The Magazine Landing").images
                 },
                 sectionOne() {
-                    var sectionID = 35580
+                    var sectionID = 37925
                     return _.find(this.images, function (o) { return o.id === sectionID; });
                 },
                 sectionTwo() {
-                    var sectionID = 35581
+                    var sectionID = 37926
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionThree() {
-                    var sectionID = 35582
+                    var sectionID = 37927
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionFour() {
-                    var sectionID = 35583
+                    var sectionID = 37928
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionFive() {
-                    var sectionID = 35584
+                    var sectionID = 37929
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionSix() {
-                    var sectionID = 35585
+                    var sectionID = 37930
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionSeven() {
-                    var sectionID = 35586
+                    var sectionID = 37931
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 },
                 sectionEight() {
-                    var sectionID = 35587
+                    var sectionID = 37932
                     return _.find(this.images, function (o) { return o.id === sectionID; })
                 }
             },
