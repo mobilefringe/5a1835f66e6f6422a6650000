@@ -15,7 +15,7 @@
                             <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post">
                                 <div class="form-group ">
                                     <div class="col-xs-12">
-                                        <label for="fieldName">Name</label><br />
+                                        <label for="fieldName">Full Name</label><br />
                                         <input id="fieldName" name="cm-name" type="text" required />
                                     </div>
                                 </div>
