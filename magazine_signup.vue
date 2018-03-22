@@ -9,7 +9,7 @@
                         <div v-if="pageBanner" v-for="banner in pageBanner">
                             <img class="margin-30" :src="banner.image_url" alt="Tourism Banner">
                         </div>
-                        <h2>Newsletter Sign Up</h2>
+                        <h2>Subscribe To The Magazine</h2>
                         <div class="visit-desc" v-if="currentPage" v-html="currentPage.body"></div>
                         <div class="tourism-newsletter-container margin-90">
                             <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
