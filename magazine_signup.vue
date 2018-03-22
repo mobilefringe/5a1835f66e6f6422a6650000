@@ -11,8 +11,8 @@
                         </div>
                         <h2>Subscribe To The Magazine</h2>
                         <div class="visit-desc" v-if="currentPage" v-html="currentPage.body"></div>
-                        <div class="tourism-newsletter-container margin-90">
-                            <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
+                        <div class="magazine-signup-container margin-90">
+                            <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post">
                                 <div class="form-group ">
                                     <div class="col-xs-12">
                                         <label for="fieldName">Full Name</label><br />
