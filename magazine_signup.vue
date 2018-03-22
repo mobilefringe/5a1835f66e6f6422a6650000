@@ -32,19 +32,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group ">
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-4">
                                         <label for="fieldqkjiiy">City</label>
                                         <input id="fieldqkjiiy" name="cm-f-qkjiiy" type="text" required />
                                     </div>
-                                </div>
-                                <div class="form-group ">
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-4">
                                         <label for="fieldqkjiij">State</label>
                                         <input id="fieldqkjiij" name="cm-f-qkjiij" type="text" required />
                                     </div>
-                                </div>
-                                <div class="form-group ">
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-4">
                                         <label for="fieldqkjiit">ZIP Code</label>
                                         <input id="fieldqkjiit" name="cm-f-qkjiit" type="text" required />
                                     </div>
