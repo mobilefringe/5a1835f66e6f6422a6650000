@@ -12,6 +12,45 @@
                         <h2>Subscribe To The Magazine</h2>
                         <div class="visit-desc" v-if="currentPage" v-html="currentPage.body"></div>
                         <div class="tourism-newsletter-container margin-90">
+                            <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post">
+                                <div class="form-group ">
+                                    <div class="col-xs-12">
+                                        <label for="fieldName">Name</label><br />
+                                        <input id="fieldName" name="cm-name" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <div class="col-xs-12">
+                                        <label for="fieldEmail">Email</label><br />
+                                        <input id="fieldEmail" name="cm-fldith-fldith" type="email" required />
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <div class="col-xs-12">
+                                        <label for="fieldqkjiir">Address</label><br />
+                                        <input id="fieldqkjiir" name="cm-f-qkjiir" type="text" />
+                                    </div>
+                                </div>
+    </p>
+    <p>
+        <label for="fieldqkjiiy">City</label><br />
+        <input id="fieldqkjiiy" name="cm-f-qkjiiy" type="text" />
+    </p>
+    <p>
+        <label for="fieldqkjiij">State</label><br />
+        <input id="fieldqkjiij" name="cm-f-qkjiij" type="text" />
+    </p>
+    <p>
+        <label for="fieldqkjiit">ZIP Code</label><br />
+        <input id="fieldqkjiit" name="cm-f-qkjiit" type="text" />
+    </p>
+    <p>
+        <button class="js-cm-submit-button" type="submit">Subscribe</button> 
+    </p>
+</form>
+    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+    
+    
                             <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post" id="tourismForm">
                                 <div class="tourism-form">
                                     <div class="form-group ">
