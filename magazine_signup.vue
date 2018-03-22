@@ -14,33 +14,31 @@
                         <div class="magazine-signup-container margin-90">
                             <form v-on:submit.prevent="validateNewsletter" class="form-horizontal" method="post">
                                 <div class="form-group ">
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-12 col-sm-6">
                                         <label for="fieldName">Full Name</label>
                                         <input id="fieldName" name="cm-name" type="text" required />
                                     </div>
-                                </div>
-                                <div class="form-group ">
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-12 col-sm-6">
                                         <label for="fieldEmail">Email</label>
                                         <input id="fieldEmail" name="cm-fldith-fldith" type="email" required />
                                     </div>
                                 </div>
                                 <div class="form-group ">
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-12 col-sm-6">
                                         <label for="fieldqkjiir">Address</label>
                                         <input id="fieldqkjiir" name="cm-f-qkjiir" type="text" required />
                                     </div>
-                                </div>
-                                <div class="form-group ">
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-12 col-sm-6">
                                         <label for="fieldqkjiiy">City</label>
                                         <input id="fieldqkjiiy" name="cm-f-qkjiiy" type="text" required />
                                     </div>
-                                    <div class="col-xs-4">
+                                </div>
+                                <div class="form-group ">
+                                    <div class="col-xs-12 col-sm-6">
                                         <label for="fieldqkjiij">State</label>
                                         <input id="fieldqkjiij" name="cm-f-qkjiij" type="text" required />
                                     </div>
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-12 col-sm-6">
                                         <label for="fieldqkjiit">ZIP Code</label>
                                         <input id="fieldqkjiit" name="cm-f-qkjiit" type="text" required />
                                     </div>
