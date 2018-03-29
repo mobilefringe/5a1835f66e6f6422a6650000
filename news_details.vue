@@ -222,6 +222,7 @@
                     // return string
                     
                     //Returns only the first tag
+                    console.log(val_tag)
                     var tag = val_tag[0].replace(/_/g, " ");
                     return tag
                 },
