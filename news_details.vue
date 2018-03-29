@@ -181,7 +181,6 @@
                     if (this.currentPost.tag != null) {
                         var current_post_tag = this.currentPost.tag[0]
                        
-
                         var related_blog = [];
                         _.forEach(main_blog, function (value, key) {
                             if (value.tag != null) {
