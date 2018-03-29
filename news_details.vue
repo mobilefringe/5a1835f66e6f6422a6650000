@@ -223,7 +223,10 @@
                     
                     //Returns only the first tag
                     console.log(val_tag)
-                    var tag = val_tag[0].replace(/_/g, " ");
+                    var tag = "";
+                    if(val_tag != null){
+                        tag = val_tag[0].replace(/_/g, " ");
+                    }
                     return tag
                 },
                 truncate(val_body) {
